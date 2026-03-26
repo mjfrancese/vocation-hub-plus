@@ -271,6 +271,28 @@ export function getScrapeStats(): Record<string, unknown> | undefined {
 
 export function upsertPositionDetails(details: import('./position-details.js').PositionDetails): void {
   const d = getDb();
+
+  // Match this profile to a position in the positions table by name + diocese.
+  // The profile's communityName should match positions.name, and diocese should match.
+  let positionId = '';
+  const match = d.prepare(
+    `SELECT id FROM positions
+     WHERE (name LIKE ? OR name LIKE ?)
+     AND diocese LIKE ?
+     LIMIT 1`
+  ).get(
+    `%${details.communityName}%`,
+    `%${details.communityName.split('(')[0].trim()}%`,
+    `%${details.diocese}%`
+  ) as { id: string } | undefined;
+
+  if (match) {
+    positionId = match.id;
+  } else {
+    // Use vh_id as a fallback key
+    positionId = `vh_${details.positionId}`;
+  }
+
   d.prepare(`
     INSERT INTO position_details (
       position_id, vh_id, profile_url, community_name, address, city,
@@ -312,7 +334,7 @@ export function upsertPositionDetails(details: import('./position-details.js').P
       raw_content = excluded.raw_content,
       scraped_at = excluded.scraped_at
   `).run(
-    '', // position_id - will be linked later
+    positionId,
     details.positionId,
     details.profileUrl,
     details.communityName,
