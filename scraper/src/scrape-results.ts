@@ -3,6 +3,7 @@ import { SELECTORS } from './selectors.js';
 import { logger } from './logger.js';
 import { takeScreenshot } from './browser.js';
 import { waitForResults, sleep } from './navigate.js';
+import { getStateForDiocese } from './dioceses.js';
 import crypto from 'crypto';
 
 export interface RawPosition {
@@ -159,6 +160,8 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
 
   return rawRows.map((row) => ({
     ...row,
+    // Derive state from diocese name since the table has no State column
+    state: row.state || getStateForDiocese(row.diocese),
     id: generateId(row.name, row.diocese, row.positionType),
   }));
 }
