@@ -8,7 +8,7 @@ import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 import { sleep } from './navigate.js';
-import { discoverIdsFromSearchResults, scrapePositionDetails } from './position-details.js';
+import { scanAndScrapeProfiles } from './position-details.js';
 
 async function main(): Promise<void> {
   const startTime = Date.now();
@@ -51,32 +51,30 @@ async function main(): Promise<void> {
       });
 
       // Phase 2: Detail scrape (visit each position's profile page)
-      // Wrapped in try/catch so failures here never block the main scrape + deploy.
+      // Scan a range of /PositionView/{id} URLs directly.
+      // Wrapped in try/catch so failures never block the main pipeline.
       try {
         const elapsed = Date.now() - startTime;
         const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
 
-        if (timeLeft > 30_000) {
-          logger.info('Starting detail scrape', { timeLeftMs: timeLeft });
+        if (timeLeft > 60_000) {
+          logger.info('Starting profile scan', { timeLeftMs: timeLeft });
+          const baseUrl = CONFIG.url.replace('/PositionSearch', '');
 
-          // Discover position IDs by clicking rows in search results
-          await navigateToSearch(page);
-          await searchAllPositions(page);
-          await sleep(3000);
+          // Start scanning from ID 10200 (known range based on site inspection).
+          // The scan will find valid profiles and stop after 20 consecutive misses.
+          const result = await scanAndScrapeProfiles(page, baseUrl, 10200, timeLeft);
 
-          const positionIds = await discoverIdsFromSearchResults(page, positions.length);
-          logger.info('Discovered position IDs', { count: positionIds.length });
-
-          if (positionIds.length > 0) {
-            const baseUrl = CONFIG.url.replace('/PositionSearch', '');
-            await scrapePositionDetails(page, positionIds, baseUrl, timeLeft);
-          }
+          logger.info('Profile scan results', {
+            scraped: result.scraped,
+            maxId: result.maxId,
+            idsFound: result.ids.length,
+          });
         } else {
-          logger.warn('Not enough time for detail scrape, skipping', { elapsed, timeLeft });
+          logger.warn('Not enough time for profile scan, skipping', { elapsed, timeLeft });
         }
       } catch (detailErr) {
-        // Detail scraping is best-effort; don't fail the whole pipeline
-        logger.warn('Detail scraping failed (non-fatal)', {
+        logger.warn('Profile scanning failed (non-fatal)', {
           error: detailErr instanceof Error ? detailErr.message : String(detailErr),
         });
       }
