@@ -75,6 +75,29 @@ async function main() {
   let checked = 0;
   const startTime = Date.now();
 
+  // Self-test: verify detection works before scanning
+  console.log('Running self-test with known valid (10669) and known invalid (0) profiles...');
+  const testPage = await context.newPage();
+
+  const validResult = await checkId(testPage, 10669);
+  const invalidResult = await checkId(testPage, 0);
+  await testPage.close();
+
+  console.log(`  Valid profile (10669):   detected=${validResult.found}, diocese="${validResult.diocese}"`);
+  console.log(`  Invalid profile (0):     detected=${invalidResult.found}, diocese="${invalidResult.diocese}"`);
+
+  if (!validResult.found) {
+    console.error('SELF-TEST FAILED: Known valid profile (10669) was not detected. Aborting scan.');
+    await browser.close();
+    process.exit(1);
+  }
+  if (invalidResult.found) {
+    console.error('SELF-TEST FAILED: Known invalid profile (0) was incorrectly detected. Aborting scan.');
+    await browser.close();
+    process.exit(1);
+  }
+  console.log('Self-test PASSED. Starting scan...\n');
+
   // Create worker pages
   const pages = await Promise.all(
     Array.from({ length: parallelism }, () => context.newPage())
