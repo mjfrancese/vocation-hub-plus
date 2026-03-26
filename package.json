@@ -1,0 +1,21 @@
+{
+  "name": "vocation-hub-plus",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automated nationwide search and change tracking for Episcopal Church Vocation Hub positions",
+  "workspaces": [
+    "scraper",
+    "web"
+  ],
+  "scripts": {
+    "scrape": "npm run scrape --workspace=scraper",
+    "scrape:dry": "npm run scrape:dry --workspace=scraper",
+    "dev": "npm run dev --workspace=web",
+    "build": "npm run build --workspace=web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjfrancese/vocation-hub-plus.git"
+  },
+  "license": "MIT"
+}
