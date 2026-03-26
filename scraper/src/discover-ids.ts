@@ -14,7 +14,7 @@ import fs from 'fs';
 const BASE_URL = 'https://vocationhub.episcopalchurch.org';
 const startId = parseInt(process.argv[2] || '0', 10);
 const endId = parseInt(process.argv[3] || '11000', 10);
-const parallelism = parseInt(process.argv[4] || '5', 10);
+const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
   var text = document.body ? document.body.innerText : '';
@@ -128,7 +128,7 @@ async function checkId(page: any, id: number): Promise<boolean> {
     await page.goto(url, { waitUntil: 'load', timeout: 10_000 });
 
     // Brief wait for Blazor to render something
-    await page.waitForTimeout(1500);
+    await page.waitForTimeout(1000);
 
     // Quick check
     const result = await page.evaluate(CHECK_SCRIPT) as CheckResult;

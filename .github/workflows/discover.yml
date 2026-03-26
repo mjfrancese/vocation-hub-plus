@@ -12,9 +12,9 @@ on:
         required: true
         default: '11000'
       parallelism:
-        description: 'Parallel browser pages'
+        description: 'Parallel browser pages (10-15 recommended)'
         required: true
-        default: '5'
+        default: '10'
 
 permissions:
   contents: write
