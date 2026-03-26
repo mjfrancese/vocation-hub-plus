@@ -33,6 +33,15 @@ async function main(): Promise<void> {
     const stateCount = await selectAllStates(page);
     logger.info('State selection complete', { statesSelected: stateCount });
 
+    // If no states were selected, something is wrong with the dropdown.
+    // Do not proceed with an empty search (it returns 0 results).
+    if (stateCount === 0) {
+      throw new Error(
+        'Failed to select any states. The dropdown interaction is not working. ' +
+        'Check screenshots for page state.'
+      );
+    }
+
     // Search and extract results
     const positions = await clickSearchAndExtract(page);
     logger.info('Scraping complete', { positionsFound: positions.length });
@@ -70,10 +79,7 @@ async function main(): Promise<void> {
     const errorMessage = err instanceof Error ? err.message : String(err);
 
     logger.error('Scrape failed', { error: errorMessage });
-
-    if (CONFIG.screenshotOnFailure) {
-      await takeScreenshot(page, 'error');
-    }
+    await takeScreenshot(page, 'error');
 
     if (!CONFIG.dryRun) {
       logScrape(0, 0, 0, durationMs, 'failed', errorMessage);

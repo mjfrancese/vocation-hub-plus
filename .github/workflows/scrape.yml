@@ -52,13 +52,14 @@ jobs:
           retention-days: 90
           overwrite: true
 
-      - name: Upload screenshots on failure
-        if: failure()
+      - name: Upload screenshots
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: scrape-screenshots
           path: screenshots/
           retention-days: 7
+          overwrite: true
 
       - name: Copy JSON to web data directory
         run: |
