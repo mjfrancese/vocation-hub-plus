@@ -118,14 +118,16 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
       const cells = row.querySelectorAll('td');
       if (cells.length < 3) return;
 
-      const getCell = (key: string): string => {
-        const idx = colMap[key];
-        if (idx === undefined || idx >= cells.length) return '';
-        return (cells[idx].textContent || '').trim();
+      // Inline cell accessor (no named function to avoid tsx __name injection)
+      const c = (key: string) => {
+        const idx = (colMap as any)[key];
+        return idx !== undefined && idx < cells.length
+          ? (cells[idx].textContent || '').trim()
+          : '';
       };
 
-      const name = getCell('name');
-      const diocese = getCell('diocese');
+      const name = c('name');
+      const diocese = c('diocese');
       if (!name && !diocese) return; // skip empty rows
 
       // Check for a link in the name cell
@@ -138,12 +140,12 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
       results.push({
         name,
         diocese,
-        state: getCell('state'),
-        organizationType: getCell('organizationType'),
-        positionType: getCell('positionType'),
-        receivingNamesFrom: getCell('receivingFrom'),
-        receivingNamesTo: getCell('receivingTo'),
-        updatedOnHub: getCell('updated'),
+        state: c('state'),
+        organizationType: c('organizationType'),
+        positionType: c('positionType'),
+        receivingNamesFrom: c('receivingFrom'),
+        receivingNamesTo: c('receivingTo'),
+        updatedOnHub: c('updated'),
         detailsUrl,
         rawHtml: row.innerHTML,
       });
