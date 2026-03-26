@@ -377,7 +377,7 @@ export function getAllPositionsWithDetails(): Record<string, unknown>[] {
            d.housing_description, d.benefits, d.community_description,
            d.worship_style, d.avg_sunday_attendance, d.church_school_size,
            d.desired_skills, d.challenges, d.website_url, d.social_media_links,
-           d.narrative_reflections
+           d.narrative_reflections, d.raw_content
     FROM positions p
     LEFT JOIN position_details d ON p.id = d.position_id
     ORDER BY p.last_seen DESC
