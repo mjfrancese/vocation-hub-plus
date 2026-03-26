@@ -51,28 +51,34 @@ async function main(): Promise<void> {
       });
 
       // Phase 2: Detail scrape (visit each position's profile page)
-      // Check how much time we have left (reserve 2 min for export + deploy)
-      const elapsed = Date.now() - startTime;
-      const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
+      // Wrapped in try/catch so failures here never block the main scrape + deploy.
+      try {
+        const elapsed = Date.now() - startTime;
+        const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
 
-      if (timeLeft > 30_000) {
-        logger.info('Starting detail scrape', { timeLeftMs: timeLeft });
+        if (timeLeft > 30_000) {
+          logger.info('Starting detail scrape', { timeLeftMs: timeLeft });
 
-        // Discover position IDs by clicking rows in search results
-        // First, re-navigate and re-search to get the results table back
-        await navigateToSearch(page);
-        await searchAllPositions(page);
-        await sleep(3000);
+          // Discover position IDs by clicking rows in search results
+          await navigateToSearch(page);
+          await searchAllPositions(page);
+          await sleep(3000);
 
-        const positionIds = await discoverIdsFromSearchResults(page, positions.length);
-        logger.info('Discovered position IDs', { count: positionIds.length });
+          const positionIds = await discoverIdsFromSearchResults(page, positions.length);
+          logger.info('Discovered position IDs', { count: positionIds.length });
 
-        if (positionIds.length > 0) {
-          const baseUrl = CONFIG.url.replace('/PositionSearch', '');
-          await scrapePositionDetails(page, positionIds, baseUrl, timeLeft);
+          if (positionIds.length > 0) {
+            const baseUrl = CONFIG.url.replace('/PositionSearch', '');
+            await scrapePositionDetails(page, positionIds, baseUrl, timeLeft);
+          }
+        } else {
+          logger.warn('Not enough time for detail scrape, skipping', { elapsed, timeLeft });
         }
-      } else {
-        logger.warn('Not enough time for detail scrape, skipping', { elapsed, timeLeft });
+      } catch (detailErr) {
+        // Detail scraping is best-effort; don't fail the whole pipeline
+        logger.warn('Detail scraping failed (non-fatal)', {
+          error: detailErr instanceof Error ? detailErr.message : String(detailErr),
+        });
       }
 
       const durationMs = Date.now() - startTime;
