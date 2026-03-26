@@ -84,9 +84,9 @@ jobs:
             git push
           fi
 
-      # Build and deploy frontend directly in this workflow.
-      # GITHUB_TOKEN pushes don't trigger other workflows, so
-      # we can't rely on deploy.yml being triggered by the data commit.
+      # Build and deploy frontend in the same job.
+      # GITHUB_TOKEN pushes don't trigger other workflows, so we
+      # build and deploy here instead of relying on deploy.yml.
       - name: Install web dependencies
         run: npm ci --workspace=web
 
@@ -94,13 +94,18 @@ jobs:
         working-directory: web
         run: npx next build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: web/out
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: scrape
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4

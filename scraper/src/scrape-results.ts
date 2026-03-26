@@ -56,8 +56,20 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
       break;
     }
     currentPage++;
+
     // Wait for the table to reload after pagination
-    await sleep(1500);
+    await sleep(2000);
+
+    // Verify results still exist after pagination. Blazor may reset the
+    // search context when paginating, causing 0 results on page 2+.
+    const pagerText = await page.locator(SELECTORS.pagerInfo).textContent().catch(() => '');
+    if (!pagerText || pagerText.includes('0 - 0 of 0')) {
+      logger.warn('Pagination caused page to reset, returning results from previous pages', {
+        collected: allPositions.length,
+      });
+      await takeScreenshot(page, 'pagination-reset');
+      break;
+    }
   }
 
   logger.info('Total positions extracted', { total: allPositions.length });

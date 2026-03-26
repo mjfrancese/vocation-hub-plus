@@ -53,7 +53,7 @@ export default function HomePage() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-gray-600">
-            {meta.activeCount + meta.newCount} active positions
+            {meta.activeCount} active positions
           </span>
           <ExportButton positions={filtered} />
         </div>
