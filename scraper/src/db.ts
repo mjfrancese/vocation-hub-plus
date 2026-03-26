@@ -69,6 +69,42 @@ function initSchema(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_positions_first_seen ON positions(first_seen);
     CREATE INDEX IF NOT EXISTS idx_positions_last_seen ON positions(last_seen);
     CREATE INDEX IF NOT EXISTS idx_changes_type ON position_changes(change_type);
+
+    CREATE TABLE IF NOT EXISTS position_details (
+      position_id TEXT PRIMARY KEY,
+      vh_id INTEGER,
+      profile_url TEXT NOT NULL DEFAULT '',
+      community_name TEXT NOT NULL DEFAULT '',
+      address TEXT NOT NULL DEFAULT '',
+      city TEXT NOT NULL DEFAULT '',
+      state_province TEXT NOT NULL DEFAULT '',
+      postal_code TEXT NOT NULL DEFAULT '',
+      contact_name TEXT NOT NULL DEFAULT '',
+      contact_email TEXT NOT NULL DEFAULT '',
+      contact_phone TEXT NOT NULL DEFAULT '',
+      position_title TEXT NOT NULL DEFAULT '',
+      full_part_time TEXT NOT NULL DEFAULT '',
+      position_description TEXT NOT NULL DEFAULT '',
+      minimum_stipend TEXT NOT NULL DEFAULT '',
+      maximum_stipend TEXT NOT NULL DEFAULT '',
+      housing_type TEXT NOT NULL DEFAULT '',
+      housing_description TEXT NOT NULL DEFAULT '',
+      benefits TEXT NOT NULL DEFAULT '',
+      community_description TEXT NOT NULL DEFAULT '',
+      worship_style TEXT NOT NULL DEFAULT '',
+      avg_sunday_attendance TEXT NOT NULL DEFAULT '',
+      church_school_size TEXT NOT NULL DEFAULT '',
+      desired_skills TEXT NOT NULL DEFAULT '',
+      challenges TEXT NOT NULL DEFAULT '',
+      website_url TEXT NOT NULL DEFAULT '',
+      social_media_links TEXT NOT NULL DEFAULT '',
+      narrative_reflections TEXT NOT NULL DEFAULT '',
+      raw_content TEXT NOT NULL DEFAULT '',
+      scraped_at DATETIME NOT NULL DEFAULT (datetime('now')),
+      FOREIGN KEY (position_id) REFERENCES positions(id)
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_details_vh_id ON position_details(vh_id);
   `);
 }
 
@@ -231,6 +267,99 @@ export function getScrapeStats(): Record<string, unknown> | undefined {
   return getDb()
     .prepare('SELECT * FROM scrape_log ORDER BY scraped_at DESC LIMIT 1')
     .get() as Record<string, unknown> | undefined;
+}
+
+export function upsertPositionDetails(details: import('./position-details.js').PositionDetails): void {
+  const d = getDb();
+  d.prepare(`
+    INSERT INTO position_details (
+      position_id, vh_id, profile_url, community_name, address, city,
+      state_province, postal_code, contact_name, contact_email, contact_phone,
+      position_title, full_part_time, position_description,
+      minimum_stipend, maximum_stipend, housing_type, housing_description, benefits,
+      community_description, worship_style, avg_sunday_attendance, church_school_size,
+      desired_skills, challenges, website_url, social_media_links,
+      narrative_reflections, raw_content, scraped_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ON CONFLICT(position_id) DO UPDATE SET
+      vh_id = excluded.vh_id,
+      profile_url = excluded.profile_url,
+      community_name = excluded.community_name,
+      address = excluded.address,
+      city = excluded.city,
+      state_province = excluded.state_province,
+      postal_code = excluded.postal_code,
+      contact_name = excluded.contact_name,
+      contact_email = excluded.contact_email,
+      contact_phone = excluded.contact_phone,
+      position_title = excluded.position_title,
+      full_part_time = excluded.full_part_time,
+      position_description = excluded.position_description,
+      minimum_stipend = excluded.minimum_stipend,
+      maximum_stipend = excluded.maximum_stipend,
+      housing_type = excluded.housing_type,
+      housing_description = excluded.housing_description,
+      benefits = excluded.benefits,
+      community_description = excluded.community_description,
+      worship_style = excluded.worship_style,
+      avg_sunday_attendance = excluded.avg_sunday_attendance,
+      church_school_size = excluded.church_school_size,
+      desired_skills = excluded.desired_skills,
+      challenges = excluded.challenges,
+      website_url = excluded.website_url,
+      social_media_links = excluded.social_media_links,
+      narrative_reflections = excluded.narrative_reflections,
+      raw_content = excluded.raw_content,
+      scraped_at = excluded.scraped_at
+  `).run(
+    '', // position_id - will be linked later
+    details.positionId,
+    details.profileUrl,
+    details.communityName,
+    details.address,
+    details.city,
+    details.stateProvince,
+    details.postalCode,
+    details.contactName,
+    details.contactEmail,
+    details.contactPhone,
+    details.positionTitle,
+    details.fullPartTime,
+    details.positionDescription,
+    details.minimumStipend,
+    details.maximumStipend,
+    details.housingType,
+    details.housingDescription,
+    details.benefits,
+    details.communityDescription,
+    details.worshipStyle,
+    details.avgSundayAttendance,
+    details.churchSchoolSize,
+    details.desiredSkills,
+    details.challenges,
+    details.websiteUrl,
+    details.socialMediaLinks,
+    details.narrativeReflections,
+    details.rawContent,
+    details.scrapedAt
+  );
+}
+
+export function getAllPositionsWithDetails(): Record<string, unknown>[] {
+  return getDb().prepare(`
+    SELECT p.*, d.vh_id, d.profile_url, d.community_name as detail_name,
+           d.address, d.city, d.state_province, d.postal_code,
+           d.contact_name, d.contact_email, d.contact_phone,
+           d.position_title, d.full_part_time, d.position_description,
+           d.minimum_stipend, d.maximum_stipend, d.housing_type,
+           d.housing_description, d.benefits, d.community_description,
+           d.worship_style, d.avg_sunday_attendance, d.church_school_size,
+           d.desired_skills, d.challenges, d.website_url, d.social_media_links,
+           d.narrative_reflections
+    FROM positions p
+    LEFT JOIN position_details d ON p.id = d.position_id
+    ORDER BY p.last_seen DESC
+  `).all() as Record<string, unknown>[];
 }
 
 export function closeDb(): void {
