@@ -1,6 +1,6 @@
 import { launchBrowser, takeScreenshot, closeBrowser } from './browser.js';
 import { navigateToSearch } from './navigate.js';
-import { selectAllStates } from './select-states.js';
+import { searchAllPositions } from './select-states.js';
 import { clickSearchAndExtract } from './scrape-results.js';
 import { applyDiff } from './diff.js';
 import { logScrape, closeDb } from './db.js';
@@ -29,22 +29,19 @@ async function main(): Promise<void> {
     // Navigate to the search page
     await navigateToSearch(page);
 
-    // Select all states
-    const stateCount = await selectAllStates(page);
-    logger.info('State selection complete', { statesSelected: stateCount });
+    // Use wildcard search to find all positions
+    await searchAllPositions(page);
 
-    // If no states were selected, something is wrong with the dropdown.
-    // Do not proceed with an empty search (it returns 0 results).
-    if (stateCount === 0) {
-      throw new Error(
-        'Failed to select any states. The dropdown interaction is not working. ' +
-        'Check screenshots for page state.'
-      );
-    }
-
-    // Search and extract results
+    // Extract results from all pages
     const positions = await clickSearchAndExtract(page);
     logger.info('Scraping complete', { positionsFound: positions.length });
+
+    if (positions.length === 0) {
+      throw new Error(
+        'Scrape returned 0 positions. The search may not have returned results, ' +
+        'or the table extraction failed. Check screenshots for page state.'
+      );
+    }
 
     if (CONFIG.dryRun) {
       logger.info('Dry run mode: skipping database writes');
