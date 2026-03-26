@@ -1,1 +1,50 @@
-[]
+[
+  {
+    "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
+    "name": "St Peters (Rome)",
+    "diocese": "Atlanta",
+    "state": "",
+    "organization_type": "Congregation",
+    "position_type": "Assistant/Associate/Curate",
+    "receiving_names_from": "02/23/2026",
+    "receiving_names_to": "03/31/2026",
+    "updated_on_hub": "March 11",
+    "first_seen": "2026-03-26T18:13:13.968Z",
+    "last_seen": "2026-03-26T18:13:13.968Z",
+    "status": "new",
+    "details_url": "",
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peters (Rome)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/23/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 11 </span></td>"
+  },
+  {
+    "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
+    "name": "St Pauls (Newnan)",
+    "diocese": "Atlanta",
+    "state": "",
+    "organization_type": "Congregation",
+    "position_type": "Assistant/Associate/Curate",
+    "receiving_names_from": "03/01/2026",
+    "receiving_names_to": "04/12/2026",
+    "updated_on_hub": "March 20",
+    "first_seen": "2026-03-26T18:13:13.968Z",
+    "last_seen": "2026-03-26T18:13:13.968Z",
+    "status": "new",
+    "details_url": "",
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Pauls (Newnan)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 20 </span></td>"
+  },
+  {
+    "id": "2aaff22ec6c77b87d61cb8d5ab687aac2219c75d68980a4691594376d499ffac",
+    "name": "Holy Innocents (Atlanta)",
+    "diocese": "Atlanta",
+    "state": "",
+    "organization_type": "Congregation",
+    "position_type": "Assistant/Associate/Curate",
+    "receiving_names_from": "03/01/2026",
+    "receiving_names_to": "03/20/2026",
+    "updated_on_hub": "March 16",
+    "first_seen": "2026-03-26T18:13:13.968Z",
+    "last_seen": "2026-03-26T18:13:13.968Z",
+    "status": "new",
+    "details_url": "",
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Holy Innocents (Atlanta)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/20/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 16 </span></td>"
+  }
+]
