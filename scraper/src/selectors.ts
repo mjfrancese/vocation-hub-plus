@@ -36,8 +36,9 @@ export const SELECTORS = {
   chip: '.k-chip',
   chipLabel: '.k-chip-label',
 
-  // Search controls
-  searchButton: 'button:has-text("Search")',
+  // Search controls (use :text-is for exact match to avoid
+  // "Search" matching both "Search" and "New Search")
+  searchButton: 'button:has-text("Search"):not(:has-text("New"))',
   newSearchButton: 'button:has-text("New Search")',
 
   // Results
