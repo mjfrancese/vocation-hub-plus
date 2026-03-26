@@ -109,35 +109,88 @@ export default function PositionTable({ positions }: PositionTableProps) {
               {expandedId === pos.id && (
                 <tr key={`${pos.id}-detail`}>
                   <td colSpan={7} className="px-4 py-4 bg-gray-50">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                      <div>
-                        <span className="font-medium text-gray-500">Organization Type</span>
-                        <p className="text-gray-900">{pos.organization_type || 'N/A'}</p>
+                    <div className="space-y-4">
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <DetailField label="Organization Type" value={pos.organization_type} />
+                        <DetailField label="Full/Part Time" value={pos.full_part_time} />
+                        <DetailField label="First Seen" value={pos.first_seen} />
+                        <DetailField label="Last Seen" value={pos.last_seen} />
                       </div>
-                      <div>
-                        <span className="font-medium text-gray-500">First Seen</span>
-                        <p className="text-gray-900">{pos.first_seen || 'N/A'}</p>
-                      </div>
-                      <div>
-                        <span className="font-medium text-gray-500">Last Seen</span>
-                        <p className="text-gray-900">{pos.last_seen || 'N/A'}</p>
-                      </div>
-                      {pos.details_url && (
-                        <div>
-                          <span className="font-medium text-gray-500">Details</span>
-                          <p>
-                            <a
-                              href={pos.details_url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-primary-600 hover:text-primary-800 underline"
-                              onClick={(e) => e.stopPropagation()}
-                            >
-                              View on Vocation Hub
-                            </a>
+
+                      {/* Compensation and Housing */}
+                      {(pos.minimum_stipend || pos.maximum_stipend || pos.housing_type) && (
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                          <DetailField label="Stipend Range" value={
+                            pos.minimum_stipend && pos.maximum_stipend
+                              ? `${pos.minimum_stipend} - ${pos.maximum_stipend}`
+                              : pos.minimum_stipend || pos.maximum_stipend
+                          } />
+                          <DetailField label="Housing" value={pos.housing_type} />
+                          <DetailField label="Worship Style" value={pos.worship_style} />
+                          <DetailField label="Avg Sunday Attendance" value={pos.avg_sunday_attendance} />
+                        </div>
+                      )}
+
+                      {/* Location */}
+                      {(pos.city || pos.state_province) && (
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                          <DetailField label="City" value={pos.city} />
+                          <DetailField label="State" value={pos.state_province} />
+                          <DetailField label="Contact" value={pos.contact_name} />
+                          <DetailField label="Email" value={pos.contact_email} />
+                        </div>
+                      )}
+
+                      {/* Description */}
+                      {pos.position_description && (
+                        <div className="text-sm">
+                          <span className="font-medium text-gray-500">Position Description</span>
+                          <p className="text-gray-900 mt-1 whitespace-pre-line">
+                            {pos.position_description}
                           </p>
                         </div>
                       )}
+
+                      {/* Skills and Community */}
+                      {pos.desired_skills && (
+                        <div className="text-sm">
+                          <span className="font-medium text-gray-500">Desired Skills</span>
+                          <p className="text-gray-900 mt-1 whitespace-pre-line">{pos.desired_skills}</p>
+                        </div>
+                      )}
+
+                      {pos.community_description && (
+                        <div className="text-sm">
+                          <span className="font-medium text-gray-500">Community Description</span>
+                          <p className="text-gray-900 mt-1 whitespace-pre-line">{pos.community_description}</p>
+                        </div>
+                      )}
+
+                      {/* Links */}
+                      <div className="flex gap-4 text-sm">
+                        {pos.profile_url && (
+                          <a
+                            href={pos.profile_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary-600 hover:text-primary-800 underline"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            View full profile on Vocation Hub
+                          </a>
+                        )}
+                        {pos.website_url && (
+                          <a
+                            href={pos.website_url.startsWith('http') ? pos.website_url : `https://${pos.website_url}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary-600 hover:text-primary-800 underline"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Church website
+                          </a>
+                        )}
+                      </div>
                     </div>
                   </td>
                 </tr>
@@ -146,6 +199,16 @@ export default function PositionTable({ positions }: PositionTableProps) {
           ))}
         </tbody>
       </table>
+    </div>
+  );
+}
+
+function DetailField({ label, value }: { label: string; value?: string | null }) {
+  if (!value) return null;
+  return (
+    <div>
+      <span className="font-medium text-gray-500">{label}</span>
+      <p className="text-gray-900">{value}</p>
     </div>
   );
 }
