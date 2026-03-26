@@ -24,9 +24,6 @@ function generateId(name: string, diocese: string, positionType: string): string
   return crypto.createHash('sha256').update(input).digest('hex');
 }
 
-/**
- * Wait for search results and extract all positions across all pages.
- */
 export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> {
   const hasResults = await waitForResults(page);
   if (!hasResults) {
@@ -45,18 +42,12 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
     allPositions.push(...positions);
     logger.info('Extracted positions from page', { page: currentPage, count: positions.length });
 
-    // Check for next page
     const hasNextPage = await goToNextPage(page);
-    if (!hasNextPage) {
-      break;
-    }
+    if (!hasNextPage) break;
     currentPage++;
 
-    // Wait for the table to reload after pagination
     await sleep(2000);
 
-    // Verify results still exist after pagination. Blazor may reset the
-    // search context when paginating, causing 0 results on page 2+.
     const pagerText = await page.locator(SELECTORS.pagerInfo).textContent().catch(() => '');
     if (!pagerText || pagerText.includes('0 - 0 of 0')) {
       logger.warn('Pagination caused page to reset, returning results from previous pages', {
@@ -71,90 +62,85 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
   return allPositions;
 }
 
-/**
- * Extract all rows from the current page in a SINGLE page.evaluate() call.
- *
- * This replaces the previous approach of calling Playwright locators
- * individually for each cell (175+ round-trips for 25 rows x 7 columns),
- * which caused 10-minute timeouts. A single evaluate() runs all DOM
- * reads in the browser context with one round-trip.
- */
+// Plain JavaScript string passed to page.evaluate() to avoid tsx injecting
+// __name() helpers that don't exist in the browser context.
+const EXTRACT_SCRIPT = `(function() {
+  var grid = document.querySelector('.k-grid');
+  if (!grid) return [];
+
+  var headerCells = grid.querySelectorAll('thead th');
+  var colMap = {};
+  for (var i = 0; i < headerCells.length; i++) {
+    var text = (headerCells[i].textContent || '').trim().toUpperCase();
+    if (text.indexOf('NAME') >= 0 && text.indexOf('RECEIVING') < 0) colMap.name = i;
+    else if (text.indexOf('DIOCESE') >= 0) colMap.diocese = i;
+    else if (text.indexOf('ORGANIZATION') >= 0) colMap.organizationType = i;
+    else if (text.indexOf('POSITION') >= 0) colMap.positionType = i;
+    else if (text.indexOf('RECEIVING') >= 0 && colMap.receivingFrom === undefined) colMap.receivingFrom = i;
+    else if (text.indexOf('RECEIVING') >= 0) colMap.receivingTo = i;
+    else if (text.indexOf('UPDATE') >= 0) colMap.updated = i;
+    else if (text.indexOf('STATE') >= 0) colMap.state = i;
+  }
+
+  var rows = grid.querySelectorAll('tbody tr');
+  var results = [];
+
+  for (var r = 0; r < rows.length; r++) {
+    var cells = rows[r].querySelectorAll('td');
+    if (cells.length < 3) continue;
+
+    var name = colMap.name !== undefined && colMap.name < cells.length
+      ? (cells[colMap.name].textContent || '').trim() : '';
+    var diocese = colMap.diocese !== undefined && colMap.diocese < cells.length
+      ? (cells[colMap.diocese].textContent || '').trim() : '';
+
+    if (!name && !diocese) continue;
+
+    var detailsUrl = '';
+    if (colMap.name !== undefined && colMap.name < cells.length) {
+      var link = cells[colMap.name].querySelector('a');
+      if (link) detailsUrl = link.getAttribute('href') || '';
+    }
+
+    var cell = function(key) {
+      var idx = colMap[key];
+      if (idx === undefined || idx >= cells.length) return '';
+      return (cells[idx].textContent || '').trim();
+    };
+
+    results.push({
+      name: name,
+      diocese: diocese,
+      state: cell('state'),
+      organizationType: cell('organizationType'),
+      positionType: cell('positionType'),
+      receivingNamesFrom: cell('receivingFrom'),
+      receivingNamesTo: cell('receivingTo'),
+      updatedOnHub: cell('updated'),
+      detailsUrl: detailsUrl,
+      rawHtml: rows[r].innerHTML
+    });
+  }
+
+  return results;
+})()`;
+
+interface RawRow {
+  name: string;
+  diocese: string;
+  state: string;
+  organizationType: string;
+  positionType: string;
+  receivingNamesFrom: string;
+  receivingNamesTo: string;
+  updatedOnHub: string;
+  detailsUrl: string;
+  rawHtml: string;
+}
+
 async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
-  const rawRows = await page.evaluate(() => {
-    const grid = document.querySelector('.k-grid');
-    if (!grid) return [];
+  const rawRows = (await page.evaluate(EXTRACT_SCRIPT)) as RawRow[];
 
-    // Read headers to build column map
-    const headerCells = grid.querySelectorAll('thead th');
-    const colMap: Record<string, number> = {};
-    headerCells.forEach((th, i) => {
-      const text = (th.textContent || '').trim().toUpperCase();
-      if (text.includes('NAME') && !text.includes('RECEIVING')) colMap.name = i;
-      else if (text.includes('DIOCESE')) colMap.diocese = i;
-      else if (text.includes('ORGANIZATION')) colMap.organizationType = i;
-      else if (text.includes('POSITION')) colMap.positionType = i;
-      else if (text.includes('RECEIVING') && !('receivingFrom' in colMap)) colMap.receivingFrom = i;
-      else if (text.includes('RECEIVING')) colMap.receivingTo = i;
-      else if (text.includes('UPDATE')) colMap.updated = i;
-      else if (text.includes('STATE')) colMap.state = i;
-    });
-
-    // Read all data rows
-    const rows = grid.querySelectorAll('tbody tr');
-    const results: Array<{
-      name: string;
-      diocese: string;
-      state: string;
-      organizationType: string;
-      positionType: string;
-      receivingNamesFrom: string;
-      receivingNamesTo: string;
-      updatedOnHub: string;
-      detailsUrl: string;
-      rawHtml: string;
-    }> = [];
-
-    rows.forEach((row) => {
-      const cells = row.querySelectorAll('td');
-      if (cells.length < 3) return;
-
-      // Inline cell accessor (no named function to avoid tsx __name injection)
-      const c = (key: string) => {
-        const idx = (colMap as any)[key];
-        return idx !== undefined && idx < cells.length
-          ? (cells[idx].textContent || '').trim()
-          : '';
-      };
-
-      const name = c('name');
-      const diocese = c('diocese');
-      if (!name && !diocese) return; // skip empty rows
-
-      // Check for a link in the name cell
-      let detailsUrl = '';
-      if (colMap.name !== undefined && colMap.name < cells.length) {
-        const link = cells[colMap.name].querySelector('a');
-        if (link) detailsUrl = link.getAttribute('href') || '';
-      }
-
-      results.push({
-        name,
-        diocese,
-        state: c('state'),
-        organizationType: c('organizationType'),
-        positionType: c('positionType'),
-        receivingNamesFrom: c('receivingFrom'),
-        receivingNamesTo: c('receivingTo'),
-        updatedOnHub: c('updated'),
-        detailsUrl,
-        rawHtml: row.innerHTML,
-      });
-    });
-
-    return results;
-  });
-
-  // Add IDs on the Node side (crypto not available in browser)
   return rawRows.map((row) => ({
     ...row,
     id: generateId(row.name, row.diocese, row.positionType),
@@ -164,22 +150,11 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
 async function goToNextPage(page: Page): Promise<boolean> {
   try {
     const pager = page.locator(SELECTORS.pager);
-    const pagerExists = (await pager.count()) > 0;
-
-    if (!pagerExists) {
-      return false;
-    }
+    if ((await pager.count()) === 0) return false;
 
     const nextButton = page.locator(SELECTORS.pagerNext);
-    const nextExists = (await nextButton.count()) > 0;
-    if (!nextExists) {
-      return false;
-    }
-
-    const isDisabled = await nextButton.isDisabled().catch(() => true);
-    if (isDisabled) {
-      return false;
-    }
+    if ((await nextButton.count()) === 0) return false;
+    if (await nextButton.isDisabled().catch(() => true)) return false;
 
     await nextButton.click();
     await page.waitForTimeout(1500);
