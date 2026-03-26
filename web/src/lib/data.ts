@@ -4,7 +4,7 @@ import changesData from '../../public/data/changes.json';
 import metaData from '../../public/data/meta.json';
 
 export function getPositions(): Position[] {
-  return positionsData as Position[];
+  return positionsData as unknown as Position[];
 }
 
 export function getChanges(): PositionChange[] {
