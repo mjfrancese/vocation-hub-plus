@@ -7,6 +7,12 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
 
 jobs:
   scrape:
@@ -24,7 +30,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
 
-      - name: Install dependencies
+      - name: Install scraper dependencies
         run: npm ci --workspace=scraper
 
       - name: Install Playwright Chromium
@@ -77,3 +83,24 @@ jobs:
             git commit -m "data: update positions from scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
             git push
           fi
+
+      # Build and deploy frontend directly in this workflow.
+      # GITHUB_TOKEN pushes don't trigger other workflows, so
+      # we can't rely on deploy.yml being triggered by the data commit.
+      - name: Install web dependencies
+        run: npm ci --workspace=web
+
+      - name: Build frontend
+        working-directory: web
+        run: npx next build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/out
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
