@@ -14,41 +14,48 @@ import { takeScreenshot } from './browser.js';
 export async function searchAllPositions(page: Page): Promise<void> {
   logger.info('Using wildcard search to find all positions');
 
-  // Find the Community name input field. It's after the "Community name" label.
-  // Since there are multiple text inputs on the page, locate it relative to its label.
-  const communitySection = page.locator('text=Community name').first();
-  await communitySection.scrollIntoViewIfNeeded();
+  // First, clear any pre-selected Position Types by clicking "New Search"
+  // to reset the form to a clean state.
+  const newSearchBtn = page.locator(SELECTORS.newSearchButton);
+  if (await newSearchBtn.isVisible().catch(() => false)) {
+    await newSearchBtn.click();
+    logger.info('Clicked New Search to reset form');
+    await page.waitForTimeout(2000);
+  }
 
-  // The input is near the Community name label. Use the last plain text input
-  // on the page (the Community name field is at the bottom of the form).
-  const allInputs = page.locator('input[type="text"]');
-  const inputCount = await allInputs.count();
-  logger.info('Found text inputs on page', { count: inputCount });
+  // Locate the Community name input using its relationship to the
+  // "Community name" label and the wildcard help text.
+  // Strategy: find the first <input> that appears after "Community name" text
+  // in DOM order, using XPath following-axis.
+  const communityInput = page.locator(
+    'text=Community name >> xpath=following::input[1]'
+  );
 
-  // The Community name input is the last text input that is NOT inside a
-  // multiselect widget (no placeholder containing "select one or more")
-  let communityInput = null;
-  for (let i = inputCount - 1; i >= 0; i--) {
-    const input = allInputs.nth(i);
-    const placeholder = await input.getAttribute('placeholder') || '';
-    const isMultiselect = placeholder.toLowerCase().includes('select one or more');
-    if (!isMultiselect) {
-      communityInput = input;
-      logger.info('Found Community name input', { index: i, placeholder });
-      break;
+  // Verify we found it
+  const inputVisible = await communityInput.isVisible({ timeout: 5000 }).catch(() => false);
+
+  if (!inputVisible) {
+    // Fallback: find the input that's near the wildcard help text
+    logger.warn('Primary locator failed, trying fallback');
+    const fallbackInput = page.locator(
+      'text=You can use standard search wildcards >> xpath=preceding::input[1]'
+    );
+    const fallbackVisible = await fallbackInput.isVisible({ timeout: 5000 }).catch(() => false);
+
+    if (fallbackVisible) {
+      await fallbackInput.scrollIntoViewIfNeeded();
+      await fallbackInput.click();
+      await fallbackInput.fill('*');
+      logger.info('Typed wildcard "*" in Community name field (fallback locator)');
+    } else {
+      throw new Error('Could not locate the Community name input field');
     }
+  } else {
+    await communityInput.scrollIntoViewIfNeeded();
+    await communityInput.click();
+    await communityInput.fill('*');
+    logger.info('Typed wildcard "*" in Community name field');
   }
-
-  if (!communityInput) {
-    // Fallback: try to find by proximity to label
-    communityInput = page.locator('input[type="text"]').last();
-    logger.warn('Using fallback: last text input on page');
-  }
-
-  // Clear any existing text and type the wildcard
-  await communityInput.click();
-  await communityInput.fill('*');
-  logger.info('Typed wildcard "*" in Community name field');
 
   await takeScreenshot(page, 'wildcard-entered');
 
