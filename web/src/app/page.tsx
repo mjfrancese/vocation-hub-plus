@@ -17,9 +17,9 @@ export default function HomePage() {
   const searchIndex = useMemo(() => createSearchIndex(allPositions), [allPositions]);
 
   const [query, setQuery] = useState('');
-  const [stateFilter, setStateFilter] = useState('');
-  const [dioceseFilter, setDioceseFilter] = useState('');
-  const [typeFilter, setTypeFilter] = useState('');
+  const [selectedStates, setSelectedStates] = useState<string[]>([]);
+  const [selectedDioceses, setSelectedDioceses] = useState<string[]>([]);
+  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [statusFilter, setStatusFilter] = useState('');
 
   const states = useMemo(() => getUniqueValues(allPositions, 'state'), [allPositions]);
@@ -29,20 +29,31 @@ export default function HomePage() {
   const filtered = useMemo(() => {
     let results = query ? searchPositions(searchIndex, query) : allPositions;
 
-    if (stateFilter) results = results.filter((p) => p.state === stateFilter);
-    if (dioceseFilter) results = results.filter((p) => p.diocese === dioceseFilter);
-    if (typeFilter) results = results.filter((p) => p.position_type === typeFilter);
-    if (statusFilter) results = results.filter((p) => p.status === statusFilter);
+    if (selectedStates.length > 0) {
+      results = results.filter((p) => selectedStates.includes(p.state));
+    }
+    if (selectedDioceses.length > 0) {
+      results = results.filter((p) => selectedDioceses.includes(p.diocese));
+    }
+    if (selectedTypes.length > 0) {
+      results = results.filter((p) => selectedTypes.includes(p.position_type));
+    }
+    if (statusFilter) {
+      results = results.filter((p) => p.status === statusFilter);
+    }
 
     return results;
-  }, [allPositions, searchIndex, query, stateFilter, dioceseFilter, typeFilter, statusFilter]);
+  }, [allPositions, searchIndex, query, selectedStates, selectedDioceses, selectedTypes, statusFilter]);
 
   function clearFilters() {
-    setStateFilter('');
-    setDioceseFilter('');
-    setTypeFilter('');
+    setSelectedStates([]);
+    setSelectedDioceses([]);
+    setSelectedTypes([]);
     setStatusFilter('');
   }
+
+  const hasActiveFilters = selectedStates.length > 0 || selectedDioceses.length > 0 ||
+    selectedTypes.length > 0 || statusFilter;
 
   return (
     <div className="space-y-6">
@@ -53,25 +64,30 @@ export default function HomePage() {
         </div>
         <div className="flex items-center gap-3">
           <span className="text-sm text-gray-600">
-            {meta.activeCount} active positions
+            {filtered.length} of {allPositions.length} positions
+            {hasActiveFilters || query ? ' (filtered)' : ''}
           </span>
           <ExportButton positions={filtered} />
         </div>
       </div>
 
-      <SearchBar value={query} onChange={setQuery} resultCount={query ? filtered.length : undefined} />
+      <SearchBar
+        value={query}
+        onChange={setQuery}
+        resultCount={query || hasActiveFilters ? filtered.length : undefined}
+      />
 
       <Filters
         states={states}
         dioceses={dioceses}
         positionTypes={positionTypes}
-        selectedState={stateFilter}
-        selectedDiocese={dioceseFilter}
-        selectedType={typeFilter}
+        selectedStates={selectedStates}
+        selectedDioceses={selectedDioceses}
+        selectedTypes={selectedTypes}
         selectedStatus={statusFilter}
-        onStateChange={setStateFilter}
-        onDioceseChange={setDioceseFilter}
-        onTypeChange={setTypeFilter}
+        onStatesChange={setSelectedStates}
+        onDiocesesChange={setSelectedDioceses}
+        onTypesChange={setSelectedTypes}
         onStatusChange={setStatusFilter}
         onClear={clearFilters}
       />
