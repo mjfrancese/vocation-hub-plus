@@ -17,17 +17,22 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  var text = document.body ? document.body.innerText : '';
-  var hasProfile = text.indexOf('Position Profile') >= 0 ||
-                   text.indexOf('Basic Information') >= 0;
-  var title = document.title || '';
-  return { hasProfile: hasProfile, title: title, len: text.length };
+  // Valid profiles have filled-in form fields (Diocese: "Virginia", etc.)
+  // Empty profiles have the same labels but blank input fields.
+  // Count input elements with non-empty values - fast and definitive.
+  var inputs = document.querySelectorAll('input, textarea, select');
+  var filled = 0;
+  for (var i = 0; i < inputs.length; i++) {
+    var val = inputs[i].value || inputs[i].textContent || '';
+    if (val.trim().length > 0) filled++;
+  }
+  // Real profiles have 3+ filled fields (diocese, name, type at minimum)
+  return { hasProfile: filled >= 3, filled: filled };
 })()`;
 
 interface CheckResult {
   hasProfile: boolean;
-  title: string;
-  len: number;
+  filled: number;
 }
 
 async function main() {
