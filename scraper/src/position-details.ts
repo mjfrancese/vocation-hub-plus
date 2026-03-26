@@ -1,12 +1,9 @@
-import { Page } from 'playwright';
+import { Page, BrowserContext } from 'playwright';
 import { logger } from './logger.js';
 import { takeScreenshot } from './browser.js';
 import { sleep } from './navigate.js';
 import { upsertPositionDetails } from './db.js';
 
-/**
- * Detailed position data extracted from the Position Profile page.
- */
 export interface PositionDetails {
   positionId: number;
   profileUrl: string;
@@ -41,191 +38,205 @@ export interface PositionDetails {
   rawContent: string;
 }
 
-// Plain JS string for extracting profile page content (avoids tsx __name issue)
-const EXTRACT_PROFILE_SCRIPT = `(function() {
-  var result = { tabs: {} };
-
-  // Get full page text
-  var body = document.body || document.documentElement;
-  result.fullText = body.innerText || '';
-  result.fullHtml = body.innerHTML || '';
-
-  // Check if this is a valid profile page
-  var h1 = document.querySelector('h1, h2');
-  result.pageTitle = h1 ? h1.textContent.trim() : '';
-  result.isProfile = result.fullText.indexOf('Basic Information') >= 0 ||
-                     result.fullText.indexOf('Position Profile') >= 0;
-
-  // Try to get content from visible panels/sections
-  var panels = document.querySelectorAll('.k-content, [role="tabpanel"], .tab-content, .card-body');
-  result.panelCount = panels.length;
-  var visiblePanels = [];
-  for (var i = 0; i < panels.length; i++) {
-    if (panels[i].offsetHeight > 0) {
-      visiblePanels.push(panels[i].innerText || '');
-    }
-  }
-  result.visiblePanelTexts = visiblePanels;
-
-  return result;
-})()`;
-
 /**
- * Scan a range of position IDs by directly visiting /PositionView/{id}.
- * This avoids the fragile row-clicking approach entirely.
- *
- * Strategy:
- * - Scan from a starting ID upward
- * - Valid profiles contain "Basic Information" or "Position Profile" text
- * - Stop after hitting several consecutive 404s/empty pages
- * - Store the max known ID for future runs
+ * Discover position IDs by clicking rows in the search results.
+ * Uses a listener on page navigation to capture the /PositionView/{id} URL
+ * without needing to wait for the profile page to fully load.
  */
-export async function scanAndScrapeProfiles(
+export async function discoverPositionIds(
   page: Page,
-  baseUrl: string,
-  startId: number,
-  timeBudgetMs: number
-): Promise<{ scraped: number; maxId: number; ids: number[] }> {
-  const startTime = Date.now();
-  let scraped = 0;
-  let maxId = startId;
-  let consecutiveMisses = 0;
-  const maxConsecutiveMisses = 50; // Stop after 50 misses in a row
-  const foundIds: number[] = [];
-  let currentId = startId;
+  totalPositions: number
+): Promise<number[]> {
+  const ids: number[] = [];
 
-  logger.info('Starting profile ID scan', { startId, timeBudgetMs });
+  // Process all visible pages of results
+  let pageNum = 1;
 
-  while (consecutiveMisses < maxConsecutiveMisses) {
-    // Check time budget
-    if (Date.now() - startTime > timeBudgetMs) {
-      logger.warn('Time budget exceeded for profile scanning', { scraped, currentId });
-      break;
-    }
+  while (true) {
+    const rows = page.locator('.k-grid tbody tr');
+    const rowCount = await rows.count();
+    logger.info('Discovering IDs from search results page', { page: pageNum, rows: rowCount });
 
-    const profileUrl = `${baseUrl}/PositionView/${currentId}`;
+    for (let i = 0; i < rowCount; i++) {
+      try {
+        // Click the row - Blazor will navigate to /PositionView/{id}
+        const row = page.locator('.k-grid tbody tr').nth(i);
+        await row.click();
+        await sleep(1500);
 
-    try {
-      const response = await page.goto(profileUrl, {
-        waitUntil: 'load',
-        timeout: 15_000,
-      });
+        // Capture the URL
+        const url = page.url();
+        const match = url.match(/PositionView\/(\d+)/);
 
-      // Quick check: if the page redirected or is clearly not a profile, skip
-      const finalUrl = page.url();
-      if (!finalUrl.includes('PositionView')) {
-        consecutiveMisses++;
-        currentId++;
-        continue;
-      }
-
-      // Wait for Blazor to render
-      await sleep(2000);
-
-      // Check if this is a valid profile page
-      const pageData = await page.evaluate(EXTRACT_PROFILE_SCRIPT) as {
-        isProfile: boolean;
-        pageTitle: string;
-        fullText: string;
-        panelCount: number;
-        visiblePanelTexts: string[];
-      };
-
-      if (!pageData.isProfile) {
-        consecutiveMisses++;
-        currentId++;
-        continue;
-      }
-
-      // Valid profile found!
-      consecutiveMisses = 0;
-      foundIds.push(currentId);
-
-      // Screenshot every found profile so we can see the page layout
-      await takeScreenshot(page, 'profile-found-' + currentId);
-      maxId = Math.max(maxId, currentId);
-
-      logger.info('Found valid profile', {
-        id: currentId,
-        title: pageData.pageTitle,
-        panels: pageData.panelCount,
-      });
-
-      // Now click through all 6 tabs to load their content
-      const tabNames = [
-        'Basic Information',
-        'Position Details',
-        'Stipend, Housing, and Benefits',
-        'Ministry Context and Desired Skills',
-        'Ministry Media and Links',
-        'Optional Narrative Reflections',
-      ];
-
-      for (var t = 0; t < tabNames.length; t++) {
-        try {
-          var tabLocator = page.locator('text="' + tabNames[t] + '"').first();
-          if (await tabLocator.isVisible({ timeout: 1000 }).catch(() => false)) {
-            await tabLocator.click();
-            await sleep(800);
+        if (match) {
+          const id = parseInt(match[1], 10);
+          if (!ids.includes(id)) {
+            ids.push(id);
+            logger.info('Discovered ID', { id, index: i, page: pageNum, total: ids.length });
           }
+        }
+
+        // Go back to search results
+        await page.goBack({ waitUntil: 'load', timeout: 15_000 });
+        await sleep(2000);
+
+        // Verify we're back on the search page with results
+        const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
+        if (!pagerText || pagerText.includes('0 - 0 of 0')) {
+          logger.warn('Search results lost after goBack, stopping ID discovery', {
+            discovered: ids.length,
+          });
+          return ids;
+        }
+      } catch (err) {
+        logger.warn('Error discovering ID for row', { index: i, error: String(err).substring(0, 100) });
+        // Try to get back to search
+        try {
+          await page.goBack({ waitUntil: 'load', timeout: 10_000 }).catch(() => {});
+          await sleep(2000);
         } catch {
-          // Tab might not exist
+          return ids;
         }
       }
-
-      // Screenshot after all tabs clicked to see final state
-      await takeScreenshot(page, 'profile-tabs-' + currentId);
-
-      // Extract all content after clicking all tabs
-      const allContent = await page.evaluate(`(function() {
-        return (document.body || document.documentElement).innerText || '';
-      })()`) as string;
-
-      // Parse fields from the full text
-      const details = parseProfileText(allContent, currentId, profileUrl);
-
-      // Save to database
-      upsertPositionDetails(details);
-      scraped++;
-
-      if (scraped <= 3 || scraped % 10 === 0) {
-        await takeScreenshot(page, 'profile-' + currentId);
-      }
-
-      logger.info('Profile scraped', {
-        id: currentId,
-        name: details.communityName,
-        diocese: details.diocese,
-        stipend: details.minimumStipend || 'not listed',
-        progress: scraped + ' scraped, ' + foundIds.length + ' found',
-      });
-
-    } catch (err) {
-      consecutiveMisses++;
-      logger.debug('Profile not found or error', {
-        id: currentId,
-        error: String(err).substring(0, 100),
-      });
     }
 
-    currentId++;
-    await sleep(300); // Be respectful between requests
+    // Try to go to next page of results
+    const currentPageNum = await page.evaluate(`(function() {
+      var selected = document.querySelector('.k-pager .k-selected');
+      return selected ? parseInt(selected.textContent) : 0;
+    })()`) as number;
+
+    const nextPageNum = currentPageNum + 1;
+    const clicked = await page.evaluate(`(function() {
+      var buttons = document.querySelectorAll('.k-pager button, .k-pager a');
+      for (var i = 0; i < buttons.length; i++) {
+        if (buttons[i].textContent.trim() === '${nextPageNum}') {
+          buttons[i].click();
+          return true;
+        }
+      }
+      return false;
+    })()`) as boolean;
+
+    if (!clicked) break;
+
+    pageNum++;
+    await sleep(2000);
+
+    // Verify pagination worked
+    const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
+    if (!pagerText || pagerText.includes('0 - 0 of 0')) break;
   }
 
-  logger.info('Profile scan complete', {
-    scanned: currentId - startId,
-    found: foundIds.length,
-    scraped,
-    maxId,
-    consecutiveMisses,
-  });
-
-  return { scraped, maxId, ids: foundIds };
+  logger.info('ID discovery complete', { total: ids.length });
+  return ids;
 }
 
 /**
- * Parse structured fields from the full text content of a profile page.
- * Uses line-by-line pattern matching to find label: value pairs.
+ * Scrape position details by visiting each profile URL in a separate page.
+ * This avoids interfering with the search results page.
+ */
+export async function scrapePositionDetails(
+  context: BrowserContext,
+  positionIds: number[],
+  baseUrl: string,
+  timeBudgetMs: number
+): Promise<number> {
+  const startTime = Date.now();
+  let scraped = 0;
+
+  // Open a dedicated page for profile scraping
+  const profilePage = await context.newPage();
+  profilePage.setDefaultTimeout(15_000);
+
+  try {
+    for (let i = 0; i < positionIds.length; i++) {
+      if (Date.now() - startTime > timeBudgetMs) {
+        logger.warn('Time budget exceeded', { scraped, remaining: positionIds.length - i });
+        break;
+      }
+
+      const id = positionIds[i];
+      const profileUrl = `${baseUrl}/PositionView/${id}`;
+
+      logger.info('Scraping profile', { id, progress: `${i + 1}/${positionIds.length}` });
+
+      try {
+        await profilePage.goto(profileUrl, { waitUntil: 'load', timeout: 20_000 });
+        await sleep(3000); // Wait for Blazor
+
+        // Check if valid profile
+        const hasProfile = await profilePage.evaluate(`(function() {
+          var text = document.body.innerText || '';
+          return text.indexOf('Basic Information') >= 0 || text.indexOf('Position Profile') >= 0;
+        })()`) as boolean;
+
+        if (!hasProfile) {
+          logger.warn('Not a valid profile page', { id });
+          continue;
+        }
+
+        // Click through each tab to load content
+        const tabNames = [
+          'Basic Information',
+          'Position Details',
+          'Stipend, Housing, and Benefits',
+          'Ministry Context and Desired Skills',
+          'Ministry Media and Links',
+          'Optional Narrative Reflections',
+        ];
+
+        for (const tabName of tabNames) {
+          try {
+            const tab = profilePage.locator(`text="${tabName}"`).first();
+            if (await tab.isVisible({ timeout: 1000 }).catch(() => false)) {
+              await tab.click();
+              await sleep(1000);
+            }
+          } catch { /* tab may not exist */ }
+        }
+
+        // Take screenshot of first few profiles for debugging
+        if (scraped < 3) {
+          await takeScreenshot(profilePage, `profile-${id}`);
+        }
+
+        // Extract all page text
+        const rawContent = await profilePage.evaluate(`(function() {
+          return (document.body || document.documentElement).innerText || '';
+        })()`) as string;
+
+        // Parse and save
+        const details = parseProfileText(rawContent, id, profileUrl);
+        upsertPositionDetails(details);
+        scraped++;
+
+        logger.info('Profile saved', {
+          id,
+          name: details.communityName || '(unknown)',
+          stipend: details.minimumStipend || 'not listed',
+        });
+      } catch (err) {
+        logger.warn('Failed to scrape profile', { id, error: String(err).substring(0, 100) });
+      }
+
+      await sleep(500);
+    }
+  } finally {
+    await profilePage.close();
+  }
+
+  logger.info('Detail scraping complete', { scraped, total: positionIds.length });
+  return scraped;
+}
+
+/**
+ * Parse structured fields from profile page text.
+ * The profile page text has labeled fields like:
+ *   Label
+ *   Value
+ * or
+ *   Label: Value
  */
 function parseProfileText(
   text: string,
@@ -234,38 +245,43 @@ function parseProfileText(
 ): PositionDetails {
   const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
 
-  // Helper: find the line after a label line
-  const after = (label: string): string => {
-    for (let i = 0; i < lines.length - 1; i++) {
-      if (lines[i].toLowerCase().includes(label.toLowerCase())) {
-        // If same line has a colon, take text after colon
-        const colonIdx = lines[i].indexOf(':');
-        if (colonIdx >= 0) {
-          const val = lines[i].substring(colonIdx + 1).trim();
-          if (val) return val;
-        }
-        // Otherwise return next non-empty line
-        for (let j = i + 1; j < Math.min(i + 3, lines.length); j++) {
-          if (lines[j] && !lines[j].endsWith(':')) return lines[j];
+  // Find value after a label line
+  const after = (... labels: string[]): string => {
+    for (const label of labels) {
+      const lower = label.toLowerCase();
+      for (let i = 0; i < lines.length - 1; i++) {
+        if (lines[i].toLowerCase() === lower || lines[i].toLowerCase().startsWith(lower + ':')) {
+          // If line has "Label: Value", return the value part
+          const colonIdx = lines[i].indexOf(':');
+          if (colonIdx >= 0) {
+            const val = lines[i].substring(colonIdx + 1).trim();
+            if (val) return val;
+          }
+          // Return the next line as the value
+          if (i + 1 < lines.length) return lines[i + 1];
         }
       }
     }
     return '';
   };
 
-  // Helper: find a longer block of text after a label
-  const blockAfter = (label: string): string => {
-    for (let i = 0; i < lines.length - 1; i++) {
-      if (lines[i].toLowerCase().includes(label.toLowerCase())) {
-        const result: string[] = [];
-        for (let j = i + 1; j < lines.length; j++) {
-          // Stop at what looks like a new section label
-          if (lines[j].length < 50 && (lines[j].endsWith(':') || lines[j].endsWith('?'))) break;
-          if (lines[j].length < 30 && lines[j] === lines[j].toUpperCase()) break;
-          result.push(lines[j]);
-          if (result.length > 20) break; // Safety limit
+  // Find a block of text after a label (for descriptions, etc.)
+  const blockAfter = (... labels: string[]): string => {
+    for (const label of labels) {
+      const lower = label.toLowerCase();
+      for (let i = 0; i < lines.length - 1; i++) {
+        if (lines[i].toLowerCase() === lower || lines[i].toLowerCase().startsWith(lower)) {
+          const result: string[] = [];
+          for (let j = i + 1; j < lines.length && result.length < 30; j++) {
+            const line = lines[j];
+            // Stop at tab names or section headers
+            if (['Basic Information', 'Position Details', 'Stipend, Housing, and Benefits',
+                 'Ministry Context and Desired Skills', 'Ministry Media and Links',
+                 'Optional Narrative Reflections'].includes(line)) break;
+            result.push(line);
+          }
+          if (result.length > 0) return result.join('\n').trim();
         }
-        return result.join('\n').trim();
       }
     }
     return '';
@@ -274,43 +290,42 @@ function parseProfileText(
   return {
     positionId,
     profileUrl,
-    communityName: after('Community Name') || after('Name of Community') || after('Congregation'),
-    diocese: after('Diocese'),
-    address: after('Mailing Address') || after('Street Address') || after('Address'),
+    communityName: after('Community Name', 'Name of Community', 'Congregation/Organization Name'),
+    diocese: after('Diocese', 'Diocesan Affiliation'),
+    address: after('Mailing Address', 'Street Address', 'Address'),
     city: after('City'),
-    stateProvince: after('State') || after('Province'),
-    postalCode: after('Zip') || after('Postal Code'),
-    contactName: after('Contact Name') || after('Contact Person'),
-    contactEmail: after('Contact Email') || after('Email Address'),
-    contactPhone: after('Contact Phone') || after('Phone'),
-    positionTitle: after('Position Title'),
-    positionType: after('Position Type'),
-    fullPartTime: after('Full Time') || after('Part Time') || after('Full/Part'),
-    positionDescription: blockAfter('Position Description') || blockAfter('Description of Position'),
-    minimumStipend: after('Minimum Stipend') || after('Compensation Minimum') || after('Salary Minimum'),
-    maximumStipend: after('Maximum Stipend') || after('Compensation Maximum') || after('Salary Maximum'),
-    housingType: after('Housing Type') || after('Type of Housing'),
-    housingDescription: blockAfter('Housing Description') || blockAfter('Housing Detail'),
-    benefits: blockAfter('Benefits'),
-    communityDescription: blockAfter('Community Description') || blockAfter('About the Community'),
-    worshipStyle: after('Worship Style') || after('Style of Worship'),
-    avgSundayAttendance: after('Average Sunday Attendance') || after('ASA') || after('Sunday Attendance'),
-    churchSchoolSize: after('Church School') || after('Sunday School'),
-    desiredSkills: blockAfter('Desired Skills') || blockAfter('Skills and Competencies'),
-    challenges: blockAfter('Challenges') || blockAfter('Opportunities'),
-    websiteUrl: after('Website') || after('Web Site'),
-    socialMediaLinks: after('Social Media') || after('Facebook') || after('Instagram'),
-    narrativeReflections: blockAfter('Narrative') || blockAfter('Reflection'),
+    stateProvince: after('State', 'Province', 'State/Province'),
+    postalCode: after('Zip Code', 'Postal Code', 'Zip'),
+    contactName: after('Contact Name', 'Contact Person', 'Search Chair'),
+    contactEmail: after('Contact Email', 'Email Address', 'Email'),
+    contactPhone: after('Contact Phone', 'Phone Number', 'Phone'),
+    positionTitle: after('Position Title', 'Title'),
+    positionType: after('Position Type', 'Type of Position'),
+    fullPartTime: after('Full-Time/Part-Time', 'Full Time/Part Time', 'Employment Type'),
+    positionDescription: blockAfter('Position Description', 'Description of Position', 'About the Position'),
+    minimumStipend: after('Minimum Stipend', 'Compensation Minimum', 'Salary Minimum', 'Minimum Compensation'),
+    maximumStipend: after('Maximum Stipend', 'Compensation Maximum', 'Salary Maximum', 'Maximum Compensation'),
+    housingType: after('Housing Type', 'Type of Housing', 'Housing'),
+    housingDescription: blockAfter('Housing Description', 'Housing Details'),
+    benefits: blockAfter('Benefits', 'Benefits Description'),
+    communityDescription: blockAfter('Community Description', 'About the Community', 'About the Congregation'),
+    worshipStyle: after('Worship Style', 'Style of Worship'),
+    avgSundayAttendance: after('Average Sunday Attendance', 'ASA', 'Sunday Attendance'),
+    churchSchoolSize: after('Church School', 'Sunday School'),
+    desiredSkills: blockAfter('Desired Skills', 'Skills and Competencies', 'Qualities Sought'),
+    challenges: blockAfter('Challenges', 'Opportunities and Challenges'),
+    websiteUrl: after('Website', 'Web Site', 'Website URL'),
+    socialMediaLinks: after('Social Media', 'Facebook', 'Instagram'),
+    narrativeReflections: blockAfter('Narrative', 'Reflection'),
     scrapedAt: new Date().toISOString(),
     rawContent: text,
   };
 }
 
-// Keep the old function signature for backwards compatibility but now unused
+// Backwards compat stub
 export async function discoverIdsFromSearchResults(
   page: Page,
   expectedCount: number
 ): Promise<number[]> {
-  logger.info('ID discovery via row clicking is disabled, using range scan instead');
   return [];
 }
