@@ -17,17 +17,25 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  // Valid profiles have filled-in form fields (Diocese: "Virginia", etc.)
-  // Empty profiles have the same labels but blank input fields.
-  // Count input elements with non-empty values - fast and definitive.
-  var inputs = document.querySelectorAll('input, textarea, select');
-  var filled = 0;
+  // Both valid and empty profiles have identical structure, tabs, and labels.
+  // Empty profiles have default values like "01/01/0001" and "Open ended"
+  // that count as filled inputs.
+  //
+  // The definitive signal: the Diocese field under Organization.
+  // Valid profiles always have a diocese name. Empty ones have it blank.
+  // Strategy: get all input values, filter out known defaults, and check
+  // if any input has a real text value (a diocese, congregation name, etc.)
+  var inputs = document.querySelectorAll('input, textarea');
+  var realValues = 0;
+  var skip = ['01/01/0001', 'open ended', 'english', ''];
   for (var i = 0; i < inputs.length; i++) {
-    var val = inputs[i].value || inputs[i].textContent || '';
-    if (val.trim().length > 0) filled++;
+    var val = (inputs[i].value || '').trim().toLowerCase();
+    if (val.length < 2) continue;
+    if (skip.indexOf(val) >= 0) continue;
+    if (/^\\d{2}\\/\\d{2}\\/\\d{4}$/.test(val) && val.indexOf('0001') >= 0) continue;
+    realValues++;
   }
-  // Real profiles have 3+ filled fields (diocese, name, type at minimum)
-  return { hasProfile: filled >= 3, filled: filled };
+  return { hasProfile: realValues >= 2, filled: realValues };
 })()`;
 
 interface CheckResult {
