@@ -6,6 +6,7 @@
   "scripts": {
     "scrape": "tsx src/index.ts",
     "scrape:dry": "tsx src/index.ts --dry-run",
+    "discover": "tsx src/discover-ids.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },
