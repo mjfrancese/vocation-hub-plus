@@ -17,30 +17,43 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  // Both valid and empty profiles have identical structure, tabs, and labels.
-  // Empty profiles have default values like "01/01/0001" and "Open ended"
-  // that count as filled inputs.
-  //
-  // The definitive signal: the Diocese field under Organization.
-  // Valid profiles always have a diocese name. Empty ones have it blank.
-  // Strategy: get all input values, filter out known defaults, and check
-  // if any input has a real text value (a diocese, congregation name, etc.)
-  var inputs = document.querySelectorAll('input, textarea');
-  var realValues = 0;
-  var skip = ['01/01/0001', 'open ended', 'english', ''];
-  for (var i = 0; i < inputs.length; i++) {
-    var val = (inputs[i].value || '').trim().toLowerCase();
-    if (val.length < 2) continue;
-    if (skip.indexOf(val) >= 0) continue;
-    if (/^\\d{2}\\/\\d{2}\\/\\d{4}$/.test(val) && val.indexOf('0001') >= 0) continue;
-    realValues++;
+  // The definitive check: look at the visible text on the page.
+  // On valid profiles, the "Diocese" label is followed by an actual
+  // diocese name (e.g. "Virginia"). On empty profiles, "Diocese" is
+  // followed by another label (e.g. "Name") or blank space.
+  var text = (document.body ? document.body.innerText : '') || '';
+  var lines = text.split('\\n').map(function(l) { return l.trim(); }).filter(function(l) { return l.length > 0; });
+
+  // Find "Diocese" label and check the line after it
+  var dioceseValue = '';
+  for (var i = 0; i < lines.length - 1; i++) {
+    if (lines[i] === 'Diocese') {
+      dioceseValue = lines[i + 1] || '';
+      break;
+    }
   }
-  return { hasProfile: realValues >= 2, filled: realValues };
+
+  // If the line after "Diocese" is another label, a section header,
+  // or empty, this is not a real profile. Real diocese values are
+  // names like "Virginia", "Connecticut", "Atlanta", etc.
+  var labels = ['Name', 'Congregation', 'Type', 'Multi-Point', 'Contact',
+                'Organization', 'Position', 'Stipend', 'Ministry', 'Basic',
+                'Optional', 'Application', 'Current status', 'Receiving'];
+  var isLabel = false;
+  for (var j = 0; j < labels.length; j++) {
+    if (dioceseValue === labels[j] || dioceseValue.indexOf(labels[j]) === 0) {
+      isLabel = true;
+      break;
+    }
+  }
+
+  var isReal = dioceseValue.length > 0 && !isLabel;
+  return { hasProfile: isReal, diocese: dioceseValue };
 })()`;
 
 interface CheckResult {
   hasProfile: boolean;
-  filled: number;
+  diocese: string;
 }
 
 async function main() {
@@ -84,9 +97,9 @@ async function main() {
       const result = results[i];
       checked++;
 
-      if (result.status === 'fulfilled' && result.value) {
+      if (result.status === 'fulfilled' && result.value.found) {
         validIds.push(id);
-        console.log(`[FOUND] ID ${id} - valid profile (${validIds.length} found so far)`);
+        console.log(`[FOUND] ID ${id} - ${result.value.diocese} (${validIds.length} found so far)`);
       }
 
       // Progress every 100 IDs
@@ -132,22 +145,16 @@ async function main() {
   console.log(`Results saved to ${outputFile}`);
 }
 
-async function checkId(page: any, id: number): Promise<boolean> {
+async function checkId(page: any, id: number): Promise<{ found: boolean; diocese: string }> {
   try {
     const url = `${BASE_URL}/PositionView/${id}`;
-
-    // Navigate with a short timeout - we just need the page to load enough
-    // to check if it's a valid profile
     await page.goto(url, { waitUntil: 'load', timeout: 10_000 });
-
-    // Brief wait for Blazor to render something
     await page.waitForTimeout(1000);
 
-    // Quick check
     const result = await page.evaluate(CHECK_SCRIPT) as CheckResult;
-    return result.hasProfile;
+    return { found: result.hasProfile, diocese: result.diocese || '' };
   } catch {
-    return false;
+    return { found: false, diocese: '' };
   }
 }
 
