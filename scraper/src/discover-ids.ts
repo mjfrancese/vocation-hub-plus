@@ -18,16 +18,33 @@ const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
   var text = document.body ? document.body.innerText : '';
-  var hasProfile = text.indexOf('Position Profile') >= 0 ||
-                   text.indexOf('Basic Information') >= 0;
-  var title = document.title || '';
-  return { hasProfile: hasProfile, title: title, len: text.length };
+  // Every /PositionView page has "Position Profile" and "Basic Information"
+  // even when empty. Real profiles have actual data like diocese names,
+  // dates, or community names. Check for content that only appears
+  // when a profile has real data filled in.
+  //
+  // Strategy: look for "Diocese" label followed by actual content,
+  // or check if the page has specific data patterns (dates, state names).
+  // An empty profile page will have very little text beyond the headers.
+  // A real profile will have hundreds of characters of content.
+  var hasProfile = text.indexOf('Position Profile') >= 0;
+  if (!hasProfile) return { hasProfile: false, len: 0 };
+
+  // Count lines that look like actual data (not just headers/labels)
+  // Real profiles have content like diocese names, dates, descriptions
+  var lines = text.split('\\n').filter(function(l) { return l.trim().length > 0; });
+
+  // Empty profiles have ~30-50 lines (just headers, tab names, labels)
+  // Real profiles have 60+ lines with actual content
+  var isReal = lines.length > 55;
+
+  return { hasProfile: isReal, len: text.length, lines: lines.length };
 })()`;
 
 interface CheckResult {
   hasProfile: boolean;
-  title: string;
   len: number;
+  lines: number;
 }
 
 async function main() {
