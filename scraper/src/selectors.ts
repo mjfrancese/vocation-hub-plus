@@ -6,6 +6,10 @@ export const SELECTORS = {
   // Page
   pageTitle: 'text=Position Search',
 
+  // Community name text input (supports * and ? wildcards)
+  communityNameInput: 'input[type="text"]',
+  communityNameLabel: 'text=Community name',
+
   // State(s) MultiSelect
   stateInput: 'input.k-input-inner[placeholder*="state" i]',
   stateWrapper: '.telerik-blazor.k-multiselect.k-input',
@@ -41,7 +45,10 @@ export const SELECTORS = {
   resultsTable: '.k-grid-table, table.k-table',
   resultsRow: 'tbody tr',
   resultsCell: 'td',
+  resultsHeader: 'thead th',
   noResults: 'text=No records matching',
+  itemCount: 'text=/\\d+ - \\d+ of \\d+ items/',
+  zeroItems: 'text=0 - 0 of 0 items',
 
   // Pagination
   pager: '.k-pager',

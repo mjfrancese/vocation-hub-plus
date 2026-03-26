@@ -26,12 +26,9 @@ function generateId(name: string, diocese: string, positionType: string): string
 }
 
 /**
- * Click the search button and extract all results across all pages.
+ * Wait for search results and extract all positions across all pages.
  */
 export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> {
-  logger.info('Clicking search button');
-  await page.click(SELECTORS.searchButton);
-
   const hasResults = await waitForResults(page);
   if (!hasResults) {
     logger.info('Search returned no results');
@@ -40,12 +37,16 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
 
   await takeScreenshot(page, 'results-loaded');
 
+  // Read the header row to determine column mapping
+  const columnMap = await detectColumns(page);
+  logger.info('Detected column mapping', { columns: columnMap });
+
   const allPositions: RawPosition[] = [];
   let currentPage = 1;
 
   while (true) {
     logger.info('Extracting results from page', { page: currentPage });
-    const positions = await extractCurrentPage(page);
+    const positions = await extractCurrentPage(page, columnMap);
     allPositions.push(...positions);
     logger.info('Extracted positions from page', { page: currentPage, count: positions.length });
 
@@ -55,15 +56,53 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
       break;
     }
     currentPage++;
-    await sleep(CONFIG.scrapeDelay);
+    // Wait for the table to reload after pagination
+    await sleep(1500);
   }
 
   logger.info('Total positions extracted', { total: allPositions.length });
   return allPositions;
 }
 
-async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
-  const rows = page.locator(`${SELECTORS.resultsTable} ${SELECTORS.resultsRow}`);
+/**
+ * Read the table header row to build a column index map.
+ * This makes the scraper resilient to column order changes.
+ */
+async function detectColumns(page: Page): Promise<Record<string, number>> {
+  const headers = page.locator(`${SELECTORS.resultsGrid} ${SELECTORS.resultsHeader}`);
+  const headerCount = await headers.count();
+  const columnMap: Record<string, number> = {};
+
+  for (let i = 0; i < headerCount; i++) {
+    const text = (await headers.nth(i).textContent())?.trim().toUpperCase() || '';
+
+    if (text.includes('NAME') && !text.includes('RECEIVING')) {
+      columnMap.name = i;
+    } else if (text.includes('DIOCESE')) {
+      columnMap.diocese = i;
+    } else if (text.includes('ORGANIZATION')) {
+      columnMap.organizationType = i;
+    } else if (text.includes('POSITION')) {
+      columnMap.positionType = i;
+    } else if (text.includes('RECEIVING') && !('receivingFrom' in columnMap)) {
+      columnMap.receivingFrom = i;
+    } else if (text.includes('RECEIVING')) {
+      columnMap.receivingTo = i;
+    } else if (text.includes('UPDATE')) {
+      columnMap.updated = i;
+    } else if (text.includes('STATE')) {
+      columnMap.state = i;
+    }
+  }
+
+  return columnMap;
+}
+
+async function extractCurrentPage(
+  page: Page,
+  columnMap: Record<string, number>
+): Promise<RawPosition[]> {
+  const rows = page.locator(`${SELECTORS.resultsGrid} ${SELECTORS.resultsRow}`);
   const rowCount = await rows.count();
   const positions: RawPosition[] = [];
 
@@ -72,25 +111,42 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
     const cells = row.locator(SELECTORS.resultsCell);
     const cellCount = await cells.count();
 
-    if (cellCount < 7) {
-      continue; // Skip header or malformed rows
+    if (cellCount < 3) {
+      continue; // Skip malformed rows
     }
 
-    const name = (await cells.nth(0).textContent())?.trim() || '';
-    const diocese = (await cells.nth(1).textContent())?.trim() || '';
-    const state = (await cells.nth(2).textContent())?.trim() || '';
-    const organizationType = (await cells.nth(3).textContent())?.trim() || '';
-    const positionType = (await cells.nth(4).textContent())?.trim() || '';
-    const receivingNamesFrom = (await cells.nth(5).textContent())?.trim() || '';
-    const receivingNamesTo = (await cells.nth(6).textContent())?.trim() || '';
-    const updatedOnHub = cellCount > 7 ? (await cells.nth(7).textContent())?.trim() || '' : '';
+    const getCell = async (key: string): Promise<string> => {
+      const idx = columnMap[key];
+      if (idx === undefined || idx >= cellCount) return '';
+      return (await cells.nth(idx).textContent())?.trim() || '';
+    };
 
-    // Try to get a details link if present
-    const link = await cells.nth(0).locator('a').getAttribute('href').catch(() => '');
-    const detailsUrl = link || '';
+    const name = await getCell('name');
+    const diocese = await getCell('diocese');
+    const organizationType = await getCell('organizationType');
+    const positionType = await getCell('positionType');
+    const receivingNamesFrom = await getCell('receivingFrom');
+    const receivingNamesTo = await getCell('receivingTo');
+    const updatedOnHub = await getCell('updated');
+    const state = await getCell('state');
+
+    // Skip empty rows (e.g. "no data" placeholder rows)
+    if (!name && !diocese) {
+      continue;
+    }
+
+    // Try to get a details link if the name cell contains a link
+    const nameIdx = columnMap.name;
+    const detailsUrl =
+      nameIdx !== undefined
+        ? await cells
+            .nth(nameIdx)
+            .locator('a')
+            .getAttribute('href')
+            .catch(() => '')
+        : '';
 
     const rawHtml = await row.innerHTML().catch(() => '');
-
     const id = generateId(name, diocese, positionType);
 
     positions.push({
@@ -103,7 +159,7 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
       receivingNamesFrom,
       receivingNamesTo,
       updatedOnHub,
-      detailsUrl,
+      detailsUrl: detailsUrl || '',
       rawHtml,
     });
   }
@@ -121,15 +177,19 @@ async function goToNextPage(page: Page): Promise<boolean> {
     }
 
     const nextButton = page.locator(SELECTORS.pagerNext);
-    const isDisabled = await nextButton.isDisabled().catch(() => true);
+    const nextExists = (await nextButton.count()) > 0;
+    if (!nextExists) {
+      return false;
+    }
 
+    const isDisabled = await nextButton.isDisabled().catch(() => true);
     if (isDisabled) {
       return false;
     }
 
     await nextButton.click();
     // Wait for the table to update
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(1500);
     return true;
   } catch {
     return false;
