@@ -7,75 +7,65 @@ import { takeScreenshot } from './browser.js';
 export async function navigateToSearch(page: Page): Promise<void> {
   logger.info('Navigating to Vocation Hub', { url: CONFIG.url });
 
-  // Use 'load' instead of 'networkidle' because Blazor maintains a
-  // persistent SignalR WebSocket that prevents networkidle from resolving.
   await page.goto(CONFIG.url, { waitUntil: 'load', timeout: 60_000 });
 
-  // Wait for the Blazor app to render the search form.
-  // Look for the Search button as a reliable indicator.
+  // Wait for the Blazor app to render the search form
   await page.waitForSelector(SELECTORS.searchButton, { timeout: 30_000 });
 
-  // Additional wait for Blazor to finish initializing event handlers.
-  logger.info('Waiting for Blazor to finish initialization');
-  await page.waitForTimeout(3000);
+  // Wait for Blazor to finish initialization and attach event handlers.
+  // Blazor Server apps need SignalR to connect before clicks work.
+  logger.info('Waiting for Blazor initialization');
+  await page.waitForTimeout(5000);
 
-  // Verify the "Community name" field is present (our search strategy needs it)
-  await page.waitForSelector(SELECTORS.communityNameLabel, { timeout: 10_000 });
+  // Log the current page state for debugging
+  const title = await page.title();
+  const url = page.url();
+  logger.info('Page ready', { title, url });
 
-  logger.info('Page loaded, search form is ready');
   await takeScreenshot(page, 'page-loaded');
 }
 
 export async function waitForResults(page: Page): Promise<boolean> {
-  logger.info('Waiting for search results');
+  logger.info('Waiting for search results to load');
 
-  // After clicking search, wait for the page to show results.
-  // The pager info text changes from "0 - 0 of 0 items" to "1 - N of M items"
-  // We wait for either actual results or the "0 items" / "no records" state.
-  try {
-    // Wait for the grid/table to update. Give it up to 60 seconds for large result sets.
-    await page.waitForFunction(
-      () => {
-        const pagerInfo = document.querySelector('.k-pager-info');
-        if (pagerInfo) {
-          const text = pagerInfo.textContent || '';
-          // Check if it shows actual results (not "0 - 0 of 0")
-          if (text.includes('of') && !text.includes('0 - 0 of 0')) {
-            return true;
-          }
-        }
-        // Also check for "no records" text
-        if (document.body.textContent?.includes('No records matching')) {
-          return true;
-        }
-        return false;
-      },
-      { timeout: 60_000 }
-    );
-  } catch {
-    logger.warn('Timed out waiting for results, checking current state');
+  // Poll the pager info text for up to 60 seconds
+  const startTime = Date.now();
+  const timeout = 60_000;
+
+  while (Date.now() - startTime < timeout) {
+    // Check pager info text
+    const pagerInfo = page.locator(SELECTORS.pagerInfo);
+    const text = await pagerInfo.textContent().catch(() => '');
+
+    if (text && !text.includes('0 - 0 of 0')) {
+      logger.info('Results loaded', { pagerText: text });
+      await page.waitForTimeout(2000); // let rows finish rendering
+      return true;
+    }
+
+    // Check for "No records" message
+    const noRecords = await page.locator('text=No records').count().catch(() => 0);
+    if (noRecords > 0) {
+      logger.info('No records found');
+      return false;
+    }
+
+    // Check for any rows in the table
+    const rowCount = await page
+      .locator(`${SELECTORS.resultsGrid} ${SELECTORS.resultsRow}`)
+      .count()
+      .catch(() => 0);
+    if (rowCount > 0) {
+      logger.info('Found table rows even though pager text not updated', { rowCount });
+      await page.waitForTimeout(2000);
+      return true;
+    }
+
+    await page.waitForTimeout(1000);
   }
 
-  // Check what we got
-  const pagerInfo = page.locator(SELECTORS.pagerInfo);
-  const pagerText = await pagerInfo.textContent().catch(() => '');
-  logger.info('Pager info text', { text: pagerText });
-
-  if (pagerText && !pagerText.includes('0 - 0 of 0')) {
-    logger.info('Results found', { pagerText });
-    // Give Blazor time to finish rendering all rows
-    await page.waitForTimeout(2000);
-    return true;
-  }
-
-  // Check for "no records" message
-  const noRecords = await page.locator(SELECTORS.noResults).count();
-  if (noRecords > 0) {
-    logger.info('No records matching the search');
-    return false;
-  }
-
-  logger.warn('Unclear result state', { pagerText });
+  logger.warn('Timed out waiting for results');
+  await takeScreenshot(page, 'results-timeout');
   return false;
 }
 
