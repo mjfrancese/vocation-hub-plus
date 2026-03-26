@@ -18,7 +18,7 @@ export function exportJson(): void {
     totalPositions: positions.length,
     activeCount: positions.filter((p) => p.status === 'active' || p.status === 'new').length,
     expiredCount: positions.filter((p) => p.status === 'expired').length,
-    newCount: positions.filter((p) => p.status === 'new').length,
+    newCount: positions.filter((p) => p.status === 'new').length, // subset of activeCount
     lastScrape: stats || null,
   };
 
