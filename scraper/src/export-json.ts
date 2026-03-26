@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getAllPositions, getRecentChanges, getScrapeStats } from './db.js';
+import { getAllPositions, getAllPositionsWithDetails, getRecentChanges, getScrapeStats } from './db.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 
@@ -9,7 +9,8 @@ import { logger } from './logger.js';
  * Writes to both scraper/output/ and web/public/data/.
  */
 export function exportJson(): void {
-  const positions = getAllPositions();
+  // Use detail-enriched positions if available, fall back to basic
+  const positions = getAllPositionsWithDetails();
   const changes = getRecentChanges(500);
   const stats = getScrapeStats();
 

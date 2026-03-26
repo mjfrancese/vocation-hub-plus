@@ -12,6 +12,34 @@ export interface Position {
   last_seen: string;
   status: 'active' | 'expired' | 'new';
   details_url: string;
+
+  // Detail fields (from Position Profile page)
+  vh_id?: number;
+  profile_url?: string;
+  address?: string;
+  city?: string;
+  state_province?: string;
+  postal_code?: string;
+  contact_name?: string;
+  contact_email?: string;
+  contact_phone?: string;
+  position_title?: string;
+  full_part_time?: string;
+  position_description?: string;
+  minimum_stipend?: string;
+  maximum_stipend?: string;
+  housing_type?: string;
+  housing_description?: string;
+  benefits?: string;
+  community_description?: string;
+  worship_style?: string;
+  avg_sunday_attendance?: string;
+  church_school_size?: string;
+  desired_skills?: string;
+  challenges?: string;
+  website_url?: string;
+  social_media_links?: string;
+  narrative_reflections?: string;
 }
 
 export interface PositionChange {

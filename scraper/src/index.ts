@@ -7,6 +7,8 @@ import { logScrape, closeDb } from './db.js';
 import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
+import { sleep } from './navigate.js';
+import { discoverIdsFromSearchResults, scrapePositionDetails } from './position-details.js';
 
 async function main(): Promise<void> {
   const startTime = Date.now();
@@ -26,15 +28,11 @@ async function main(): Promise<void> {
   const { browser, page } = await launchBrowser();
 
   try {
-    // Navigate to the search page
+    // Phase 1: Search table scrape (discover active positions)
     await navigateToSearch(page);
-
-    // Use wildcard search to find all positions
     await searchAllPositions(page);
-
-    // Extract results from all pages
     const positions = await clickSearchAndExtract(page);
-    logger.info('Scraping complete', { positionsFound: positions.length });
+    logger.info('Search scrape complete', { positionsFound: positions.length });
 
     if (positions.length === 0) {
       throw new Error(
@@ -43,24 +41,44 @@ async function main(): Promise<void> {
       );
     }
 
-    if (CONFIG.dryRun) {
-      logger.info('Dry run mode: skipping database writes');
-      logger.info('Sample positions', {
-        first: positions.slice(0, 3).map((p) => ({
-          name: p.name,
-          diocese: p.diocese,
-          state: p.state,
-          positionType: p.positionType,
-        })),
-      });
-    } else {
-      // Apply diff to database
+    if (!CONFIG.dryRun) {
+      // Save search results to DB
       const diff = applyDiff(positions);
+      logger.info('Search results saved', {
+        new: diff.newCount,
+        updated: diff.updatedCount,
+        expired: diff.expiredCount,
+      });
+
+      // Phase 2: Detail scrape (visit each position's profile page)
+      // Check how much time we have left (reserve 2 min for export + deploy)
+      const elapsed = Date.now() - startTime;
+      const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
+
+      if (timeLeft > 30_000) {
+        logger.info('Starting detail scrape', { timeLeftMs: timeLeft });
+
+        // Discover position IDs by clicking rows in search results
+        // First, re-navigate and re-search to get the results table back
+        await navigateToSearch(page);
+        await searchAllPositions(page);
+        await sleep(3000);
+
+        const positionIds = await discoverIdsFromSearchResults(page, positions.length);
+        logger.info('Discovered position IDs', { count: positionIds.length });
+
+        if (positionIds.length > 0) {
+          const baseUrl = CONFIG.url.replace('/PositionSearch', '');
+          await scrapePositionDetails(page, positionIds, baseUrl, timeLeft);
+        }
+      } else {
+        logger.warn('Not enough time for detail scrape, skipping', { elapsed, timeLeft });
+      }
 
       const durationMs = Date.now() - startTime;
       logScrape(positions.length, diff.newCount, diff.expiredCount, durationMs, 'success');
 
-      // Export to JSON
+      // Export to JSON (includes detail data if available)
       exportJson();
 
       logger.info('Scrape completed successfully', {
@@ -69,6 +87,16 @@ async function main(): Promise<void> {
         new: diff.newCount,
         updated: diff.updatedCount,
         expired: diff.expiredCount,
+      });
+    } else {
+      logger.info('Dry run mode: skipping database writes');
+      logger.info('Sample positions', {
+        first: positions.slice(0, 3).map((p) => ({
+          name: p.name,
+          diocese: p.diocese,
+          state: p.state,
+          positionType: p.positionType,
+        })),
       });
     }
   } catch (err) {
