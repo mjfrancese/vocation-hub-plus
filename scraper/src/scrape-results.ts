@@ -152,11 +152,41 @@ async function goToNextPage(page: Page): Promise<boolean> {
     const pager = page.locator(SELECTORS.pager);
     if ((await pager.count()) === 0) return false;
 
+    // Try clicking the next page NUMBER button (e.g. "2", "3") instead of the
+    // arrow. Blazor may handle numbered page buttons differently than arrows.
+    const currentPageNum = await page.evaluate(`(function() {
+      var selected = document.querySelector('.k-pager .k-selected');
+      return selected ? parseInt(selected.textContent) : 0;
+    })()`);
+
+    if (typeof currentPageNum === 'number' && currentPageNum > 0) {
+      const nextPageNum = currentPageNum + 1;
+      // Click the next page number button via JavaScript
+      const clicked = await page.evaluate(`(function() {
+        var buttons = document.querySelectorAll('.k-pager button, .k-pager a');
+        for (var i = 0; i < buttons.length; i++) {
+          if (buttons[i].textContent.trim() === '${nextPageNum}') {
+            buttons[i].click();
+            return true;
+          }
+        }
+        return false;
+      })()`);
+
+      if (clicked) {
+        logger.info('Clicked page number button', { nextPage: nextPageNum });
+        await page.waitForTimeout(2000);
+        return true;
+      }
+    }
+
+    // Fallback: try the next arrow button
     const nextButton = page.locator(SELECTORS.pagerNext);
     if ((await nextButton.count()) === 0) return false;
     if (await nextButton.isDisabled().catch(() => true)) return false;
 
     await nextButton.click();
+    logger.info('Clicked next arrow button');
     await page.waitForTimeout(1500);
     return true;
   } catch {
