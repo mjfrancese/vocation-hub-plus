@@ -3,6 +3,7 @@ import { SELECTORS } from './selectors.js';
 import { logger } from './logger.js';
 import { takeScreenshot } from './browser.js';
 import { waitForResults, sleep } from './navigate.js';
+import { getStateForDiocese } from './dioceses.js';
 import crypto from 'crypto';
 
 export interface RawPosition {
@@ -35,12 +36,21 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
 
   const allPositions: RawPosition[] = [];
   let currentPage = 1;
+  const maxPages = 20; // safety limit to prevent infinite loops
 
-  while (true) {
+  while (currentPage <= maxPages) {
     logger.info('Extracting results from page', { page: currentPage });
     const positions = await extractCurrentPage(page);
     allPositions.push(...positions);
     logger.info('Extracted positions from page', { page: currentPage, count: positions.length });
+
+    // If this page returned 0 rows, stop (even if pagination says there's more)
+    if (positions.length === 0) {
+      logger.warn('Page returned 0 rows, stopping pagination', {
+        collected: allPositions.length,
+      });
+      break;
+    }
 
     const hasNextPage = await goToNextPage(page);
     if (!hasNextPage) break;
@@ -48,6 +58,7 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
 
     await sleep(2000);
 
+    // Verify results still exist after pagination
     const pagerText = await page.locator(SELECTORS.pagerInfo).textContent().catch(() => '');
     if (!pagerText || pagerText.includes('0 - 0 of 0')) {
       logger.warn('Pagination caused page to reset, returning results from previous pages', {
@@ -56,6 +67,12 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
       await takeScreenshot(page, 'pagination-reset');
       break;
     }
+
+    await takeScreenshot(page, `page-${currentPage}`);
+  }
+
+  if (currentPage > maxPages) {
+    logger.warn('Hit max page limit', { maxPages, collected: allPositions.length });
   }
 
   logger.info('Total positions extracted', { total: allPositions.length });
@@ -143,6 +160,8 @@ async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
 
   return rawRows.map((row) => ({
     ...row,
+    // Derive state from diocese name since the table has no State column
+    state: row.state || getStateForDiocese(row.diocese),
     id: generateId(row.name, row.diocese, row.positionType),
   }));
 }
