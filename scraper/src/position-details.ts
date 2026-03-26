@@ -90,7 +90,7 @@ export async function scanAndScrapeProfiles(
   let scraped = 0;
   let maxId = startId;
   let consecutiveMisses = 0;
-  const maxConsecutiveMisses = 20; // Stop after 20 misses in a row
+  const maxConsecutiveMisses = 50; // Stop after 50 misses in a row
   const foundIds: number[] = [];
   let currentId = startId;
 
@@ -140,6 +140,9 @@ export async function scanAndScrapeProfiles(
       // Valid profile found!
       consecutiveMisses = 0;
       foundIds.push(currentId);
+
+      // Screenshot every found profile so we can see the page layout
+      await takeScreenshot(page, 'profile-found-' + currentId);
       maxId = Math.max(maxId, currentId);
 
       logger.info('Found valid profile', {
@@ -169,6 +172,9 @@ export async function scanAndScrapeProfiles(
           // Tab might not exist
         }
       }
+
+      // Screenshot after all tabs clicked to see final state
+      await takeScreenshot(page, 'profile-tabs-' + currentId);
 
       // Extract all content after clicking all tabs
       const allContent = await page.evaluate(`(function() {

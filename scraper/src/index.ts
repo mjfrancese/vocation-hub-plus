@@ -61,9 +61,9 @@ async function main(): Promise<void> {
           logger.info('Starting profile scan', { timeLeftMs: timeLeft });
           const baseUrl = CONFIG.url.replace('/PositionSearch', '');
 
-          // Start scanning from ID 10200 (known range based on site inspection).
-          // The scan will find valid profiles and stop after 20 consecutive misses.
-          const result = await scanAndScrapeProfiles(page, baseUrl, 10200, timeLeft);
+          // Start scanning from ID 10220 (known active range).
+          // Stop after 50 consecutive misses to cover gaps between IDs.
+          const result = await scanAndScrapeProfiles(page, baseUrl, 10220, timeLeft);
 
           logger.info('Profile scan results', {
             scraped: result.scraped,
