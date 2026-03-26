@@ -17,34 +17,22 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  var text = document.body ? document.body.innerText : '';
-  // Every /PositionView page has "Position Profile" and "Basic Information"
-  // even when empty. Real profiles have actual data like diocese names,
-  // dates, or community names. Check for content that only appears
-  // when a profile has real data filled in.
-  //
-  // Strategy: look for "Diocese" label followed by actual content,
-  // or check if the page has specific data patterns (dates, state names).
-  // An empty profile page will have very little text beyond the headers.
-  // A real profile will have hundreds of characters of content.
-  var hasProfile = text.indexOf('Position Profile') >= 0;
-  if (!hasProfile) return { hasProfile: false, len: 0 };
-
-  // Count lines that look like actual data (not just headers/labels)
-  // Real profiles have content like diocese names, dates, descriptions
-  var lines = text.split('\\n').filter(function(l) { return l.trim().length > 0; });
-
-  // Empty profiles have ~30-50 lines (just headers, tab names, labels)
-  // Real profiles have 60+ lines with actual content
-  var isReal = lines.length > 55;
-
-  return { hasProfile: isReal, len: text.length, lines: lines.length };
+  // Valid profiles have filled-in form fields (Diocese: "Virginia", etc.)
+  // Empty profiles have the same labels but blank input fields.
+  // Count input elements with non-empty values - fast and definitive.
+  var inputs = document.querySelectorAll('input, textarea, select');
+  var filled = 0;
+  for (var i = 0; i < inputs.length; i++) {
+    var val = inputs[i].value || inputs[i].textContent || '';
+    if (val.trim().length > 0) filled++;
+  }
+  // Real profiles have 3+ filled fields (diocese, name, type at minimum)
+  return { hasProfile: filled >= 3, filled: filled };
 })()`;
 
 interface CheckResult {
   hasProfile: boolean;
-  len: number;
-  lines: number;
+  filled: number;
 }
 
 async function main() {
