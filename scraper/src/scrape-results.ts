@@ -3,7 +3,6 @@ import { SELECTORS } from './selectors.js';
 import { logger } from './logger.js';
 import { takeScreenshot } from './browser.js';
 import { waitForResults, sleep } from './navigate.js';
-import { CONFIG } from './config.js';
 import crypto from 'crypto';
 
 export interface RawPosition {
@@ -37,16 +36,12 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
 
   await takeScreenshot(page, 'results-loaded');
 
-  // Read the header row to determine column mapping
-  const columnMap = await detectColumns(page);
-  logger.info('Detected column mapping', { columns: columnMap });
-
   const allPositions: RawPosition[] = [];
   let currentPage = 1;
 
   while (true) {
     logger.info('Extracting results from page', { page: currentPage });
-    const positions = await extractCurrentPage(page, columnMap);
+    const positions = await extractCurrentPage(page);
     allPositions.push(...positions);
     logger.info('Extracted positions from page', { page: currentPage, count: positions.length });
 
@@ -77,106 +72,91 @@ export async function clickSearchAndExtract(page: Page): Promise<RawPosition[]> 
 }
 
 /**
- * Read the table header row to build a column index map.
- * This makes the scraper resilient to column order changes.
+ * Extract all rows from the current page in a SINGLE page.evaluate() call.
+ *
+ * This replaces the previous approach of calling Playwright locators
+ * individually for each cell (175+ round-trips for 25 rows x 7 columns),
+ * which caused 10-minute timeouts. A single evaluate() runs all DOM
+ * reads in the browser context with one round-trip.
  */
-async function detectColumns(page: Page): Promise<Record<string, number>> {
-  const headers = page.locator(`${SELECTORS.resultsGrid} ${SELECTORS.resultsHeader}`);
-  const headerCount = await headers.count();
-  const columnMap: Record<string, number> = {};
+async function extractCurrentPage(page: Page): Promise<RawPosition[]> {
+  const rawRows = await page.evaluate(() => {
+    const grid = document.querySelector('.k-grid');
+    if (!grid) return [];
 
-  for (let i = 0; i < headerCount; i++) {
-    const text = (await headers.nth(i).textContent())?.trim().toUpperCase() || '';
-
-    if (text.includes('NAME') && !text.includes('RECEIVING')) {
-      columnMap.name = i;
-    } else if (text.includes('DIOCESE')) {
-      columnMap.diocese = i;
-    } else if (text.includes('ORGANIZATION')) {
-      columnMap.organizationType = i;
-    } else if (text.includes('POSITION')) {
-      columnMap.positionType = i;
-    } else if (text.includes('RECEIVING') && !('receivingFrom' in columnMap)) {
-      columnMap.receivingFrom = i;
-    } else if (text.includes('RECEIVING')) {
-      columnMap.receivingTo = i;
-    } else if (text.includes('UPDATE')) {
-      columnMap.updated = i;
-    } else if (text.includes('STATE')) {
-      columnMap.state = i;
-    }
-  }
-
-  return columnMap;
-}
-
-async function extractCurrentPage(
-  page: Page,
-  columnMap: Record<string, number>
-): Promise<RawPosition[]> {
-  const rows = page.locator(`${SELECTORS.resultsGrid} ${SELECTORS.resultsRow}`);
-  const rowCount = await rows.count();
-  const positions: RawPosition[] = [];
-
-  for (let i = 0; i < rowCount; i++) {
-    const row = rows.nth(i);
-    const cells = row.locator(SELECTORS.resultsCell);
-    const cellCount = await cells.count();
-
-    if (cellCount < 3) {
-      continue; // Skip malformed rows
-    }
-
-    const getCell = async (key: string): Promise<string> => {
-      const idx = columnMap[key];
-      if (idx === undefined || idx >= cellCount) return '';
-      return (await cells.nth(idx).textContent())?.trim() || '';
-    };
-
-    const name = await getCell('name');
-    const diocese = await getCell('diocese');
-    const organizationType = await getCell('organizationType');
-    const positionType = await getCell('positionType');
-    const receivingNamesFrom = await getCell('receivingFrom');
-    const receivingNamesTo = await getCell('receivingTo');
-    const updatedOnHub = await getCell('updated');
-    const state = await getCell('state');
-
-    // Skip empty rows (e.g. "no data" placeholder rows)
-    if (!name && !diocese) {
-      continue;
-    }
-
-    // Try to get a details link if the name cell contains a link
-    const nameIdx = columnMap.name;
-    const detailsUrl =
-      nameIdx !== undefined
-        ? await cells
-            .nth(nameIdx)
-            .locator('a')
-            .getAttribute('href')
-            .catch(() => '')
-        : '';
-
-    const rawHtml = await row.innerHTML().catch(() => '');
-    const id = generateId(name, diocese, positionType);
-
-    positions.push({
-      id,
-      name,
-      diocese,
-      state,
-      organizationType,
-      positionType,
-      receivingNamesFrom,
-      receivingNamesTo,
-      updatedOnHub,
-      detailsUrl: detailsUrl || '',
-      rawHtml,
+    // Read headers to build column map
+    const headerCells = grid.querySelectorAll('thead th');
+    const colMap: Record<string, number> = {};
+    headerCells.forEach((th, i) => {
+      const text = (th.textContent || '').trim().toUpperCase();
+      if (text.includes('NAME') && !text.includes('RECEIVING')) colMap.name = i;
+      else if (text.includes('DIOCESE')) colMap.diocese = i;
+      else if (text.includes('ORGANIZATION')) colMap.organizationType = i;
+      else if (text.includes('POSITION')) colMap.positionType = i;
+      else if (text.includes('RECEIVING') && !('receivingFrom' in colMap)) colMap.receivingFrom = i;
+      else if (text.includes('RECEIVING')) colMap.receivingTo = i;
+      else if (text.includes('UPDATE')) colMap.updated = i;
+      else if (text.includes('STATE')) colMap.state = i;
     });
-  }
 
-  return positions;
+    // Read all data rows
+    const rows = grid.querySelectorAll('tbody tr');
+    const results: Array<{
+      name: string;
+      diocese: string;
+      state: string;
+      organizationType: string;
+      positionType: string;
+      receivingNamesFrom: string;
+      receivingNamesTo: string;
+      updatedOnHub: string;
+      detailsUrl: string;
+      rawHtml: string;
+    }> = [];
+
+    rows.forEach((row) => {
+      const cells = row.querySelectorAll('td');
+      if (cells.length < 3) return;
+
+      const getCell = (key: string): string => {
+        const idx = colMap[key];
+        if (idx === undefined || idx >= cells.length) return '';
+        return (cells[idx].textContent || '').trim();
+      };
+
+      const name = getCell('name');
+      const diocese = getCell('diocese');
+      if (!name && !diocese) return; // skip empty rows
+
+      // Check for a link in the name cell
+      let detailsUrl = '';
+      if (colMap.name !== undefined && colMap.name < cells.length) {
+        const link = cells[colMap.name].querySelector('a');
+        if (link) detailsUrl = link.getAttribute('href') || '';
+      }
+
+      results.push({
+        name,
+        diocese,
+        state: getCell('state'),
+        organizationType: getCell('organizationType'),
+        positionType: getCell('positionType'),
+        receivingNamesFrom: getCell('receivingFrom'),
+        receivingNamesTo: getCell('receivingTo'),
+        updatedOnHub: getCell('updated'),
+        detailsUrl,
+        rawHtml: row.innerHTML,
+      });
+    });
+
+    return results;
+  });
+
+  // Add IDs on the Node side (crypto not available in browser)
+  return rawRows.map((row) => ({
+    ...row,
+    id: generateId(row.name, row.diocese, row.positionType),
+  }));
 }
 
 async function goToNextPage(page: Page): Promise<boolean> {
@@ -200,7 +180,6 @@ async function goToNextPage(page: Page): Promise<boolean> {
     }
 
     await nextButton.click();
-    // Wait for the table to update
     await page.waitForTimeout(1500);
     return true;
   } catch {
