@@ -17,17 +17,13 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  // From diagnostic: filled textareas = 3 on valid, 0 on invalid.
-  // This is the cleanest binary signal. Valid profiles have textareas
-  // with actual content (descriptions, instructions). Empty shells have none.
-  var textareas = document.querySelectorAll('textarea');
-  var filled = 0;
-  for (var i = 0; i < textareas.length; i++) {
-    if ((textareas[i].value || '').trim().length > 0) filled++;
-  }
-  // Backup: tab count (valid=6, invalid=5)
+  // Tab count is the fastest and most reliable signal.
+  // Valid profiles: 6 tabs (includes "Optional Narrative Reflections")
+  // Invalid profiles: 5 tabs (missing that tab)
+  // This is a structural DOM difference available immediately after load,
+  // no need to wait for Blazor to populate content.
   var tabs = document.querySelectorAll('[role="tab"], .k-tabstrip-item, .k-item');
-  return { hasProfile: filled >= 1, filled: filled, tabs: tabs.length };
+  return { hasProfile: tabs.length >= 6, filled: 0, tabs: tabs.length };
 })()`;
 
 interface CheckResult {
