@@ -45,6 +45,13 @@ export function getPositions(): Position[] {
     if (!activeStatuses.has(profile.status)) continue;
     if (publicVhIds.has(profile.vh_id)) continue;
 
+    // Only include extended profiles that have real data.
+    // Many "Receiving names" profiles are empty shells (no name, no salary).
+    const hasName = !!profile.congregation;
+    const hasSalary = !!profile.salary_range;
+    const hasAttendance = !!profile.avg_sunday_attendance && profile.avg_sunday_attendance !== '0';
+    if (!hasName && !hasSalary && !hasAttendance) continue;
+
     const diocese = profile.diocese || '';
 
     extendedPositions.push({
