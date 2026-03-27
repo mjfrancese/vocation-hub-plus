@@ -1,13 +1,15 @@
 import { launchBrowser, takeScreenshot, closeBrowser } from './browser.js';
 import { navigateToSearch } from './navigate.js';
 import { searchAllPositions } from './select-states.js';
-import { clickSearchAndExtract } from './scrape-results.js';
+import { clickSearchAndExtract, RawPosition } from './scrape-results.js';
 import { applyDiff } from './diff.js';
 import { logScrape, closeDb, getDb } from './db.js';
 import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
+import { sleep } from './navigate.js';
 import { scrapePositionDetails } from './position-details.js';
+import { discoverPositionIds } from './discover-ids-from-search.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -46,32 +48,63 @@ async function main(): Promise<void> {
         expired: diff.expiredCount,
       });
 
-      // Phase 2: Scrape detail data for positions missing it.
-      // Uses discovered-ids.json to map position names to VH profile IDs.
-      // Only scrapes positions that don't already have detail data.
+      // Phase 2: Discover VH IDs for positions that don't have them yet,
+      // then scrape their detail data.
       try {
         const elapsed = Date.now() - startTime;
         const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
 
-        if (timeLeft > 60_000) {
-          const idsToScrape = findPositionsMissingDetails();
+        if (timeLeft > 120_000) {
+          // Check which positions need IDs
+          const positionsNeedingIds = getPositionsWithoutVhId();
 
-          if (idsToScrape.length > 0) {
-            logger.info('Scraping details for positions missing data', {
-              count: idsToScrape.length,
-              timeLeftMs: timeLeft,
-            });
+          if (positionsNeedingIds.length > 0) {
+            logger.info('Discovering VH IDs for positions', { count: positionsNeedingIds.length });
 
-            const baseUrl = CONFIG.url.replace('/PositionSearch', '');
-            await scrapePositionDetails(context, idsToScrape, baseUrl, timeLeft);
+            // Re-navigate and search to get a clickable results page
+            await navigateToSearch(page);
+            await searchAllPositions(page);
+            await sleep(3000);
+
+            const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
+            if (pagerText && !pagerText.includes('0 - 0 of 0')) {
+              const discoveredIds = await discoverPositionIds(page, CONFIG.url);
+              logger.info('Discovered VH IDs', { count: discoveredIds.length, ids: discoveredIds });
+
+              // Save the ID mapping: match discovered IDs to positions by row order
+              // The search results are in alphabetical order, same as our positions
+              const sortedPositions = [...positions].sort((a, b) => a.name.localeCompare(b.name));
+              saveIdMapping(sortedPositions, discoveredIds);
+
+              // Now scrape details for newly discovered IDs
+              if (discoveredIds.length > 0) {
+                const elapsed2 = Date.now() - startTime;
+                const timeLeft2 = CONFIG.maxRuntime - elapsed2 - 120_000;
+                if (timeLeft2 > 30_000) {
+                  const baseUrl = CONFIG.url.replace('/PositionSearch', '');
+                  await scrapePositionDetails(context, discoveredIds, baseUrl, timeLeft2);
+                }
+              }
+            }
           } else {
-            logger.info('All active positions have detail data');
+            logger.info('All active positions have VH IDs');
+
+            // Scrape details for any positions missing detail data
+            const idsToScrape = getIdsNeedingDetails();
+            if (idsToScrape.length > 0) {
+              const elapsed2 = Date.now() - startTime;
+              const timeLeft2 = CONFIG.maxRuntime - elapsed2 - 120_000;
+              if (timeLeft2 > 30_000) {
+                const baseUrl = CONFIG.url.replace('/PositionSearch', '');
+                await scrapePositionDetails(context, idsToScrape, baseUrl, timeLeft2);
+              }
+            }
           }
         } else {
-          logger.warn('Not enough time for detail scraping', { elapsed, timeLeft });
+          logger.warn('Not enough time for Phase 2', { elapsed, timeLeft });
         }
       } catch (detailErr) {
-        logger.warn('Detail scraping failed (non-fatal)', {
+        logger.warn('Phase 2 failed (non-fatal)', {
           error: detailErr instanceof Error ? detailErr.message : String(detailErr),
         });
       }
@@ -112,67 +145,73 @@ async function main(): Promise<void> {
 }
 
 /**
- * Find active positions that don't have detail data yet.
- * Cross-references with discovered-ids.json to get VH profile IDs.
- * Returns an array of VH IDs to scrape.
+ * Save the mapping from position names to VH IDs.
+ * The search results and the clicked rows are in the same order,
+ * so we can map them by index.
  */
-function findPositionsMissingDetails(): number[] {
+function saveIdMapping(positions: RawPosition[], vhIds: number[]): void {
   const d = getDb();
 
-  // Get active positions that don't have detail data
-  const missingDetails = d.prepare(`
-    SELECT p.id, p.name, p.diocese
-    FROM positions p
-    LEFT JOIN position_details d ON p.id = d.position_id
+  // Create mapping table if needed
+  d.exec(`
+    CREATE TABLE IF NOT EXISTS position_vh_ids (
+      position_id TEXT PRIMARY KEY,
+      vh_id INTEGER NOT NULL,
+      name TEXT,
+      diocese TEXT,
+      mapped_at DATETIME NOT NULL DEFAULT (datetime('now'))
+    )
+  `);
+
+  const insert = d.prepare(
+    'INSERT OR REPLACE INTO position_vh_ids (position_id, vh_id, name, diocese) VALUES (?, ?, ?, ?)'
+  );
+
+  let mapped = 0;
+  for (let i = 0; i < Math.min(positions.length, vhIds.length); i++) {
+    insert.run(positions[i].id, vhIds[i], positions[i].name, positions[i].diocese);
+    mapped++;
+  }
+
+  logger.info('Saved ID mapping', { mapped });
+}
+
+function getPositionsWithoutVhId(): string[] {
+  const d = getDb();
+
+  // Ensure the table exists
+  d.exec(`
+    CREATE TABLE IF NOT EXISTS position_vh_ids (
+      position_id TEXT PRIMARY KEY,
+      vh_id INTEGER NOT NULL,
+      name TEXT,
+      diocese TEXT,
+      mapped_at DATETIME NOT NULL DEFAULT (datetime('now'))
+    )
+  `);
+
+  const result = d.prepare(`
+    SELECT p.id FROM positions p
+    LEFT JOIN position_vh_ids m ON p.id = m.position_id
+    WHERE p.status IN ('active', 'new')
+    AND m.position_id IS NULL
+  `).all() as Array<{ id: string }>;
+
+  return result.map(r => r.id);
+}
+
+function getIdsNeedingDetails(): number[] {
+  const d = getDb();
+
+  const result = d.prepare(`
+    SELECT m.vh_id FROM position_vh_ids m
+    JOIN positions p ON m.position_id = p.id
+    LEFT JOIN position_details d ON m.position_id = d.position_id
     WHERE p.status IN ('active', 'new')
     AND d.position_id IS NULL
-  `).all() as Array<{ id: string; name: string; diocese: string }>;
+  `).all() as Array<{ vh_id: number }>;
 
-  if (missingDetails.length === 0) return [];
-
-  logger.info('Positions missing detail data', { count: missingDetails.length });
-
-  // Load discovered IDs
-  const idsFilePaths = [
-    path.resolve(__dirname, '../../data/discovered-ids.json'),
-    path.resolve(__dirname, '../../../data/discovered-ids.json'),
-  ];
-
-  let allKnownIds: number[] = [];
-  for (const p of idsFilePaths) {
-    if (fs.existsSync(p)) {
-      const data = JSON.parse(fs.readFileSync(p, 'utf-8'));
-      allKnownIds = data.validIds || [];
-      logger.info('Loaded discovered IDs', { path: p, count: allKnownIds.length });
-      break;
-    }
-  }
-
-  if (allKnownIds.length === 0) {
-    logger.warn('No discovered-ids.json found, cannot map positions to VH IDs');
-    return [];
-  }
-
-  // For now, return the top N IDs from the known list that we haven't scraped yet.
-  // In the future, we'll have a proper mapping from position name to VH ID.
-  // For now, try all known IDs that don't have details in the DB.
-  const existingVhIds = d.prepare(
-    'SELECT vh_id FROM position_details WHERE vh_id IS NOT NULL'
-  ).all() as Array<{ vh_id: number }>;
-
-  const scrapedIds = new Set(existingVhIds.map((r) => r.vh_id));
-  const unscrapedIds = allKnownIds.filter((id) => !scrapedIds.has(id));
-
-  // Limit to a reasonable number per run (prioritize recent/high IDs)
-  const maxPerRun = 50;
-  const idsToScrape = unscrapedIds.slice(-maxPerRun);
-
-  logger.info('IDs selected for detail scraping', {
-    totalUnscraped: unscrapedIds.length,
-    selectedForThisRun: idsToScrape.length,
-  });
-
-  return idsToScrape;
+  return result.map(r => r.vh_id);
 }
 
 main();
