@@ -2,83 +2,47 @@
 
 import { useState, useRef, useEffect } from 'react';
 
+export interface FilterConfig {
+  key: string;
+  label: string;
+  options: string[];
+  selected: string[];
+  onChange: (values: string[]) => void;
+  width?: string;
+}
+
 interface FiltersProps {
-  states: string[];
-  dioceses: string[];
-  positionTypes: string[];
-  compensationRanges: string[];
-  selectedStates: string[];
-  selectedDioceses: string[];
-  selectedTypes: string[];
-  selectedCompensation: string[];
-  selectedStatus: string;
-  onStatesChange: (values: string[]) => void;
-  onDiocesesChange: (values: string[]) => void;
-  onTypesChange: (values: string[]) => void;
-  onCompensationChange: (values: string[]) => void;
+  filters: FilterConfig[];
+  statusValue: string;
   onStatusChange: (value: string) => void;
   onClear: () => void;
 }
 
 export default function Filters({
-  states,
-  dioceses,
-  positionTypes,
-  compensationRanges,
-  selectedStates,
-  selectedDioceses,
-  selectedTypes,
-  selectedCompensation,
-  selectedStatus,
-  onStatesChange,
-  onDiocesesChange,
-  onTypesChange,
-  onCompensationChange,
+  filters,
+  statusValue,
   onStatusChange,
   onClear,
 }: FiltersProps) {
-  const hasFilters =
-    selectedStates.length > 0 ||
-    selectedDioceses.length > 0 ||
-    selectedTypes.length > 0 ||
-    selectedCompensation.length > 0 ||
-    selectedStatus;
+  const hasFilters = filters.some(f => f.selected.length > 0) || statusValue;
 
   return (
     <div className="space-y-3">
       <div className="flex flex-wrap gap-3 items-end">
-        <MultiSelect
-          label="State"
-          options={states}
-          selected={selectedStates}
-          onChange={onStatesChange}
-          width="w-36"
-        />
-        <MultiSelect
-          label="Diocese"
-          options={dioceses}
-          selected={selectedDioceses}
-          onChange={onDiocesesChange}
-          width="w-48"
-        />
-        <MultiSelect
-          label="Position Type"
-          options={positionTypes}
-          selected={selectedTypes}
-          onChange={onTypesChange}
-          width="w-52"
-        />
-        <MultiSelect
-          label="Compensation"
-          options={compensationRanges}
-          selected={selectedCompensation}
-          onChange={onCompensationChange}
-          width="w-52"
-        />
+        {filters.map((f) => (
+          <MultiSelect
+            key={f.key}
+            label={f.label}
+            options={f.options}
+            selected={f.selected}
+            onChange={f.onChange}
+            width={f.width || 'w-44'}
+          />
+        ))}
         <div className="flex flex-col">
           <label className="text-xs font-medium text-gray-500 mb-1">Status</label>
           <select
-            value={selectedStatus}
+            value={statusValue}
             onChange={(e) => onStatusChange(e.target.value)}
             className="block w-32 py-2 px-3 border border-gray-300 rounded-md text-sm
                        text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500
@@ -101,23 +65,19 @@ export default function Filters({
         )}
       </div>
 
-      {/* Show selected filter chips */}
       {hasFilters && (
         <div className="flex flex-wrap gap-2">
-          {selectedStates.map((s) => (
-            <Chip key={`state-${s}`} label={s} onRemove={() => onStatesChange(selectedStates.filter((v) => v !== s))} />
-          ))}
-          {selectedDioceses.map((d) => (
-            <Chip key={`diocese-${d}`} label={d} onRemove={() => onDiocesesChange(selectedDioceses.filter((v) => v !== d))} />
-          ))}
-          {selectedTypes.map((t) => (
-            <Chip key={`type-${t}`} label={t} onRemove={() => onTypesChange(selectedTypes.filter((v) => v !== t))} />
-          ))}
-          {selectedCompensation.map((c) => (
-            <Chip key={`comp-${c}`} label={c} onRemove={() => onCompensationChange(selectedCompensation.filter((v) => v !== c))} />
-          ))}
-          {selectedStatus && (
-            <Chip key="status" label={selectedStatus} onRemove={() => onStatusChange('')} />
+          {filters.flatMap((f) =>
+            f.selected.map((v) => (
+              <Chip
+                key={`${f.key}-${v}`}
+                label={v}
+                onRemove={() => f.onChange(f.selected.filter((s) => s !== v))}
+              />
+            ))
+          )}
+          {statusValue && (
+            <Chip key="status" label={statusValue} onRemove={() => onStatusChange('')} />
           )}
         </div>
       )}
@@ -147,7 +107,7 @@ function MultiSelect({
   options,
   selected,
   onChange,
-  width = 'w-40',
+  width = 'w-44',
 }: {
   label: string;
   options: string[];
@@ -159,7 +119,6 @@ function MultiSelect({
   const [search, setSearch] = useState('');
   const ref = useRef<HTMLDivElement>(null);
 
-  // Close on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -202,7 +161,7 @@ function MultiSelect({
 
       {open && (
         <div className="absolute mt-14 z-50 bg-white border border-gray-200 rounded-md shadow-lg
-                        max-h-64 overflow-hidden flex flex-col" style={{ minWidth: '200px' }}>
+                        max-h-64 overflow-hidden flex flex-col" style={{ minWidth: '220px' }}>
           {options.length > 5 && (
             <div className="p-2 border-b border-gray-100">
               <input
