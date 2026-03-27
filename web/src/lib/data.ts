@@ -3,24 +3,73 @@ import positionsData from '../../public/data/positions.json';
 import changesData from '../../public/data/changes.json';
 import metaData from '../../public/data/meta.json';
 import profileFieldsData from '../../public/data/profile-fields.json';
+import allProfilesData from '../../public/data/all-profiles.json';
+import { getStateForDiocese } from './diocese-lookup';
 
-// Profile fields keyed by VH ID
 const profileFields = profileFieldsData as unknown as Record<string, Array<{ label: string; value: string }>>;
+
+interface RawProfile {
+  vh_id: number;
+  profile_url: string;
+  diocese: string;
+  congregation: string;
+  position_type: string;
+  status: string;
+  all_fields: Array<{ label: string; value: string }>;
+  [key: string]: unknown;
+}
+
+const allProfiles = allProfilesData as unknown as RawProfile[];
 
 export function getPositions(): Position[] {
   const positions = positionsData as unknown as Position[];
 
-  // Enrich positions with profile detail data using VH ID
-  return positions.map(pos => {
+  // Start with the public positions (from search table)
+  const publicPositions = positions.map(pos => {
     const vhId = pos.vh_id;
-    if (vhId && profileFields[String(vhId)]) {
-      return {
-        ...pos,
-        deep_scrape_fields: profileFields[String(vhId)],
-      };
-    }
-    return pos;
+    return {
+      ...pos,
+      visibility: 'public' as const,
+      deep_scrape_fields: vhId ? profileFields[String(vhId)] : undefined,
+    };
   });
+
+  // Track which VH IDs are already in the public set
+  const publicVhIds = new Set(publicPositions.map(p => p.vh_id).filter(Boolean));
+
+  // Add active profiles from all-profiles that aren't in the public search
+  const activeStatuses = new Set(['Receiving names', 'Reopened']);
+  const extendedPositions: Position[] = [];
+
+  for (const profile of allProfiles) {
+    if (!activeStatuses.has(profile.status)) continue;
+    if (publicVhIds.has(profile.vh_id)) continue;
+
+    const diocese = profile.diocese || '';
+
+    extendedPositions.push({
+      id: `vh_${profile.vh_id}`,
+      name: profile.congregation || '(Unnamed Position)',
+      diocese,
+      state: getStateForDiocese(diocese),
+      organization_type: '',
+      position_type: profile.position_type || '',
+      receiving_names_from: '',
+      receiving_names_to: '',
+      updated_on_hub: '',
+      first_seen: '',
+      last_seen: '',
+      status: 'active',
+      details_url: '',
+      visibility: 'extended',
+      vh_status: profile.status,
+      vh_id: profile.vh_id,
+      profile_url: profile.profile_url,
+      deep_scrape_fields: profile.all_fields,
+    });
+  }
+
+  return [...publicPositions, ...extendedPositions];
 }
 
 export function getChanges(): PositionChange[] {

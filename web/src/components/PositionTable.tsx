@@ -103,7 +103,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-600">{pos.updated_on_hub}</td>
                 <td className="px-4 py-3">
-                  <StatusBadge status={pos.status} />
+                  {pos.visibility === 'extended' ? (
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border bg-purple-100 text-purple-800 border-purple-200">
+                      Extended
+                    </span>
+                  ) : (
+                    <StatusBadge status={pos.status} />
+                  )}
                 </td>
               </tr>
               {expandedId === pos.id && (
