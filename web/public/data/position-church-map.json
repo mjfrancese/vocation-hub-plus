@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastUpdated": "2026-03-27T22:57:59.745Z",
-    "totalMapped": 391,
-    "totalFlagged": 628,
-    "totalPositions": 1019
+    "lastUpdated": "2026-03-27T23:29:09.900Z",
+    "totalMapped": 415,
+    "totalFlagged": 641,
+    "totalPositions": 1056
   },
   "mappings": {
     "8529": {
@@ -6006,7 +6006,31 @@
       "match_method": "name_exact",
       "flagged": false
     },
+    "10588": {
+      "church_nid": 6961,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10592": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10596": {
+      "church_nid": 3476,
+      "confidence": "high",
+      "match_method": "name_high_confidence",
+      "flagged": false
+    },
     "10598": {
+      "church_nid": 7233,
+      "confidence": "exact",
+      "match_method": "email_unique",
+      "flagged": false
+    },
+    "10599": {
       "church_nid": 7233,
       "confidence": "exact",
       "match_method": "email_unique",
@@ -6018,17 +6042,95 @@
       "match_method": "email_unique",
       "flagged": false
     },
+    "10604": {
+      "church_nid": 3463,
+      "confidence": "high",
+      "match_method": "name_high_confidence",
+      "flagged": false
+    },
+    "10605": {
+      "church_nid": 3440,
+      "confidence": "high",
+      "match_method": "name_high_confidence",
+      "flagged": false
+    },
+    "10606": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
     "10614": {
       "church_nid": 5002,
       "confidence": "exact",
       "match_method": "name_exact_city",
       "flagged": false
     },
+    "10615": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10616": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10623": {
+      "church_nid": 6573,
+      "confidence": "high",
+      "match_method": "name_high_confidence",
+      "flagged": false
+    },
+    "10624": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
     "10627": {
       "church_nid": 5307,
       "confidence": "exact",
       "match_method": "name_exact",
       "flagged": false
+    },
+    "10631": {
+      "church_nid": 237,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10632": {
+      "church_nid": 1920,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10633": {
+      "church_nid": 3281,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10634": {
+      "church_nid": 4318,
+      "confidence": "high",
+      "match_method": "name_high_confidence",
+      "flagged": false
+    },
+    "10635": {
+      "church_nid": 6056,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10636": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
     },
     "10643": {
       "church_nid": 2224,
@@ -6042,6 +6144,12 @@
       "match_method": "unmatched",
       "flagged": true
     },
+    "10646": {
+      "church_nid": 1605,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
     "10647": {
       "church_nid": 4102,
       "confidence": "exact",
@@ -6054,11 +6162,41 @@
       "match_method": "unmatched",
       "flagged": true
     },
+    "10650": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10653": {
+      "church_nid": 3523,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10655": {
+      "church_nid": 3523,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10656": {
+      "church_nid": 1206,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
     "10658": {
       "church_nid": 2163,
       "confidence": "exact",
       "match_method": "name_exact_city",
       "flagged": false
+    },
+    "10664": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
     },
     "10665": {
       "church_nid": 1507,
@@ -6090,8 +6228,74 @@
       "match_method": "email_unique",
       "flagged": false
     },
+    "10675": {
+      "church_nid": 4066,
+      "confidence": "exact",
+      "match_method": "email_unique",
+      "flagged": false
+    },
+    "10676": {
+      "church_nid": 4090,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10677": {
+      "church_nid": 271,
+      "confidence": "exact",
+      "match_method": "email_unique",
+      "flagged": false
+    },
+    "10678": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10679": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10680": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10682": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
     "10683": {
       "church_nid": 4090,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10684": {
+      "church_nid": 2335,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10685": {
+      "church_nid": 2046,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10686": {
+      "church_nid": 2189,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
+    },
+    "10688": {
+      "church_nid": 3206,
       "confidence": "exact",
       "match_method": "name_exact",
       "flagged": false
@@ -6100,6 +6304,18 @@
       "church_nid": 2318,
       "confidence": "exact",
       "match_method": "name_exact_city",
+      "flagged": false
+    },
+    "10690": {
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
+    },
+    "10691": {
+      "church_nid": 2869,
+      "confidence": "exact",
+      "match_method": "name_exact",
       "flagged": false
     },
     "10692": {
@@ -6112,6 +6328,12 @@
       "church_nid": 6847,
       "confidence": "exact",
       "match_method": "name_exact",
+      "flagged": false
+    },
+    "10694": {
+      "church_nid": 5826,
+      "confidence": "high",
+      "match_method": "name_high_confidence",
       "flagged": false
     },
     "10695": {

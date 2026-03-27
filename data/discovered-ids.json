@@ -1059,9 +1059,14 @@
     10691,
     10692,
     10693,
-    10694
+    10694,
+    10695
   ],
   "totalChecked": 2501,
   "totalFound": 1055,
-  "durationSeconds": 337.521
+  "durationSeconds": 337.521,
+  "scanRange": {
+    "start": 8529,
+    "end": 12500
+  }
 }
