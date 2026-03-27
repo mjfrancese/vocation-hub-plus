@@ -109,89 +109,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
               {expandedId === pos.id && (
                 <tr key={`${pos.id}-detail`}>
                   <td colSpan={7} className="px-4 py-4 bg-gray-50">
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                        <DetailField label="Organization Type" value={pos.organization_type} />
-                        <DetailField label="Full/Part Time" value={pos.full_part_time} />
-                        <DetailField label="First Seen" value={pos.first_seen} />
-                        <DetailField label="Last Seen" value={pos.last_seen} />
-                      </div>
-
-                      {/* Compensation and Housing */}
-                      {(pos.minimum_stipend || pos.maximum_stipend || pos.housing_type) && (
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                          <DetailField label="Stipend Range" value={
-                            pos.minimum_stipend && pos.maximum_stipend
-                              ? `${pos.minimum_stipend} - ${pos.maximum_stipend}`
-                              : pos.minimum_stipend || pos.maximum_stipend
-                          } />
-                          <DetailField label="Housing" value={pos.housing_type} />
-                          <DetailField label="Worship Style" value={pos.worship_style} />
-                          <DetailField label="Avg Sunday Attendance" value={pos.avg_sunday_attendance} />
-                        </div>
-                      )}
-
-                      {/* Location */}
-                      {(pos.city || pos.state_province) && (
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                          <DetailField label="City" value={pos.city} />
-                          <DetailField label="State" value={pos.state_province} />
-                          <DetailField label="Contact" value={pos.contact_name} />
-                          <DetailField label="Email" value={pos.contact_email} />
-                        </div>
-                      )}
-
-                      {/* Description */}
-                      {pos.position_description && (
-                        <div className="text-sm">
-                          <span className="font-medium text-gray-500">Position Description</span>
-                          <p className="text-gray-900 mt-1 whitespace-pre-line">
-                            {pos.position_description}
-                          </p>
-                        </div>
-                      )}
-
-                      {/* Skills and Community */}
-                      {pos.desired_skills && (
-                        <div className="text-sm">
-                          <span className="font-medium text-gray-500">Desired Skills</span>
-                          <p className="text-gray-900 mt-1 whitespace-pre-line">{pos.desired_skills}</p>
-                        </div>
-                      )}
-
-                      {pos.community_description && (
-                        <div className="text-sm">
-                          <span className="font-medium text-gray-500">Community Description</span>
-                          <p className="text-gray-900 mt-1 whitespace-pre-line">{pos.community_description}</p>
-                        </div>
-                      )}
-
-                      {/* Links */}
-                      <div className="flex gap-4 text-sm">
-                        {pos.profile_url && (
-                          <a
-                            href={pos.profile_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary-600 hover:text-primary-800 underline"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            View full profile on Vocation Hub
-                          </a>
-                        )}
-                        {pos.website_url && (
-                          <a
-                            href={pos.website_url.startsWith('http') ? pos.website_url : `https://${pos.website_url}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary-600 hover:text-primary-800 underline"
-                            onClick={(e) => e.stopPropagation()}
-                          >
-                            Church website
-                          </a>
-                        )}
-                      </div>
-                    </div>
+                    <ExpandedDetail pos={pos} />
                   </td>
                 </tr>
               )}
@@ -203,12 +121,162 @@ export default function PositionTable({ positions }: PositionTableProps) {
   );
 }
 
-function DetailField({ label, value }: { label: string; value?: string | null }) {
+function ExpandedDetail({ pos }: { pos: Position }) {
+  const fields = pos.deep_scrape_fields || [];
+  const hasDeepData = fields.length > 0;
+
+  // Helper to find a field value by label keyword
+  const findField = (...keywords: string[]): string => {
+    for (const kw of keywords) {
+      const lower = kw.toLowerCase();
+      const match = fields.find((f) =>
+        f.label.toLowerCase().includes(lower)
+      );
+      if (match?.value) return match.value;
+    }
+    return '';
+  };
+
+  // Extract key fields from deep scrape data
+  const salary = findField('Range', 'Stipend', 'Compensation', 'Salary');
+  const housing = findField('Housing');
+  const attendance = findField('Average Sunday', 'Attendance', 'ASA');
+  const budget = findField('Annual Budget', 'Budget');
+  const setting = findField('Ministry Setting', 'Setting');
+  const workEnv = findField('Work Environment');
+  const geoLocation = findField('Geographic Location');
+  const fullPart = findField('Full Time', 'Part Time', 'Full-Time');
+  const pension = findField('Pension');
+  const healthcare = findField('Healthcare');
+  const vacation = findField('Vacation');
+  const leadershipSkills = findField('Leadership skills');
+  const ministrySkills = findField('Ministry skills');
+  const communityHopes = findField('hopes for this position', 'qualities');
+  const congregation = findField('Congregation', 'Community Name');
+  const order = findField('Order', 'Ministry');
+  const reimbursement = findField('Reimbursement');
+
+  if (!hasDeepData) {
+    // Fallback to basic detail fields
+    return (
+      <div className="space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <DetailField label="Organization Type" value={pos.organization_type} />
+          <DetailField label="Full/Part Time" value={pos.full_part_time} />
+          <DetailField label="First Seen" value={pos.first_seen} />
+          <DetailField label="Last Seen" value={pos.last_seen} />
+        </div>
+        {pos.profile_url && (
+          <a
+            href={pos.profile_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-primary-600 hover:text-primary-800 underline"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View full profile on Vocation Hub
+          </a>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-5">
+      {/* Key highlights */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <DetailField label="Compensation" value={salary} highlight />
+        <DetailField label="Housing" value={housing} />
+        <DetailField label="Avg Sunday Attendance" value={attendance} />
+        <DetailField label="Annual Budget" value={budget ? `$${Number(budget).toLocaleString()}` : ''} />
+      </div>
+
+      {/* Position details */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+        <DetailField label="Ministry Setting" value={setting} />
+        <DetailField label="Work Environment" value={workEnv} />
+        <DetailField label="Geographic Location" value={geoLocation} />
+        <DetailField label="Orders" value={order} />
+      </div>
+
+      {/* Benefits */}
+      {(pension || healthcare || vacation || reimbursement) && (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <DetailField label="Pension" value={pension} />
+          <DetailField label="Healthcare" value={healthcare} />
+          <DetailField label="Vacation" value={vacation} />
+          <DetailField label="Reimbursement" value={reimbursement} />
+        </div>
+      )}
+
+      {/* Skills */}
+      {(leadershipSkills || ministrySkills) && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <DetailField label="Leadership Skills" value={leadershipSkills} />
+          <DetailField label="Ministry Skills" value={ministrySkills} />
+        </div>
+      )}
+
+      {/* Narrative / Community hopes */}
+      {communityHopes && (
+        <div className="text-sm">
+          <span className="font-medium text-gray-500">Community Hopes</span>
+          <p className="text-gray-900 mt-1 whitespace-pre-line">{communityHopes}</p>
+        </div>
+      )}
+
+      {/* Links */}
+      <div className="flex gap-4 text-sm">
+        {pos.profile_url && (
+          <a
+            href={pos.profile_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-600 hover:text-primary-800 underline"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View full profile on Vocation Hub
+          </a>
+        )}
+        {pos.website_url && (
+          <a
+            href={pos.website_url.startsWith('http') ? pos.website_url : `https://${pos.website_url}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary-600 hover:text-primary-800 underline"
+            onClick={(e) => e.stopPropagation()}
+          >
+            Church website
+          </a>
+        )}
+      </div>
+
+      {/* All fields (collapsible) */}
+      <details className="text-sm">
+        <summary className="cursor-pointer text-gray-500 hover:text-gray-700">
+          View all {fields.length} profile fields
+        </summary>
+        <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
+          {fields.map((f, i) => (
+            <div key={i}>
+              <span className="font-medium text-gray-500">{f.label || `Field ${i + 1}`}</span>
+              <p className="text-gray-900 whitespace-pre-line">
+                {f.value.length > 500 ? f.value.substring(0, 500) + '...' : f.value}
+              </p>
+            </div>
+          ))}
+        </div>
+      </details>
+    </div>
+  );
+}
+
+function DetailField({ label, value, highlight }: { label: string; value?: string | null; highlight?: boolean }) {
   if (!value) return null;
   return (
     <div>
       <span className="font-medium text-gray-500">{label}</span>
-      <p className="text-gray-900">{value}</p>
+      <p className={highlight ? 'text-gray-900 font-semibold' : 'text-gray-900'}>{value}</p>
     </div>
   );
 }

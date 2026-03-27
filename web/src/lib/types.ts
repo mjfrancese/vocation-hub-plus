@@ -40,6 +40,9 @@ export interface Position {
   website_url?: string;
   social_media_links?: string;
   narrative_reflections?: string;
+
+  // Deep scrape fields (raw field arrays from profile pages)
+  deep_scrape_fields?: Array<{ label: string; value: string }>;
 }
 
 export interface PositionChange {
