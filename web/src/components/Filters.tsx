@@ -6,13 +6,16 @@ interface FiltersProps {
   states: string[];
   dioceses: string[];
   positionTypes: string[];
+  compensationRanges: string[];
   selectedStates: string[];
   selectedDioceses: string[];
   selectedTypes: string[];
+  selectedCompensation: string[];
   selectedStatus: string;
   onStatesChange: (values: string[]) => void;
   onDiocesesChange: (values: string[]) => void;
   onTypesChange: (values: string[]) => void;
+  onCompensationChange: (values: string[]) => void;
   onStatusChange: (value: string) => void;
   onClear: () => void;
 }
@@ -21,13 +24,16 @@ export default function Filters({
   states,
   dioceses,
   positionTypes,
+  compensationRanges,
   selectedStates,
   selectedDioceses,
   selectedTypes,
+  selectedCompensation,
   selectedStatus,
   onStatesChange,
   onDiocesesChange,
   onTypesChange,
+  onCompensationChange,
   onStatusChange,
   onClear,
 }: FiltersProps) {
@@ -35,6 +41,7 @@ export default function Filters({
     selectedStates.length > 0 ||
     selectedDioceses.length > 0 ||
     selectedTypes.length > 0 ||
+    selectedCompensation.length > 0 ||
     selectedStatus;
 
   return (
@@ -59,6 +66,13 @@ export default function Filters({
           options={positionTypes}
           selected={selectedTypes}
           onChange={onTypesChange}
+          width="w-52"
+        />
+        <MultiSelect
+          label="Compensation"
+          options={compensationRanges}
+          selected={selectedCompensation}
+          onChange={onCompensationChange}
           width="w-52"
         />
         <div className="flex flex-col">
@@ -98,6 +112,9 @@ export default function Filters({
           ))}
           {selectedTypes.map((t) => (
             <Chip key={`type-${t}`} label={t} onRemove={() => onTypesChange(selectedTypes.filter((v) => v !== t))} />
+          ))}
+          {selectedCompensation.map((c) => (
+            <Chip key={`comp-${c}`} label={c} onRemove={() => onCompensationChange(selectedCompensation.filter((v) => v !== c))} />
           ))}
           {selectedStatus && (
             <Chip key="status" label={selectedStatus} onRemove={() => onStatusChange('')} />
