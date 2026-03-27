@@ -13,6 +13,11 @@ export interface Position {
   status: 'active' | 'expired' | 'new';
   details_url: string;
 
+  // Visibility: 'public' = in VH search results, 'extended' = only via direct URL
+  visibility?: 'public' | 'extended';
+  // VH's own status field (e.g. "Receiving names", "Search complete")
+  vh_status?: string;
+
   // Detail fields (from Position Profile page)
   vh_id?: number;
   profile_url?: string;
