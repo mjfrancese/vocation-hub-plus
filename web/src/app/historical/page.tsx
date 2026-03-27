@@ -3,6 +3,14 @@
 import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
 import SearchBar from '@/components/SearchBar';
+import {
+  categorizeStatus,
+  getStatusLabel,
+  getStatusStyle,
+  StatusCategory,
+  ALL_STATUS_CATEGORIES,
+  STATUS_CATEGORY_LABELS,
+} from '@/lib/status-helpers';
 
 interface Profile {
   vh_id: number;
@@ -30,7 +38,6 @@ interface Profile {
   all_fields: Array<{ label: string; value: string }>;
 }
 
-// Import at build time
 import profilesData from '../../../public/data/all-profiles.json';
 
 export default function HistoricalPage() {
@@ -39,6 +46,7 @@ export default function HistoricalPage() {
   const [query, setQuery] = useState('');
   const [dioceseFilter, setDioceseFilter] = useState('');
   const [settingFilter, setSettingFilter] = useState('');
+  const [statusFilter, setStatusFilter] = useState<StatusCategory | ''>('');
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const dioceses = useMemo(() => {
@@ -51,6 +59,17 @@ export default function HistoricalPage() {
     const vals = new Set<string>();
     profiles.forEach(p => { if (p.ministry_setting) vals.add(p.ministry_setting); });
     return Array.from(vals).sort();
+  }, [profiles]);
+
+  // Count by status category
+  const statusCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const cat of ALL_STATUS_CATEGORIES) counts[cat] = 0;
+    for (const p of profiles) {
+      const cat = categorizeStatus(p.status);
+      counts[cat] = (counts[cat] || 0) + 1;
+    }
+    return counts;
   }, [profiles]);
 
   const fuse = useMemo(() => new Fuse(profiles, {
@@ -76,23 +95,44 @@ export default function HistoricalPage() {
 
     if (dioceseFilter) results = results.filter(p => p.diocese === dioceseFilter);
     if (settingFilter) results = results.filter(p => p.ministry_setting === settingFilter);
+    if (statusFilter) results = results.filter(p => categorizeStatus(p.status) === statusFilter);
 
     return results;
-  }, [profiles, fuse, query, dioceseFilter, settingFilter]);
+  }, [profiles, fuse, query, dioceseFilter, settingFilter, statusFilter]);
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">Historical Positions</h1>
+        <h1 className="text-2xl font-bold text-gray-900">All Positions</h1>
         <p className="text-sm text-gray-500">
-          {profiles.length} positions from the Vocation Hub archive (active and historical)
+          {profiles.length} positions from the Vocation Hub archive
         </p>
+      </div>
+
+      {/* Status summary cards */}
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
+        {ALL_STATUS_CATEGORIES.filter(cat => statusCounts[cat] > 0).map(cat => (
+          <button
+            key={cat}
+            onClick={() => setStatusFilter(statusFilter === cat ? '' : cat)}
+            className={`rounded-lg p-3 text-center border transition-all ${
+              statusFilter === cat
+                ? getStatusStyle(cat) + ' ring-2 ring-offset-1 ring-primary-500'
+                : statusFilter
+                  ? 'bg-gray-50 text-gray-400 border-gray-100'
+                  : getStatusStyle(cat)
+            }`}
+          >
+            <p className="text-xl font-bold">{statusCounts[cat]}</p>
+            <p className="text-xs">{getStatusLabel(cat)}</p>
+          </button>
+        ))}
       </div>
 
       <SearchBar
         value={query}
         onChange={setQuery}
-        resultCount={query || dioceseFilter || settingFilter ? filtered.length : undefined}
+        resultCount={query || dioceseFilter || settingFilter || statusFilter ? filtered.length : undefined}
       />
 
       <div className="flex flex-wrap gap-3 items-end">
@@ -118,9 +158,9 @@ export default function HistoricalPage() {
             {settings.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
         </div>
-        {(dioceseFilter || settingFilter) && (
+        {(dioceseFilter || settingFilter || statusFilter) && (
           <button
-            onClick={() => { setDioceseFilter(''); setSettingFilter(''); }}
+            onClick={() => { setDioceseFilter(''); setSettingFilter(''); setStatusFilter(''); }}
             className="px-3 py-2 text-sm text-gray-600 border border-gray-300 rounded-md hover:bg-gray-50"
           >
             Clear
@@ -141,93 +181,100 @@ export default function HistoricalPage() {
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Position</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Salary</th>
               <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">ASA</th>
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Setting</th>
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Status</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {filtered.slice(0, 100).map(p => (
-              <>
-                <tr
-                  key={p.vh_id}
-                  onClick={() => setExpandedId(expandedId === p.vh_id ? null : p.vh_id)}
-                  className="hover:bg-gray-50 cursor-pointer"
-                >
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900">
-                    {p.congregation || '(unnamed)'}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{p.diocese}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{p.position_type}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{p.salary_range || '-'}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">
-                    {p.avg_sunday_attendance && p.avg_sunday_attendance !== '0' ? p.avg_sunday_attendance : '-'}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{p.ministry_setting || '-'}</td>
-                </tr>
-                {expandedId === p.vh_id && (
-                  <tr key={`${p.vh_id}-detail`}>
-                    <td colSpan={6} className="px-4 py-4 bg-gray-50">
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                          {p.salary_range && <Field label="Compensation" value={p.salary_range} />}
-                          {p.housing_type && <Field label="Housing" value={p.housing_type} />}
-                          {p.annual_budget && p.annual_budget !== '0' && (
-                            <Field label="Annual Budget" value={`$${Number(p.annual_budget).toLocaleString()}`} />
-                          )}
-                          {p.avg_sunday_attendance && p.avg_sunday_attendance !== '0' && (
-                            <Field label="Avg Sunday Attendance" value={p.avg_sunday_attendance} />
-                          )}
-                        </div>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                          {p.ministry_setting && <Field label="Setting" value={p.ministry_setting} />}
-                          {p.work_environment && <Field label="Work Environment" value={p.work_environment} />}
-                          {p.geographic_location && <Field label="Location" value={p.geographic_location} />}
-                          {p.order_of_ministry && <Field label="Orders" value={p.order_of_ministry} />}
-                        </div>
-                        {(p.pension || p.healthcare || p.vacation) && (
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
-                            {p.pension && <Field label="Pension" value={p.pension} />}
-                            {p.healthcare && <Field label="Healthcare" value={p.healthcare} />}
-                            {p.vacation && <Field label="Vacation" value={p.vacation} />}
-                          </div>
-                        )}
-                        {(p.leadership_skills || p.ministry_skills) && (
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                            {p.leadership_skills && <Field label="Leadership Skills" value={p.leadership_skills} />}
-                            {p.ministry_skills && <Field label="Ministry Skills" value={p.ministry_skills} />}
-                          </div>
-                        )}
-                        <div className="flex gap-4 text-sm">
-                          <a
-                            href={p.profile_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary-600 hover:underline"
-                            onClick={e => e.stopPropagation()}
-                          >
-                            View on Vocation Hub
-                          </a>
-                        </div>
-                        <details className="text-sm">
-                          <summary className="cursor-pointer text-gray-500 hover:text-gray-700">
-                            All {p.all_fields.length} fields
-                          </summary>
-                          <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
-                            {p.all_fields.map((f, i) => (
-                              <div key={i}>
-                                <span className="font-medium text-gray-500">{f.label || `Field ${i + 1}`}</span>
-                                <p className="text-gray-900 whitespace-pre-line">
-                                  {f.value.length > 300 ? f.value.substring(0, 300) + '...' : f.value}
-                                </p>
-                              </div>
-                            ))}
-                          </div>
-                        </details>
-                      </div>
+            {filtered.slice(0, 100).map(p => {
+              const cat = categorizeStatus(p.status);
+              return (
+                <>
+                  <tr
+                    key={p.vh_id}
+                    onClick={() => setExpandedId(expandedId === p.vh_id ? null : p.vh_id)}
+                    className={`hover:bg-gray-50 cursor-pointer ${cat === 'filled' || cat === 'closed' ? 'opacity-60' : ''}`}
+                  >
+                    <td className="px-4 py-3 text-sm font-medium text-gray-900">
+                      {p.congregation || '(unnamed)'}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-600">{p.diocese}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">{p.position_type}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">{p.salary_range || '-'}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">
+                      {p.avg_sunday_attendance && p.avg_sunday_attendance !== '0' ? p.avg_sunday_attendance : '-'}
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getStatusStyle(cat)}`}>
+                        {p.status || 'Unknown'}
+                      </span>
                     </td>
                   </tr>
-                )}
-              </>
-            ))}
+                  {expandedId === p.vh_id && (
+                    <tr key={`${p.vh_id}-detail`}>
+                      <td colSpan={6} className="px-4 py-4 bg-gray-50">
+                        <div className="space-y-4">
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                            {p.salary_range && <Field label="Compensation" value={p.salary_range} />}
+                            {p.housing_type && <Field label="Housing" value={p.housing_type} />}
+                            {p.annual_budget && p.annual_budget !== '0' && (
+                              <Field label="Annual Budget" value={`$${Number(p.annual_budget).toLocaleString()}`} />
+                            )}
+                            {p.avg_sunday_attendance && p.avg_sunday_attendance !== '0' && (
+                              <Field label="Avg Sunday Attendance" value={p.avg_sunday_attendance} />
+                            )}
+                          </div>
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                            {p.ministry_setting && <Field label="Setting" value={p.ministry_setting} />}
+                            {p.work_environment && <Field label="Work Environment" value={p.work_environment} />}
+                            {p.geographic_location && <Field label="Region" value={p.geographic_location} />}
+                            {p.order_of_ministry && <Field label="Orders" value={p.order_of_ministry} />}
+                          </div>
+                          {(p.pension || p.healthcare || p.vacation) && (
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                              {p.pension && <Field label="Pension" value={p.pension} />}
+                              {p.healthcare && <Field label="Healthcare" value={p.healthcare} />}
+                              {p.vacation && <Field label="Vacation" value={p.vacation} />}
+                            </div>
+                          )}
+                          {(p.leadership_skills || p.ministry_skills) && (
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                              {p.leadership_skills && <Field label="Leadership Skills" value={p.leadership_skills} />}
+                              {p.ministry_skills && <Field label="Ministry Skills" value={p.ministry_skills} />}
+                            </div>
+                          )}
+                          <div className="flex gap-4 text-sm">
+                            <a
+                              href={p.profile_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary-600 hover:underline"
+                              onClick={e => e.stopPropagation()}
+                            >
+                              View on Vocation Hub
+                            </a>
+                          </div>
+                          <details className="text-sm">
+                            <summary className="cursor-pointer text-gray-500 hover:text-gray-700">
+                              All {p.all_fields.length} fields
+                            </summary>
+                            <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
+                              {p.all_fields.map((f, i) => (
+                                <div key={i}>
+                                  <span className="font-medium text-gray-500">{f.label || `Field ${i + 1}`}</span>
+                                  <p className="text-gray-900 whitespace-pre-line">
+                                    {f.value.length > 300 ? f.value.substring(0, 300) + '...' : f.value}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </details>
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </>
+              );
+            })}
           </tbody>
         </table>
       </div>
