@@ -5,6 +5,7 @@ import metaData from '../../public/data/meta.json';
 import profileFieldsData from '../../public/data/profile-fields.json';
 import allProfilesData from '../../public/data/all-profiles.json';
 import { getStateForDiocese } from './diocese-lookup';
+import { deriveChurchName } from './church-name-parser';
 
 const profileFields = profileFieldsData as unknown as Record<string, Array<{ label: string; value: string }>>;
 
@@ -47,16 +48,21 @@ export function getPositions(): Position[] {
 
     // Only include extended profiles that have real data.
     // Many "Receiving names" profiles are empty shells (no name, no salary).
+    // Try to derive a church name from email addresses and other fields.
     const hasName = !!profile.congregation;
     const hasSalary = !!profile.salary_range;
     const hasAttendance = !!profile.avg_sunday_attendance && profile.avg_sunday_attendance !== '0';
-    if (!hasName && !hasSalary && !hasAttendance) continue;
+    const derivedName = hasName ? '' : deriveChurchName(profile.all_fields || [], profile.diocese || '');
+    const displayName = profile.congregation || derivedName;
+
+    // Skip profiles with no identifiable name and no useful data
+    if (!displayName && !hasSalary && !hasAttendance) continue;
 
     const diocese = profile.diocese || '';
 
     extendedPositions.push({
       id: `vh_${profile.vh_id}`,
-      name: profile.congregation || '(Unnamed Position)',
+      name: displayName || `Position in ${diocese}`,
       diocese,
       state: getStateForDiocese(diocese),
       organization_type: '',
