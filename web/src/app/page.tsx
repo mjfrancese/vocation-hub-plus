@@ -63,18 +63,8 @@ export default function HomePage() {
   const dioceses = useMemo(() => getUniqueValues(allPositions, 'diocese'), [allPositions]);
   const positionTypes = useMemo(() => getUniqueValues(allPositions, 'position_type'), [allPositions]);
 
-  // Build compensation options from positions that have range data
-  const compensationOptions = useMemo(() => {
-    const found = new Set<string>();
-    for (const pos of allPositions) {
-      const range = getCompensationRange(pos);
-      if (range) found.add(range);
-    }
-    // Sort by the predefined order, put non-standard ones at the end
-    const standard = COMPENSATION_RANGES.filter(r => found.has(r));
-    const custom = Array.from(found).filter(r => !COMPENSATION_RANGES.includes(r)).sort();
-    return [...standard, ...custom];
-  }, [allPositions]);
+  // Only show the predefined VH compensation ranges
+  const compensationOptions = COMPENSATION_RANGES;
 
   const filtered = useMemo(() => {
     let results = query ? searchPositions(searchIndex, query) : allPositions;
