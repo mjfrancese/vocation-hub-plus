@@ -3,12 +3,13 @@ import { navigateToSearch } from './navigate.js';
 import { searchAllPositions } from './select-states.js';
 import { clickSearchAndExtract } from './scrape-results.js';
 import { applyDiff } from './diff.js';
-import { logScrape, closeDb } from './db.js';
+import { logScrape, closeDb, getDb } from './db.js';
 import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
-import { sleep } from './navigate.js';
-import { discoverPositionIds, scrapePositionDetails } from './position-details.js';
+import { scrapePositionDetails } from './position-details.js';
+import fs from 'fs';
+import path from 'path';
 
 async function main(): Promise<void> {
   const startTime = Date.now();
@@ -27,7 +28,7 @@ async function main(): Promise<void> {
   const { browser, context, page } = await launchBrowser();
 
   try {
-    // Phase 1: Search table scrape
+    // Phase 1: Search table scrape (fast, ~30s)
     await navigateToSearch(page);
     await searchAllPositions(page);
     const positions = await clickSearchAndExtract(page);
@@ -45,42 +46,32 @@ async function main(): Promise<void> {
         expired: diff.expiredCount,
       });
 
-      // Phase 2: Discover position IDs by clicking rows, then scrape profiles.
-      // Non-fatal: if this fails, we still have the search results.
+      // Phase 2: Scrape detail data for positions missing it.
+      // Uses discovered-ids.json to map position names to VH profile IDs.
+      // Only scrapes positions that don't already have detail data.
       try {
         const elapsed = Date.now() - startTime;
         const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
 
         if (timeLeft > 60_000) {
-          logger.info('Starting Phase 2: ID discovery + profile scraping', { timeLeftMs: timeLeft });
+          const idsToScrape = findPositionsMissingDetails();
 
-          // Re-navigate and search to get a fresh results page for clicking
-          await navigateToSearch(page);
-          await searchAllPositions(page);
-          await sleep(3000);
+          if (idsToScrape.length > 0) {
+            logger.info('Scraping details for positions missing data', {
+              count: idsToScrape.length,
+              timeLeftMs: timeLeft,
+            });
 
-          // Wait for results
-          const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
-          logger.info('Search results for ID discovery', { pagerText });
-
-          if (pagerText && !pagerText.includes('0 - 0 of 0')) {
-            // Discover IDs by clicking each row
-            const positionIds = await discoverPositionIds(page, positions.length);
-            logger.info('Discovered position IDs', { count: positionIds.length, ids: positionIds });
-
-            if (positionIds.length > 0) {
-              // Scrape each profile in a SEPARATE browser page
-              const baseUrl = CONFIG.url.replace('/PositionSearch', '');
-              const elapsed2 = Date.now() - startTime;
-              const timeLeft2 = CONFIG.maxRuntime - elapsed2 - 120_000;
-              await scrapePositionDetails(context, positionIds, baseUrl, timeLeft2);
-            }
+            const baseUrl = CONFIG.url.replace('/PositionSearch', '');
+            await scrapePositionDetails(context, idsToScrape, baseUrl, timeLeft);
+          } else {
+            logger.info('All active positions have detail data');
           }
         } else {
-          logger.warn('Not enough time for Phase 2', { elapsed, timeLeft });
+          logger.warn('Not enough time for detail scraping', { elapsed, timeLeft });
         }
       } catch (detailErr) {
-        logger.warn('Phase 2 failed (non-fatal)', {
+        logger.warn('Detail scraping failed (non-fatal)', {
           error: detailErr instanceof Error ? detailErr.message : String(detailErr),
         });
       }
@@ -118,6 +109,70 @@ async function main(): Promise<void> {
       closeDb();
     }
   }
+}
+
+/**
+ * Find active positions that don't have detail data yet.
+ * Cross-references with discovered-ids.json to get VH profile IDs.
+ * Returns an array of VH IDs to scrape.
+ */
+function findPositionsMissingDetails(): number[] {
+  const d = getDb();
+
+  // Get active positions that don't have detail data
+  const missingDetails = d.prepare(`
+    SELECT p.id, p.name, p.diocese
+    FROM positions p
+    LEFT JOIN position_details d ON p.id = d.position_id
+    WHERE p.status IN ('active', 'new')
+    AND d.position_id IS NULL
+  `).all() as Array<{ id: string; name: string; diocese: string }>;
+
+  if (missingDetails.length === 0) return [];
+
+  logger.info('Positions missing detail data', { count: missingDetails.length });
+
+  // Load discovered IDs
+  const idsFilePaths = [
+    path.resolve(__dirname, '../../data/discovered-ids.json'),
+    path.resolve(__dirname, '../../../data/discovered-ids.json'),
+  ];
+
+  let allKnownIds: number[] = [];
+  for (const p of idsFilePaths) {
+    if (fs.existsSync(p)) {
+      const data = JSON.parse(fs.readFileSync(p, 'utf-8'));
+      allKnownIds = data.validIds || [];
+      logger.info('Loaded discovered IDs', { path: p, count: allKnownIds.length });
+      break;
+    }
+  }
+
+  if (allKnownIds.length === 0) {
+    logger.warn('No discovered-ids.json found, cannot map positions to VH IDs');
+    return [];
+  }
+
+  // For now, return the top N IDs from the known list that we haven't scraped yet.
+  // In the future, we'll have a proper mapping from position name to VH ID.
+  // For now, try all known IDs that don't have details in the DB.
+  const existingVhIds = d.prepare(
+    'SELECT vh_id FROM position_details WHERE vh_id IS NOT NULL'
+  ).all() as Array<{ vh_id: number }>;
+
+  const scrapedIds = new Set(existingVhIds.map((r) => r.vh_id));
+  const unscrapedIds = allKnownIds.filter((id) => !scrapedIds.has(id));
+
+  // Limit to a reasonable number per run (prioritize recent/high IDs)
+  const maxPerRun = 50;
+  const idsToScrape = unscrapedIds.slice(-maxPerRun);
+
+  logger.info('IDs selected for detail scraping', {
+    totalUnscraped: unscrapedIds.length,
+    selectedForThisRun: idsToScrape.length,
+  });
+
+  return idsToScrape;
 }
 
 main();
