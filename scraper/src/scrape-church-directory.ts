@@ -1,6 +1,6 @@
 /**
- * Deep dive into the Episcopal Asset Map list page structure.
- * Checks if church data is embedded in the HTML or loaded via AJAX.
+ * Test scraper for Episcopal Asset Map church directory.
+ * Phase 1: Extract list data from HTML + try Drupal JSON endpoint.
  *
  * Usage: tsx src/scrape-church-directory.ts
  */
@@ -9,8 +9,71 @@ import { chromium } from 'playwright';
 
 const LIST_URL = 'https://www.episcopalassetmap.org/list?page=0';
 
+// Extract all listings from a list page using the clean Drupal Views HTML
+const EXTRACT_LIST = `(function() {
+  var rows = document.querySelectorAll('.views-row');
+  var results = [];
+
+  for (var i = 0; i < rows.length; i++) {
+    var row = rows[i];
+
+    // Name + Drupal Node ID from the class
+    var nameEl = row.querySelector('.views-field-title-unmodified .field-content');
+    var name = nameEl ? nameEl.textContent.trim() : '';
+    var nid = '';
+    if (nameEl) {
+      var classes = nameEl.className || '';
+      var nidMatch = classes.match(/nid--(\\d+)/);
+      if (nidMatch) nid = nidMatch[1];
+    }
+
+    // Address fields
+    var street = '';
+    var city = '';
+    var state = '';
+    var zip = '';
+    var country = '';
+
+    var streetEl = row.querySelector('.views-field-address-line1-unmodified .field-content');
+    if (streetEl) street = streetEl.textContent.trim().replace(/,\\s*$/, '');
+
+    var cityEl = row.querySelector('.views-field-locality-unmodified .field-content');
+    if (cityEl) city = cityEl.textContent.trim().replace(/,\\s*$/, '');
+
+    var stateEl = row.querySelector('.views-field-administrative-area-unmodified .field-content');
+    if (stateEl) state = stateEl.textContent.trim().replace(/,\\s*$/, '');
+
+    var zipEl = row.querySelector('.views-field-postal-code-unmodified .field-content');
+    if (zipEl) zip = zipEl.textContent.trim().replace(/,\\s*$/, '');
+
+    var countryEl = row.querySelector('.views-field-country-code-unmodified .field-content');
+    if (countryEl) country = countryEl.textContent.trim();
+
+    // Get ALL field class names to find ones we might have missed
+    var allFields = row.querySelectorAll('.views-field');
+    var fieldClasses = [];
+    for (var f = 0; f < allFields.length; f++) {
+      fieldClasses.push(allFields[f].className);
+    }
+
+    results.push({
+      name: name,
+      nid: nid,
+      street: street,
+      city: city,
+      state: state,
+      zip: zip,
+      country: country,
+      fieldClasses: fieldClasses,
+      fullText: row.textContent.trim()
+    });
+  }
+
+  return results;
+})()`;
+
 async function main() {
-  console.log('=== Episcopal Asset Map Deep Dive ===\n');
+  console.log('=== Episcopal Asset Map Test Scrape ===\n');
 
   const browser = await chromium.launch({
     headless: true,
@@ -24,215 +87,141 @@ async function main() {
 
   const page = await context.newPage();
 
-  // Intercept network requests to find any JSON/API calls
-  const apiCalls: Array<{ url: string; method: string; responseType: string }> = [];
+  // Step 1: Extract list data from page 0
+  console.log('Loading list page 0...');
+  await page.goto(LIST_URL, { waitUntil: 'networkidle', timeout: 30000 });
+  await page.waitForTimeout(2000);
+
+  const listings = await page.evaluate(EXTRACT_LIST) as any[];
+  console.log(`\nExtracted ${listings.length} listings from page 0:\n`);
+
+  for (const listing of listings) {
+    console.log(`  Name: ${listing.name}`);
+    console.log(`  NID: ${listing.nid}`);
+    console.log(`  Street: ${listing.street}`);
+    console.log(`  City: ${listing.city}`);
+    console.log(`  State: ${listing.state}`);
+    console.log(`  Zip: ${listing.zip}`);
+    console.log(`  Country: ${listing.country}`);
+    console.log(`  Full text: ${listing.fullText}`);
+    console.log(`  Field classes: ${listing.fieldClasses.join(' | ')}`);
+    console.log('');
+  }
+
+  // Step 2: Try Drupal JSON endpoints for the first listing
+  if (listings.length > 0 && listings[0].nid) {
+    const nid = listings[0].nid;
+    console.log(`\n=== Testing Drupal JSON endpoints for NID ${nid} ===\n`);
+
+    const endpoints = [
+      `/node/${nid}?_format=json`,
+      `/jsonapi/node/place/${nid}`,
+      `/api/v1/places/${nid}`,
+      `/node/${nid}?_format=hal_json`,
+      `/rest/node/${nid}`,
+    ];
+
+    for (const endpoint of endpoints) {
+      const url = `https://www.episcopalassetmap.org${endpoint}`;
+      try {
+        const response = await page.request.get(url, { timeout: 5000 });
+        const status = response.status();
+        const contentType = response.headers()['content-type'] || '';
+        console.log(`  ${endpoint}`);
+        console.log(`    Status: ${status}, Content-Type: ${contentType}`);
+        if (status === 200 && contentType.includes('json')) {
+          const body = await response.text();
+          console.log(`    SUCCESS! Response (first 1000 chars):`);
+          console.log(`    ${body.substring(0, 1000)}`);
+        }
+      } catch (err) {
+        console.log(`  ${endpoint} -> Error: ${String(err).substring(0, 80)}`);
+      }
+    }
+  }
+
+  // Step 3: Click the first listing to see the detail panel
+  console.log('\n=== Clicking first listing for detail panel ===\n');
+
+  // Capture AJAX requests when clicking
+  const ajaxUrls: string[] = [];
   page.on('response', async (response) => {
-    const url = response.url();
-    const contentType = response.headers()['content-type'] || '';
-    if (contentType.includes('json') || url.includes('api') || url.includes('json') || url.includes('geojson')) {
-      apiCalls.push({ url, method: response.request().method(), responseType: contentType });
+    const ct = response.headers()['content-type'] || '';
+    if (ct.includes('json') || ct.includes('html')) {
+      const url = response.url();
+      if (!url.includes('google') && !url.includes('fonts') && !url.includes('translate')) {
+        ajaxUrls.push(url);
+      }
     }
   });
 
-  console.log('Loading list page...');
-  await page.goto(LIST_URL, { waitUntil: 'networkidle', timeout: 30000 });
-  await page.waitForTimeout(3000);
-
-  // Check for API calls
-  console.log(`\n=== Network API Calls (${apiCalls.length} found) ===`);
-  for (const call of apiCalls) {
-    console.log(`  ${call.method} ${call.url.substring(0, 150)}`);
-    console.log(`    Content-Type: ${call.responseType}`);
-  }
-
-  // Deep inspect the page HTML for embedded data
-  const inspection = await page.evaluate(`(function() {
-    var result = {};
-
-    // 1. Check for JSON-LD or embedded data
-    var jsonScripts = document.querySelectorAll('script[type="application/json"], script[type="application/ld+json"]');
-    result.jsonScripts = [];
-    for (var i = 0; i < jsonScripts.length; i++) {
-      result.jsonScripts.push(jsonScripts[i].textContent.substring(0, 500));
-    }
-
-    // 2. Check Drupal settings (drupalSettings often has data)
-    if (window.drupalSettings) {
-      result.hasDrupalSettings = true;
-      result.drupalSettingsKeys = Object.keys(window.drupalSettings);
-      // Look for place/location data
-      var ds = JSON.stringify(window.drupalSettings).substring(0, 2000);
-      result.drupalSettingsPreview = ds;
-    }
-
-    // 3. Inspect the list items
-    var listItems = document.querySelectorAll('.views-row, .view-content .views-row');
-    result.viewsRowCount = listItems.length;
-
-    if (listItems.length === 0) {
-      // Try other selectors
-      listItems = document.querySelectorAll('.view-content > div, .item-list li, .search-results .result');
-      result.altListCount = listItems.length;
-    }
-
-    // 4. Inspect first list item deeply
-    result.firstListItems = [];
-    var items = document.querySelectorAll('.views-row');
-    if (items.length === 0) {
-      // Try the actual list structure from the screenshot
-      items = document.querySelectorAll('.view-content > div');
-    }
-
-    for (var j = 0; j < Math.min(items.length, 3); j++) {
-      var item = items[j];
-      result.firstListItems.push({
-        outerHTML: item.outerHTML.substring(0, 1000),
-        text: item.textContent.trim().substring(0, 200),
-        links: Array.from(item.querySelectorAll('a')).map(function(a) {
-          return { text: a.textContent.trim(), href: a.href };
-        }),
-        classes: item.className,
-        dataAttrs: Array.from(item.attributes).filter(function(a) {
-          return a.name.startsWith('data-');
-        }).map(function(a) {
-          return { name: a.name, value: a.value.substring(0, 100) };
-        })
-      });
-    }
-
-    // 5. Check if clicking a listing loads data or just shows hidden content
-    // Look for hidden panels or popups
-    var panels = document.querySelectorAll('.popup, .sidebar, .detail-panel, [class*="popup"], [class*="sidebar"], [class*="detail"]');
-    result.panelCount = panels.length;
-    result.panelSamples = [];
-    for (var p = 0; p < Math.min(panels.length, 3); p++) {
-      result.panelSamples.push({
-        classes: panels[p].className,
-        visible: panels[p].offsetHeight > 0,
-        html: panels[p].outerHTML.substring(0, 500)
-      });
-    }
-
-    // 6. Look for any GeoJSON or map data
-    if (window.L) result.hasLeaflet = true;
-    if (window.google) result.hasGoogleMaps = true;
-
-    // 7. Check the total count text
-    result.totalText = '';
-    var found = document.body.textContent.match(/Found (\\d+) places/);
-    if (found) result.totalText = found[0];
-
-    // 8. Get the pagination info
-    var pager = document.querySelector('.pager, .pagination, [class*="pager"]');
-    result.hasPager = !!pager;
-    if (pager) result.pagerHTML = pager.outerHTML.substring(0, 500);
-
-    // 9. Try to find the individual listing URLs
-    var listingLinks = document.querySelectorAll('a[href*="/places/"], a[href*="/node/"]');
-    result.listingLinkCount = listingLinks.length;
-    result.listingLinkSamples = [];
-    for (var ll = 0; ll < Math.min(listingLinks.length, 5); ll++) {
-      result.listingLinkSamples.push({
-        text: listingLinks[ll].textContent.trim(),
-        href: listingLinks[ll].href
-      });
-    }
-
-    return result;
-  })()`);
-
-  console.log('\n=== Page Inspection ===');
-  const r = inspection as any;
-  console.log(`JSON scripts: ${r.jsonScripts?.length || 0}`);
-  if (r.jsonScripts?.length > 0) {
-    console.log('JSON script samples:');
-    for (const s of r.jsonScripts) console.log(`  ${s.substring(0, 300)}`);
-  }
-  console.log(`Has Drupal settings: ${r.hasDrupalSettings || false}`);
-  if (r.drupalSettingsKeys) console.log(`Drupal settings keys: ${r.drupalSettingsKeys.join(', ')}`);
-  if (r.drupalSettingsPreview) console.log(`Drupal settings preview: ${r.drupalSettingsPreview.substring(0, 500)}`);
-  console.log(`Views rows: ${r.viewsRowCount}`);
-  console.log(`Alt list items: ${r.altListCount || 'n/a'}`);
-  console.log(`Panels: ${r.panelCount}`);
-  console.log(`Total text: ${r.totalText}`);
-  console.log(`Has pager: ${r.hasPager}`);
-  console.log(`Listing links: ${r.listingLinkCount}`);
-  console.log(`Has Leaflet: ${r.hasLeaflet || false}`);
-
-  console.log('\n=== First List Items ===');
-  for (const item of (r.firstListItems || [])) {
-    console.log(`\nItem (class: ${item.classes}):`);
-    console.log(`  Text: ${item.text}`);
-    console.log(`  Links: ${JSON.stringify(item.links)}`);
-    console.log(`  Data attrs: ${JSON.stringify(item.dataAttrs)}`);
-    console.log(`  HTML: ${item.outerHTML.substring(0, 400)}`);
-  }
-
-  console.log('\n=== Listing Link Samples ===');
-  for (const link of (r.listingLinkSamples || [])) {
-    console.log(`  ${link.text}: ${link.href}`);
-  }
-
-  if (r.panelSamples?.length > 0) {
-    console.log('\n=== Panel Samples ===');
-    for (const panel of r.panelSamples) {
-      console.log(`  Class: ${panel.classes}, Visible: ${panel.visible}`);
-      console.log(`  HTML: ${panel.html}`);
-    }
-  }
-
-  // Now try clicking the first listing to see what happens
-  console.log('\n\n=== Clicking first listing ===');
-  const firstLink = page.locator('.view-content a').first();
-  if (await firstLink.isVisible().catch(() => false)) {
-    // Capture any new network requests
-    const newApiCalls: string[] = [];
-    page.on('response', async (response) => {
-      const url = response.url();
-      const ct = response.headers()['content-type'] || '';
-      if (ct.includes('json') || url.includes('api') || url.includes('json') || url.includes('node')) {
-        newApiCalls.push(url);
-      }
-    });
-
-    await firstLink.click();
+  const firstName = page.locator('.search-info--place').first();
+  if (await firstName.isVisible()) {
+    await firstName.click();
     await page.waitForTimeout(3000);
 
-    console.log(`New API calls after click: ${newApiCalls.length}`);
-    for (const url of newApiCalls) {
+    console.log(`AJAX calls after click: ${ajaxUrls.length}`);
+    for (const url of ajaxUrls) {
       console.log(`  ${url.substring(0, 200)}`);
-
-      // Try to fetch the JSON content
+      // Try to get the response body for JSON calls
       try {
-        const response = await page.request.get(url);
-        const text = await response.text();
-        console.log(`  Response (first 500 chars): ${text.substring(0, 500)}`);
+        const resp = await page.request.get(url, { timeout: 5000 });
+        const ct = resp.headers()['content-type'] || '';
+        if (ct.includes('json')) {
+          const body = await resp.text();
+          console.log(`  JSON Response (first 500): ${body.substring(0, 500)}`);
+        }
       } catch {}
     }
 
-    // Check the detail panel
-    const panelContent = await page.evaluate(`(function() {
-      // Look for the popup/sidebar that appeared
-      var popup = document.querySelector('.leaflet-popup-content, .popup-content, [class*="popup"], .sidebar-content');
-      if (popup) return popup.textContent.trim().substring(0, 1000);
+    // Extract detail panel content
+    const panelData = await page.evaluate(`(function() {
+      // The detail panel that opened on the right
+      var result = {};
 
-      // Check if any new visible element appeared
-      var panels = document.querySelectorAll('[class*="detail"], [class*="sidebar"]');
+      // Try various selectors for the panel
+      var panels = document.querySelectorAll('.search-result-popup, .popup, [class*="popup"], [class*="sidebar"], [class*="detail"], [class*="result"]');
+      result.panelCount = panels.length;
+
+      // Get the largest visible panel
+      var bestPanel = null;
+      var bestSize = 0;
       for (var i = 0; i < panels.length; i++) {
-        if (panels[i].offsetHeight > 0 && panels[i].textContent.trim().length > 50) {
-          return panels[i].textContent.trim().substring(0, 1000);
+        if (panels[i].offsetHeight > bestSize) {
+          bestSize = panels[i].offsetHeight;
+          bestPanel = panels[i];
         }
       }
-      return 'No panel found';
+
+      if (bestPanel) {
+        result.panelHTML = bestPanel.outerHTML.substring(0, 3000);
+        result.panelText = bestPanel.textContent.trim().substring(0, 1000);
+
+        // Extract specific fields
+        var links = bestPanel.querySelectorAll('a');
+        result.links = [];
+        for (var l = 0; l < links.length; l++) {
+          result.links.push({ text: links[l].textContent.trim(), href: links[l].href });
+        }
+
+        // Look for phone numbers
+        var phoneMatch = bestPanel.textContent.match(/\\(?\\d{3}\\)?[\\s.-]?\\d{3}[\\s.-]?\\d{4}/);
+        result.phone = phoneMatch ? phoneMatch[0] : '';
+      }
+
+      return result;
     })()`);
 
-    console.log(`\nDetail panel content:\n${panelContent}`);
+    console.log('\nDetail panel:');
+    console.log(`  Panels found: ${(panelData as any).panelCount}`);
+    console.log(`  Text: ${(panelData as any).panelText}`);
+    console.log(`  Links: ${JSON.stringify((panelData as any).links)}`);
+    console.log(`  Phone: ${(panelData as any).phone}`);
+    console.log(`  HTML (first 1500): ${(panelData as any).panelHTML?.substring(0, 1500)}`);
   }
 
-  await page.screenshot({ path: 'screenshots/asset-map-list.png', fullPage: true });
-  console.log('\nScreenshot saved');
-
   await browser.close();
+  console.log('\nDone.');
 }
 
 main().catch(err => {
