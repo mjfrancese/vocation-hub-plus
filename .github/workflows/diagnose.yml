@@ -31,4 +31,4 @@ jobs:
 
       - name: Run diagnostic
         working-directory: scraper
-        run: npx tsx src/diagnose-detection.ts
+        run: npx tsx src/diagnose-row-ids.ts
