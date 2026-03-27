@@ -415,7 +415,15 @@ export function upsertPositionDetails(details: import('./position-details.js').P
 
 export function getAllPositionsWithDetails(): Record<string, unknown>[] {
   return getDb().prepare(`
-    SELECT p.*, d.vh_id, d.profile_url, d.community_name as detail_name,
+    SELECT p.*,
+           COALESCE(m.vh_id, d.vh_id) as vh_id,
+           COALESCE(
+             CASE WHEN m.vh_id IS NOT NULL
+               THEN 'https://vocationhub.episcopalchurch.org/PositionView/' || m.vh_id
+               ELSE NULL END,
+             d.profile_url
+           ) as profile_url,
+           d.community_name as detail_name,
            d.address, d.city, d.state_province, d.postal_code,
            d.contact_name, d.contact_email, d.contact_phone,
            d.position_title, d.full_part_time, d.position_description,
@@ -425,6 +433,7 @@ export function getAllPositionsWithDetails(): Record<string, unknown>[] {
            d.desired_skills, d.challenges, d.website_url, d.social_media_links,
            d.narrative_reflections, d.raw_content
     FROM positions p
+    LEFT JOIN position_vh_ids m ON p.id = m.position_id
     LEFT JOIN position_details d ON p.id = d.position_id
     ORDER BY p.last_seen DESC
   `).all() as Record<string, unknown>[];
