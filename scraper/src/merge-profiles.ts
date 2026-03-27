@@ -106,9 +106,9 @@ function main() {
       ministry_skills: getField(f, 'Ministry skills'),
       languages: getField(f, 'Languages spoken'),
       contact_email: getField(f, 'Email Address') || getField(f, 'email'),
-      receiving_names_from: getDateField(f, 'Receiving Names From', 'DatePicker 1'),
-      receiving_names_to: getDateField(f, 'Receiving Names To', 'DatePicker 2'),
-      open_ended: getField(f, 'Open Ended') === 'Yes',
+      receiving_names_from: getDateField(f, 'Receiving names from'),
+      receiving_names_to: getField(f, 'To') || '',
+      open_ended: (getField(f, 'To') || '').toLowerCase() === 'open ended',
       // Keep raw fields for full-text search
       all_fields: f,
     };

@@ -32,36 +32,17 @@ const EXTRACT_PROFILE = `(function() {
     fields.push({ label: label, value: val.substring(0, 5000) });
   }
 
-  // Extract Kendo DatePicker values (receiving names dates)
-  var datePickers = document.querySelectorAll('.k-datepicker input, .k-dateinput input');
-  for (var d = 0; d < datePickers.length; d++) {
-    var dpVal = (datePickers[d].value || '').trim();
-    if (!dpVal || /^month/i.test(dpVal) || /^mm/i.test(dpVal) || dpVal === 'month/day/year') continue;
-    var dpLabel = '';
-    var dpParent = datePickers[d].closest('.k-datepicker') || datePickers[d].closest('.k-dateinput');
-    if (dpParent) {
-      var dpPrev = dpParent.previousElementSibling;
-      if (dpPrev) dpLabel = dpPrev.textContent.trim();
-      if (!dpLabel) {
-        var dpWrapper = dpParent.parentElement;
-        if (dpWrapper) {
-          var dpWrapperLabel = dpWrapper.querySelector('label');
-          if (dpWrapperLabel) dpLabel = dpWrapperLabel.textContent.trim();
-        }
-      }
-    }
-    if (!dpLabel) dpLabel = 'DatePicker ' + (d + 1);
-    fields.push({ label: dpLabel, value: dpVal });
-  }
-
-  // Extract "Open ended" checkbox
-  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  for (var c = 0; c < checkboxes.length; c++) {
-    if (checkboxes[c].checked) {
-      var cbParent = checkboxes[c].parentElement;
-      var cbLabel = cbParent ? cbParent.textContent.trim() : '';
-      if (cbLabel && /open.?ended/i.test(cbLabel)) {
-        fields.push({ label: 'Open Ended', value: 'Yes' });
+  // Extract label + div.form-control text pairs (dates, status fields rendered as plain text)
+  var smallLabels = document.querySelectorAll('label.small');
+  for (var sl = 0; sl < smallLabels.length; sl++) {
+    var lbl = smallLabels[sl];
+    var sib = lbl.nextElementSibling;
+    while (sib && sib.nodeType === 8) sib = sib.nextElementSibling;
+    if (sib && sib.classList && sib.classList.contains('form-control')) {
+      var hasInput = sib.querySelector('input, textarea, select');
+      var txtVal = (sib.textContent || '').trim();
+      if (!hasInput && txtVal) {
+        fields.push({ label: lbl.textContent.trim(), value: txtVal.substring(0, 5000) });
       }
     }
   }

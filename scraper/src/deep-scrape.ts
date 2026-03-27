@@ -47,44 +47,18 @@ const EXTRACT_SCRIPT = `(function() {
     }
   }
 
-  // Extract Kendo DatePicker values (receiving names dates)
-  var datePickers = document.querySelectorAll('.k-datepicker input, .k-dateinput input');
-  for (var d = 0; d < datePickers.length; d++) {
-    var dpVal = (datePickers[d].value || '').trim();
-    // Skip empty and placeholder values
-    if (!dpVal || /^month/i.test(dpVal) || /^mm/i.test(dpVal) || dpVal === 'month/day/year') continue;
-    var dpLabel = '';
-    // Walk up to find the label context
-    var dpParent = datePickers[d].closest('.k-datepicker') || datePickers[d].closest('.k-dateinput');
-    if (dpParent) {
-      var dpPrev = dpParent.previousElementSibling;
-      if (dpPrev) dpLabel = dpPrev.textContent.trim();
-      if (!dpLabel) {
-        var dpWrapper = dpParent.parentElement;
-        if (dpWrapper) {
-          var dpWrapperLabel = dpWrapper.querySelector('label');
-          if (dpWrapperLabel) dpLabel = dpWrapperLabel.textContent.trim();
-          if (!dpLabel) {
-            var dpWrapperPrev = dpWrapper.previousElementSibling;
-            if (dpWrapperPrev) dpLabel = dpWrapperPrev.textContent.trim();
-          }
-        }
-      }
-    }
-    // Tag date fields so merge-profiles can identify them
-    if (!dpLabel) dpLabel = 'DatePicker ' + (d + 1);
-    fields.push({ label: dpLabel, value: dpVal });
-  }
-
-  // Extract checkbox state for "Open ended" (receiving names to)
-  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  for (var c = 0; c < checkboxes.length; c++) {
-    if (checkboxes[c].checked) {
-      var cbLabel = '';
-      var cbParent = checkboxes[c].parentElement;
-      if (cbParent) cbLabel = cbParent.textContent.trim();
-      if (cbLabel && /open.?ended/i.test(cbLabel)) {
-        fields.push({ label: 'Open Ended', value: 'Yes' });
+  // Extract label + div.form-control text pairs (dates, status fields rendered as plain text)
+  var smallLabels = document.querySelectorAll('label.small');
+  for (var sl = 0; sl < smallLabels.length; sl++) {
+    var lbl = smallLabels[sl];
+    var sib = lbl.nextElementSibling;
+    // Skip comment nodes
+    while (sib && sib.nodeType === 8) sib = sib.nextElementSibling;
+    if (sib && sib.classList && sib.classList.contains('form-control')) {
+      var hasInput = sib.querySelector('input, textarea, select');
+      var txtVal = (sib.textContent || '').trim();
+      if (!hasInput && txtVal) {
+        fields.push({ label: lbl.textContent.trim(), value: txtVal.substring(0, 5000) });
       }
     }
   }
