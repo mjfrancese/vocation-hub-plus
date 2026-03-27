@@ -1,58 +1,56 @@
 /**
- * Vocation Hub position status categories.
- * The VH site uses its own status field on profile pages.
+ * VH status display helpers.
+ * Shows actual Vocation Hub status terms rather than abstract categories.
  */
 
-export type StatusCategory = 'active' | 'starting' | 'interim' | 'filled' | 'closed' | 'unknown';
-
-const STATUS_MAP: Record<string, StatusCategory> = {
-  'Receiving names': 'active',
-  'Reopened': 'active',
-  'Beginning search': 'starting',
-  'Developing profile': 'starting',
-  'Profile complete': 'starting',
-  'Developing self study': 'starting',
-  'Seeking interim': 'interim',
-  'Interim in place': 'interim',
-  'Search complete': 'filled',
-  'No longer receiving names': 'closed',
+// Color mapping for VH status strings
+const STATUS_COLORS: Record<string, string> = {
+  'Receiving names': 'bg-green-100 text-green-800 border-green-200',
+  'Reopened': 'bg-green-100 text-green-800 border-green-200',
+  'Beginning search': 'bg-blue-100 text-blue-800 border-blue-200',
+  'Developing profile': 'bg-blue-100 text-blue-800 border-blue-200',
+  'Profile complete': 'bg-blue-100 text-blue-800 border-blue-200',
+  'Developing self study': 'bg-blue-100 text-blue-800 border-blue-200',
+  'Seeking interim': 'bg-yellow-100 text-yellow-800 border-yellow-200',
+  'Interim in place': 'bg-yellow-100 text-yellow-800 border-yellow-200',
+  'Search complete': 'bg-gray-100 text-gray-600 border-gray-200',
+  'No longer receiving names': 'bg-red-100 text-red-700 border-red-200',
 };
 
-export function categorizeStatus(vhStatus: string): StatusCategory {
-  return STATUS_MAP[vhStatus] || 'unknown';
-}
-
-export function getStatusLabel(category: StatusCategory): string {
-  switch (category) {
-    case 'active': return 'Active';
-    case 'starting': return 'Starting';
-    case 'interim': return 'Interim';
-    case 'filled': return 'Filled';
-    case 'closed': return 'Closed';
-    default: return 'Unknown';
-  }
-}
-
-export function getStatusStyle(category: StatusCategory): string {
-  switch (category) {
-    case 'active': return 'bg-green-100 text-green-800 border-green-200';
-    case 'starting': return 'bg-blue-100 text-blue-800 border-blue-200';
-    case 'interim': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-    case 'filled': return 'bg-gray-100 text-gray-600 border-gray-200';
-    case 'closed': return 'bg-red-100 text-red-700 border-red-200';
-    default: return 'bg-gray-100 text-gray-500 border-gray-200';
-  }
-}
-
-export const ALL_STATUS_CATEGORIES: StatusCategory[] = [
-  'active', 'starting', 'interim', 'filled', 'closed', 'unknown',
-];
-
-export const STATUS_CATEGORY_LABELS: Record<StatusCategory, string> = {
-  active: 'Active (Receiving Names)',
-  starting: 'Starting (Developing)',
-  interim: 'Interim',
-  filled: 'Filled (Search Complete)',
-  closed: 'Closed',
-  unknown: 'Unknown',
+// Short labels for table column display
+const STATUS_SHORT: Record<string, string> = {
+  'Receiving names': 'Receiving',
+  'Reopened': 'Reopened',
+  'Beginning search': 'Beginning',
+  'Developing profile': 'Developing',
+  'Profile complete': 'Profile Ready',
+  'Developing self study': 'Self Study',
+  'Seeking interim': 'Seeking Interim',
+  'Interim in place': 'Interim',
+  'Search complete': 'Complete',
+  'No longer receiving names': 'Closed',
 };
+
+export function getStatusStyle(status: string): string {
+  return STATUS_COLORS[status] || 'bg-gray-100 text-gray-500 border-gray-200';
+}
+
+export function getStatusShortLabel(status: string): string {
+  return STATUS_SHORT[status] || status || 'Unknown';
+}
+
+export function isActiveStatus(status: string): boolean {
+  return status === 'Receiving names' || status === 'Reopened';
+}
+
+export function isDevelopingStatus(status: string): boolean {
+  return ['Beginning search', 'Developing profile', 'Profile complete', 'Developing self study'].includes(status);
+}
+
+export function isClosedStatus(status: string): boolean {
+  return status === 'Search complete' || status === 'No longer receiving names';
+}
+
+export function isInterimStatus(status: string): boolean {
+  return status === 'Seeking interim' || status === 'Interim in place';
+}

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import StatusBadge from './StatusBadge';
 import ParochialTrends from './ParochialTrends';
+import { isGibberish } from '@/lib/gibberish-detector';
 
 interface PositionTableProps {
   positions: Position[];
@@ -106,12 +107,10 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-600">{pos.updated_on_hub}</td>
                 <td className="px-4 py-3">
-                  {pos.visibility === 'extended' ? (
-                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border bg-purple-100 text-purple-800 border-purple-200">
-                      Extended
-                    </span>
+                  {pos.vh_status ? (
+                    <StatusBadge status={pos.vh_status} />
                   ) : (
-                    <StatusBadge status={pos.status} />
+                    <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
                   )}
                 </td>
               </tr>
@@ -137,17 +136,20 @@ function ExpandedDetail({ pos }: { pos: Position }) {
   // Parochial data is pre-computed at build time (attached to position)
   const hasParochial = !!pos.parochial && Object.keys(pos.parochial.years).length > 0;
 
-  // Helper to find a field value by label keyword
+  // Helper to find a field value by label keyword (skip gibberish)
   const findField = (...keywords: string[]): string => {
     for (const kw of keywords) {
       const lower = kw.toLowerCase();
       const match = fields.find((f) =>
-        f.label.toLowerCase().includes(lower)
+        f.label.toLowerCase().includes(lower) && !isGibberish(f.value)
       );
       if (match?.value) return match.value;
     }
     return '';
   };
+
+  // Filter out gibberish fields for display
+  const cleanFields = fields.filter(f => !isGibberish(f.value));
 
   // Extract key fields from deep scrape data
   const salary = findField('Range', 'Stipend', 'Compensation', 'Salary');
@@ -297,13 +299,13 @@ function ExpandedDetail({ pos }: { pos: Position }) {
         )}
       </div>
 
-      {/* All fields (collapsible) */}
+      {/* All fields (collapsible, gibberish filtered) */}
       <details className="text-sm">
         <summary className="cursor-pointer text-gray-500 hover:text-gray-700">
-          View all {fields.length} profile fields
+          View all {cleanFields.length} profile fields
         </summary>
         <div className="mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
-          {fields.map((f, i) => (
+          {cleanFields.map((f, i) => (
             <div key={i}>
               <span className="font-medium text-gray-500">{f.label || `Field ${i + 1}`}</span>
               <p className="text-gray-900 whitespace-pre-line">

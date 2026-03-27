@@ -77,15 +77,15 @@ jobs:
         working-directory: scraper
         run: npx tsx src/merge-profiles.ts || echo "Profile merge skipped (no chunk data)"
 
-      - name: Enrich positions with church directory and parochial data
+      - name: Build registry, position map, and enrich positions
         working-directory: web
-        run: node scripts/enrich-positions.js
+        run: node scripts/build-registry.js && node scripts/build-position-map.js && node scripts/enrich-positions.js
 
       - name: Commit and push data changes
         run: |
           git config user.name "VocationHub Bot"
           git config user.email "bot@vocationhubplus.dev"
-          git add web/public/data/
+          git add web/public/data/ web/public/data/church-registry.json web/public/data/position-church-map.json
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else

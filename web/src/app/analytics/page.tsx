@@ -5,7 +5,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Legend,
 } from 'recharts';
-import { categorizeStatus, getStatusLabel, getStatusStyle, StatusCategory } from '@/lib/status-helpers';
+import { getStatusStyle, getStatusShortLabel } from '@/lib/status-helpers';
 import { DIOCESE_TO_STATE } from '@/lib/diocese-lookup';
 
 interface Profile {
@@ -41,8 +41,8 @@ export default function AnalyticsPage() {
   const statusData = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const p of filtered) {
-      const cat = getStatusLabel(categorizeStatus(p.status));
-      counts[cat] = (counts[cat] || 0) + 1;
+      const label = getStatusShortLabel(p.status);
+      counts[label] = (counts[label] || 0) + 1;
     }
     return Object.entries(counts)
       .map(([name, value]) => ({ name, value }))

@@ -4,12 +4,9 @@ import { useMemo, useState } from 'react';
 import Fuse from 'fuse.js';
 import SearchBar from '@/components/SearchBar';
 import {
-  categorizeStatus,
-  getStatusLabel,
   getStatusStyle,
-  StatusCategory,
-  ALL_STATUS_CATEGORIES,
-  STATUS_CATEGORY_LABELS,
+  getStatusShortLabel,
+  isClosedStatus,
 } from '@/lib/status-helpers';
 
 interface Profile {
@@ -46,7 +43,7 @@ export default function HistoricalPage() {
   const [query, setQuery] = useState('');
   const [dioceseFilter, setDioceseFilter] = useState('');
   const [settingFilter, setSettingFilter] = useState('');
-  const [statusFilter, setStatusFilter] = useState<StatusCategory | ''>('');
+  const [statusFilter, setStatusFilter] = useState('');
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const dioceses = useMemo(() => {
@@ -61,16 +58,22 @@ export default function HistoricalPage() {
     return Array.from(vals).sort();
   }, [profiles]);
 
-  // Count by status category
+  // Count by VH status
   const statusCounts = useMemo(() => {
     const counts: Record<string, number> = {};
-    for (const cat of ALL_STATUS_CATEGORIES) counts[cat] = 0;
     for (const p of profiles) {
-      const cat = categorizeStatus(p.status);
-      counts[cat] = (counts[cat] || 0) + 1;
+      const status = p.status || 'Unknown';
+      counts[status] = (counts[status] || 0) + 1;
     }
     return counts;
   }, [profiles]);
+
+  // Unique statuses sorted by count descending
+  const allStatuses = useMemo(() => {
+    return Object.entries(statusCounts)
+      .sort((a, b) => b[1] - a[1])
+      .map(([status]) => status);
+  }, [statusCounts]);
 
   const fuse = useMemo(() => new Fuse(profiles, {
     keys: [
@@ -95,7 +98,7 @@ export default function HistoricalPage() {
 
     if (dioceseFilter) results = results.filter(p => p.diocese === dioceseFilter);
     if (settingFilter) results = results.filter(p => p.ministry_setting === settingFilter);
-    if (statusFilter) results = results.filter(p => categorizeStatus(p.status) === statusFilter);
+    if (statusFilter) results = results.filter(p => (p.status || 'Unknown') === statusFilter);
 
     return results;
   }, [profiles, fuse, query, dioceseFilter, settingFilter, statusFilter]);
@@ -111,20 +114,20 @@ export default function HistoricalPage() {
 
       {/* Status summary cards */}
       <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
-        {ALL_STATUS_CATEGORIES.filter(cat => statusCounts[cat] > 0).map(cat => (
+        {allStatuses.map(status => (
           <button
-            key={cat}
-            onClick={() => setStatusFilter(statusFilter === cat ? '' : cat)}
+            key={status}
+            onClick={() => setStatusFilter(statusFilter === status ? '' : status)}
             className={`rounded-lg p-3 text-center border transition-all ${
-              statusFilter === cat
-                ? getStatusStyle(cat) + ' ring-2 ring-offset-1 ring-primary-500'
+              statusFilter === status
+                ? getStatusStyle(status) + ' ring-2 ring-offset-1 ring-primary-500'
                 : statusFilter
                   ? 'bg-gray-50 text-gray-400 border-gray-100'
-                  : getStatusStyle(cat)
+                  : getStatusStyle(status)
             }`}
           >
-            <p className="text-xl font-bold">{statusCounts[cat]}</p>
-            <p className="text-xs">{getStatusLabel(cat)}</p>
+            <p className="text-xl font-bold">{statusCounts[status]}</p>
+            <p className="text-xs">{getStatusShortLabel(status)}</p>
           </button>
         ))}
       </div>
@@ -186,13 +189,13 @@ export default function HistoricalPage() {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {filtered.slice(0, 100).map(p => {
-              const cat = categorizeStatus(p.status);
+              const closed = isClosedStatus(p.status);
               return (
                 <>
                   <tr
                     key={p.vh_id}
                     onClick={() => setExpandedId(expandedId === p.vh_id ? null : p.vh_id)}
-                    className={`hover:bg-gray-50 cursor-pointer ${cat === 'filled' || cat === 'closed' ? 'opacity-60' : ''}`}
+                    className={`hover:bg-gray-50 cursor-pointer ${closed ? 'opacity-60' : ''}`}
                   >
                     <td className="px-4 py-3 text-sm font-medium text-gray-900">
                       {p.congregation || '(unnamed)'}
@@ -204,8 +207,8 @@ export default function HistoricalPage() {
                       {p.avg_sunday_attendance && p.avg_sunday_attendance !== '0' ? p.avg_sunday_attendance : '-'}
                     </td>
                     <td className="px-4 py-3">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getStatusStyle(cat)}`}>
-                        {p.status || 'Unknown'}
+                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getStatusStyle(p.status)}`}>
+                        {getStatusShortLabel(p.status)}
                       </span>
                     </td>
                   </tr>

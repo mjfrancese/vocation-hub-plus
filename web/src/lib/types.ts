@@ -17,6 +17,10 @@ export interface Position {
   visibility?: 'public' | 'extended';
   // VH's own status field (e.g. "Receiving names", "Search complete")
   vh_status?: string;
+  // Match confidence from position-church mapping
+  match_confidence?: 'exact' | 'high' | 'manual' | 'none';
+  // Computed: is this position recently opened?
+  is_new?: boolean;
 
   // Detail fields (from Position Profile page)
   vh_id?: number;

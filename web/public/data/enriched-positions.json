@@ -41,75 +41,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "name": "Zion Episcopal Church",
-      "street": "5167 Main St. ",
-      "city": "Manchester Center",
-      "state": "VT",
-      "zip": "05255",
-      "phone": "(802) 362-1987",
-      "email": "office@zionchurchmanchester.org",
-      "website": "http://www.zionchurchmanchester.org",
-      "type": "church",
-      "lat": 43.17834,
-      "lng": -73.05161
-    },
-    "parochial": {
-      "congregationCity": "Zion Episcopal Church (Manchester Center)",
-      "years": {
-        "2015": {
-          "averageAttendance": 109,
-          "plateAndPledge": 304708,
-          "membership": 646
-        },
-        "2016": {
-          "averageAttendance": 124,
-          "plateAndPledge": 288157,
-          "membership": 650
-        },
-        "2017": {
-          "averageAttendance": 120,
-          "plateAndPledge": 254734,
-          "membership": 642
-        },
-        "2018": {
-          "averageAttendance": 115,
-          "plateAndPledge": 246656,
-          "membership": 670
-        },
-        "2019": {
-          "averageAttendance": 110,
-          "plateAndPledge": 244465,
-          "membership": 680
-        },
-        "2020": {
-          "averageAttendance": 76,
-          "plateAndPledge": 188200,
-          "membership": 675
-        },
-        "2021": {
-          "averageAttendance": 39,
-          "plateAndPledge": 202255,
-          "membership": 310
-        },
-        "2022": {
-          "averageAttendance": 50,
-          "plateAndPledge": 206419,
-          "membership": 249
-        },
-        "2023": {
-          "averageAttendance": 60,
-          "plateAndPledge": 254868,
-          "membership": 157
-        },
-        "2024": {
-          "averageAttendance": 61,
-          "plateAndPledge": 242601,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
@@ -130,7 +62,7 @@
     "profile_url": null,
     "detail_name": null,
     "address": null,
-    "city": null,
+    "city": "",
     "state_province": null,
     "postal_code": null,
     "contact_name": null,
@@ -174,7 +106,7 @@
     "profile_url": null,
     "detail_name": null,
     "address": null,
-    "city": null,
+    "city": "",
     "state_province": null,
     "postal_code": null,
     "contact_name": null,
@@ -241,62 +173,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "parochial": {
-      "congregationCity": "Trinity Parish & Old Swedes Church (Wilmington)",
-      "years": {
-        "2015": {
-          "averageAttendance": 200,
-          "plateAndPledge": 391004,
-          "membership": 784
-        },
-        "2016": {
-          "averageAttendance": 189,
-          "plateAndPledge": 387622,
-          "membership": 801
-        },
-        "2017": {
-          "averageAttendance": 197,
-          "plateAndPledge": 392722,
-          "membership": 809
-        },
-        "2018": {
-          "averageAttendance": 189,
-          "plateAndPledge": 379958,
-          "membership": 827
-        },
-        "2019": {
-          "averageAttendance": 176,
-          "plateAndPledge": 411586,
-          "membership": 824
-        },
-        "2020": {
-          "averageAttendance": 159,
-          "plateAndPledge": 378736,
-          "membership": 820
-        },
-        "2021": {
-          "averageAttendance": 82,
-          "plateAndPledge": 393456,
-          "membership": 822
-        },
-        "2022": {
-          "averageAttendance": 120,
-          "plateAndPledge": 420740,
-          "membership": 430
-        },
-        "2023": {
-          "averageAttendance": 139,
-          "plateAndPledge": 404710,
-          "membership": 436
-        },
-        "2024": {
-          "averageAttendance": 127,
-          "plateAndPledge": 367899,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "5ebc3903341c6f9cf1cd1cbc5469820b562da15ebf8a31c4195a67bd5a7e59d0",
@@ -340,75 +217,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "name": "Trinity Church",
-      "street": "9108 John Mosby Hwy",
-      "city": "Upperville",
-      "state": "VA",
-      "zip": "20184",
-      "phone": " 540 592-3343",
-      "email": "",
-      "website": "https://trinityupperville.org",
-      "type": "church",
-      "lat": 38.99405,
-      "lng": -77.881299
-    },
-    "parochial": {
-      "congregationCity": "Trinity Church (Arlington)",
-      "years": {
-        "2015": {
-          "averageAttendance": 66,
-          "plateAndPledge": 144532,
-          "membership": 184
-        },
-        "2016": {
-          "averageAttendance": 67,
-          "plateAndPledge": 141270,
-          "membership": 192
-        },
-        "2017": {
-          "averageAttendance": 67,
-          "plateAndPledge": 141270,
-          "membership": 192
-        },
-        "2018": {
-          "averageAttendance": 69,
-          "plateAndPledge": 168093,
-          "membership": 222
-        },
-        "2019": {
-          "averageAttendance": 67,
-          "plateAndPledge": 156660,
-          "membership": 231
-        },
-        "2020": {
-          "averageAttendance": 76,
-          "plateAndPledge": 163583,
-          "membership": 235
-        },
-        "2021": {
-          "averageAttendance": 30,
-          "plateAndPledge": 179539,
-          "membership": 231
-        },
-        "2022": {
-          "averageAttendance": 70,
-          "plateAndPledge": 203899,
-          "membership": 227
-        },
-        "2023": {
-          "averageAttendance": 37,
-          "plateAndPledge": 202621,
-          "membership": 221
-        },
-        "2024": {
-          "averageAttendance": 44,
-          "plateAndPledge": 191764,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "9c2aa24afefd5ee185764545891790f3bde07e26fceb8cedbbf75c0f737b308e",
@@ -452,75 +261,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "name": "St. David's Episcopal Church",
-      "street": "301 E 8th St",
-      "city": "Austin",
-      "state": "TX",
-      "zip": "78701-3280",
-      "phone": "512-610-3500",
-      "email": "info@stdave.org",
-      "website": "http://www.stdave.org",
-      "type": "church",
-      "lat": 30.26882,
-      "lng": -97.73914
-    },
-    "parochial": {
-      "congregationCity": "St Davids Episcopal Church (Austin)",
-      "years": {
-        "2015": {
-          "averageAttendance": 677,
-          "plateAndPledge": 2022576,
-          "membership": 2222
-        },
-        "2016": {
-          "averageAttendance": 705,
-          "plateAndPledge": 1895099,
-          "membership": 2138
-        },
-        "2017": {
-          "averageAttendance": 598,
-          "plateAndPledge": 1883571,
-          "membership": 2010
-        },
-        "2018": {
-          "averageAttendance": 551,
-          "plateAndPledge": 1829096,
-          "membership": 1976
-        },
-        "2019": {
-          "averageAttendance": 536,
-          "plateAndPledge": 1727484,
-          "membership": 1934
-        },
-        "2020": {
-          "averageAttendance": 533,
-          "plateAndPledge": 1592225,
-          "membership": 1892
-        },
-        "2021": {
-          "averageAttendance": 237,
-          "plateAndPledge": 1474300,
-          "membership": 1875
-        },
-        "2022": {
-          "averageAttendance": 235,
-          "plateAndPledge": 1468909,
-          "membership": 1863
-        },
-        "2023": {
-          "averageAttendance": 251,
-          "plateAndPledge": 1306158,
-          "membership": 1852
-        },
-        "2024": {
-          "averageAttendance": 253,
-          "plateAndPledge": 1613117,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
@@ -566,6 +307,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 4128,
       "name": "St. Thomas Episcopal Church ",
       "street": "315 Lindsey St",
       "city": "Reidsville",
@@ -578,6 +320,7 @@
       "lat": 36.359111,
       "lng": -79.667012
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Thomas Episcopal Church (Reidsville)",
       "years": {
@@ -676,75 +419,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "name": "St. Peter's Church Smyrna",
-      "street": "22 N Union St",
-      "city": "Smyrna",
-      "state": "DE",
-      "zip": "19977",
-      "phone": "302-653-9691",
-      "email": "stpeters.smyrna@verizon.net",
-      "website": "http://www.stpeters-smyrna.org",
-      "type": "church",
-      "lat": 39.29911,
-      "lng": -75.60974
-    },
-    "parochial": {
-      "congregationCity": "St Peters Church Smyrna (Smyrna)",
-      "years": {
-        "2015": {
-          "averageAttendance": 62,
-          "plateAndPledge": 114386,
-          "membership": 88
-        },
-        "2016": {
-          "averageAttendance": 66,
-          "plateAndPledge": 124837,
-          "membership": 85
-        },
-        "2017": {
-          "averageAttendance": 72,
-          "plateAndPledge": 123248,
-          "membership": 96
-        },
-        "2018": {
-          "averageAttendance": 77,
-          "plateAndPledge": 129595,
-          "membership": 106
-        },
-        "2019": {
-          "averageAttendance": 78,
-          "plateAndPledge": 147878,
-          "membership": 116
-        },
-        "2020": {
-          "averageAttendance": 77,
-          "plateAndPledge": 156052,
-          "membership": 105
-        },
-        "2021": {
-          "averageAttendance": 40,
-          "plateAndPledge": 161236,
-          "membership": 108
-        },
-        "2022": {
-          "averageAttendance": 51,
-          "plateAndPledge": 148303,
-          "membership": 78
-        },
-        "2023": {
-          "averageAttendance": 55,
-          "plateAndPledge": 158450,
-          "membership": 77
-        },
-        "2024": {
-          "averageAttendance": 57,
-          "plateAndPledge": 179293,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
@@ -790,6 +465,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 2224,
       "name": "St. Peter's Episcopal Church",
       "street": "101 E 4th Ave",
       "city": "Rome",
@@ -802,6 +478,7 @@
       "lat": 34.253966,
       "lng": -85.170719
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Peters Episcopal Church (Rome)",
       "years": {
@@ -902,6 +579,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 5307,
       "name": "St. Peter Episcopal Church",
       "street": "224 S Military Hwy",
       "city": "Norfolk",
@@ -914,6 +592,7 @@
       "lat": 36.837408,
       "lng": -76.209108
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Peter Episcopal Church (Norfolk)",
       "years": {
@@ -1014,69 +693,36 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 5002,
       "name": "St. Paul's Episcopal Church",
-      "street": "1528 Oakdale Rd",
-      "city": "Modesto",
+      "street": "120 N Hall Street",
+      "city": "Visalia",
       "state": "CA",
-      "zip": "95355-3306",
-      "phone": "",
-      "email": "",
-      "website": "https://www.saintpaulsmodesto.org/",
+      "zip": "93291",
+      "phone": "(559) 627-8265",
+      "email": "stpaulsepiscopaloffice@gmail.com",
+      "website": "https://www.stpaulsepiscopalvisalia.com",
       "type": "church",
-      "lat": 37.665915,
-      "lng": -120.957528
+      "lat": 36.330737,
+      "lng": -119.308399
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Paul's Episcopal Church (Bakersfield)",
+      "congregationCity": "St Pauls Episcopal Church (Visalia)",
       "years": {
-        "2015": {
-          "averageAttendance": 110,
-          "plateAndPledge": 158122,
-          "membership": 217
-        },
-        "2016": {
-          "averageAttendance": 104,
-          "plateAndPledge": 152332,
-          "membership": 230
-        },
-        "2017": {
-          "averageAttendance": 97,
-          "plateAndPledge": 168500,
-          "membership": 232
-        },
-        "2018": {
-          "averageAttendance": 78,
-          "plateAndPledge": 129090,
-          "membership": 142
-        },
-        "2019": {
-          "averageAttendance": 79,
-          "plateAndPledge": 138140,
-          "membership": 146
-        },
-        "2020": {
-          "averageAttendance": 71,
-          "plateAndPledge": 103843,
-          "membership": 146
-        },
-        "2021": {
-          "averageAttendance": 40,
-          "plateAndPledge": 132608,
-          "membership": 155
-        },
         "2022": {
-          "averageAttendance": 52,
-          "plateAndPledge": 107938,
-          "membership": 169
+          "averageAttendance": 26,
+          "plateAndPledge": 82754,
+          "membership": 68
         },
         "2023": {
-          "averageAttendance": 68,
-          "plateAndPledge": 146474,
-          "membership": 174
+          "averageAttendance": 32,
+          "plateAndPledge": 89137,
+          "membership": 74
         },
         "2024": {
-          "averageAttendance": 69,
-          "plateAndPledge": 177945,
+          "averageAttendance": 34,
+          "plateAndPledge": 106079,
           "membership": null
         }
       }
@@ -1126,69 +772,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 6840,
       "name": "St. Paul's Episcopal Church",
-      "street": "306 Peyton Rd SW",
-      "city": "Atlanta",
+      "street": "576 Roscoe Rd",
+      "city": "Newnan",
       "state": "GA",
-      "zip": "30311-2134",
-      "phone": "404-696-3620",
-      "email": "admin@stpaulsatl.org",
-      "website": "http://stpaulsatl.org",
+      "zip": "30263",
+      "phone": "770-253-4264",
+      "email": "parishadmin@stpaulsnewnan.org",
+      "website": "http://www.stpaulsnewnan.org",
       "type": "church",
-      "lat": 33.746282,
-      "lng": -84.476644
+      "lat": 33.40872,
+      "lng": -84.811282
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Atlanta)",
+      "congregationCity": "St Pauls Episcopal Church (Newnan)",
       "years": {
         "2015": {
-          "averageAttendance": 400,
-          "plateAndPledge": 907166,
-          "membership": 986
+          "averageAttendance": 215,
+          "plateAndPledge": 561205,
+          "membership": 755
         },
         "2016": {
-          "averageAttendance": 311,
-          "plateAndPledge": 864976,
-          "membership": 973
+          "averageAttendance": 186,
+          "plateAndPledge": 542267,
+          "membership": 700
         },
         "2017": {
-          "averageAttendance": 261,
-          "plateAndPledge": 874928,
-          "membership": 974
+          "averageAttendance": 208,
+          "plateAndPledge": 559456,
+          "membership": 715
         },
         "2018": {
-          "averageAttendance": 188,
-          "plateAndPledge": 763584,
-          "membership": 830
+          "averageAttendance": 175,
+          "plateAndPledge": 549729,
+          "membership": 732
         },
         "2019": {
-          "averageAttendance": 183,
-          "plateAndPledge": 805695,
-          "membership": 684
+          "averageAttendance": 179,
+          "plateAndPledge": 609028,
+          "membership": 733
         },
         "2020": {
-          "averageAttendance": 161,
-          "plateAndPledge": 776331,
-          "membership": 651
+          "averageAttendance": 166,
+          "plateAndPledge": 508209,
+          "membership": 731
         },
         "2021": {
-          "averageAttendance": 80,
-          "plateAndPledge": 659560,
-          "membership": 653
+          "averageAttendance": 100,
+          "plateAndPledge": 545724,
+          "membership": 740
         },
         "2022": {
-          "averageAttendance": 130,
-          "plateAndPledge": 639076,
-          "membership": 339
+          "averageAttendance": 124,
+          "plateAndPledge": 565865,
+          "membership": 739
         },
         "2023": {
-          "averageAttendance": 145,
-          "plateAndPledge": 655510,
-          "membership": 330
+          "averageAttendance": 142,
+          "plateAndPledge": 617577,
+          "membership": 514
         },
         "2024": {
-          "averageAttendance": 137,
-          "plateAndPledge": 695108,
+          "averageAttendance": 149,
+          "plateAndPledge": 598137,
           "membership": null
         }
       }
@@ -1238,73 +886,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "St. Michael's Church Episcopal",
-      "street": "25 South St",
-      "city": "Litchfield",
-      "state": "CT",
-      "zip": "06759-4005",
-      "phone": "(860) 567-9465",
-      "email": "office@stmichaels-litchfield.org",
-      "website": "https://stmichaels-litchfield.org/",
-      "type": "church",
-      "lat": 41.74624,
-      "lng": -73.18875
+      "nid": 7233,
+      "name": "Diocesan House",
+      "street": "4800 Six Forks Road",
+      "city": "Raleigh",
+      "state": "NC",
+      "zip": "27609",
+      "phone": "(919) 834-7474",
+      "email": "communications@episdionc.org",
+      "website": "http://www.episdionc.org",
+      "type": "other",
+      "lat": 35.84529,
+      "lng": -78.64266
     },
-    "parochial": {
-      "congregationCity": "St Michaels Church Episcopal (Litchfield)",
-      "years": {
-        "2015": {
-          "averageAttendance": 78,
-          "plateAndPledge": 231911,
-          "membership": 415
-        },
-        "2016": {
-          "averageAttendance": 70,
-          "plateAndPledge": 253634,
-          "membership": 387
-        },
-        "2017": {
-          "averageAttendance": 66,
-          "plateAndPledge": 283654,
-          "membership": 382
-        },
-        "2018": {
-          "averageAttendance": 72,
-          "plateAndPledge": 292437,
-          "membership": 382
-        },
-        "2019": {
-          "averageAttendance": 71,
-          "plateAndPledge": 293667,
-          "membership": 44
-        },
-        "2020": {
-          "averageAttendance": 92,
-          "plateAndPledge": 286304,
-          "membership": 45
-        },
-        "2021": {
-          "averageAttendance": 82,
-          "plateAndPledge": 261530,
-          "membership": 45
-        },
-        "2022": {
-          "averageAttendance": 59,
-          "plateAndPledge": 291856,
-          "membership": 118
-        },
-        "2023": {
-          "averageAttendance": 71,
-          "plateAndPledge": 277727,
-          "membership": 165
-        },
-        "2024": {
-          "averageAttendance": 59,
-          "plateAndPledge": 221919,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
@@ -1350,6 +945,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 1507,
       "name": "St. Michael's Church Episcopal",
       "street": "25 South St",
       "city": "Litchfield",
@@ -1362,6 +958,7 @@
       "lat": 41.74624,
       "lng": -73.18875
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Michaels Church Episcopal (Litchfield)",
       "years": {
@@ -1462,6 +1059,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 1704,
       "name": "St. Michael's Church",
       "street": "1132 N Ivanhoe St",
       "city": "Arlington",
@@ -1474,6 +1072,7 @@
       "lat": 38.882359,
       "lng": -77.132383
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Michaels Church (Arlington)",
       "years": {
@@ -1574,6 +1173,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 5293,
       "name": "St. Matthias' Episcopal Church",
       "street": "11300 W Huguenot Rd",
       "city": "Midlothian",
@@ -1586,6 +1186,7 @@
       "lat": 37.52558,
       "lng": -77.60483
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Matthias Episcopal Church (Midlothian)",
       "years": {
@@ -1686,69 +1287,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "The Commons",
-      "street": "290 Pratt Street",
-      "city": "Meriden",
-      "state": "CT",
-      "zip": "06450",
-      "phone": "",
-      "email": "ccollins@episcopalct.org",
-      "website": "http://www.episcopalct.org",
-      "type": "other",
-      "lat": 41.54194,
-      "lng": -72.79092
+      "nid": 4102,
+      "name": "St. Matthew's Episcopal Church",
+      "street": "210 St. Mary's Road",
+      "city": "Hillsborough",
+      "state": "NC",
+      "zip": "27278-2518",
+      "phone": "919-732-9308",
+      "email": "welcome@stmatthewshillsborough.org",
+      "website": "http://www.stmatthewshillsborough.org",
+      "type": "church",
+      "lat": 36.07613,
+      "lng": -79.09551
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Matthews Episcopal Church (Kernersville)",
+      "congregationCity": "St Matthews Parish Church (Hillsborough)",
       "years": {
         "2015": {
-          "averageAttendance": 36,
-          "plateAndPledge": 59135,
-          "membership": 104
+          "averageAttendance": 179,
+          "plateAndPledge": 458431,
+          "membership": 366
         },
         "2016": {
-          "averageAttendance": 49,
-          "plateAndPledge": 60878,
-          "membership": 106
+          "averageAttendance": 179,
+          "plateAndPledge": 460571,
+          "membership": 359
         },
         "2017": {
-          "averageAttendance": 25,
-          "plateAndPledge": 68000,
-          "membership": 105
+          "averageAttendance": 181,
+          "plateAndPledge": 479579,
+          "membership": 340
         },
         "2018": {
-          "averageAttendance": 37,
-          "plateAndPledge": 54615,
-          "membership": 109
+          "averageAttendance": 162,
+          "plateAndPledge": 472288,
+          "membership": 360
         },
         "2019": {
-          "averageAttendance": 48,
-          "plateAndPledge": 48097,
-          "membership": 72
+          "averageAttendance": 179,
+          "plateAndPledge": 466342,
+          "membership": 345
         },
         "2020": {
-          "averageAttendance": 35,
-          "plateAndPledge": 46788,
-          "membership": 69
+          "averageAttendance": 198,
+          "plateAndPledge": 487421,
+          "membership": 353
         },
         "2021": {
-          "averageAttendance": 35,
-          "plateAndPledge": 46788,
-          "membership": 69
+          "averageAttendance": 79,
+          "plateAndPledge": 531509,
+          "membership": 319
         },
         "2022": {
-          "averageAttendance": 12,
-          "plateAndPledge": 33073,
-          "membership": 22
+          "averageAttendance": 124,
+          "plateAndPledge": 516189,
+          "membership": 283
         },
         "2023": {
-          "averageAttendance": 10,
-          "plateAndPledge": 24428,
-          "membership": 16
+          "averageAttendance": 147,
+          "plateAndPledge": 560931,
+          "membership": 346
         },
         "2024": {
-          "averageAttendance": 12,
-          "plateAndPledge": 15475,
+          "averageAttendance": 160,
+          "plateAndPledge": 606765,
           "membership": null
         }
       }
@@ -1798,18 +1401,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "The Commons",
-      "street": "290 Pratt Street",
-      "city": "Meriden",
-      "state": "CT",
-      "zip": "06450",
-      "phone": "",
-      "email": "ccollins@episcopalct.org",
-      "website": "http://www.episcopalct.org",
-      "type": "other",
-      "lat": 41.54194,
-      "lng": -72.79092
+      "nid": 2163,
+      "name": "St. Luke's Episcopal Church",
+      "street": "435 Peachtree St NE",
+      "city": "Atlanta",
+      "state": "GA",
+      "zip": "30308-3228",
+      "phone": "404-873-7600",
+      "email": "communications@stlukesatlanta.org",
+      "website": "https://www.stlukesatlanta.org/",
+      "type": "church",
+      "lat": 33.7665,
+      "lng": -84.38442
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Lukes Episcopal Church (Atlanta)",
       "years": {
@@ -1910,6 +1515,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 1704,
       "name": "St. Michael's Church",
       "street": "1132 N Ivanhoe St",
       "city": "Arlington",
@@ -1922,57 +1528,58 @@
       "lat": 38.882359,
       "lng": -77.132383
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Johns Episcopal Church (Battleboro)",
+      "congregationCity": "St Michaels Church (Arlington)",
       "years": {
         "2015": {
-          "averageAttendance": 13,
-          "plateAndPledge": 19395,
-          "membership": 12
+          "averageAttendance": 109,
+          "plateAndPledge": 290550,
+          "membership": 227
         },
         "2016": {
-          "averageAttendance": 13,
-          "plateAndPledge": 19395,
-          "membership": 12
+          "averageAttendance": 101,
+          "plateAndPledge": 308206,
+          "membership": 230
         },
         "2017": {
-          "averageAttendance": 13,
-          "plateAndPledge": 17127,
-          "membership": 12
+          "averageAttendance": 105,
+          "plateAndPledge": 264512,
+          "membership": 219
         },
         "2018": {
-          "averageAttendance": 16,
-          "plateAndPledge": 17565,
-          "membership": 12
+          "averageAttendance": 105,
+          "plateAndPledge": 264719,
+          "membership": 225
         },
         "2019": {
-          "averageAttendance": 23,
-          "plateAndPledge": 17770,
-          "membership": 14
+          "averageAttendance": 106,
+          "plateAndPledge": 288867,
+          "membership": 235
         },
         "2020": {
-          "averageAttendance": 17,
-          "plateAndPledge": 9858,
-          "membership": 13
+          "averageAttendance": 115,
+          "plateAndPledge": 301273,
+          "membership": 242
         },
         "2021": {
-          "averageAttendance": 14,
-          "plateAndPledge": 15842,
-          "membership": 13
+          "averageAttendance": 52,
+          "plateAndPledge": 326115,
+          "membership": 264
         },
         "2022": {
-          "averageAttendance": 10,
-          "plateAndPledge": 11453,
-          "membership": 14
+          "averageAttendance": 64,
+          "plateAndPledge": 367172,
+          "membership": 210
         },
         "2023": {
-          "averageAttendance": 12,
-          "plateAndPledge": 13335,
-          "membership": 14
+          "averageAttendance": 63,
+          "plateAndPledge": 396575,
+          "membership": 193
         },
         "2024": {
-          "averageAttendance": 9,
-          "plateAndPledge": 17918,
+          "averageAttendance": 71,
+          "plateAndPledge": 447678,
           "membership": null
         }
       }
@@ -2022,69 +1629,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 4066,
       "name": "St. John's Episcopal Church",
-      "street": "211 E. Battleboro Ave.",
-      "city": "Battleboro",
+      "street": "1623 Carmel Rd",
+      "city": "Charlotte",
       "state": "NC",
-      "zip": "27809-8934",
-      "phone": "(252) 492-0082",
-      "email": "",
-      "website": "",
+      "zip": "28226-5097",
+      "phone": "704-366-3034",
+      "email": "kerry@stje.org",
+      "website": "https://www.stje.org",
       "type": "church",
-      "lat": 36.046516,
-      "lng": -77.747629
+      "lat": 35.14336,
+      "lng": -80.80051
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Johns Episcopal Church (Battleboro)",
+      "congregationCity": "St Johns Episcopal Church (Charlotte)",
       "years": {
         "2015": {
-          "averageAttendance": 13,
-          "plateAndPledge": 19395,
-          "membership": 12
+          "averageAttendance": 491,
+          "plateAndPledge": 1534227,
+          "membership": 2743
         },
         "2016": {
-          "averageAttendance": 13,
-          "plateAndPledge": 19395,
-          "membership": 12
+          "averageAttendance": 461,
+          "plateAndPledge": 1537180,
+          "membership": 2738
         },
         "2017": {
-          "averageAttendance": 13,
-          "plateAndPledge": 17127,
-          "membership": 12
+          "averageAttendance": 424,
+          "plateAndPledge": 1475415,
+          "membership": 2711
         },
         "2018": {
-          "averageAttendance": 16,
-          "plateAndPledge": 17565,
-          "membership": 12
+          "averageAttendance": 344,
+          "plateAndPledge": 1336691,
+          "membership": 1921
         },
         "2019": {
-          "averageAttendance": 23,
-          "plateAndPledge": 17770,
-          "membership": 14
+          "averageAttendance": 363,
+          "plateAndPledge": 1392092,
+          "membership": 1612
         },
         "2020": {
-          "averageAttendance": 17,
-          "plateAndPledge": 9858,
-          "membership": 13
+          "averageAttendance": 374,
+          "plateAndPledge": 1407109,
+          "membership": 1579
         },
         "2021": {
-          "averageAttendance": 14,
-          "plateAndPledge": 15842,
-          "membership": 13
+          "averageAttendance": 153,
+          "plateAndPledge": 1561238,
+          "membership": 1563
         },
         "2022": {
-          "averageAttendance": 10,
-          "plateAndPledge": 11453,
-          "membership": 14
+          "averageAttendance": 222,
+          "plateAndPledge": 1393351,
+          "membership": 987
         },
         "2023": {
-          "averageAttendance": 12,
-          "plateAndPledge": 13335,
-          "membership": 14
+          "averageAttendance": 249,
+          "plateAndPledge": 1510981,
+          "membership": 937
         },
         "2024": {
-          "averageAttendance": 9,
-          "plateAndPledge": 17918,
+          "averageAttendance": 244,
+          "plateAndPledge": 1693405,
           "membership": null
         }
       }
@@ -2134,6 +1743,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 7233,
       "name": "Diocesan House",
       "street": "4800 Six Forks Road",
       "city": "Raleigh",
@@ -2146,61 +1756,7 @@
       "lat": 35.84529,
       "lng": -78.64266
     },
-    "parochial": {
-      "congregationCity": "St John the Evangelist Epis Church (Stockton)",
-      "years": {
-        "2015": {
-          "averageAttendance": 19,
-          "plateAndPledge": 9865,
-          "membership": 14
-        },
-        "2016": {
-          "averageAttendance": 15,
-          "plateAndPledge": 7354,
-          "membership": 29
-        },
-        "2017": {
-          "averageAttendance": 14,
-          "plateAndPledge": 6874,
-          "membership": 19
-        },
-        "2018": {
-          "averageAttendance": 16,
-          "plateAndPledge": 9357,
-          "membership": 34
-        },
-        "2019": {
-          "averageAttendance": 20,
-          "plateAndPledge": 20996,
-          "membership": 34
-        },
-        "2020": {
-          "averageAttendance": 23,
-          "plateAndPledge": 18966,
-          "membership": 34
-        },
-        "2021": {
-          "averageAttendance": 12,
-          "plateAndPledge": 23366,
-          "membership": 35
-        },
-        "2022": {
-          "averageAttendance": 20,
-          "plateAndPledge": 28229,
-          "membership": 52
-        },
-        "2023": {
-          "averageAttendance": 19,
-          "plateAndPledge": 52843,
-          "membership": 100
-        },
-        "2024": {
-          "averageAttendance": 28,
-          "plateAndPledge": 75616,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
@@ -2246,69 +1802,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "St. John Church",
-      "street": "100 W Queens Way",
-      "city": "Hampton",
+      "nid": 5278,
+      "name": "St. John Episcopal Church",
+      "street": "197 Mountain Rd",
+      "city": "Halifax",
       "state": "VA",
-      "zip": "23669-4014",
-      "phone": "(757) 722-2567",
-      "email": "office@stjohnshampton.org",
-      "website": "https://stjohnshampton.org",
+      "zip": "24558-2010",
+      "phone": "434-476-6696 ",
+      "email": "stjohnsepiscopalchurch@gmail.com",
+      "website": "http://stjohnshalifax.blogspot.com",
       "type": "church",
-      "lat": 37.02602,
-      "lng": -76.34675
+      "lat": 36.76706,
+      "lng": -78.9319
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St John Church (Hampton)",
+      "congregationCity": "St John Episcopal Church (Halifax)",
       "years": {
         "2015": {
-          "averageAttendance": 144,
-          "plateAndPledge": 317162,
-          "membership": 444
+          "averageAttendance": 79,
+          "plateAndPledge": 152504,
+          "membership": 157
         },
         "2016": {
-          "averageAttendance": 134,
-          "plateAndPledge": 313919,
-          "membership": 446
+          "averageAttendance": 72,
+          "plateAndPledge": 167482,
+          "membership": 159
         },
         "2017": {
-          "averageAttendance": 129,
-          "plateAndPledge": 391191,
-          "membership": 445
+          "averageAttendance": 66,
+          "plateAndPledge": 256716,
+          "membership": 168
         },
         "2018": {
-          "averageAttendance": 127,
-          "plateAndPledge": 379845,
-          "membership": 410
+          "averageAttendance": 55,
+          "plateAndPledge": 150775,
+          "membership": 169
         },
         "2019": {
-          "averageAttendance": 125,
-          "plateAndPledge": 393690,
-          "membership": 408
+          "averageAttendance": 54,
+          "plateAndPledge": 155892,
+          "membership": 167
         },
         "2020": {
-          "averageAttendance": 139,
-          "plateAndPledge": 379913,
-          "membership": 398
+          "averageAttendance": 54,
+          "plateAndPledge": 259393,
+          "membership": 167
         },
         "2021": {
-          "averageAttendance": 68,
-          "plateAndPledge": 393683,
-          "membership": 400
+          "averageAttendance": 41,
+          "plateAndPledge": 200782,
+          "membership": 169
         },
         "2022": {
-          "averageAttendance": 88,
-          "plateAndPledge": 381529,
-          "membership": 412
+          "averageAttendance": 46,
+          "plateAndPledge": 224192,
+          "membership": 170
         },
         "2023": {
-          "averageAttendance": 107,
-          "plateAndPledge": 406424,
-          "membership": 368
+          "averageAttendance": 48,
+          "plateAndPledge": 171106,
+          "membership": 168
         },
         "2024": {
-          "averageAttendance": 100,
-          "plateAndPledge": 404609,
+          "averageAttendance": 62,
+          "plateAndPledge": 214333,
           "membership": null
         }
       }
@@ -2358,6 +1916,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 7233,
       "name": "Diocesan House",
       "street": "4800 Six Forks Road",
       "city": "Raleigh",
@@ -2370,61 +1929,7 @@
       "lat": 35.84529,
       "lng": -78.64266
     },
-    "parochial": {
-      "congregationCity": "St James Episcopal Church (Cashmere)",
-      "years": {
-        "2015": {
-          "averageAttendance": 36,
-          "plateAndPledge": 56610,
-          "membership": 68
-        },
-        "2016": {
-          "averageAttendance": 36,
-          "plateAndPledge": 56610,
-          "membership": 68
-        },
-        "2017": {
-          "averageAttendance": 36,
-          "plateAndPledge": 56610,
-          "membership": 68
-        },
-        "2018": {
-          "averageAttendance": 24,
-          "plateAndPledge": 65439,
-          "membership": 68
-        },
-        "2019": {
-          "averageAttendance": 24,
-          "plateAndPledge": 69814,
-          "membership": 68
-        },
-        "2020": {
-          "averageAttendance": 22,
-          "plateAndPledge": 73764,
-          "membership": 52
-        },
-        "2021": {
-          "averageAttendance": 18,
-          "plateAndPledge": 77981,
-          "membership": 46
-        },
-        "2022": {
-          "averageAttendance": 22,
-          "plateAndPledge": 79910,
-          "membership": 43
-        },
-        "2023": {
-          "averageAttendance": 22,
-          "plateAndPledge": 82215,
-          "membership": 34
-        },
-        "2024": {
-          "averageAttendance": 19,
-          "plateAndPledge": 81889,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
@@ -2470,69 +1975,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "St. James Church",
-      "street": "95 Route 2A",
-      "city": "Preston",
+      "nid": 1532,
+      "name": "St. James' Episcopal Church",
+      "street": "76 Federal St",
+      "city": "New London",
       "state": "CT",
-      "zip": "06365-8538",
-      "phone": "860-889-0150",
-      "email": "office@stjamespreston.org",
-      "website": "https://www.stjamespreston.org",
+      "zip": "06320-6601",
+      "phone": "860-443-4989",
+      "email": "parishoffice@stjamesnl.org",
+      "website": "https://www.stjamesnl.org",
       "type": "church",
-      "lat": 41.5055001,
-      "lng": -72.0417693
+      "lat": 41.357099,
+      "lng": -72.099055
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St James Church (Preston)",
+      "congregationCity": "St James Episcopal Church (New London)",
       "years": {
         "2015": {
-          "averageAttendance": 66,
-          "plateAndPledge": 114409,
-          "membership": 176
+          "averageAttendance": 107,
+          "plateAndPledge": 215706,
+          "membership": 318
         },
         "2016": {
-          "averageAttendance": 55,
-          "plateAndPledge": 116391,
-          "membership": 177
+          "averageAttendance": 115,
+          "plateAndPledge": 204566,
+          "membership": 319
         },
         "2017": {
-          "averageAttendance": 49,
-          "plateAndPledge": 115038,
-          "membership": 176
+          "averageAttendance": 110,
+          "plateAndPledge": 200610,
+          "membership": 313
         },
         "2018": {
-          "averageAttendance": 42,
-          "plateAndPledge": 95376,
-          "membership": 175
+          "averageAttendance": 108,
+          "plateAndPledge": 212388,
+          "membership": 326
         },
         "2019": {
-          "averageAttendance": 41,
-          "plateAndPledge": 90260,
-          "membership": 179
+          "averageAttendance": 96,
+          "plateAndPledge": 224888,
+          "membership": 326
         },
         "2020": {
-          "averageAttendance": 43,
-          "plateAndPledge": 83892,
-          "membership": 174
+          "averageAttendance": 118,
+          "plateAndPledge": 221262,
+          "membership": 321
         },
         "2021": {
-          "averageAttendance": 28,
-          "plateAndPledge": 79808,
-          "membership": 172
+          "averageAttendance": 52,
+          "plateAndPledge": 211316,
+          "membership": 178
         },
         "2022": {
-          "averageAttendance": 53,
-          "plateAndPledge": 69252,
-          "membership": 172
+          "averageAttendance": 55,
+          "plateAndPledge": 229599,
+          "membership": 175
         },
         "2023": {
-          "averageAttendance": 24,
-          "plateAndPledge": 68312,
-          "membership": 162
+          "averageAttendance": 74,
+          "plateAndPledge": 228744,
+          "membership": 175
         },
         "2024": {
-          "averageAttendance": 24,
-          "plateAndPledge": 60836,
+          "averageAttendance": 73,
+          "plateAndPledge": 244869,
           "membership": null
         }
       }
@@ -2582,6 +2089,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 6847,
       "name": "St. Anthony's Episcopal Church",
       "street": "174 St Anthonys Drive",
       "city": "Winder",
@@ -2594,6 +2102,7 @@
       "lat": 34.007332,
       "lng": -83.724968
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Anthonys Episcopal Church (Winder)",
       "years": {
@@ -2692,17 +2201,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "parochial": {
-      "congregationCity": "St Andrews Episcopal Church (Madison)",
-      "years": {
-        "2024": {
-          "averageAttendance": 95,
-          "plateAndPledge": 493900,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "7a439067c0ecddca3379266775c3c236ae1d1c53ec513b68470b03cfcd8c5c73",
@@ -2723,7 +2222,7 @@
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10645",
     "detail_name": null,
     "address": null,
-    "city": null,
+    "city": "",
     "state_province": null,
     "postal_code": null,
     "contact_name": null,
@@ -2746,20 +2245,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "name": "Rosebud Episcopal Mission",
-      "street": "PO Box 256",
-      "city": "Mission",
-      "state": "SD",
-      "zip": "57555",
-      "phone": "",
-      "email": "",
-      "website": "",
-      "type": "church",
-      "lat": 43.214419,
-      "lng": -100.535832
-    }
+    "raw_content": null
   },
   {
     "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
@@ -2805,18 +2291,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "Church of the Advent",
-      "street": "338 Academy St",
-      "city": "Madison",
+      "nid": 2227,
+      "name": "Church of the Resurrection",
+      "street": "1755 Duncan Bridge Rd",
+      "city": "Sautee Nacoochee",
       "state": "GA",
-      "zip": "30650-1545",
-      "phone": "706-342-4787",
-      "email": "adventmadison@bellsouth.net",
-      "website": "http://www.adventmadisonga.com",
+      "zip": "30571-3611",
+      "phone": "706-865-9680",
+      "email": "rechurch1755@gmail.com",
+      "website": "https://www.resurrectionsautee.com",
       "type": "church",
-      "lat": 33.59386,
-      "lng": -83.47293
+      "lat": 34.65025,
+      "lng": -83.69578
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Church of the Resurrection (Sautee Nacoochee)",
       "years": {
@@ -2917,6 +2405,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 4090,
       "name": "Holy Trinity Episcopal Church",
       "street": "607 N Greene St",
       "city": "Greensboro",
@@ -2929,6 +2418,7 @@
       "lat": 36.07922,
       "lng": -79.79128
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Holy Trinity Episcopal Church (Greensboro)",
       "years": {
@@ -3029,6 +2519,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 2158,
       "name": "Holy Innocents",
       "street": "805 Mount Vernon Hwy NW",
       "city": "Atlanta",
@@ -3041,6 +2532,7 @@
       "lat": 33.90849,
       "lng": -84.41382
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Holy Innocents Episcopal Church (Atlanta)",
       "years": {
@@ -3141,18 +2633,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "Church of the Annunciation",
-      "street": "304 Cosby Hwy",
-      "city": "Newport",
+      "nid": 2761,
+      "name": "Holy Cross Episcopal Church",
+      "street": "7514 Hixson Pike",
+      "city": "Hixson",
       "state": "TN",
-      "zip": "37821-2913",
-      "phone": "(423) 625-1864",
-      "email": "editor@dioet.org",
-      "website": "https://annunciation.dioet.org",
+      "zip": "37343-1721",
+      "phone": "(423) 842-1342",
+      "email": "STALBANS.HIXSON@GMAIL.COM",
+      "website": "https://www.saintalbanschatt.com",
       "type": "church",
-      "lat": 35.963737,
-      "lng": -83.193861
-    }
+      "lat": 35.17324,
+      "lng": -85.17164
+    },
+    "match_confidence": "exact"
   },
   {
     "id": "34e7666e5e31915335213b5b0e407c257c873847b99b1c6659081768cabcaab5",
@@ -3198,6 +2692,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 2318,
       "name": "Episcopal Church of the Good Shepherd",
       "street": "331 Lake Ave",
       "city": "Maitland",
@@ -3210,6 +2705,7 @@
       "lat": 28.619667,
       "lng": -81.368118
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Church of the Good Shepherd (Maitland)",
       "years": {
@@ -3310,6 +2806,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 1761,
       "name": "Cople Parish",
       "street": "1233 Old Yeocomico Rd.",
       "city": "Kinsale",
@@ -3322,6 +2819,7 @@
       "lat": 38.068619,
       "lng": -76.648197
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Cople Parish (Kinsale)",
       "years": {
@@ -3422,69 +2920,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "Christ Church",
-      "street": "66 Middle Haddam Rd",
-      "city": "Middle Haddam",
+      "nid": 1584,
+      "name": "Christ Episcopal Church",
+      "street": "2000 Main St",
+      "city": "Stratford",
       "state": "CT",
-      "zip": "06456",
-      "phone": "(860) 267-0287",
-      "email": "ccmhadmin@gmail.com",
-      "website": "https://www.christchurchmiddlehaddam.com",
+      "zip": "06615-6397",
+      "phone": "203-375-4447",
+      "email": "ccstratford@att.net",
+      "website": "https://christchurchstratford.org",
       "type": "church",
-      "lat": 41.554593,
-      "lng": -72.550517
+      "lat": 41.188404,
+      "lng": -73.13023
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "Christ Church (Middle Haddam)",
+      "congregationCity": "Christ Episcopal Church (Stratford)",
       "years": {
         "2015": {
-          "averageAttendance": 47,
-          "plateAndPledge": 101054,
-          "membership": 121
+          "averageAttendance": 84,
+          "plateAndPledge": 120649,
+          "membership": 362
         },
         "2016": {
-          "averageAttendance": 50,
-          "plateAndPledge": 109511,
-          "membership": 128
+          "averageAttendance": 85,
+          "plateAndPledge": 117375,
+          "membership": 384
         },
         "2017": {
-          "averageAttendance": 50,
-          "plateAndPledge": 119132,
-          "membership": 131
+          "averageAttendance": 86,
+          "plateAndPledge": 123494,
+          "membership": 387
         },
         "2018": {
-          "averageAttendance": 45,
-          "plateAndPledge": 128499,
-          "membership": 124
+          "averageAttendance": 75,
+          "plateAndPledge": 146289,
+          "membership": 391
         },
         "2019": {
-          "averageAttendance": 47,
-          "plateAndPledge": 101465,
-          "membership": 122
+          "averageAttendance": 70,
+          "plateAndPledge": 154813,
+          "membership": 395
         },
         "2020": {
-          "averageAttendance": 38,
-          "plateAndPledge": 93252,
-          "membership": 122
+          "averageAttendance": 61,
+          "plateAndPledge": 135559,
+          "membership": 396
         },
         "2021": {
-          "averageAttendance": 32,
-          "plateAndPledge": 94199,
-          "membership": 123
+          "averageAttendance": 48,
+          "plateAndPledge": 134725,
+          "membership": 216
         },
         "2022": {
-          "averageAttendance": 31,
-          "plateAndPledge": 85273,
-          "membership": 124
+          "averageAttendance": 66,
+          "plateAndPledge": 151229,
+          "membership": 230
         },
         "2023": {
-          "averageAttendance": 30,
-          "plateAndPledge": 86715,
-          "membership": 126
+          "averageAttendance": 83,
+          "plateAndPledge": 159453,
+          "membership": 213
         },
         "2024": {
-          "averageAttendance": 34,
-          "plateAndPledge": 104241,
+          "averageAttendance": 82,
+          "plateAndPledge": 172842,
           "membership": null
         }
       }
@@ -3534,69 +3034,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "name": "The Commons",
-      "street": "290 Pratt Street",
-      "city": "Meriden",
+      "nid": 1563,
+      "name": "Christ Church",
+      "street": "4 Wellers Bridge Rd",
+      "city": "Roxbury",
       "state": "CT",
-      "zip": "06450",
-      "phone": "",
-      "email": "ccollins@episcopalct.org",
-      "website": "http://www.episcopalct.org",
-      "type": "other",
-      "lat": 41.54194,
-      "lng": -72.79092
+      "zip": "06783",
+      "phone": "860-354-4113",
+      "email": "christchurcroxbury@gmail.com",
+      "website": "http://www.christchurchroxbury.net",
+      "type": "church",
+      "lat": 41.5566,
+      "lng": -73.31068
     },
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "Christ Church (Middle Haddam)",
+      "congregationCity": "Christ Church (Roxbury)",
       "years": {
         "2015": {
-          "averageAttendance": 47,
-          "plateAndPledge": 101054,
-          "membership": 121
+          "averageAttendance": 60,
+          "plateAndPledge": 106542,
+          "membership": 158
         },
         "2016": {
-          "averageAttendance": 50,
-          "plateAndPledge": 109511,
-          "membership": 128
+          "averageAttendance": 42,
+          "plateAndPledge": 91744,
+          "membership": 110
         },
         "2017": {
-          "averageAttendance": 50,
-          "plateAndPledge": 119132,
-          "membership": 131
+          "averageAttendance": 33,
+          "plateAndPledge": 72829,
+          "membership": 112
         },
         "2018": {
-          "averageAttendance": 45,
-          "plateAndPledge": 128499,
-          "membership": 124
+          "averageAttendance": 27,
+          "plateAndPledge": 86661,
+          "membership": 108
         },
         "2019": {
-          "averageAttendance": 47,
-          "plateAndPledge": 101465,
-          "membership": 122
+          "averageAttendance": 27,
+          "plateAndPledge": 58300,
+          "membership": 108
         },
         "2020": {
-          "averageAttendance": 38,
-          "plateAndPledge": 93252,
-          "membership": 122
+          "averageAttendance": 26,
+          "plateAndPledge": 38600,
+          "membership": 110
         },
         "2021": {
-          "averageAttendance": 32,
-          "plateAndPledge": 94199,
-          "membership": 123
+          "averageAttendance": 18,
+          "plateAndPledge": 58254,
+          "membership": 109
         },
         "2022": {
-          "averageAttendance": 31,
-          "plateAndPledge": 85273,
-          "membership": 124
+          "averageAttendance": 23,
+          "plateAndPledge": 91618,
+          "membership": 85
         },
         "2023": {
-          "averageAttendance": 30,
-          "plateAndPledge": 86715,
-          "membership": 126
+          "averageAttendance": 25,
+          "plateAndPledge": 128772,
+          "membership": 74
         },
         "2024": {
-          "averageAttendance": 34,
-          "plateAndPledge": 104241,
+          "averageAttendance": 30,
+          "plateAndPledge": 96699,
           "membership": null
         }
       }
@@ -3646,6 +3148,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 6458,
       "name": "Christ Church",
       "street": "825 Simpson Ave",
       "city": "Cody",
@@ -3658,6 +3161,7 @@
       "lat": 44.520945521301,
       "lng": -109.07059591641
     },
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Christ Church (Cody)",
       "years": {
@@ -3758,6 +3262,7 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
+      "nid": 7233,
       "name": "Diocesan House",
       "street": "4800 Six Forks Road",
       "city": "Raleigh",
@@ -3770,60 +3275,6 @@
       "lat": 35.84529,
       "lng": -78.64266
     },
-    "parochial": {
-      "congregationCity": "Calvary Episcopal Church (Tarboro)",
-      "years": {
-        "2015": {
-          "averageAttendance": 103,
-          "plateAndPledge": 318874,
-          "membership": 286
-        },
-        "2016": {
-          "averageAttendance": 100,
-          "plateAndPledge": 326265,
-          "membership": 298
-        },
-        "2017": {
-          "averageAttendance": 120,
-          "plateAndPledge": 355024,
-          "membership": 281
-        },
-        "2018": {
-          "averageAttendance": 98,
-          "plateAndPledge": 337047,
-          "membership": 289
-        },
-        "2019": {
-          "averageAttendance": 116,
-          "plateAndPledge": 328615,
-          "membership": 293
-        },
-        "2020": {
-          "averageAttendance": 91,
-          "plateAndPledge": 356569,
-          "membership": 284
-        },
-        "2021": {
-          "averageAttendance": 76,
-          "plateAndPledge": 333354,
-          "membership": 282
-        },
-        "2022": {
-          "averageAttendance": 84,
-          "plateAndPledge": 419406,
-          "membership": 286
-        },
-        "2023": {
-          "averageAttendance": 111,
-          "plateAndPledge": 427367,
-          "membership": 277
-        },
-        "2024": {
-          "averageAttendance": 105,
-          "plateAndPledge": 489147,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   }
 ]
