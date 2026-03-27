@@ -106,6 +106,8 @@ function main() {
       ministry_skills: getField(f, 'Ministry skills'),
       languages: getField(f, 'Languages spoken'),
       contact_email: getField(f, 'Email Address') || getField(f, 'email'),
+      website: getField(f, 'Parish website', 'Congregation website', 'Website'),
+      facebook: getField(f, 'Facebook page', 'Facebook'),
       receiving_names_from: getDateField(f, 'Receiving names from'),
       receiving_names_to: getField(f, 'To') || '',
       open_ended: (getField(f, 'To') || '').toLowerCase() === 'open ended',

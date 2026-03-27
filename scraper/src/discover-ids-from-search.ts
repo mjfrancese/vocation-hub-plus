@@ -47,6 +47,22 @@ const EXTRACT_PROFILE = `(function() {
     }
   }
 
+  // Extract Kendo grid table rows (Ministry Media and Links tab)
+  var gridRows = document.querySelectorAll('tr.k-table-row, tr[role="row"].k-master-row');
+  for (var gr = 0; gr < gridRows.length; gr++) {
+    var cells = gridRows[gr].querySelectorAll('td');
+    if (cells.length >= 2) {
+      var gridLabel = (cells[0].textContent || '').trim();
+      var gridVal = '';
+      var gridLink = cells[1].querySelector('a[href]');
+      if (gridLink) gridVal = gridLink.href;
+      else gridVal = (cells[1].textContent || '').trim();
+      if (gridLabel && gridVal) {
+        fields.push({ label: gridLabel, value: gridVal.substring(0, 5000) });
+      }
+    }
+  }
+
   return fields;
 })()`;
 
