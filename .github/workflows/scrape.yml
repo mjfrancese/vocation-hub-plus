@@ -73,6 +73,10 @@ jobs:
           mkdir -p web/public/data
           cp -f scraper/output/*.json web/public/data/ 2>/dev/null || true
 
+      - name: Merge profile data into frontend
+        working-directory: scraper
+        run: npx tsx src/merge-profiles.ts || echo "Profile merge skipped (no chunk data)"
+
       - name: Commit and push data changes
         run: |
           git config user.name "VocationHub Bot"

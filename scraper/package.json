@@ -8,6 +8,7 @@
     "scrape:dry": "tsx src/index.ts --dry-run",
     "discover": "tsx src/discover-ids.ts",
     "deep-scrape": "tsx src/deep-scrape.ts",
+    "merge-profiles": "tsx src/merge-profiles.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },
