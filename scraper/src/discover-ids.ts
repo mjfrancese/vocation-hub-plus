@@ -54,6 +54,7 @@ async function main() {
   // Self-test: verify detection works before scanning
   console.log('Running self-test with known valid (10669) and known invalid (0) profiles...');
   const testPage = await context.newPage();
+  testPage.setDefaultTimeout(10_000);
 
   const validResult = await checkId(testPage, 10669);
   const invalidResult = await checkId(testPage, 0);
@@ -148,7 +149,12 @@ async function checkId(page: any, id: number): Promise<{ found: boolean; filled:
   try {
     const url = `${BASE_URL}/PositionView/${id}`;
     await page.goto(url, { waitUntil: 'load', timeout: 10_000 });
-    await page.waitForTimeout(1000);
+
+    // Wait for Blazor to render tabs (they appear as the app hydrates).
+    // Use waitForSelector instead of fixed timeout for reliability.
+    await page.waitForSelector('[role="tab"]', { timeout: 5_000 }).catch(() => {});
+    // Small extra wait for the last tab to render
+    await page.waitForTimeout(500);
 
     const result = await page.evaluate(CHECK_SCRIPT) as CheckResult;
     return { found: result.hasProfile, filled: result.filled, tabs: result.tabs };
