@@ -2,6 +2,7 @@ name: Scrape Vocation Hub
 
 on:
   schedule:
+    # Search scrape + targeted detail scrape: twice daily
     - cron: '0 6,18 * * *'
   workflow_dispatch:
 
@@ -84,9 +85,6 @@ jobs:
             git push
           fi
 
-      # Build and deploy frontend in the same job.
-      # GITHUB_TOKEN pushes don't trigger other workflows, so we
-      # build and deploy here instead of relying on deploy.yml.
       - name: Install web dependencies
         run: npm ci --workspace=web
 

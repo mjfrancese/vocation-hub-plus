@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getAllPositions, getAllPositionsWithDetails, getRecentChanges, getScrapeStats } from './db.js';
+import { getAllPositionsWithDetails, getRecentChanges, getDetailHistory, getScrapeStats } from './db.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 
@@ -9,9 +9,9 @@ import { logger } from './logger.js';
  * Writes to both scraper/output/ and web/public/data/.
  */
 export function exportJson(): void {
-  // Use detail-enriched positions if available, fall back to basic
   const positions = getAllPositionsWithDetails();
   const changes = getRecentChanges(500);
+  const detailHistory = getDetailHistory(500);
   const stats = getScrapeStats();
 
   const meta = {
@@ -19,7 +19,7 @@ export function exportJson(): void {
     totalPositions: positions.length,
     activeCount: positions.filter((p) => p.status === 'active' || p.status === 'new').length,
     expiredCount: positions.filter((p) => p.status === 'expired').length,
-    newCount: positions.filter((p) => p.status === 'new').length, // subset of activeCount
+    newCount: positions.filter((p) => p.status === 'new').length,
     lastScrape: stats || null,
   };
 
@@ -35,6 +35,7 @@ export function exportJson(): void {
 
     fs.writeFileSync(path.join(dir, 'positions.json'), JSON.stringify(positions, null, 2));
     fs.writeFileSync(path.join(dir, 'changes.json'), JSON.stringify(changes, null, 2));
+    fs.writeFileSync(path.join(dir, 'detail-history.json'), JSON.stringify(detailHistory, null, 2));
     fs.writeFileSync(path.join(dir, 'meta.json'), JSON.stringify(meta, null, 2));
 
     logger.info('JSON exported', { directory: dir });
@@ -43,5 +44,6 @@ export function exportJson(): void {
   logger.info('Export complete', {
     positions: positions.length,
     changes: changes.length,
+    detailHistory: detailHistory.length,
   });
 }
