@@ -77,6 +77,10 @@ jobs:
         working-directory: scraper
         run: npx tsx src/merge-profiles.ts || echo "Profile merge skipped (no chunk data)"
 
+      - name: Enrich positions with church directory and parochial data
+        working-directory: web
+        run: node scripts/enrich-positions.js
+
       - name: Commit and push data changes
         run: |
           git config user.name "VocationHub Bot"

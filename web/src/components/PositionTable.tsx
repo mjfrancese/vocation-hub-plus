@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import StatusBadge from './StatusBadge';
+import ParochialTrends from './ParochialTrends';
 
 interface PositionTableProps {
   positions: Position[];
@@ -94,12 +95,14 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 <td className="px-4 py-3 text-sm text-gray-600">{pos.state}</td>
                 <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
                 <td className="px-4 py-3 text-sm text-gray-600">
-                  {pos.receiving_names_from && (
+                  {pos.receiving_names_from ? (
                     <>
                       {pos.receiving_names_from}
                       {pos.receiving_names_to && ` to ${pos.receiving_names_to}`}
                     </>
-                  )}
+                  ) : pos.vh_status ? (
+                    <span className="text-gray-400 italic">{pos.vh_status}</span>
+                  ) : null}
                 </td>
                 <td className="px-4 py-3 text-sm text-gray-600">{pos.updated_on_hub}</td>
                 <td className="px-4 py-3">
@@ -130,6 +133,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
 function ExpandedDetail({ pos }: { pos: Position }) {
   const fields = pos.deep_scrape_fields || [];
   const hasDeepData = fields.length > 0;
+
+  // Parochial data is pre-computed at build time (attached to position)
+  const hasParochial = !!pos.parochial && Object.keys(pos.parochial.years).length > 0;
 
   // Helper to find a field value by label keyword
   const findField = (...keywords: string[]): string => {
@@ -172,6 +178,7 @@ function ExpandedDetail({ pos }: { pos: Position }) {
           <DetailField label="First Seen" value={pos.first_seen} />
           <DetailField label="Last Seen" value={pos.last_seen} />
         </div>
+        {hasParochial && <ParochialTrends data={pos.parochial!} />}
         {pos.profile_url && (
           <a
             href={pos.profile_url}
@@ -215,6 +222,9 @@ function ExpandedDetail({ pos }: { pos: Position }) {
         </div>
       )}
 
+      {/* Parochial Report Trends */}
+      {hasParochial && <ParochialTrends data={pos.parochial!} />}
+
       {/* Skills */}
       {(leadershipSkills || ministrySkills) && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
@@ -231,6 +241,33 @@ function ExpandedDetail({ pos }: { pos: Position }) {
         </div>
       )}
 
+      {/* Church directory info */}
+      {pos.church_info && (
+        <div className="border border-gray-200 rounded-lg p-3 bg-white text-sm">
+          <div className="font-medium text-gray-700 mb-2">Church Directory</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {pos.church_info.street && (
+              <div>
+                <span className="text-gray-500">Address</span>
+                <p className="text-gray-900">{pos.church_info.street}, {pos.church_info.city}, {pos.church_info.state} {pos.church_info.zip}</p>
+              </div>
+            )}
+            {pos.church_info.phone && (
+              <div>
+                <span className="text-gray-500">Phone</span>
+                <p className="text-gray-900">{pos.church_info.phone}</p>
+              </div>
+            )}
+            {pos.church_info.email && (
+              <div>
+                <span className="text-gray-500">Email</span>
+                <p className="text-gray-900">{pos.church_info.email}</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Links */}
       <div className="flex gap-4 text-sm">
         {pos.profile_url && (
@@ -244,9 +281,12 @@ function ExpandedDetail({ pos }: { pos: Position }) {
             View full profile on Vocation Hub
           </a>
         )}
-        {pos.website_url && (
+        {(pos.website_url || pos.church_info?.website) && (
           <a
-            href={pos.website_url.startsWith('http') ? pos.website_url : `https://${pos.website_url}`}
+            href={(() => {
+              const url = pos.website_url || pos.church_info?.website || '';
+              return url.startsWith('http') ? url : `https://${url}`;
+            })()}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-600 hover:text-primary-800 underline"

@@ -48,6 +48,31 @@ export interface Position {
 
   // Deep scrape fields (raw field arrays from profile pages)
   deep_scrape_fields?: Array<{ label: string; value: string }>;
+
+  // Enriched church data (from church directory cross-reference)
+  church_info?: {
+    name: string;
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    phone: string;
+    email: string;
+    website: string;
+    type: string;
+    lat: number | null;
+    lng: number | null;
+  };
+
+  // Enriched parochial data (from Power BI cross-reference)
+  parochial?: {
+    congregationCity: string;
+    years: Record<string, {
+      averageAttendance: number | null;
+      plateAndPledge: number | null;
+      membership: number | null;
+    }>;
+  };
 }
 
 export interface PositionChange {

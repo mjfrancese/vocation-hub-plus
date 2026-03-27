@@ -9,6 +9,8 @@
     "discover": "tsx src/discover-ids.ts",
     "deep-scrape": "tsx src/deep-scrape.ts",
     "merge-profiles": "tsx src/merge-profiles.ts",
+    "church-directory": "tsx src/scrape-church-directory.ts",
+    "parochial-reports": "tsx src/scrape-parochial-reports.ts",
     "test": "vitest run",
     "test:watch": "vitest"
   },

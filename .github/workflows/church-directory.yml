@@ -1,0 +1,66 @@
+name: Church Directory & Parochial Data
+
+on:
+  schedule:
+    # Church directory: monthly (1st of each month, 5am UTC)
+    # This data is relatively static - churches rarely open/close
+    - cron: '0 5 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci --workspace=scraper
+
+      - name: Install Playwright Chromium
+        working-directory: scraper
+        run: npx playwright install chromium --with-deps
+
+      - name: Scrape church directory (Episcopal Asset Map)
+        working-directory: scraper
+        run: npx tsx src/scrape-church-directory.ts --no-parochial
+        timeout-minutes: 50
+
+      - name: Scrape parochial reports (General Convention Power BI)
+        working-directory: scraper
+        run: npx tsx src/scrape-parochial-reports.ts
+        timeout-minutes: 10
+
+      - name: Enrich positions with cross-referenced data
+        working-directory: web
+        run: node scripts/enrich-positions.js
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: church-directory-screenshots
+          path: screenshots/
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Commit data files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/public/data/churches.json web/public/data/parochial-data.json data/church-nids.json
+          git add web/public/data/enriched-positions.json web/public/data/enriched-extended.json
+          git diff --staged --quiet || git commit -m "Update church directory and parochial data"
+          git push

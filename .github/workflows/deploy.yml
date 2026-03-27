@@ -37,6 +37,10 @@ jobs:
       - name: Install dependencies
         run: npm ci --workspace=web
 
+      - name: Enrich positions data
+        working-directory: web
+        run: node scripts/enrich-positions.js
+
       - name: Build static export
         working-directory: web
         run: npx next build
