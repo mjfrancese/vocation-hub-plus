@@ -2670,6 +2670,27 @@
     }
   },
   {
+    "vh_id": 10175,
+    "name": "Rosebud Episcopal Mission West",
+    "diocese": "South Dakota",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
+    "position_type": "Superintending Presbyter",
+    "church_info": {
+      "name": "Wopila House",
+      "street": "PO Box 257",
+      "city": "Mission",
+      "state": "SD",
+      "zip": "57555",
+      "phone": "(605) 280-4927",
+      "email": "portia@episcopalchurchsd.org",
+      "website": "",
+      "type": "other",
+      "lat": 43.30583,
+      "lng": -100.6531
+    }
+  },
+  {
     "vh_id": 10164,
     "name": "Episcopal Church Center, San Diego, CA",
     "diocese": "San Diego",
@@ -6262,6 +6283,158 @@
     }
   },
   {
+    "vh_id": 8615,
+    "name": "Church of the Resurrection",
+    "diocese": "Atlanta",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8615",
+    "position_type": "Rector/Priest-in-Charge",
+    "church_info": {
+      "name": "Church of the Resurrection",
+      "street": "1755 Duncan Bridge Rd",
+      "city": "Sautee Nacoochee",
+      "state": "GA",
+      "zip": "30571-3611",
+      "phone": "706-865-9680",
+      "email": "rechurch1755@gmail.com",
+      "website": "https://www.resurrectionsautee.com",
+      "type": "church",
+      "lat": 34.65025,
+      "lng": -83.69578
+    },
+    "parochial": {
+      "congregationCity": "Church of the Resurrection (Sautee Nacoochee)",
+      "years": {
+        "2015": {
+          "averageAttendance": 115,
+          "plateAndPledge": 243268,
+          "membership": 262
+        },
+        "2016": {
+          "averageAttendance": 110,
+          "plateAndPledge": 221206,
+          "membership": 256
+        },
+        "2017": {
+          "averageAttendance": 107,
+          "plateAndPledge": 270207,
+          "membership": 267
+        },
+        "2018": {
+          "averageAttendance": 110,
+          "plateAndPledge": 259279,
+          "membership": 266
+        },
+        "2019": {
+          "averageAttendance": 108,
+          "plateAndPledge": 247020,
+          "membership": 270
+        },
+        "2020": {
+          "averageAttendance": 104,
+          "plateAndPledge": 222653,
+          "membership": 267
+        },
+        "2021": {
+          "averageAttendance": 65,
+          "plateAndPledge": 232568,
+          "membership": 267
+        },
+        "2022": {
+          "averageAttendance": 88,
+          "plateAndPledge": 243429,
+          "membership": 171
+        },
+        "2023": {
+          "averageAttendance": 82,
+          "plateAndPledge": 241331,
+          "membership": 174
+        },
+        "2024": {
+          "averageAttendance": 76,
+          "plateAndPledge": 308872,
+          "membership": null
+        }
+      }
+    }
+  },
+  {
+    "vh_id": 8611,
+    "name": "St Pauls Episcopal Church",
+    "diocese": "Atlanta",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8611",
+    "position_type": "Assistant/Associate/Curate",
+    "church_info": {
+      "name": "St. Paul's Episcopal Church",
+      "street": "576 Roscoe Rd",
+      "city": "Newnan",
+      "state": "GA",
+      "zip": "30263",
+      "phone": "770-253-4264",
+      "email": "parishadmin@stpaulsnewnan.org",
+      "website": "http://www.stpaulsnewnan.org",
+      "type": "church",
+      "lat": 33.40872,
+      "lng": -84.811282
+    },
+    "parochial": {
+      "congregationCity": "St Pauls Episcopal Church (Atlanta)",
+      "years": {
+        "2015": {
+          "averageAttendance": 400,
+          "plateAndPledge": 907166,
+          "membership": 986
+        },
+        "2016": {
+          "averageAttendance": 311,
+          "plateAndPledge": 864976,
+          "membership": 973
+        },
+        "2017": {
+          "averageAttendance": 261,
+          "plateAndPledge": 874928,
+          "membership": 974
+        },
+        "2018": {
+          "averageAttendance": 188,
+          "plateAndPledge": 763584,
+          "membership": 830
+        },
+        "2019": {
+          "averageAttendance": 183,
+          "plateAndPledge": 805695,
+          "membership": 684
+        },
+        "2020": {
+          "averageAttendance": 161,
+          "plateAndPledge": 776331,
+          "membership": 651
+        },
+        "2021": {
+          "averageAttendance": 80,
+          "plateAndPledge": 659560,
+          "membership": 653
+        },
+        "2022": {
+          "averageAttendance": 130,
+          "plateAndPledge": 639076,
+          "membership": 339
+        },
+        "2023": {
+          "averageAttendance": 145,
+          "plateAndPledge": 655510,
+          "membership": 330
+        },
+        "2024": {
+          "averageAttendance": 137,
+          "plateAndPledge": 695108,
+          "membership": null
+        }
+      }
+    }
+  },
+  {
     "vh_id": 8608,
     "name": "St. John's Episcopal Church, Helena-West Helena, AR",
     "diocese": "Arkansas",
@@ -6560,6 +6733,82 @@
         "2024": {
           "averageAttendance": 70,
           "plateAndPledge": 214427,
+          "membership": null
+        }
+      }
+    }
+  },
+  {
+    "vh_id": 8602,
+    "name": "St Peters Episcopal Church",
+    "diocese": "Atlanta",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8602",
+    "position_type": "Assistant/Associate/Curate",
+    "church_info": {
+      "name": "St. Peter's Episcopal Church",
+      "street": "101 E 4th Ave",
+      "city": "Rome",
+      "state": "GA",
+      "zip": "30161-3119",
+      "phone": "706-291-9111",
+      "email": "",
+      "website": "http://stpetersrome.org/ministries/canterbury/",
+      "type": "church",
+      "lat": 34.253966,
+      "lng": -85.170719
+    },
+    "parochial": {
+      "congregationCity": "St Peters Episcopal Church (Rome)",
+      "years": {
+        "2015": {
+          "averageAttendance": 201,
+          "plateAndPledge": 628502,
+          "membership": 960
+        },
+        "2016": {
+          "averageAttendance": 186,
+          "plateAndPledge": 668505,
+          "membership": 995
+        },
+        "2017": {
+          "averageAttendance": 203,
+          "plateAndPledge": 705325,
+          "membership": 739
+        },
+        "2018": {
+          "averageAttendance": 196,
+          "plateAndPledge": 699084,
+          "membership": 729
+        },
+        "2019": {
+          "averageAttendance": 248,
+          "plateAndPledge": 739770,
+          "membership": 733
+        },
+        "2020": {
+          "averageAttendance": 229,
+          "plateAndPledge": 803608,
+          "membership": 675
+        },
+        "2021": {
+          "averageAttendance": 118,
+          "plateAndPledge": 794033,
+          "membership": 678
+        },
+        "2022": {
+          "averageAttendance": 154,
+          "plateAndPledge": 853158,
+          "membership": 619
+        },
+        "2023": {
+          "averageAttendance": 170,
+          "plateAndPledge": 855281,
+          "membership": 505
+        },
+        "2024": {
+          "averageAttendance": 166,
+          "plateAndPledge": 819697,
           "membership": null
         }
       }
