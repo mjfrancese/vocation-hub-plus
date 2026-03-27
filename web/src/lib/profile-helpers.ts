@@ -6,6 +6,15 @@ interface ProfileField {
 }
 
 /**
+ * Extract city from a position name.
+ * Most names follow the pattern "Church Name (City)".
+ */
+export function extractCity(name: string): string {
+  const match = name.match(/\(([^)]+)\)$/);
+  return match ? match[1].trim() : '';
+}
+
+/**
  * Extract a field value from a position's deep_scrape_fields by label.
  */
 export function getProfileField(pos: Position, ...labels: string[]): string {
