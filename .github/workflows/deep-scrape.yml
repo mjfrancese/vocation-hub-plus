@@ -60,5 +60,7 @@ jobs:
             echo "No new data"
           else
             git commit -m "data: deep scrape chunk ${{ inputs.chunk_index }} profiles"
+            # Pull with rebase to handle parallel chunk pushes
+            git pull --rebase origin main || true
             git push
           fi
