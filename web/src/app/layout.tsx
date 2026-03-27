@@ -23,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <NavLink href="/new/">New Positions</NavLink>
                   <NavLink href="/expired/">Expired</NavLink>
                   <NavLink href="/historical/">All Positions</NavLink>
+                  <NavLink href="/analytics/">Analytics</NavLink>
                   <NavLink href="/about/">About</NavLink>
                 </div>
               </div>
@@ -76,6 +77,7 @@ function MobileMenu() {
         <Link href="/new/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">New Positions</Link>
         <Link href="/expired/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Expired</Link>
         <Link href="/historical/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">All Positions</Link>
+        <Link href="/analytics/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Analytics</Link>
         <Link href="/about/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">About</Link>
       </div>
     </details>
