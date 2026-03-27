@@ -1,44 +1,36 @@
 import { Page } from 'playwright';
 import { logger } from './logger.js';
 import { sleep } from './navigate.js';
+import { SELECTORS } from './selectors.js';
+import { CONFIG } from './config.js';
 
-// JavaScript to intercept Blazor's navigation and capture the URL
-// without actually leaving the search results page.
-const INTERCEPT_SCRIPT = `(function() {
-  window.__capturedUrl = null;
-  window.__origPushState = history.pushState.bind(history);
-  window.__origReplaceState = history.replaceState.bind(history);
+/**
+ * Fast re-search without screenshots or fallback JS clicks.
+ * Used during ID discovery where speed matters.
+ */
+async function fastReSearch(page: Page): Promise<boolean> {
+  await page.goto(CONFIG.url, { waitUntil: 'load', timeout: 20_000 });
+  await page.waitForSelector(SELECTORS.searchButton, { timeout: 10_000 });
+  await sleep(2000);
 
-  history.pushState = function(state, title, url) {
-    window.__capturedUrl = url;
-    // DON'T actually navigate - keep the search page
-  };
-  history.replaceState = function(state, title, url) {
-    window.__capturedUrl = url;
-  };
-
-  // Also intercept location changes
-  window.__origLocation = window.location.href;
-})()`;
-
-const RESTORE_SCRIPT = `(function() {
-  if (window.__origPushState) {
-    history.pushState = window.__origPushState;
+  // Type space in community name
+  const input = page.locator(
+    'text=You can use standard search wildcards >> xpath=preceding::input[1]'
+  );
+  if (await input.isVisible({ timeout: 3000 }).catch(() => false)) {
+    await input.fill(' ');
   }
-  if (window.__origReplaceState) {
-    history.replaceState = window.__origReplaceState;
-  }
-  window.__capturedUrl = null;
-})()`;
 
-const GET_CAPTURED_URL = `(function() {
-  return window.__capturedUrl || null;
-})()`;
+  await page.locator(SELECTORS.searchButton).first().click();
+  await sleep(3000);
+
+  const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
+  return !!pagerText && !pagerText.includes('0 - 0 of 0');
+}
 
 /**
  * Discover VH position IDs by clicking each search result row.
- * Intercepts Blazor's navigation so the search page stays intact.
- * No re-searching needed between clicks.
+ * Lets Blazor navigate, captures the URL, then does a fast re-search.
  */
 export async function discoverPositionIds(
   page: Page,
@@ -46,83 +38,66 @@ export async function discoverPositionIds(
 ): Promise<number[]> {
   const ids: number[] = [];
   let pageNum = 1;
+  let consecutiveFailures = 0;
 
-  while (true) {
+  while (consecutiveFailures < 3) {
     const rowCount = await page.locator('.k-grid tbody tr').count();
-    logger.info('Discovering IDs from search page', { page: pageNum, rows: rowCount });
+    logger.info('Discovering IDs', { page: pageNum, rows: rowCount });
 
     if (rowCount === 0) break;
 
     for (let i = 0; i < rowCount; i++) {
       try {
-        // Install the navigation interceptor
-        await page.evaluate(INTERCEPT_SCRIPT);
+        // Click the row
+        await page.locator('.k-grid tbody tr').nth(i).click();
+        await sleep(1500);
 
-        // Click the row - Blazor will try to navigate but we intercept it
-        const row = page.locator('.k-grid tbody tr').nth(i);
-        await row.click();
+        // Check URL
+        const url = page.url();
+        const match = url.match(/PositionView\/(\d+)/);
 
-        // Give Blazor a moment to process the click and attempt navigation
-        await sleep(500);
-
-        // Read the captured URL
-        const capturedUrl = await page.evaluate(GET_CAPTURED_URL) as string | null;
-
-        // Restore normal navigation
-        await page.evaluate(RESTORE_SCRIPT);
-
-        if (capturedUrl) {
-          const match = capturedUrl.match(/PositionView\/(\d+)/);
-          if (match) {
-            const id = parseInt(match[1], 10);
-            ids.push(id);
-            logger.info('Captured ID', { id, row: i, page: pageNum, total: ids.length });
-          }
+        if (match) {
+          const id = parseInt(match[1], 10);
+          ids.push(id);
+          consecutiveFailures = 0;
+          logger.info('Got ID', { id, row: i, page: pageNum, total: ids.length });
         } else {
-          logger.warn('No URL captured for row', { row: i, page: pageNum });
+          consecutiveFailures++;
+          logger.warn('No navigation', { row: i, url: url.substring(0, 80) });
+        }
 
-          // Fallback: check if the page actually navigated despite our intercept
-          const currentUrl = page.url();
-          const match = currentUrl.match(/PositionView\/(\d+)/);
-          if (match) {
-            const id = parseInt(match[1], 10);
-            ids.push(id);
-            logger.info('Captured ID from actual navigation (fallback)', { id });
+        // Fast re-search (no screenshots, no fallback)
+        const ok = await fastReSearch(page);
+        if (!ok) {
+          logger.warn('Re-search failed, stopping', { discovered: ids.length });
+          return ids;
+        }
 
-            // We need to go back to search since we actually navigated
-            await page.goto(searchUrl, { waitUntil: 'load', timeout: 30_000 });
-            await sleep(5000);
-
-            // Re-search
-            const { searchAllPositions } = await import('./select-states.js');
-            await searchAllPositions(page);
-            await sleep(3000);
-
-            // Navigate to correct results page
-            if (pageNum > 1) {
-              await page.evaluate(`(function() {
-                var buttons = document.querySelectorAll('.k-pager button, .k-pager a');
-                for (var i = 0; i < buttons.length; i++) {
-                  if (buttons[i].textContent.trim() === '${pageNum}') {
-                    buttons[i].click();
-                    return;
-                  }
-                }
-              })()`);
-              await sleep(2000);
+        // Navigate to correct results page if not on page 1
+        if (pageNum > 1) {
+          await page.evaluate(`(function() {
+            var buttons = document.querySelectorAll('.k-pager button, .k-pager a');
+            for (var i = 0; i < buttons.length; i++) {
+              if (buttons[i].textContent.trim() === '${pageNum}') {
+                buttons[i].click();
+                return;
+              }
             }
-          }
+          })()`);
+          await sleep(2000);
         }
       } catch (err) {
-        logger.warn('Error discovering ID', {
-          row: i,
-          page: pageNum,
-          error: String(err).substring(0, 100),
-        });
+        consecutiveFailures++;
+        logger.warn('Error', { row: i, error: String(err).substring(0, 100) });
+        try {
+          await fastReSearch(page);
+        } catch {
+          return ids;
+        }
       }
     }
 
-    // Try next page of results
+    // Try next page
     const nextPageNum = pageNum + 1;
     const clicked = await page.evaluate(`(function() {
       var buttons = document.querySelectorAll('.k-pager button, .k-pager a');
@@ -138,9 +113,6 @@ export async function discoverPositionIds(
     if (!clicked) break;
     pageNum++;
     await sleep(2000);
-
-    const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
-    if (!pagerText || pagerText.includes('0 - 0 of 0')) break;
   }
 
   logger.info('ID discovery complete', { total: ids.length, ids });

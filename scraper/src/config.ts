@@ -23,7 +23,7 @@ export const CONFIG = {
   screenshotOnFailure: process.env.SCREENSHOT_ON_FAILURE !== 'false',
 
   /** Maximum runtime before aborting (ms) */
-  maxRuntime: parseInt(process.env.MAX_RUNTIME_MS || '600000', 10),
+  maxRuntime: parseInt(process.env.MAX_RUNTIME_MS || '840000', 10),
 
   /** Screenshot directory */
   screenshotDir: path.resolve(__dirname, '../../screenshots'),
