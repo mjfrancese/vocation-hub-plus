@@ -17,23 +17,17 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  // From diagnostic comparison of valid (10669) vs invalid (0):
-  // Valid profiles have 13 filled inputs, invalid have 3.
-  // The 3 invalid ones are all "on" (checkbox defaults).
-  // Filter out "on" (checkboxes) and "English" (language selector).
-  // Valid profiles have 10+ real values, invalid have 0.
-  var inputs = document.querySelectorAll('.k-input-inner, .k-input, input, textarea');
-  var realValues = 0;
-  for (var i = 0; i < inputs.length; i++) {
-    var val = (inputs[i].value || '').trim();
-    if (val.length === 0) continue;
-    if (val === 'on') continue;
-    if (val === 'English') continue;
-    realValues++;
+  // From diagnostic: filled textareas = 3 on valid, 0 on invalid.
+  // This is the cleanest binary signal. Valid profiles have textareas
+  // with actual content (descriptions, instructions). Empty shells have none.
+  var textareas = document.querySelectorAll('textarea');
+  var filled = 0;
+  for (var i = 0; i < textareas.length; i++) {
+    if ((textareas[i].value || '').trim().length > 0) filled++;
   }
-  // Also check tab count as backup: valid=6 tabs, invalid=5
+  // Backup: tab count (valid=6, invalid=5)
   var tabs = document.querySelectorAll('[role="tab"], .k-tabstrip-item, .k-item');
-  return { hasProfile: realValues >= 3, filled: realValues, tabs: tabs.length };
+  return { hasProfile: filled >= 1, filled: filled, tabs: tabs.length };
 })()`;
 
 interface CheckResult {
