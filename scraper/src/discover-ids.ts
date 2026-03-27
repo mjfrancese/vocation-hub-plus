@@ -17,43 +17,29 @@ const endId = parseInt(process.argv[3] || '11000', 10);
 const parallelism = parseInt(process.argv[4] || '10', 10);
 
 const CHECK_SCRIPT = `(function() {
-  // The definitive check: look at the visible text on the page.
-  // On valid profiles, the "Diocese" label is followed by an actual
-  // diocese name (e.g. "Virginia"). On empty profiles, "Diocese" is
-  // followed by another label (e.g. "Name") or blank space.
-  var text = (document.body ? document.body.innerText : '') || '';
-  var lines = text.split('\\n').map(function(l) { return l.trim(); }).filter(function(l) { return l.length > 0; });
-
-  // Find "Diocese" label and check the line after it
-  var dioceseValue = '';
-  for (var i = 0; i < lines.length - 1; i++) {
-    if (lines[i] === 'Diocese') {
-      dioceseValue = lines[i + 1] || '';
-      break;
-    }
+  // From diagnostic comparison of valid (10669) vs invalid (0):
+  // Valid profiles have 13 filled inputs, invalid have 3.
+  // The 3 invalid ones are all "on" (checkbox defaults).
+  // Filter out "on" (checkboxes) and "English" (language selector).
+  // Valid profiles have 10+ real values, invalid have 0.
+  var inputs = document.querySelectorAll('.k-input-inner, .k-input, input, textarea');
+  var realValues = 0;
+  for (var i = 0; i < inputs.length; i++) {
+    var val = (inputs[i].value || '').trim();
+    if (val.length === 0) continue;
+    if (val === 'on') continue;
+    if (val === 'English') continue;
+    realValues++;
   }
-
-  // If the line after "Diocese" is another label, a section header,
-  // or empty, this is not a real profile. Real diocese values are
-  // names like "Virginia", "Connecticut", "Atlanta", etc.
-  var labels = ['Name', 'Congregation', 'Type', 'Multi-Point', 'Contact',
-                'Organization', 'Position', 'Stipend', 'Ministry', 'Basic',
-                'Optional', 'Application', 'Current status', 'Receiving'];
-  var isLabel = false;
-  for (var j = 0; j < labels.length; j++) {
-    if (dioceseValue === labels[j] || dioceseValue.indexOf(labels[j]) === 0) {
-      isLabel = true;
-      break;
-    }
-  }
-
-  var isReal = dioceseValue.length > 0 && !isLabel;
-  return { hasProfile: isReal, diocese: dioceseValue };
+  // Also check tab count as backup: valid=6 tabs, invalid=5
+  var tabs = document.querySelectorAll('[role="tab"], .k-tabstrip-item, .k-item');
+  return { hasProfile: realValues >= 3, filled: realValues, tabs: tabs.length };
 })()`;
 
 interface CheckResult {
   hasProfile: boolean;
-  diocese: string;
+  filled: number;
+  tabs: number;
 }
 
 async function main() {
@@ -83,16 +69,16 @@ async function main() {
   const invalidResult = await checkId(testPage, 0);
   await testPage.close();
 
-  console.log(`  Valid profile (10669):   detected=${validResult.found}, diocese="${validResult.diocese}"`);
-  console.log(`  Invalid profile (0):     detected=${invalidResult.found}, diocese="${invalidResult.diocese}"`);
+  console.log(`  Valid profile (10669):   detected=${validResult.found}, filled=${validResult.filled}, tabs=${validResult.tabs}`);
+  console.log(`  Invalid profile (0):     detected=${invalidResult.found}, filled=${invalidResult.filled}, tabs=${invalidResult.tabs}`);
 
   if (!validResult.found) {
-    console.error('SELF-TEST FAILED: Known valid profile (10669) was not detected. Aborting scan.');
+    console.error(`SELF-TEST FAILED: Known valid profile (10669) was not detected (filled=${validResult.filled}, tabs=${validResult.tabs}). Aborting scan.`);
     await browser.close();
     process.exit(1);
   }
   if (invalidResult.found) {
-    console.error('SELF-TEST FAILED: Known invalid profile (0) was incorrectly detected. Aborting scan.');
+    console.error(`SELF-TEST FAILED: Known invalid profile (0) was incorrectly detected (filled=${invalidResult.filled}, tabs=${invalidResult.tabs}). Aborting scan.`);
     await browser.close();
     process.exit(1);
   }
@@ -122,7 +108,7 @@ async function main() {
 
       if (result.status === 'fulfilled' && result.value.found) {
         validIds.push(id);
-        console.log(`[FOUND] ID ${id} - ${result.value.diocese} (${validIds.length} found so far)`);
+        console.log(`[FOUND] ID ${id} - ${result.value.filled} filled inputs, ${result.value.tabs} tabs (${validIds.length} found so far)`);
       }
 
       // Progress every 100 IDs
@@ -168,16 +154,16 @@ async function main() {
   console.log(`Results saved to ${outputFile}`);
 }
 
-async function checkId(page: any, id: number): Promise<{ found: boolean; diocese: string }> {
+async function checkId(page: any, id: number): Promise<{ found: boolean; filled: number; tabs: number }> {
   try {
     const url = `${BASE_URL}/PositionView/${id}`;
     await page.goto(url, { waitUntil: 'load', timeout: 10_000 });
     await page.waitForTimeout(1000);
 
     const result = await page.evaluate(CHECK_SCRIPT) as CheckResult;
-    return { found: result.hasProfile, diocese: result.diocese || '' };
+    return { found: result.hasProfile, filled: result.filled, tabs: result.tabs };
   } catch {
-    return { found: false, diocese: '' };
+    return { found: false, filled: 0, tabs: 0 };
   }
 }
 
