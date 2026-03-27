@@ -6,6 +6,7 @@ import profileFieldsData from '../../public/data/profile-fields.json';
 import allProfilesData from '../../public/data/all-profiles.json';
 import { getStateForDiocese } from './diocese-lookup';
 import { deriveChurchName } from './church-name-parser';
+import { extractCity } from './profile-helpers';
 
 const profileFields = profileFieldsData as unknown as Record<string, Array<{ label: string; value: string }>>;
 
@@ -30,6 +31,7 @@ export function getPositions(): Position[] {
     const vhId = pos.vh_id;
     return {
       ...pos,
+      city: pos.city || extractCity(pos.name),
       visibility: 'public' as const,
       deep_scrape_fields: vhId ? profileFields[String(vhId)] : undefined,
     };
