@@ -8,8 +8,7 @@ import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 import { sleep } from './navigate.js';
-import { scrapePositionDetails } from './position-details.js';
-import { discoverPositionIds } from './discover-ids-from-search.js';
+import { discoverAndScrapePositions } from './discover-ids-from-search.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -48,57 +47,38 @@ async function main(): Promise<void> {
         expired: diff.expiredCount,
       });
 
-      // Phase 2: Discover VH IDs for positions that don't have them yet,
-      // then scrape their detail data.
+      // Phase 2: Discover VH IDs AND extract detail data in ONE pass.
+      // Clicks each row, captures URL, extracts profile data while
+      // on the profile page, then goes back. No second pass needed.
       try {
         const elapsed = Date.now() - startTime;
         const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
 
         if (timeLeft > 120_000) {
-          // Check which positions need IDs
           const positionsNeedingIds = getPositionsWithoutVhId();
 
           if (positionsNeedingIds.length > 0) {
-            logger.info('Discovering VH IDs for positions', { count: positionsNeedingIds.length });
+            logger.info('Discovering IDs + scraping details in one pass', {
+              needIds: positionsNeedingIds.length,
+            });
 
-            // Re-navigate and search to get a clickable results page
             await navigateToSearch(page);
             await searchAllPositions(page);
             await sleep(3000);
 
             const pagerText = await page.locator('.k-pager-info').textContent().catch(() => '');
             if (pagerText && !pagerText.includes('0 - 0 of 0')) {
-              const discoveredIds = await discoverPositionIds(page, CONFIG.url);
-              logger.info('Discovered VH IDs', { count: discoveredIds.length, ids: discoveredIds });
+              const result = await discoverAndScrapePositions(page, CONFIG.url);
 
-              // Save the ID mapping: match discovered IDs to positions by row order
-              // The search results are in alphabetical order, same as our positions
+              // Save ID mapping
               const sortedPositions = [...positions].sort((a, b) => a.name.localeCompare(b.name));
-              saveIdMapping(sortedPositions, discoveredIds);
+              saveIdMapping(sortedPositions, result.ids);
 
-              // Now scrape details for newly discovered IDs
-              if (discoveredIds.length > 0) {
-                const elapsed2 = Date.now() - startTime;
-                const timeLeft2 = CONFIG.maxRuntime - elapsed2 - 120_000;
-                if (timeLeft2 > 30_000) {
-                  const baseUrl = CONFIG.url.replace('/PositionSearch', '');
-                  await scrapePositionDetails(context, discoveredIds, baseUrl, timeLeft2);
-                }
-              }
+              // Save profile fields for the frontend
+              saveProfileFields(result.profiles);
             }
           } else {
-            logger.info('All active positions have VH IDs');
-
-            // Scrape details for any positions missing detail data
-            const idsToScrape = getIdsNeedingDetails();
-            if (idsToScrape.length > 0) {
-              const elapsed2 = Date.now() - startTime;
-              const timeLeft2 = CONFIG.maxRuntime - elapsed2 - 120_000;
-              if (timeLeft2 > 30_000) {
-                const baseUrl = CONFIG.url.replace('/PositionSearch', '');
-                await scrapePositionDetails(context, idsToScrape, baseUrl, timeLeft2);
-              }
-            }
+            logger.info('All active positions already have VH IDs');
           }
         } else {
           logger.warn('Not enough time for Phase 2', { elapsed, timeLeft });
@@ -144,15 +124,8 @@ async function main(): Promise<void> {
   }
 }
 
-/**
- * Save the mapping from position names to VH IDs.
- * The search results and the clicked rows are in the same order,
- * so we can map them by index.
- */
 function saveIdMapping(positions: RawPosition[], vhIds: number[]): void {
   const d = getDb();
-
-  // Create mapping table if needed
   d.exec(`
     CREATE TABLE IF NOT EXISTS position_vh_ids (
       position_id TEXT PRIMARY KEY,
@@ -167,19 +140,42 @@ function saveIdMapping(positions: RawPosition[], vhIds: number[]): void {
     'INSERT OR REPLACE INTO position_vh_ids (position_id, vh_id, name, diocese) VALUES (?, ?, ?, ?)'
   );
 
-  let mapped = 0;
   for (let i = 0; i < Math.min(positions.length, vhIds.length); i++) {
     insert.run(positions[i].id, vhIds[i], positions[i].name, positions[i].diocese);
-    mapped++;
+  }
+  logger.info('Saved ID mapping', { count: Math.min(positions.length, vhIds.length) });
+}
+
+/**
+ * Save the extracted profile fields as a JSON file for the frontend.
+ * The frontend uses VH ID to look up fields for each position.
+ */
+function saveProfileFields(
+  profiles: Array<{ id: number; fields: Array<{ label: string; value: string }> }>
+): void {
+  const mapping: Record<number, Array<{ label: string; value: string }>> = {};
+  for (const p of profiles) {
+    mapping[p.id] = p.fields;
   }
 
-  logger.info('Saved ID mapping', { mapped });
+  const outputDirs = [
+    path.resolve(__dirname, '../output'),
+    path.resolve(__dirname, '../../web/public/data'),
+  ];
+
+  for (const dir of outputDirs) {
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(
+      path.join(dir, 'profile-fields.json'),
+      JSON.stringify(mapping, null, 2)
+    );
+  }
+
+  logger.info('Saved profile fields', { profiles: profiles.length });
 }
 
 function getPositionsWithoutVhId(): string[] {
   const d = getDb();
-
-  // Ensure the table exists
   d.exec(`
     CREATE TABLE IF NOT EXISTS position_vh_ids (
       position_id TEXT PRIMARY KEY,
@@ -190,28 +186,12 @@ function getPositionsWithoutVhId(): string[] {
     )
   `);
 
-  const result = d.prepare(`
+  return (d.prepare(`
     SELECT p.id FROM positions p
     LEFT JOIN position_vh_ids m ON p.id = m.position_id
     WHERE p.status IN ('active', 'new')
     AND m.position_id IS NULL
-  `).all() as Array<{ id: string }>;
-
-  return result.map(r => r.id);
-}
-
-function getIdsNeedingDetails(): number[] {
-  const d = getDb();
-
-  const result = d.prepare(`
-    SELECT m.vh_id FROM position_vh_ids m
-    JOIN positions p ON m.position_id = p.id
-    LEFT JOIN position_details d ON m.position_id = d.position_id
-    WHERE p.status IN ('active', 'new')
-    AND d.position_id IS NULL
-  `).all() as Array<{ vh_id: number }>;
-
-  return result.map(r => r.vh_id);
+  `).all() as Array<{ id: string }>).map(r => r.id);
 }
 
 main();
