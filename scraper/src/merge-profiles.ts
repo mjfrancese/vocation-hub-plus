@@ -69,6 +69,17 @@ function main() {
     return '';
   };
 
+  // Helper to get a date field value, validating it looks like a date
+  const getDateField = (fields: ProfileField[], ...labels: string[]): string => {
+    const raw = getField(fields, ...labels);
+    if (!raw) return '';
+    // Accept MM/DD/YYYY or YYYY-MM-DD formats
+    if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(raw) || /^\d{4}-\d{2}-\d{2}/.test(raw)) {
+      return raw;
+    }
+    return '';
+  };
+
   // Transform profiles into frontend-friendly format
   const profilesForFrontend = allProfiles.map(p => {
     const f = p.fields;
@@ -95,6 +106,9 @@ function main() {
       ministry_skills: getField(f, 'Ministry skills'),
       languages: getField(f, 'Languages spoken'),
       contact_email: getField(f, 'Email Address') || getField(f, 'email'),
+      receiving_names_from: getDateField(f, 'Receiving Names From', 'DatePicker 1'),
+      receiving_names_to: getDateField(f, 'Receiving Names To', 'DatePicker 2'),
+      open_ended: getField(f, 'Open Ended') === 'Yes',
       // Keep raw fields for full-text search
       all_fields: f,
     };
