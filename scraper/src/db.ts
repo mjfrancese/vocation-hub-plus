@@ -105,6 +105,19 @@ function initSchema(db: Database.Database): void {
     );
 
     CREATE INDEX IF NOT EXISTS idx_details_vh_id ON position_details(vh_id);
+
+    CREATE TABLE IF NOT EXISTS position_detail_history (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      position_id TEXT NOT NULL,
+      vh_id INTEGER,
+      field_name TEXT NOT NULL,
+      old_value TEXT,
+      new_value TEXT,
+      changed_at DATETIME NOT NULL DEFAULT (datetime('now'))
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_detail_history_position ON position_detail_history(position_id);
+    CREATE INDEX IF NOT EXISTS idx_detail_history_date ON position_detail_history(changed_at);
   `);
 }
 
@@ -273,7 +286,6 @@ export function upsertPositionDetails(details: import('./position-details.js').P
   const d = getDb();
 
   // Match this profile to a position in the positions table by name + diocese.
-  // The profile's communityName should match positions.name, and diocese should match.
   let positionId = '';
   const match = d.prepare(
     `SELECT id FROM positions
@@ -289,8 +301,42 @@ export function upsertPositionDetails(details: import('./position-details.js').P
   if (match) {
     positionId = match.id;
   } else {
-    // Use vh_id as a fallback key
     positionId = `vh_${details.positionId}`;
+  }
+
+  // Check for existing detail data to detect changes
+  const existing = d.prepare(
+    'SELECT * FROM position_details WHERE position_id = ?'
+  ).get(positionId) as Record<string, unknown> | undefined;
+
+  if (existing) {
+    // Compare fields and record any changes
+    const fieldsToTrack: Array<[string, string, unknown]> = [
+      ['minimum_stipend', 'Minimum Stipend', details.minimumStipend],
+      ['maximum_stipend', 'Maximum Stipend', details.maximumStipend],
+      ['housing_type', 'Housing Type', details.housingType],
+      ['position_title', 'Position Title', details.positionTitle],
+      ['full_part_time', 'Full/Part Time', details.fullPartTime],
+      ['contact_name', 'Contact Name', details.contactName],
+      ['contact_email', 'Contact Email', details.contactEmail],
+      ['avg_sunday_attendance', 'Avg Sunday Attendance', details.avgSundayAttendance],
+      ['community_name', 'Community Name', details.communityName],
+      ['position_description', 'Position Description', details.positionDescription],
+      ['desired_skills', 'Desired Skills', details.desiredSkills],
+      ['benefits', 'Benefits', details.benefits],
+    ];
+
+    for (const [dbCol, label, newVal] of fieldsToTrack) {
+      const oldVal = (existing[dbCol] as string) || '';
+      const newStr = (newVal as string) || '';
+      if (oldVal && newStr && oldVal !== newStr) {
+        d.prepare(
+          `INSERT INTO position_detail_history
+           (position_id, vh_id, field_name, old_value, new_value)
+           VALUES (?, ?, ?, ?, ?)`
+        ).run(positionId, details.positionId, label, oldVal, newStr);
+      }
+    }
   }
 
   d.prepare(`
@@ -382,6 +428,16 @@ export function getAllPositionsWithDetails(): Record<string, unknown>[] {
     LEFT JOIN position_details d ON p.id = d.position_id
     ORDER BY p.last_seen DESC
   `).all() as Record<string, unknown>[];
+}
+
+export function getDetailHistory(limit: number = 500): Record<string, unknown>[] {
+  return getDb().prepare(`
+    SELECT h.*, p.name, p.diocese
+    FROM position_detail_history h
+    LEFT JOIN positions p ON h.position_id = p.id
+    ORDER BY h.changed_at DESC
+    LIMIT ?
+  `).all(limit) as Record<string, unknown>[];
 }
 
 export function closeDb(): void {

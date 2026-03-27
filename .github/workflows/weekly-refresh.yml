@@ -5,19 +5,41 @@ on:
     # Sunday at 3am UTC
     - cron: '0 3 * * 0'
   workflow_dispatch:
-    inputs:
-      chunk_index:
-        description: 'Chunk index (0-5, or "all" for sequential)'
-        required: true
-        default: 'all'
 
 permissions:
   contents: write
 
 jobs:
-  refresh:
+  # Calculate how many chunks we need
+  plan:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    outputs:
+      chunks: ${{ steps.calc.outputs.chunks }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Calculate chunks
+        id: calc
+        run: |
+          TOTAL=$(python3 -c "import json; d=json.load(open('data/discovered-ids.json')); print(len(d['validIds']))")
+          CHUNK_SIZE=200
+          NUM_CHUNKS=$(( (TOTAL + CHUNK_SIZE - 1) / CHUNK_SIZE ))
+          # Create JSON array [0, 1, 2, ..., N-1]
+          CHUNKS=$(python3 -c "import json; print(json.dumps(list(range($NUM_CHUNKS))))")
+          echo "chunks=$CHUNKS" >> $GITHUB_OUTPUT
+          echo "Total profiles: $TOTAL, Chunks: $NUM_CHUNKS"
+
+  # Run each chunk in parallel
+  scrape:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      matrix:
+        chunk: ${{ fromJson(needs.plan.outputs.chunks) }}
+      max-parallel: 3
+      fail-fast: false
 
     steps:
       - name: Checkout
@@ -37,45 +59,15 @@ jobs:
         working-directory: scraper
         run: npx playwright install chromium --with-deps
 
-      - name: Download previous database
-        uses: actions/download-artifact@v4
-        with:
-          name: vocationhub-db
-          path: data/
-        continue-on-error: true
-
-      - name: Run deep scrape
+      - name: Run deep scrape chunk ${{ matrix.chunk }}
         working-directory: scraper
-        run: |
-          CHUNK="${{ inputs.chunk_index || 'all' }}"
-          if [ "$CHUNK" = "all" ]; then
-            # Run all chunks sequentially, 200 each
-            TOTAL=$(python3 -c "import json; d=json.load(open('../data/discovered-ids.json')); print(len(d['validIds']))")
-            CHUNKS=$(( (TOTAL + 199) / 200 ))
-            echo "Running $CHUNKS chunks ($TOTAL total profiles)"
-            for i in $(seq 0 $((CHUNKS - 1))); do
-              echo "=== Chunk $i ==="
-              npx tsx src/deep-scrape.ts $i 200 || true
-            done
-          else
-            npx tsx src/deep-scrape.ts $CHUNK 200
-          fi
-        timeout-minutes: 45
+        run: npx tsx src/deep-scrape.ts ${{ matrix.chunk }} 200
+        timeout-minutes: 35
 
-      - name: Upload results
+      - name: Upload chunk results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: weekly-profiles
+          name: profiles-chunk-${{ matrix.chunk }}
           path: data/profiles/
           retention-days: 90
-          overwrite: true
-
-      - name: Upload database
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: vocationhub-db
-          path: data/positions.db
-          retention-days: 90
-          overwrite: true
