@@ -154,11 +154,28 @@ function matchPosition(posName, diocese, fields, indexes) {
     if (!matches) continue;
 
     // Only use if this domain maps to exactly ONE church (truly unique domain)
+    // Also skip if the match is a diocesan office, camp, or school (type !== 'church')
     if (matches.length === 1) {
+      if (matches[0].church.type && matches[0].church.type !== 'church') {
+        // This email domain uniquely maps to a non-church entity (diocesan office, camp, etc.)
+        // Skip and fall through to name-based matching
+        continue;
+      }
       return {
         church_nid: matches[0].nid,
         confidence: 'exact',
         match_method: 'email_unique',
+        flagged: false,
+      };
+    }
+
+    // If multiple matches, filter to churches only and check again
+    const churchOnly = matches.filter(m => !m.church.type || m.church.type === 'church');
+    if (churchOnly.length === 1) {
+      return {
+        church_nid: churchOnly[0].nid,
+        confidence: 'exact',
+        match_method: 'email_unique_church',
         flagged: false,
       };
     }
@@ -168,7 +185,9 @@ function matchPosition(posName, diocese, fields, indexes) {
   if (posName && diocese) {
     const posNorm = normalizeChurchName(posName);
     const dioceseKey = normalizeDiocese(diocese);
-    const candidates = indexes.dioceseIndex.get(dioceseKey) || [];
+    // Prefer actual churches over diocesan offices, camps, and schools
+    const allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
+    const candidates = allCandidates.filter(c => !c.church.type || c.church.type === 'church');
 
     // Exact normalized match
     const exactMatches = candidates.filter(c => normalizeChurchName(c.church.name) === posNorm);

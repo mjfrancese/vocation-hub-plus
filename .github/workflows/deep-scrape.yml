@@ -1,0 +1,133 @@
+name: Deep Scrape All Profiles
+
+on:
+  schedule:
+    # Weekly: Sunday at 3am UTC
+    - cron: '0 3 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  deep-scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install scraper dependencies
+        run: npm ci --workspace=scraper
+
+      - name: Install Playwright Chromium
+        working-directory: scraper
+        run: npx playwright install chromium --with-deps
+
+      # Step 1: Discover new IDs beyond current max
+      - name: Discover new profile IDs
+        run: |
+          MAX_ID=$(node -e "const d=JSON.parse(require('fs').readFileSync('data/discovered-ids.json','utf-8')); console.log(Math.max(...d.validIds))")
+          SCAN_START=$((MAX_ID + 1))
+          SCAN_END=$((MAX_ID + 500))
+          echo "Scanning for new IDs from $SCAN_START to $SCAN_END"
+
+          # Save current IDs before discover-ids overwrites the file
+          cp data/discovered-ids.json data/discovered-ids-backup.json
+
+          cd scraper && npx tsx src/discover-ids.ts $SCAN_START $SCAN_END 10 || true
+          cd ..
+
+          # Merge: combine backup (existing) + scan output (new range)
+          node -e "
+            const fs = require('fs');
+            const backup = JSON.parse(fs.readFileSync('data/discovered-ids-backup.json', 'utf-8'));
+            const scan = JSON.parse(fs.readFileSync('data/discovered-ids.json', 'utf-8'));
+            const ids = new Set(backup.validIds);
+            for (const id of scan.validIds) ids.add(id);
+            const allIds = [...ids].sort((a, b) => a - b);
+            const newCount = allIds.length - backup.validIds.length;
+            fs.writeFileSync('data/discovered-ids.json', JSON.stringify({
+              scannedAt: new Date().toISOString(),
+              range: { start: allIds[0], end: allIds[allIds.length - 1] },
+              validIds: allIds,
+              totalFound: allIds.length,
+            }, null, 2));
+            fs.unlinkSync('data/discovered-ids-backup.json');
+            console.log('Total IDs: ' + allIds.length + ' (new: ' + newCount + ')');
+          "
+        timeout-minutes: 5
+        env:
+          OUTPUT_PATH: ../data
+
+      # Step 2: Deep scrape all profiles dynamically
+      - name: Deep scrape all profiles
+        working-directory: scraper
+        run: |
+          TOTAL=$(node -e "const d=JSON.parse(require('fs').readFileSync('../data/discovered-ids.json','utf-8')); console.log(d.validIds.length)")
+          CHUNK_SIZE=200
+          CHUNK_COUNT=$(( (TOTAL + CHUNK_SIZE - 1) / CHUNK_SIZE ))
+          echo "Total IDs: $TOTAL, Chunks: $CHUNK_COUNT"
+
+          for i in $(seq 0 $((CHUNK_COUNT - 1))); do
+            echo "=== Scraping chunk $i of $((CHUNK_COUNT - 1)) ==="
+            npx tsx src/deep-scrape.ts $i $CHUNK_SIZE
+          done
+        timeout-minutes: 35
+
+      - name: Merge profiles into all-profiles.json
+        working-directory: scraper
+        run: npx tsx src/merge-profiles.ts
+
+      - name: Install web dependencies
+        run: npm ci --workspace=web
+
+      - name: Build registry, position map, and enrich positions
+        working-directory: web
+        run: node scripts/build-registry.js && node scripts/build-position-map.js && node scripts/enrich-positions.js
+
+      - name: Commit data changes
+        run: |
+          git config user.name "VocationHub Bot"
+          git config user.email "bot@vocationhubplus.dev"
+          git add data/discovered-ids.json web/public/data/
+          if git diff --staged --quiet; then
+            echo "No profile data changes"
+          else
+            git commit -m "data: weekly deep scrape of all profiles $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
+
+      - name: Build frontend
+        working-directory: web
+        run: npx next build
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web/out
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: deep-scrape
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

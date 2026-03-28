@@ -1692,7 +1692,7 @@
       "lat": 39.73786,
       "lng": -104.97825
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Johns Episcopal Cathedral (Denver)",
       "years": {
@@ -1967,20 +1967,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
+      "nid": 4102,
+      "name": "St. Matthew's Episcopal Church",
+      "street": "210 St. Mary's Road",
+      "city": "Hillsborough",
       "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
+      "zip": "27278-2518",
+      "phone": "919-732-9308",
+      "email": "welcome@stmatthewshillsborough.org",
+      "website": "http://www.stmatthewshillsborough.org",
+      "type": "church",
+      "lat": 36.07613,
+      "lng": -79.09551
     },
-    "match_confidence": "exact"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Matthews Parish Church (Hillsborough)",
+      "years": {
+        "2015": {
+          "averageAttendance": 179,
+          "plateAndPledge": 458431,
+          "membership": 366
+        },
+        "2016": {
+          "averageAttendance": 179,
+          "plateAndPledge": 460571,
+          "membership": 359
+        },
+        "2017": {
+          "averageAttendance": 181,
+          "plateAndPledge": 479579,
+          "membership": 340
+        },
+        "2018": {
+          "averageAttendance": 162,
+          "plateAndPledge": 472288,
+          "membership": 360
+        },
+        "2019": {
+          "averageAttendance": 179,
+          "plateAndPledge": 466342,
+          "membership": 345
+        },
+        "2020": {
+          "averageAttendance": 198,
+          "plateAndPledge": 487421,
+          "membership": 353
+        },
+        "2021": {
+          "averageAttendance": 79,
+          "plateAndPledge": 531509,
+          "membership": 319
+        },
+        "2022": {
+          "averageAttendance": 124,
+          "plateAndPledge": 516189,
+          "membership": 283
+        },
+        "2023": {
+          "averageAttendance": 147,
+          "plateAndPledge": 560931,
+          "membership": 346
+        },
+        "2024": {
+          "averageAttendance": 160,
+          "plateAndPledge": 606765,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10596,
@@ -2191,29 +2246,14 @@
     "vh_id": 10583,
     "name": "Trinity Episcopal Church",
     "diocese": "Tennessee",
-    "state": "TN",
+    "state": "",
     "vh_status": "Beginning search",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10583",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "Trinity Episcopal Church",
     "receiving_names_from": "02/16/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8232,
-      "name": "Diocesan House",
-      "street": "3700 Woodmont Blvd",
-      "city": "Nashville",
-      "state": "TN",
-      "zip": "37215",
-      "phone": "615-251-3322",
-      "email": "kjones@edtn.org",
-      "website": "http://edtn.org",
-      "type": "other",
-      "lat": 36.11687,
-      "lng": -86.83157
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10582,
@@ -3603,29 +3643,169 @@
   },
   {
     "vh_id": 10533,
-    "name": "Position in Washington",
+    "name": "St. Columba's , Washington, DC",
     "diocese": "Washington",
-    "state": "",
+    "state": "DC",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10533",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5945,
+      "name": "St. Columba's ",
+      "street": "4201 Albemarle St NW",
+      "city": "Washington",
+      "state": "DC",
+      "zip": "20016-2098",
+      "phone": "202-363-4119",
+      "email": "communications@columba.org",
+      "website": "http://www.columba.org",
+      "type": "church",
+      "lat": 38.94823,
+      "lng": -77.08245
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Columbas Episcopal Church (Washington)",
+      "years": {
+        "2015": {
+          "averageAttendance": 595,
+          "plateAndPledge": 2111530,
+          "membership": 4018
+        },
+        "2016": {
+          "averageAttendance": 585,
+          "plateAndPledge": 2155576,
+          "membership": 4004
+        },
+        "2017": {
+          "averageAttendance": 593,
+          "plateAndPledge": 2376311,
+          "membership": 3865
+        },
+        "2018": {
+          "averageAttendance": 529,
+          "plateAndPledge": 2530664,
+          "membership": 3761
+        },
+        "2019": {
+          "averageAttendance": 571,
+          "plateAndPledge": 2931874,
+          "membership": 2789
+        },
+        "2020": {
+          "averageAttendance": 588,
+          "plateAndPledge": 2751982,
+          "membership": 2642
+        },
+        "2021": {
+          "averageAttendance": 211,
+          "plateAndPledge": 2737691,
+          "membership": 2544
+        },
+        "2022": {
+          "averageAttendance": 332,
+          "plateAndPledge": 2684096,
+          "membership": 2512
+        },
+        "2023": {
+          "averageAttendance": 411,
+          "plateAndPledge": 2751460,
+          "membership": 2469
+        },
+        "2024": {
+          "averageAttendance": 439,
+          "plateAndPledge": 2830555,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10532,
-    "name": "Position in Washington",
+    "name": "All Saints, Chevy Chase, Chevy Chase, MD",
     "diocese": "Washington",
-    "state": "",
+    "state": "MD",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10532",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5890,
+      "name": "All Saints, Chevy Chase",
+      "street": "3 Chevy Chase Cir",
+      "city": "Chevy Chase",
+      "state": "MD",
+      "zip": "20815-3400",
+      "phone": "(301) 654-2488",
+      "email": "info@allsaintschurch.net",
+      "website": "http://allsaintschurch.net",
+      "type": "church",
+      "lat": 38.96715,
+      "lng": -77.07839
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "All Saints Church (Chevy Chase)",
+      "years": {
+        "2015": {
+          "averageAttendance": 417,
+          "plateAndPledge": 1754688,
+          "membership": 1762
+        },
+        "2016": {
+          "averageAttendance": 385,
+          "plateAndPledge": 1658717,
+          "membership": 1801
+        },
+        "2017": {
+          "averageAttendance": 405,
+          "plateAndPledge": 1809463,
+          "membership": 1845
+        },
+        "2018": {
+          "averageAttendance": 355,
+          "plateAndPledge": 1991864,
+          "membership": 1876
+        },
+        "2019": {
+          "averageAttendance": 381,
+          "plateAndPledge": 2055676,
+          "membership": 1905
+        },
+        "2020": {
+          "averageAttendance": 394,
+          "plateAndPledge": 1695237,
+          "membership": 1916
+        },
+        "2021": {
+          "averageAttendance": 132,
+          "plateAndPledge": 1700155,
+          "membership": 1814
+        },
+        "2022": {
+          "averageAttendance": 228,
+          "plateAndPledge": 1612021,
+          "membership": 1715
+        },
+        "2023": {
+          "averageAttendance": 283,
+          "plateAndPledge": 1817549,
+          "membership": 1685
+        },
+        "2024": {
+          "averageAttendance": 318,
+          "plateAndPledge": 2414447,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10531,
@@ -4243,31 +4423,16 @@
   },
   {
     "vh_id": 10393,
-    "name": "Bishop Gadsden Episcopal Retirement Community, charleston, SC",
+    "name": "Position in South Carolina",
     "diocese": "South Carolina",
-    "state": "SC",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10393",
     "position_type": "Chaplain, Care Facility",
     "congregation": "",
     "receiving_names_from": "03/01/2021",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9059,
-      "name": "Bishop Gadsden Episcopal Retirement Community",
-      "street": "1 Bishop Gadsden Way",
-      "city": "charleston",
-      "state": "SC",
-      "zip": "29412",
-      "phone": "843.762.3300",
-      "email": "info@bishopgadsden.org",
-      "website": "http://www.bishopgadsden.org",
-      "type": "other",
-      "lat": 32.735021,
-      "lng": -79.976477
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10392,
@@ -4935,7 +5100,7 @@
   },
   {
     "vh_id": 10326,
-    "name": "The Episcopal Church in Western Oregon, Milwaukie, OR",
+    "name": "Trinity Episcopal Cathedral, Portland, OR",
     "diocese": "Oregon",
     "state": "OR",
     "vh_status": "Receiving names",
@@ -4946,20 +5111,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 9067,
-      "name": "The Episcopal Church in Western Oregon",
-      "street": "2780 SE Harrison St.",
-      "city": "Milwaukie",
+      "nid": 4592,
+      "name": "Trinity Episcopal Cathedral",
+      "street": "147 NW 19th Ave",
+      "city": "Portland",
       "state": "OR",
-      "zip": "97222",
-      "phone": "(503) 636-5613",
-      "email": "communications@ecwo.org",
-      "website": "https://ecwo.org/",
-      "type": "other",
-      "lat": 45.44625,
-      "lng": -122.63531
+      "zip": "97209-1901",
+      "phone": "503-222-9811",
+      "email": "cathedral@trinity-episcopal.org",
+      "website": "https://trinity-episcopal.org",
+      "type": "church",
+      "lat": 45.52467,
+      "lng": -122.69078
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Cathedral (Portland)",
+      "years": {
+        "2015": {
+          "averageAttendance": 564,
+          "plateAndPledge": 1472077,
+          "membership": 1757
+        },
+        "2016": {
+          "averageAttendance": 587,
+          "plateAndPledge": 1430615,
+          "membership": 1748
+        },
+        "2017": {
+          "averageAttendance": 570,
+          "plateAndPledge": 1461116,
+          "membership": 1758
+        },
+        "2018": {
+          "averageAttendance": 513,
+          "plateAndPledge": 1445445,
+          "membership": 1511
+        },
+        "2019": {
+          "averageAttendance": 512,
+          "plateAndPledge": 1593608,
+          "membership": 1472
+        },
+        "2020": {
+          "averageAttendance": 430,
+          "plateAndPledge": 1619641,
+          "membership": 1476
+        },
+        "2021": {
+          "averageAttendance": 143,
+          "plateAndPledge": 1568675,
+          "membership": 1453
+        },
+        "2022": {
+          "averageAttendance": 308,
+          "plateAndPledge": 1643697,
+          "membership": 1615
+        },
+        "2023": {
+          "averageAttendance": 319,
+          "plateAndPledge": 1610435,
+          "membership": 1501
+        },
+        "2024": {
+          "averageAttendance": 367,
+          "plateAndPledge": 1744892,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10325,
@@ -4989,31 +5209,16 @@
   },
   {
     "vh_id": 10323,
-    "name": "The Episcopal Church in Western Oregon, Milwaukie, OR",
+    "name": "Position in Oregon",
     "diocese": "Oregon",
-    "state": "OR",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10323",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/16/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9067,
-      "name": "The Episcopal Church in Western Oregon",
-      "street": "2780 SE Harrison St.",
-      "city": "Milwaukie",
-      "state": "OR",
-      "zip": "97222",
-      "phone": "(503) 636-5613",
-      "email": "communications@ecwo.org",
-      "website": "https://ecwo.org/",
-      "type": "other",
-      "lat": 45.44625,
-      "lng": -122.63531
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10321,
@@ -5372,16 +5577,86 @@
   },
   {
     "vh_id": 10308,
-    "name": "Position in Upper South Carolina",
+    "name": "Holy Trinity Episcopal Parish, Clemson, SC",
     "diocese": "Upper South Carolina",
-    "state": "",
+    "state": "SC",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10308",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "01/31/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5762,
+      "name": "Holy Trinity Episcopal Parish",
+      "street": "193 Old Greenville Hwy",
+      "city": "Clemson",
+      "state": "SC",
+      "zip": "29631-1335",
+      "phone": "(864) 654-5071",
+      "email": "htchurch@holytrinityclemson.org",
+      "website": "http://www.holytrinityclemson.org/",
+      "type": "church",
+      "lat": 34.68302,
+      "lng": -82.83898
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Holy Trinity Episcopal Parish (Clemson)",
+      "years": {
+        "2015": {
+          "averageAttendance": 201,
+          "plateAndPledge": 522054,
+          "membership": 499
+        },
+        "2016": {
+          "averageAttendance": 176,
+          "plateAndPledge": 543626,
+          "membership": 457
+        },
+        "2017": {
+          "averageAttendance": 165,
+          "plateAndPledge": 532990,
+          "membership": 427
+        },
+        "2018": {
+          "averageAttendance": 150,
+          "plateAndPledge": 528931,
+          "membership": 415
+        },
+        "2019": {
+          "averageAttendance": 150,
+          "plateAndPledge": 577096,
+          "membership": 365
+        },
+        "2020": {
+          "averageAttendance": 146,
+          "plateAndPledge": 551821,
+          "membership": 355
+        },
+        "2021": {
+          "averageAttendance": 47,
+          "plateAndPledge": 553376,
+          "membership": 351
+        },
+        "2022": {
+          "averageAttendance": 89,
+          "plateAndPledge": 561004,
+          "membership": 351
+        },
+        "2023": {
+          "averageAttendance": 104,
+          "plateAndPledge": 519222,
+          "membership": 342
+        },
+        "2024": {
+          "averageAttendance": 117,
+          "plateAndPledge": 529540,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10307,
@@ -6218,16 +6493,31 @@
   },
   {
     "vh_id": 10281,
-    "name": "Position in San Diego",
+    "name": "Episcopal Church Center, San Diego, CA",
     "diocese": "San Diego",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10281",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/01/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7439,
+      "name": "Episcopal Church Center",
+      "street": "2083 Sunset Cliffs Boulevard",
+      "city": "San Diego",
+      "state": "CA",
+      "zip": "92107",
+      "phone": "619-481-5456",
+      "email": "ctumilty@edsd.org",
+      "website": "http://www.edsd.org",
+      "type": "church",
+      "lat": 32.74771,
+      "lng": -117.24467
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10279,
@@ -6558,16 +6848,86 @@
   },
   {
     "vh_id": 10267,
-    "name": "Position in New York",
+    "name": "St. John's Church, Staten Island, Staten Island, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10267",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 290,
+      "name": "St. John's Church, Staten Island",
+      "street": "1333 Bay Street",
+      "city": "Staten Island",
+      "state": "NY",
+      "zip": "10305",
+      "phone": "718-447-1605",
+      "email": "frhank@stjohnssi.org",
+      "website": "http://stjohnssi.org",
+      "type": "church",
+      "lat": 40.61116,
+      "lng": -74.06379
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Johns Church (Staten Island)",
+      "years": {
+        "2015": {
+          "averageAttendance": 82,
+          "plateAndPledge": 57800,
+          "membership": 238
+        },
+        "2016": {
+          "averageAttendance": 80,
+          "plateAndPledge": 56700,
+          "membership": 238
+        },
+        "2017": {
+          "averageAttendance": 76,
+          "plateAndPledge": 36250,
+          "membership": 238
+        },
+        "2018": {
+          "averageAttendance": 65,
+          "plateAndPledge": 58000,
+          "membership": 195
+        },
+        "2019": {
+          "averageAttendance": 65,
+          "plateAndPledge": 58000,
+          "membership": 195
+        },
+        "2020": {
+          "averageAttendance": 19,
+          "plateAndPledge": 33168,
+          "membership": 130
+        },
+        "2021": {
+          "averageAttendance": 64,
+          "plateAndPledge": 53991,
+          "membership": 130
+        },
+        "2022": {
+          "averageAttendance": 62,
+          "plateAndPledge": 62423,
+          "membership": 140
+        },
+        "2023": {
+          "averageAttendance": 73,
+          "plateAndPledge": 75571,
+          "membership": 160
+        },
+        "2024": {
+          "averageAttendance": 73,
+          "plateAndPledge": 93616,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10266,
@@ -8093,16 +8453,31 @@
   },
   {
     "vh_id": 10232,
-    "name": "Position in San Diego",
+    "name": "Episcopal Church Center, San Diego, CA",
     "diocese": "San Diego",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10232",
     "position_type": "Canon to the Ordinary",
     "congregation": "",
     "receiving_names_from": "11/01/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7439,
+      "name": "Episcopal Church Center",
+      "street": "2083 Sunset Cliffs Boulevard",
+      "city": "San Diego",
+      "state": "CA",
+      "zip": "92107",
+      "phone": "619-481-5456",
+      "email": "ctumilty@edsd.org",
+      "website": "http://www.edsd.org",
+      "type": "church",
+      "lat": 32.74771,
+      "lng": -117.24467
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10231,
@@ -9318,20 +9693,35 @@
   },
   {
     "vh_id": 10164,
-    "name": "Position in San Diego",
+    "name": "Episcopal Church Center, San Diego, CA",
     "diocese": "San Diego",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10164",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "07/01/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7439,
+      "name": "Episcopal Church Center",
+      "street": "2083 Sunset Cliffs Boulevard",
+      "city": "San Diego",
+      "state": "CA",
+      "zip": "92107",
+      "phone": "619-481-5456",
+      "email": "ctumilty@edsd.org",
+      "website": "http://www.edsd.org",
+      "type": "church",
+      "lat": 32.74771,
+      "lng": -117.24467
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10163,
-    "name": "Church of St. Michaels-by-the-Sea, Carlsbad, CA",
+    "name": "Episcopal Church Center, San Diego, CA",
     "diocese": "San Diego",
     "state": "CA",
     "vh_status": "Receiving names",
@@ -9342,75 +9732,20 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 4942,
-      "name": "Church of St. Michaels-by-the-Sea",
-      "street": "2775 Carlsbad Blvd",
-      "city": "Carlsbad",
+      "nid": 7439,
+      "name": "Episcopal Church Center",
+      "street": "2083 Sunset Cliffs Boulevard",
+      "city": "San Diego",
       "state": "CA",
-      "zip": "92008-2210",
-      "phone": "760-729-8901",
-      "email": "linda@stmbts.org",
-      "website": "http://stmichaelsbythesea.org",
+      "zip": "92107",
+      "phone": "619-481-5456",
+      "email": "ctumilty@edsd.org",
+      "website": "http://www.edsd.org",
       "type": "church",
-      "lat": 33.16022,
-      "lng": -117.35308
+      "lat": 32.74771,
+      "lng": -117.24467
     },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "Church of St Michaels-by-the-Sea (Carlsbad)",
-      "years": {
-        "2015": {
-          "averageAttendance": 216,
-          "plateAndPledge": 423674,
-          "membership": 474
-        },
-        "2016": {
-          "averageAttendance": 203,
-          "plateAndPledge": 468042,
-          "membership": 415
-        },
-        "2017": {
-          "averageAttendance": 201,
-          "plateAndPledge": 481738,
-          "membership": 399
-        },
-        "2018": {
-          "averageAttendance": 220,
-          "plateAndPledge": 511328,
-          "membership": 374
-        },
-        "2019": {
-          "averageAttendance": 214,
-          "plateAndPledge": 461746,
-          "membership": 337
-        },
-        "2020": {
-          "averageAttendance": 213,
-          "plateAndPledge": 405843,
-          "membership": 342
-        },
-        "2021": {
-          "averageAttendance": 109,
-          "plateAndPledge": 432021,
-          "membership": 348
-        },
-        "2022": {
-          "averageAttendance": 184,
-          "plateAndPledge": 470769,
-          "membership": 359
-        },
-        "2023": {
-          "averageAttendance": 185,
-          "plateAndPledge": 552011,
-          "membership": 362
-        },
-        "2024": {
-          "averageAttendance": 215,
-          "plateAndPledge": 601281,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10160,
@@ -9427,59 +9762,29 @@
   },
   {
     "vh_id": 10158,
-    "name": "Diocese of Olympia Young Adults, Seattle, WA",
+    "name": "Position in Olympia",
     "diocese": "Olympia",
-    "state": "WA",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10158",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8672,
-      "name": "Diocese of Olympia Young Adults",
-      "street": "1551 10th Ave E",
-      "city": "Seattle",
-      "state": "WA",
-      "zip": "98102",
-      "phone": "5099956582",
-      "email": "mseewer@ecww.org",
-      "website": "https://ecww.org/faith-formation/young-adults/",
-      "type": "other",
-      "lat": 47.63343,
-      "lng": -122.32054
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10155,
-    "name": "Diocese of Olympia Young Adults, Seattle, WA",
+    "name": "Position in Olympia",
     "diocese": "Olympia",
-    "state": "WA",
+    "state": "",
     "vh_status": "Interim in place",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10155",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8672,
-      "name": "Diocese of Olympia Young Adults",
-      "street": "1551 10th Ave E",
-      "city": "Seattle",
-      "state": "WA",
-      "zip": "98102",
-      "phone": "5099956582",
-      "email": "mseewer@ecww.org",
-      "website": "https://ecww.org/faith-formation/young-adults/",
-      "type": "other",
-      "lat": 47.63343,
-      "lng": -122.32054
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10154,
@@ -9496,31 +9801,16 @@
   },
   {
     "vh_id": 10151,
-    "name": "Diocese of Olympia Young Adults, Seattle, WA",
+    "name": "Position in Olympia",
     "diocese": "Olympia",
-    "state": "WA",
+    "state": "",
     "vh_status": "Seeking interim",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10151",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8672,
-      "name": "Diocese of Olympia Young Adults",
-      "street": "1551 10th Ave E",
-      "city": "Seattle",
-      "state": "WA",
-      "zip": "98102",
-      "phone": "5099956582",
-      "email": "mseewer@ecww.org",
-      "website": "https://ecww.org/faith-formation/young-adults/",
-      "type": "other",
-      "lat": 47.63343,
-      "lng": -122.32054
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10148,
@@ -11563,44 +11853,99 @@
   },
   {
     "vh_id": 10063,
-    "name": "St. Stephen's Episcopal Day School , Coconut Grove, FL",
+    "name": "Position in Southeast Florida",
     "diocese": "Southeast Florida",
-    "state": "FL",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10063",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "06/15/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7173,
-      "name": "St. Stephen's Episcopal Day School ",
-      "street": "3439 Main Highway",
-      "city": "Coconut Grove",
-      "state": "FL",
-      "zip": "33133",
-      "phone": "305-445-2606",
-      "email": "SCHOOL@SSEDS.ORG",
-      "website": "http://www.sseds.org",
-      "type": "school",
-      "lat": 25.72729,
-      "lng": -80.24291
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 10062,
-    "name": "Position in Southeast Florida",
+    "name": "St. Christopher's by the Sea Church, Key Biscayne, FL",
     "diocese": "Southeast Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10062",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "10/01/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5125,
+      "name": "St. Christopher's by the Sea Church",
+      "street": "95 Harbor Dr",
+      "city": "Key Biscayne",
+      "state": "FL",
+      "zip": "33149-1499",
+      "phone": "305-361-5080",
+      "email": "stchrisadmin@stchriskb.org",
+      "website": "https://stchriskb.org",
+      "type": "church",
+      "lat": 25.699297,
+      "lng": -80.1635
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Christophers by the Sea Church (Key Biscayne)",
+      "years": {
+        "2015": {
+          "averageAttendance": 67,
+          "plateAndPledge": 280567,
+          "membership": 157
+        },
+        "2016": {
+          "averageAttendance": 73,
+          "plateAndPledge": 247385,
+          "membership": 170
+        },
+        "2017": {
+          "averageAttendance": 74,
+          "plateAndPledge": 230857,
+          "membership": 171
+        },
+        "2018": {
+          "averageAttendance": 77,
+          "plateAndPledge": 229544,
+          "membership": 171
+        },
+        "2019": {
+          "averageAttendance": 76,
+          "plateAndPledge": 221928,
+          "membership": 171
+        },
+        "2020": {
+          "averageAttendance": 52,
+          "plateAndPledge": 184792,
+          "membership": 171
+        },
+        "2021": {
+          "averageAttendance": 32,
+          "plateAndPledge": 156484,
+          "membership": 46
+        },
+        "2022": {
+          "averageAttendance": 32,
+          "plateAndPledge": 156484,
+          "membership": 46
+        },
+        "2023": {
+          "averageAttendance": 32,
+          "plateAndPledge": 156484,
+          "membership": 46
+        },
+        "2024": {
+          "averageAttendance": 32,
+          "plateAndPledge": 224422,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10048,
@@ -13767,7 +14112,7 @@
   },
   {
     "vh_id": 9984,
-    "name": "St. Alban's Episcopal Church, El Cajon, CA",
+    "name": "Episcopal Church Center, San Diego, CA",
     "diocese": "San Diego",
     "state": "CA",
     "vh_status": "Receiving names",
@@ -13778,75 +14123,20 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 4949,
-      "name": "St. Alban's Episcopal Church",
-      "street": "490 Farragut Cir",
-      "city": "El Cajon",
+      "nid": 7439,
+      "name": "Episcopal Church Center",
+      "street": "2083 Sunset Cliffs Boulevard",
+      "city": "San Diego",
       "state": "CA",
-      "zip": "92020-5203",
-      "phone": "619-444-8212",
-      "email": "generalbusiness@stalbanschurch.info",
-      "website": "http://st-albans-church.org/",
+      "zip": "92107",
+      "phone": "619-481-5456",
+      "email": "ctumilty@edsd.org",
+      "website": "http://www.edsd.org",
       "type": "church",
-      "lat": 32.7905,
-      "lng": -116.96164
+      "lat": 32.74771,
+      "lng": -117.24467
     },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Albans Episcopal Church (El Cajon)",
-      "years": {
-        "2015": {
-          "averageAttendance": 73,
-          "plateAndPledge": 82167,
-          "membership": 203
-        },
-        "2016": {
-          "averageAttendance": 76,
-          "plateAndPledge": 78254,
-          "membership": 211
-        },
-        "2017": {
-          "averageAttendance": 76,
-          "plateAndPledge": 78171,
-          "membership": 216
-        },
-        "2018": {
-          "averageAttendance": 70,
-          "plateAndPledge": 84031,
-          "membership": 219
-        },
-        "2019": {
-          "averageAttendance": 65,
-          "plateAndPledge": 77501,
-          "membership": 243
-        },
-        "2020": {
-          "averageAttendance": 67,
-          "plateAndPledge": 70074,
-          "membership": 153
-        },
-        "2021": {
-          "averageAttendance": 35,
-          "plateAndPledge": 217940,
-          "membership": 133
-        },
-        "2022": {
-          "averageAttendance": 40,
-          "plateAndPledge": 229913,
-          "membership": 129
-        },
-        "2023": {
-          "averageAttendance": 43,
-          "plateAndPledge": 79468,
-          "membership": 128
-        },
-        "2024": {
-          "averageAttendance": 35,
-          "plateAndPledge": 58050,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "vh_id": 9979,
@@ -17059,31 +17349,16 @@
   },
   {
     "vh_id": 9772,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9772",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/15/2020",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9771,
@@ -17100,31 +17375,16 @@
   },
   {
     "vh_id": 9770,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9770",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/31/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9769,
@@ -17141,231 +17401,111 @@
   },
   {
     "vh_id": 9768,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9768",
     "position_type": "Cathedral Dean",
     "congregation": "",
     "receiving_names_from": "11/07/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9767,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9767",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "03/15/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9766,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Interim in place",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9766",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/31/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9765,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9765",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "07/31/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9764,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9764",
     "position_type": "Director of Development",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9763,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9763",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/15/2017",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9762,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9762",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "04/14/2017",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9761,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9761",
     "position_type": "Canon to the Ordinary",
     "congregation": "",
     "receiving_names_from": "10/31/2016",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9760,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "St. Michael’s Episcopal Church, Norman, OK",
     "diocese": "Oklahoma",
     "state": "OK",
     "vh_status": "Search complete",
@@ -17376,18 +17516,18 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
+      "nid": 4412,
+      "name": "St. Michael’s Episcopal Church",
+      "street": "1601 West Imhoff Rd.",
+      "city": "Norman",
       "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
+      "zip": "73072",
+      "phone": "405-321-8951 ",
+      "email": "administrator@stmichaelsnorman.org",
+      "website": "https://www.stmichaelsnorman.org",
+      "type": "church",
+      "lat": 35.189931,
+      "lng": -97.46633
     },
     "match_confidence": "exact"
   },
@@ -17406,227 +17546,107 @@
   },
   {
     "vh_id": 9758,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9758",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/31/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9757,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9757",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/15/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9756,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9756",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9755,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9755",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/31/2012",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9754,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9754",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9753,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9753",
     "position_type": "Cathedral Dean",
     "congregation": "",
     "receiving_names_from": "02/29/2012",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9752,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9752",
     "position_type": "Diocesan/Regional Staff",
     "congregation": "",
     "receiving_names_from": "10/31/2011",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9751,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9751",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "03/31/2017",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9744,
@@ -17874,31 +17894,16 @@
   },
   {
     "vh_id": 9729,
-    "name": "Boys Home of Virginia, Covington, VA",
+    "name": "Position in Southwestern Virginia",
     "diocese": "Southwestern Virginia",
-    "state": "VA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9729",
     "position_type": "Director",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 11239,
-      "name": "Boys Home of Virginia",
-      "street": "414 Boys Home Rd",
-      "city": "Covington",
-      "state": "VA",
-      "zip": "24426",
-      "phone": "540.965.7700",
-      "email": "info@boyshomeofva.org",
-      "website": "https://boyshomeofva.org/",
-      "type": "school",
-      "lat": 37.80626,
-      "lng": -80.02307
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9728,
@@ -18964,75 +18969,20 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 5623,
-      "name": "St. Mary's Episcopal Church",
-      "street": "24 N Masonic St",
-      "city": "Bellville",
+      "nid": 8519,
+      "name": "St. Philip the Evangelist",
+      "street": "2525 Seagler Rd.",
+      "city": "Houston",
       "state": "TX",
-      "zip": "77418-1444",
-      "phone": "979-865-2330",
-      "email": "saintmary@sbcglobal.net",
-      "website": "http://www.saintmarysec.org",
+      "zip": "77042",
+      "phone": "346-212-1465",
+      "email": "akuol@epicenter.org",
+      "website": "http://www.stphilipstheevangelist.org",
       "type": "church",
-      "lat": 29.95154,
-      "lng": -96.258201
+      "lat": 29.739113,
+      "lng": -95.553228
     },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Marys Episcopal Church (Bellville)",
-      "years": {
-        "2015": {
-          "averageAttendance": 55,
-          "plateAndPledge": 191882,
-          "membership": 107
-        },
-        "2016": {
-          "averageAttendance": 56,
-          "plateAndPledge": 141127,
-          "membership": 113
-        },
-        "2017": {
-          "averageAttendance": 53,
-          "plateAndPledge": 197733,
-          "membership": 117
-        },
-        "2018": {
-          "averageAttendance": 53,
-          "plateAndPledge": 176564,
-          "membership": 122
-        },
-        "2019": {
-          "averageAttendance": 50,
-          "plateAndPledge": 154087,
-          "membership": 117
-        },
-        "2020": {
-          "averageAttendance": 45,
-          "plateAndPledge": 148596,
-          "membership": 117
-        },
-        "2021": {
-          "averageAttendance": 41,
-          "plateAndPledge": 172345,
-          "membership": 118
-        },
-        "2022": {
-          "averageAttendance": 41,
-          "plateAndPledge": 178971,
-          "membership": 118
-        },
-        "2023": {
-          "averageAttendance": 34,
-          "plateAndPledge": 137624,
-          "membership": 114
-        },
-        "2024": {
-          "averageAttendance": 30,
-          "plateAndPledge": 11812,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "vh_id": 9652,
@@ -21438,31 +21388,16 @@
   },
   {
     "vh_id": 9591,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Seeking interim",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9591",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "09/30/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9590,
@@ -21933,16 +21868,86 @@
   },
   {
     "vh_id": 9581,
-    "name": "Position in Southwestern Virginia",
+    "name": "St. John's Episcopal Church, Lynchburg, VA",
     "diocese": "Southwestern Virginia",
-    "state": "",
+    "state": "VA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9581",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "04/09/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5453,
+      "name": "St. John's Episcopal Church",
+      "street": "205 Elmwood Avenue",
+      "city": "Lynchburg",
+      "state": "VA",
+      "zip": "24503-2734",
+      "phone": "(434) 528-1138",
+      "email": "stjohns@stjohnslynchburg.org",
+      "website": "https://www.stjohnslynchburg.org",
+      "type": "church",
+      "lat": 37.434,
+      "lng": -79.16973
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Johns Episcopal Church (Lynchburg)",
+      "years": {
+        "2015": {
+          "averageAttendance": 312,
+          "plateAndPledge": 820701,
+          "membership": 1253
+        },
+        "2016": {
+          "averageAttendance": 297,
+          "plateAndPledge": 812589,
+          "membership": 1259
+        },
+        "2017": {
+          "averageAttendance": 283,
+          "plateAndPledge": 831051,
+          "membership": 1265
+        },
+        "2018": {
+          "averageAttendance": 242,
+          "plateAndPledge": 850286,
+          "membership": 941
+        },
+        "2019": {
+          "averageAttendance": 223,
+          "plateAndPledge": 830977,
+          "membership": 935
+        },
+        "2020": {
+          "averageAttendance": 227,
+          "plateAndPledge": 788424,
+          "membership": 898
+        },
+        "2021": {
+          "averageAttendance": 91,
+          "plateAndPledge": 782619,
+          "membership": 899
+        },
+        "2022": {
+          "averageAttendance": 171,
+          "plateAndPledge": 867259,
+          "membership": 891
+        },
+        "2023": {
+          "averageAttendance": 165,
+          "plateAndPledge": 885670,
+          "membership": 899
+        },
+        "2024": {
+          "averageAttendance": 167,
+          "plateAndPledge": 1158660,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9580,
@@ -23198,31 +23203,16 @@
   },
   {
     "vh_id": 9535,
-    "name": "Diocesan Office - Oklahoma, Oklahoma City, OK",
+    "name": "Position in Oklahoma",
     "diocese": "Oklahoma",
-    "state": "OK",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9535",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "10/31/2012",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9500,
-      "name": "Diocesan Office - Oklahoma",
-      "street": "924 N Robinson Ave.",
-      "city": "Oklahoma City",
-      "state": "OK",
-      "zip": "73102",
-      "phone": "(405) 232-4820",
-      "email": "dioceseofoklahoma@epiok.org",
-      "website": "https://www.epiok.org",
-      "type": "other",
-      "lat": 35.47677,
-      "lng": -97.51586
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9534,
@@ -23415,29 +23405,14 @@
     "vh_id": 9420,
     "name": "St James Episcopal Church",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9420",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St James Episcopal Church",
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9419,
@@ -23550,16 +23525,86 @@
   },
   {
     "vh_id": 9416,
-    "name": "Position in East Carolina",
+    "name": "St. Mary's Episcopal Church, Kinston, North Carolina, Kinston, NC",
     "diocese": "East Carolina",
-    "state": "",
+    "state": "NC",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9416",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2708,
+      "name": "St. Mary's Episcopal Church, Kinston, North Carolina",
+      "street": "800 Rountree St",
+      "city": "Kinston",
+      "state": "NC",
+      "zip": "28501-3655",
+      "phone": " (252) 523-6146",
+      "email": "lkelly@stmaryskinston.com",
+      "website": "http://www.stmaryskinston.com/",
+      "type": "church",
+      "lat": 35.27404,
+      "lng": -77.58939
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Marys Episcopal Church (Kinston)",
+      "years": {
+        "2015": {
+          "averageAttendance": 164,
+          "plateAndPledge": 470962,
+          "membership": 430
+        },
+        "2016": {
+          "averageAttendance": 156,
+          "plateAndPledge": 505578,
+          "membership": 441
+        },
+        "2017": {
+          "averageAttendance": 130,
+          "plateAndPledge": 519166,
+          "membership": 444
+        },
+        "2018": {
+          "averageAttendance": 130,
+          "plateAndPledge": 459119,
+          "membership": 443
+        },
+        "2019": {
+          "averageAttendance": 150,
+          "plateAndPledge": 466882,
+          "membership": 339
+        },
+        "2020": {
+          "averageAttendance": 234,
+          "plateAndPledge": 482255,
+          "membership": 341
+        },
+        "2021": {
+          "averageAttendance": 88,
+          "plateAndPledge": 508182,
+          "membership": 340
+        },
+        "2022": {
+          "averageAttendance": 110,
+          "plateAndPledge": 543073,
+          "membership": 360
+        },
+        "2023": {
+          "averageAttendance": 129,
+          "plateAndPledge": 583413,
+          "membership": 359
+        },
+        "2024": {
+          "averageAttendance": 155,
+          "plateAndPledge": 537816,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9415,
@@ -23820,31 +23865,16 @@
   },
   {
     "vh_id": 9380,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9380",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9379,
@@ -24331,44 +24361,99 @@
   },
   {
     "vh_id": 9343,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9343",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9342,
-    "name": "Position in Georgia",
+    "name": "Holy Trinity Episcopal Church, Blakely, GA",
     "diocese": "Georgia",
-    "state": "",
+    "state": "GA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9342",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3029,
+      "name": "Holy Trinity Episcopal Church",
+      "street": "501 College St",
+      "city": "Blakely",
+      "state": "GA",
+      "zip": "39823",
+      "phone": "(229) 723-3971 ",
+      "email": "schuster@gaepiscopal.org",
+      "website": "http://holytrinityblakely.georgiaepiscopal.org",
+      "type": "church",
+      "lat": 31.379182,
+      "lng": -84.935818
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Holy Trinity Episcopal Church (Blakely)",
+      "years": {
+        "2015": {
+          "averageAttendance": 6,
+          "plateAndPledge": 12864,
+          "membership": 8
+        },
+        "2016": {
+          "averageAttendance": 6,
+          "plateAndPledge": 10603,
+          "membership": 6
+        },
+        "2017": {
+          "averageAttendance": 6,
+          "plateAndPledge": 10001,
+          "membership": 6
+        },
+        "2018": {
+          "averageAttendance": 8,
+          "plateAndPledge": 11784,
+          "membership": 7
+        },
+        "2019": {
+          "averageAttendance": 8,
+          "plateAndPledge": 13886,
+          "membership": 8
+        },
+        "2020": {
+          "averageAttendance": 6,
+          "plateAndPledge": 9170,
+          "membership": 6
+        },
+        "2021": {
+          "averageAttendance": 4,
+          "plateAndPledge": 2850,
+          "membership": 6
+        },
+        "2022": {
+          "averageAttendance": 4,
+          "plateAndPledge": 2410,
+          "membership": 8
+        },
+        "2023": {
+          "averageAttendance": 5,
+          "plateAndPledge": 1430,
+          "membership": 6
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9341,
@@ -24637,31 +24722,16 @@
   },
   {
     "vh_id": 9323,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9323",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/15/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9322,
@@ -24678,59 +24748,29 @@
   },
   {
     "vh_id": 9316,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9316",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9315,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9315",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9314,
@@ -24869,31 +24909,16 @@
   },
   {
     "vh_id": 9301,
-    "name": "Beloved Community Initiative for Racial Justice, Healing, and Reconciliation, Iowa City, IA",
+    "name": "Position in Iowa",
     "diocese": "Iowa",
-    "state": "IA",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9301",
     "position_type": "Missioner",
     "congregation": "",
     "receiving_names_from": "11/30/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8599,
-      "name": "Beloved Community Initiative for Racial Justice, Healing, and Reconciliation",
-      "street": "26 East Market Street",
-      "city": "Iowa City",
-      "state": "IA",
-      "zip": "52245",
-      "phone": "",
-      "email": "info@becomingbelovedcommunity.org",
-      "website": "https://becomingbelovedcommunity.org",
-      "type": "other",
-      "lat": 41.66399,
-      "lng": -91.53496
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9300,
@@ -25115,147 +25140,72 @@
   },
   {
     "vh_id": 9285,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9285",
     "position_type": "Canon for Congregational Development",
     "congregation": "",
     "receiving_names_from": "01/10/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9284,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9284",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/30/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9272,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9272",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9271,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9271",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9270,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9270",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9269,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Saint Andrew's Episcopal Church, Saratoga, CA",
     "diocese": "El Camino Real",
     "state": "CA",
     "vh_status": "Search complete",
@@ -25266,18 +25216,18 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
+      "nid": 7491,
+      "name": "Saint Andrew's Episcopal Church",
+      "street": "13601 Saratoga Ave.",
+      "city": "Saratoga",
       "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
+      "zip": "95070",
+      "phone": "408-867-3785",
+      "email": "info@st-andrews-saratoga.org",
+      "website": "https://www.st-andrews-saratoga.org",
+      "type": "church",
+      "lat": 37.27133,
+      "lng": -122.01667
     },
     "match_confidence": "exact"
   },
@@ -25678,31 +25628,16 @@
   },
   {
     "vh_id": 9171,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9171",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "12/02/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9170,
@@ -25719,31 +25654,16 @@
   },
   {
     "vh_id": 9169,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9169",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "10/13/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9168,
@@ -25869,7 +25789,7 @@
   },
   {
     "vh_id": 9163,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "St Jude the Apostle Episcopal, Cupertino, CA",
     "diocese": "El Camino Real",
     "state": "CA",
     "vh_status": "No longer receiving names",
@@ -25880,132 +25800,127 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
+      "nid": 1024,
+      "name": "St Jude the Apostle Episcopal",
+      "street": "20920 McClellan Rd",
+      "city": "Cupertino",
       "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
+      "zip": "95014-2967",
+      "phone": "408-252-4166",
+      "email": "office@saintjudes.org",
+      "website": "http://www.saintjudes.org",
+      "type": "church",
+      "lat": 37.3147,
+      "lng": -122.04076
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Jude the Apostle Episcopal (Cupertino)",
+      "years": {
+        "2015": {
+          "averageAttendance": 173,
+          "plateAndPledge": 470773,
+          "membership": 494
+        },
+        "2016": {
+          "averageAttendance": 169,
+          "plateAndPledge": 633230,
+          "membership": 507
+        },
+        "2017": {
+          "averageAttendance": 156,
+          "plateAndPledge": 591820,
+          "membership": 503
+        },
+        "2018": {
+          "averageAttendance": 147,
+          "plateAndPledge": 575314,
+          "membership": 510
+        },
+        "2019": {
+          "averageAttendance": 131,
+          "plateAndPledge": 520652,
+          "membership": 491
+        },
+        "2020": {
+          "averageAttendance": 115,
+          "plateAndPledge": 440330,
+          "membership": 475
+        },
+        "2021": {
+          "averageAttendance": 97,
+          "plateAndPledge": 451457,
+          "membership": 223
+        },
+        "2022": {
+          "averageAttendance": 90,
+          "plateAndPledge": 438162,
+          "membership": 215
+        },
+        "2023": {
+          "averageAttendance": 91,
+          "plateAndPledge": 416498,
+          "membership": 225
+        },
+        "2024": {
+          "averageAttendance": 88,
+          "plateAndPledge": 423092,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9162,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9162",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "05/07/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9161,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9161",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "06/03/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9160,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9160",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "09/01/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9159,
-    "name": "Offices of the Diocese of El Camino Real, Salinas, CA",
+    "name": "Position in El Camino Real",
     "diocese": "El Camino Real",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9159",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/23/2016",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6802,
-      "name": "Offices of the Diocese of El Camino Real",
-      "street": "154 Central Avenue",
-      "city": "Salinas",
-      "state": "CA",
-      "zip": "93901",
-      "phone": "831-394-4465",
-      "email": "info@realepiscopal.org",
-      "website": "http://realepiscopal.org",
-      "type": "other",
-      "lat": 36.67653,
-      "lng": -121.66035
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9158,
@@ -26131,31 +26046,16 @@
   },
   {
     "vh_id": 9153,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9153",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/30/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9152,
@@ -26172,63 +26072,33 @@
   },
   {
     "vh_id": 9151,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9151",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "04/25/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9150,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9150",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "04/25/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9149,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Episcopal Church of All Saints, Indianapolis, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -26239,20 +26109,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3129,
+      "name": "Episcopal Church of All Saints",
+      "street": "1559 Central Avenue",
+      "city": "Indianapolis",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46202-2698",
+      "phone": "(317)635-2538",
+      "email": "rector@allsaintsindy.org",
+      "website": "http://allsaintsindy.org/",
+      "type": "church",
+      "lat": 39.78826,
+      "lng": -86.1489
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "All Saints Episcopal Church (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 94,
+          "plateAndPledge": 236689,
+          "membership": 156
+        },
+        "2016": {
+          "averageAttendance": 96,
+          "plateAndPledge": 228735,
+          "membership": 163
+        },
+        "2017": {
+          "averageAttendance": 103,
+          "plateAndPledge": 235645,
+          "membership": 170
+        },
+        "2018": {
+          "averageAttendance": 110,
+          "plateAndPledge": 233381,
+          "membership": 195
+        },
+        "2019": {
+          "averageAttendance": 111,
+          "plateAndPledge": 259145,
+          "membership": 206
+        },
+        "2020": {
+          "averageAttendance": 109,
+          "plateAndPledge": 281567,
+          "membership": 208
+        },
+        "2021": {
+          "averageAttendance": 61,
+          "plateAndPledge": 332667,
+          "membership": 215
+        },
+        "2022": {
+          "averageAttendance": 94,
+          "plateAndPledge": 272205,
+          "membership": 219
+        },
+        "2023": {
+          "averageAttendance": 82,
+          "plateAndPledge": 292595,
+          "membership": 194
+        },
+        "2024": {
+          "averageAttendance": 79,
+          "plateAndPledge": 268285,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9148,
@@ -26269,7 +26194,7 @@
   },
   {
     "vh_id": 9147,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "St. Paul's Episcopal Church, New Albany, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -26280,65 +26205,175 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3146,
+      "name": "St. Paul's Episcopal Church",
+      "street": "1015 E Main St",
+      "city": "New Albany",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "47150-5842",
+      "phone": "812-944-0413",
+      "email": "parishoffice@stpaulna.org",
+      "website": "http://stpaulna.org",
+      "type": "church",
+      "lat": 38.28783,
+      "lng": -85.81228
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Pauls Episcopal Church (New Albany)",
+      "years": {
+        "2015": {
+          "averageAttendance": 97,
+          "plateAndPledge": 177309,
+          "membership": 213
+        },
+        "2016": {
+          "averageAttendance": 107,
+          "plateAndPledge": 210591,
+          "membership": 223
+        },
+        "2017": {
+          "averageAttendance": 77,
+          "plateAndPledge": 219022,
+          "membership": 223
+        },
+        "2018": {
+          "averageAttendance": 76,
+          "plateAndPledge": 206531,
+          "membership": 231
+        },
+        "2019": {
+          "averageAttendance": 83,
+          "plateAndPledge": 195400,
+          "membership": 238
+        },
+        "2020": {
+          "averageAttendance": 79,
+          "plateAndPledge": 186999,
+          "membership": 124
+        },
+        "2021": {
+          "averageAttendance": 33,
+          "plateAndPledge": 174132,
+          "membership": 103
+        },
+        "2022": {
+          "averageAttendance": 48,
+          "plateAndPledge": 180813,
+          "membership": 106
+        },
+        "2023": {
+          "averageAttendance": 57,
+          "plateAndPledge": 201428,
+          "membership": 117
+        },
+        "2024": {
+          "averageAttendance": 55,
+          "plateAndPledge": 314251,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9146,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9146",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "12/01/2021",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9144,
-    "name": "Position in Indianapolis",
+    "name": "Trinity Episcopal Church, Indianapolis, IN",
     "diocese": "Indianapolis",
-    "state": "",
+    "state": "IN",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9144",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "03/15/2021",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3137,
+      "name": "Trinity Episcopal Church",
+      "street": "3243 N Meridian St",
+      "city": "Indianapolis",
+      "state": "IN",
+      "zip": "46208-4645",
+      "phone": "317.926.1346",
+      "email": "communications@trinitychurchindy.org",
+      "website": "https://trinitychurchindy.org/",
+      "type": "church",
+      "lat": 39.81527,
+      "lng": -86.15611
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 234,
+          "plateAndPledge": 533805,
+          "membership": 748
+        },
+        "2016": {
+          "averageAttendance": 255,
+          "plateAndPledge": 552737,
+          "membership": 729
+        },
+        "2017": {
+          "averageAttendance": 253,
+          "plateAndPledge": 601671,
+          "membership": 743
+        },
+        "2018": {
+          "averageAttendance": 251,
+          "plateAndPledge": 626755,
+          "membership": 775
+        },
+        "2019": {
+          "averageAttendance": 252,
+          "plateAndPledge": 657312,
+          "membership": 796
+        },
+        "2020": {
+          "averageAttendance": 254,
+          "plateAndPledge": 688360,
+          "membership": 796
+        },
+        "2021": {
+          "averageAttendance": 119,
+          "plateAndPledge": 666537,
+          "membership": 793
+        },
+        "2022": {
+          "averageAttendance": 207,
+          "plateAndPledge": 709061,
+          "membership": 811
+        },
+        "2023": {
+          "averageAttendance": 210,
+          "plateAndPledge": 713744,
+          "membership": 775
+        },
+        "2024": {
+          "averageAttendance": 198,
+          "plateAndPledge": 801539,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9143,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Church of the Nativity, Indianapolis, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -26349,20 +26384,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3131,
+      "name": "Church of the Nativity",
+      "street": "7300 Lantern Rd",
+      "city": "Indianapolis",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46256-2118",
+      "phone": "317-849-3656",
+      "email": "Nativity@nativity-indy.org",
+      "website": "http://nativity-indy.org",
+      "type": "church",
+      "lat": 39.89744,
+      "lng": -86.01039
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Church of the Nativity (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 77,
+          "plateAndPledge": 173492,
+          "membership": 298
+        },
+        "2016": {
+          "averageAttendance": 75,
+          "plateAndPledge": 166195,
+          "membership": 296
+        },
+        "2017": {
+          "averageAttendance": 88,
+          "plateAndPledge": 145185,
+          "membership": 141
+        },
+        "2018": {
+          "averageAttendance": 94,
+          "plateAndPledge": 133583,
+          "membership": 154
+        },
+        "2019": {
+          "averageAttendance": 97,
+          "plateAndPledge": 168969,
+          "membership": 164
+        },
+        "2020": {
+          "averageAttendance": 93,
+          "plateAndPledge": 148818,
+          "membership": 143
+        },
+        "2021": {
+          "averageAttendance": 53,
+          "plateAndPledge": 159796,
+          "membership": 136
+        },
+        "2022": {
+          "averageAttendance": 65,
+          "plateAndPledge": 180373,
+          "membership": 128
+        },
+        "2023": {
+          "averageAttendance": 70,
+          "plateAndPledge": 197988,
+          "membership": 134
+        },
+        "2024": {
+          "averageAttendance": 70,
+          "plateAndPledge": 221041,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9142,
@@ -26875,31 +26965,16 @@
   },
   {
     "vh_id": 9119,
-    "name": "St. John's Episcopal School, Rancho Santa Margarita, CA",
+    "name": "Position in Los Angeles",
     "diocese": "Los Angeles",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9119",
     "position_type": "Assistant / Associate / Curate (Part-time)",
     "congregation": "",
     "receiving_names_from": "05/01/2014",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8923,
-      "name": "St. John's Episcopal School",
-      "street": "30382 Via Con Dios",
-      "city": "Rancho Santa Margarita",
-      "state": "CA",
-      "zip": "92688",
-      "phone": "949-858-5144",
-      "email": "webmaster@stjohns-es.org",
-      "website": "https://www.stjohns-es.org",
-      "type": "school",
-      "lat": 33.64451,
-      "lng": -117.60191
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9118,
@@ -27479,31 +27554,16 @@
   },
   {
     "vh_id": 9105,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9105",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "04/30/2020",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9103,
@@ -27603,31 +27663,16 @@
   },
   {
     "vh_id": 9101,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9101",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9099,
@@ -27657,7 +27702,7 @@
   },
   {
     "vh_id": 9096,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "St. David's Episcopal Church, Bean Blossom, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -27668,80 +27713,50 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 6878,
+      "name": "St. David's Episcopal Church",
+      "street": "11 West State,  Road 45 ",
+      "city": "Bean Blossom",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "47448",
+      "phone": "(812) 988-1038",
+      "email": "info@StDavidsBB.org",
+      "website": "http://stdavidsbb.org",
+      "type": "church",
+      "lat": 39.2666,
+      "lng": -86.24981
     },
     "match_confidence": "exact"
   },
   {
     "vh_id": 9095,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9095",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "05/07/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9094,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9094",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "05/28/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9093,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "St Christopher's Episcopal Church, Carmel, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -27752,80 +27767,105 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 9644,
+      "name": "St Christopher's Episcopal Church",
+      "street": "1402 W Main St, ",
+      "city": "Carmel",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46032",
+      "phone": "317-846-8716",
+      "email": "office@stchriscarmel.org",
+      "website": "https://www.stchriscarmel.org/",
+      "type": "church",
+      "lat": 39.97894,
+      "lng": -86.15282
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Christophers Episcopal Church (Carmel)",
+      "years": {
+        "2015": {
+          "averageAttendance": 237,
+          "plateAndPledge": 594621,
+          "membership": 1217
+        },
+        "2016": {
+          "averageAttendance": 231,
+          "plateAndPledge": 557622,
+          "membership": 1229
+        },
+        "2017": {
+          "averageAttendance": 224,
+          "plateAndPledge": 584332,
+          "membership": 556
+        },
+        "2018": {
+          "averageAttendance": 229,
+          "plateAndPledge": 606941,
+          "membership": 582
+        },
+        "2019": {
+          "averageAttendance": 237,
+          "plateAndPledge": 673683,
+          "membership": 623
+        },
+        "2020": {
+          "averageAttendance": 278,
+          "plateAndPledge": 592067,
+          "membership": 628
+        },
+        "2021": {
+          "averageAttendance": 164,
+          "plateAndPledge": 586410,
+          "membership": 655
+        },
+        "2022": {
+          "averageAttendance": 203,
+          "plateAndPledge": 706317,
+          "membership": 634
+        },
+        "2023": {
+          "averageAttendance": 233,
+          "plateAndPledge": 760801,
+          "membership": 657
+        },
+        "2024": {
+          "averageAttendance": 255,
+          "plateAndPledge": 796760,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9092,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9092",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "10/08/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9091,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9091",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9090,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Holy Family Episcopal Church, Fishers, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -27836,20 +27876,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3126,
+      "name": "Holy Family Episcopal Church",
+      "street": "11445 Fishers Point Blvd",
+      "city": "Fishers",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46038-2997",
+      "phone": "317-842-4133",
+      "email": "admin@hfec.org",
+      "website": "https://www.holyfamilyfishers.org",
+      "type": "church",
+      "lat": 39.95319,
+      "lng": -86.02075
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Holy Family Episcopal Church (Fishers)",
+      "years": {
+        "2015": {
+          "averageAttendance": 121,
+          "plateAndPledge": 214183,
+          "membership": 259
+        },
+        "2016": {
+          "averageAttendance": 113,
+          "plateAndPledge": 212631,
+          "membership": 268
+        },
+        "2017": {
+          "averageAttendance": 98,
+          "plateAndPledge": 189303,
+          "membership": 261
+        },
+        "2018": {
+          "averageAttendance": 96,
+          "plateAndPledge": 255869,
+          "membership": 273
+        },
+        "2019": {
+          "averageAttendance": 100,
+          "plateAndPledge": 224801,
+          "membership": 276
+        },
+        "2020": {
+          "averageAttendance": 103,
+          "plateAndPledge": 174644,
+          "membership": 279
+        },
+        "2021": {
+          "averageAttendance": 80,
+          "plateAndPledge": 183218,
+          "membership": 292
+        },
+        "2022": {
+          "averageAttendance": 80,
+          "plateAndPledge": 183218,
+          "membership": 292
+        },
+        "2023": {
+          "averageAttendance": 110,
+          "plateAndPledge": 195012,
+          "membership": 136
+        },
+        "2024": {
+          "averageAttendance": 82,
+          "plateAndPledge": 193038,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9089,
@@ -27936,31 +28031,16 @@
   },
   {
     "vh_id": 9088,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9088",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9087,
@@ -28047,44 +28127,99 @@
   },
   {
     "vh_id": 9086,
-    "name": "Position in Indianapolis",
+    "name": "Trinity Episcopal Church, Indianapolis, IN",
     "diocese": "Indianapolis",
-    "state": "",
+    "state": "IN",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9086",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "03/23/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3137,
+      "name": "Trinity Episcopal Church",
+      "street": "3243 N Meridian St",
+      "city": "Indianapolis",
+      "state": "IN",
+      "zip": "46208-4645",
+      "phone": "317.926.1346",
+      "email": "communications@trinitychurchindy.org",
+      "website": "https://trinitychurchindy.org/",
+      "type": "church",
+      "lat": 39.81527,
+      "lng": -86.15611
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 234,
+          "plateAndPledge": 533805,
+          "membership": 748
+        },
+        "2016": {
+          "averageAttendance": 255,
+          "plateAndPledge": 552737,
+          "membership": 729
+        },
+        "2017": {
+          "averageAttendance": 253,
+          "plateAndPledge": 601671,
+          "membership": 743
+        },
+        "2018": {
+          "averageAttendance": 251,
+          "plateAndPledge": 626755,
+          "membership": 775
+        },
+        "2019": {
+          "averageAttendance": 252,
+          "plateAndPledge": 657312,
+          "membership": 796
+        },
+        "2020": {
+          "averageAttendance": 254,
+          "plateAndPledge": 688360,
+          "membership": 796
+        },
+        "2021": {
+          "averageAttendance": 119,
+          "plateAndPledge": 666537,
+          "membership": 793
+        },
+        "2022": {
+          "averageAttendance": 207,
+          "plateAndPledge": 709061,
+          "membership": 811
+        },
+        "2023": {
+          "averageAttendance": 210,
+          "plateAndPledge": 713744,
+          "membership": 775
+        },
+        "2024": {
+          "averageAttendance": 198,
+          "plateAndPledge": 801539,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9085,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9085",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9084,
@@ -28101,31 +28236,16 @@
   },
   {
     "vh_id": 9083,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9083",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9082,
@@ -28142,35 +28262,20 @@
   },
   {
     "vh_id": 9081,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9081",
     "position_type": "Bi-vocational Priest",
     "congregation": "",
     "receiving_names_from": "04/30/2014",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9080,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Church of the Nativity, Indianapolis, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -28181,20 +28286,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3131,
+      "name": "Church of the Nativity",
+      "street": "7300 Lantern Rd",
+      "city": "Indianapolis",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46256-2118",
+      "phone": "317-849-3656",
+      "email": "Nativity@nativity-indy.org",
+      "website": "http://nativity-indy.org",
+      "type": "church",
+      "lat": 39.89744,
+      "lng": -86.01039
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Church of the Nativity (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 77,
+          "plateAndPledge": 173492,
+          "membership": 298
+        },
+        "2016": {
+          "averageAttendance": 75,
+          "plateAndPledge": 166195,
+          "membership": 296
+        },
+        "2017": {
+          "averageAttendance": 88,
+          "plateAndPledge": 145185,
+          "membership": 141
+        },
+        "2018": {
+          "averageAttendance": 94,
+          "plateAndPledge": 133583,
+          "membership": 154
+        },
+        "2019": {
+          "averageAttendance": 97,
+          "plateAndPledge": 168969,
+          "membership": 164
+        },
+        "2020": {
+          "averageAttendance": 93,
+          "plateAndPledge": 148818,
+          "membership": 143
+        },
+        "2021": {
+          "averageAttendance": 53,
+          "plateAndPledge": 159796,
+          "membership": 136
+        },
+        "2022": {
+          "averageAttendance": 65,
+          "plateAndPledge": 180373,
+          "membership": 128
+        },
+        "2023": {
+          "averageAttendance": 70,
+          "plateAndPledge": 197988,
+          "membership": 134
+        },
+        "2024": {
+          "averageAttendance": 70,
+          "plateAndPledge": 221041,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9079,
@@ -28281,91 +28441,46 @@
   },
   {
     "vh_id": 9078,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9078",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9077,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9077",
     "position_type": "Bi-vocational Priest",
     "congregation": "",
     "receiving_names_from": "10/15/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9076,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9076",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "10/15/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9075,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Trinity Episcopal Church, Indianapolis, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -28376,132 +28491,127 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3137,
+      "name": "Trinity Episcopal Church",
+      "street": "3243 N Meridian St",
+      "city": "Indianapolis",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46208-4645",
+      "phone": "317.926.1346",
+      "email": "communications@trinitychurchindy.org",
+      "website": "https://trinitychurchindy.org/",
+      "type": "church",
+      "lat": 39.81527,
+      "lng": -86.15611
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 234,
+          "plateAndPledge": 533805,
+          "membership": 748
+        },
+        "2016": {
+          "averageAttendance": 255,
+          "plateAndPledge": 552737,
+          "membership": 729
+        },
+        "2017": {
+          "averageAttendance": 253,
+          "plateAndPledge": 601671,
+          "membership": 743
+        },
+        "2018": {
+          "averageAttendance": 251,
+          "plateAndPledge": 626755,
+          "membership": 775
+        },
+        "2019": {
+          "averageAttendance": 252,
+          "plateAndPledge": 657312,
+          "membership": 796
+        },
+        "2020": {
+          "averageAttendance": 254,
+          "plateAndPledge": 688360,
+          "membership": 796
+        },
+        "2021": {
+          "averageAttendance": 119,
+          "plateAndPledge": 666537,
+          "membership": 793
+        },
+        "2022": {
+          "averageAttendance": 207,
+          "plateAndPledge": 709061,
+          "membership": 811
+        },
+        "2023": {
+          "averageAttendance": 210,
+          "plateAndPledge": 713744,
+          "membership": 775
+        },
+        "2024": {
+          "averageAttendance": 198,
+          "plateAndPledge": 801539,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9074,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9074",
     "position_type": "Bi-vocational Priest",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9073,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9073",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9072,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9072",
     "position_type": "Priest-in-Charge Shared Ministry",
     "congregation": "",
     "receiving_names_from": "07/07/2013",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9071,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9071",
     "position_type": "Priest-in-Charge Shared Ministry",
     "congregation": "",
     "receiving_names_from": "05/24/2013",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9070,
@@ -28518,31 +28628,16 @@
   },
   {
     "vh_id": 9069,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9069",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9068,
@@ -28559,7 +28654,7 @@
   },
   {
     "vh_id": 9067,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "St. John's Episcopal Church, Lafayette, IN",
     "diocese": "Indianapolis",
     "state": "IN",
     "vh_status": "Search complete",
@@ -28570,48 +28665,88 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3139,
+      "name": "St. John's Episcopal Church",
+      "street": "600 Ferry St",
+      "city": "Lafayette",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "47901-1142",
+      "phone": "765-742-4079",
+      "email": "stjohns@stjohns-laf.org",
+      "website": "http://www.stjohns-laf.org/",
+      "type": "church",
+      "lat": 40.42024,
+      "lng": -86.89011
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Johns Episcopal Church (Lafayette)",
+      "years": {
+        "2015": {
+          "averageAttendance": 165,
+          "plateAndPledge": 392650,
+          "membership": 389
+        },
+        "2016": {
+          "averageAttendance": 167,
+          "plateAndPledge": 404783,
+          "membership": 391
+        },
+        "2017": {
+          "averageAttendance": 162,
+          "plateAndPledge": 407870,
+          "membership": 385
+        },
+        "2018": {
+          "averageAttendance": 151,
+          "plateAndPledge": 406878,
+          "membership": 386
+        },
+        "2019": {
+          "averageAttendance": 152,
+          "plateAndPledge": 422123,
+          "membership": 388
+        },
+        "2020": {
+          "averageAttendance": 162,
+          "plateAndPledge": 366120,
+          "membership": 388
+        },
+        "2021": {
+          "averageAttendance": 83,
+          "plateAndPledge": 450479,
+          "membership": 391
+        },
+        "2022": {
+          "averageAttendance": 100,
+          "plateAndPledge": 422994,
+          "membership": 391
+        },
+        "2023": {
+          "averageAttendance": 115,
+          "plateAndPledge": 412804,
+          "membership": 153
+        },
+        "2024": {
+          "averageAttendance": 133,
+          "plateAndPledge": 557626,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9066,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9066",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/15/2011",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9065,
@@ -28626,76 +28761,101 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
+      "nid": 3129,
+      "name": "Episcopal Church of All Saints",
+      "street": "1559 Central Avenue",
+      "city": "Indianapolis",
       "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
+      "zip": "46202-2698",
+      "phone": "(317)635-2538",
+      "email": "rector@allsaintsindy.org",
+      "website": "http://allsaintsindy.org/",
+      "type": "church",
+      "lat": 39.78826,
+      "lng": -86.1489
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "All Saints Episcopal Church (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 94,
+          "plateAndPledge": 236689,
+          "membership": 156
+        },
+        "2016": {
+          "averageAttendance": 96,
+          "plateAndPledge": 228735,
+          "membership": 163
+        },
+        "2017": {
+          "averageAttendance": 103,
+          "plateAndPledge": 235645,
+          "membership": 170
+        },
+        "2018": {
+          "averageAttendance": 110,
+          "plateAndPledge": 233381,
+          "membership": 195
+        },
+        "2019": {
+          "averageAttendance": 111,
+          "plateAndPledge": 259145,
+          "membership": 206
+        },
+        "2020": {
+          "averageAttendance": 109,
+          "plateAndPledge": 281567,
+          "membership": 208
+        },
+        "2021": {
+          "averageAttendance": 61,
+          "plateAndPledge": 332667,
+          "membership": 215
+        },
+        "2022": {
+          "averageAttendance": 94,
+          "plateAndPledge": 272205,
+          "membership": 219
+        },
+        "2023": {
+          "averageAttendance": 82,
+          "plateAndPledge": 292595,
+          "membership": 194
+        },
+        "2024": {
+          "averageAttendance": 79,
+          "plateAndPledge": 268285,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9064,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9064",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9063,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9063",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9062,
@@ -28782,31 +28942,16 @@
   },
   {
     "vh_id": 9061,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9061",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9057,
@@ -28945,59 +29090,29 @@
   },
   {
     "vh_id": 9049,
-    "name": "Camp Stevens, Julian, CA",
+    "name": "Position in Los Angeles",
     "diocese": "Los Angeles",
-    "state": "CA",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9049",
     "position_type": "Camp/Conference Center Director",
     "congregation": "",
     "receiving_names_from": "12/01/2011",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6606,
-      "name": "Camp Stevens",
-      "street": "1108 Banner Road (physical address)",
-      "city": "Julian",
-      "state": "CA",
-      "zip": "92036",
-      "phone": "760-765-0028",
-      "email": "info@campstevens.org",
-      "website": "http://campstevens.org",
-      "type": "other",
-      "lat": 33.088195,
-      "lng": -116.596409
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 9047,
-    "name": "Episcopal Diocese of Indianapolis, INDIANAPOLIS, IN",
+    "name": "Position in Indianapolis",
     "diocese": "Indianapolis",
-    "state": "IN",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9047",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8970,
-      "name": "Episcopal Diocese of Indianapolis",
-      "street": "125 Monument Circle",
-      "city": "INDIANAPOLIS",
-      "state": "IN",
-      "zip": "46204",
-      "phone": "(317) 926-5454",
-      "email": "communication@indydio.org",
-      "website": "https://indydio.org/",
-      "type": "other",
-      "lat": 39.76926,
-      "lng": -86.15765
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8963,
@@ -29562,31 +29677,16 @@
   },
   {
     "vh_id": 8906,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Beginning search",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8906",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8905,
@@ -29616,91 +29716,46 @@
   },
   {
     "vh_id": 8899,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8899",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8898,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8898",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8897,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8897",
     "position_type": "Priest-in-Charge Shared Ministry",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8896,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "St. John's Episcopal Church, Ithaca, NY",
     "diocese": "Central New York",
     "state": "NY",
     "vh_status": "Receiving names",
@@ -29711,104 +29766,114 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
+      "nid": 2411,
+      "name": "St. John's Episcopal Church",
+      "street": "210 North Cayuga Street",
+      "city": "Ithaca",
       "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
+      "zip": "14850-4385",
+      "phone": "(607) 273-6532",
+      "email": "office@stjohnsithaca.org",
+      "website": "http://www.stjohnsithaca.org",
+      "type": "church",
+      "lat": 42.44114,
+      "lng": -76.49945
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Johns Episcopal Church (Ithaca)",
+      "years": {
+        "2015": {
+          "averageAttendance": 110,
+          "plateAndPledge": 187806,
+          "membership": 232
+        },
+        "2016": {
+          "averageAttendance": 99,
+          "plateAndPledge": 191393,
+          "membership": 203
+        },
+        "2017": {
+          "averageAttendance": 94,
+          "plateAndPledge": 184699,
+          "membership": 198
+        },
+        "2018": {
+          "averageAttendance": 88,
+          "plateAndPledge": 184812,
+          "membership": 227
+        },
+        "2019": {
+          "averageAttendance": 87,
+          "plateAndPledge": 174611,
+          "membership": 232
+        },
+        "2020": {
+          "averageAttendance": 78,
+          "plateAndPledge": 178727,
+          "membership": 227
+        },
+        "2021": {
+          "averageAttendance": 42,
+          "plateAndPledge": 176309,
+          "membership": 243
+        },
+        "2022": {
+          "averageAttendance": 109,
+          "plateAndPledge": 196837,
+          "membership": 256
+        },
+        "2023": {
+          "averageAttendance": 66,
+          "plateAndPledge": 177384,
+          "membership": 295
+        },
+        "2024": {
+          "averageAttendance": 57,
+          "plateAndPledge": 162163,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8895,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8895",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8894,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8894",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8893,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8893",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8889,
@@ -30087,31 +30152,16 @@
   },
   {
     "vh_id": 8877,
-    "name": "The Episcopal Diocese of Central New York, Liverpool, NY",
+    "name": "Position in Central New York",
     "diocese": "Central New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8877",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "10/31/2017",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7006,
-      "name": "The Episcopal Diocese of Central New York",
-      "street": "1020 7th North St",
-      "city": "Liverpool",
-      "state": "NY",
-      "zip": "13088",
-      "phone": "(315) 474-6596",
-      "email": "office@cnyepiscopal.org",
-      "website": "http://cnyepiscopal.org",
-      "type": "other",
-      "lat": 43.100185,
-      "lng": -76.182187
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8870,
@@ -32487,31 +32537,16 @@
   },
   {
     "vh_id": 8580,
-    "name": "Camp Mitchell Episcopal Camp and Retreat Center, Morrilton, AR",
+    "name": "Position in Arkansas",
     "diocese": "Arkansas",
-    "state": "AR",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8580",
     "position_type": "Camp/Conference Center Director",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7528,
-      "name": "Camp Mitchell Episcopal Camp and Retreat Center",
-      "street": "10 Camp Mitchell Road",
-      "city": "Morrilton",
-      "state": "AR",
-      "zip": "72110",
-      "phone": "501-727-5451",
-      "email": "bobbie@campmitchell.org",
-      "website": "http://www.campmitchell.org",
-      "type": "other",
-      "lat": 35.1289,
-      "lng": -92.85561
-    },
-    "match_confidence": "exact"
+    "open_ended": true
   },
   {
     "vh_id": 8579,
@@ -32554,16 +32589,86 @@
   },
   {
     "vh_id": 8576,
-    "name": "Position in Arkansas",
+    "name": "St. Paul's Episcopal Church, Fayetteville, AR",
     "diocese": "Arkansas",
-    "state": "",
+    "state": "AR",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8576",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2103,
+      "name": "St. Paul's Episcopal Church",
+      "street": "224 N East Ave",
+      "city": "Fayetteville",
+      "state": "AR",
+      "zip": "72701-5225",
+      "phone": "479-442-7373",
+      "email": "info@stpaulsfay.org",
+      "website": "http://www.stpaulsfay.org",
+      "type": "church",
+      "lat": 36.06564,
+      "lng": -94.15936
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Pauls Episcopal Church (Fayetteville)",
+      "years": {
+        "2015": {
+          "averageAttendance": 454,
+          "plateAndPledge": 1199383,
+          "membership": 2017
+        },
+        "2016": {
+          "averageAttendance": 485,
+          "plateAndPledge": 1194076,
+          "membership": 2063
+        },
+        "2017": {
+          "averageAttendance": 471,
+          "plateAndPledge": 1360482,
+          "membership": 2090
+        },
+        "2018": {
+          "averageAttendance": 447,
+          "plateAndPledge": 1142063,
+          "membership": 2116
+        },
+        "2019": {
+          "averageAttendance": 453,
+          "plateAndPledge": 1272776,
+          "membership": 2160
+        },
+        "2020": {
+          "averageAttendance": 455,
+          "plateAndPledge": 1324993,
+          "membership": 2162
+        },
+        "2021": {
+          "averageAttendance": 193,
+          "plateAndPledge": 1399511,
+          "membership": 2183
+        },
+        "2022": {
+          "averageAttendance": 332,
+          "plateAndPledge": 1377782,
+          "membership": 2222
+        },
+        "2023": {
+          "averageAttendance": 408,
+          "plateAndPledge": 1483685,
+          "membership": 2268
+        },
+        "2024": {
+          "averageAttendance": 393,
+          "plateAndPledge": 1558225,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8575,

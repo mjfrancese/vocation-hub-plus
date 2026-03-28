@@ -56,7 +56,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ github.event.deployment.payload.web_url || 'https://mjfrancese.github.io/vocation-hub-plus/' }}
+      url: ${{ github.event.deployment.payload.web_url || 'https://vocationhub.plus/' }}
     runs-on: ubuntu-latest
     needs: build
     steps:

@@ -333,75 +333,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 5609,
-      "name": "St. David's Episcopal Church",
-      "street": "301 E 8th St",
-      "city": "Austin",
+      "nid": 8519,
+      "name": "St. Philip the Evangelist",
+      "street": "2525 Seagler Rd.",
+      "city": "Houston",
       "state": "TX",
-      "zip": "78701-3280",
-      "phone": "512-610-3500",
-      "email": "info@stdave.org",
-      "website": "http://www.stdave.org",
+      "zip": "77042",
+      "phone": "346-212-1465",
+      "email": "akuol@epicenter.org",
+      "website": "http://www.stphilipstheevangelist.org",
       "type": "church",
-      "lat": 30.26882,
-      "lng": -97.73914
+      "lat": 29.739113,
+      "lng": -95.553228
     },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Davids Episcopal Church (Austin)",
-      "years": {
-        "2015": {
-          "averageAttendance": 677,
-          "plateAndPledge": 2022576,
-          "membership": 2222
-        },
-        "2016": {
-          "averageAttendance": 705,
-          "plateAndPledge": 1895099,
-          "membership": 2138
-        },
-        "2017": {
-          "averageAttendance": 598,
-          "plateAndPledge": 1883571,
-          "membership": 2010
-        },
-        "2018": {
-          "averageAttendance": 551,
-          "plateAndPledge": 1829096,
-          "membership": 1976
-        },
-        "2019": {
-          "averageAttendance": 536,
-          "plateAndPledge": 1727484,
-          "membership": 1934
-        },
-        "2020": {
-          "averageAttendance": 533,
-          "plateAndPledge": 1592225,
-          "membership": 1892
-        },
-        "2021": {
-          "averageAttendance": 237,
-          "plateAndPledge": 1474300,
-          "membership": 1875
-        },
-        "2022": {
-          "averageAttendance": 235,
-          "plateAndPledge": 1468909,
-          "membership": 1863
-        },
-        "2023": {
-          "averageAttendance": 251,
-          "plateAndPledge": 1306158,
-          "membership": 1852
-        },
-        "2024": {
-          "averageAttendance": 253,
-          "plateAndPledge": 1613117,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
@@ -447,20 +392,75 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
+      "nid": 4128,
+      "name": "St. Thomas Episcopal Church ",
+      "street": "315 Lindsey St",
+      "city": "Reidsville",
       "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
+      "zip": "27320-3649",
+      "phone": "336-349-3511",
+      "email": "office@stthomasreidsville.org",
+      "website": "http://www.stthomasreidsville.org",
+      "type": "church",
+      "lat": 36.359111,
+      "lng": -79.667012
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Thomas Episcopal Church (Reidsville)",
+      "years": {
+        "2015": {
+          "averageAttendance": 57,
+          "plateAndPledge": 169841,
+          "membership": 170
+        },
+        "2016": {
+          "averageAttendance": 50,
+          "plateAndPledge": 165605,
+          "membership": 169
+        },
+        "2017": {
+          "averageAttendance": 42,
+          "plateAndPledge": 162943,
+          "membership": 136
+        },
+        "2018": {
+          "averageAttendance": 40,
+          "plateAndPledge": 152944,
+          "membership": 113
+        },
+        "2019": {
+          "averageAttendance": 21,
+          "plateAndPledge": 138365,
+          "membership": 109
+        },
+        "2020": {
+          "averageAttendance": 22,
+          "plateAndPledge": 116088,
+          "membership": 109
+        },
+        "2021": {
+          "averageAttendance": 27,
+          "plateAndPledge": 122841,
+          "membership": 111
+        },
+        "2022": {
+          "averageAttendance": 28,
+          "plateAndPledge": 165818,
+          "membership": 103
+        },
+        "2023": {
+          "averageAttendance": 37,
+          "plateAndPledge": 145196,
+          "membership": 104
+        },
+        "2024": {
+          "averageAttendance": 32,
+          "plateAndPledge": 260931,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
@@ -1252,20 +1252,75 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
+      "nid": 4102,
+      "name": "St. Matthew's Episcopal Church",
+      "street": "210 St. Mary's Road",
+      "city": "Hillsborough",
       "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
+      "zip": "27278-2518",
+      "phone": "919-732-9308",
+      "email": "welcome@stmatthewshillsborough.org",
+      "website": "http://www.stmatthewshillsborough.org",
+      "type": "church",
+      "lat": 36.07613,
+      "lng": -79.09551
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Matthews Parish Church (Hillsborough)",
+      "years": {
+        "2015": {
+          "averageAttendance": 179,
+          "plateAndPledge": 458431,
+          "membership": 366
+        },
+        "2016": {
+          "averageAttendance": 179,
+          "plateAndPledge": 460571,
+          "membership": 359
+        },
+        "2017": {
+          "averageAttendance": 181,
+          "plateAndPledge": 479579,
+          "membership": 340
+        },
+        "2018": {
+          "averageAttendance": 162,
+          "plateAndPledge": 472288,
+          "membership": 360
+        },
+        "2019": {
+          "averageAttendance": 179,
+          "plateAndPledge": 466342,
+          "membership": 345
+        },
+        "2020": {
+          "averageAttendance": 198,
+          "plateAndPledge": 487421,
+          "membership": 353
+        },
+        "2021": {
+          "averageAttendance": 79,
+          "plateAndPledge": 531509,
+          "membership": 319
+        },
+        "2022": {
+          "averageAttendance": 124,
+          "plateAndPledge": 516189,
+          "membership": 283
+        },
+        "2023": {
+          "averageAttendance": 147,
+          "plateAndPledge": 560931,
+          "membership": 346
+        },
+        "2024": {
+          "averageAttendance": 160,
+          "plateAndPledge": 606765,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
@@ -3212,19 +3267,74 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
+      "nid": 4151,
+      "name": "Calvary Episcopal Church",
+      "street": "308 E Wade St",
+      "city": "Wadesboro",
       "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
+      "zip": "28170-2231",
+      "phone": "704.694.3223",
+      "email": "calvarywadesboronc@gmail.com",
+      "website": "https://calvarywadesboro.org/",
+      "type": "church",
+      "lat": 34.965712,
+      "lng": -80.073786
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Calvary Episcopal Church (Wadesboro)",
+      "years": {
+        "2015": {
+          "averageAttendance": 32,
+          "plateAndPledge": 104469,
+          "membership": 138
+        },
+        "2016": {
+          "averageAttendance": 57,
+          "plateAndPledge": 84436,
+          "membership": 143
+        },
+        "2017": {
+          "averageAttendance": 59,
+          "plateAndPledge": 111340,
+          "membership": 143
+        },
+        "2018": {
+          "averageAttendance": 52,
+          "plateAndPledge": 103316,
+          "membership": 156
+        },
+        "2019": {
+          "averageAttendance": 46,
+          "plateAndPledge": 103568,
+          "membership": 153
+        },
+        "2020": {
+          "averageAttendance": 32,
+          "plateAndPledge": 93880,
+          "membership": 86
+        },
+        "2021": {
+          "averageAttendance": 17,
+          "plateAndPledge": 90814,
+          "membership": 85
+        },
+        "2022": {
+          "averageAttendance": 24,
+          "plateAndPledge": 72344,
+          "membership": 84
+        },
+        "2023": {
+          "averageAttendance": 23,
+          "plateAndPledge": 57014,
+          "membership": 83
+        },
+        "2024": {
+          "averageAttendance": 21,
+          "plateAndPledge": 133518,
+          "membership": null
+        }
+      }
+    }
   }
 ]
