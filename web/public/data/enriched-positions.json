@@ -2246,7 +2246,62 @@
       "lat": 36.22537,
       "lng": -119.32121
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Johns Episcopal Church (Tulare)",
+      "years": {
+        "2015": {
+          "averageAttendance": 19,
+          "plateAndPledge": 56414,
+          "membership": 72
+        },
+        "2016": {
+          "averageAttendance": 19,
+          "plateAndPledge": 39918,
+          "membership": 70
+        },
+        "2017": {
+          "averageAttendance": 11,
+          "plateAndPledge": 38969,
+          "membership": 55
+        },
+        "2018": {
+          "averageAttendance": 12,
+          "plateAndPledge": 33161,
+          "membership": 52
+        },
+        "2019": {
+          "averageAttendance": 12,
+          "plateAndPledge": 32688,
+          "membership": 49
+        },
+        "2020": {
+          "averageAttendance": 9,
+          "plateAndPledge": 29496,
+          "membership": 33
+        },
+        "2021": {
+          "averageAttendance": 9,
+          "plateAndPledge": 29300,
+          "membership": 29
+        },
+        "2022": {
+          "averageAttendance": 10,
+          "plateAndPledge": 30286,
+          "membership": 29
+        },
+        "2023": {
+          "averageAttendance": 8,
+          "plateAndPledge": 32350,
+          "membership": 29
+        },
+        "2024": {
+          "averageAttendance": 8,
+          "plateAndPledge": 34525,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",

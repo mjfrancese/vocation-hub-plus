@@ -1,80 +1,18 @@
 {
-  "generated_at": "2026-03-28T16:30:24.340Z",
+  "generated_at": "2026-03-28T16:52:17.847Z",
   "summary": {
-    "missing_vh_id": 7,
-    "missing_church_match": 81,
-    "total": 88
+    "missing_vh_id": 0,
+    "missing_church_match": 79,
+    "total": 79
   },
   "gaps": [
     {
-      "type": "missing_vh_id",
+      "type": "missing_church_match",
       "source": "public",
-      "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
-      "name": "Zion (Manchester Center)",
-      "diocese": "Vermont",
-      "state": "VT",
-      "receiving_from": "01/01/2026",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
-    },
-    {
-      "type": "missing_vh_id",
-      "source": "public",
-      "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
-      "name": "Wethersfield and Glastonbury, Diocese of Connecticut",
-      "diocese": "Connecticut",
-      "state": "CT",
-      "receiving_from": "03/06/2026",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
-    },
-    {
-      "type": "missing_vh_id",
-      "source": "public",
-      "id": "a01db93f5280e9242603b8daccffd3124b2c0babe022cb2b4bf8eb70af46602f",
-      "name": "Trinity and Old Swedes (Wilmington)",
-      "diocese": "Delaware",
-      "state": "DE",
-      "receiving_from": "03/26/2026",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
-    },
-    {
-      "type": "missing_vh_id",
-      "source": "public",
-      "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
-      "name": "St Pauls (Visalia)",
-      "diocese": "San Joaquin",
-      "state": "CA",
-      "receiving_from": "02/28/2026",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
-    },
-    {
-      "type": "missing_vh_id",
-      "source": "public",
-      "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
-      "name": "St Pauls (Newnan)",
-      "diocese": "Atlanta",
-      "state": "GA",
-      "receiving_from": "03/01/2026",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
-    },
-    {
-      "type": "missing_vh_id",
-      "source": "public",
-      "id": "27cee984957f11193c460249d87c6260aec7b92e71ab6e8348d0c16da2b0c56f",
-      "name": "St Matthias (Midlothian)",
-      "diocese": "Southern Virginia",
-      "state": "VA",
-      "receiving_from": "03/27/2026",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
-    },
-    {
-      "type": "missing_vh_id",
-      "source": "public",
-      "id": "7a439067c0ecddca3379266775c3c236ae1d1c53ec513b68470b03cfcd8c5c73",
+      "vh_id": 10175,
       "name": "Rosebud Episcopal Mission West, Diocese of South Dakota",
       "diocese": "South Dakota",
-      "state": "SD",
-      "receiving_from": "09/15/2025",
-      "note": "Scraper click-through failed. Needs manual VH ID or backfill."
+      "note": "Has VH ID but no church registry match."
     },
     {
       "type": "missing_church_match",
@@ -95,9 +33,9 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10683,
+      "vh_id": 10682,
       "name": "St Andrews Episcopal Church",
-      "diocese": "Milwaukee",
+      "diocese": "Wisconsin",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -106,14 +44,6 @@
       "vh_id": 10679,
       "name": "St James Episcopal Church",
       "diocese": "Central Gulf Coast",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10674,
-      "name": "St Johns Episcopal Church",
-      "diocese": "North Carolina",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -154,6 +84,14 @@
       "vh_id": 10604,
       "name": "St Georges Episcopal Church",
       "diocese": "Maryland",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10599,
+      "name": "St Matthews Parish Church",
+      "diocese": "North Carolina",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -218,14 +156,6 @@
       "vh_id": 10355,
       "name": "St Peters Memorial",
       "diocese": "Rochester",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10353,
-      "name": "St Pauls Episcopal Church",
-      "diocese": "San Joaquin",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -394,14 +324,6 @@
       "vh_id": 10183,
       "name": "Position in Northern California",
       "diocese": "Northern California",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10175,
-      "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-      "diocese": "South Dakota",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -610,14 +532,6 @@
       "vh_id": 8915,
       "name": "Position in Central Pennsylvania",
       "diocese": "Central Pennsylvania",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 8914,
-      "name": "Christ Episcopal Church",
-      "diocese": "Connecticut",
       "note": "Active extended position with no church registry match."
     },
     {

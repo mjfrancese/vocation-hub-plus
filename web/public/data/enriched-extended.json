@@ -191,7 +191,62 @@
       "lat": 37.79161,
       "lng": -122.24619
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St James the Apostle Church (Oakland)",
+      "years": {
+        "2015": {
+          "averageAttendance": 47,
+          "plateAndPledge": 16877,
+          "membership": 116
+        },
+        "2016": {
+          "averageAttendance": 30,
+          "plateAndPledge": 15000,
+          "membership": 116
+        },
+        "2017": {
+          "averageAttendance": 25,
+          "plateAndPledge": 4283,
+          "membership": 116
+        },
+        "2018": {
+          "averageAttendance": 27,
+          "plateAndPledge": 11174,
+          "membership": 116
+        },
+        "2019": {
+          "averageAttendance": 32,
+          "plateAndPledge": 14131,
+          "membership": 36
+        },
+        "2020": {
+          "averageAttendance": 16,
+          "plateAndPledge": 18299,
+          "membership": 42
+        },
+        "2021": {
+          "averageAttendance": 14,
+          "plateAndPledge": 14049,
+          "membership": 33
+        },
+        "2022": {
+          "averageAttendance": 18,
+          "plateAndPledge": 17622,
+          "membership": 32
+        },
+        "2023": {
+          "averageAttendance": 20,
+          "plateAndPledge": 15338,
+          "membership": 33
+        },
+        "2024": {
+          "averageAttendance": 20,
+          "plateAndPledge": 21063,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10688,
@@ -424,7 +479,62 @@
       "lat": 21.399158,
       "lng": -157.740486
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Christophers Church (Kailua)",
+      "years": {
+        "2015": {
+          "averageAttendance": 106,
+          "plateAndPledge": 226652,
+          "membership": 236
+        },
+        "2016": {
+          "averageAttendance": 93,
+          "plateAndPledge": 209315,
+          "membership": 231
+        },
+        "2017": {
+          "averageAttendance": 94,
+          "plateAndPledge": 207500,
+          "membership": 229
+        },
+        "2018": {
+          "averageAttendance": 97,
+          "plateAndPledge": 210052,
+          "membership": 227
+        },
+        "2019": {
+          "averageAttendance": 94,
+          "plateAndPledge": 204912,
+          "membership": 225
+        },
+        "2020": {
+          "averageAttendance": 91,
+          "plateAndPledge": 199321,
+          "membership": 227
+        },
+        "2021": {
+          "averageAttendance": 86,
+          "plateAndPledge": 188933,
+          "membership": 235
+        },
+        "2022": {
+          "averageAttendance": 81,
+          "plateAndPledge": 184774,
+          "membership": 220
+        },
+        "2023": {
+          "averageAttendance": 75,
+          "plateAndPledge": 178508,
+          "membership": 220
+        },
+        "2024": {
+          "averageAttendance": 73,
+          "plateAndPledge": 191130,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10679,
@@ -893,7 +1003,62 @@
       "lat": 44.29176,
       "lng": -68.28763
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Marys and St Jude (Northeast Harbor)",
+      "years": {
+        "2015": {
+          "averageAttendance": 68,
+          "plateAndPledge": 164016,
+          "membership": 235
+        },
+        "2016": {
+          "averageAttendance": 68,
+          "plateAndPledge": 159415,
+          "membership": 235
+        },
+        "2017": {
+          "averageAttendance": 56,
+          "plateAndPledge": 186652,
+          "membership": 234
+        },
+        "2018": {
+          "averageAttendance": 52,
+          "plateAndPledge": 147092,
+          "membership": 226
+        },
+        "2019": {
+          "averageAttendance": 55,
+          "plateAndPledge": 141456,
+          "membership": 224
+        },
+        "2020": {
+          "averageAttendance": 29,
+          "plateAndPledge": 164980,
+          "membership": 222
+        },
+        "2021": {
+          "averageAttendance": 82,
+          "plateAndPledge": 193454,
+          "membership": 234
+        },
+        "2022": {
+          "averageAttendance": 62,
+          "plateAndPledge": 290970,
+          "membership": 238
+        },
+        "2023": {
+          "averageAttendance": 71,
+          "plateAndPledge": 342023,
+          "membership": 245
+        },
+        "2024": {
+          "averageAttendance": 73,
+          "plateAndPledge": 320701,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10646,
@@ -1006,56 +1171,56 @@
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Hamilton)",
+      "congregationCity": "St Paul Episcopal Church (Virginia City)",
       "years": {
         "2015": {
-          "averageAttendance": 46,
-          "plateAndPledge": 69892,
-          "membership": 118
+          "averageAttendance": 15,
+          "plateAndPledge": 66549,
+          "membership": 17
         },
         "2016": {
-          "averageAttendance": 38,
-          "plateAndPledge": 71578,
-          "membership": 116
+          "averageAttendance": 15,
+          "plateAndPledge": 43360,
+          "membership": 19
         },
         "2017": {
-          "averageAttendance": 38,
-          "plateAndPledge": 64637,
-          "membership": 109
+          "averageAttendance": 14,
+          "plateAndPledge": 54300,
+          "membership": 25
         },
         "2018": {
-          "averageAttendance": 21,
-          "plateAndPledge": 62296,
-          "membership": 80
+          "averageAttendance": 19,
+          "plateAndPledge": 27484,
+          "membership": 21
         },
         "2019": {
-          "averageAttendance": 25,
-          "plateAndPledge": 51566,
-          "membership": 107
+          "averageAttendance": 17,
+          "plateAndPledge": 48050,
+          "membership": 21
         },
         "2020": {
-          "averageAttendance": 22,
-          "plateAndPledge": 61867,
-          "membership": 101
+          "averageAttendance": 11,
+          "plateAndPledge": 35607,
+          "membership": 20
         },
         "2021": {
-          "averageAttendance": 18,
-          "plateAndPledge": 63304,
-          "membership": 104
+          "averageAttendance": 16,
+          "plateAndPledge": 37603,
+          "membership": 20
         },
         "2022": {
-          "averageAttendance": 18,
-          "plateAndPledge": 67117,
-          "membership": 100
+          "averageAttendance": 13,
+          "plateAndPledge": 44191,
+          "membership": 20
         },
         "2023": {
-          "averageAttendance": 24,
-          "plateAndPledge": 73747,
-          "membership": 100
+          "averageAttendance": 13,
+          "plateAndPledge": 47097,
+          "membership": 27
         },
         "2024": {
-          "averageAttendance": 24,
-          "plateAndPledge": 82281,
+          "averageAttendance": 13,
+          "plateAndPledge": 43542,
           "membership": null
         }
       }
@@ -1781,84 +1946,14 @@
     "vh_id": 10599,
     "name": "St Matthews Parish Church",
     "diocese": "North Carolina",
-    "state": "NC",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10599",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Matthews Parish Church",
     "receiving_names_from": "02/19/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 4102,
-      "name": "St. Matthew's Episcopal Church",
-      "street": "210 St. Mary's Road",
-      "city": "Hillsborough",
-      "state": "NC",
-      "zip": "27278-2518",
-      "phone": "919-732-9308",
-      "email": "welcome@stmatthewshillsborough.org",
-      "website": "http://www.stmatthewshillsborough.org",
-      "type": "church",
-      "lat": 36.07613,
-      "lng": -79.09551
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Matthews Parish Church (Hillsborough)",
-      "years": {
-        "2015": {
-          "averageAttendance": 179,
-          "plateAndPledge": 458431,
-          "membership": 366
-        },
-        "2016": {
-          "averageAttendance": 179,
-          "plateAndPledge": 460571,
-          "membership": 359
-        },
-        "2017": {
-          "averageAttendance": 181,
-          "plateAndPledge": 479579,
-          "membership": 340
-        },
-        "2018": {
-          "averageAttendance": 162,
-          "plateAndPledge": 472288,
-          "membership": 360
-        },
-        "2019": {
-          "averageAttendance": 179,
-          "plateAndPledge": 466342,
-          "membership": 345
-        },
-        "2020": {
-          "averageAttendance": 198,
-          "plateAndPledge": 487421,
-          "membership": 353
-        },
-        "2021": {
-          "averageAttendance": 79,
-          "plateAndPledge": 531509,
-          "membership": 319
-        },
-        "2022": {
-          "averageAttendance": 124,
-          "plateAndPledge": 516189,
-          "membership": 283
-        },
-        "2023": {
-          "averageAttendance": 147,
-          "plateAndPledge": 560931,
-          "membership": 346
-        },
-        "2024": {
-          "averageAttendance": 160,
-          "plateAndPledge": 606765,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10596,
@@ -2078,7 +2173,62 @@
       "lat": 41.584255,
       "lng": -87.367808
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Augustine Episcopal Church (Gary)",
+      "years": {
+        "2015": {
+          "averageAttendance": 35,
+          "plateAndPledge": 58679,
+          "membership": 125
+        },
+        "2016": {
+          "averageAttendance": 41,
+          "plateAndPledge": 60222,
+          "membership": 123
+        },
+        "2017": {
+          "averageAttendance": 27,
+          "plateAndPledge": 55758,
+          "membership": 123
+        },
+        "2018": {
+          "averageAttendance": 23,
+          "plateAndPledge": 60817,
+          "membership": 123
+        },
+        "2019": {
+          "averageAttendance": 23,
+          "plateAndPledge": 54545,
+          "membership": 123
+        },
+        "2020": {
+          "averageAttendance": 21,
+          "plateAndPledge": 52487,
+          "membership": 123
+        },
+        "2021": {
+          "averageAttendance": 24,
+          "plateAndPledge": 53242,
+          "membership": 120
+        },
+        "2022": {
+          "averageAttendance": 17,
+          "plateAndPledge": 50361,
+          "membership": 120
+        },
+        "2023": {
+          "averageAttendance": 24,
+          "plateAndPledge": 38605,
+          "membership": 117
+        },
+        "2024": {
+          "averageAttendance": 20,
+          "plateAndPledge": 31021,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10583,
@@ -2597,7 +2747,57 @@
       "lat": 43.84458,
       "lng": -88.83483
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Peter Episcopal Church (Ripon)",
+      "years": {
+        "2015": {
+          "averageAttendance": 33,
+          "plateAndPledge": 74444,
+          "membership": 104
+        },
+        "2016": {
+          "averageAttendance": 27,
+          "plateAndPledge": 56961,
+          "membership": 44
+        },
+        "2017": {
+          "averageAttendance": 33,
+          "plateAndPledge": 59537,
+          "membership": 50
+        },
+        "2018": {
+          "averageAttendance": 33,
+          "plateAndPledge": 69333,
+          "membership": 50
+        },
+        "2019": {
+          "averageAttendance": 29,
+          "plateAndPledge": 51140,
+          "membership": 52
+        },
+        "2020": {
+          "averageAttendance": 30,
+          "plateAndPledge": 51746,
+          "membership": 53
+        },
+        "2021": {
+          "averageAttendance": 28,
+          "plateAndPledge": 52328,
+          "membership": 68
+        },
+        "2022": {
+          "averageAttendance": 27,
+          "plateAndPledge": 34918,
+          "membership": 74
+        },
+        "2023": {
+          "averageAttendance": 29,
+          "plateAndPledge": 51799,
+          "membership": 81
+        }
+      }
+    }
   },
   {
     "vh_id": 10566,
@@ -2638,7 +2838,62 @@
       "lat": 39.553579,
       "lng": -77.9952
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Mt Zion Episcopal Church (Hedgesville)",
+      "years": {
+        "2015": {
+          "averageAttendance": 49,
+          "plateAndPledge": 32138,
+          "membership": 52
+        },
+        "2016": {
+          "averageAttendance": 49,
+          "plateAndPledge": 35802,
+          "membership": 52
+        },
+        "2017": {
+          "averageAttendance": 49,
+          "plateAndPledge": 41400,
+          "membership": 52
+        },
+        "2018": {
+          "averageAttendance": 46,
+          "plateAndPledge": 33975,
+          "membership": 100
+        },
+        "2019": {
+          "averageAttendance": 46,
+          "plateAndPledge": 33975,
+          "membership": 100
+        },
+        "2020": {
+          "averageAttendance": 52,
+          "plateAndPledge": 25841,
+          "membership": 99
+        },
+        "2021": {
+          "averageAttendance": 52,
+          "plateAndPledge": 33852,
+          "membership": 103
+        },
+        "2022": {
+          "averageAttendance": 26,
+          "plateAndPledge": 42689,
+          "membership": 95
+        },
+        "2023": {
+          "averageAttendance": 33,
+          "plateAndPledge": 48549,
+          "membership": 100
+        },
+        "2024": {
+          "averageAttendance": 36,
+          "plateAndPledge": 51371,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10564,
@@ -4451,7 +4706,62 @@
       "lat": 36.03356,
       "lng": -89.39052
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Mary's Episcopal Church (Dyersburg)",
+      "years": {
+        "2015": {
+          "averageAttendance": 52,
+          "plateAndPledge": 130661,
+          "membership": 160
+        },
+        "2016": {
+          "averageAttendance": 49,
+          "plateAndPledge": 122948,
+          "membership": 96
+        },
+        "2017": {
+          "averageAttendance": 45,
+          "plateAndPledge": 121842,
+          "membership": 89
+        },
+        "2018": {
+          "averageAttendance": 42,
+          "plateAndPledge": 107487,
+          "membership": 89
+        },
+        "2019": {
+          "averageAttendance": 40,
+          "plateAndPledge": 114471,
+          "membership": 94
+        },
+        "2020": {
+          "averageAttendance": 38,
+          "plateAndPledge": 115887,
+          "membership": 95
+        },
+        "2021": {
+          "averageAttendance": 39,
+          "plateAndPledge": 128538,
+          "membership": 96
+        },
+        "2022": {
+          "averageAttendance": 36,
+          "plateAndPledge": 120918,
+          "membership": 95
+        },
+        "2023": {
+          "averageAttendance": 25,
+          "plateAndPledge": 111005,
+          "membership": 84
+        },
+        "2024": {
+          "averageAttendance": 19,
+          "plateAndPledge": 105657,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10522,
@@ -9319,7 +9629,62 @@
       "lat": 41.92682,
       "lng": -73.99998
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Holy Cross (Kingston)",
+      "years": {
+        "2015": {
+          "averageAttendance": 30,
+          "plateAndPledge": 61717,
+          "membership": 278
+        },
+        "2016": {
+          "averageAttendance": 65,
+          "plateAndPledge": 61024,
+          "membership": 122
+        },
+        "2017": {
+          "averageAttendance": 71,
+          "plateAndPledge": 62412,
+          "membership": 137
+        },
+        "2018": {
+          "averageAttendance": 64,
+          "plateAndPledge": 66770,
+          "membership": 135
+        },
+        "2019": {
+          "averageAttendance": 64,
+          "plateAndPledge": 67748,
+          "membership": 146
+        },
+        "2020": {
+          "averageAttendance": 72,
+          "plateAndPledge": 72497,
+          "membership": 146
+        },
+        "2021": {
+          "averageAttendance": 75,
+          "plateAndPledge": 92666,
+          "membership": 134
+        },
+        "2022": {
+          "averageAttendance": 76,
+          "plateAndPledge": 82550,
+          "membership": 138
+        },
+        "2023": {
+          "averageAttendance": 80,
+          "plateAndPledge": 107351,
+          "membership": 119
+        },
+        "2024": {
+          "averageAttendance": 61,
+          "plateAndPledge": 99196,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10246,
@@ -10356,7 +10721,62 @@
       "lat": 40.363555,
       "lng": -73.977483
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St George by the River Church (Rumson)",
+      "years": {
+        "2015": {
+          "averageAttendance": 235,
+          "plateAndPledge": 798767,
+          "membership": 1132
+        },
+        "2016": {
+          "averageAttendance": 234,
+          "plateAndPledge": 728237,
+          "membership": 1140
+        },
+        "2017": {
+          "averageAttendance": 235,
+          "plateAndPledge": 795765,
+          "membership": 1143
+        },
+        "2018": {
+          "averageAttendance": 232,
+          "plateAndPledge": 812000,
+          "membership": 1156
+        },
+        "2019": {
+          "averageAttendance": 207,
+          "plateAndPledge": 754700,
+          "membership": 1154
+        },
+        "2020": {
+          "averageAttendance": 193,
+          "plateAndPledge": 740506,
+          "membership": 1155
+        },
+        "2021": {
+          "averageAttendance": 104,
+          "plateAndPledge": 675710,
+          "membership": 1171
+        },
+        "2022": {
+          "averageAttendance": 174,
+          "plateAndPledge": 716795,
+          "membership": 1167
+        },
+        "2023": {
+          "averageAttendance": 142,
+          "plateAndPledge": 643730,
+          "membership": 1179
+        },
+        "2024": {
+          "averageAttendance": 144,
+          "plateAndPledge": 641266,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10232,
@@ -10451,7 +10871,62 @@
       "lat": 41.23741,
       "lng": -85.86171
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Anne Episcopal Church (Warsaw)",
+      "years": {
+        "2015": {
+          "averageAttendance": 119,
+          "plateAndPledge": 251490,
+          "membership": 233
+        },
+        "2016": {
+          "averageAttendance": 95,
+          "plateAndPledge": 209975,
+          "membership": 215
+        },
+        "2017": {
+          "averageAttendance": 90,
+          "plateAndPledge": 236181,
+          "membership": 227
+        },
+        "2018": {
+          "averageAttendance": 84,
+          "plateAndPledge": 214212,
+          "membership": 202
+        },
+        "2019": {
+          "averageAttendance": 89,
+          "plateAndPledge": 262103,
+          "membership": 193
+        },
+        "2020": {
+          "averageAttendance": 69,
+          "plateAndPledge": 272507,
+          "membership": 171
+        },
+        "2021": {
+          "averageAttendance": 54,
+          "plateAndPledge": 248895,
+          "membership": 181
+        },
+        "2022": {
+          "averageAttendance": 75,
+          "plateAndPledge": 243560,
+          "membership": 172
+        },
+        "2023": {
+          "averageAttendance": 67,
+          "plateAndPledge": 320699,
+          "membership": 160
+        },
+        "2024": {
+          "averageAttendance": 67,
+          "plateAndPledge": 234229,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10225,
@@ -12030,7 +12505,62 @@
       "lat": 47.1562282,
       "lng": -122.574403
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Joseph & St John Church (Lakewood)",
+      "years": {
+        "2015": {
+          "averageAttendance": 42,
+          "plateAndPledge": 131350,
+          "membership": 89
+        },
+        "2016": {
+          "averageAttendance": 34,
+          "plateAndPledge": 127967,
+          "membership": 86
+        },
+        "2017": {
+          "averageAttendance": 26,
+          "plateAndPledge": 94847,
+          "membership": 86
+        },
+        "2018": {
+          "averageAttendance": 26,
+          "plateAndPledge": 93948,
+          "membership": 60
+        },
+        "2019": {
+          "averageAttendance": 27,
+          "plateAndPledge": 0,
+          "membership": 66
+        },
+        "2020": {
+          "averageAttendance": 26,
+          "plateAndPledge": 43265,
+          "membership": 56
+        },
+        "2021": {
+          "averageAttendance": 2,
+          "plateAndPledge": 47382,
+          "membership": 48
+        },
+        "2022": {
+          "averageAttendance": 2,
+          "plateAndPledge": 47382,
+          "membership": 48
+        },
+        "2023": {
+          "averageAttendance": 19,
+          "plateAndPledge": 740,
+          "membership": 50
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10155,
@@ -12058,7 +12588,62 @@
       "lat": 47.1562282,
       "lng": -122.574403
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Joseph & St John Church (Lakewood)",
+      "years": {
+        "2015": {
+          "averageAttendance": 42,
+          "plateAndPledge": 131350,
+          "membership": 89
+        },
+        "2016": {
+          "averageAttendance": 34,
+          "plateAndPledge": 127967,
+          "membership": 86
+        },
+        "2017": {
+          "averageAttendance": 26,
+          "plateAndPledge": 94847,
+          "membership": 86
+        },
+        "2018": {
+          "averageAttendance": 26,
+          "plateAndPledge": 93948,
+          "membership": 60
+        },
+        "2019": {
+          "averageAttendance": 27,
+          "plateAndPledge": 0,
+          "membership": 66
+        },
+        "2020": {
+          "averageAttendance": 26,
+          "plateAndPledge": 43265,
+          "membership": 56
+        },
+        "2021": {
+          "averageAttendance": 2,
+          "plateAndPledge": 47382,
+          "membership": 48
+        },
+        "2022": {
+          "averageAttendance": 2,
+          "plateAndPledge": 47382,
+          "membership": 48
+        },
+        "2023": {
+          "averageAttendance": 19,
+          "plateAndPledge": 740,
+          "membership": 50
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10154,
@@ -12099,7 +12684,62 @@
       "lat": 47.1562282,
       "lng": -122.574403
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Joseph & St John Church (Lakewood)",
+      "years": {
+        "2015": {
+          "averageAttendance": 42,
+          "plateAndPledge": 131350,
+          "membership": 89
+        },
+        "2016": {
+          "averageAttendance": 34,
+          "plateAndPledge": 127967,
+          "membership": 86
+        },
+        "2017": {
+          "averageAttendance": 26,
+          "plateAndPledge": 94847,
+          "membership": 86
+        },
+        "2018": {
+          "averageAttendance": 26,
+          "plateAndPledge": 93948,
+          "membership": 60
+        },
+        "2019": {
+          "averageAttendance": 27,
+          "plateAndPledge": 0,
+          "membership": 66
+        },
+        "2020": {
+          "averageAttendance": 26,
+          "plateAndPledge": 43265,
+          "membership": 56
+        },
+        "2021": {
+          "averageAttendance": 2,
+          "plateAndPledge": 47382,
+          "membership": 48
+        },
+        "2022": {
+          "averageAttendance": 2,
+          "plateAndPledge": 47382,
+          "membership": 48
+        },
+        "2023": {
+          "averageAttendance": 19,
+          "plateAndPledge": 740,
+          "membership": 50
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10148,
@@ -16295,7 +16935,62 @@
       "lat": 39.52357,
       "lng": -119.81461
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Reno)",
+      "years": {
+        "2015": {
+          "averageAttendance": 278,
+          "plateAndPledge": 473795,
+          "membership": 805
+        },
+        "2016": {
+          "averageAttendance": 282,
+          "plateAndPledge": 497474,
+          "membership": 865
+        },
+        "2017": {
+          "averageAttendance": 281,
+          "plateAndPledge": 581735,
+          "membership": 887
+        },
+        "2018": {
+          "averageAttendance": 270,
+          "plateAndPledge": 599396,
+          "membership": 904
+        },
+        "2019": {
+          "averageAttendance": 285,
+          "plateAndPledge": 715580,
+          "membership": 933
+        },
+        "2020": {
+          "averageAttendance": 257,
+          "plateAndPledge": 657216,
+          "membership": 920
+        },
+        "2021": {
+          "averageAttendance": 116,
+          "plateAndPledge": 673741,
+          "membership": 922
+        },
+        "2022": {
+          "averageAttendance": 168,
+          "plateAndPledge": 704224,
+          "membership": 645
+        },
+        "2023": {
+          "averageAttendance": 172,
+          "plateAndPledge": 661308,
+          "membership": 606
+        },
+        "2024": {
+          "averageAttendance": 191,
+          "plateAndPledge": 721172,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10003,
@@ -17259,7 +17954,62 @@
       "lat": 26.52155,
       "lng": -81.91331
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Iona Hope Episcopal Church (Fort Myers)",
+      "years": {
+        "2015": {
+          "averageAttendance": 206,
+          "plateAndPledge": 453150,
+          "membership": 150
+        },
+        "2016": {
+          "averageAttendance": 195,
+          "plateAndPledge": 456855,
+          "membership": 167
+        },
+        "2017": {
+          "averageAttendance": 214,
+          "plateAndPledge": 470052,
+          "membership": 169
+        },
+        "2018": {
+          "averageAttendance": 205,
+          "plateAndPledge": 457190,
+          "membership": 169
+        },
+        "2019": {
+          "averageAttendance": 212,
+          "plateAndPledge": 479323,
+          "membership": 177
+        },
+        "2020": {
+          "averageAttendance": 55,
+          "plateAndPledge": 419516,
+          "membership": 175
+        },
+        "2021": {
+          "averageAttendance": 130,
+          "plateAndPledge": 400230,
+          "membership": 161
+        },
+        "2022": {
+          "averageAttendance": 120,
+          "plateAndPledge": 462631,
+          "membership": 149
+        },
+        "2023": {
+          "averageAttendance": 155,
+          "plateAndPledge": 361121,
+          "membership": 157
+        },
+        "2024": {
+          "averageAttendance": 111,
+          "plateAndPledge": 486989,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9962,
@@ -21059,7 +21809,62 @@
       "lat": 35.21454,
       "lng": -97.44323
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Johns Episcopal Church (Norman)",
+      "years": {
+        "2015": {
+          "averageAttendance": 228,
+          "plateAndPledge": 524758,
+          "membership": 1027
+        },
+        "2016": {
+          "averageAttendance": 221,
+          "plateAndPledge": 464267,
+          "membership": 1030
+        },
+        "2017": {
+          "averageAttendance": 184,
+          "plateAndPledge": 538172,
+          "membership": 1017
+        },
+        "2018": {
+          "averageAttendance": 167,
+          "plateAndPledge": 546422,
+          "membership": 880
+        },
+        "2019": {
+          "averageAttendance": 173,
+          "plateAndPledge": 528904,
+          "membership": 885
+        },
+        "2020": {
+          "averageAttendance": 74,
+          "plateAndPledge": 519097,
+          "membership": 711
+        },
+        "2021": {
+          "averageAttendance": 108,
+          "plateAndPledge": 446511,
+          "membership": 484
+        },
+        "2022": {
+          "averageAttendance": 126,
+          "plateAndPledge": 481451,
+          "membership": 490
+        },
+        "2023": {
+          "averageAttendance": 125,
+          "plateAndPledge": 392488,
+          "membership": 298
+        },
+        "2024": {
+          "averageAttendance": 104,
+          "plateAndPledge": 437998,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9772,
@@ -21243,7 +22048,62 @@
       "lat": 35.189931,
       "lng": -97.46633
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Michaels Episcopal Church (Norman)",
+      "years": {
+        "2015": {
+          "averageAttendance": 136,
+          "plateAndPledge": 283527,
+          "membership": 282
+        },
+        "2016": {
+          "averageAttendance": 127,
+          "plateAndPledge": 281442,
+          "membership": 284
+        },
+        "2017": {
+          "averageAttendance": 118,
+          "plateAndPledge": 294594,
+          "membership": 209
+        },
+        "2018": {
+          "averageAttendance": 102,
+          "plateAndPledge": 279993,
+          "membership": 208
+        },
+        "2019": {
+          "averageAttendance": 97,
+          "plateAndPledge": 268234,
+          "membership": 221
+        },
+        "2020": {
+          "averageAttendance": 89,
+          "plateAndPledge": 271832,
+          "membership": 217
+        },
+        "2021": {
+          "averageAttendance": 76,
+          "plateAndPledge": 257720,
+          "membership": 231
+        },
+        "2022": {
+          "averageAttendance": 54,
+          "plateAndPledge": 226540,
+          "membership": 160
+        },
+        "2023": {
+          "averageAttendance": 60,
+          "plateAndPledge": 230153,
+          "membership": 156
+        },
+        "2024": {
+          "averageAttendance": 67,
+          "plateAndPledge": 235912,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9759,
@@ -22953,7 +23813,62 @@
       "lat": 41.15124,
       "lng": -85.08213
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Alban Episcopal Church (Fort Wayne)",
+      "years": {
+        "2015": {
+          "averageAttendance": 83,
+          "plateAndPledge": 149542,
+          "membership": 161
+        },
+        "2016": {
+          "averageAttendance": 79,
+          "plateAndPledge": 144263,
+          "membership": 159
+        },
+        "2017": {
+          "averageAttendance": 79,
+          "plateAndPledge": 142059,
+          "membership": 147
+        },
+        "2018": {
+          "averageAttendance": 69,
+          "plateAndPledge": 142439,
+          "membership": 143
+        },
+        "2019": {
+          "averageAttendance": 63,
+          "plateAndPledge": 115313,
+          "membership": 116
+        },
+        "2020": {
+          "averageAttendance": 52,
+          "plateAndPledge": 106437,
+          "membership": 120
+        },
+        "2021": {
+          "averageAttendance": 38,
+          "plateAndPledge": 111774,
+          "membership": 118
+        },
+        "2022": {
+          "averageAttendance": 40,
+          "plateAndPledge": 116022,
+          "membership": 109
+        },
+        "2023": {
+          "averageAttendance": 45,
+          "plateAndPledge": 112681,
+          "membership": 113
+        },
+        "2024": {
+          "averageAttendance": 45,
+          "plateAndPledge": 108423,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9638,
@@ -26345,7 +27260,62 @@
       "lat": 26.27228,
       "lng": -81.72466
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Monica Episcopal Church (Naples)",
+      "years": {
+        "2015": {
+          "averageAttendance": 192,
+          "plateAndPledge": 415194,
+          "membership": 508
+        },
+        "2016": {
+          "averageAttendance": 206,
+          "plateAndPledge": 438012,
+          "membership": 528
+        },
+        "2017": {
+          "averageAttendance": 200,
+          "plateAndPledge": 416032,
+          "membership": 524
+        },
+        "2018": {
+          "averageAttendance": 184,
+          "plateAndPledge": 416959,
+          "membership": 533
+        },
+        "2019": {
+          "averageAttendance": 194,
+          "plateAndPledge": 499544,
+          "membership": 593
+        },
+        "2020": {
+          "averageAttendance": 41,
+          "plateAndPledge": 425684,
+          "membership": 588
+        },
+        "2021": {
+          "averageAttendance": 48,
+          "plateAndPledge": 435844,
+          "membership": 591
+        },
+        "2022": {
+          "averageAttendance": 139,
+          "plateAndPledge": 452081,
+          "membership": 300
+        },
+        "2023": {
+          "averageAttendance": 146,
+          "plateAndPledge": 467275,
+          "membership": 305
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9561,
@@ -27027,7 +27997,62 @@
       "lat": 26.52155,
       "lng": -81.91331
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Iona Hope Episcopal Church (Fort Myers)",
+      "years": {
+        "2015": {
+          "averageAttendance": 206,
+          "plateAndPledge": 453150,
+          "membership": 150
+        },
+        "2016": {
+          "averageAttendance": 195,
+          "plateAndPledge": 456855,
+          "membership": 167
+        },
+        "2017": {
+          "averageAttendance": 214,
+          "plateAndPledge": 470052,
+          "membership": 169
+        },
+        "2018": {
+          "averageAttendance": 205,
+          "plateAndPledge": 457190,
+          "membership": 169
+        },
+        "2019": {
+          "averageAttendance": 212,
+          "plateAndPledge": 479323,
+          "membership": 177
+        },
+        "2020": {
+          "averageAttendance": 55,
+          "plateAndPledge": 419516,
+          "membership": 175
+        },
+        "2021": {
+          "averageAttendance": 130,
+          "plateAndPledge": 400230,
+          "membership": 161
+        },
+        "2022": {
+          "averageAttendance": 120,
+          "plateAndPledge": 462631,
+          "membership": 149
+        },
+        "2023": {
+          "averageAttendance": 155,
+          "plateAndPledge": 361121,
+          "membership": 157
+        },
+        "2024": {
+          "averageAttendance": 111,
+          "plateAndPledge": 486989,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9537,
@@ -27654,56 +28679,56 @@
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Johns Episcopal Church (Fayetteville)",
+      "congregationCity": "St John Episcopal Church (Wilmington)",
       "years": {
         "2015": {
-          "averageAttendance": 150,
-          "plateAndPledge": 520618,
-          "membership": 797
+          "averageAttendance": 168,
+          "plateAndPledge": 462448,
+          "membership": 559
         },
         "2016": {
-          "averageAttendance": 139,
-          "plateAndPledge": 470947,
-          "membership": 837
+          "averageAttendance": 194,
+          "plateAndPledge": 483981,
+          "membership": 562
         },
         "2017": {
-          "averageAttendance": 164,
-          "plateAndPledge": 478281,
-          "membership": 817
+          "averageAttendance": 193,
+          "plateAndPledge": 506223,
+          "membership": 417
         },
         "2018": {
-          "averageAttendance": 148,
-          "plateAndPledge": 506662,
-          "membership": 813
+          "averageAttendance": 195,
+          "plateAndPledge": 579067,
+          "membership": 415
         },
         "2019": {
-          "averageAttendance": 142,
-          "plateAndPledge": 482584,
-          "membership": 819
+          "averageAttendance": 207,
+          "plateAndPledge": 564324,
+          "membership": 436
         },
         "2020": {
-          "averageAttendance": 123,
-          "plateAndPledge": 512861,
-          "membership": 813
+          "averageAttendance": 201,
+          "plateAndPledge": 563403,
+          "membership": 431
         },
         "2021": {
-          "averageAttendance": 84,
-          "plateAndPledge": 493161,
-          "membership": 813
+          "averageAttendance": 110,
+          "plateAndPledge": 551299,
+          "membership": 437
         },
         "2022": {
-          "averageAttendance": 98,
-          "plateAndPledge": 498316,
-          "membership": 811
+          "averageAttendance": 167,
+          "plateAndPledge": 457600,
+          "membership": 437
         },
         "2023": {
-          "averageAttendance": 96,
-          "plateAndPledge": 481982,
-          "membership": 300
+          "averageAttendance": 202,
+          "plateAndPledge": 497017,
+          "membership": 441
         },
         "2024": {
-          "averageAttendance": 95,
-          "plateAndPledge": 526300,
+          "averageAttendance": 196,
+          "plateAndPledge": 590396,
           "membership": null
         }
       }
@@ -29923,7 +30948,62 @@
       "lat": 37.27133,
       "lng": -122.01667
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Andrew Episcopal Church (Saratoga)",
+      "years": {
+        "2015": {
+          "averageAttendance": 328,
+          "plateAndPledge": 920457,
+          "membership": 2055
+        },
+        "2016": {
+          "averageAttendance": 354,
+          "plateAndPledge": 870376,
+          "membership": 2043
+        },
+        "2017": {
+          "averageAttendance": 342,
+          "plateAndPledge": 866106,
+          "membership": 2050
+        },
+        "2018": {
+          "averageAttendance": 353,
+          "plateAndPledge": 877657,
+          "membership": 2040
+        },
+        "2019": {
+          "averageAttendance": 343,
+          "plateAndPledge": 792118,
+          "membership": 2030
+        },
+        "2020": {
+          "averageAttendance": 369,
+          "plateAndPledge": 762523,
+          "membership": 407
+        },
+        "2021": {
+          "averageAttendance": 109,
+          "plateAndPledge": 614158,
+          "membership": 377
+        },
+        "2022": {
+          "averageAttendance": 216,
+          "plateAndPledge": 654960,
+          "membership": 265
+        },
+        "2023": {
+          "averageAttendance": 167,
+          "plateAndPledge": 566041,
+          "membership": 309
+        },
+        "2024": {
+          "averageAttendance": 120,
+          "plateAndPledge": 520322,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9268,
@@ -35837,7 +36917,62 @@
       "lat": 40.47551,
       "lng": -77.12843
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Church of the Nativity-St Stephen (Newport)",
+      "years": {
+        "2015": {
+          "averageAttendance": 38,
+          "plateAndPledge": 111162,
+          "membership": 53
+        },
+        "2016": {
+          "averageAttendance": 41,
+          "plateAndPledge": 72538,
+          "membership": 68
+        },
+        "2017": {
+          "averageAttendance": 52,
+          "plateAndPledge": 68062,
+          "membership": 64
+        },
+        "2018": {
+          "averageAttendance": 32,
+          "plateAndPledge": 48660,
+          "membership": 67
+        },
+        "2019": {
+          "averageAttendance": 32,
+          "plateAndPledge": 63595,
+          "membership": 63
+        },
+        "2020": {
+          "averageAttendance": 29,
+          "plateAndPledge": 59231,
+          "membership": 72
+        },
+        "2021": {
+          "averageAttendance": 26,
+          "plateAndPledge": 52879,
+          "membership": 62
+        },
+        "2022": {
+          "averageAttendance": 24,
+          "plateAndPledge": 64778,
+          "membership": 53
+        },
+        "2023": {
+          "averageAttendance": 22,
+          "plateAndPledge": 57652,
+          "membership": 53
+        },
+        "2024": {
+          "averageAttendance": 20,
+          "plateAndPledge": 41688,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8863,
@@ -40155,7 +41290,62 @@
       "lat": 34.57897,
       "lng": -85.59027
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Josephs on the Mountain Church (Mentone)",
+      "years": {
+        "2015": {
+          "averageAttendance": 35,
+          "plateAndPledge": 98368,
+          "membership": 84
+        },
+        "2016": {
+          "averageAttendance": 36,
+          "plateAndPledge": 115515,
+          "membership": 82
+        },
+        "2017": {
+          "averageAttendance": 40,
+          "plateAndPledge": 120425,
+          "membership": 86
+        },
+        "2018": {
+          "averageAttendance": 46,
+          "plateAndPledge": 120192,
+          "membership": 89
+        },
+        "2019": {
+          "averageAttendance": 49,
+          "plateAndPledge": 149050,
+          "membership": 97
+        },
+        "2020": {
+          "averageAttendance": 54,
+          "plateAndPledge": 159272,
+          "membership": 102
+        },
+        "2021": {
+          "averageAttendance": 39,
+          "plateAndPledge": 179433,
+          "membership": 112
+        },
+        "2022": {
+          "averageAttendance": 42,
+          "plateAndPledge": 192873,
+          "membership": 113
+        },
+        "2023": {
+          "averageAttendance": 59,
+          "plateAndPledge": 223277,
+          "membership": 112
+        },
+        "2024": {
+          "averageAttendance": 72,
+          "plateAndPledge": 165253,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8530,
