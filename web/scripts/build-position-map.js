@@ -143,11 +143,32 @@ function isDiocesanOrGenericDomain(domain) {
 
 function extractEmails(fields) {
   const emails = [];
+  const partialDomains = []; // from truncated emails
   for (const f of (fields || [])) {
     const found = (f.value || '').match(/[\w.+-]+@[\w.-]+\.\w+/g);
     if (found) emails.push(...found);
+
+    // Look for truncated emails: user@partial (no valid TLD at end of field)
+    // These occur when multi-email fields hit a character limit
+    const val = (f.value || '').trim();
+    if (val.includes(';') && val.includes('@')) {
+      const parts = val.split(/;\s*/);
+      const last = parts[parts.length - 1].trim();
+      // If last part has @ but no valid TLD, it's truncated
+      if (last.includes('@') && !last.match(/@[\w.-]+\.\w{2,}$/)) {
+        const domainPart = last.split('@')[1];
+        if (domainPart && domainPart.length >= 3) {
+          // Skip truncated generic domains (gmail., yahoo., outlook., aol., etc.)
+          const genericPrefixes = ['gmail', 'yahoo', 'outlook', 'hotmail', 'aol', 'icloud', 'comcast', 'att', 'verizon', 'msn', 'live'];
+          const isGeneric = genericPrefixes.some(g => domainPart.startsWith(g));
+          if (!isGeneric) {
+            partialDomains.push(domainPart.toLowerCase());
+          }
+        }
+      }
+    }
   }
-  return emails;
+  return { emails, partialDomains };
 }
 
 // --- Extract city from position name ---
@@ -249,7 +270,7 @@ function matchByNameDiocese(posName, diocese, indexes) {
 }
 
 function matchPosition(posName, diocese, fields, indexes, website) {
-  const emails = extractEmails(fields);
+  const { emails, partialDomains } = extractEmails(fields);
 
   // Strategy 0: Website match (most reliable when available)
   if (website) {
@@ -349,6 +370,40 @@ function matchPosition(posName, diocese, fields, indexes, website) {
         match_method: 'email_domain_website',
         flagged: false,
       };
+    }
+  }
+
+  // Strategy 1c: Truncated/partial email domain matching
+  // When email fields hit a character limit, the last email is cut off (e.g. "nativitywatervalley@gma")
+  // Try matching the partial domain prefix against registry website domains and email domains
+  for (const partial of partialDomains) {
+    // Search domain index for domains that start with this partial
+    for (const [regDomain, entries] of indexes.domainIndex) {
+      if (regDomain.startsWith(partial)) {
+        const churches = entries.filter(m => !m.church.type || m.church.type === 'church');
+        if (churches.length === 1) {
+          return {
+            church_nid: churches[0].nid,
+            confidence: 'high',
+            match_method: 'partial_email_domain',
+            flagged: false,
+          };
+        }
+      }
+    }
+    // Also check email domains in registry
+    for (const [regDomain, entries] of indexes.emailIndex) {
+      if (regDomain.startsWith(partial)) {
+        const churches = entries.filter(m => !m.church.type || m.church.type === 'church');
+        if (churches.length === 1) {
+          return {
+            church_nid: churches[0].nid,
+            confidence: 'high',
+            match_method: 'partial_email_domain',
+            flagged: false,
+          };
+        }
+      }
     }
   }
 

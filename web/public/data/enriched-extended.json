@@ -4900,7 +4900,7 @@
       "lat": 42.88288,
       "lng": -78.87631
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "St Pauls Cathedral in Buffalo (Buffalo)",
       "years": {
@@ -5811,16 +5811,86 @@
   },
   {
     "vh_id": 10342,
-    "name": "Position in New York",
+    "name": "St. Michael's Church, Manhattan, New York, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10342",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/20/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 380,
+      "name": "St. Michael's Church, Manhattan",
+      "street": "225 W. 99th St.",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10025",
+      "phone": "212-222-2700",
+      "email": "info@saintmichaelschurch.org",
+      "website": "http://www.saintmichaelschurch.org",
+      "type": "church",
+      "lat": 40.79645,
+      "lng": -73.96942
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Michaels Church (New York)",
+      "years": {
+        "2015": {
+          "averageAttendance": 212,
+          "plateAndPledge": 497656,
+          "membership": 646
+        },
+        "2016": {
+          "averageAttendance": 199,
+          "plateAndPledge": 514497,
+          "membership": 669
+        },
+        "2017": {
+          "averageAttendance": 212,
+          "plateAndPledge": 785554,
+          "membership": 690
+        },
+        "2018": {
+          "averageAttendance": 216,
+          "plateAndPledge": 683686,
+          "membership": 694
+        },
+        "2019": {
+          "averageAttendance": 202,
+          "plateAndPledge": 707872,
+          "membership": 701
+        },
+        "2020": {
+          "averageAttendance": 200,
+          "plateAndPledge": 756631,
+          "membership": 633
+        },
+        "2021": {
+          "averageAttendance": 100,
+          "plateAndPledge": 743546,
+          "membership": 568
+        },
+        "2022": {
+          "averageAttendance": 127,
+          "plateAndPledge": 677204,
+          "membership": 503
+        },
+        "2023": {
+          "averageAttendance": 160,
+          "plateAndPledge": 759523,
+          "membership": 499
+        },
+        "2024": {
+          "averageAttendance": 150,
+          "plateAndPledge": 758769,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10340,
@@ -6151,16 +6221,31 @@
   },
   {
     "vh_id": 10324,
-    "name": "Position in Mississippi",
+    "name": "St. Paul's Episcopal Church, Barstow, CA",
     "diocese": "Mississippi",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10324",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "04/15/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1063,
+      "name": "St. Paul's Episcopal Church",
+      "street": "512 E Williams St",
+      "city": "Barstow",
+      "state": "CA",
+      "zip": "92311-2941",
+      "phone": "760-256-1624 ",
+      "email": "stpaulsbarstow@gmail",
+      "website": "http://shepherdstpaulsbarstow.weebly.com",
+      "type": "church",
+      "lat": 34.897335,
+      "lng": -117.02235
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10323,
@@ -6986,16 +7071,86 @@
   },
   {
     "vh_id": 10299,
-    "name": "Position in Spokane",
+    "name": "Church of the Resurrection, Spokane Valley, Spokane Valley, WA",
     "diocese": "Spokane",
-    "state": "",
+    "state": "WA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10299",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "08/31/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5514,
+      "name": "Church of the Resurrection, Spokane Valley",
+      "street": "15319 E 8th Ave",
+      "city": "Spokane Valley",
+      "state": "WA",
+      "zip": "99037-8828",
+      "phone": "(509) 926-6450",
+      "email": "ecorwebmaster@resurrectionspokane.org",
+      "website": "https://resurrectionspokane.spokanediocese.org",
+      "type": "church",
+      "lat": 47.65016,
+      "lng": -117.19846
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Resurrection (Spokane Valley)",
+      "years": {
+        "2015": {
+          "averageAttendance": 83,
+          "plateAndPledge": 145293,
+          "membership": 173
+        },
+        "2016": {
+          "averageAttendance": 84,
+          "plateAndPledge": 124829,
+          "membership": 159
+        },
+        "2017": {
+          "averageAttendance": 82,
+          "plateAndPledge": 132807,
+          "membership": 161
+        },
+        "2018": {
+          "averageAttendance": 81,
+          "plateAndPledge": 141967,
+          "membership": 158
+        },
+        "2019": {
+          "averageAttendance": 72,
+          "plateAndPledge": 145254,
+          "membership": 158
+        },
+        "2020": {
+          "averageAttendance": 88,
+          "plateAndPledge": 102895,
+          "membership": 148
+        },
+        "2021": {
+          "averageAttendance": 43,
+          "plateAndPledge": 130745,
+          "membership": 145
+        },
+        "2022": {
+          "averageAttendance": 40,
+          "plateAndPledge": 134982,
+          "membership": 144
+        },
+        "2023": {
+          "averageAttendance": 41,
+          "plateAndPledge": 165640,
+          "membership": 105
+        },
+        "2024": {
+          "averageAttendance": 45,
+          "plateAndPledge": 127310,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10298,
@@ -17065,16 +17220,86 @@
   },
   {
     "vh_id": 9898,
-    "name": "Position in New Jersey",
+    "name": "St. Thomas Episcopal Church, Pittstown, NJ",
     "diocese": "New Jersey",
-    "state": "",
+    "state": "NJ",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9898",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/10/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3905,
+      "name": "St. Thomas Episcopal Church",
+      "street": "98 Sky Manor Rd",
+      "city": "Pittstown",
+      "state": "NJ",
+      "zip": "08867-4032",
+      "phone": "(908) 996-4091",
+      "email": "secretary@stthomasepc.org",
+      "website": "https://www.stthomasepc.org/",
+      "type": "church",
+      "lat": 40.56045,
+      "lng": -74.98937
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Thomas Episcopal Church (Pittstown)",
+      "years": {
+        "2015": {
+          "averageAttendance": 60,
+          "plateAndPledge": 161942,
+          "membership": 328
+        },
+        "2016": {
+          "averageAttendance": 60,
+          "plateAndPledge": 146479,
+          "membership": 324
+        },
+        "2017": {
+          "averageAttendance": 62,
+          "plateAndPledge": 158742,
+          "membership": 330
+        },
+        "2018": {
+          "averageAttendance": 58,
+          "plateAndPledge": 149747,
+          "membership": 321
+        },
+        "2019": {
+          "averageAttendance": 57,
+          "plateAndPledge": 152223,
+          "membership": 319
+        },
+        "2020": {
+          "averageAttendance": 62,
+          "plateAndPledge": 141535,
+          "membership": 320
+        },
+        "2021": {
+          "averageAttendance": 30,
+          "plateAndPledge": 135383,
+          "membership": 118
+        },
+        "2022": {
+          "averageAttendance": 38,
+          "plateAndPledge": 140446,
+          "membership": 119
+        },
+        "2023": {
+          "averageAttendance": 41,
+          "plateAndPledge": 149089,
+          "membership": 102
+        },
+        "2024": {
+          "averageAttendance": 40,
+          "plateAndPledge": 157363,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9896,
