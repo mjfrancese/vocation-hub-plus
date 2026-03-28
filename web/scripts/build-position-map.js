@@ -72,10 +72,16 @@ function normUrl(u) {
   return u.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '').toLowerCase();
 }
 
+function extractDomain(url) {
+  if (!url) return '';
+  return url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase();
+}
+
 function buildRegistryIndexes(registry) {
   const emailIndex = new Map();   // domain -> [{ nid, church }]
   const dioceseIndex = new Map(); // normDiocese -> [{ nid, church }]
   const websiteIndex = new Map(); // normUrl -> { nid, church }
+  const domainIndex = new Map();  // domain-only -> [{ nid, church }]
 
   for (const [nid, church] of Object.entries(registry)) {
     // Email index
@@ -96,14 +102,22 @@ function buildRegistryIndexes(registry) {
       dioceseIndex.set(key, list);
     }
 
-    // Website index
+    // Website index (full normalized URL)
     const w = normUrl(church.website);
     if (w) {
       websiteIndex.set(w, { nid: parseInt(nid), church });
     }
+
+    // Domain-only index (catches mismatches like /contact vs /)
+    const d = extractDomain(church.website);
+    if (d && !d.includes('facebook.com') && !d.includes('instagram.com')) {
+      const list = domainIndex.get(d) || [];
+      list.push({ nid: parseInt(nid), church });
+      domainIndex.set(d, list);
+    }
   }
 
-  return { emailIndex, dioceseIndex, websiteIndex };
+  return { emailIndex, dioceseIndex, websiteIndex, domainIndex };
 }
 
 // --- Diocesan/generic domain detection ---
@@ -241,6 +255,7 @@ function matchPosition(posName, diocese, fields, indexes, website) {
   if (website) {
     const w = normUrl(website);
     if (w) {
+      // Try exact normalized URL first
       const match = indexes.websiteIndex.get(w);
       if (match && (!match.church.type || match.church.type === 'church')) {
         return {
@@ -249,6 +264,20 @@ function matchPosition(posName, diocese, fields, indexes, website) {
           match_method: 'website',
           flagged: false,
         };
+      }
+      // Fall back to domain-only match (catches /contact vs / mismatches)
+      const d = extractDomain(website);
+      if (d) {
+        const domainMatches = (indexes.domainIndex.get(d) || [])
+          .filter(m => !m.church.type || m.church.type === 'church');
+        if (domainMatches.length === 1) {
+          return {
+            church_nid: domainMatches[0].nid,
+            confidence: 'high',
+            match_method: 'website_domain',
+            flagged: false,
+          };
+        }
       }
     }
   }
@@ -300,10 +329,22 @@ function matchPosition(posName, diocese, fields, indexes, website) {
     if (!domain) continue;
     if (isDiocesanOrGenericDomain(domain)) continue;
 
+    // Try exact website index first
     const match = indexes.websiteIndex.get(domain);
     if (match && (!match.church.type || match.church.type === 'church')) {
       return {
         church_nid: match.nid,
+        confidence: 'high',
+        match_method: 'email_domain_website',
+        flagged: false,
+      };
+    }
+    // Try domain-only index (email domain matches church website domain)
+    const domainMatches = (indexes.domainIndex.get(domain) || [])
+      .filter(m => !m.church.type || m.church.type === 'church');
+    if (domainMatches.length === 1) {
+      return {
+        church_nid: domainMatches[0].nid,
         confidence: 'high',
         match_method: 'email_domain_website',
         flagged: false,
@@ -441,8 +482,32 @@ function main() {
       continue;
     }
 
+    // Extract website from media/links fields if no dedicated website field
+    let website = entry.website;
+    if (!website && entry.fields) {
+      for (const f of entry.fields) {
+        if (!f.value) continue;
+        // Look for URLs in field values, skip VH links, PDFs, and diocesan sites
+        const urls = f.value.match(/https?:\/\/[^\s,;)]+/g);
+        if (!urls) continue;
+        for (const url of urls) {
+          if (url.includes('vocationhub')) continue;
+          if (url.match(/\.(pdf|doc|docx)$/i)) continue;
+          // Prefer URLs with church-like labels
+          const label = (f.label || '').toLowerCase();
+          if (label.includes('website') || label.includes('parish') || label.includes('church') || label.includes('profile')) {
+            website = url;
+            break;
+          }
+          // Store first non-diocesan URL as fallback
+          if (!website) website = url;
+        }
+        if (website && (f.label || '').toLowerCase().match(/website|parish|church/)) break;
+      }
+    }
+
     // Auto-match
-    const result = matchPosition(entry.name, entry.diocese, entry.fields, indexes, entry.website);
+    const result = matchPosition(entry.name, entry.diocese, entry.fields, indexes, website);
     mappings[String(vhId)] = result;
 
     if (result.confidence === 'exact') stats.exact++;

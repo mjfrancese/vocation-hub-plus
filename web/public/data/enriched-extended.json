@@ -108,7 +108,7 @@
       "lat": 40.76346,
       "lng": -111.86503
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Pauls Episcopal Church (Salt Lake City)",
       "years": {
@@ -1057,71 +1057,71 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 1605,
-      "name": "St. Matthew's Episcopal Church",
-      "street": "36 New Canaan Rd",
-      "city": "Wilton",
+      "nid": 1512,
+      "name": "All Saints' Church (Todos los Santos)",
+      "street": "Immanuel Lutheran Church",
+      "city": "Meriden",
       "state": "CT",
-      "zip": "06897-3310",
-      "phone": "(203) 762-7400",
-      "email": "office@stmatthewswilton.org",
-      "website": "http://www.stmatthewswilton.org",
+      "zip": "06451-5439",
+      "phone": " 203-235-9596",
+      "email": "allsaintsepiscopalmeriden@gmail.com",
+      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
       "type": "church",
-      "lat": 41.17554,
-      "lng": -73.44379
+      "lat": 41.53544,
+      "lng": -72.8082
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
-      "congregationCity": "St Matthews Episcopal Church (Wilton)",
+      "congregationCity": "All Saints Church (Meriden)",
       "years": {
         "2015": {
-          "averageAttendance": 176,
-          "plateAndPledge": 671614,
-          "membership": 1239
+          "averageAttendance": 30,
+          "plateAndPledge": 7073,
+          "membership": 52
         },
         "2016": {
-          "averageAttendance": 171,
-          "plateAndPledge": 628487,
-          "membership": 1199
+          "averageAttendance": 27,
+          "plateAndPledge": 7249,
+          "membership": 47
         },
         "2017": {
-          "averageAttendance": 134,
-          "plateAndPledge": 588604,
-          "membership": 1221
+          "averageAttendance": 27,
+          "plateAndPledge": 5010,
+          "membership": 48
         },
         "2018": {
-          "averageAttendance": 164,
-          "plateAndPledge": 540084,
-          "membership": 1233
+          "averageAttendance": 22,
+          "plateAndPledge": 4618,
+          "membership": 48
         },
         "2019": {
-          "averageAttendance": 130,
-          "plateAndPledge": 604432,
-          "membership": 1253
+          "averageAttendance": 17,
+          "plateAndPledge": 4786,
+          "membership": 44
         },
         "2020": {
-          "averageAttendance": 209,
-          "plateAndPledge": 515011,
-          "membership": 1218
+          "averageAttendance": 14,
+          "plateAndPledge": 1282,
+          "membership": 44
         },
         "2021": {
-          "averageAttendance": 51,
-          "plateAndPledge": 503080,
-          "membership": 1146
+          "averageAttendance": 6,
+          "plateAndPledge": 1243,
+          "membership": 44
         },
         "2022": {
-          "averageAttendance": 75,
-          "plateAndPledge": 443301,
-          "membership": 672
+          "averageAttendance": 5,
+          "plateAndPledge": 1181,
+          "membership": 11
         },
         "2023": {
-          "averageAttendance": 56,
-          "plateAndPledge": 437273,
-          "membership": 296
+          "averageAttendance": 9,
+          "plateAndPledge": 1186,
+          "membership": 12
         },
         "2024": {
-          "averageAttendance": 52,
-          "plateAndPledge": 346464,
+          "averageAttendance": 10,
+          "plateAndPledge": 1175,
           "membership": null
         }
       }
@@ -2120,7 +2120,7 @@
       "lat": 36.07613,
       "lng": -79.09551
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "St Matthews Parish Church (Hillsborough)",
       "years": {
@@ -2441,16 +2441,31 @@
   },
   {
     "vh_id": 10584,
-    "name": "Position in Northern Indiana",
+    "name": "St. Augustine's Episcopal Church, Gary, IN",
     "diocese": "Northern Indiana",
-    "state": "",
+    "state": "IN",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10584",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/17/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 4192,
+      "name": "St. Augustine's Episcopal Church",
+      "street": "2425 W 19th Ave",
+      "city": "Gary",
+      "state": "IN",
+      "zip": "46404-2749",
+      "phone": "219-944-8383",
+      "email": "cempspecialevent@gmail.com",
+      "website": "http://calumetepiscopal.org/",
+      "type": "church",
+      "lat": 41.584255,
+      "lng": -87.367808
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10583,
@@ -5626,16 +5641,51 @@
   },
   {
     "vh_id": 10351,
-    "name": "Position in New Jersey",
+    "name": "Church of the Resurrection, Millville, NJ",
     "diocese": "New Jersey",
-    "state": "",
+    "state": "NJ",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10351",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "03/08/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3828,
+      "name": "Church of the Resurrection",
+      "street": "1209 West Main Street",
+      "city": "Millville",
+      "state": "NJ",
+      "zip": "08332",
+      "phone": "(856) 451-3233",
+      "email": "ecrutherford@juno.com",
+      "website": "https://cumberlandnjepiscopal.org/contact/",
+      "type": "church",
+      "lat": 39.39913,
+      "lng": -75.06541
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Resurrection (Millville)",
+      "years": {
+        "2022": {
+          "averageAttendance": 56,
+          "plateAndPledge": 174913,
+          "membership": 136
+        },
+        "2023": {
+          "averageAttendance": 58,
+          "plateAndPledge": 166982,
+          "membership": 141
+        },
+        "2024": {
+          "averageAttendance": 66,
+          "plateAndPledge": 216295,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10347,
@@ -11197,29 +11247,59 @@
   },
   {
     "vh_id": 10158,
-    "name": "Position in Olympia",
+    "name": "St. Joseph - St. John, Lakewood, Lakewood, WA",
     "diocese": "Olympia",
-    "state": "",
+    "state": "WA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10158",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7636,
+      "name": "St. Joseph - St. John, Lakewood",
+      "street": "11111 Military Rd SW",
+      "city": "Lakewood",
+      "state": "WA",
+      "zip": "98498-1526",
+      "phone": "253.584.6143",
+      "email": "stjoseph-stjohn@hotmail.com",
+      "website": "https://ecww.org/congregations/st-joseph-st-john-lakewood/",
+      "type": "church",
+      "lat": 47.1562282,
+      "lng": -122.574403
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10155,
-    "name": "Position in Olympia",
+    "name": "St. Joseph - St. John, Lakewood, Lakewood, WA",
     "diocese": "Olympia",
-    "state": "",
+    "state": "WA",
     "vh_status": "Interim in place",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10155",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7636,
+      "name": "St. Joseph - St. John, Lakewood",
+      "street": "11111 Military Rd SW",
+      "city": "Lakewood",
+      "state": "WA",
+      "zip": "98498-1526",
+      "phone": "253.584.6143",
+      "email": "stjoseph-stjohn@hotmail.com",
+      "website": "https://ecww.org/congregations/st-joseph-st-john-lakewood/",
+      "type": "church",
+      "lat": 47.1562282,
+      "lng": -122.574403
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10154,
@@ -11236,16 +11316,31 @@
   },
   {
     "vh_id": 10151,
-    "name": "Position in Olympia",
+    "name": "St. Joseph - St. John, Lakewood, Lakewood, WA",
     "diocese": "Olympia",
-    "state": "",
+    "state": "WA",
     "vh_status": "Seeking interim",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10151",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7636,
+      "name": "St. Joseph - St. John, Lakewood",
+      "street": "11111 Military Rd SW",
+      "city": "Lakewood",
+      "state": "WA",
+      "zip": "98498-1526",
+      "phone": "253.584.6143",
+      "email": "stjoseph-stjohn@hotmail.com",
+      "website": "https://ecww.org/congregations/st-joseph-st-john-lakewood/",
+      "type": "church",
+      "lat": 47.1562282,
+      "lng": -122.574403
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10148,
@@ -30003,16 +30098,86 @@
   },
   {
     "vh_id": 9107,
-    "name": "Position in Los Angeles",
+    "name": "St. Timothy's Episcopal Church, Apple Valley, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9107",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "06/15/2012",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1061,
+      "name": "St. Timothy's Episcopal Church",
+      "street": "15757 Saint Timothy Rd",
+      "city": "Apple Valley",
+      "state": "CA",
+      "zip": "92307-2554",
+      "phone": "760-242-2405",
+      "email": "",
+      "website": "https://www.sttimshd.org/#intro",
+      "type": "church",
+      "lat": 34.537443,
+      "lng": -117.241762
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Timothys Episcopal Church (Apple Valley)",
+      "years": {
+        "2015": {
+          "averageAttendance": 51,
+          "plateAndPledge": 162333,
+          "membership": 230
+        },
+        "2016": {
+          "averageAttendance": 45,
+          "plateAndPledge": 149001,
+          "membership": 220
+        },
+        "2017": {
+          "averageAttendance": 71,
+          "plateAndPledge": 102288,
+          "membership": 208
+        },
+        "2018": {
+          "averageAttendance": 36,
+          "plateAndPledge": 106703,
+          "membership": 211
+        },
+        "2019": {
+          "averageAttendance": 66,
+          "plateAndPledge": 92461,
+          "membership": 230
+        },
+        "2020": {
+          "averageAttendance": 0,
+          "plateAndPledge": 92461,
+          "membership": 230
+        },
+        "2021": {
+          "averageAttendance": 0,
+          "plateAndPledge": 92461,
+          "membership": 230
+        },
+        "2022": {
+          "averageAttendance": 43,
+          "plateAndPledge": 15699,
+          "membership": 96
+        },
+        "2023": {
+          "averageAttendance": 39,
+          "plateAndPledge": 60545,
+          "membership": 82
+        },
+        "2024": {
+          "averageAttendance": 40,
+          "plateAndPledge": 70745,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9106,
@@ -32380,16 +32545,86 @@
   },
   {
     "vh_id": 8917,
-    "name": "Position in Central Florida",
+    "name": "Church of St. David's by the Sea, Cocoa Beach, FL",
     "diocese": "Central Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8917",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/30/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2291,
+      "name": "Church of St. David's by the Sea",
+      "street": "600 S 4th St",
+      "city": "Cocoa Beach",
+      "state": "FL",
+      "zip": "32931-2612",
+      "phone": "321-783-2554 ",
+      "email": "stdavidsbythesea@gmail.com",
+      "website": "https://www.stdavidsbythesea.org/contact-us",
+      "type": "church",
+      "lat": 28.310733,
+      "lng": -80.615327
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of St Davids by the Sea (Cocoa Beach)",
+      "years": {
+        "2015": {
+          "averageAttendance": 105,
+          "plateAndPledge": 206864,
+          "membership": 227
+        },
+        "2016": {
+          "averageAttendance": 107,
+          "plateAndPledge": 243469,
+          "membership": 234
+        },
+        "2017": {
+          "averageAttendance": 107,
+          "plateAndPledge": 236191,
+          "membership": 240
+        },
+        "2018": {
+          "averageAttendance": 102,
+          "plateAndPledge": 238192,
+          "membership": 243
+        },
+        "2019": {
+          "averageAttendance": 101,
+          "plateAndPledge": 274564,
+          "membership": 237
+        },
+        "2020": {
+          "averageAttendance": 96,
+          "plateAndPledge": 217262,
+          "membership": 237
+        },
+        "2021": {
+          "averageAttendance": 67,
+          "plateAndPledge": 284988,
+          "membership": 175
+        },
+        "2022": {
+          "averageAttendance": 79,
+          "plateAndPledge": 267412,
+          "membership": 191
+        },
+        "2023": {
+          "averageAttendance": 90,
+          "plateAndPledge": 290649,
+          "membership": 193
+        },
+        "2024": {
+          "averageAttendance": 85,
+          "plateAndPledge": 359513,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8915,
@@ -32408,14 +32643,84 @@
     "vh_id": 8914,
     "name": "Christ Episcopal Church",
     "diocese": "Connecticut",
-    "state": "",
+    "state": "CT",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8914",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "Christ Episcopal Church",
     "receiving_names_from": "11/28/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1512,
+      "name": "All Saints' Church (Todos los Santos)",
+      "street": "Immanuel Lutheran Church",
+      "city": "Meriden",
+      "state": "CT",
+      "zip": "06451-5439",
+      "phone": " 203-235-9596",
+      "email": "allsaintsepiscopalmeriden@gmail.com",
+      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
+      "type": "church",
+      "lat": 41.53544,
+      "lng": -72.8082
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "All Saints Church (Meriden)",
+      "years": {
+        "2015": {
+          "averageAttendance": 30,
+          "plateAndPledge": 7073,
+          "membership": 52
+        },
+        "2016": {
+          "averageAttendance": 27,
+          "plateAndPledge": 7249,
+          "membership": 47
+        },
+        "2017": {
+          "averageAttendance": 27,
+          "plateAndPledge": 5010,
+          "membership": 48
+        },
+        "2018": {
+          "averageAttendance": 22,
+          "plateAndPledge": 4618,
+          "membership": 48
+        },
+        "2019": {
+          "averageAttendance": 17,
+          "plateAndPledge": 4786,
+          "membership": 44
+        },
+        "2020": {
+          "averageAttendance": 14,
+          "plateAndPledge": 1282,
+          "membership": 44
+        },
+        "2021": {
+          "averageAttendance": 6,
+          "plateAndPledge": 1243,
+          "membership": 44
+        },
+        "2022": {
+          "averageAttendance": 5,
+          "plateAndPledge": 1181,
+          "membership": 11
+        },
+        "2023": {
+          "averageAttendance": 9,
+          "plateAndPledge": 1186,
+          "membership": 12
+        },
+        "2024": {
+          "averageAttendance": 10,
+          "plateAndPledge": 1175,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8910,
@@ -35313,7 +35618,7 @@
       "lat": 34.474383,
       "lng": -114.316999
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "Grace Church (Lake Havasu City)",
       "years": {

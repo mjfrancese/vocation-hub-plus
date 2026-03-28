@@ -403,20 +403,75 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 8519,
-      "name": "St. Philip the Evangelist",
-      "street": "2525 Seagler Rd.",
-      "city": "Houston",
+      "nid": 5609,
+      "name": "St. David's Episcopal Church",
+      "street": "301 E 8th St",
+      "city": "Austin",
       "state": "TX",
-      "zip": "77042",
-      "phone": "346-212-1465",
-      "email": "akuol@epicenter.org",
-      "website": "http://www.stphilipstheevangelist.org",
+      "zip": "78701-3280",
+      "phone": "512-610-3500",
+      "email": "info@stdave.org",
+      "website": "http://www.stdave.org",
       "type": "church",
-      "lat": 29.739113,
-      "lng": -95.553228
+      "lat": 30.26882,
+      "lng": -97.73914
     },
-    "match_confidence": "exact"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Davids Episcopal Church (Austin)",
+      "years": {
+        "2015": {
+          "averageAttendance": 677,
+          "plateAndPledge": 2022576,
+          "membership": 2222
+        },
+        "2016": {
+          "averageAttendance": 705,
+          "plateAndPledge": 1895099,
+          "membership": 2138
+        },
+        "2017": {
+          "averageAttendance": 598,
+          "plateAndPledge": 1883571,
+          "membership": 2010
+        },
+        "2018": {
+          "averageAttendance": 551,
+          "plateAndPledge": 1829096,
+          "membership": 1976
+        },
+        "2019": {
+          "averageAttendance": 536,
+          "plateAndPledge": 1727484,
+          "membership": 1934
+        },
+        "2020": {
+          "averageAttendance": 533,
+          "plateAndPledge": 1592225,
+          "membership": 1892
+        },
+        "2021": {
+          "averageAttendance": 237,
+          "plateAndPledge": 1474300,
+          "membership": 1875
+        },
+        "2022": {
+          "averageAttendance": 235,
+          "plateAndPledge": 1468909,
+          "membership": 1863
+        },
+        "2023": {
+          "averageAttendance": 251,
+          "plateAndPledge": 1306158,
+          "membership": 1852
+        },
+        "2024": {
+          "averageAttendance": 253,
+          "plateAndPledge": 1613117,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
@@ -703,7 +758,7 @@
       "lat": 34.253966,
       "lng": -85.170719
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "St Peters Episcopal Church (Rome)",
       "years": {
@@ -817,7 +872,7 @@
       "lat": 36.837408,
       "lng": -76.209108
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "St Peter Episcopal Church (Norfolk)",
       "years": {
@@ -1006,71 +1061,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1507,
-      "name": "St. Michael's Church Episcopal",
-      "street": "25 South St",
-      "city": "Litchfield",
+      "nid": 1521,
+      "name": "St. Michael's Episcopal Parish",
+      "street": "500A Heatherwood Court",
+      "city": "Naugatuck",
       "state": "CT",
-      "zip": "06759-4005",
-      "phone": "(860) 567-9465",
-      "email": "office@stmichaels-litchfield.org",
-      "website": "https://stmichaels-litchfield.org/",
+      "zip": "06770",
+      "phone": "2037298249",
+      "email": "stmichaelsnaugatuck@gmail.com",
+      "website": "https://www.stmichaelsnaugatuck.org/about_us",
       "type": "church",
-      "lat": 41.74624,
-      "lng": -73.18875
+      "lat": 41.4902,
+      "lng": -73.056209
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
-      "congregationCity": "St Michaels Church Episcopal (Litchfield)",
+      "congregationCity": "St Michaels Episcopal Parish (Naugatuck)",
       "years": {
         "2015": {
-          "averageAttendance": 78,
-          "plateAndPledge": 231911,
-          "membership": 415
+          "averageAttendance": 118,
+          "plateAndPledge": 129746,
+          "membership": 294
         },
         "2016": {
-          "averageAttendance": 70,
-          "plateAndPledge": 253634,
-          "membership": 387
+          "averageAttendance": 130,
+          "plateAndPledge": 142629,
+          "membership": 299
         },
         "2017": {
-          "averageAttendance": 66,
-          "plateAndPledge": 283654,
-          "membership": 382
+          "averageAttendance": 109,
+          "plateAndPledge": 130590,
+          "membership": 310
         },
         "2018": {
-          "averageAttendance": 72,
-          "plateAndPledge": 292437,
-          "membership": 382
+          "averageAttendance": 110,
+          "plateAndPledge": 143339,
+          "membership": 323
         },
         "2019": {
-          "averageAttendance": 71,
-          "plateAndPledge": 293667,
-          "membership": 44
+          "averageAttendance": 113,
+          "plateAndPledge": 134919,
+          "membership": 326
         },
         "2020": {
-          "averageAttendance": 92,
-          "plateAndPledge": 286304,
-          "membership": 45
+          "averageAttendance": 100,
+          "plateAndPledge": 138022,
+          "membership": 341
         },
         "2021": {
-          "averageAttendance": 82,
-          "plateAndPledge": 261530,
-          "membership": 45
+          "averageAttendance": 39,
+          "plateAndPledge": 130260,
+          "membership": 341
         },
         "2022": {
-          "averageAttendance": 59,
-          "plateAndPledge": 291856,
-          "membership": 118
+          "averageAttendance": 53,
+          "plateAndPledge": 125092,
+          "membership": 326
         },
         "2023": {
-          "averageAttendance": 71,
-          "plateAndPledge": 277727,
-          "membership": 165
+          "averageAttendance": 61,
+          "plateAndPledge": 129740,
+          "membership": 300
         },
         "2024": {
-          "averageAttendance": 59,
-          "plateAndPledge": 221919,
+          "averageAttendance": 53,
+          "plateAndPledge": 118231,
           "membership": null
         }
       }
@@ -1120,71 +1175,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1507,
-      "name": "St. Michael's Church Episcopal",
-      "street": "25 South St",
-      "city": "Litchfield",
+      "nid": 1521,
+      "name": "St. Michael's Episcopal Parish",
+      "street": "500A Heatherwood Court",
+      "city": "Naugatuck",
       "state": "CT",
-      "zip": "06759-4005",
-      "phone": "(860) 567-9465",
-      "email": "office@stmichaels-litchfield.org",
-      "website": "https://stmichaels-litchfield.org/",
+      "zip": "06770",
+      "phone": "2037298249",
+      "email": "stmichaelsnaugatuck@gmail.com",
+      "website": "https://www.stmichaelsnaugatuck.org/about_us",
       "type": "church",
-      "lat": 41.74624,
-      "lng": -73.18875
+      "lat": 41.4902,
+      "lng": -73.056209
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
-      "congregationCity": "St Michaels Church Episcopal (Litchfield)",
+      "congregationCity": "St Michaels Episcopal Parish (Naugatuck)",
       "years": {
         "2015": {
-          "averageAttendance": 78,
-          "plateAndPledge": 231911,
-          "membership": 415
+          "averageAttendance": 118,
+          "plateAndPledge": 129746,
+          "membership": 294
         },
         "2016": {
-          "averageAttendance": 70,
-          "plateAndPledge": 253634,
-          "membership": 387
+          "averageAttendance": 130,
+          "plateAndPledge": 142629,
+          "membership": 299
         },
         "2017": {
-          "averageAttendance": 66,
-          "plateAndPledge": 283654,
-          "membership": 382
+          "averageAttendance": 109,
+          "plateAndPledge": 130590,
+          "membership": 310
         },
         "2018": {
-          "averageAttendance": 72,
-          "plateAndPledge": 292437,
-          "membership": 382
+          "averageAttendance": 110,
+          "plateAndPledge": 143339,
+          "membership": 323
         },
         "2019": {
-          "averageAttendance": 71,
-          "plateAndPledge": 293667,
-          "membership": 44
+          "averageAttendance": 113,
+          "plateAndPledge": 134919,
+          "membership": 326
         },
         "2020": {
-          "averageAttendance": 92,
-          "plateAndPledge": 286304,
-          "membership": 45
+          "averageAttendance": 100,
+          "plateAndPledge": 138022,
+          "membership": 341
         },
         "2021": {
-          "averageAttendance": 82,
-          "plateAndPledge": 261530,
-          "membership": 45
+          "averageAttendance": 39,
+          "plateAndPledge": 130260,
+          "membership": 341
         },
         "2022": {
-          "averageAttendance": 59,
-          "plateAndPledge": 291856,
-          "membership": 118
+          "averageAttendance": 53,
+          "plateAndPledge": 125092,
+          "membership": 326
         },
         "2023": {
-          "averageAttendance": 71,
-          "plateAndPledge": 277727,
-          "membership": 165
+          "averageAttendance": 61,
+          "plateAndPledge": 129740,
+          "membership": 300
         },
         "2024": {
-          "averageAttendance": 59,
-          "plateAndPledge": 221919,
+          "averageAttendance": 53,
+          "plateAndPledge": 118231,
           "membership": null
         }
       }
@@ -2464,7 +2519,7 @@
       "lat": 34.65025,
       "lng": -83.69578
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "Church of the Resurrection (Sautee Nacoochee)",
       "years": {
@@ -3080,71 +3135,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1563,
-      "name": "Christ Church",
-      "street": "4 Wellers Bridge Rd",
-      "city": "Roxbury",
+      "nid": 1512,
+      "name": "All Saints' Church (Todos los Santos)",
+      "street": "Immanuel Lutheran Church",
+      "city": "Meriden",
       "state": "CT",
-      "zip": "06783",
-      "phone": "860-354-4113",
-      "email": "christchurcroxbury@gmail.com",
-      "website": "http://www.christchurchroxbury.net",
+      "zip": "06451-5439",
+      "phone": " 203-235-9596",
+      "email": "allsaintsepiscopalmeriden@gmail.com",
+      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
       "type": "church",
-      "lat": 41.5566,
-      "lng": -73.31068
+      "lat": 41.53544,
+      "lng": -72.8082
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
-      "congregationCity": "Christ Church (Roxbury)",
+      "congregationCity": "All Saints Church (Meriden)",
       "years": {
         "2015": {
-          "averageAttendance": 60,
-          "plateAndPledge": 106542,
-          "membership": 158
+          "averageAttendance": 30,
+          "plateAndPledge": 7073,
+          "membership": 52
         },
         "2016": {
-          "averageAttendance": 42,
-          "plateAndPledge": 91744,
-          "membership": 110
+          "averageAttendance": 27,
+          "plateAndPledge": 7249,
+          "membership": 47
         },
         "2017": {
-          "averageAttendance": 33,
-          "plateAndPledge": 72829,
-          "membership": 112
+          "averageAttendance": 27,
+          "plateAndPledge": 5010,
+          "membership": 48
         },
         "2018": {
-          "averageAttendance": 27,
-          "plateAndPledge": 86661,
-          "membership": 108
+          "averageAttendance": 22,
+          "plateAndPledge": 4618,
+          "membership": 48
         },
         "2019": {
-          "averageAttendance": 27,
-          "plateAndPledge": 58300,
-          "membership": 108
+          "averageAttendance": 17,
+          "plateAndPledge": 4786,
+          "membership": 44
         },
         "2020": {
-          "averageAttendance": 26,
-          "plateAndPledge": 38600,
-          "membership": 110
+          "averageAttendance": 14,
+          "plateAndPledge": 1282,
+          "membership": 44
         },
         "2021": {
-          "averageAttendance": 18,
-          "plateAndPledge": 58254,
-          "membership": 109
+          "averageAttendance": 6,
+          "plateAndPledge": 1243,
+          "membership": 44
         },
         "2022": {
-          "averageAttendance": 23,
-          "plateAndPledge": 91618,
-          "membership": 85
+          "averageAttendance": 5,
+          "plateAndPledge": 1181,
+          "membership": 11
         },
         "2023": {
-          "averageAttendance": 25,
-          "plateAndPledge": 128772,
-          "membership": 74
+          "averageAttendance": 9,
+          "plateAndPledge": 1186,
+          "membership": 12
         },
         "2024": {
-          "averageAttendance": 30,
-          "plateAndPledge": 96699,
+          "averageAttendance": 10,
+          "plateAndPledge": 1175,
           "membership": null
         }
       }
@@ -3194,71 +3249,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1563,
-      "name": "Christ Church",
-      "street": "4 Wellers Bridge Rd",
-      "city": "Roxbury",
+      "nid": 1512,
+      "name": "All Saints' Church (Todos los Santos)",
+      "street": "Immanuel Lutheran Church",
+      "city": "Meriden",
       "state": "CT",
-      "zip": "06783",
-      "phone": "860-354-4113",
-      "email": "christchurcroxbury@gmail.com",
-      "website": "http://www.christchurchroxbury.net",
+      "zip": "06451-5439",
+      "phone": " 203-235-9596",
+      "email": "allsaintsepiscopalmeriden@gmail.com",
+      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
       "type": "church",
-      "lat": 41.5566,
-      "lng": -73.31068
+      "lat": 41.53544,
+      "lng": -72.8082
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
-      "congregationCity": "Christ Church (Roxbury)",
+      "congregationCity": "All Saints Church (Meriden)",
       "years": {
         "2015": {
-          "averageAttendance": 60,
-          "plateAndPledge": 106542,
-          "membership": 158
+          "averageAttendance": 30,
+          "plateAndPledge": 7073,
+          "membership": 52
         },
         "2016": {
-          "averageAttendance": 42,
-          "plateAndPledge": 91744,
-          "membership": 110
+          "averageAttendance": 27,
+          "plateAndPledge": 7249,
+          "membership": 47
         },
         "2017": {
-          "averageAttendance": 33,
-          "plateAndPledge": 72829,
-          "membership": 112
+          "averageAttendance": 27,
+          "plateAndPledge": 5010,
+          "membership": 48
         },
         "2018": {
-          "averageAttendance": 27,
-          "plateAndPledge": 86661,
-          "membership": 108
+          "averageAttendance": 22,
+          "plateAndPledge": 4618,
+          "membership": 48
         },
         "2019": {
-          "averageAttendance": 27,
-          "plateAndPledge": 58300,
-          "membership": 108
+          "averageAttendance": 17,
+          "plateAndPledge": 4786,
+          "membership": 44
         },
         "2020": {
-          "averageAttendance": 26,
-          "plateAndPledge": 38600,
-          "membership": 110
+          "averageAttendance": 14,
+          "plateAndPledge": 1282,
+          "membership": 44
         },
         "2021": {
-          "averageAttendance": 18,
-          "plateAndPledge": 58254,
-          "membership": 109
+          "averageAttendance": 6,
+          "plateAndPledge": 1243,
+          "membership": 44
         },
         "2022": {
-          "averageAttendance": 23,
-          "plateAndPledge": 91618,
-          "membership": 85
+          "averageAttendance": 5,
+          "plateAndPledge": 1181,
+          "membership": 11
         },
         "2023": {
-          "averageAttendance": 25,
-          "plateAndPledge": 128772,
-          "membership": 74
+          "averageAttendance": 9,
+          "plateAndPledge": 1186,
+          "membership": 12
         },
         "2024": {
-          "averageAttendance": 30,
-          "plateAndPledge": 96699,
+          "averageAttendance": 10,
+          "plateAndPledge": 1175,
           "membership": null
         }
       }
