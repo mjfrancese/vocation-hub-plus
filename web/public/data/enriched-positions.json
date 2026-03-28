@@ -2519,7 +2519,7 @@
       "lat": 34.65025,
       "lng": -83.69578
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
       "congregationCity": "Church of the Resurrection (Sautee Nacoochee)",
       "years": {
@@ -3135,71 +3135,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1512,
-      "name": "All Saints' Church (Todos los Santos)",
-      "street": "Immanuel Lutheran Church",
-      "city": "Meriden",
+      "nid": 1563,
+      "name": "Christ Church",
+      "street": "4 Wellers Bridge Rd",
+      "city": "Roxbury",
       "state": "CT",
-      "zip": "06451-5439",
-      "phone": " 203-235-9596",
-      "email": "allsaintsepiscopalmeriden@gmail.com",
-      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
+      "zip": "06783",
+      "phone": "860-354-4113",
+      "email": "christchurcroxbury@gmail.com",
+      "website": "http://www.christchurchroxbury.net",
       "type": "church",
-      "lat": 41.53544,
-      "lng": -72.8082
+      "lat": 41.5566,
+      "lng": -73.31068
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "All Saints Church (Meriden)",
+      "congregationCity": "Christ Church (Roxbury)",
       "years": {
         "2015": {
-          "averageAttendance": 30,
-          "plateAndPledge": 7073,
-          "membership": 52
+          "averageAttendance": 60,
+          "plateAndPledge": 106542,
+          "membership": 158
         },
         "2016": {
-          "averageAttendance": 27,
-          "plateAndPledge": 7249,
-          "membership": 47
+          "averageAttendance": 42,
+          "plateAndPledge": 91744,
+          "membership": 110
         },
         "2017": {
-          "averageAttendance": 27,
-          "plateAndPledge": 5010,
-          "membership": 48
+          "averageAttendance": 33,
+          "plateAndPledge": 72829,
+          "membership": 112
         },
         "2018": {
-          "averageAttendance": 22,
-          "plateAndPledge": 4618,
-          "membership": 48
+          "averageAttendance": 27,
+          "plateAndPledge": 86661,
+          "membership": 108
         },
         "2019": {
-          "averageAttendance": 17,
-          "plateAndPledge": 4786,
-          "membership": 44
+          "averageAttendance": 27,
+          "plateAndPledge": 58300,
+          "membership": 108
         },
         "2020": {
-          "averageAttendance": 14,
-          "plateAndPledge": 1282,
-          "membership": 44
+          "averageAttendance": 26,
+          "plateAndPledge": 38600,
+          "membership": 110
         },
         "2021": {
-          "averageAttendance": 6,
-          "plateAndPledge": 1243,
-          "membership": 44
+          "averageAttendance": 18,
+          "plateAndPledge": 58254,
+          "membership": 109
         },
         "2022": {
-          "averageAttendance": 5,
-          "plateAndPledge": 1181,
-          "membership": 11
+          "averageAttendance": 23,
+          "plateAndPledge": 91618,
+          "membership": 85
         },
         "2023": {
-          "averageAttendance": 9,
-          "plateAndPledge": 1186,
-          "membership": 12
+          "averageAttendance": 25,
+          "plateAndPledge": 128772,
+          "membership": 74
         },
         "2024": {
-          "averageAttendance": 10,
-          "plateAndPledge": 1175,
+          "averageAttendance": 30,
+          "plateAndPledge": 96699,
           "membership": null
         }
       }
@@ -3249,71 +3249,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1512,
-      "name": "All Saints' Church (Todos los Santos)",
-      "street": "Immanuel Lutheran Church",
-      "city": "Meriden",
+      "nid": 1563,
+      "name": "Christ Church",
+      "street": "4 Wellers Bridge Rd",
+      "city": "Roxbury",
       "state": "CT",
-      "zip": "06451-5439",
-      "phone": " 203-235-9596",
-      "email": "allsaintsepiscopalmeriden@gmail.com",
-      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
+      "zip": "06783",
+      "phone": "860-354-4113",
+      "email": "christchurcroxbury@gmail.com",
+      "website": "http://www.christchurchroxbury.net",
       "type": "church",
-      "lat": 41.53544,
-      "lng": -72.8082
+      "lat": 41.5566,
+      "lng": -73.31068
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "All Saints Church (Meriden)",
+      "congregationCity": "Christ Church (Roxbury)",
       "years": {
         "2015": {
-          "averageAttendance": 30,
-          "plateAndPledge": 7073,
-          "membership": 52
+          "averageAttendance": 60,
+          "plateAndPledge": 106542,
+          "membership": 158
         },
         "2016": {
-          "averageAttendance": 27,
-          "plateAndPledge": 7249,
-          "membership": 47
+          "averageAttendance": 42,
+          "plateAndPledge": 91744,
+          "membership": 110
         },
         "2017": {
-          "averageAttendance": 27,
-          "plateAndPledge": 5010,
-          "membership": 48
+          "averageAttendance": 33,
+          "plateAndPledge": 72829,
+          "membership": 112
         },
         "2018": {
-          "averageAttendance": 22,
-          "plateAndPledge": 4618,
-          "membership": 48
+          "averageAttendance": 27,
+          "plateAndPledge": 86661,
+          "membership": 108
         },
         "2019": {
-          "averageAttendance": 17,
-          "plateAndPledge": 4786,
-          "membership": 44
+          "averageAttendance": 27,
+          "plateAndPledge": 58300,
+          "membership": 108
         },
         "2020": {
-          "averageAttendance": 14,
-          "plateAndPledge": 1282,
-          "membership": 44
+          "averageAttendance": 26,
+          "plateAndPledge": 38600,
+          "membership": 110
         },
         "2021": {
-          "averageAttendance": 6,
-          "plateAndPledge": 1243,
-          "membership": 44
+          "averageAttendance": 18,
+          "plateAndPledge": 58254,
+          "membership": 109
         },
         "2022": {
-          "averageAttendance": 5,
-          "plateAndPledge": 1181,
-          "membership": 11
+          "averageAttendance": 23,
+          "plateAndPledge": 91618,
+          "membership": 85
         },
         "2023": {
-          "averageAttendance": 9,
-          "plateAndPledge": 1186,
-          "membership": 12
+          "averageAttendance": 25,
+          "plateAndPledge": 128772,
+          "membership": 74
         },
         "2024": {
-          "averageAttendance": 10,
-          "plateAndPledge": 1175,
+          "averageAttendance": 30,
+          "plateAndPledge": 96699,
           "membership": null
         }
       }

@@ -1057,71 +1057,71 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 1512,
-      "name": "All Saints' Church (Todos los Santos)",
-      "street": "Immanuel Lutheran Church",
-      "city": "Meriden",
+      "nid": 1605,
+      "name": "St. Matthew's Episcopal Church",
+      "street": "36 New Canaan Rd",
+      "city": "Wilton",
       "state": "CT",
-      "zip": "06451-5439",
-      "phone": " 203-235-9596",
-      "email": "allsaintsepiscopalmeriden@gmail.com",
-      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
+      "zip": "06897-3310",
+      "phone": "(203) 762-7400",
+      "email": "office@stmatthewswilton.org",
+      "website": "http://www.stmatthewswilton.org",
       "type": "church",
-      "lat": 41.53544,
-      "lng": -72.8082
+      "lat": 41.17554,
+      "lng": -73.44379
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "All Saints Church (Meriden)",
+      "congregationCity": "St Matthews Episcopal Church (Wilton)",
       "years": {
         "2015": {
-          "averageAttendance": 30,
-          "plateAndPledge": 7073,
-          "membership": 52
+          "averageAttendance": 176,
+          "plateAndPledge": 671614,
+          "membership": 1239
         },
         "2016": {
-          "averageAttendance": 27,
-          "plateAndPledge": 7249,
-          "membership": 47
+          "averageAttendance": 171,
+          "plateAndPledge": 628487,
+          "membership": 1199
         },
         "2017": {
-          "averageAttendance": 27,
-          "plateAndPledge": 5010,
-          "membership": 48
+          "averageAttendance": 134,
+          "plateAndPledge": 588604,
+          "membership": 1221
         },
         "2018": {
-          "averageAttendance": 22,
-          "plateAndPledge": 4618,
-          "membership": 48
+          "averageAttendance": 164,
+          "plateAndPledge": 540084,
+          "membership": 1233
         },
         "2019": {
-          "averageAttendance": 17,
-          "plateAndPledge": 4786,
-          "membership": 44
+          "averageAttendance": 130,
+          "plateAndPledge": 604432,
+          "membership": 1253
         },
         "2020": {
-          "averageAttendance": 14,
-          "plateAndPledge": 1282,
-          "membership": 44
+          "averageAttendance": 209,
+          "plateAndPledge": 515011,
+          "membership": 1218
         },
         "2021": {
-          "averageAttendance": 6,
-          "plateAndPledge": 1243,
-          "membership": 44
+          "averageAttendance": 51,
+          "plateAndPledge": 503080,
+          "membership": 1146
         },
         "2022": {
-          "averageAttendance": 5,
-          "plateAndPledge": 1181,
-          "membership": 11
+          "averageAttendance": 75,
+          "plateAndPledge": 443301,
+          "membership": 672
         },
         "2023": {
-          "averageAttendance": 9,
-          "plateAndPledge": 1186,
-          "membership": 12
+          "averageAttendance": 56,
+          "plateAndPledge": 437273,
+          "membership": 296
         },
         "2024": {
-          "averageAttendance": 10,
-          "plateAndPledge": 1175,
+          "averageAttendance": 52,
+          "plateAndPledge": 346464,
           "membership": null
         }
       }
@@ -1762,7 +1762,7 @@
       "lat": 39.73786,
       "lng": -104.97825
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "St Johns Episcopal Cathedral (Denver)",
       "years": {
@@ -5637,7 +5637,7 @@
       "lat": 43.16116,
       "lng": -73.07173
     },
-    "match_confidence": "exact"
+    "match_confidence": "high"
   },
   {
     "vh_id": 10351,
@@ -6221,31 +6221,16 @@
   },
   {
     "vh_id": 10324,
-    "name": "St. Paul's Episcopal Church, Barstow, CA",
+    "name": "Position in Mississippi",
     "diocese": "Mississippi",
-    "state": "CA",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10324",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "04/15/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 1063,
-      "name": "St. Paul's Episcopal Church",
-      "street": "512 E Williams St",
-      "city": "Barstow",
-      "state": "CA",
-      "zip": "92311-2941",
-      "phone": "760-256-1624 ",
-      "email": "stpaulsbarstow@gmail",
-      "website": "http://shepherdstpaulsbarstow.weebly.com",
-      "type": "church",
-      "lat": 34.897335,
-      "lng": -117.02235
-    },
-    "match_confidence": "high"
+    "open_ended": true
   },
   {
     "vh_id": 10323,
@@ -8855,56 +8840,16 @@
   },
   {
     "vh_id": 10253,
-    "name": "Grace Church, Ossining (Trinity Campus), Ossining, NY",
+    "name": "Position in New York",
     "diocese": "New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10253",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9870,
-      "name": "Grace Church, Ossining (Trinity Campus)",
-      "street": "7 South Highland Avenue",
-      "city": "Ossining",
-      "state": "NY",
-      "zip": "10562",
-      "phone": "9149416627",
-      "email": "churchoffice@graceossining.org",
-      "website": "https://graceossining.org",
-      "type": "church",
-      "lat": 41.16141,
-      "lng": -73.86108
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "Grace Episcopal Church (Ossining)",
-      "years": {
-        "2021": {
-          "averageAttendance": 25,
-          "plateAndPledge": 181514,
-          "membership": 210
-        },
-        "2022": {
-          "averageAttendance": 25,
-          "plateAndPledge": 181514,
-          "membership": 207
-        },
-        "2023": {
-          "averageAttendance": 31,
-          "plateAndPledge": 140427,
-          "membership": 209
-        },
-        "2024": {
-          "averageAttendance": 32,
-          "plateAndPledge": 175296,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10252,
@@ -21354,20 +21299,75 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 8519,
-      "name": "St. Philip the Evangelist",
-      "street": "2525 Seagler Rd.",
-      "city": "Houston",
+      "nid": 5623,
+      "name": "St. Mary's Episcopal Church",
+      "street": "24 N Masonic St",
+      "city": "Bellville",
       "state": "TX",
-      "zip": "77042",
-      "phone": "346-212-1465",
-      "email": "akuol@epicenter.org",
-      "website": "http://www.stphilipstheevangelist.org",
+      "zip": "77418-1444",
+      "phone": "979-865-2330",
+      "email": "saintmary@sbcglobal.net",
+      "website": "http://www.saintmarysec.org",
       "type": "church",
-      "lat": 29.739113,
-      "lng": -95.553228
+      "lat": 29.95154,
+      "lng": -96.258201
     },
-    "match_confidence": "exact"
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Marys Episcopal Church (Bellville)",
+      "years": {
+        "2015": {
+          "averageAttendance": 55,
+          "plateAndPledge": 191882,
+          "membership": 107
+        },
+        "2016": {
+          "averageAttendance": 56,
+          "plateAndPledge": 141127,
+          "membership": 113
+        },
+        "2017": {
+          "averageAttendance": 53,
+          "plateAndPledge": 197733,
+          "membership": 117
+        },
+        "2018": {
+          "averageAttendance": 53,
+          "plateAndPledge": 176564,
+          "membership": 122
+        },
+        "2019": {
+          "averageAttendance": 50,
+          "plateAndPledge": 154087,
+          "membership": 117
+        },
+        "2020": {
+          "averageAttendance": 45,
+          "plateAndPledge": 148596,
+          "membership": 117
+        },
+        "2021": {
+          "averageAttendance": 41,
+          "plateAndPledge": 172345,
+          "membership": 118
+        },
+        "2022": {
+          "averageAttendance": 41,
+          "plateAndPledge": 178971,
+          "membership": 118
+        },
+        "2023": {
+          "averageAttendance": 34,
+          "plateAndPledge": 137624,
+          "membership": 114
+        },
+        "2024": {
+          "averageAttendance": 30,
+          "plateAndPledge": 11812,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9652,
@@ -24893,86 +24893,16 @@
   },
   {
     "vh_id": 9560,
-    "name": "Lamb of God Church, Fort Myers, FL",
+    "name": "Position in Southwest Florida",
     "diocese": "Southwest Florida",
-    "state": "FL",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9560",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/28/2013",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7648,
-      "name": "Lamb of God Church",
-      "street": "19691 Cypress View Drive",
-      "city": "Fort Myers",
-      "state": "FL",
-      "zip": "33967",
-      "phone": "239-267-3525",
-      "email": "office@lambofgodchurch.net",
-      "website": "http://www.lambofgodchurch.net",
-      "type": "church",
-      "lat": 26.45094,
-      "lng": -81.79428
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "Lamb of God Episcopal Church (Fort Myers)",
-      "years": {
-        "2015": {
-          "averageAttendance": 289,
-          "plateAndPledge": 256347,
-          "membership": 517
-        },
-        "2016": {
-          "averageAttendance": 202,
-          "plateAndPledge": 269534,
-          "membership": 527
-        },
-        "2017": {
-          "averageAttendance": 191,
-          "plateAndPledge": 241172,
-          "membership": 274
-        },
-        "2018": {
-          "averageAttendance": 181,
-          "plateAndPledge": 222634,
-          "membership": 231
-        },
-        "2019": {
-          "averageAttendance": 140,
-          "plateAndPledge": 373487,
-          "membership": 206
-        },
-        "2020": {
-          "averageAttendance": 0,
-          "plateAndPledge": 373487,
-          "membership": 206
-        },
-        "2021": {
-          "averageAttendance": 196,
-          "plateAndPledge": 472495,
-          "membership": 135
-        },
-        "2022": {
-          "averageAttendance": 196,
-          "plateAndPledge": 472495,
-          "membership": 135
-        },
-        "2023": {
-          "averageAttendance": 196,
-          "plateAndPledge": 472495,
-          "membership": 135
-        },
-        "2024": {
-          "averageAttendance": 0,
-          "plateAndPledge": 0,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 9559,
@@ -25168,86 +25098,16 @@
   },
   {
     "vh_id": 9554,
-    "name": "Lamb of God Church, Fort Myers, FL",
+    "name": "Position in Southwest Florida",
     "diocese": "Southwest Florida",
-    "state": "FL",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9554",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 7648,
-      "name": "Lamb of God Church",
-      "street": "19691 Cypress View Drive",
-      "city": "Fort Myers",
-      "state": "FL",
-      "zip": "33967",
-      "phone": "239-267-3525",
-      "email": "office@lambofgodchurch.net",
-      "website": "http://www.lambofgodchurch.net",
-      "type": "church",
-      "lat": 26.45094,
-      "lng": -81.79428
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "Lamb of God Episcopal Church (Fort Myers)",
-      "years": {
-        "2015": {
-          "averageAttendance": 289,
-          "plateAndPledge": 256347,
-          "membership": 517
-        },
-        "2016": {
-          "averageAttendance": 202,
-          "plateAndPledge": 269534,
-          "membership": 527
-        },
-        "2017": {
-          "averageAttendance": 191,
-          "plateAndPledge": 241172,
-          "membership": 274
-        },
-        "2018": {
-          "averageAttendance": 181,
-          "plateAndPledge": 222634,
-          "membership": 231
-        },
-        "2019": {
-          "averageAttendance": 140,
-          "plateAndPledge": 373487,
-          "membership": 206
-        },
-        "2020": {
-          "averageAttendance": 0,
-          "plateAndPledge": 373487,
-          "membership": 206
-        },
-        "2021": {
-          "averageAttendance": 196,
-          "plateAndPledge": 472495,
-          "membership": 135
-        },
-        "2022": {
-          "averageAttendance": 196,
-          "plateAndPledge": 472495,
-          "membership": 135
-        },
-        "2023": {
-          "averageAttendance": 196,
-          "plateAndPledge": 472495,
-          "membership": 135
-        },
-        "2024": {
-          "averageAttendance": 0,
-          "plateAndPledge": 0,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 9552,
@@ -29456,31 +29316,16 @@
   },
   {
     "vh_id": 9127,
-    "name": "St. Luke's Episcopal Church, Long Beach, CA",
+    "name": "Position in Los Angeles",
     "diocese": "Los Angeles",
-    "state": "CA",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9127",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/30/2016",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8449,
-      "name": "St. Luke's Episcopal Church",
-      "street": "525 E 7th St",
-      "city": "Long Beach",
-      "state": "CA",
-      "zip": "90813-4503",
-      "phone": "(562) 436-4047",
-      "email": "office@stlukeslb.org",
-      "website": "http://www.stlukeslb.org/",
-      "type": "church",
-      "lat": 33.77549,
-      "lng": -118.18563
-    },
-    "match_confidence": "high"
+    "open_ended": true
   },
   {
     "vh_id": 9126,
@@ -29497,31 +29342,16 @@
   },
   {
     "vh_id": 9125,
-    "name": "St. Luke's Episcopal Church, Long Beach, CA",
+    "name": "Position in Los Angeles",
     "diocese": "Los Angeles",
-    "state": "CA",
+    "state": "",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9125",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "01/01/1900",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8449,
-      "name": "St. Luke's Episcopal Church",
-      "street": "525 E 7th St",
-      "city": "Long Beach",
-      "state": "CA",
-      "zip": "90813-4503",
-      "phone": "(562) 436-4047",
-      "email": "office@stlukeslb.org",
-      "website": "http://www.stlukeslb.org/",
-      "type": "church",
-      "lat": 33.77549,
-      "lng": -118.18563
-    },
-    "match_confidence": "high"
+    "open_ended": true
   },
   {
     "vh_id": 9124,
@@ -29922,31 +29752,16 @@
   },
   {
     "vh_id": 9115,
-    "name": "St. Luke's Episcopal Church, Long Beach, CA",
+    "name": "Position in Los Angeles",
     "diocese": "Los Angeles",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9115",
     "position_type": "Assistant / Associate / Curate (Part-time)",
     "congregation": "",
     "receiving_names_from": "07/31/2013",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8449,
-      "name": "St. Luke's Episcopal Church",
-      "street": "525 E 7th St",
-      "city": "Long Beach",
-      "state": "CA",
-      "zip": "90813-4503",
-      "phone": "(562) 436-4047",
-      "email": "office@stlukeslb.org",
-      "website": "http://www.stlukeslb.org/",
-      "type": "church",
-      "lat": 33.77549,
-      "lng": -118.18563
-    },
-    "match_confidence": "high"
+    "open_ended": true
   },
   {
     "vh_id": 9114,
@@ -30129,31 +29944,16 @@
   },
   {
     "vh_id": 9110,
-    "name": "St. Luke's Episcopal Church, Long Beach, CA",
+    "name": "Position in Los Angeles",
     "diocese": "Los Angeles",
-    "state": "CA",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9110",
     "position_type": "Church Planter",
     "congregation": "",
     "receiving_names_from": "12/01/2012",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 8449,
-      "name": "St. Luke's Episcopal Church",
-      "street": "525 E 7th St",
-      "city": "Long Beach",
-      "state": "CA",
-      "zip": "90813-4503",
-      "phone": "(562) 436-4047",
-      "email": "office@stlukeslb.org",
-      "website": "http://www.stlukeslb.org/",
-      "type": "church",
-      "lat": 33.77549,
-      "lng": -118.18563
-    },
-    "match_confidence": "high"
+    "open_ended": true
   },
   {
     "vh_id": 9109,
@@ -32868,84 +32668,14 @@
     "vh_id": 8914,
     "name": "Christ Episcopal Church",
     "diocese": "Connecticut",
-    "state": "CT",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8914",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "Christ Episcopal Church",
     "receiving_names_from": "11/28/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 1512,
-      "name": "All Saints' Church (Todos los Santos)",
-      "street": "Immanuel Lutheran Church",
-      "city": "Meriden",
-      "state": "CT",
-      "zip": "06451-5439",
-      "phone": " 203-235-9596",
-      "email": "allsaintsepiscopalmeriden@gmail.com",
-      "website": "https://www.episcopalct.org/ChurchDirectory/all-saints-episcopal-church-meriden-ct/",
-      "type": "church",
-      "lat": 41.53544,
-      "lng": -72.8082
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "All Saints Church (Meriden)",
-      "years": {
-        "2015": {
-          "averageAttendance": 30,
-          "plateAndPledge": 7073,
-          "membership": 52
-        },
-        "2016": {
-          "averageAttendance": 27,
-          "plateAndPledge": 7249,
-          "membership": 47
-        },
-        "2017": {
-          "averageAttendance": 27,
-          "plateAndPledge": 5010,
-          "membership": 48
-        },
-        "2018": {
-          "averageAttendance": 22,
-          "plateAndPledge": 4618,
-          "membership": 48
-        },
-        "2019": {
-          "averageAttendance": 17,
-          "plateAndPledge": 4786,
-          "membership": 44
-        },
-        "2020": {
-          "averageAttendance": 14,
-          "plateAndPledge": 1282,
-          "membership": 44
-        },
-        "2021": {
-          "averageAttendance": 6,
-          "plateAndPledge": 1243,
-          "membership": 44
-        },
-        "2022": {
-          "averageAttendance": 5,
-          "plateAndPledge": 1181,
-          "membership": 11
-        },
-        "2023": {
-          "averageAttendance": 9,
-          "plateAndPledge": 1186,
-          "membership": 12
-        },
-        "2024": {
-          "averageAttendance": 10,
-          "plateAndPledge": 1175,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 8910,

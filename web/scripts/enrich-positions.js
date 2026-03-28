@@ -32,6 +32,19 @@ function extractCity(name) {
   return '';
 }
 
+function normalizeChurchName(name) {
+  return (name || '')
+    .toLowerCase()
+    .replace(/\bst\.?\b/g, 'st')
+    .replace(/[''`]/g, '')
+    .replace(/\(.*?\)/g, '')
+    .replace(/,.*$/, '')
+    .replace(/\b(the|of|in|at|and|for|a|an)\b/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 // --- Main ---
 
 function main() {
@@ -78,6 +91,12 @@ function main() {
 
   let churchMatches = 0, parochialMatches = 0;
 
+  // Detect duplicate VH IDs (multi-point calls sharing a profile)
+  const vhIdCounts = {};
+  for (const pos of positions) {
+    if (pos.vh_id) vhIdCounts[pos.vh_id] = (vhIdCounts[pos.vh_id] || 0) + 1;
+  }
+
   // Enrich public positions (from search results)
   for (const pos of positions) {
     const vhId = pos.vh_id;
@@ -91,12 +110,30 @@ function main() {
     if (vhId) {
       const data = getChurchData(vhId);
       if (data) {
-        churchMatches++;
-        pos.church_info = data.church_info;
-        pos.match_confidence = data.confidence;
-        if (data.parochial) {
-          parochialMatches++;
-          pos.parochial = data.parochial;
+        // For duplicate VH IDs, cross-validate the church name matches this specific position
+        let nameMatch = true;
+        if (vhIdCounts[vhId] > 1 && pos.name && data.church_info) {
+          const posNorm = normalizeChurchName(pos.name);
+          const churchNorm = normalizeChurchName(data.church_info.name);
+          if (posNorm && churchNorm) {
+            const posWords = posNorm.split(/\s+/).filter(w => w.length >= 3);
+            const churchWords = churchNorm.split(/\s+/).filter(w => w.length >= 3);
+            const genericWords = new Set(['church', 'episcopal', 'parish', 'chapel', 'cathedral', 'mission', 'memorial']);
+            const posKey = posWords.filter(w => !genericWords.has(w));
+            const churchKey = churchWords.filter(w => !genericWords.has(w));
+            if (posKey.length > 0 && churchKey.length > 0 && !posKey.some(w => churchKey.includes(w))) {
+              nameMatch = false; // This church doesn't match this specific position row
+            }
+          }
+        }
+        if (nameMatch) {
+          churchMatches++;
+          pos.church_info = data.church_info;
+          pos.match_confidence = data.confidence;
+          if (data.parochial) {
+            parochialMatches++;
+            pos.parochial = data.parochial;
+          }
         }
       }
     }

@@ -102,10 +102,12 @@ function buildRegistryIndexes(registry) {
       dioceseIndex.set(key, list);
     }
 
-    // Website index (full normalized URL)
+    // Website index (full normalized URL) - store as array to detect collisions
     const w = normUrl(church.website);
     if (w) {
-      websiteIndex.set(w, { nid: parseInt(nid), church });
+      const list = websiteIndex.get(w) || [];
+      list.push({ nid: parseInt(nid), church });
+      websiteIndex.set(w, list);
     }
 
     // Domain-only index (catches mismatches like /contact vs /)
@@ -157,11 +159,11 @@ function extractEmails(fields) {
       // If last part has @ but no valid TLD, it's truncated
       if (last.includes('@') && !last.match(/@[\w.-]+\.\w{2,}$/)) {
         const domainPart = last.split('@')[1];
-        if (domainPart && domainPart.length >= 3) {
-          // Skip truncated generic domains (gmail., yahoo., outlook., aol., etc.)
-          const genericPrefixes = ['gmail', 'yahoo', 'outlook', 'hotmail', 'aol', 'icloud', 'comcast', 'att', 'verizon', 'msn', 'live'];
+        if (domainPart && domainPart.length >= 5) {
+          // Skip truncated generic domains and diocesan domains
+          const genericPrefixes = ['gmail', 'yahoo', 'outlo', 'hotma', 'aol.', 'iclou', 'comca', 'att.', 'veriz', 'msn.', 'live.', 'sbcgl', 'bells', 'front', 'earth', 'chart', 'juno.'];
           const isGeneric = genericPrefixes.some(g => domainPart.startsWith(g));
-          if (!isGeneric) {
+          if (!isGeneric && !isDiocesanOrGenericDomain(domainPart)) {
             partialDomains.push(domainPart.toLowerCase());
           }
         }
@@ -269,35 +271,59 @@ function matchByNameDiocese(posName, diocese, indexes) {
   return null;
 }
 
+// Cross-validate: if the position has a real congregation name, check it
+// loosely matches the church name. Returns true if names are compatible
+// (or if position has no useful name to compare).
+function namesCompatible(posName, churchName) {
+  if (!posName || !churchName) return true;
+  const pn = normalizeChurchName(posName);
+  const cn = normalizeChurchName(churchName);
+  if (!pn || pn.length < 3) return true; // No useful name to compare
+  // Check for significant overlap: at least one major word matches
+  const pWords = pn.split(/\s+/).filter(w => w.length >= 3);
+  const cWords = cn.split(/\s+/).filter(w => w.length >= 3);
+  if (pWords.length === 0) return true;
+  // Key saint/church name words must overlap (skip generic words)
+  const genericWords = new Set(['church', 'episcopal', 'parish', 'chapel', 'cathedral', 'mission', 'memorial']);
+  const pKey = pWords.filter(w => !genericWords.has(w));
+  const cKey = cWords.filter(w => !genericWords.has(w));
+  if (pKey.length === 0 || cKey.length === 0) return true;
+  return pKey.some(w => cKey.includes(w));
+}
+
 function matchPosition(posName, diocese, fields, indexes, website) {
   const { emails, partialDomains } = extractEmails(fields);
 
   // Strategy 0: Website match (most reliable when available)
   if (website) {
-    const w = normUrl(website);
-    if (w) {
-      // Try exact normalized URL first
-      const match = indexes.websiteIndex.get(w);
-      if (match && (!match.church.type || match.church.type === 'church')) {
-        return {
-          church_nid: match.nid,
-          confidence: 'exact',
-          match_method: 'website',
-          flagged: false,
-        };
-      }
-      // Fall back to domain-only match (catches /contact vs / mismatches)
-      const d = extractDomain(website);
-      if (d) {
-        const domainMatches = (indexes.domainIndex.get(d) || [])
+    // Skip diocesan/generic websites entirely
+    const wDomain = extractDomain(website);
+    if (wDomain && !isDiocesanOrGenericDomain(wDomain)) {
+      const w = normUrl(website);
+      if (w) {
+        // Try exact normalized URL first
+        const urlMatches = (indexes.websiteIndex.get(w) || [])
           .filter(m => !m.church.type || m.church.type === 'church');
-        if (domainMatches.length === 1) {
+        if (urlMatches.length === 1) {
           return {
-            church_nid: domainMatches[0].nid,
-            confidence: 'high',
-            match_method: 'website_domain',
+            church_nid: urlMatches[0].nid,
+            confidence: 'exact',
+            match_method: 'website',
             flagged: false,
           };
+        }
+        // Fall back to domain-only match (catches /contact vs / mismatches)
+        if (wDomain) {
+          const domainMatches = (indexes.domainIndex.get(wDomain) || [])
+            .filter(m => !m.church.type || m.church.type === 'church');
+          if (domainMatches.length === 1) {
+            return {
+              church_nid: domainMatches[0].nid,
+              confidence: 'high',
+              match_method: 'website_domain',
+              flagged: false,
+            };
+          }
         }
       }
     }
@@ -322,6 +348,10 @@ function matchPosition(posName, diocese, fields, indexes, website) {
         // Skip and fall through to name-based matching
         continue;
       }
+      // Cross-validate: if position has a name, make sure it matches the church
+      if (!namesCompatible(posName, matches[0].church.name)) {
+        continue; // Name mismatch - likely wrong church, skip to next strategy
+      }
       return {
         church_nid: matches[0].nid,
         confidence: 'exact',
@@ -333,6 +363,10 @@ function matchPosition(posName, diocese, fields, indexes, website) {
     // If multiple matches, filter to churches only and check again
     const churchOnly = matches.filter(m => !m.church.type || m.church.type === 'church');
     if (churchOnly.length === 1) {
+      // Cross-validate name
+      if (!namesCompatible(posName, churchOnly[0].church.name)) {
+        continue;
+      }
       return {
         church_nid: churchOnly[0].nid,
         confidence: 'exact',
@@ -351,10 +385,11 @@ function matchPosition(posName, diocese, fields, indexes, website) {
     if (isDiocesanOrGenericDomain(domain)) continue;
 
     // Try exact website index first
-    const match = indexes.websiteIndex.get(domain);
-    if (match && (!match.church.type || match.church.type === 'church')) {
+    const wsMatches = (indexes.websiteIndex.get(domain) || [])
+      .filter(m => !m.church.type || m.church.type === 'church');
+    if (wsMatches.length === 1) {
       return {
-        church_nid: match.nid,
+        church_nid: wsMatches[0].nid,
         confidence: 'high',
         match_method: 'email_domain_website',
         flagged: false,
@@ -539,7 +574,13 @@ function main() {
 
     // Extract website from media/links fields if no dedicated website field
     let website = entry.website;
+    // Filter diocesan/generic domains from the dedicated website too
+    if (website) {
+      const wd = extractDomain(website);
+      if (wd && isDiocesanOrGenericDomain(wd)) website = '';
+    }
     if (!website && entry.fields) {
+      let fallbackUrl = '';
       for (const f of entry.fields) {
         if (!f.value) continue;
         // Look for URLs in field values, skip VH links, PDFs, and diocesan sites
@@ -548,6 +589,9 @@ function main() {
         for (const url of urls) {
           if (url.includes('vocationhub')) continue;
           if (url.match(/\.(pdf|doc|docx)$/i)) continue;
+          // Skip diocesan/generic domains
+          const urlDomain = extractDomain(url);
+          if (urlDomain && isDiocesanOrGenericDomain(urlDomain)) continue;
           // Prefer URLs with church-like labels
           const label = (f.label || '').toLowerCase();
           if (label.includes('website') || label.includes('parish') || label.includes('church') || label.includes('profile')) {
@@ -555,10 +599,11 @@ function main() {
             break;
           }
           // Store first non-diocesan URL as fallback
-          if (!website) website = url;
+          if (!fallbackUrl) fallbackUrl = url;
         }
         if (website && (f.label || '').toLowerCase().match(/website|parish|church/)) break;
       }
+      if (!website) website = fallbackUrl;
     }
 
     // Auto-match
