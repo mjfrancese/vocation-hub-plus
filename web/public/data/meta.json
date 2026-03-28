@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-03-28T06:57:58.679Z",
+  "lastUpdated": "2026-03-28T17:04:10.139Z",
   "totalPositions": 37,
   "activeCount": 37,
   "expiredCount": 0,
   "newCount": 37,
   "lastScrape": {
     "id": 1,
-    "scraped_at": "2026-03-28 06:57:58",
+    "scraped_at": "2026-03-28 17:04:10",
     "total_found": 37,
     "new_count": 37,
     "expired_count": 0,
-    "duration_ms": 473853,
+    "duration_ms": 471245,
     "status": "success",
     "error": null
   },
