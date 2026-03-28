@@ -10,6 +10,7 @@ import { logger } from './logger.js';
 import { sleep } from './navigate.js';
 import { discoverAndScrapePositions, type DiscoveredId } from './discover-ids-from-search.js';
 import { runBackfill } from './backfill.js';
+import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
@@ -106,7 +107,7 @@ async function main(): Promise<void> {
         const timeLeft3 = CONFIG.maxRuntime - elapsed3 - 60_000;
 
         if (timeLeft3 > 60_000) {
-          const backfillResult = await runBackfill(page, CONFIG.url, 5);
+          const backfillResult = await runBackfill(page, CONFIG.url, 10);
 
           if (backfillResult.succeeded > 0) {
             // Save the newly discovered ID mappings
@@ -140,6 +141,24 @@ async function main(): Promise<void> {
       const durationMs = Date.now() - startTime;
       logScrape(positions.length, diff.newCount, diff.expiredCount, durationMs, 'success');
       exportJson();
+
+      // Run web build scripts to enrich exported data (church matching, parochial data, gap report)
+      const webScriptsDir = path.resolve(__dirname, '../../web');
+      const scripts = ['build-registry.js', 'build-position-map.js', 'enrich-positions.js'];
+      for (const script of scripts) {
+        const scriptPath = path.join(webScriptsDir, 'scripts', script);
+        if (fs.existsSync(scriptPath)) {
+          try {
+            logger.info('Running post-export script', { script });
+            execSync(`node "${scriptPath}"`, { cwd: webScriptsDir, stdio: 'pipe', timeout: 60_000 });
+          } catch (scriptErr) {
+            logger.warn('Post-export script failed (non-fatal)', {
+              script,
+              error: scriptErr instanceof Error ? scriptErr.message : String(scriptErr),
+            });
+          }
+        }
+      }
 
       logger.info('Scrape completed successfully', {
         duration: `${(durationMs / 1000).toFixed(1)}s`,

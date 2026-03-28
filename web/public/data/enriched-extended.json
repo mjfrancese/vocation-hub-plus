@@ -169,14 +169,29 @@
     "vh_id": 10690,
     "name": "St James the Apostle Church",
     "diocese": "California",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10690",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St James the Apostle Church",
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 640,
+      "name": "St. James the Apostle / Iglesia de Santiago",
+      "street": "1540 12th Ave",
+      "city": "Oakland",
+      "state": "CA",
+      "zip": "94606-3803",
+      "phone": "510-533-2136",
+      "email": "admin@stjamesoakland.org",
+      "website": "https://www.santiagooakland.org/",
+      "type": "church",
+      "lat": 37.79161,
+      "lng": -122.24619
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10688,
@@ -361,84 +376,14 @@
     "vh_id": 10684,
     "name": "Cathedral Church of St Luke",
     "diocese": "Central Florida",
-    "state": "FL",
+    "state": "",
     "vh_status": "Profile complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10684",
     "position_type": "Dean",
     "congregation": "Cathedral Church of St Luke",
     "receiving_names_from": "03/23/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 2335,
-      "name": "Cathedral Church of St. Luke",
-      "street": "130 N Magnolia Ave",
-      "city": "Orlando",
-      "state": "FL",
-      "zip": "32801-2300",
-      "phone": "(407) 849-0680",
-      "email": "CCSLWELCOME@GMAIL.COM",
-      "website": "https://www.ccslorlando.org",
-      "type": "church",
-      "lat": 28.544328,
-      "lng": -81.377492
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "Cathedral Church of St Luke (Orlando)",
-      "years": {
-        "2015": {
-          "averageAttendance": 447,
-          "plateAndPledge": 916056,
-          "membership": 1113
-        },
-        "2016": {
-          "averageAttendance": 461,
-          "plateAndPledge": 930378,
-          "membership": 1087
-        },
-        "2017": {
-          "averageAttendance": 420,
-          "plateAndPledge": 905229,
-          "membership": 1084
-        },
-        "2018": {
-          "averageAttendance": 379,
-          "plateAndPledge": 904235,
-          "membership": 1087
-        },
-        "2019": {
-          "averageAttendance": 444,
-          "plateAndPledge": 924062,
-          "membership": 1070
-        },
-        "2020": {
-          "averageAttendance": 444,
-          "plateAndPledge": 909113,
-          "membership": 1032
-        },
-        "2021": {
-          "averageAttendance": 287,
-          "plateAndPledge": 922075,
-          "membership": 1040
-        },
-        "2022": {
-          "averageAttendance": 345,
-          "plateAndPledge": 968603,
-          "membership": 999
-        },
-        "2023": {
-          "averageAttendance": 314,
-          "plateAndPledge": 1055549,
-          "membership": 943
-        },
-        "2024": {
-          "averageAttendance": 334,
-          "plateAndPledge": 1057453,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10682,
@@ -457,14 +402,29 @@
     "vh_id": 10680,
     "name": "St Christophers Church",
     "diocese": "Hawaii",
-    "state": "",
+    "state": "HI",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10680",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Christophers Church",
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1324,
+      "name": "St. Christopher, The Parish Church of",
+      "street": "93 N Kainalu Dr",
+      "city": "Kailua",
+      "state": "HI",
+      "zip": "96734-2331",
+      "phone": "808.262.8176",
+      "email": "stc@stchristopherkailua.org",
+      "website": "http://www.stchristopherkailua.org",
+      "type": "church",
+      "lat": 21.399158,
+      "lng": -157.740486
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10679,
@@ -481,7 +441,7 @@
   },
   {
     "vh_id": 10678,
-    "name": "Position in Missouri",
+    "name": "St. Mark's Episcopal Church, Portland, Portland, MO",
     "diocese": "Missouri",
     "state": "MO",
     "vh_status": "Receiving names",
@@ -490,7 +450,77 @@
     "congregation": "",
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3664,
+      "name": "St. Mark's Episcopal Church, Portland",
+      "street": "10486 County Road 466",
+      "city": "Portland",
+      "state": "MO",
+      "zip": "65067",
+      "phone": "314-231-1220 (Diocese of Missouri office)",
+      "email": "stmarksportland@gmail.com",
+      "website": "https://www.stmarksportland.org/",
+      "type": "church",
+      "lat": 38.712004,
+      "lng": -91.71735
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Marks Episcopal Church (Portland)",
+      "years": {
+        "2015": {
+          "averageAttendance": 8,
+          "plateAndPledge": 4301,
+          "membership": 65
+        },
+        "2016": {
+          "averageAttendance": 8,
+          "plateAndPledge": 9315,
+          "membership": 65
+        },
+        "2017": {
+          "averageAttendance": 9,
+          "plateAndPledge": 7941,
+          "membership": 66
+        },
+        "2018": {
+          "averageAttendance": 8,
+          "plateAndPledge": 8564,
+          "membership": 60
+        },
+        "2019": {
+          "averageAttendance": 9,
+          "plateAndPledge": 7186,
+          "membership": 58
+        },
+        "2020": {
+          "averageAttendance": 8,
+          "plateAndPledge": 4912,
+          "membership": 58
+        },
+        "2021": {
+          "averageAttendance": 9,
+          "plateAndPledge": 6629,
+          "membership": 60
+        },
+        "2022": {
+          "averageAttendance": 6,
+          "plateAndPledge": 8163,
+          "membership": 60
+        },
+        "2023": {
+          "averageAttendance": 12,
+          "plateAndPledge": 10243,
+          "membership": 60
+        },
+        "2024": {
+          "averageAttendance": 11,
+          "plateAndPledge": 10712,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10677,
@@ -961,71 +991,71 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 3696,
-      "name": "Trinity Episcopal Church",
-      "street": "640 Comley Way",
-      "city": "Ennis",
+      "nid": 3717,
+      "name": "St Paul's Episcopal Church",
+      "street": "102 E Idaho St",
+      "city": "Virginia City",
       "state": "MT",
-      "zip": "59729",
-      "phone": "4066001128",
-      "email": "kfaxberg@gmail.com",
-      "website": "http://trinityepiscopalmt.org/",
+      "zip": "59755",
+      "phone": "406-843-5296",
+      "email": "trinity@3rivers.net",
+      "website": "http://stpaulsvcmt.org/",
       "type": "church",
-      "lat": 45.342413,
-      "lng": -111.7358
+      "lat": 45.292983,
+      "lng": -111.94366
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "Trinity Episcopal Church (Ennis)",
+      "congregationCity": "St Pauls Episcopal Church (Hamilton)",
       "years": {
         "2015": {
-          "averageAttendance": 36,
-          "plateAndPledge": 71364,
-          "membership": 84
+          "averageAttendance": 46,
+          "plateAndPledge": 69892,
+          "membership": 118
         },
         "2016": {
-          "averageAttendance": 37,
-          "plateAndPledge": 69912,
-          "membership": 81
+          "averageAttendance": 38,
+          "plateAndPledge": 71578,
+          "membership": 116
         },
         "2017": {
-          "averageAttendance": 33,
-          "plateAndPledge": 75022,
-          "membership": 85
+          "averageAttendance": 38,
+          "plateAndPledge": 64637,
+          "membership": 109
         },
         "2018": {
-          "averageAttendance": 32,
-          "plateAndPledge": 77456,
-          "membership": 86
+          "averageAttendance": 21,
+          "plateAndPledge": 62296,
+          "membership": 80
         },
         "2019": {
-          "averageAttendance": 38,
-          "plateAndPledge": 71336,
-          "membership": 86
+          "averageAttendance": 25,
+          "plateAndPledge": 51566,
+          "membership": 107
         },
         "2020": {
           "averageAttendance": 22,
-          "plateAndPledge": 71271,
-          "membership": 86
+          "plateAndPledge": 61867,
+          "membership": 101
         },
         "2021": {
-          "averageAttendance": 26,
-          "plateAndPledge": 75057,
-          "membership": 82
+          "averageAttendance": 18,
+          "plateAndPledge": 63304,
+          "membership": 104
         },
         "2022": {
-          "averageAttendance": 28,
-          "plateAndPledge": 74961,
-          "membership": 80
+          "averageAttendance": 18,
+          "plateAndPledge": 67117,
+          "membership": 100
         },
         "2023": {
-          "averageAttendance": 30,
-          "plateAndPledge": 84056,
-          "membership": 82
+          "averageAttendance": 24,
+          "plateAndPledge": 73747,
+          "membership": 100
         },
         "2024": {
-          "averageAttendance": 36,
-          "plateAndPledge": 81020,
+          "averageAttendance": 24,
+          "plateAndPledge": 82281,
           "membership": null
         }
       }
@@ -1725,167 +1755,27 @@
     "vh_id": 10605,
     "name": "St Andrews Episcopal Church",
     "diocese": "Maryland",
-    "state": "MD",
+    "state": "",
     "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10605",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Andrews Episcopal Church",
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 3440,
-      "name": "St. Andrew's Episcopal Church",
-      "street": "22 Cumberland St",
-      "city": "Clear Spring",
-      "state": "MD",
-      "zip": "21722",
-      "phone": "(301) 842-2433",
-      "email": "",
-      "website": "",
-      "type": "church",
-      "lat": 39.656402,
-      "lng": -77.932456
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Andrews Episcopal Church (Clear Spring)",
-      "years": {
-        "2015": {
-          "averageAttendance": 47,
-          "plateAndPledge": 33623,
-          "membership": 117
-        },
-        "2016": {
-          "averageAttendance": 45,
-          "plateAndPledge": 39009,
-          "membership": 130
-        },
-        "2017": {
-          "averageAttendance": 45,
-          "plateAndPledge": 31398,
-          "membership": 139
-        },
-        "2018": {
-          "averageAttendance": 43,
-          "plateAndPledge": 39553,
-          "membership": 130
-        },
-        "2019": {
-          "averageAttendance": 40,
-          "plateAndPledge": 37544,
-          "membership": 136
-        },
-        "2020": {
-          "averageAttendance": 41,
-          "plateAndPledge": 38432,
-          "membership": 143
-        },
-        "2021": {
-          "averageAttendance": 35,
-          "plateAndPledge": 43211,
-          "membership": 86
-        },
-        "2022": {
-          "averageAttendance": 42,
-          "plateAndPledge": 38692,
-          "membership": 88
-        },
-        "2023": {
-          "averageAttendance": 43,
-          "plateAndPledge": 36801,
-          "membership": 56
-        },
-        "2024": {
-          "averageAttendance": 35,
-          "plateAndPledge": 33951,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10604,
     "name": "St Georges Episcopal Church",
     "diocese": "Maryland",
-    "state": "MD",
+    "state": "",
     "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10604",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Georges Episcopal Church",
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 3463,
-      "name": "St. George's Episcopal Church",
-      "street": "2434 Cape Horn Rd",
-      "city": "Hampstead",
-      "state": "MD",
-      "zip": "21074-1172",
-      "phone": "(410) 374-9748",
-      "email": "",
-      "website": "",
-      "type": "church",
-      "lat": 39.642,
-      "lng": -76.880488
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Georges Episcopal Church (Hampstead)",
-      "years": {
-        "2015": {
-          "averageAttendance": 90,
-          "plateAndPledge": 167940,
-          "membership": 355
-        },
-        "2016": {
-          "averageAttendance": 100,
-          "plateAndPledge": 175885,
-          "membership": 376
-        },
-        "2017": {
-          "averageAttendance": 87,
-          "plateAndPledge": 185613,
-          "membership": 387
-        },
-        "2018": {
-          "averageAttendance": 89,
-          "plateAndPledge": 184337,
-          "membership": 392
-        },
-        "2019": {
-          "averageAttendance": 83,
-          "plateAndPledge": 187260,
-          "membership": 393
-        },
-        "2020": {
-          "averageAttendance": 84,
-          "plateAndPledge": 176706,
-          "membership": 397
-        },
-        "2021": {
-          "averageAttendance": 45,
-          "plateAndPledge": 170686,
-          "membership": 394
-        },
-        "2022": {
-          "averageAttendance": 58,
-          "plateAndPledge": 179845,
-          "membership": 390
-        },
-        "2023": {
-          "averageAttendance": 57,
-          "plateAndPledge": 243396,
-          "membership": 127
-        },
-        "2024": {
-          "averageAttendance": 51,
-          "plateAndPledge": 196663,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10599,
@@ -1974,84 +1864,14 @@
     "vh_id": 10596,
     "name": "St Pauls Episcopal Church",
     "diocese": "Maryland",
-    "state": "MD",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10596",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Pauls Episcopal Church",
     "receiving_names_from": "02/18/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 3476,
-      "name": "St. Paul's Episcopal Church",
-      "street": "16457 Old Frederick Rd",
-      "city": "Mount Airy",
-      "state": "MD",
-      "zip": "21771-3331",
-      "phone": "410-489-4411",
-      "email": "",
-      "website": "",
-      "type": "church",
-      "lat": 39.350079,
-      "lng": -77.089826
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Mount Airy)",
-      "years": {
-        "2015": {
-          "averageAttendance": 42,
-          "plateAndPledge": 94003,
-          "membership": 66
-        },
-        "2016": {
-          "averageAttendance": 35,
-          "plateAndPledge": 87182,
-          "membership": 62
-        },
-        "2017": {
-          "averageAttendance": 30,
-          "plateAndPledge": 82764,
-          "membership": 57
-        },
-        "2018": {
-          "averageAttendance": 28,
-          "plateAndPledge": 72924,
-          "membership": 52
-        },
-        "2019": {
-          "averageAttendance": 23,
-          "plateAndPledge": 63751,
-          "membership": 34
-        },
-        "2020": {
-          "averageAttendance": 26,
-          "plateAndPledge": 51082,
-          "membership": 31
-        },
-        "2021": {
-          "averageAttendance": 16,
-          "plateAndPledge": 39549,
-          "membership": 29
-        },
-        "2022": {
-          "averageAttendance": 24,
-          "plateAndPledge": 52055,
-          "membership": 30
-        },
-        "2023": {
-          "averageAttendance": 33,
-          "plateAndPledge": 61566,
-          "membership": 29
-        },
-        "2024": {
-          "averageAttendance": 28,
-          "plateAndPledge": 77850,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10592,
@@ -2477,27 +2297,157 @@
     "vh_id": 10577,
     "name": "St James (Albion)\nTrinity (Marshall)",
     "diocese": "Great Lakes",
-    "state": "",
+    "state": "MI",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10577",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St James (Albion)\nTrinity (Marshall)",
     "receiving_names_from": "02/25/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 6271,
+      "name": "St. James Church",
+      "street": "119 W Erie St",
+      "city": "Albion",
+      "state": "MI",
+      "zip": "49224-1756",
+      "phone": "​517-629-8710",
+      "email": "albion.st.james.church@gmail.com",
+      "website": "http://www.stjamesalbion.org",
+      "type": "church",
+      "lat": 42.24269,
+      "lng": -84.75421
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St James Church (Albion)",
+      "years": {
+        "2015": {
+          "averageAttendance": 43,
+          "plateAndPledge": 70289,
+          "membership": 67
+        },
+        "2016": {
+          "averageAttendance": 28,
+          "plateAndPledge": 80971,
+          "membership": 59
+        },
+        "2017": {
+          "averageAttendance": 29,
+          "plateAndPledge": 87882,
+          "membership": 60
+        },
+        "2018": {
+          "averageAttendance": 25,
+          "plateAndPledge": 79988,
+          "membership": 60
+        },
+        "2019": {
+          "averageAttendance": 24,
+          "plateAndPledge": 86159,
+          "membership": 53
+        },
+        "2020": {
+          "averageAttendance": 16,
+          "plateAndPledge": 78851,
+          "membership": 52
+        },
+        "2021": {
+          "averageAttendance": 18,
+          "plateAndPledge": 78760,
+          "membership": 47
+        },
+        "2022": {
+          "averageAttendance": 18,
+          "plateAndPledge": 77603,
+          "membership": 45
+        },
+        "2023": {
+          "averageAttendance": 14,
+          "plateAndPledge": 57576,
+          "membership": 37
+        }
+      }
+    }
   },
   {
     "vh_id": 10576,
     "name": "St Pauls (Muskegon)\nSt Peter (Montague)",
     "diocese": "Great Lakes",
-    "state": "",
+    "state": "MI",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10576",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Pauls (Muskegon)\nSt Peter (Montague)",
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 6309,
+      "name": "St. Paul's Episcopal Church",
+      "street": "1006 3rd St",
+      "city": "Muskegon",
+      "state": "MI",
+      "zip": "49440-1206",
+      "phone": "231-722-2112",
+      "email": "office@stpaulsmuskegon.org",
+      "website": "https://stpaulsmuskegon.org",
+      "type": "church",
+      "lat": 43.23447,
+      "lng": -86.2518
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Pauls Episcopal Church (Muskegon)",
+      "years": {
+        "2015": {
+          "averageAttendance": 63,
+          "plateAndPledge": 127185,
+          "membership": 180
+        },
+        "2016": {
+          "averageAttendance": 79,
+          "plateAndPledge": 174115,
+          "membership": 168
+        },
+        "2017": {
+          "averageAttendance": 82,
+          "plateAndPledge": 165425,
+          "membership": 157
+        },
+        "2018": {
+          "averageAttendance": 72,
+          "plateAndPledge": 157611,
+          "membership": 148
+        },
+        "2019": {
+          "averageAttendance": 84,
+          "plateAndPledge": 180877,
+          "membership": 147
+        },
+        "2020": {
+          "averageAttendance": 75,
+          "plateAndPledge": 170348,
+          "membership": 146
+        },
+        "2021": {
+          "averageAttendance": 40,
+          "plateAndPledge": 140794,
+          "membership": 137
+        },
+        "2022": {
+          "averageAttendance": 37,
+          "plateAndPledge": 163307,
+          "membership": 153
+        },
+        "2023": {
+          "averageAttendance": 42,
+          "plateAndPledge": 121018,
+          "membership": 145
+        }
+      }
+    }
   },
   {
     "vh_id": 10575,
@@ -2666,14 +2616,29 @@
     "vh_id": 10565,
     "name": "Mt Zion Episcopal Church",
     "diocese": "West Virginia",
-    "state": "",
+    "state": "WV",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10565",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "Mt Zion Episcopal Church",
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 6151,
+      "name": "Mt. Zion Episcopal Church",
+      "street": "108 S Mary St",
+      "city": "Hedgesville",
+      "state": "WV",
+      "zip": "25427",
+      "phone": " 304-702-7111",
+      "email": "frbshoda@gmail.com",
+      "website": "https://www.mtzionhedgesville.org",
+      "type": "church",
+      "lat": 39.553579,
+      "lng": -77.9952
+    },
+    "match_confidence": "exact"
   },
   {
     "vh_id": 10564,
@@ -4837,84 +4802,14 @@
     "vh_id": 10402,
     "name": "St Pauls Episcopal Church",
     "diocese": "Western New York",
-    "state": "NY",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10402",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "St Pauls Episcopal Church",
     "receiving_names_from": "03/10/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6330,
-      "name": "St. Paul's Episcopal Church",
-      "street": "930 Lake St",
-      "city": "Angola",
-      "state": "NY",
-      "zip": "14006-9200",
-      "phone": "716 549-0063",
-      "email": "st.pauls-angola@outlook.com",
-      "website": "",
-      "type": "church",
-      "lat": 42.6393,
-      "lng": -79.04087
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Angola)",
-      "years": {
-        "2015": {
-          "averageAttendance": 37,
-          "plateAndPledge": 40527,
-          "membership": 120
-        },
-        "2016": {
-          "averageAttendance": 38,
-          "plateAndPledge": 40744,
-          "membership": 118
-        },
-        "2017": {
-          "averageAttendance": 34,
-          "plateAndPledge": 38683,
-          "membership": 116
-        },
-        "2018": {
-          "averageAttendance": 27,
-          "plateAndPledge": 43038,
-          "membership": 111
-        },
-        "2019": {
-          "averageAttendance": 27,
-          "plateAndPledge": 45492,
-          "membership": 90
-        },
-        "2020": {
-          "averageAttendance": 20,
-          "plateAndPledge": 38500,
-          "membership": 90
-        },
-        "2021": {
-          "averageAttendance": 18,
-          "plateAndPledge": 43546,
-          "membership": 88
-        },
-        "2022": {
-          "averageAttendance": 18,
-          "plateAndPledge": 43546,
-          "membership": 88
-        },
-        "2023": {
-          "averageAttendance": 18,
-          "plateAndPledge": 43546,
-          "membership": 88
-        },
-        "2024": {
-          "averageAttendance": 11,
-          "plateAndPledge": 28502,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10401,
@@ -5229,84 +5124,14 @@
     "vh_id": 10355,
     "name": "St Peters Memorial",
     "diocese": "Rochester",
-    "state": "NY",
+    "state": "",
     "vh_status": "Reopened",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10355",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Peters Memorial",
     "receiving_names_from": "03/03/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 4906,
-      "name": "St. Peter's Memorial ",
-      "street": "25 Clara Barton Street",
-      "city": "Dansville",
-      "state": "NY",
-      "zip": "14437",
-      "phone": "5853355434",
-      "email": "priest@stpetesdansville.org",
-      "website": "http://www.stpetesdansville.org",
-      "type": "church",
-      "lat": 42.558781,
-      "lng": -77.696168
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Peters Memorial (Dansville)",
-      "years": {
-        "2015": {
-          "averageAttendance": 10,
-          "plateAndPledge": 2310,
-          "membership": 15
-        },
-        "2016": {
-          "averageAttendance": 14,
-          "plateAndPledge": 2991,
-          "membership": 16
-        },
-        "2017": {
-          "averageAttendance": 22,
-          "plateAndPledge": 9238,
-          "membership": 27
-        },
-        "2018": {
-          "averageAttendance": 30,
-          "plateAndPledge": 12353,
-          "membership": 30
-        },
-        "2019": {
-          "averageAttendance": 31,
-          "plateAndPledge": 12485,
-          "membership": 32
-        },
-        "2020": {
-          "averageAttendance": 20,
-          "plateAndPledge": 10973,
-          "membership": 30
-        },
-        "2021": {
-          "averageAttendance": 26,
-          "plateAndPledge": 9113,
-          "membership": 34
-        },
-        "2022": {
-          "averageAttendance": 21,
-          "plateAndPledge": 7470,
-          "membership": 32
-        },
-        "2023": {
-          "averageAttendance": 20,
-          "plateAndPledge": 7135,
-          "membership": 31
-        },
-        "2024": {
-          "averageAttendance": 20,
-          "plateAndPledge": 11361,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10354,
@@ -5986,16 +5811,86 @@
   },
   {
     "vh_id": 10323,
-    "name": "Position in Oregon",
+    "name": "St. Thomas Episcopal Church, Eugene, OR",
     "diocese": "Oregon",
-    "state": "",
+    "state": "OR",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10323",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/16/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 4557,
+      "name": "St. Thomas Episcopal Church",
+      "street": "1465 Coburg Rd",
+      "city": "Eugene",
+      "state": "OR",
+      "zip": "97401-5006",
+      "phone": "541-343-5241",
+      "email": "stthomaschurcheugene@gmail.com",
+      "website": "https://www.st-thomaseugene.net",
+      "type": "church",
+      "lat": 44.07779,
+      "lng": -123.06777
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Thomas Episcopal Church (Eugene)",
+      "years": {
+        "2015": {
+          "averageAttendance": 101,
+          "plateAndPledge": 153087,
+          "membership": 168
+        },
+        "2016": {
+          "averageAttendance": 81,
+          "plateAndPledge": 146701,
+          "membership": 163
+        },
+        "2017": {
+          "averageAttendance": 72,
+          "plateAndPledge": 140680,
+          "membership": 161
+        },
+        "2018": {
+          "averageAttendance": 72,
+          "plateAndPledge": 143857,
+          "membership": 161
+        },
+        "2019": {
+          "averageAttendance": 66,
+          "plateAndPledge": 175426,
+          "membership": 163
+        },
+        "2020": {
+          "averageAttendance": 67,
+          "plateAndPledge": 164715,
+          "membership": 159
+        },
+        "2021": {
+          "averageAttendance": 38,
+          "plateAndPledge": 148223,
+          "membership": 158
+        },
+        "2022": {
+          "averageAttendance": 53,
+          "plateAndPledge": 150723,
+          "membership": 154
+        },
+        "2023": {
+          "averageAttendance": 48,
+          "plateAndPledge": 143322,
+          "membership": 154
+        },
+        "2024": {
+          "averageAttendance": 47,
+          "plateAndPledge": 154694,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10321,
@@ -7630,16 +7525,31 @@
   },
   {
     "vh_id": 10272,
-    "name": "Position in New York",
+    "name": "Church of the Good Shepherd, Bronx, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10272",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 8469,
+      "name": "Church of the Good Shepherd",
+      "street": "4401 Matilda Avenue",
+      "city": "Bronx",
+      "state": "NY",
+      "zip": "10470",
+      "phone": "718-324-2347",
+      "email": "",
+      "website": "",
+      "type": "church",
+      "lat": 40.8994,
+      "lng": -73.85622
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10271,
@@ -7656,29 +7566,169 @@
   },
   {
     "vh_id": 10270,
-    "name": "Position in New York",
+    "name": "St. Thomas' Church, Amenia Union, Amenia, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10270",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 356,
+      "name": "St. Thomas' Church, Amenia Union",
+      "street": "40 Leedsville Rd",
+      "city": "Amenia",
+      "state": "NY",
+      "zip": "12501",
+      "phone": "845-373-9161",
+      "email": "contactus@stthomasamenia.com",
+      "website": "http://www.stthomasamenia.com",
+      "type": "church",
+      "lat": 41.82509,
+      "lng": -73.50596
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Thomas Church (Amenia)",
+      "years": {
+        "2015": {
+          "averageAttendance": 57,
+          "plateAndPledge": 57204,
+          "membership": 93
+        },
+        "2016": {
+          "averageAttendance": 57,
+          "plateAndPledge": 57204,
+          "membership": 93
+        },
+        "2017": {
+          "averageAttendance": 62,
+          "plateAndPledge": 80186,
+          "membership": 94
+        },
+        "2018": {
+          "averageAttendance": 28,
+          "plateAndPledge": 77736,
+          "membership": 94
+        },
+        "2019": {
+          "averageAttendance": 26,
+          "plateAndPledge": 88903,
+          "membership": 31
+        },
+        "2020": {
+          "averageAttendance": 21,
+          "plateAndPledge": 100408,
+          "membership": 36
+        },
+        "2021": {
+          "averageAttendance": 19,
+          "plateAndPledge": 99532,
+          "membership": 38
+        },
+        "2022": {
+          "averageAttendance": 20,
+          "plateAndPledge": 102177,
+          "membership": 39
+        },
+        "2023": {
+          "averageAttendance": 20,
+          "plateAndPledge": 101427,
+          "membership": 43
+        },
+        "2024": {
+          "averageAttendance": 19,
+          "plateAndPledge": 104630,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10269,
-    "name": "Position in New York",
+    "name": "St. Ann's Church, Bronx, Bronx, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10269",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 395,
+      "name": "St. Ann's Church, Bronx",
+      "street": "295 St. Ann's Ave.",
+      "city": "Bronx",
+      "state": "NY",
+      "zip": "10454",
+      "phone": "718-585-5632",
+      "email": "office@stannsbx.org",
+      "website": "https://stannssouthbronx.wordpress.com",
+      "type": "church",
+      "lat": 40.808541,
+      "lng": -73.917014
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Anns Church (Bronx)",
+      "years": {
+        "2015": {
+          "averageAttendance": 136,
+          "plateAndPledge": 29751,
+          "membership": 491
+        },
+        "2016": {
+          "averageAttendance": 136,
+          "plateAndPledge": 29751,
+          "membership": 491
+        },
+        "2017": {
+          "averageAttendance": 153,
+          "plateAndPledge": 22888,
+          "membership": 491
+        },
+        "2018": {
+          "averageAttendance": 139,
+          "plateAndPledge": 30630,
+          "membership": 497
+        },
+        "2019": {
+          "averageAttendance": 141,
+          "plateAndPledge": 35550,
+          "membership": 508
+        },
+        "2020": {
+          "averageAttendance": 168,
+          "plateAndPledge": 27378,
+          "membership": 517
+        },
+        "2021": {
+          "averageAttendance": 50,
+          "plateAndPledge": 28636,
+          "membership": 515
+        },
+        "2022": {
+          "averageAttendance": 48,
+          "plateAndPledge": 16943,
+          "membership": 517
+        },
+        "2023": {
+          "averageAttendance": 52,
+          "plateAndPledge": 18798,
+          "membership": 526
+        },
+        "2024": {
+          "averageAttendance": 52,
+          "plateAndPledge": 31955,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10268,
@@ -7848,16 +7898,31 @@
   },
   {
     "vh_id": 10266,
-    "name": "Position in New York",
+    "name": "St. Peter's Church, Lithgow, Millbrook, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10266",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 279,
+      "name": "St. Peter's Church, Lithgow",
+      "street": "696 Deep Hollow Road",
+      "city": "Millbrook",
+      "state": "NY",
+      "zip": "12545",
+      "phone": "(845) 677-9286",
+      "email": "stpeterschurch@optonline.net",
+      "website": "http://www.stpeterslithgow.org",
+      "type": "church",
+      "lat": 41.825224,
+      "lng": -73.619341
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10265,
@@ -8221,16 +8286,86 @@
   },
   {
     "vh_id": 10260,
-    "name": "Position in New York",
+    "name": "Saint Paul's Church, Spring Valley, Spring Valley, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10260",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 274,
+      "name": "Saint Paul's Church, Spring Valley",
+      "street": "26 S. Madison Ave",
+      "city": "Spring Valley",
+      "state": "NY",
+      "zip": "10977",
+      "phone": "(845) 356-1857",
+      "email": "office@saintpaulssv.org",
+      "website": "http://saintpaulssv.org",
+      "type": "church",
+      "lat": 41.108925,
+      "lng": -74.045885
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Pauls Church (Spring Valley)",
+      "years": {
+        "2015": {
+          "averageAttendance": 73,
+          "plateAndPledge": 108344,
+          "membership": 249
+        },
+        "2016": {
+          "averageAttendance": 69,
+          "plateAndPledge": 119218,
+          "membership": 241
+        },
+        "2017": {
+          "averageAttendance": 65,
+          "plateAndPledge": 122673,
+          "membership": 224
+        },
+        "2018": {
+          "averageAttendance": 81,
+          "plateAndPledge": 122713,
+          "membership": 205
+        },
+        "2019": {
+          "averageAttendance": 55,
+          "plateAndPledge": 98461,
+          "membership": 167
+        },
+        "2020": {
+          "averageAttendance": 37,
+          "plateAndPledge": 82203,
+          "membership": 157
+        },
+        "2021": {
+          "averageAttendance": 12,
+          "plateAndPledge": 86601,
+          "membership": 145
+        },
+        "2022": {
+          "averageAttendance": 45,
+          "plateAndPledge": 89580,
+          "membership": 127
+        },
+        "2023": {
+          "averageAttendance": 46,
+          "plateAndPledge": 90253,
+          "membership": 103
+        },
+        "2024": {
+          "averageAttendance": 36,
+          "plateAndPledge": 93374,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10259,
@@ -8483,29 +8618,169 @@
   },
   {
     "vh_id": 10256,
-    "name": "Position in New York",
+    "name": "St. James Church, North Salem, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10256",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 329,
+      "name": "St. James Church",
+      "street": "296 Titicus Rd.",
+      "city": "North Salem",
+      "state": "NY",
+      "zip": "10560",
+      "phone": "914-669-5563",
+      "email": "stjamesnsny@gmail.com",
+      "website": "http://stjamesns.com",
+      "type": "church",
+      "lat": 41.328503,
+      "lng": -73.589945
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St James Church (North Salem)",
+      "years": {
+        "2015": {
+          "averageAttendance": 81,
+          "plateAndPledge": 163727,
+          "membership": 334
+        },
+        "2016": {
+          "averageAttendance": 36,
+          "plateAndPledge": 120268,
+          "membership": 334
+        },
+        "2017": {
+          "averageAttendance": 36,
+          "plateAndPledge": 119014,
+          "membership": 148
+        },
+        "2018": {
+          "averageAttendance": 36,
+          "plateAndPledge": 119014,
+          "membership": 148
+        },
+        "2019": {
+          "averageAttendance": 36,
+          "plateAndPledge": 119014,
+          "membership": 148
+        },
+        "2020": {
+          "averageAttendance": 0,
+          "plateAndPledge": 119014,
+          "membership": 148
+        },
+        "2021": {
+          "averageAttendance": 18,
+          "plateAndPledge": 88012,
+          "membership": 81
+        },
+        "2022": {
+          "averageAttendance": 23,
+          "plateAndPledge": 48726,
+          "membership": 81
+        },
+        "2023": {
+          "averageAttendance": 36,
+          "plateAndPledge": 63319,
+          "membership": 94
+        },
+        "2024": {
+          "averageAttendance": 37,
+          "plateAndPledge": 70091,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10255,
-    "name": "Position in New York",
+    "name": "St. John's Church, South Salem, South Salem, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10255",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 330,
+      "name": "St. John's Church, South Salem",
+      "street": "82 Spring St",
+      "city": "South Salem",
+      "state": "NY",
+      "zip": "10590",
+      "phone": "914-763-8273",
+      "email": "stjohnssouthsalem@gmail.com",
+      "website": "https://stjohnsepiscopalparish.com/",
+      "type": "church",
+      "lat": 41.27335,
+      "lng": -73.55872
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Johns Church (South Salem)",
+      "years": {
+        "2015": {
+          "averageAttendance": 74,
+          "plateAndPledge": 248173,
+          "membership": 138
+        },
+        "2016": {
+          "averageAttendance": 68,
+          "plateAndPledge": 203995,
+          "membership": 137
+        },
+        "2017": {
+          "averageAttendance": 68,
+          "plateAndPledge": 226248,
+          "membership": 120
+        },
+        "2018": {
+          "averageAttendance": 58,
+          "plateAndPledge": 214777,
+          "membership": 120
+        },
+        "2019": {
+          "averageAttendance": 59,
+          "plateAndPledge": 192160,
+          "membership": 122
+        },
+        "2020": {
+          "averageAttendance": 60,
+          "plateAndPledge": 170732,
+          "membership": 135
+        },
+        "2021": {
+          "averageAttendance": 22,
+          "plateAndPledge": 157083,
+          "membership": 135
+        },
+        "2022": {
+          "averageAttendance": 31,
+          "plateAndPledge": 120823,
+          "membership": 140
+        },
+        "2023": {
+          "averageAttendance": 47,
+          "plateAndPledge": 164425,
+          "membership": 142
+        },
+        "2024": {
+          "averageAttendance": 48,
+          "plateAndPledge": 151860,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10254,
@@ -8605,16 +8880,86 @@
   },
   {
     "vh_id": 10252,
-    "name": "Position in New York",
+    "name": "Zion Church, Wappingers Falls, Wappingers Falls, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10252",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 366,
+      "name": "Zion Church, Wappingers Falls",
+      "street": "12 Satterlee Place",
+      "city": "Wappingers Falls",
+      "state": "NY",
+      "zip": "12590",
+      "phone": "845-297-9797",
+      "email": "ZionWappingersOffice@gmail.com",
+      "website": "https://zionwappingersfalls.org",
+      "type": "church",
+      "lat": 41.59783,
+      "lng": -73.91849
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Zion Church (Wappingers Falls)",
+      "years": {
+        "2015": {
+          "averageAttendance": 93,
+          "plateAndPledge": 185712,
+          "membership": 644
+        },
+        "2016": {
+          "averageAttendance": 87,
+          "plateAndPledge": 189532,
+          "membership": 633
+        },
+        "2017": {
+          "averageAttendance": 92,
+          "plateAndPledge": 190785,
+          "membership": 629
+        },
+        "2018": {
+          "averageAttendance": 83,
+          "plateAndPledge": 173014,
+          "membership": 625
+        },
+        "2019": {
+          "averageAttendance": 88,
+          "plateAndPledge": 177623,
+          "membership": 626
+        },
+        "2020": {
+          "averageAttendance": 0,
+          "plateAndPledge": 155008,
+          "membership": 619
+        },
+        "2021": {
+          "averageAttendance": 42,
+          "plateAndPledge": 117936,
+          "membership": 120
+        },
+        "2022": {
+          "averageAttendance": 49,
+          "plateAndPledge": 122652,
+          "membership": 117
+        },
+        "2023": {
+          "averageAttendance": 49,
+          "plateAndPledge": 122652,
+          "membership": 117
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10251,
@@ -8701,16 +9046,86 @@
   },
   {
     "vh_id": 10250,
-    "name": "Position in New York",
+    "name": "St. James' Church, Hyde Park, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10250",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 358,
+      "name": "St. James' Church",
+      "street": "4526 Albany Post Road",
+      "city": "Hyde Park",
+      "state": "NY",
+      "zip": "12538",
+      "phone": "845-229-2820",
+      "email": "stjamesoffice@stjameshydepark.org",
+      "website": "http://stjameshydepark.org",
+      "type": "church",
+      "lat": 41.80089,
+      "lng": -73.93813
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St James Episcopal Church (Hyde Park)",
+      "years": {
+        "2015": {
+          "averageAttendance": 92,
+          "plateAndPledge": 122820,
+          "membership": 206
+        },
+        "2016": {
+          "averageAttendance": 94,
+          "plateAndPledge": 161550,
+          "membership": 206
+        },
+        "2017": {
+          "averageAttendance": 88,
+          "plateAndPledge": 135161,
+          "membership": 184
+        },
+        "2018": {
+          "averageAttendance": 85,
+          "plateAndPledge": 152346,
+          "membership": 188
+        },
+        "2019": {
+          "averageAttendance": 82,
+          "plateAndPledge": 154394,
+          "membership": 177
+        },
+        "2020": {
+          "averageAttendance": 0,
+          "plateAndPledge": 154394,
+          "membership": 177
+        },
+        "2021": {
+          "averageAttendance": 0,
+          "plateAndPledge": 154394,
+          "membership": 177
+        },
+        "2022": {
+          "averageAttendance": 45,
+          "plateAndPledge": 160470,
+          "membership": 172
+        },
+        "2023": {
+          "averageAttendance": 59,
+          "plateAndPledge": 120979,
+          "membership": 108
+        },
+        "2024": {
+          "averageAttendance": 73,
+          "plateAndPledge": 186912,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10249,
@@ -8880,16 +9295,31 @@
   },
   {
     "vh_id": 10247,
-    "name": "Position in New York",
+    "name": "Holy Cross Church/Santa Cruz Parochial Mission, Kingston, Kingston, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10247",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 420,
+      "name": "Holy Cross Church/Santa Cruz Parochial Mission, Kingston",
+      "street": "30 Pine Grove Ave.",
+      "city": "Kingston",
+      "state": "NY",
+      "zip": "12401",
+      "phone": "(845) 331-6796",
+      "email": "holycrosskingston.org@gmail.com",
+      "website": "http://www.holycrosskingston.org",
+      "type": "church",
+      "lat": 41.92682,
+      "lng": -73.99998
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10246,
@@ -9059,16 +9489,86 @@
   },
   {
     "vh_id": 10244,
-    "name": "Position in New York",
+    "name": "Church of the Epiphany, Manhattan, New York, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10244",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 377,
+      "name": "Church of the Epiphany, Manhattan",
+      "street": "351 East 74th Street",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10021",
+      "phone": "212-737-2720",
+      "email": "info@EpiphanyNYC.org",
+      "website": "http://epiphanynyc.org/",
+      "type": "church",
+      "lat": 40.76942,
+      "lng": -73.95552
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "The Church of the Epiphany (New York)",
+      "years": {
+        "2015": {
+          "averageAttendance": 112,
+          "plateAndPledge": 241660,
+          "membership": 255
+        },
+        "2016": {
+          "averageAttendance": 118,
+          "plateAndPledge": 229106,
+          "membership": 247
+        },
+        "2017": {
+          "averageAttendance": 118,
+          "plateAndPledge": 255488,
+          "membership": 254
+        },
+        "2018": {
+          "averageAttendance": 118,
+          "plateAndPledge": 219789,
+          "membership": 264
+        },
+        "2019": {
+          "averageAttendance": 88,
+          "plateAndPledge": 168982,
+          "membership": 294
+        },
+        "2020": {
+          "averageAttendance": 93,
+          "plateAndPledge": 128122,
+          "membership": 294
+        },
+        "2021": {
+          "averageAttendance": 39,
+          "plateAndPledge": 148306,
+          "membership": 292
+        },
+        "2022": {
+          "averageAttendance": 37,
+          "plateAndPledge": 148852,
+          "membership": 290
+        },
+        "2023": {
+          "averageAttendance": 37,
+          "plateAndPledge": 148852,
+          "membership": 290
+        },
+        "2024": {
+          "averageAttendance": 69,
+          "plateAndPledge": 133291,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10243,
@@ -9321,16 +9821,86 @@
   },
   {
     "vh_id": 10240,
-    "name": "Position in New York",
+    "name": "Saint Paul's Church, Spring Valley, Spring Valley, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10240",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/31/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 274,
+      "name": "Saint Paul's Church, Spring Valley",
+      "street": "26 S. Madison Ave",
+      "city": "Spring Valley",
+      "state": "NY",
+      "zip": "10977",
+      "phone": "(845) 356-1857",
+      "email": "office@saintpaulssv.org",
+      "website": "http://saintpaulssv.org",
+      "type": "church",
+      "lat": 41.108925,
+      "lng": -74.045885
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Pauls Church (Spring Valley)",
+      "years": {
+        "2015": {
+          "averageAttendance": 73,
+          "plateAndPledge": 108344,
+          "membership": 249
+        },
+        "2016": {
+          "averageAttendance": 69,
+          "plateAndPledge": 119218,
+          "membership": 241
+        },
+        "2017": {
+          "averageAttendance": 65,
+          "plateAndPledge": 122673,
+          "membership": 224
+        },
+        "2018": {
+          "averageAttendance": 81,
+          "plateAndPledge": 122713,
+          "membership": 205
+        },
+        "2019": {
+          "averageAttendance": 55,
+          "plateAndPledge": 98461,
+          "membership": 167
+        },
+        "2020": {
+          "averageAttendance": 37,
+          "plateAndPledge": 82203,
+          "membership": 157
+        },
+        "2021": {
+          "averageAttendance": 12,
+          "plateAndPledge": 86601,
+          "membership": 145
+        },
+        "2022": {
+          "averageAttendance": 45,
+          "plateAndPledge": 89580,
+          "membership": 127
+        },
+        "2023": {
+          "averageAttendance": 46,
+          "plateAndPledge": 90253,
+          "membership": 103
+        },
+        "2024": {
+          "averageAttendance": 36,
+          "plateAndPledge": 93374,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10239,
@@ -9417,16 +9987,86 @@
   },
   {
     "vh_id": 10238,
-    "name": "Position in New York",
+    "name": "Christ's Church, Rye, Rye, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10238",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/03/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 428,
+      "name": "Christ's Church, Rye",
+      "street": "2 Rectory Street",
+      "city": "Rye",
+      "state": "NY",
+      "zip": "10580",
+      "phone": "914-967-1749",
+      "email": "rector@ccrye.org",
+      "website": "http://www.ccrye.org",
+      "type": "church",
+      "lat": 40.97863,
+      "lng": -73.68395
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Christ's Church (Rye)",
+      "years": {
+        "2015": {
+          "averageAttendance": 182,
+          "plateAndPledge": 1152246,
+          "membership": 2293
+        },
+        "2016": {
+          "averageAttendance": 165,
+          "plateAndPledge": 1107410,
+          "membership": 1382
+        },
+        "2017": {
+          "averageAttendance": 165,
+          "plateAndPledge": 1006609,
+          "membership": 1372
+        },
+        "2018": {
+          "averageAttendance": 184,
+          "plateAndPledge": 1026912,
+          "membership": 1397
+        },
+        "2019": {
+          "averageAttendance": 184,
+          "plateAndPledge": 1026912,
+          "membership": 1397
+        },
+        "2020": {
+          "averageAttendance": 118,
+          "plateAndPledge": 1022427,
+          "membership": 1433
+        },
+        "2021": {
+          "averageAttendance": 145,
+          "plateAndPledge": 1030418,
+          "membership": 1460
+        },
+        "2022": {
+          "averageAttendance": 138,
+          "plateAndPledge": 1122750,
+          "membership": 1398
+        },
+        "2023": {
+          "averageAttendance": 132,
+          "plateAndPledge": 1073396,
+          "membership": 1398
+        },
+        "2024": {
+          "averageAttendance": 125,
+          "plateAndPledge": 983976,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10237,
@@ -9513,16 +10153,86 @@
   },
   {
     "vh_id": 10236,
-    "name": "Position in New York",
+    "name": "Church of the Good Shepherd, Granite Springs, Granite Springs, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10236",
     "position_type": "Priest-in-Charge Shared Ministry",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 327,
+      "name": "Church of the Good Shepherd, Granite Springs",
+      "street": "39 Granite Springs Road",
+      "city": "Granite Springs",
+      "state": "NY",
+      "zip": "10527",
+      "phone": "914-248-5631",
+      "email": "info@goodshepherdny.org",
+      "website": "http://www.goodshepherdny.org",
+      "type": "church",
+      "lat": 41.30969,
+      "lng": -73.75774
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Good Shepherd (Granite Springs)",
+      "years": {
+        "2015": {
+          "averageAttendance": 90,
+          "plateAndPledge": 169100,
+          "membership": 181
+        },
+        "2016": {
+          "averageAttendance": 77,
+          "plateAndPledge": 164647,
+          "membership": 183
+        },
+        "2017": {
+          "averageAttendance": 86,
+          "plateAndPledge": 180814,
+          "membership": 91
+        },
+        "2018": {
+          "averageAttendance": 91,
+          "plateAndPledge": 188975,
+          "membership": 125
+        },
+        "2019": {
+          "averageAttendance": 87,
+          "plateAndPledge": 200213,
+          "membership": 139
+        },
+        "2020": {
+          "averageAttendance": 123,
+          "plateAndPledge": 174470,
+          "membership": 139
+        },
+        "2021": {
+          "averageAttendance": 30,
+          "plateAndPledge": 147699,
+          "membership": 128
+        },
+        "2022": {
+          "averageAttendance": 32,
+          "plateAndPledge": 127797,
+          "membership": 109
+        },
+        "2023": {
+          "averageAttendance": 33,
+          "plateAndPledge": 129786,
+          "membership": 116
+        },
+        "2024": {
+          "averageAttendance": 32,
+          "plateAndPledge": 111500,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10235,
@@ -9539,16 +10249,86 @@
   },
   {
     "vh_id": 10234,
-    "name": "Position in New York",
+    "name": "Church of the Holy Innocents, Highland Falls, Highland Falls, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10234",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/31/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 371,
+      "name": "Church of the Holy Innocents, Highland Falls",
+      "street": "401 Main Street",
+      "city": "Highland Falls",
+      "state": "NY",
+      "zip": "10928",
+      "phone": "845-446-2197",
+      "email": "holyinnocents@verizon.net",
+      "website": "http://www.holyinnocentshf.org",
+      "type": "church",
+      "lat": 41.37334,
+      "lng": -73.9648
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Holy Innocents (Highland Falls)",
+      "years": {
+        "2015": {
+          "averageAttendance": 50,
+          "plateAndPledge": 83652,
+          "membership": 186
+        },
+        "2016": {
+          "averageAttendance": 50,
+          "plateAndPledge": 95005,
+          "membership": 206
+        },
+        "2017": {
+          "averageAttendance": 50,
+          "plateAndPledge": 98826,
+          "membership": 218
+        },
+        "2018": {
+          "averageAttendance": 48,
+          "plateAndPledge": 96022,
+          "membership": 235
+        },
+        "2019": {
+          "averageAttendance": 42,
+          "plateAndPledge": 83505,
+          "membership": 210
+        },
+        "2020": {
+          "averageAttendance": 33,
+          "plateAndPledge": 88155,
+          "membership": 203
+        },
+        "2021": {
+          "averageAttendance": 28,
+          "plateAndPledge": 97109,
+          "membership": 178
+        },
+        "2022": {
+          "averageAttendance": 30,
+          "plateAndPledge": 81922,
+          "membership": 161
+        },
+        "2023": {
+          "averageAttendance": 32,
+          "plateAndPledge": 71492,
+          "membership": 157
+        },
+        "2024": {
+          "averageAttendance": 32,
+          "plateAndPledge": 76785,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10233,
@@ -9675,16 +10455,86 @@
   },
   {
     "vh_id": 10225,
-    "name": "Position in Upper South Carolina",
+    "name": "St. Augustine of Canterbury, Aiken, SC",
     "diocese": "Upper South Carolina",
-    "state": "",
+    "state": "SC",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10225",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/30/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5752,
+      "name": "St. Augustine of Canterbury",
+      "street": "1630 Silver Bluff Rd",
+      "city": "Aiken",
+      "state": "SC",
+      "zip": "29803-9200",
+      "phone": "803-641-1913",
+      "email": "info@staaiken.org",
+      "website": "http://www.staaiken.org/",
+      "type": "church",
+      "lat": 33.49262,
+      "lng": -81.75495
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Augustine of Canterbury (Aiken)",
+      "years": {
+        "2015": {
+          "averageAttendance": 58,
+          "plateAndPledge": 146860,
+          "membership": 134
+        },
+        "2016": {
+          "averageAttendance": 59,
+          "plateAndPledge": 151544,
+          "membership": 136
+        },
+        "2017": {
+          "averageAttendance": 64,
+          "plateAndPledge": 166732,
+          "membership": 130
+        },
+        "2018": {
+          "averageAttendance": 71,
+          "plateAndPledge": 198210,
+          "membership": 141
+        },
+        "2019": {
+          "averageAttendance": 67,
+          "plateAndPledge": 216519,
+          "membership": 138
+        },
+        "2020": {
+          "averageAttendance": 65,
+          "plateAndPledge": 206675,
+          "membership": 135
+        },
+        "2021": {
+          "averageAttendance": 40,
+          "plateAndPledge": 223189,
+          "membership": 132
+        },
+        "2022": {
+          "averageAttendance": 49,
+          "plateAndPledge": 197633,
+          "membership": 128
+        },
+        "2023": {
+          "averageAttendance": 48,
+          "plateAndPledge": 207376,
+          "membership": 126
+        },
+        "2024": {
+          "averageAttendance": 51,
+          "plateAndPledge": 172598,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10224,
@@ -11004,16 +11854,86 @@
   },
   {
     "vh_id": 10165,
-    "name": "Position in Massachusetts",
+    "name": "St. Stephen's Memorial Church, Lynn, MA",
     "diocese": "Massachusetts",
-    "state": "",
+    "state": "MA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10165",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "07/15/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 545,
+      "name": "St. Stephen's Memorial Church",
+      "street": "74 S Common St",
+      "city": "Lynn",
+      "state": "MA",
+      "zip": "01902-4594",
+      "phone": "(781) 599-4220",
+      "email": "ststephens@ststephenslynn.org",
+      "website": "http://www.ststephenslynn.org",
+      "type": "church",
+      "lat": 42.462816,
+      "lng": -70.956333
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Stephens Memorial Church (Lynn)",
+      "years": {
+        "2015": {
+          "averageAttendance": 178,
+          "plateAndPledge": 144344,
+          "membership": 385
+        },
+        "2016": {
+          "averageAttendance": 179,
+          "plateAndPledge": 142316,
+          "membership": 368
+        },
+        "2017": {
+          "averageAttendance": 172,
+          "plateAndPledge": 160099,
+          "membership": 345
+        },
+        "2018": {
+          "averageAttendance": 128,
+          "plateAndPledge": 161113,
+          "membership": 400
+        },
+        "2019": {
+          "averageAttendance": 110,
+          "plateAndPledge": 146347,
+          "membership": 299
+        },
+        "2020": {
+          "averageAttendance": 110,
+          "plateAndPledge": 142489,
+          "membership": 375
+        },
+        "2021": {
+          "averageAttendance": 50,
+          "plateAndPledge": 121809,
+          "membership": 367
+        },
+        "2022": {
+          "averageAttendance": 48,
+          "plateAndPledge": 151628,
+          "membership": 364
+        },
+        "2023": {
+          "averageAttendance": 53,
+          "plateAndPledge": 157719,
+          "membership": 370
+        },
+        "2024": {
+          "averageAttendance": 43,
+          "plateAndPledge": 137219,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10164,
@@ -11385,16 +12305,86 @@
   },
   {
     "vh_id": 10134,
-    "name": "Position in New Jersey",
+    "name": "Holy Trinity Episcopal Church, Ocean City, NJ",
     "diocese": "New Jersey",
-    "state": "",
+    "state": "NJ",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10134",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3894,
+      "name": "Holy Trinity Episcopal Church",
+      "street": "2998 Bay Ave",
+      "city": "Ocean City",
+      "state": "NJ",
+      "zip": "08226",
+      "phone": "609-399-1019",
+      "email": "htecoceancity@gmail.com",
+      "website": "https://www.holytrinityoc.org",
+      "type": "church",
+      "lat": 39.258237,
+      "lng": -74.609445
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Holy Trinity Episcopal Church (Ocean City)",
+      "years": {
+        "2015": {
+          "averageAttendance": 136,
+          "plateAndPledge": 187102,
+          "membership": 391
+        },
+        "2016": {
+          "averageAttendance": 125,
+          "plateAndPledge": 175230,
+          "membership": 392
+        },
+        "2017": {
+          "averageAttendance": 106,
+          "plateAndPledge": 123774,
+          "membership": 140
+        },
+        "2018": {
+          "averageAttendance": 110,
+          "plateAndPledge": 146035,
+          "membership": 140
+        },
+        "2019": {
+          "averageAttendance": 110,
+          "plateAndPledge": 146035,
+          "membership": 140
+        },
+        "2020": {
+          "averageAttendance": 35,
+          "plateAndPledge": 158723,
+          "membership": 140
+        },
+        "2021": {
+          "averageAttendance": 86,
+          "plateAndPledge": 201556,
+          "membership": 120
+        },
+        "2022": {
+          "averageAttendance": 78,
+          "plateAndPledge": 212560,
+          "membership": 170
+        },
+        "2023": {
+          "averageAttendance": 92,
+          "plateAndPledge": 235134,
+          "membership": 188
+        },
+        "2024": {
+          "averageAttendance": 99,
+          "plateAndPledge": 212599,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10133,
@@ -11502,16 +12492,86 @@
   },
   {
     "vh_id": 10123,
-    "name": "Position in Michigan",
+    "name": "St. George's Episcopal Church, Milford, MI",
     "diocese": "Michigan",
-    "state": "",
+    "state": "MI",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10123",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3545,
+      "name": "St. George's Episcopal Church",
+      "street": "801 E Commerce St",
+      "city": "Milford",
+      "state": "MI",
+      "zip": "48381-1727",
+      "phone": "248-684-0495",
+      "email": "office@stgeorgesmilford.org",
+      "website": "http://www.stgeorgesmilford.org",
+      "type": "church",
+      "lat": 42.59238,
+      "lng": -83.59273
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Georges Episcopal Church (Milford)",
+      "years": {
+        "2015": {
+          "averageAttendance": 62,
+          "plateAndPledge": 128132,
+          "membership": 126
+        },
+        "2016": {
+          "averageAttendance": 67,
+          "plateAndPledge": 121275,
+          "membership": 123
+        },
+        "2017": {
+          "averageAttendance": 71,
+          "plateAndPledge": 149990,
+          "membership": 118
+        },
+        "2018": {
+          "averageAttendance": 64,
+          "plateAndPledge": 156090,
+          "membership": 128
+        },
+        "2019": {
+          "averageAttendance": 65,
+          "plateAndPledge": 193879,
+          "membership": 122
+        },
+        "2020": {
+          "averageAttendance": 53,
+          "plateAndPledge": 196396,
+          "membership": 114
+        },
+        "2021": {
+          "averageAttendance": 17,
+          "plateAndPledge": 157609,
+          "membership": 104
+        },
+        "2022": {
+          "averageAttendance": 31,
+          "plateAndPledge": 134991,
+          "membership": 93
+        },
+        "2023": {
+          "averageAttendance": 37,
+          "plateAndPledge": 130224,
+          "membership": 91
+        },
+        "2024": {
+          "averageAttendance": 36,
+          "plateAndPledge": 147772,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10122,
@@ -13523,16 +14583,31 @@
   },
   {
     "vh_id": 10043,
-    "name": "Position in New York",
+    "name": "Christ Church, New Brighton, Staten Island, Staten Island, NY",
     "diocese": "New York",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10043",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/31/2016",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 291,
+      "name": "Christ Church, New Brighton, Staten Island",
+      "street": "76 Franklin Avenue",
+      "city": "Staten Island",
+      "state": "NY",
+      "zip": "10301",
+      "phone": "718-727-6100",
+      "email": "ccadmin@ccnbsi.org",
+      "website": "http://www.christchurchnbrighton.org",
+      "type": "church",
+      "lat": 40.64337,
+      "lng": -74.09286
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 10042,
@@ -15390,16 +16465,86 @@
   },
   {
     "vh_id": 9998,
-    "name": "Position in Massachusetts",
+    "name": "Church of the Good Shepherd, Reading, MA",
     "diocese": "Massachusetts",
-    "state": "",
+    "state": "MA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9998",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "08/31/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 7326,
+      "name": "Church of the Good Shepherd",
+      "street": "95 Woburn St",
+      "city": "Reading",
+      "state": "MA",
+      "zip": "01867",
+      "phone": "(781) 944-1572",
+      "email": "office@goodshepherdreading.org",
+      "website": "http://www.goodshepherdreading.org",
+      "type": "church",
+      "lat": 42.523206,
+      "lng": -71.108229
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Good Shepherd (Reading)",
+      "years": {
+        "2015": {
+          "averageAttendance": 71,
+          "plateAndPledge": 138620,
+          "membership": 389
+        },
+        "2016": {
+          "averageAttendance": 72,
+          "plateAndPledge": 139228,
+          "membership": 377
+        },
+        "2017": {
+          "averageAttendance": 80,
+          "plateAndPledge": 164293,
+          "membership": 445
+        },
+        "2018": {
+          "averageAttendance": 95,
+          "plateAndPledge": 184512,
+          "membership": 457
+        },
+        "2019": {
+          "averageAttendance": 96,
+          "plateAndPledge": 202033,
+          "membership": 462
+        },
+        "2020": {
+          "averageAttendance": 96,
+          "plateAndPledge": 192088,
+          "membership": 471
+        },
+        "2021": {
+          "averageAttendance": 38,
+          "plateAndPledge": 204391,
+          "membership": 453
+        },
+        "2022": {
+          "averageAttendance": 68,
+          "plateAndPledge": 236791,
+          "membership": 453
+        },
+        "2023": {
+          "averageAttendance": 66,
+          "plateAndPledge": 217536,
+          "membership": 276
+        },
+        "2024": {
+          "averageAttendance": 61,
+          "plateAndPledge": 196955,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9997,
@@ -15569,16 +16714,86 @@
   },
   {
     "vh_id": 9995,
-    "name": "Position in Massachusetts",
+    "name": "St. Michael's Church, Holliston, MA",
     "diocese": "Massachusetts",
-    "state": "",
+    "state": "MA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9995",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "03/15/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 539,
+      "name": "St. Michael's Church",
+      "street": "1162 Highland St",
+      "city": "Holliston",
+      "state": "MA",
+      "zip": "01746-1602",
+      "phone": "(508) 429-4248",
+      "email": "StMichHoll@aol.com",
+      "website": "http://www.stmichaelshollistonma.org/",
+      "type": "church",
+      "lat": 42.195272,
+      "lng": -71.440035
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Michaels Church (Holliston)",
+      "years": {
+        "2015": {
+          "averageAttendance": 81,
+          "plateAndPledge": 142703,
+          "membership": 302
+        },
+        "2016": {
+          "averageAttendance": 86,
+          "plateAndPledge": 147610,
+          "membership": 303
+        },
+        "2017": {
+          "averageAttendance": 76,
+          "plateAndPledge": 153800,
+          "membership": 290
+        },
+        "2018": {
+          "averageAttendance": 76,
+          "plateAndPledge": 166156,
+          "membership": 273
+        },
+        "2019": {
+          "averageAttendance": 76,
+          "plateAndPledge": 162363,
+          "membership": 281
+        },
+        "2020": {
+          "averageAttendance": 50,
+          "plateAndPledge": 153847,
+          "membership": 278
+        },
+        "2021": {
+          "averageAttendance": 45,
+          "plateAndPledge": 162931,
+          "membership": 294
+        },
+        "2022": {
+          "averageAttendance": 36,
+          "plateAndPledge": 157110,
+          "membership": 108
+        },
+        "2023": {
+          "averageAttendance": 42,
+          "plateAndPledge": 150647,
+          "membership": 105
+        },
+        "2024": {
+          "averageAttendance": 46,
+          "plateAndPledge": 172236,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9993,
@@ -16250,16 +17465,86 @@
   },
   {
     "vh_id": 9946,
-    "name": "Position in New Jersey",
+    "name": "Holy Apostles Church, Yardville, NJ",
     "diocese": "New Jersey",
-    "state": "",
+    "state": "NJ",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9946",
     "position_type": "Interim",
     "congregation": "",
     "receiving_names_from": "01/01/0001",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3952,
+      "name": "Holy Apostles Church",
+      "street": "1040 Yardville Allentown Rd",
+      "city": "Yardville",
+      "state": "NJ",
+      "zip": "08620-9711",
+      "phone": "(609) 208-0228",
+      "email": "shell1040@verizon.net",
+      "website": "http://holyapostlesnj.com",
+      "type": "church",
+      "lat": 40.17111,
+      "lng": -74.63214
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Holy Apostles Episcopal Church (Yardville)",
+      "years": {
+        "2015": {
+          "averageAttendance": 103,
+          "plateAndPledge": 157862,
+          "membership": 319
+        },
+        "2016": {
+          "averageAttendance": 102,
+          "plateAndPledge": 148022,
+          "membership": 321
+        },
+        "2017": {
+          "averageAttendance": 101,
+          "plateAndPledge": 149397,
+          "membership": 319
+        },
+        "2018": {
+          "averageAttendance": 97,
+          "plateAndPledge": 151325,
+          "membership": 315
+        },
+        "2019": {
+          "averageAttendance": 97,
+          "plateAndPledge": 151325,
+          "membership": 315
+        },
+        "2020": {
+          "averageAttendance": 85,
+          "plateAndPledge": 171138,
+          "membership": 270
+        },
+        "2021": {
+          "averageAttendance": 60,
+          "plateAndPledge": 159072,
+          "membership": 250
+        },
+        "2022": {
+          "averageAttendance": 54,
+          "plateAndPledge": 165076,
+          "membership": 152
+        },
+        "2023": {
+          "averageAttendance": 52,
+          "plateAndPledge": 151069,
+          "membership": 147
+        },
+        "2024": {
+          "averageAttendance": 47,
+          "plateAndPledge": 142131,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9945,
@@ -16691,16 +17976,86 @@
   },
   {
     "vh_id": 9938,
-    "name": "Position in Southeast Florida",
+    "name": "St. Luke's Episcopal Church, Stuart, FL",
     "diocese": "Southeast Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9938",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "08/31/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5163,
+      "name": "St. Luke's Episcopal Church",
+      "street": "5150 SE Railway Ave",
+      "city": "Stuart",
+      "state": "FL",
+      "zip": "34997-3305",
+      "phone": "772-286-5455",
+      "email": "stlukes@stlukesfl.org",
+      "website": "",
+      "type": "church",
+      "lat": 27.140941,
+      "lng": -80.192425
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Lukes Episcopal Church (Stuart)",
+      "years": {
+        "2015": {
+          "averageAttendance": 191,
+          "plateAndPledge": 260001,
+          "membership": 421
+        },
+        "2016": {
+          "averageAttendance": 180,
+          "plateAndPledge": 272121,
+          "membership": 424
+        },
+        "2017": {
+          "averageAttendance": 184,
+          "plateAndPledge": 297838,
+          "membership": 430
+        },
+        "2018": {
+          "averageAttendance": 179,
+          "plateAndPledge": 278649,
+          "membership": 437
+        },
+        "2019": {
+          "averageAttendance": 183,
+          "plateAndPledge": 289739,
+          "membership": 450
+        },
+        "2020": {
+          "averageAttendance": 221,
+          "plateAndPledge": 235439,
+          "membership": 433
+        },
+        "2021": {
+          "averageAttendance": 102,
+          "plateAndPledge": 185797,
+          "membership": 320
+        },
+        "2022": {
+          "averageAttendance": 63,
+          "plateAndPledge": 178525,
+          "membership": 302
+        },
+        "2023": {
+          "averageAttendance": 70,
+          "plateAndPledge": 171722,
+          "membership": 307
+        },
+        "2024": {
+          "averageAttendance": 75,
+          "plateAndPledge": 195597,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9937,
@@ -16730,16 +18085,86 @@
   },
   {
     "vh_id": 9935,
-    "name": "Position in Southeast Florida",
+    "name": "St. Christopher's Episcopal Church, West Palm Beach, FL",
     "diocese": "Southeast Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9935",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/25/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5171,
+      "name": "St. Christopher's Episcopal Church",
+      "street": "1063 Haverhill Rd N",
+      "city": "West Palm Beach",
+      "state": "FL",
+      "zip": "33417-5805",
+      "phone": "(561) 683-8167",
+      "email": "stchristopherswpbfl@gmail.com",
+      "website": "https://www.stchristopherswpbfl.com",
+      "type": "church",
+      "lat": 26.69265,
+      "lng": -80.12039
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Christophers Episcopal Church (West Palm Beach)",
+      "years": {
+        "2015": {
+          "averageAttendance": 118,
+          "plateAndPledge": 130031,
+          "membership": 218
+        },
+        "2016": {
+          "averageAttendance": 109,
+          "plateAndPledge": 127650,
+          "membership": 219
+        },
+        "2017": {
+          "averageAttendance": 98,
+          "plateAndPledge": 131767,
+          "membership": 224
+        },
+        "2018": {
+          "averageAttendance": 102,
+          "plateAndPledge": 127626,
+          "membership": 223
+        },
+        "2019": {
+          "averageAttendance": 106,
+          "plateAndPledge": 119267,
+          "membership": 225
+        },
+        "2020": {
+          "averageAttendance": 105,
+          "plateAndPledge": 109725,
+          "membership": 225
+        },
+        "2021": {
+          "averageAttendance": 60,
+          "plateAndPledge": 113635,
+          "membership": 229
+        },
+        "2022": {
+          "averageAttendance": 66,
+          "plateAndPledge": 109629,
+          "membership": 232
+        },
+        "2023": {
+          "averageAttendance": 73,
+          "plateAndPledge": 132834,
+          "membership": 243
+        },
+        "2024": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9934,
@@ -17083,16 +18508,86 @@
   },
   {
     "vh_id": 9894,
-    "name": "Position in New Jersey",
+    "name": "St. James Episcopal Church, Edison, NJ",
     "diocese": "New Jersey",
-    "state": "",
+    "state": "NJ",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9894",
     "position_type": "Priest-in-Charge Shared Ministry",
     "congregation": "",
     "receiving_names_from": "10/01/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3846,
+      "name": "St. James Episcopal Church",
+      "street": "2136 Woodbridge Ave",
+      "city": "Edison",
+      "state": "NJ",
+      "zip": "08817-4421",
+      "phone": "732-985-2023",
+      "email": "stjamesedison@gmail.com",
+      "website": "http://www.stjamesedison.org",
+      "type": "church",
+      "lat": 40.500321,
+      "lng": -74.396767
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St James Episcopal Church (Edison)",
+      "years": {
+        "2015": {
+          "averageAttendance": 32,
+          "plateAndPledge": 79360,
+          "membership": 71
+        },
+        "2016": {
+          "averageAttendance": 30,
+          "plateAndPledge": 79169,
+          "membership": 70
+        },
+        "2017": {
+          "averageAttendance": 38,
+          "plateAndPledge": 96731,
+          "membership": 66
+        },
+        "2018": {
+          "averageAttendance": 32,
+          "plateAndPledge": 79954,
+          "membership": 70
+        },
+        "2019": {
+          "averageAttendance": 31,
+          "plateAndPledge": 77846,
+          "membership": 73
+        },
+        "2020": {
+          "averageAttendance": 25,
+          "plateAndPledge": 76287,
+          "membership": 67
+        },
+        "2021": {
+          "averageAttendance": 11,
+          "plateAndPledge": 86143,
+          "membership": 69
+        },
+        "2022": {
+          "averageAttendance": 12,
+          "plateAndPledge": 62837,
+          "membership": 25
+        },
+        "2023": {
+          "averageAttendance": 14,
+          "plateAndPledge": 75520,
+          "membership": 24
+        },
+        "2024": {
+          "averageAttendance": 14,
+          "plateAndPledge": 75083,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9892,
@@ -17952,16 +19447,86 @@
   },
   {
     "vh_id": 9809,
-    "name": "Position in Oregon",
+    "name": "Ascension Episcopal Parish, Portland, OR",
     "diocese": "Oregon",
-    "state": "",
+    "state": "OR",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9809",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "11/01/2021",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 4579,
+      "name": "Ascension Episcopal Parish",
+      "street": "1823 SW Spring St",
+      "city": "Portland",
+      "state": "OR",
+      "zip": "97201-2345",
+      "phone": "(503) 227-7806",
+      "email": "office@ascensionepiscopalparish.org",
+      "website": "https://www.ascensionepiscopalparish.org",
+      "type": "church",
+      "lat": 45.509139,
+      "lng": -122.697878
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Ascension Parish (Portland)",
+      "years": {
+        "2015": {
+          "averageAttendance": 50,
+          "plateAndPledge": 144220,
+          "membership": 239
+        },
+        "2016": {
+          "averageAttendance": 50,
+          "plateAndPledge": 131474,
+          "membership": 239
+        },
+        "2017": {
+          "averageAttendance": 47,
+          "plateAndPledge": 131016,
+          "membership": 92
+        },
+        "2018": {
+          "averageAttendance": 30,
+          "plateAndPledge": 146211,
+          "membership": 86
+        },
+        "2019": {
+          "averageAttendance": 30,
+          "plateAndPledge": 144303,
+          "membership": 87
+        },
+        "2020": {
+          "averageAttendance": 27,
+          "plateAndPledge": 116826,
+          "membership": 85
+        },
+        "2021": {
+          "averageAttendance": 15,
+          "plateAndPledge": 107280,
+          "membership": 70
+        },
+        "2022": {
+          "averageAttendance": 22,
+          "plateAndPledge": 107473,
+          "membership": 69
+        },
+        "2023": {
+          "averageAttendance": 23,
+          "plateAndPledge": 121810,
+          "membership": 89
+        },
+        "2024": {
+          "averageAttendance": 28,
+          "plateAndPledge": 137370,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9808,
@@ -18471,16 +20036,81 @@
   },
   {
     "vh_id": 9796,
-    "name": "Position in Oregon",
+    "name": "Church of St. John by the Sea, Bandon, OR",
     "diocese": "Oregon",
-    "state": "",
+    "state": "OR",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9796",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "10/19/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 4543,
+      "name": "Church of St. John by the Sea",
+      "street": "795 Franklin Ave SW",
+      "city": "Bandon",
+      "state": "OR",
+      "zip": "97411",
+      "phone": "541-347-2152",
+      "email": "stjohns.bandon@gmail.com",
+      "website": "https://www.stjohnsbandon.org",
+      "type": "church",
+      "lat": 43.116379,
+      "lng": -124.42084
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of St John by the Sea (Bandon)",
+      "years": {
+        "2015": {
+          "averageAttendance": 29,
+          "plateAndPledge": 52575,
+          "membership": 41
+        },
+        "2016": {
+          "averageAttendance": 29,
+          "plateAndPledge": 49946,
+          "membership": 41
+        },
+        "2017": {
+          "averageAttendance": 23,
+          "plateAndPledge": 52176,
+          "membership": 33
+        },
+        "2018": {
+          "averageAttendance": 20,
+          "plateAndPledge": 41032,
+          "membership": 34
+        },
+        "2019": {
+          "averageAttendance": 20,
+          "plateAndPledge": 44167,
+          "membership": 37
+        },
+        "2020": {
+          "averageAttendance": 23,
+          "plateAndPledge": 35406,
+          "membership": 35
+        },
+        "2021": {
+          "averageAttendance": 13,
+          "plateAndPledge": 44971,
+          "membership": 25
+        },
+        "2022": {
+          "averageAttendance": 22,
+          "plateAndPledge": 51594,
+          "membership": 23
+        },
+        "2023": {
+          "averageAttendance": 22,
+          "plateAndPledge": 53251,
+          "membership": 22
+        }
+      }
+    }
   },
   {
     "vh_id": 9795,
@@ -19405,16 +21035,31 @@
   },
   {
     "vh_id": 9773,
-    "name": "Position in Oklahoma",
+    "name": "St. John’s Episcopal Church, Norman, OK",
     "diocese": "Oklahoma",
-    "state": "",
+    "state": "OK",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9773",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "11/30/2020",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 4411,
+      "name": "St. John’s Episcopal Church",
+      "street": "235 West Duffy St.",
+      "city": "Norman",
+      "state": "OK",
+      "zip": "73069",
+      "phone": "405-321-3020 ",
+      "email": "stjohns@episcopalnorman.org",
+      "website": "https://www.episcopalnorman.org/",
+      "type": "church",
+      "lat": 35.21454,
+      "lng": -97.44323
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9772,
@@ -21029,84 +22674,14 @@
     "vh_id": 9653,
     "name": "St Marys Episcopal Church",
     "diocese": "Texas",
-    "state": "TX",
+    "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9653",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Marys Episcopal Church",
     "receiving_names_from": "01/01/0001",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 5623,
-      "name": "St. Mary's Episcopal Church",
-      "street": "24 N Masonic St",
-      "city": "Bellville",
-      "state": "TX",
-      "zip": "77418-1444",
-      "phone": "979-865-2330",
-      "email": "saintmary@sbcglobal.net",
-      "website": "http://www.saintmarysec.org",
-      "type": "church",
-      "lat": 29.95154,
-      "lng": -96.258201
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Marys Episcopal Church (Bellville)",
-      "years": {
-        "2015": {
-          "averageAttendance": 55,
-          "plateAndPledge": 191882,
-          "membership": 107
-        },
-        "2016": {
-          "averageAttendance": 56,
-          "plateAndPledge": 141127,
-          "membership": 113
-        },
-        "2017": {
-          "averageAttendance": 53,
-          "plateAndPledge": 197733,
-          "membership": 117
-        },
-        "2018": {
-          "averageAttendance": 53,
-          "plateAndPledge": 176564,
-          "membership": 122
-        },
-        "2019": {
-          "averageAttendance": 50,
-          "plateAndPledge": 154087,
-          "membership": 117
-        },
-        "2020": {
-          "averageAttendance": 45,
-          "plateAndPledge": 148596,
-          "membership": 117
-        },
-        "2021": {
-          "averageAttendance": 41,
-          "plateAndPledge": 172345,
-          "membership": 118
-        },
-        "2022": {
-          "averageAttendance": 41,
-          "plateAndPledge": 178971,
-          "membership": 118
-        },
-        "2023": {
-          "averageAttendance": 34,
-          "plateAndPledge": 137624,
-          "membership": 114
-        },
-        "2024": {
-          "averageAttendance": 30,
-          "plateAndPledge": 11812,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 9652,
@@ -23979,16 +25554,86 @@
   },
   {
     "vh_id": 9582,
-    "name": "Position in Southwest Florida",
+    "name": "St. George's Episcopal Church, Bradenton, FL",
     "diocese": "Southwest Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9582",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/28/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5355,
+      "name": "St. George's Episcopal Church",
+      "street": "912 63rd Ave W",
+      "city": "Bradenton",
+      "state": "FL",
+      "zip": "34207",
+      "phone": "(941) 755-3606",
+      "email": "saint.dragonslayer10@gmail.com",
+      "website": "https://www.stgeorges.dioswfl.org/",
+      "type": "church",
+      "lat": 27.42853,
+      "lng": -82.57199
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Georges Episcopal Church (Bradenton)",
+      "years": {
+        "2015": {
+          "averageAttendance": 110,
+          "plateAndPledge": 145255,
+          "membership": 166
+        },
+        "2016": {
+          "averageAttendance": 112,
+          "plateAndPledge": 161098,
+          "membership": 186
+        },
+        "2017": {
+          "averageAttendance": 115,
+          "plateAndPledge": 165096,
+          "membership": 190
+        },
+        "2018": {
+          "averageAttendance": 102,
+          "plateAndPledge": 151374,
+          "membership": 194
+        },
+        "2019": {
+          "averageAttendance": 89,
+          "plateAndPledge": 149280,
+          "membership": 194
+        },
+        "2020": {
+          "averageAttendance": 83,
+          "plateAndPledge": 128488,
+          "membership": 73
+        },
+        "2021": {
+          "averageAttendance": 43,
+          "plateAndPledge": 108331,
+          "membership": 70
+        },
+        "2022": {
+          "averageAttendance": 44,
+          "plateAndPledge": 127898,
+          "membership": 54
+        },
+        "2023": {
+          "averageAttendance": 43,
+          "plateAndPledge": 108199,
+          "membership": 40
+        },
+        "2024": {
+          "averageAttendance": 30,
+          "plateAndPledge": 105320,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9581,
@@ -24171,16 +25816,86 @@
   },
   {
     "vh_id": 9578,
-    "name": "Position in North Carolina",
+    "name": "Calvary Episcopal Church, Tarboro, NC",
     "diocese": "North Carolina",
-    "state": "",
+    "state": "NC",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9578",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "06/30/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 4147,
+      "name": "Calvary Episcopal Church",
+      "street": "411 E Church St",
+      "city": "Tarboro",
+      "state": "NC",
+      "zip": "27886-4403",
+      "phone": "252-823-8192",
+      "email": "calvarytarboro@gmail.com",
+      "website": "https://calvarytarboro.org",
+      "type": "church",
+      "lat": 35.89951,
+      "lng": -77.53101
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Calvary Episcopal Church (Tarboro)",
+      "years": {
+        "2015": {
+          "averageAttendance": 103,
+          "plateAndPledge": 318874,
+          "membership": 286
+        },
+        "2016": {
+          "averageAttendance": 100,
+          "plateAndPledge": 326265,
+          "membership": 298
+        },
+        "2017": {
+          "averageAttendance": 120,
+          "plateAndPledge": 355024,
+          "membership": 281
+        },
+        "2018": {
+          "averageAttendance": 98,
+          "plateAndPledge": 337047,
+          "membership": 289
+        },
+        "2019": {
+          "averageAttendance": 116,
+          "plateAndPledge": 328615,
+          "membership": 293
+        },
+        "2020": {
+          "averageAttendance": 91,
+          "plateAndPledge": 356569,
+          "membership": 284
+        },
+        "2021": {
+          "averageAttendance": 76,
+          "plateAndPledge": 333354,
+          "membership": 282
+        },
+        "2022": {
+          "averageAttendance": 84,
+          "plateAndPledge": 419406,
+          "membership": 286
+        },
+        "2023": {
+          "averageAttendance": 111,
+          "plateAndPledge": 427367,
+          "membership": 277
+        },
+        "2024": {
+          "averageAttendance": 105,
+          "plateAndPledge": 489147,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9577,
@@ -24606,16 +26321,31 @@
   },
   {
     "vh_id": 9562,
-    "name": "Position in Southwest Florida",
+    "name": "St. Monica's Episcopal Church, Naples, FL",
     "diocese": "Southwest Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9562",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5380,
+      "name": "St. Monica's Episcopal Church",
+      "street": "7070 Immokalee Rd",
+      "city": "Naples",
+      "state": "FL",
+      "zip": "34119-8845",
+      "phone": "(239) 591-4550",
+      "email": "info@stmonicasnaples.org",
+      "website": "http://stmonicasnaples.org/",
+      "type": "church",
+      "lat": 26.27228,
+      "lng": -81.72466
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9561,
@@ -26007,16 +27737,86 @@
   },
   {
     "vh_id": 9404,
-    "name": "Position in Lexington",
+    "name": "Trinity Episcopal Church, Covington, KY",
     "diocese": "Lexington",
-    "state": "",
+    "state": "KY",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9404",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/01/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3306,
+      "name": "Trinity Episcopal Church",
+      "street": "326 Madison Avenue",
+      "city": "Covington",
+      "state": "KY",
+      "zip": "41011",
+      "phone": "859-431-1786",
+      "email": "",
+      "website": "http://trinitychurchcovky.com/",
+      "type": "church",
+      "lat": 39.08767,
+      "lng": -84.51085
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Covington)",
+      "years": {
+        "2015": {
+          "averageAttendance": 157,
+          "plateAndPledge": 332160,
+          "membership": 409
+        },
+        "2016": {
+          "averageAttendance": 159,
+          "plateAndPledge": 298437,
+          "membership": 419
+        },
+        "2017": {
+          "averageAttendance": 157,
+          "plateAndPledge": 322948,
+          "membership": 447
+        },
+        "2018": {
+          "averageAttendance": 160,
+          "plateAndPledge": 356484,
+          "membership": 416
+        },
+        "2019": {
+          "averageAttendance": 164,
+          "plateAndPledge": 372963,
+          "membership": 432
+        },
+        "2020": {
+          "averageAttendance": 163,
+          "plateAndPledge": 360713,
+          "membership": 427
+        },
+        "2021": {
+          "averageAttendance": 75,
+          "plateAndPledge": 333583,
+          "membership": 431
+        },
+        "2022": {
+          "averageAttendance": 107,
+          "plateAndPledge": 331032,
+          "membership": 435
+        },
+        "2023": {
+          "averageAttendance": 114,
+          "plateAndPledge": 307411,
+          "membership": 445
+        },
+        "2024": {
+          "averageAttendance": 135,
+          "plateAndPledge": 339555,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9403,
@@ -26360,16 +28160,86 @@
   },
   {
     "vh_id": 9366,
-    "name": "Position in Florida",
+    "name": "Christ Church Episcopal, Monticello, FL",
     "diocese": "Florida",
-    "state": "",
+    "state": "FL",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9366",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/31/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2946,
+      "name": "Christ Church Episcopal",
+      "street": "425 N Cherry St",
+      "city": "Monticello",
+      "state": "FL",
+      "zip": "32344-2001",
+      "phone": "(850) 997-4116",
+      "email": "christchurch425@yahoo.com",
+      "website": "https://www.christchurchmonticello.com",
+      "type": "church",
+      "lat": 30.547689,
+      "lng": -83.86972
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Christ Church Episcopal (Monticello)",
+      "years": {
+        "2015": {
+          "averageAttendance": 57,
+          "plateAndPledge": 142276,
+          "membership": 110
+        },
+        "2016": {
+          "averageAttendance": 54,
+          "plateAndPledge": 143650,
+          "membership": 107
+        },
+        "2017": {
+          "averageAttendance": 54,
+          "plateAndPledge": 143013,
+          "membership": 111
+        },
+        "2018": {
+          "averageAttendance": 58,
+          "plateAndPledge": 139528,
+          "membership": 114
+        },
+        "2019": {
+          "averageAttendance": 63,
+          "plateAndPledge": 140234,
+          "membership": 115
+        },
+        "2020": {
+          "averageAttendance": 58,
+          "plateAndPledge": 152752,
+          "membership": 113
+        },
+        "2021": {
+          "averageAttendance": 41,
+          "plateAndPledge": 168756,
+          "membership": 118
+        },
+        "2022": {
+          "averageAttendance": 53,
+          "plateAndPledge": 157750,
+          "membership": 118
+        },
+        "2023": {
+          "averageAttendance": 55,
+          "plateAndPledge": 181120,
+          "membership": 123
+        },
+        "2024": {
+          "averageAttendance": 55,
+          "plateAndPledge": 171377,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9365,
@@ -26508,16 +28378,86 @@
   },
   {
     "vh_id": 9356,
-    "name": "Position in Maine",
+    "name": "St. Peter's Episcopal Church, Bridgton, ME",
     "diocese": "Maine",
-    "state": "",
+    "state": "ME",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9356",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3347,
+      "name": "St. Peter's Episcopal Church",
+      "street": "42 Sweden Rd",
+      "city": "Bridgton",
+      "state": "ME",
+      "zip": "04009",
+      "phone": "(207) 647-8549",
+      "email": "stpetersbridgtonmaine@gmail.com",
+      "website": "http://www.stpetersbridgton.org/",
+      "type": "church",
+      "lat": 44.06393,
+      "lng": -70.73701
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Peters Episcopal Church (Bridgton)",
+      "years": {
+        "2015": {
+          "averageAttendance": 59,
+          "plateAndPledge": 98396,
+          "membership": 147
+        },
+        "2016": {
+          "averageAttendance": 64,
+          "plateAndPledge": 90050,
+          "membership": 142
+        },
+        "2017": {
+          "averageAttendance": 41,
+          "plateAndPledge": 89477,
+          "membership": 134
+        },
+        "2018": {
+          "averageAttendance": 38,
+          "plateAndPledge": 81572,
+          "membership": 110
+        },
+        "2019": {
+          "averageAttendance": 38,
+          "plateAndPledge": 85816,
+          "membership": 111
+        },
+        "2020": {
+          "averageAttendance": 36,
+          "plateAndPledge": 75838,
+          "membership": 111
+        },
+        "2021": {
+          "averageAttendance": 23,
+          "plateAndPledge": 73953,
+          "membership": 93
+        },
+        "2022": {
+          "averageAttendance": 30,
+          "plateAndPledge": 61859,
+          "membership": 109
+        },
+        "2023": {
+          "averageAttendance": 25,
+          "plateAndPledge": 75021,
+          "membership": 105
+        },
+        "2024": {
+          "averageAttendance": 26,
+          "plateAndPledge": 87448,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9352,
@@ -26547,16 +28487,86 @@
   },
   {
     "vh_id": 9350,
-    "name": "Position in Long Island",
+    "name": "St. George's Church, Brooklyn, NY",
     "diocese": "Long Island",
-    "state": "",
+    "state": "NY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9350",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/01/0001",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 717,
+      "name": "St. George's Church",
+      "street": "800 Marcy Ave",
+      "city": "Brooklyn",
+      "state": "NY",
+      "zip": "11216",
+      "phone": "718-789-6036",
+      "email": "stgeorgeschurch1869@yahoo.com",
+      "website": "",
+      "type": "church",
+      "lat": 40.68633,
+      "lng": -73.94759
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Georges Episcopal Church (Brooklyn)",
+      "years": {
+        "2015": {
+          "averageAttendance": 325,
+          "plateAndPledge": 519135,
+          "membership": 331
+        },
+        "2016": {
+          "averageAttendance": 220,
+          "plateAndPledge": 382253,
+          "membership": 325
+        },
+        "2017": {
+          "averageAttendance": 222,
+          "plateAndPledge": 377113,
+          "membership": 330
+        },
+        "2018": {
+          "averageAttendance": 200,
+          "plateAndPledge": 394546,
+          "membership": 331
+        },
+        "2019": {
+          "averageAttendance": 200,
+          "plateAndPledge": 382861,
+          "membership": 261
+        },
+        "2020": {
+          "averageAttendance": 167,
+          "plateAndPledge": 321260,
+          "membership": 240
+        },
+        "2021": {
+          "averageAttendance": 85,
+          "plateAndPledge": 327186,
+          "membership": 227
+        },
+        "2022": {
+          "averageAttendance": 145,
+          "plateAndPledge": 327186,
+          "membership": 414
+        },
+        "2023": {
+          "averageAttendance": 91,
+          "plateAndPledge": 276923,
+          "membership": 405
+        },
+        "2024": {
+          "averageAttendance": 100,
+          "plateAndPledge": 289808,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9349,
@@ -26586,16 +28596,86 @@
   },
   {
     "vh_id": 9347,
-    "name": "Position in Los Angeles",
+    "name": "St. John Chrysostom Church & School, Rancho Santa Margarita, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9347",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "04/15/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1149,
+      "name": "St. John Chrysostom Church & School",
+      "street": "30382 Via Con Dios",
+      "city": "Rancho Santa Margarita",
+      "state": "CA",
+      "zip": "92688-1518",
+      "phone": "949-888-4595",
+      "email": "",
+      "website": "https://www.stjohnsrsm.org",
+      "type": "church",
+      "lat": 33.64451,
+      "lng": -117.60191
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St John Chrysostom Church & School (Rancho Santa Margarita)",
+      "years": {
+        "2015": {
+          "averageAttendance": 203,
+          "plateAndPledge": 450349,
+          "membership": 744
+        },
+        "2016": {
+          "averageAttendance": 200,
+          "plateAndPledge": 529392,
+          "membership": 757
+        },
+        "2017": {
+          "averageAttendance": 199,
+          "plateAndPledge": 513678,
+          "membership": 795
+        },
+        "2018": {
+          "averageAttendance": 190,
+          "plateAndPledge": 519982,
+          "membership": 845
+        },
+        "2019": {
+          "averageAttendance": 171,
+          "plateAndPledge": 568188,
+          "membership": 825
+        },
+        "2020": {
+          "averageAttendance": 0,
+          "plateAndPledge": 568188,
+          "membership": 825
+        },
+        "2021": {
+          "averageAttendance": 100,
+          "plateAndPledge": 448623,
+          "membership": 635
+        },
+        "2022": {
+          "averageAttendance": 98,
+          "plateAndPledge": 440776,
+          "membership": 350
+        },
+        "2023": {
+          "averageAttendance": 118,
+          "plateAndPledge": 395996,
+          "membership": 348
+        },
+        "2024": {
+          "averageAttendance": 94,
+          "plateAndPledge": 406693,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9345,
@@ -26747,29 +28827,169 @@
   },
   {
     "vh_id": 9339,
-    "name": "Position in El Camino Real",
+    "name": "St. Luke's Episcopal Church, Hollister, CA",
     "diocese": "El Camino Real",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9339",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1026,
+      "name": "St. Luke's Episcopal Church",
+      "street": "720 Monterey Street",
+      "city": "Hollister",
+      "state": "CA",
+      "zip": "95023-3821",
+      "phone": "831-637-7570",
+      "email": "stluke@garlic.com",
+      "website": "https://stlukesh.org/",
+      "type": "church",
+      "lat": 36.84911,
+      "lng": -121.40426
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Lukes Episcopal Church (Hollister)",
+      "years": {
+        "2015": {
+          "averageAttendance": 48,
+          "plateAndPledge": 78659,
+          "membership": 133
+        },
+        "2016": {
+          "averageAttendance": 44,
+          "plateAndPledge": 96596,
+          "membership": 132
+        },
+        "2017": {
+          "averageAttendance": 33,
+          "plateAndPledge": 97825,
+          "membership": 137
+        },
+        "2018": {
+          "averageAttendance": 30,
+          "plateAndPledge": 95601,
+          "membership": 141
+        },
+        "2019": {
+          "averageAttendance": 33,
+          "plateAndPledge": 94628,
+          "membership": 141
+        },
+        "2020": {
+          "averageAttendance": 29,
+          "plateAndPledge": 70165,
+          "membership": 141
+        },
+        "2021": {
+          "averageAttendance": 16,
+          "plateAndPledge": 69151,
+          "membership": 141
+        },
+        "2022": {
+          "averageAttendance": 22,
+          "plateAndPledge": 68957,
+          "membership": 140
+        },
+        "2023": {
+          "averageAttendance": 20,
+          "plateAndPledge": 52700,
+          "membership": 139
+        },
+        "2024": {
+          "averageAttendance": 17,
+          "plateAndPledge": 54000,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9338,
-    "name": "Position in El Camino Real",
+    "name": "St Francis Episcopal Church, San Jose, CA",
     "diocese": "El Camino Real",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9338",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "01/31/2025",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1047,
+      "name": "St Francis Episcopal Church",
+      "street": "1205 Pine Ave",
+      "city": "San Jose",
+      "state": "CA",
+      "zip": "95125-3400",
+      "phone": "408-292-7090",
+      "email": "office@stfranciswillowglen.org",
+      "website": "http://www.stfranciswillowglen.org",
+      "type": "church",
+      "lat": 37.29679,
+      "lng": -121.89787
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Francis Episcopal Church (San Jose)",
+      "years": {
+        "2015": {
+          "averageAttendance": 171,
+          "plateAndPledge": 325718,
+          "membership": 402
+        },
+        "2016": {
+          "averageAttendance": 163,
+          "plateAndPledge": 353226,
+          "membership": 425
+        },
+        "2017": {
+          "averageAttendance": 160,
+          "plateAndPledge": 408193,
+          "membership": 418
+        },
+        "2018": {
+          "averageAttendance": 157,
+          "plateAndPledge": 338546,
+          "membership": 442
+        },
+        "2019": {
+          "averageAttendance": 161,
+          "plateAndPledge": 392776,
+          "membership": 475
+        },
+        "2020": {
+          "averageAttendance": 169,
+          "plateAndPledge": 374748,
+          "membership": 470
+        },
+        "2021": {
+          "averageAttendance": 64,
+          "plateAndPledge": 267447,
+          "membership": 468
+        },
+        "2022": {
+          "averageAttendance": 87,
+          "plateAndPledge": 313346,
+          "membership": 450
+        },
+        "2023": {
+          "averageAttendance": 97,
+          "plateAndPledge": 257338,
+          "membership": 240
+        },
+        "2024": {
+          "averageAttendance": 83,
+          "plateAndPledge": 314237,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9337,
@@ -26908,16 +29128,86 @@
   },
   {
     "vh_id": 9331,
-    "name": "Position in El Camino Real",
+    "name": "Church of the Good Shepherd, Salinas, CA",
     "diocese": "El Camino Real",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9331",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/15/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1039,
+      "name": "Church of the Good Shepherd",
+      "street": "301 Corral De Tierra Rd",
+      "city": "Salinas",
+      "state": "CA",
+      "zip": "93908",
+      "phone": "831-484-2153",
+      "email": "office@goodshepherdcorral.org",
+      "website": "http://www.goodshepherdcorral.org",
+      "type": "church",
+      "lat": 36.54144,
+      "lng": -121.72575
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Good Shepherd (Salinas)",
+      "years": {
+        "2015": {
+          "averageAttendance": 125,
+          "plateAndPledge": 299210,
+          "membership": 285
+        },
+        "2016": {
+          "averageAttendance": 115,
+          "plateAndPledge": 294152,
+          "membership": 287
+        },
+        "2017": {
+          "averageAttendance": 120,
+          "plateAndPledge": 314545,
+          "membership": 195
+        },
+        "2018": {
+          "averageAttendance": 115,
+          "plateAndPledge": 323663,
+          "membership": 199
+        },
+        "2019": {
+          "averageAttendance": 115,
+          "plateAndPledge": 344451,
+          "membership": 209
+        },
+        "2020": {
+          "averageAttendance": 95,
+          "plateAndPledge": 359294,
+          "membership": 209
+        },
+        "2021": {
+          "averageAttendance": 70,
+          "plateAndPledge": 328733,
+          "membership": 209
+        },
+        "2022": {
+          "averageAttendance": 82,
+          "plateAndPledge": 371570,
+          "membership": 190
+        },
+        "2023": {
+          "averageAttendance": 78,
+          "plateAndPledge": 346834,
+          "membership": 188
+        },
+        "2024": {
+          "averageAttendance": 69,
+          "plateAndPledge": 311074,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9330,
@@ -27069,16 +29359,86 @@
   },
   {
     "vh_id": 9322,
-    "name": "Position in Indianapolis",
+    "name": "St. John's Episcopal Church, Bedford, IN",
     "diocese": "Indianapolis",
-    "state": "",
+    "state": "IN",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9322",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3115,
+      "name": "St. John's Episcopal Church",
+      "street": "1219 14th St",
+      "city": "Bedford",
+      "state": "IN",
+      "zip": "47421-3228",
+      "phone": "​1-812-275-6620",
+      "email": "hello@stjohnsofbedford.org",
+      "website": "http://www.stjohnsofbedford.org/",
+      "type": "church",
+      "lat": 38.86368,
+      "lng": -86.48845
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Johns Episcopal Church (Bedford)",
+      "years": {
+        "2015": {
+          "averageAttendance": 33,
+          "plateAndPledge": 44648,
+          "membership": 100
+        },
+        "2016": {
+          "averageAttendance": 39,
+          "plateAndPledge": 42364,
+          "membership": 104
+        },
+        "2017": {
+          "averageAttendance": 29,
+          "plateAndPledge": 52278,
+          "membership": 107
+        },
+        "2018": {
+          "averageAttendance": 26,
+          "plateAndPledge": 52701,
+          "membership": 107
+        },
+        "2019": {
+          "averageAttendance": 22,
+          "plateAndPledge": 44203,
+          "membership": 108
+        },
+        "2020": {
+          "averageAttendance": 25,
+          "plateAndPledge": 49179,
+          "membership": 108
+        },
+        "2021": {
+          "averageAttendance": 22,
+          "plateAndPledge": 38171,
+          "membership": 110
+        },
+        "2022": {
+          "averageAttendance": 24,
+          "plateAndPledge": 47134,
+          "membership": 115
+        },
+        "2023": {
+          "averageAttendance": 22,
+          "plateAndPledge": 45503,
+          "membership": 115
+        },
+        "2024": {
+          "averageAttendance": 23,
+          "plateAndPledge": 81517,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9316,
@@ -27632,16 +29992,86 @@
   },
   {
     "vh_id": 9230,
-    "name": "Position in Lexington",
+    "name": "Calvary Episcopal Church, Ashland, KY",
     "diocese": "Lexington",
-    "state": "",
+    "state": "KY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9230",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/30/2023",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3303,
+      "name": "Calvary Episcopal Church",
+      "street": "1337 Winchester Ave",
+      "city": "Ashland",
+      "state": "KY",
+      "zip": "41101-7553",
+      "phone": "606-325-2328",
+      "email": "calvaryashland@gmail.com",
+      "website": "http://calvaryashland.org/",
+      "type": "church",
+      "lat": 38.48023,
+      "lng": -82.64187
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Calvary Episcopal Church (Ashland)",
+      "years": {
+        "2015": {
+          "averageAttendance": 54,
+          "plateAndPledge": 152658,
+          "membership": 303
+        },
+        "2016": {
+          "averageAttendance": 59,
+          "plateAndPledge": 147105,
+          "membership": 204
+        },
+        "2017": {
+          "averageAttendance": 58,
+          "plateAndPledge": 144693,
+          "membership": 171
+        },
+        "2018": {
+          "averageAttendance": 58,
+          "plateAndPledge": 170629,
+          "membership": 127
+        },
+        "2019": {
+          "averageAttendance": 61,
+          "plateAndPledge": 202000,
+          "membership": 110
+        },
+        "2020": {
+          "averageAttendance": 60,
+          "plateAndPledge": 156486,
+          "membership": 104
+        },
+        "2021": {
+          "averageAttendance": 43,
+          "plateAndPledge": 187063,
+          "membership": 77
+        },
+        "2022": {
+          "averageAttendance": 57,
+          "plateAndPledge": 155192,
+          "membership": 80
+        },
+        "2023": {
+          "averageAttendance": 62,
+          "plateAndPledge": 187031,
+          "membership": 84
+        },
+        "2024": {
+          "averageAttendance": 69,
+          "plateAndPledge": 307300,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9229,
@@ -27780,29 +30210,169 @@
   },
   {
     "vh_id": 9212,
-    "name": "Position in Idaho",
+    "name": "St. Luke's Episcopal Church, Idaho Falls, ID",
     "diocese": "Idaho",
-    "state": "",
+    "state": "ID",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9212",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "05/22/2020",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3099,
+      "name": "St. Luke's Episcopal Church",
+      "street": "270 N. Placer Avenue",
+      "city": "Idaho Falls",
+      "state": "ID",
+      "zip": "83402-4021",
+      "phone": "208.522.8465",
+      "email": "communications@stlukesIF.org",
+      "website": "https://stlukesif.org/",
+      "type": "church",
+      "lat": 43.48916,
+      "lng": -112.03444
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Lukes Episcopal Church (Idaho Falls)",
+      "years": {
+        "2015": {
+          "averageAttendance": 69,
+          "plateAndPledge": 169357,
+          "membership": 363
+        },
+        "2016": {
+          "averageAttendance": 69,
+          "plateAndPledge": 165082,
+          "membership": 367
+        },
+        "2017": {
+          "averageAttendance": 77,
+          "plateAndPledge": 175849,
+          "membership": 364
+        },
+        "2018": {
+          "averageAttendance": 51,
+          "plateAndPledge": 149648,
+          "membership": 242
+        },
+        "2019": {
+          "averageAttendance": 49,
+          "plateAndPledge": 133978,
+          "membership": 206
+        },
+        "2020": {
+          "averageAttendance": 43,
+          "plateAndPledge": 128385,
+          "membership": 143
+        },
+        "2021": {
+          "averageAttendance": 47,
+          "plateAndPledge": 153920,
+          "membership": 130
+        },
+        "2022": {
+          "averageAttendance": 70,
+          "plateAndPledge": 172897,
+          "membership": 130
+        },
+        "2023": {
+          "averageAttendance": 91,
+          "plateAndPledge": 186062,
+          "membership": 98
+        },
+        "2024": {
+          "averageAttendance": 47,
+          "plateAndPledge": 201112,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9211,
-    "name": "Position in Idaho",
+    "name": "Trinity Episcopal Church, Pocatello, ID",
     "diocese": "Idaho",
-    "state": "",
+    "state": "ID",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9211",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3107,
+      "name": "Trinity Episcopal Church",
+      "street": "248 North Arthur Avenue",
+      "city": "Pocatello",
+      "state": "ID",
+      "zip": "83204-3104",
+      "phone": "208-233-2640",
+      "email": "info@trinitypocatello.org",
+      "website": "http://www.trinitypocatello.org",
+      "type": "church",
+      "lat": 42.86301,
+      "lng": -112.45292
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Pocatello)",
+      "years": {
+        "2015": {
+          "averageAttendance": 56,
+          "plateAndPledge": 81423,
+          "membership": 158
+        },
+        "2016": {
+          "averageAttendance": 51,
+          "plateAndPledge": 78925,
+          "membership": 154
+        },
+        "2017": {
+          "averageAttendance": 45,
+          "plateAndPledge": 80913,
+          "membership": 153
+        },
+        "2018": {
+          "averageAttendance": 47,
+          "plateAndPledge": 85432,
+          "membership": 155
+        },
+        "2019": {
+          "averageAttendance": 47,
+          "plateAndPledge": 73250,
+          "membership": 153
+        },
+        "2020": {
+          "averageAttendance": 45,
+          "plateAndPledge": 74838,
+          "membership": 152
+        },
+        "2021": {
+          "averageAttendance": 29,
+          "plateAndPledge": 84278,
+          "membership": 147
+        },
+        "2022": {
+          "averageAttendance": 33,
+          "plateAndPledge": 102539,
+          "membership": 68
+        },
+        "2023": {
+          "averageAttendance": 39,
+          "plateAndPledge": 103514,
+          "membership": 68
+        },
+        "2024": {
+          "averageAttendance": 34,
+          "plateAndPledge": 110999,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9210,
@@ -27897,16 +30467,86 @@
   },
   {
     "vh_id": 9203,
-    "name": "Position in Lexington",
+    "name": "Trinity Episcopal Church, Covington, KY",
     "diocese": "Lexington",
-    "state": "",
+    "state": "KY",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9203",
     "position_type": "Assistant/Associate/Curate",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3306,
+      "name": "Trinity Episcopal Church",
+      "street": "326 Madison Avenue",
+      "city": "Covington",
+      "state": "KY",
+      "zip": "41011",
+      "phone": "859-431-1786",
+      "email": "",
+      "website": "http://trinitychurchcovky.com/",
+      "type": "church",
+      "lat": 39.08767,
+      "lng": -84.51085
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Covington)",
+      "years": {
+        "2015": {
+          "averageAttendance": 157,
+          "plateAndPledge": 332160,
+          "membership": 409
+        },
+        "2016": {
+          "averageAttendance": 159,
+          "plateAndPledge": 298437,
+          "membership": 419
+        },
+        "2017": {
+          "averageAttendance": 157,
+          "plateAndPledge": 322948,
+          "membership": 447
+        },
+        "2018": {
+          "averageAttendance": 160,
+          "plateAndPledge": 356484,
+          "membership": 416
+        },
+        "2019": {
+          "averageAttendance": 164,
+          "plateAndPledge": 372963,
+          "membership": 432
+        },
+        "2020": {
+          "averageAttendance": 163,
+          "plateAndPledge": 360713,
+          "membership": 427
+        },
+        "2021": {
+          "averageAttendance": 75,
+          "plateAndPledge": 333583,
+          "membership": 431
+        },
+        "2022": {
+          "averageAttendance": 107,
+          "plateAndPledge": 331032,
+          "membership": 435
+        },
+        "2023": {
+          "averageAttendance": 114,
+          "plateAndPledge": 307411,
+          "membership": 445
+        },
+        "2024": {
+          "averageAttendance": 135,
+          "plateAndPledge": 339555,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9202,
@@ -28803,16 +31443,86 @@
   },
   {
     "vh_id": 9141,
-    "name": "Position in Indianapolis",
+    "name": "Christ Church Episcopal Cathedral, Indianapolis, IN",
     "diocese": "Indianapolis",
-    "state": "",
+    "state": "IN",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9141",
     "position_type": "Cathedral Dean",
     "congregation": "",
     "receiving_names_from": "06/19/2020",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3130,
+      "name": "Christ Church Episcopal Cathedral",
+      "street": "125 Monument Cir",
+      "city": "Indianapolis",
+      "state": "IN",
+      "zip": "46204-2993",
+      "phone": "317-636-4577",
+      "email": "info@cccindy.org",
+      "website": "https://www.cccindy.org",
+      "type": "church",
+      "lat": 39.76926,
+      "lng": -86.15765
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Christ Church Episcopal Cathedral (Indianapolis)",
+      "years": {
+        "2015": {
+          "averageAttendance": 251,
+          "plateAndPledge": 375000,
+          "membership": 565
+        },
+        "2016": {
+          "averageAttendance": 272,
+          "plateAndPledge": 136262,
+          "membership": 577
+        },
+        "2017": {
+          "averageAttendance": 262,
+          "plateAndPledge": 84077,
+          "membership": 598
+        },
+        "2018": {
+          "averageAttendance": 250,
+          "plateAndPledge": 81391,
+          "membership": 631
+        },
+        "2019": {
+          "averageAttendance": 246,
+          "plateAndPledge": 64868,
+          "membership": 641
+        },
+        "2020": {
+          "averageAttendance": 231,
+          "plateAndPledge": 27135,
+          "membership": 613
+        },
+        "2021": {
+          "averageAttendance": 102,
+          "plateAndPledge": 129850,
+          "membership": 450
+        },
+        "2022": {
+          "averageAttendance": 212,
+          "plateAndPledge": 199618,
+          "membership": 406
+        },
+        "2023": {
+          "averageAttendance": 249,
+          "plateAndPledge": 391278,
+          "membership": 475
+        },
+        "2024": {
+          "averageAttendance": 267,
+          "plateAndPledge": 248593,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 9140,
@@ -28829,81 +31539,171 @@
   },
   {
     "vh_id": 9139,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9139",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "06/08/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9138,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9138",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "04/07/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9137,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9137",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "03/17/2019",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9136,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9136",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9135,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9135",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "11/01/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9134,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9134",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/09/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9133,
@@ -28990,55 +31790,115 @@
   },
   {
     "vh_id": 9132,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9132",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/06/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9131,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9131",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "09/06/2018",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9130,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9130",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9129,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "No longer receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9129",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9128,
@@ -29068,16 +31928,31 @@
   },
   {
     "vh_id": 9126,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9126",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "05/30/2016",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9125,
@@ -29203,16 +32078,31 @@
   },
   {
     "vh_id": 9121,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9121",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "07/31/2015",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9120,
@@ -29395,16 +32285,31 @@
   },
   {
     "vh_id": 9117,
-    "name": "Position in Los Angeles",
+    "name": "Congregation of St Athanasius, Los Angeles, CA",
     "diocese": "Los Angeles",
-    "state": "",
+    "state": "CA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9117",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "03/15/2014",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 1113,
+      "name": "Congregation of St Athanasius",
+      "street": "840 Echo Park Ave",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90026-4209",
+      "phone": "213-482-2040",
+      "email": "falton@ladiocese.org",
+      "website": "https://saintala.org",
+      "type": "church",
+      "lat": 34.07326,
+      "lng": -118.25938
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9116,
@@ -30137,16 +33042,31 @@
   },
   {
     "vh_id": 9101,
-    "name": "Position in Indianapolis",
+    "name": "Peace Episcopal Congregation, Rockport, IN",
     "diocese": "Indianapolis",
-    "state": "",
+    "state": "IN",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9101",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3152,
+      "name": "Peace Episcopal Congregation",
+      "street": "1092 N. SR 66 ",
+      "city": "Rockport",
+      "state": "IN",
+      "zip": "47633",
+      "phone": "(812) 649-5500",
+      "email": "peacerockport@att.net",
+      "website": "https://www.peaceepiscopal.org/",
+      "type": "church",
+      "lat": 37.90319,
+      "lng": -87.0447
+    },
+    "match_confidence": "high"
   },
   {
     "vh_id": 9099,
@@ -32174,16 +35094,86 @@
   },
   {
     "vh_id": 8928,
-    "name": "Position in Central Pennsylvania",
+    "name": "St. Stephen's Cathedral, Harrisburg, PA",
     "diocese": "Central Pennsylvania",
-    "state": "",
+    "state": "PA",
     "vh_status": "Profile complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8928",
     "position_type": "Cathedral Dean",
     "congregation": "",
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2467,
+      "name": "St. Stephen's Cathedral",
+      "street": "221 N Front St",
+      "city": "Harrisburg",
+      "state": "PA",
+      "zip": "17101-1437",
+      "phone": "717-236-4059",
+      "email": "churchadmin@ststep.org",
+      "website": "https://ststephenshbg.church/",
+      "type": "church",
+      "lat": 40.26091,
+      "lng": -76.88586
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Stephens Cathedral (Harrisburg)",
+      "years": {
+        "2015": {
+          "averageAttendance": 167,
+          "plateAndPledge": 486259,
+          "membership": 647
+        },
+        "2016": {
+          "averageAttendance": 157,
+          "plateAndPledge": 494046,
+          "membership": 652
+        },
+        "2017": {
+          "averageAttendance": 156,
+          "plateAndPledge": 536827,
+          "membership": 540
+        },
+        "2018": {
+          "averageAttendance": 155,
+          "plateAndPledge": 523784,
+          "membership": 537
+        },
+        "2019": {
+          "averageAttendance": 151,
+          "plateAndPledge": 553888,
+          "membership": 558
+        },
+        "2020": {
+          "averageAttendance": 134,
+          "plateAndPledge": 551220,
+          "membership": 553
+        },
+        "2021": {
+          "averageAttendance": 137,
+          "plateAndPledge": 597997,
+          "membership": 556
+        },
+        "2022": {
+          "averageAttendance": 87,
+          "plateAndPledge": 638011,
+          "membership": 559
+        },
+        "2023": {
+          "averageAttendance": 111,
+          "plateAndPledge": 627613,
+          "membership": 569
+        },
+        "2024": {
+          "averageAttendance": 126,
+          "plateAndPledge": 633633,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8922,
@@ -34219,16 +37209,86 @@
   },
   {
     "vh_id": 8666,
-    "name": "Position in Bethlehem",
+    "name": "Christ Episcopal Church, Stroudsburg, PA",
     "diocese": "Bethlehem",
-    "state": "",
+    "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8666",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2270,
+      "name": "Christ Episcopal Church",
+      "street": "205 N 7th St",
+      "city": "Stroudsburg",
+      "state": "PA",
+      "zip": "18360-2113",
+      "phone": "570-421-7481",
+      "email": "office@christchurchstroudsburg.org",
+      "website": "http://christchurchstroudsburg.org",
+      "type": "church",
+      "lat": 40.98765,
+      "lng": -75.19566
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Christ Episcopal Church (Stroudsburg)",
+      "years": {
+        "2015": {
+          "averageAttendance": 107,
+          "plateAndPledge": 173890,
+          "membership": 245
+        },
+        "2016": {
+          "averageAttendance": 103,
+          "plateAndPledge": 168648,
+          "membership": 231
+        },
+        "2017": {
+          "averageAttendance": 108,
+          "plateAndPledge": 175232,
+          "membership": 234
+        },
+        "2018": {
+          "averageAttendance": 100,
+          "plateAndPledge": 183336,
+          "membership": 231
+        },
+        "2019": {
+          "averageAttendance": 94,
+          "plateAndPledge": 188508,
+          "membership": 228
+        },
+        "2020": {
+          "averageAttendance": 93,
+          "plateAndPledge": 191703,
+          "membership": 223
+        },
+        "2021": {
+          "averageAttendance": 33,
+          "plateAndPledge": 170067,
+          "membership": 228
+        },
+        "2022": {
+          "averageAttendance": 58,
+          "plateAndPledge": 175333,
+          "membership": 238
+        },
+        "2023": {
+          "averageAttendance": 73,
+          "plateAndPledge": 172550,
+          "membership": 245
+        },
+        "2024": {
+          "averageAttendance": 74,
+          "plateAndPledge": 149223,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8664,
@@ -34245,16 +37305,86 @@
   },
   {
     "vh_id": 8661,
-    "name": "Position in Bethlehem",
+    "name": "Church of the Mediator, Allentown, PA",
     "diocese": "Bethlehem",
-    "state": "",
+    "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8661",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2238,
+      "name": "Church of the Mediator",
+      "street": "1620 W Turner St",
+      "city": "Allentown",
+      "state": "PA",
+      "zip": "18102-3637",
+      "phone": "610-434-0155",
+      "email": "mail@episcopalmediator.org",
+      "website": "https://episcopalmediator.org/",
+      "type": "church",
+      "lat": 40.59948,
+      "lng": -75.49205
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Mediator (Allentown)",
+      "years": {
+        "2015": {
+          "averageAttendance": 89,
+          "plateAndPledge": 299677,
+          "membership": 220
+        },
+        "2016": {
+          "averageAttendance": 87,
+          "plateAndPledge": 262677,
+          "membership": 220
+        },
+        "2017": {
+          "averageAttendance": 87,
+          "plateAndPledge": 265235,
+          "membership": 209
+        },
+        "2018": {
+          "averageAttendance": 79,
+          "plateAndPledge": 282516,
+          "membership": 208
+        },
+        "2019": {
+          "averageAttendance": 72,
+          "plateAndPledge": 261843,
+          "membership": 195
+        },
+        "2020": {
+          "averageAttendance": 38,
+          "plateAndPledge": 249189,
+          "membership": 202
+        },
+        "2021": {
+          "averageAttendance": 16,
+          "plateAndPledge": 212512,
+          "membership": 199
+        },
+        "2022": {
+          "averageAttendance": 47,
+          "plateAndPledge": 211050,
+          "membership": 198
+        },
+        "2023": {
+          "averageAttendance": 65,
+          "plateAndPledge": 240086,
+          "membership": 227
+        },
+        "2024": {
+          "averageAttendance": 78,
+          "plateAndPledge": 245974,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8660,
@@ -34424,16 +37554,86 @@
   },
   {
     "vh_id": 8658,
-    "name": "Position in Bethlehem",
+    "name": "St. Paul's Episcopal Church, Montrose, PA",
     "diocese": "Bethlehem",
-    "state": "",
+    "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8658",
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "01/21/2022",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2252,
+      "name": "St. Paul's Episcopal Church",
+      "street": "276 Church St",
+      "city": "Montrose",
+      "state": "PA",
+      "zip": "18801-1231",
+      "phone": "570-278-2954",
+      "email": "stpaulsmontrose@epix.net",
+      "website": "http://stpaulschurchmontrose.org/wp/",
+      "type": "church",
+      "lat": 41.83199,
+      "lng": -75.87723
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Pauls Church (Montrose)",
+      "years": {
+        "2015": {
+          "averageAttendance": 36,
+          "plateAndPledge": 77000,
+          "membership": 67
+        },
+        "2016": {
+          "averageAttendance": 35,
+          "plateAndPledge": 56476,
+          "membership": 64
+        },
+        "2017": {
+          "averageAttendance": 32,
+          "plateAndPledge": 49133,
+          "membership": 57
+        },
+        "2018": {
+          "averageAttendance": 29,
+          "plateAndPledge": 51915,
+          "membership": 53
+        },
+        "2019": {
+          "averageAttendance": 33,
+          "plateAndPledge": 45633,
+          "membership": 53
+        },
+        "2020": {
+          "averageAttendance": 34,
+          "plateAndPledge": 54389,
+          "membership": 49
+        },
+        "2021": {
+          "averageAttendance": 20,
+          "plateAndPledge": 50005,
+          "membership": 23
+        },
+        "2022": {
+          "averageAttendance": 24,
+          "plateAndPledge": 47633,
+          "membership": 24
+        },
+        "2023": {
+          "averageAttendance": 24,
+          "plateAndPledge": 46005,
+          "membership": 25
+        },
+        "2024": {
+          "averageAttendance": 24,
+          "plateAndPledge": 50746,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8657,
@@ -34450,16 +37650,86 @@
   },
   {
     "vh_id": 8638,
-    "name": "Position in Bethlehem",
+    "name": "St. Brigid's Church, Nazareth, PA",
     "diocese": "Bethlehem",
-    "state": "",
+    "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8638",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2258,
+      "name": "St. Brigid's Church",
+      "street": "310 Madison Ave",
+      "city": "Nazareth",
+      "state": "PA",
+      "zip": "18064-2613",
+      "phone": "610-746-3910",
+      "email": "stbrigidsnaz@gmail.com",
+      "website": "http://stbrigidsnaz.org/",
+      "type": "church",
+      "lat": 40.73988,
+      "lng": -75.31639
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Brigids Church (Nazareth)",
+      "years": {
+        "2015": {
+          "averageAttendance": 64,
+          "plateAndPledge": 93364,
+          "membership": 159
+        },
+        "2016": {
+          "averageAttendance": 51,
+          "plateAndPledge": 96527,
+          "membership": 160
+        },
+        "2017": {
+          "averageAttendance": 51,
+          "plateAndPledge": 110203,
+          "membership": 168
+        },
+        "2018": {
+          "averageAttendance": 46,
+          "plateAndPledge": 91215,
+          "membership": 169
+        },
+        "2019": {
+          "averageAttendance": 45,
+          "plateAndPledge": 105074,
+          "membership": 169
+        },
+        "2020": {
+          "averageAttendance": 37,
+          "plateAndPledge": 102318,
+          "membership": 91
+        },
+        "2021": {
+          "averageAttendance": 23,
+          "plateAndPledge": 112493,
+          "membership": 91
+        },
+        "2022": {
+          "averageAttendance": 19,
+          "plateAndPledge": 93247,
+          "membership": 88
+        },
+        "2023": {
+          "averageAttendance": 19,
+          "plateAndPledge": 57348,
+          "membership": 47
+        },
+        "2024": {
+          "averageAttendance": 22,
+          "plateAndPledge": 77068,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8637,
@@ -34476,8 +37746,8 @@
   },
   {
     "vh_id": 8636,
-    "name": "Position in Central Pennsylvania",
-    "diocese": "Central Pennsylvania",
+    "name": "St. Paul's Episcopal Church, Montrose, PA",
+    "diocese": "Bethlehem",
     "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8636",
@@ -34485,7 +37755,77 @@
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2252,
+      "name": "St. Paul's Episcopal Church",
+      "street": "276 Church St",
+      "city": "Montrose",
+      "state": "PA",
+      "zip": "18801-1231",
+      "phone": "570-278-2954",
+      "email": "stpaulsmontrose@epix.net",
+      "website": "http://stpaulschurchmontrose.org/wp/",
+      "type": "church",
+      "lat": 41.83199,
+      "lng": -75.87723
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Pauls Church (Montrose)",
+      "years": {
+        "2015": {
+          "averageAttendance": 36,
+          "plateAndPledge": 77000,
+          "membership": 67
+        },
+        "2016": {
+          "averageAttendance": 35,
+          "plateAndPledge": 56476,
+          "membership": 64
+        },
+        "2017": {
+          "averageAttendance": 32,
+          "plateAndPledge": 49133,
+          "membership": 57
+        },
+        "2018": {
+          "averageAttendance": 29,
+          "plateAndPledge": 51915,
+          "membership": 53
+        },
+        "2019": {
+          "averageAttendance": 33,
+          "plateAndPledge": 45633,
+          "membership": 53
+        },
+        "2020": {
+          "averageAttendance": 34,
+          "plateAndPledge": 54389,
+          "membership": 49
+        },
+        "2021": {
+          "averageAttendance": 20,
+          "plateAndPledge": 50005,
+          "membership": 23
+        },
+        "2022": {
+          "averageAttendance": 24,
+          "plateAndPledge": 47633,
+          "membership": 24
+        },
+        "2023": {
+          "averageAttendance": 24,
+          "plateAndPledge": 46005,
+          "membership": 25
+        },
+        "2024": {
+          "averageAttendance": 24,
+          "plateAndPledge": 50746,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8635,
@@ -34788,7 +38128,7 @@
       "lat": 34.18717,
       "lng": -110.00481
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "Church of Our Saviour (Lakeside)",
       "years": {
@@ -34862,84 +38202,14 @@
     "vh_id": 8596,
     "name": "St Stephens Church",
     "diocese": "Arizona",
-    "state": "AZ",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8596",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Stephens Church",
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 2041,
-      "name": "St. Stephen's Episcopal Church",
-      "street": "1038 D Avenue",
-      "city": "Douglas",
-      "state": "AZ",
-      "zip": "85607",
-      "phone": "(520) 224-4379",
-      "email": "jjbernal@azdiocese.org",
-      "website": "http://ststephensmission.azdiocese.org/",
-      "type": "church",
-      "lat": 31.34508,
-      "lng": -109.55014
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Stephens Episcopal Church (Douglas)",
-      "years": {
-        "2015": {
-          "averageAttendance": 15,
-          "plateAndPledge": 7319,
-          "membership": 20
-        },
-        "2016": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
-        },
-        "2017": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
-        },
-        "2018": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
-        },
-        "2019": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
-        },
-        "2020": {
-          "averageAttendance": 20,
-          "plateAndPledge": 28245,
-          "membership": 23
-        },
-        "2021": {
-          "averageAttendance": 13,
-          "plateAndPledge": 27306,
-          "membership": 35
-        },
-        "2022": {
-          "averageAttendance": 13,
-          "plateAndPledge": 19719,
-          "membership": 34
-        },
-        "2023": {
-          "averageAttendance": 12,
-          "plateAndPledge": 26641,
-          "membership": 24
-        },
-        "2024": {
-          "averageAttendance": 17,
-          "plateAndPledge": 43102,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 8595,
@@ -35037,71 +38307,71 @@
     "receiving_names_to": "Open ended",
     "open_ended": true,
     "church_info": {
-      "nid": 2041,
+      "nid": 2065,
       "name": "St. Stephen's Episcopal Church",
-      "street": "1038 D Avenue",
-      "city": "Douglas",
+      "street": "2310 N 56th St",
+      "city": "Phoenix",
       "state": "AZ",
-      "zip": "85607",
-      "phone": "(520) 224-4379",
-      "email": "jjbernal@azdiocese.org",
-      "website": "http://ststephensmission.azdiocese.org/",
+      "zip": "85008-2611",
+      "phone": "602-840-0437",
+      "email": "main@ststephens.org",
+      "website": "http://www.ststephens.org",
       "type": "church",
-      "lat": 31.34508,
-      "lng": -109.55014
+      "lat": 33.47354,
+      "lng": -111.96148
     },
     "match_confidence": "high",
     "parochial": {
-      "congregationCity": "St Stephens Episcopal Church (Douglas)",
+      "congregationCity": "St Stephens Church (Phoenix)",
       "years": {
         "2015": {
-          "averageAttendance": 15,
-          "plateAndPledge": 7319,
-          "membership": 20
+          "averageAttendance": 113,
+          "plateAndPledge": 201718,
+          "membership": 188
         },
         "2016": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
+          "averageAttendance": 105,
+          "plateAndPledge": 216499,
+          "membership": 162
         },
         "2017": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
+          "averageAttendance": 100,
+          "plateAndPledge": 248341,
+          "membership": 158
         },
         "2018": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
+          "averageAttendance": 100,
+          "plateAndPledge": 248341,
+          "membership": 158
         },
         "2019": {
-          "averageAttendance": 12,
-          "plateAndPledge": 47880,
-          "membership": 18
+          "averageAttendance": 100,
+          "plateAndPledge": 248341,
+          "membership": 158
         },
         "2020": {
-          "averageAttendance": 20,
-          "plateAndPledge": 28245,
-          "membership": 23
+          "averageAttendance": 60,
+          "plateAndPledge": 182602,
+          "membership": 155
         },
         "2021": {
-          "averageAttendance": 13,
-          "plateAndPledge": 27306,
-          "membership": 35
+          "averageAttendance": 55,
+          "plateAndPledge": 182329,
+          "membership": 152
         },
         "2022": {
-          "averageAttendance": 13,
-          "plateAndPledge": 19719,
-          "membership": 34
+          "averageAttendance": 44,
+          "plateAndPledge": 201569,
+          "membership": 154
         },
         "2023": {
-          "averageAttendance": 12,
-          "plateAndPledge": 26641,
-          "membership": 24
+          "averageAttendance": 53,
+          "plateAndPledge": 176376,
+          "membership": 159
         },
         "2024": {
-          "averageAttendance": 17,
-          "plateAndPledge": 43102,
+          "averageAttendance": 56,
+          "plateAndPledge": 192086,
           "membership": null
         }
       }
@@ -35192,16 +38462,86 @@
   },
   {
     "vh_id": 8592,
-    "name": "Position in Arkansas",
+    "name": "St. Andrew's Episcopal Church, Mountain Home, AR",
     "diocese": "Arkansas",
-    "state": "",
+    "state": "AR",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8592",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 2132,
+      "name": "St. Andrew's Episcopal Church",
+      "street": "511 Coley Dr",
+      "city": "Mountain Home",
+      "state": "AR",
+      "zip": "72653-2503",
+      "phone": "870-425-3560",
+      "email": "standrewssecretary@gmail.com",
+      "website": "https://standrewsmountainhome.weebly.com",
+      "type": "church",
+      "lat": 36.351789,
+      "lng": -92.384599
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Andrews Episcopal Church (Mountain Home)",
+      "years": {
+        "2015": {
+          "averageAttendance": 85,
+          "plateAndPledge": 177396,
+          "membership": 120
+        },
+        "2016": {
+          "averageAttendance": 78,
+          "plateAndPledge": 167672,
+          "membership": 116
+        },
+        "2017": {
+          "averageAttendance": 69,
+          "plateAndPledge": 168756,
+          "membership": 100
+        },
+        "2018": {
+          "averageAttendance": 68,
+          "plateAndPledge": 149689,
+          "membership": 113
+        },
+        "2019": {
+          "averageAttendance": 69,
+          "plateAndPledge": 154117,
+          "membership": 116
+        },
+        "2020": {
+          "averageAttendance": 59,
+          "plateAndPledge": 149345,
+          "membership": 113
+        },
+        "2021": {
+          "averageAttendance": 35,
+          "plateAndPledge": 144817,
+          "membership": 110
+        },
+        "2022": {
+          "averageAttendance": 39,
+          "plateAndPledge": 137257,
+          "membership": 107
+        },
+        "2023": {
+          "averageAttendance": 45,
+          "plateAndPledge": 143560,
+          "membership": 109
+        },
+        "2024": {
+          "averageAttendance": 48,
+          "plateAndPledge": 144963,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8591,
@@ -36708,16 +40048,86 @@
   },
   {
     "vh_id": 8532,
-    "name": "Position in Alabama",
+    "name": "St. Michael and All Angels' Episcopal Church, Millbrook, AL",
     "diocese": "Alabama",
-    "state": "",
+    "state": "AL",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8532",
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "06/30/2024",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 882,
+      "name": "St. Michael and All Angels' Episcopal Church",
+      "street": "5941 Main St",
+      "city": "Millbrook",
+      "state": "AL",
+      "zip": "36054-1878",
+      "phone": "(334) 285-3905",
+      "email": "stmichaelsallangels@gmail.com",
+      "website": "http://stmichaelallangels.com",
+      "type": "church",
+      "lat": 32.515149,
+      "lng": -86.375793
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Michael and All Angels Church (Millbrook)",
+      "years": {
+        "2015": {
+          "averageAttendance": 87,
+          "plateAndPledge": 153560,
+          "membership": 182
+        },
+        "2016": {
+          "averageAttendance": 88,
+          "plateAndPledge": 159639,
+          "membership": 193
+        },
+        "2017": {
+          "averageAttendance": 91,
+          "plateAndPledge": 189067,
+          "membership": 198
+        },
+        "2018": {
+          "averageAttendance": 91,
+          "plateAndPledge": 188509,
+          "membership": 202
+        },
+        "2019": {
+          "averageAttendance": 92,
+          "plateAndPledge": 192704,
+          "membership": 208
+        },
+        "2020": {
+          "averageAttendance": 99,
+          "plateAndPledge": 204518,
+          "membership": 208
+        },
+        "2021": {
+          "averageAttendance": 54,
+          "plateAndPledge": 212323,
+          "membership": 214
+        },
+        "2022": {
+          "averageAttendance": 55,
+          "plateAndPledge": 176406,
+          "membership": 207
+        },
+        "2023": {
+          "averageAttendance": 67,
+          "plateAndPledge": 204661,
+          "membership": 200
+        },
+        "2024": {
+          "averageAttendance": 63,
+          "plateAndPledge": 202103,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 8531,

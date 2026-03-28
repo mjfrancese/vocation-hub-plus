@@ -179,20 +179,22 @@ function normalizeDiocese(diocese: string): string {
 }
 
 function normalizeName(name: string): string {
-  return name
+  return (name || '')
     .toLowerCase()
-    .replace(/\bthe\b/g, '')
-    .replace(/\bepiscopal\b/g, '')
-    .replace(/\bchurch\b/g, '')
-    .replace(/\bparish\b/g, '')
-    .replace(/\bcommunity\b/g, '')
-    .replace(/\bof\b/g, '')
-    .replace(/\band\b/g, '')
-    .replace(/saint\b/g, 'st')
-    .replace(/st\.\s*/g, 'st ')
-    .replace(/['']/g, '')
-    .replace(/\([^)]*\)/g, '') // Remove parenthetical city names
-    .replace(/,.*$/, '') // Remove everything after comma
+    .replace(/\bsaints?\b/g, 'st')
+    .replace(/\bsts\.?\s/g, 'st ')
+    .replace(/\bst\.\s*/g, 'st ')
+    .replace(/\bmount\b/g, 'mt')
+    .replace(/\bmt\.\s*/g, 'mt ')
+    .replace(/\s*\/.*$/, '')
+    .replace(/['\u2018\u2019`]/g, '')
+    .replace(/\([^)]*\)/g, '')
+    .replace(/,.*$/, '')
+    .replace(/-/g, ' ')
+    .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
+    .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/([a-z]{4,})s\b/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
 }

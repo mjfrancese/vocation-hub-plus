@@ -2233,20 +2233,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 6784,
-      "name": "St. John the Evangelist Episcopal Church",
-      "street": "316 North El Dorado St",
-      "city": "Stockton",
+      "nid": 5000,
+      "name": "St. John's Episcopal Church / Iglesia Episcopal San Juan",
+      "street": "1701 E Prosperity Ave",
+      "city": "Tulare",
       "state": "CA",
-      "zip": "95202",
-      "phone": "(209) 466-6916",
-      "email": "",
-      "website": "http://www.stjohnsstockton.org",
+      "zip": "93274-2345",
+      "phone": "559-679-6862",
+      "email": "office@stjohnstulare.org",
+      "website": "https://stjohnstulare.org",
       "type": "church",
-      "lat": 37.95631,
-      "lng": -121.29043
+      "lat": 36.22537,
+      "lng": -119.32121
     },
-    "match_confidence": "high"
+    "match_confidence": "exact"
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
@@ -2746,7 +2746,72 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 3590,
+      "name": "St. Andrew's Episcopal Church",
+      "street": "1833 Regent St",
+      "city": "Madison",
+      "state": "WI",
+      "zip": "53726-4198",
+      "phone": "608-233-3249 ",
+      "email": "general@standrews-madison.org",
+      "website": "https://www.standrews-madison.org/",
+      "type": "church",
+      "lat": 43.067855,
+      "lng": -89.418453
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Andrews Episcopal Church (Madison)",
+      "years": {
+        "2015": {
+          "averageAttendance": 145,
+          "plateAndPledge": 420818,
+          "membership": 364
+        },
+        "2016": {
+          "averageAttendance": 146,
+          "plateAndPledge": 454014,
+          "membership": 391
+        },
+        "2017": {
+          "averageAttendance": 153,
+          "plateAndPledge": 458716,
+          "membership": 403
+        },
+        "2018": {
+          "averageAttendance": 150,
+          "plateAndPledge": 496498,
+          "membership": 386
+        },
+        "2019": {
+          "averageAttendance": 137,
+          "plateAndPledge": 458159,
+          "membership": 389
+        },
+        "2020": {
+          "averageAttendance": 123,
+          "plateAndPledge": 497445,
+          "membership": 345
+        },
+        "2021": {
+          "averageAttendance": 73,
+          "plateAndPledge": 502411,
+          "membership": 318
+        },
+        "2022": {
+          "averageAttendance": 91,
+          "plateAndPledge": 512672,
+          "membership": 292
+        },
+        "2023": {
+          "averageAttendance": 89,
+          "plateAndPledge": 501767,
+          "membership": 245
+        }
+      }
+    }
   },
   {
     "id": "7a439067c0ecddca3379266775c3c236ae1d1c53ec513b68470b03cfcd8c5c73",

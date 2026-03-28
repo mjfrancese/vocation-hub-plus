@@ -36,34 +36,54 @@ function normalizeDiocese(diocese) {
 }
 
 function normalizeChurchName(name) {
-  return name
+  return (name || '')
     .toLowerCase()
-    .replace(/\bthe\b/g, '')
-    .replace(/\bepiscopal\b/g, '')
-    .replace(/\bchurch\b/g, '')
-    .replace(/\bparish\b/g, '')
-    .replace(/\bof\b/g, '')
-    .replace(/\band\b/g, '')
-    .replace(/\bcommunity\b/g, '')
-    .replace(/saint\b/g, 'st')
-    .replace(/st\.\s*/g, 'st ')
-    .replace(/[''`]/g, '')
+    // Abbreviation standardization
+    .replace(/\bsaints?\b/g, 'st')        // saint/saints -> st
+    .replace(/\bsts\.?\s/g, 'st ')         // sts./sts -> st (plural saints abbrev)
+    .replace(/\bst\.\s*/g, 'st ')          // st. -> st
+    .replace(/\bmount\b/g, 'mt')           // mount -> mt
+    .replace(/\bmt\.\s*/g, 'mt ')          // mt. -> mt
+    // Strip bilingual suffix (after slash)
+    .replace(/\s*\/.*$/, '')
+    // Strip apostrophes and smart quotes
+    .replace(/['\u2018\u2019`]/g, '')
+    // Strip parenthetical content
     .replace(/\([^)]*\)/g, '')
+    // Strip comma suffix (city in registry names)
     .replace(/,.*$/, '')
+    // Replace hyphens with spaces
+    .replace(/-/g, ' ')
+    // Strip stop words
+    .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
+    .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
+    // Strip all remaining punctuation (catches &, periods, etc.)
+    .replace(/[^a-z0-9\s]/g, '')
+    // Normalize possessive/plural trailing 's' (words 5+ chars)
+    .replace(/([a-z]{4,})s\b/g, '$1')
+    // Collapse whitespace
     .replace(/\s+/g, ' ')
     .trim();
 }
 
 // Common church name tokens that don't help distinguish churches
+// After normalization, trailing 's' is stripped from 5+ char words,
+// so use the normalized forms here (e.g., "jame" not "james")
 const COMMON_TOKENS = new Set([
-  'st', 'trinity', 'grace', 'christ', 'holy', 'all', 'saints',
-  'john', 'james', 'paul', 'mark', 'luke', 'matthew', 'peter',
-  'andrew', 'stephen', 'thomas', 'george', 'michael', 'david',
+  'st', 'mt', 'trinity', 'grace', 'christ', 'holy', 'all',
+  'john', 'jame', 'paul', 'mark', 'luke', 'matthew', 'peter',
+  'andrew', 'stephen', 'thoma', 'george', 'michael', 'david',
   'mary', 'martin', 'cross', 'good', 'shepherd', 'spirit',
   'redeemer', 'savior', 'nativity', 'resurrection', 'ascension',
   'advent', 'annunciation', 'transfiguration', 'emmanuel', 'immanuel',
-  'cathedral', 'chapel', 'memorial', 'mission',
 ]);
+
+// Diocese aliases: maps VH diocese names to registry diocese names.
+// Handles diocese mergers/renames where VH uses new names but registry has old ones.
+const DIOCESE_ALIASES = {
+  'great lakes': ['western michigan', 'eastern michigan'],
+  'wisconsin': ['milwaukee', 'fond du lac', 'eau claire'],
+};
 
 // --- Build indexes from registry ---
 
@@ -77,11 +97,21 @@ function extractDomain(url) {
   return url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase();
 }
 
+function normalizePhone(phone) {
+  if (!phone) return '';
+  const digits = phone.replace(/\D/g, '');
+  // Strip leading country code (1 for US)
+  if (digits.length === 11 && digits[0] === '1') return digits.slice(1);
+  if (digits.length === 10) return digits;
+  return ''; // Invalid length
+}
+
 function buildRegistryIndexes(registry) {
   const emailIndex = new Map();   // domain -> [{ nid, church }]
   const dioceseIndex = new Map(); // normDiocese -> [{ nid, church }]
   const websiteIndex = new Map(); // normUrl -> { nid, church }
   const domainIndex = new Map();  // domain-only -> [{ nid, church }]
+  const phoneIndex = new Map();   // 10-digit phone -> [{ nid, church }]
 
   for (const [nid, church] of Object.entries(registry)) {
     // Email index
@@ -117,9 +147,17 @@ function buildRegistryIndexes(registry) {
       list.push({ nid: parseInt(nid), church });
       domainIndex.set(d, list);
     }
+
+    // Phone index
+    const phone = normalizePhone(church.phone);
+    if (phone) {
+      const list = phoneIndex.get(phone) || [];
+      list.push({ nid: parseInt(nid), church });
+      phoneIndex.set(phone, list);
+    }
   }
 
-  return { emailIndex, dioceseIndex, websiteIndex, domainIndex };
+  return { emailIndex, dioceseIndex, websiteIndex, domainIndex, phoneIndex };
 }
 
 // --- Diocesan/generic domain detection ---
@@ -188,13 +226,32 @@ function extractCity(name) {
 
 // --- Matching ---
 
+/**
+ * Get church candidates for a diocese, including alias dioceses.
+ * Handles diocese mergers where VH uses new names but registry has old ones.
+ */
+function getDioceseCandidates(diocese, indexes) {
+  const dioceseKey = normalizeDiocese(diocese);
+  let allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
+
+  // Include candidates from alias dioceses
+  const aliases = DIOCESE_ALIASES[dioceseKey];
+  if (aliases) {
+    for (const alias of aliases) {
+      const aliasKey = normalizeDiocese(alias);
+      const aliasCandidates = indexes.dioceseIndex.get(aliasKey) || [];
+      allCandidates = allCandidates.concat(aliasCandidates);
+    }
+  }
+
+  return allCandidates.filter(c => !c.church.type || c.church.type === 'church');
+}
+
 function matchByNameDiocese(posName, diocese, indexes) {
   if (!posName || !diocese) return null;
 
   const posNorm = normalizeChurchName(posName);
-  const dioceseKey = normalizeDiocese(diocese);
-  const allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
-  const candidates = allCandidates.filter(c => !c.church.type || c.church.type === 'church');
+  const candidates = getDioceseCandidates(diocese, indexes);
 
   // Exact normalized match
   const exactMatches = candidates.filter(c => normalizeChurchName(c.church.name) === posNorm);
@@ -243,10 +300,40 @@ function matchByNameDiocese(posName, diocese, indexes) {
             if (churchTokens.some(ct => ct === token)) matchCount++;
           }
 
+          // Score by overlap of the larger set (original strategy)
           const score = matchCount / Math.max(posTokens.length, churchTokens.length);
           if (score > bestScore && score >= 0.9) {
             bestScore = score;
             best = c;
+          }
+        }
+
+        // Subset token matching: if ALL position tokens appear in the church name,
+        // accept the match even if church name has extra words (e.g., bilingual names)
+        if (!best) {
+          let subsetBest = null;
+          let subsetCount = 0;
+
+          for (const c of candidates) {
+            const churchNorm = normalizeChurchName(c.church.name);
+            const churchTokens = churchNorm.split(/\s+/).filter(t => t.length > 1);
+            if (churchTokens.length === 0) continue;
+
+            let matchCount = 0;
+            for (const token of posTokens) {
+              if (churchTokens.some(ct => ct === token)) matchCount++;
+            }
+
+            // All position tokens must appear in church name
+            if (matchCount === posTokens.length && matchCount >= 2) {
+              subsetCount++;
+              subsetBest = c;
+            }
+          }
+
+          // Only use subset match if exactly one candidate qualifies
+          if (subsetCount === 1) {
+            best = subsetBest;
           }
         }
 
@@ -262,6 +349,36 @@ function matchByNameDiocese(posName, diocese, indexes) {
               match_method: 'name_high_confidence',
               flagged: false,
             };
+          }
+        }
+      }
+
+      // Common-token sole candidate match: when ALL tokens are common (e.g., "good shepherd",
+      // "holy trinity", "grace"), allow matching if there's exactly 1 exact name match in diocese
+      if (!hasDistinguishing && exactMatches.length === 0) {
+        // Try exact match again (may have been blocked by the hasDistinguishing check above)
+        const commonExact = candidates.filter(c => normalizeChurchName(c.church.name) === posNorm);
+        if (commonExact.length === 1) {
+          return {
+            church_nid: commonExact[0].nid,
+            confidence: 'high',
+            match_method: 'name_common_sole',
+            flagged: false,
+          };
+        }
+        // Multiple common-name matches: try city disambiguation
+        if (commonExact.length > 1) {
+          const posCity = extractCity(posName).toLowerCase();
+          if (posCity) {
+            const cityMatched = commonExact.filter(c => c.church.city.toLowerCase() === posCity);
+            if (cityMatched.length === 1) {
+              return {
+                church_nid: cityMatched[0].nid,
+                confidence: 'high',
+                match_method: 'name_common_city',
+                flagged: false,
+              };
+            }
           }
         }
       }
@@ -442,6 +559,39 @@ function matchPosition(posName, diocese, fields, indexes, website) {
     }
   }
 
+  // Strategy 1d: Phone number matching
+  // Extract phone numbers from profile fields and match against registry
+  if (fields && fields.length > 0) {
+    const phoneNumbers = [];
+    for (const f of fields) {
+      if (!f.value) continue;
+      // Extract all phone-like sequences (7+ digits possibly with separators)
+      const found = (f.value || '').match(/[\d().\-\s+]{7,}/g);
+      if (found) {
+        for (const raw of found) {
+          const norm = normalizePhone(raw);
+          if (norm) phoneNumbers.push(norm);
+        }
+      }
+    }
+
+    for (const phone of phoneNumbers) {
+      const matches = indexes.phoneIndex.get(phone);
+      if (!matches) continue;
+      const churches = matches.filter(m => !m.church.type || m.church.type === 'church');
+      if (churches.length === 1) {
+        // Cross-validate: if we have a position name, make sure it's compatible
+        if (!namesCompatible(posName, churches[0].church.name)) continue;
+        return {
+          church_nid: churches[0].nid,
+          confidence: 'high',
+          match_method: 'phone',
+          flagged: false,
+        };
+      }
+    }
+  }
+
   // Strategy 2: Name + diocese matching
   // For multi-point calls (multiple churches separated by newlines), try each name
   const namesToTry = posName ? posName.split(/\n/).map(n => n.trim()).filter(Boolean) : [];
@@ -458,9 +608,7 @@ function matchPosition(posName, diocese, fields, indexes, website) {
   if (posName && diocese) {
     const posCity = extractCity(posName).toLowerCase();
     if (posCity) {
-      const dioceseKey = normalizeDiocese(diocese);
-      const allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
-      const candidates = allCandidates.filter(c => !c.church.type || c.church.type === 'church');
+      const candidates = getDioceseCandidates(diocese, indexes);
 
       // Find candidates whose city matches and whose name tokens overlap well
       const posNorm = normalizeChurchName(posName);

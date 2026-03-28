@@ -88,6 +88,55 @@ export interface DiscoveredId {
   diocese: string;
 }
 
+/**
+ * Normalize a church/position name for comparison.
+ * Strips formatting differences between VH search results and profile pages.
+ */
+function normalizeName(name: string): string {
+  return (name || '').toLowerCase()
+    .replace(/\bsaints?\b/g, 'st')
+    .replace(/\bsts\.?\s/g, 'st ')
+    .replace(/\bst\.\s*/g, 'st ')
+    .replace(/\bmount\b/g, 'mt')
+    .replace(/\bmt\.\s*/g, 'mt ')
+    .replace(/\s*\/.*$/, '')
+    .replace(/['\u2018\u2019`]/g, '')
+    .replace(/\([^)]*\)/g, '')
+    .replace(/,.*$/, '')
+    .replace(/-/g, ' ')
+    .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
+    .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/([a-z]{4,})s\b/g, '$1')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
+ * Check if two names are compatible (share key distinguishing tokens).
+ * Returns true if names likely refer to the same church.
+ */
+function namesMatch(rowName: string, profileCongregation: string): boolean {
+  const rn = normalizeName(rowName);
+  const pn = normalizeName(profileCongregation);
+  if (!rn || !pn) return true; // Can't validate without names
+  if (rn === pn) return true;
+
+  const rTokens = rn.split(/\s+/).filter(t => t.length > 1);
+  const pTokens = pn.split(/\s+/).filter(t => t.length > 1);
+  if (rTokens.length === 0 || pTokens.length === 0) return true;
+
+  // Check if key tokens overlap (at least one non-generic word matches)
+  const generic = new Set(['st', 'mt', 'holy', 'all', 'good']);
+  const rKey = rTokens.filter(t => !generic.has(t));
+  const pKey = pTokens.filter(t => !generic.has(t));
+  if (rKey.length === 0 || pKey.length === 0) {
+    // All tokens are generic (e.g., "Holy Trinity") - compare full normalized
+    return rTokens.some(t => pTokens.includes(t));
+  }
+  return rKey.some(t => pKey.includes(t));
+}
+
 export async function discoverAndScrapePositions(
   page: Page,
   searchUrl: string
@@ -120,7 +169,6 @@ export async function discoverAndScrapePositions(
 
         if (match) {
           const id = parseInt(match[1], 10);
-          ids.push({ id, name: rowName.trim(), diocese: rowDiocese.trim() });
           consecutiveFailures = 0;
 
           // We're on the profile page. Extract detail data while we're here.
@@ -150,15 +198,37 @@ export async function discoverAndScrapePositions(
 
           // Extract all field data
           const fields = await page.evaluate(EXTRACT_PROFILE) as Array<{ label: string; value: string }>;
-          profiles.push({ id, fields });
 
-          logger.info('Got ID + data', {
-            id,
-            row: i,
-            page: pageNum,
-            fields: fields.length,
-            total: ids.length,
-          });
+          // Post-click validation: verify the profile page matches the row we intended to click.
+          // Extract congregation name from profile fields and compare to captured row name.
+          const congField = fields.find(f =>
+            f.label.toLowerCase() === 'congregation' ||
+            f.label.toLowerCase() === 'community name' ||
+            f.label.toLowerCase() === 'congregation name'
+          );
+          const profileCongregation = congField?.value || '';
+
+          if (profileCongregation && rowName.trim() && !namesMatch(rowName.trim(), profileCongregation)) {
+            logger.warn('Post-click mismatch: row name does not match profile congregation', {
+              row: i,
+              page: pageNum,
+              rowName: rowName.trim(),
+              profileCongregation,
+              vhId: id,
+            });
+            // Don't record this ID - it belongs to a different position
+          } else {
+            ids.push({ id, name: rowName.trim(), diocese: rowDiocese.trim() });
+            profiles.push({ id, fields });
+
+            logger.info('Got ID + data', {
+              id,
+              row: i,
+              page: pageNum,
+              fields: fields.length,
+              total: ids.length,
+            });
+          }
 
           // Now go back to search results
           const backButton = page.locator('text=Back to Posting Search');
