@@ -83,6 +83,11 @@ function main() {
     const vhId = pos.vh_id;
     if (!pos.city) pos.city = extractCity(pos.name);
 
+    // Fix profile_url: always construct from vh_id to avoid scraper mapping bugs
+    if (vhId) {
+      pos.profile_url = `https://vocationhub.episcopalchurch.org/PositionView/${vhId}`;
+    }
+
     if (vhId) {
       const data = getChurchData(vhId);
       if (data) {
@@ -188,17 +193,22 @@ function main() {
       if (data) extChurch++;
       if (data?.parochial) extParochial++;
 
-      // Infer status if empty
+      // Infer status - mark stale positions as closed
       let inferredStatus = profile.status || '';
+      const fromDate = parseMMDDYYYY(profile.receiving_names_from);
+      const oneYearAgo = new Date();
+      oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+
       if (!inferredStatus) {
-        const fromDate = parseMMDDYYYY(profile.receiving_names_from);
         if (fromDate) {
-          const twoYearsAgo = new Date();
-          twoYearsAgo.setFullYear(twoYearsAgo.getFullYear() - 2);
-          inferredStatus = fromDate >= twoYearsAgo ? 'Receiving names' : 'Search complete';
+          inferredStatus = fromDate >= oneYearAgo ? 'Receiving names' : 'Search complete';
         } else {
           inferredStatus = 'Developing profile';
         }
+      } else if (inferredStatus === 'Receiving names' && fromDate && fromDate < oneYearAgo) {
+        // Override stale "Receiving names" - if receiving date is over 1 year old,
+        // the position is almost certainly filled/closed
+        inferredStatus = 'Search complete';
       }
 
       // Determine state from church_info, override, or profile
@@ -221,7 +231,7 @@ function main() {
         diocese,
         state,
         vh_status: inferredStatus,
-        profile_url: profile.profile_url || '',
+        profile_url: `https://vocationhub.episcopalchurch.org/PositionView/${vhId}`,
         position_type: positionType,
         congregation: profile.congregation || '',
         receiving_names_from: profile.receiving_names_from || '',
