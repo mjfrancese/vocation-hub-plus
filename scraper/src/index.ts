@@ -8,7 +8,7 @@ import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 import { sleep } from './navigate.js';
-import { discoverAndScrapePositions } from './discover-ids-from-search.js';
+import { discoverAndScrapePositions, type DiscoveredId } from './discover-ids-from-search.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -123,7 +123,7 @@ async function main(): Promise<void> {
   }
 }
 
-function saveIdMapping(positions: RawPosition[], vhIds: number[]): void {
+function saveIdMapping(positions: RawPosition[], discovered: DiscoveredId[]): void {
   const d = getDb();
   d.exec(`
     CREATE TABLE IF NOT EXISTS position_vh_ids (
@@ -139,10 +139,64 @@ function saveIdMapping(positions: RawPosition[], vhIds: number[]): void {
     'INSERT OR REPLACE INTO position_vh_ids (position_id, vh_id, name, diocese) VALUES (?, ?, ?, ?)'
   );
 
-  for (let i = 0; i < Math.min(positions.length, vhIds.length); i++) {
-    insert.run(positions[i].id, vhIds[i], positions[i].name, positions[i].diocese);
+  // Match discovered IDs to positions by name+diocese instead of array index.
+  // This prevents misalignment when search result order differs between scrapes.
+  let matched = 0;
+  const usedPositions = new Set<string>();
+
+  for (const disc of discovered) {
+    // Normalize for matching
+    const dName = disc.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const dDiocese = disc.diocese.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+    let bestMatch: RawPosition | null = null;
+    let bestScore = 0;
+
+    for (const pos of positions) {
+      if (usedPositions.has(pos.id)) continue;
+      const pName = pos.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const pDiocese = pos.diocese.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      // Require diocese match
+      if (pDiocese !== dDiocese) continue;
+
+      // Score name similarity
+      let score = 0;
+      if (pName === dName) {
+        score = 100;
+      } else if (pName.includes(dName) || dName.includes(pName)) {
+        score = 80;
+      } else {
+        // Word overlap
+        const pWords = pName.match(/[a-z]{3,}/g) || ([] as string[]);
+        const dWords = dName.match(/[a-z]{3,}/g) || ([] as string[]);
+        const overlap = pWords.filter(w => dWords.includes(w)).length;
+        if (overlap > 0) score = 50 + overlap * 10;
+      }
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestMatch = pos;
+      }
+    }
+
+    if (bestMatch && bestScore >= 50) {
+      insert.run(bestMatch.id, disc.id, disc.name, disc.diocese);
+      usedPositions.add(bestMatch.id);
+      matched++;
+    } else {
+      // Fallback: create a standalone entry for this VH ID
+      insert.run(`vh_${disc.id}`, disc.id, disc.name, disc.diocese);
+      matched++;
+      logger.warn('No position match for discovered ID', {
+        vhId: disc.id,
+        name: disc.name,
+        diocese: disc.diocese,
+      });
+    }
   }
-  logger.info('Saved ID mapping', { count: Math.min(positions.length, vhIds.length) });
+
+  logger.info('Saved ID mapping', { matched, total: discovered.length });
 }
 
 /**

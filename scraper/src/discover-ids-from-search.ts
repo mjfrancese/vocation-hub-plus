@@ -3,7 +3,6 @@ import { logger } from './logger.js';
 import { sleep } from './navigate.js';
 import { SELECTORS } from './selectors.js';
 import { takeScreenshot } from './browser.js';
-import { upsertPositionDetails, type PositionDetails } from './position-details.js';
 
 // Same extraction script from deep-scrape (plain JS string, no tsx __name issue)
 const EXTRACT_PROFILE = `(function() {
@@ -83,11 +82,17 @@ interface ProfileResult {
  *
  * Returns both the discovered IDs and the extracted profile data.
  */
+export interface DiscoveredId {
+  id: number;
+  name: string;
+  diocese: string;
+}
+
 export async function discoverAndScrapePositions(
   page: Page,
   searchUrl: string
-): Promise<{ ids: number[]; profiles: ProfileResult[] }> {
-  const ids: number[] = [];
+): Promise<{ ids: DiscoveredId[]; profiles: ProfileResult[] }> {
+  const ids: DiscoveredId[] = [];
   const profiles: ProfileResult[] = [];
   let pageNum = 1;
   let consecutiveFailures = 0;
@@ -100,8 +105,14 @@ export async function discoverAndScrapePositions(
 
     for (let i = 0; i < rowCount; i++) {
       try {
+        // Capture row name and diocese BEFORE clicking (for reliable ID mapping)
+        const row = page.locator('.k-grid tbody tr').nth(i);
+        const cells = row.locator('td');
+        const rowName = await cells.nth(0).textContent().catch(() => '') || '';
+        const rowDiocese = await cells.nth(1).textContent().catch(() => '') || '';
+
         // Click the row
-        await page.locator('.k-grid tbody tr').nth(i).click();
+        await row.click();
         await sleep(1500);
 
         const url = page.url();
@@ -109,7 +120,7 @@ export async function discoverAndScrapePositions(
 
         if (match) {
           const id = parseInt(match[1], 10);
-          ids.push(id);
+          ids.push({ id, name: rowName.trim(), diocese: rowDiocese.trim() });
           consecutiveFailures = 0;
 
           // We're on the profile page. Extract detail data while we're here.
