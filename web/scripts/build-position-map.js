@@ -292,6 +292,25 @@ function matchPosition(posName, diocese, fields, indexes, website) {
     }
   }
 
+  // Strategy 1b: Match non-generic email domain against church website URLs
+  // Catches cases where profile email is office@stjamesdexter.org and
+  // registry website is stjamesdexter.org (but registry email is different)
+  for (const email of emails) {
+    const domain = email.split('@')[1]?.toLowerCase();
+    if (!domain) continue;
+    if (isDiocesanOrGenericDomain(domain)) continue;
+
+    const match = indexes.websiteIndex.get(domain);
+    if (match && (!match.church.type || match.church.type === 'church')) {
+      return {
+        church_nid: match.nid,
+        confidence: 'high',
+        match_method: 'email_domain_website',
+        flagged: false,
+      };
+    }
+  }
+
   // Strategy 2: Name + diocese matching
   // For multi-point calls (multiple churches separated by newlines), try each name
   const namesToTry = posName ? posName.split(/\n/).map(n => n.trim()).filter(Boolean) : [];
