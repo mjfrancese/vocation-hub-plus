@@ -129,7 +129,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 1587,
+      "name": "Trinity Episcopal Church",
+      "street": "220 Prospect St",
+      "city": "Torrington",
+      "state": "CT",
+      "zip": "06790-5314",
+      "phone": "860-482-6027",
+      "email": "admin@trinity-torrington.org",
+      "website": "https://www.trinity-torrington.org",
+      "type": "church",
+      "lat": 41.80177,
+      "lng": -73.12288
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Episcopal Church (Torrington)",
+      "years": {
+        "2015": {
+          "averageAttendance": 90,
+          "plateAndPledge": 225138,
+          "membership": 339
+        },
+        "2016": {
+          "averageAttendance": 85,
+          "plateAndPledge": 231105,
+          "membership": 323
+        },
+        "2017": {
+          "averageAttendance": 74,
+          "plateAndPledge": 202018,
+          "membership": 323
+        },
+        "2018": {
+          "averageAttendance": 74,
+          "plateAndPledge": 182373,
+          "membership": 320
+        },
+        "2019": {
+          "averageAttendance": 66,
+          "plateAndPledge": 196275,
+          "membership": 316
+        },
+        "2020": {
+          "averageAttendance": 63,
+          "plateAndPledge": 185486,
+          "membership": 120
+        },
+        "2021": {
+          "averageAttendance": 31,
+          "plateAndPledge": 172604,
+          "membership": 118
+        },
+        "2022": {
+          "averageAttendance": 41,
+          "plateAndPledge": 168092,
+          "membership": 127
+        },
+        "2023": {
+          "averageAttendance": 47,
+          "plateAndPledge": 169549,
+          "membership": 134
+        },
+        "2024": {
+          "averageAttendance": 49,
+          "plateAndPledge": 174138,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "a01db93f5280e9242603b8daccffd3124b2c0babe022cb2b4bf8eb70af46602f",
@@ -504,7 +574,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 6752,
+      "name": "St. Peter's Church Smyrna",
+      "street": "22 N Union St",
+      "city": "Smyrna",
+      "state": "DE",
+      "zip": "19977",
+      "phone": "302-653-9691",
+      "email": "stpeters.smyrna@verizon.net",
+      "website": "http://www.stpeters-smyrna.org",
+      "type": "church",
+      "lat": 39.29911,
+      "lng": -75.60974
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Peters Church Smyrna (Smyrna)",
+      "years": {
+        "2015": {
+          "averageAttendance": 62,
+          "plateAndPledge": 114386,
+          "membership": 88
+        },
+        "2016": {
+          "averageAttendance": 66,
+          "plateAndPledge": 124837,
+          "membership": 85
+        },
+        "2017": {
+          "averageAttendance": 72,
+          "plateAndPledge": 123248,
+          "membership": 96
+        },
+        "2018": {
+          "averageAttendance": 77,
+          "plateAndPledge": 129595,
+          "membership": 106
+        },
+        "2019": {
+          "averageAttendance": 78,
+          "plateAndPledge": 147878,
+          "membership": 116
+        },
+        "2020": {
+          "averageAttendance": 77,
+          "plateAndPledge": 156052,
+          "membership": 105
+        },
+        "2021": {
+          "averageAttendance": 40,
+          "plateAndPledge": 161236,
+          "membership": 108
+        },
+        "2022": {
+          "averageAttendance": 51,
+          "plateAndPledge": 148303,
+          "membership": 78
+        },
+        "2023": {
+          "averageAttendance": 55,
+          "plateAndPledge": 158450,
+          "membership": 77
+        },
+        "2024": {
+          "averageAttendance": 57,
+          "plateAndPledge": 179293,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
@@ -1706,7 +1846,22 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 6784,
+      "name": "St. John the Evangelist Episcopal Church",
+      "street": "316 North El Dorado St",
+      "city": "Stockton",
+      "state": "CA",
+      "zip": "95202",
+      "phone": "(209) 466-6916",
+      "email": "",
+      "website": "http://www.stjohnsstockton.org",
+      "type": "church",
+      "lat": 37.95631,
+      "lng": -121.29043
+    },
+    "match_confidence": "high"
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",

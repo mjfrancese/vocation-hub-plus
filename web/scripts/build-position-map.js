@@ -67,9 +67,15 @@ const COMMON_TOKENS = new Set([
 
 // --- Build indexes from registry ---
 
+function normUrl(u) {
+  if (!u) return '';
+  return u.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '').toLowerCase();
+}
+
 function buildRegistryIndexes(registry) {
   const emailIndex = new Map();   // domain -> [{ nid, church }]
   const dioceseIndex = new Map(); // normDiocese -> [{ nid, church }]
+  const websiteIndex = new Map(); // normUrl -> { nid, church }
 
   for (const [nid, church] of Object.entries(registry)) {
     // Email index
@@ -89,9 +95,15 @@ function buildRegistryIndexes(registry) {
       list.push({ nid: parseInt(nid), church });
       dioceseIndex.set(key, list);
     }
+
+    // Website index
+    const w = normUrl(church.website);
+    if (w) {
+      websiteIndex.set(w, { nid: parseInt(nid), church });
+    }
   }
 
-  return { emailIndex, dioceseIndex };
+  return { emailIndex, dioceseIndex, websiteIndex };
 }
 
 // --- Diocesan/generic domain detection ---
@@ -139,8 +151,107 @@ function extractCity(name) {
 
 // --- Matching ---
 
-function matchPosition(posName, diocese, fields, indexes) {
+function matchByNameDiocese(posName, diocese, indexes) {
+  if (!posName || !diocese) return null;
+
+  const posNorm = normalizeChurchName(posName);
+  const dioceseKey = normalizeDiocese(diocese);
+  const allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
+  const candidates = allCandidates.filter(c => !c.church.type || c.church.type === 'church');
+
+  // Exact normalized match
+  const exactMatches = candidates.filter(c => normalizeChurchName(c.church.name) === posNorm);
+  if (exactMatches.length === 1) {
+    return {
+      church_nid: exactMatches[0].nid,
+      confidence: 'exact',
+      match_method: 'name_exact',
+      flagged: false,
+    };
+  }
+
+  // Multiple exact name matches: try city disambiguation
+  if (exactMatches.length > 1) {
+    const posCity = extractCity(posName).toLowerCase();
+    if (posCity) {
+      const cityMatched = exactMatches.filter(c => c.church.city.toLowerCase() === posCity);
+      if (cityMatched.length === 1) {
+        return {
+          church_nid: cityMatched[0].nid,
+          confidence: 'exact',
+          match_method: 'name_exact_city',
+          flagged: false,
+        };
+      }
+    }
+  }
+
+  // High-confidence token match (>= 90% overlap + distinguishing token)
+  if (posNorm && posNorm.length >= 3) {
+    const posTokens = posNorm.split(/\s+/).filter(t => t.length > 1);
+    if (posTokens.length > 0) {
+      const hasDistinguishing = posTokens.some(t => !COMMON_TOKENS.has(t) && t.length > 2);
+
+      if (hasDistinguishing) {
+        let best = null;
+        let bestScore = 0;
+
+        for (const c of candidates) {
+          const churchNorm = normalizeChurchName(c.church.name);
+          const churchTokens = churchNorm.split(/\s+/).filter(t => t.length > 1);
+          if (churchTokens.length === 0) continue;
+
+          let matchCount = 0;
+          for (const token of posTokens) {
+            if (churchTokens.some(ct => ct === token)) matchCount++;
+          }
+
+          const score = matchCount / Math.max(posTokens.length, churchTokens.length);
+          if (score > bestScore && score >= 0.9) {
+            bestScore = score;
+            best = c;
+          }
+        }
+
+        if (best) {
+          const posCity = extractCity(posName).toLowerCase();
+          const churchCity = best.church.city.toLowerCase();
+          const cityConflict = posCity && churchCity && posCity !== churchCity;
+
+          if (!cityConflict) {
+            return {
+              church_nid: best.nid,
+              confidence: 'high',
+              match_method: 'name_high_confidence',
+              flagged: false,
+            };
+          }
+        }
+      }
+    }
+  }
+
+  return null;
+}
+
+function matchPosition(posName, diocese, fields, indexes, website) {
   const emails = extractEmails(fields);
+
+  // Strategy 0: Website match (most reliable when available)
+  if (website) {
+    const w = normUrl(website);
+    if (w) {
+      const match = indexes.websiteIndex.get(w);
+      if (match && (!match.church.type || match.church.type === 'church')) {
+        return {
+          church_nid: match.nid,
+          confidence: 'exact',
+          match_method: 'website',
+          flagged: false,
+        };
+      }
+    }
+  }
 
   // Strategy 1: Unique email domain match
   for (const email of emails) {
@@ -181,83 +292,46 @@ function matchPosition(posName, diocese, fields, indexes) {
     }
   }
 
-  // Strategy 2: Exact name + diocese match
+  // Strategy 2: Name + diocese matching
+  // For multi-point calls (multiple churches separated by newlines), try each name
+  const namesToTry = posName ? posName.split(/\n/).map(n => n.trim()).filter(Boolean) : [];
+  if (posName && !namesToTry.length) namesToTry.push(posName);
+
+  for (const nameCandidate of namesToTry) {
+    const result = matchByNameDiocese(nameCandidate, diocese, indexes);
+    if (result) return result;
+  }
+
+  // Strategy 2b: If position has a city hint, try matching name + city against all diocese candidates
+  // This catches cases like "St Peters (Smyrna)" where normalization strips the city
+  // but the registry name includes it: "St. Peter's Church Smyrna"
   if (posName && diocese) {
-    const posNorm = normalizeChurchName(posName);
-    const dioceseKey = normalizeDiocese(diocese);
-    // Prefer actual churches over diocesan offices, camps, and schools
-    const allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
-    const candidates = allCandidates.filter(c => !c.church.type || c.church.type === 'church');
+    const posCity = extractCity(posName).toLowerCase();
+    if (posCity) {
+      const dioceseKey = normalizeDiocese(diocese);
+      const allCandidates = indexes.dioceseIndex.get(dioceseKey) || [];
+      const candidates = allCandidates.filter(c => !c.church.type || c.church.type === 'church');
 
-    // Exact normalized match
-    const exactMatches = candidates.filter(c => normalizeChurchName(c.church.name) === posNorm);
-    if (exactMatches.length === 1) {
-      return {
-        church_nid: exactMatches[0].nid,
-        confidence: 'exact',
-        match_method: 'name_exact',
-        flagged: false,
-      };
-    }
+      // Find candidates whose city matches and whose name tokens overlap well
+      const posNorm = normalizeChurchName(posName);
+      const posTokens = posNorm.split(/\s+/).filter(t => t.length > 1);
+      const cityMatches = candidates.filter(c => c.church.city.toLowerCase() === posCity);
 
-    // Multiple exact name matches: try city disambiguation
-    if (exactMatches.length > 1) {
-      const posCity = extractCity(posName).toLowerCase();
-      if (posCity) {
-        const cityMatched = exactMatches.filter(c => c.church.city.toLowerCase() === posCity);
-        if (cityMatched.length === 1) {
+      if (cityMatches.length > 0 && posTokens.length > 0) {
+        // Among city matches, find ones where all position tokens appear in the church name
+        const nameAndCity = cityMatches.filter(c => {
+          const churchNorm = normalizeChurchName(c.church.name);
+          const churchTokens = churchNorm.split(/\s+/).filter(t => t.length > 1);
+          return posTokens.every(t => churchTokens.includes(t));
+        });
+
+        if (nameAndCity.length === 1) {
           return {
-            church_nid: cityMatched[0].nid,
-            confidence: 'exact',
-            match_method: 'name_exact_city',
+            church_nid: nameAndCity[0].nid,
+            confidence: 'high',
+            match_method: 'name_city_combined',
             flagged: false,
           };
-        }
-      }
-    }
-
-    // Strategy 3: High-confidence token match (>= 90% overlap + distinguishing token)
-    if (posNorm && posNorm.length >= 3) {
-      const posTokens = posNorm.split(/\s+/).filter(t => t.length > 1);
-      if (posTokens.length > 0) {
-        const hasDistinguishing = posTokens.some(t => !COMMON_TOKENS.has(t) && t.length > 2);
-
-        if (hasDistinguishing) {
-          let best = null;
-          let bestScore = 0;
-
-          for (const c of candidates) {
-            const churchNorm = normalizeChurchName(c.church.name);
-            const churchTokens = churchNorm.split(/\s+/).filter(t => t.length > 1);
-            if (churchTokens.length === 0) continue;
-
-            let matchCount = 0;
-            for (const token of posTokens) {
-              if (churchTokens.some(ct => ct === token)) matchCount++;
-            }
-
-            const score = matchCount / Math.max(posTokens.length, churchTokens.length);
-            if (score > bestScore && score >= 0.9) {
-              bestScore = score;
-              best = c;
-            }
-          }
-
-          if (best) {
-            // Verify with city if available
-            const posCity = extractCity(posName).toLowerCase();
-            const churchCity = best.church.city.toLowerCase();
-            const cityConflict = posCity && churchCity && posCity !== churchCity;
-
-            if (!cityConflict) {
-              return {
-                church_nid: best.nid,
-                confidence: 'high',
-                match_method: 'name_high_confidence',
-                flagged: false,
-              };
-            }
-          }
         }
       }
     }
@@ -290,7 +364,7 @@ function main() {
   const stats = { exact: 0, high: 0, manual: 0, flagged: 0, total: 0 };
 
   // Collect all unique VH IDs from both sources
-  const allEntries = new Map(); // vh_id -> { name, diocese, fields }
+  const allEntries = new Map(); // vh_id -> { name, diocese, fields, website }
 
   // From positions (search results)
   for (const pos of positions) {
@@ -301,6 +375,7 @@ function main() {
       name: pos.name || '',
       diocese: pos.diocese || '',
       fields: fields || [],
+      website: '',
       source: 'search',
     });
   }
@@ -312,6 +387,7 @@ function main() {
         // Merge profile data into existing entry
         const existing = allEntries.get(profile.vh_id);
         if (!existing.name && profile.congregation) existing.name = profile.congregation;
+        if (!existing.website && profile.website) existing.website = profile.website;
         if (profile.all_fields && profile.all_fields.length > (existing.fields?.length || 0)) {
           existing.fields = profile.all_fields;
         }
@@ -320,6 +396,7 @@ function main() {
           name: profile.congregation || '',
           diocese: profile.diocese || '',
           fields: profile.all_fields || [],
+          website: profile.website || '',
           source: 'profile',
         });
       }
@@ -346,7 +423,7 @@ function main() {
     }
 
     // Auto-match
-    const result = matchPosition(entry.name, entry.diocese, entry.fields, indexes);
+    const result = matchPosition(entry.name, entry.diocese, entry.fields, indexes, entry.website);
     mappings[String(vhId)] = result;
 
     if (result.confidence === 'exact') stats.exact++;
