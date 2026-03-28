@@ -3,6 +3,8 @@
 import { useMemo, useState, useCallback, useEffect } from 'react';
 import { getStatusStyle, getStatusShortLabel, isActiveStatus } from '@/lib/status-helpers';
 
+// --- Interfaces ---
+
 interface Profile {
   vh_id: number;
   profile_url: string;
@@ -45,18 +47,131 @@ interface MapData {
   mappings: Record<string, Mapping>;
 }
 
+interface GapReport {
+  generated_at: string;
+  summary: { missing_vh_id: number; missing_church_match: number; total: number };
+  gaps: Array<{
+    type: string;
+    source: string;
+    id?: string;
+    vh_id?: number;
+    name: string;
+    diocese: string;
+    state?: string;
+    receiving_from?: string;
+    note: string;
+  }>;
+}
+
+interface MetaData {
+  lastUpdated: string;
+  totalPositions: number;
+  activeCount: number;
+  expiredCount: number;
+  newCount: number;
+  discoveryStatus?: { pending: number; failed: number; resolved: number };
+  lastScrape: {
+    scraped_at: string;
+    total_found: number;
+    duration_ms: number;
+    status: string;
+  } | null;
+}
+
 import profilesData from '../../../public/data/all-profiles.json';
 import registryData from '../../../public/data/church-registry.json';
 import mapData from '../../../public/data/position-church-map.json';
+import metaData from '../../../public/data/meta.json';
 
+let gapReportData: GapReport | null = null;
+try {
+  gapReportData = require('../../../public/data/needs-backfill.json');
+} catch { /* may not exist yet */ }
+
+// --- Auth Gate ---
+
+const AUTH_KEY = 'vhp-admin-auth';
 const STORAGE_KEY = 'vhp-manual-mappings';
+// Simple hash check -- not meant to be cryptographically secure,
+// just enough to keep casual visitors out of a static site admin panel.
+function checkPassword(input: string): boolean {
+  let hash = 0;
+  for (let i = 0; i < input.length; i++) {
+    hash = ((hash << 5) - hash + input.charCodeAt(i)) | 0;
+  }
+  return hash === -1077942682;
+}
+
+function PasswordGate({ onAuth }: { onAuth: () => void }) {
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(false);
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (checkPassword(password)) {
+      sessionStorage.setItem(AUTH_KEY, 'true');
+      onAuth();
+    } else {
+      setError(true);
+      setPassword('');
+    }
+  }
+
+  return (
+    <div className="flex items-center justify-center min-h-[60vh]">
+      <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-lg p-8 w-full max-w-sm shadow-sm">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Admin Access</h2>
+        <p className="text-sm text-gray-500 mb-4">Enter the admin password to continue.</p>
+        <input
+          type="password"
+          value={password}
+          onChange={e => { setPassword(e.target.value); setError(false); }}
+          placeholder="Password"
+          className={`w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 ${
+            error ? 'border-red-300 bg-red-50' : 'border-gray-300'
+          }`}
+          autoFocus
+        />
+        {error && <p className="text-xs text-red-600 mt-1">Incorrect password</p>}
+        <button
+          type="submit"
+          className="w-full mt-3 px-4 py-2 text-sm bg-primary-600 text-white rounded-md hover:bg-primary-700"
+        >
+          Sign In
+        </button>
+      </form>
+    </div>
+  );
+}
+
+// --- Main Admin Page ---
 
 type ReviewAction = { church_nid: number; church_name: string } | 'non-church' | 'skip';
 
 export default function AdminPage() {
+  const [authed, setAuthed] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem(AUTH_KEY) === 'true') {
+      setAuthed(true);
+    }
+  }, []);
+
+  if (!authed) {
+    return <PasswordGate onAuth={() => setAuthed(true)} />;
+  }
+
+  return <AdminDashboard />;
+}
+
+function AdminDashboard() {
   const profiles = profilesData as unknown as Profile[];
   const registry = registryData as unknown as RegistryData;
   const positionMap = mapData as unknown as MapData;
+  const meta = metaData as unknown as MetaData;
+  const gapReport = gapReportData;
+
+  const [activeTab, setActiveTab] = useState<'overview' | 'review'>('overview');
 
   // Local overrides stored in localStorage
   const [overrides, setOverrides] = useState<Record<string, ReviewAction>>({});
@@ -83,7 +198,6 @@ export default function AdminPage() {
       if (!profile) continue;
       items.push({ vhId, profile, mapping });
     }
-    // Sort: active statuses first, then by diocese
     items.sort((a, b) => {
       const aActive = isActiveStatus(a.profile.status) ? 0 : 1;
       const bActive = isActiveStatus(b.profile.status) ? 0 : 1;
@@ -93,11 +207,282 @@ export default function AdminPage() {
     return items;
   }, [profiles, positionMap]);
 
-  // Filter state
+  const reviewedCount = Object.keys(overrides).length;
+  const assignedCount = Object.values(overrides).filter(v => typeof v === 'object').length;
+  const totalMapped = Object.keys(positionMap.mappings).length - flaggedItems.length;
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900">Admin Dashboard</h1>
+          <p className="text-sm text-gray-500">Data quality monitoring and manual interventions</p>
+        </div>
+        <button
+          onClick={() => { sessionStorage.removeItem(AUTH_KEY); window.location.reload(); }}
+          className="px-3 py-1.5 text-xs text-gray-500 border border-gray-300 rounded-md hover:bg-gray-50"
+        >
+          Sign Out
+        </button>
+      </div>
+
+      {/* Tab navigation */}
+      <div className="border-b border-gray-200">
+        <nav className="flex gap-6">
+          {(['overview', 'review'] as const).map(tab => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`py-2 text-sm font-medium border-b-2 transition-colors ${
+                activeTab === tab
+                  ? 'border-primary-600 text-primary-700'
+                  : 'border-transparent text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              {tab === 'overview' ? 'System Overview' : `Position Review (${flaggedItems.length})`}
+            </button>
+          ))}
+        </nav>
+      </div>
+
+      {activeTab === 'overview' ? (
+        <OverviewTab meta={meta} gapReport={gapReport} positionMap={positionMap} totalMapped={totalMapped} assignedCount={assignedCount} />
+      ) : (
+        <ReviewTab
+          flaggedItems={flaggedItems}
+          overrides={overrides}
+          saveOverrides={saveOverrides}
+          registry={registry}
+          positionMap={positionMap}
+          totalMapped={totalMapped}
+          reviewedCount={reviewedCount}
+          assignedCount={assignedCount}
+        />
+      )}
+    </div>
+  );
+}
+
+// --- Overview Tab ---
+
+function OverviewTab({
+  meta,
+  gapReport,
+  positionMap,
+  totalMapped,
+  assignedCount,
+}: {
+  meta: MetaData;
+  gapReport: GapReport | null;
+  positionMap: MapData;
+  totalMapped: number;
+  assignedCount: number;
+}) {
+  const discovery = meta.discoveryStatus;
+  const missingVhIds = gapReport?.gaps.filter(g => g.type === 'missing_vh_id') || [];
+  const missingChurch = gapReport?.gaps.filter(g => g.type === 'missing_church_match') || [];
+
+  return (
+    <div className="space-y-6">
+      {/* Alert: Positions needing manual intervention */}
+      {missingVhIds.length > 0 && (
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+          <div className="flex items-start gap-3">
+            <svg className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+            <div className="flex-1">
+              <h3 className="text-sm font-semibold text-amber-800">
+                {missingVhIds.length} position{missingVhIds.length !== 1 ? 's' : ''} missing VH ID
+              </h3>
+              <p className="text-sm text-amber-700 mt-1">
+                These positions were found in VH search results but the scraper could not retrieve their profile pages.
+                They have no detail data, no VH link, and no church match. The backfill system will retry automatically,
+                or you can manually add the VH ID.
+              </p>
+              <div className="mt-3 space-y-2">
+                {missingVhIds.map((gap, i) => (
+                  <div key={i} className="flex items-center gap-3 text-sm">
+                    <span className="font-medium text-amber-900">{gap.name}</span>
+                    <span className="text-amber-600">{gap.diocese}</span>
+                    {gap.receiving_from && (
+                      <span className="text-amber-500 text-xs">Receiving: {gap.receiving_from}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-amber-600 mt-3">
+                To fix manually: search for the position on{' '}
+                <a href="https://vocationhub.episcopalchurch.org/PositionSearch" target="_blank" rel="noopener noreferrer" className="underline">
+                  Vocation Hub
+                </a>
+                , click it, copy the VH ID from the URL, and add it to <code className="bg-amber-100 px-1 rounded">manual-vh-ids.json</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Discovery Stats */}
+      <div>
+        <h2 className="text-lg font-semibold text-gray-900 mb-3">Discovery & Backfill Status</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <StatCard
+            label="Pending Backfill"
+            value={discovery?.pending ?? missingVhIds.length}
+            color={discovery?.pending || missingVhIds.length > 0 ? 'text-amber-700' : 'text-gray-900'}
+            subtitle="Waiting for retry"
+          />
+          <StatCard
+            label="Permanently Failed"
+            value={discovery?.failed ?? 0}
+            color={discovery?.failed ? 'text-red-700' : 'text-gray-900'}
+            subtitle="5+ attempts, needs manual fix"
+          />
+          <StatCard
+            label="Resolved by Backfill"
+            value={discovery?.resolved ?? 0}
+            color="text-green-700"
+            subtitle="Auto-recovered"
+          />
+          <StatCard
+            label="Missing Church Match"
+            value={missingChurch.length}
+            color={missingChurch.length > 10 ? 'text-amber-700' : 'text-gray-900'}
+            subtitle="Has VH ID but no directory data"
+          />
+        </div>
+      </div>
+
+      {/* Last Scrape Info */}
+      <div>
+        <h2 className="text-lg font-semibold text-gray-900 mb-3">Last Scrape</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <StatCard
+            label="Status"
+            value={meta.lastScrape?.status === 'success' ? 'OK' : (meta.lastScrape?.status || 'N/A')}
+            color={meta.lastScrape?.status === 'success' ? 'text-green-700' : 'text-red-700'}
+            isText
+          />
+          <StatCard
+            label="Positions Found"
+            value={meta.lastScrape?.total_found ?? 0}
+          />
+          <StatCard
+            label="Duration"
+            value={meta.lastScrape ? `${(meta.lastScrape.duration_ms / 1000).toFixed(0)}s` : 'N/A'}
+            isText
+          />
+          <StatCard
+            label="Last Updated"
+            value={meta.lastUpdated ? new Date(meta.lastUpdated).toLocaleDateString() : 'N/A'}
+            isText
+          />
+        </div>
+      </div>
+
+      {/* Church Matching Coverage */}
+      <div>
+        <h2 className="text-lg font-semibold text-gray-900 mb-3">Church Matching Coverage</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <StatCard label="Total Positions" value={Object.keys(positionMap.mappings).length} />
+          <StatCard label="Auto-matched" value={totalMapped} color="text-green-700" />
+          <StatCard label="Manually Assigned" value={assignedCount} color="text-blue-700" />
+          <StatCard label="Flagged / Unmatched" value={positionMap.meta.totalFlagged} color="text-amber-700" />
+        </div>
+        <div className="mt-3 bg-gray-100 rounded-full h-3 overflow-hidden">
+          <div
+            className="bg-green-500 h-full transition-all"
+            style={{ width: `${((totalMapped + assignedCount) / Math.max(Object.keys(positionMap.mappings).length, 1) * 100).toFixed(1)}%` }}
+          />
+        </div>
+        <p className="text-xs text-gray-500 mt-1">
+          {((totalMapped + assignedCount) / Math.max(Object.keys(positionMap.mappings).length, 1) * 100).toFixed(1)}% coverage
+          ({totalMapped} auto + {assignedCount} manual of {Object.keys(positionMap.mappings).length})
+        </p>
+      </div>
+
+      {/* Gap Report Details */}
+      {gapReport && missingChurch.length > 0 && (
+        <div>
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">
+            Active Positions Missing Church Data ({missingChurch.length})
+          </h2>
+          <p className="text-sm text-gray-500 mb-3">
+            These positions have a VH ID but could not be matched to a church in the directory.
+            They lack address, parochial report, and contact information.
+          </p>
+          <div className="border border-gray-200 rounded-lg overflow-hidden">
+            <table className="min-w-full divide-y divide-gray-200 text-sm">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">VH ID</th>
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Diocese</th>
+                  <th className="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Source</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {missingChurch.slice(0, 50).map((gap, i) => (
+                  <tr key={i} className="hover:bg-gray-50">
+                    <td className="px-3 py-2 text-gray-600">
+                      {gap.vh_id ? (
+                        <a
+                          href={`https://vocationhub.episcopalchurch.org/PositionView/${gap.vh_id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary-600 hover:underline"
+                        >
+                          {gap.vh_id}
+                        </a>
+                      ) : 'N/A'}
+                    </td>
+                    <td className="px-3 py-2 font-medium text-gray-900">{gap.name}</td>
+                    <td className="px-3 py-2 text-gray-600">{gap.diocese}</td>
+                    <td className="px-3 py-2 text-gray-500 text-xs">{gap.source}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {missingChurch.length > 50 && (
+              <div className="px-3 py-2 bg-gray-50 text-xs text-gray-500 text-center">
+                Showing 50 of {missingChurch.length}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// --- Review Tab (existing position review) ---
+
+function ReviewTab({
+  flaggedItems,
+  overrides,
+  saveOverrides,
+  registry,
+  positionMap,
+  totalMapped,
+  reviewedCount,
+  assignedCount,
+}: {
+  flaggedItems: Array<{ vhId: string; profile: Profile; mapping: Mapping }>;
+  overrides: Record<string, ReviewAction>;
+  saveOverrides: (next: Record<string, ReviewAction>) => void;
+  registry: RegistryData;
+  positionMap: MapData;
+  totalMapped: number;
+  reviewedCount: number;
+  assignedCount: number;
+}) {
   const [filter, setFilter] = useState<'all' | 'pending' | 'reviewed' | 'has-name'>('all');
   const [dioceseFilter, setDioceseFilter] = useState('');
   const [searchChurch, setSearchChurch] = useState('');
   const [assigningId, setAssigningId] = useState<string | null>(null);
+
+  const nonChurchCount = Object.values(overrides).filter(v => v === 'non-church').length;
 
   const dioceses = useMemo(() => {
     const d = new Set<string>();
@@ -114,7 +499,6 @@ export default function AdminPage() {
     return items;
   }, [flaggedItems, filter, overrides, dioceseFilter]);
 
-  // Church search for assignment
   const churchResults = useMemo(() => {
     if (!searchChurch || searchChurch.length < 2) return [];
     const lower = searchChurch.toLowerCase();
@@ -136,14 +520,12 @@ export default function AdminPage() {
   }
 
   function markNonChurch(vhId: string) {
-    const next = { ...overrides, [vhId]: 'non-church' as const };
-    saveOverrides(next);
+    saveOverrides({ ...overrides, [vhId]: 'non-church' as const });
     setAssigningId(null);
   }
 
   function markSkip(vhId: string) {
-    const next = { ...overrides, [vhId]: 'skip' as const };
-    saveOverrides(next);
+    saveOverrides({ ...overrides, [vhId]: 'skip' as const });
     setAssigningId(null);
   }
 
@@ -172,21 +554,8 @@ export default function AdminPage() {
     URL.revokeObjectURL(url);
   }
 
-  // Stats
-  const totalMapped = Object.keys(positionMap.mappings).length - flaggedItems.length;
-  const reviewedCount = Object.keys(overrides).length;
-  const assignedCount = Object.values(overrides).filter(v => typeof v === 'object').length;
-  const nonChurchCount = Object.values(overrides).filter(v => v === 'non-church').length;
-
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold text-gray-900">Admin: Position Review</h1>
-        <p className="text-sm text-gray-500">
-          Review flagged positions that could not be automatically matched to a church
-        </p>
-      </div>
-
       {/* Stats cards */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
         <StatCard label="Total Positions" value={Object.keys(positionMap.mappings).length} />
@@ -195,18 +564,6 @@ export default function AdminPage() {
         <StatCard label="Reviewed" value={reviewedCount} color="text-blue-700" />
         <StatCard label="Assigned" value={assignedCount} color="text-green-700" />
       </div>
-
-      {/* Coverage bar */}
-      <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
-        <div
-          className="bg-green-500 h-full transition-all"
-          style={{ width: `${((totalMapped + assignedCount) / Object.keys(positionMap.mappings).length * 100).toFixed(1)}%` }}
-        />
-      </div>
-      <p className="text-xs text-gray-500 -mt-4">
-        {((totalMapped + assignedCount) / Object.keys(positionMap.mappings).length * 100).toFixed(1)}% coverage
-        ({totalMapped} auto + {assignedCount} manual of {Object.keys(positionMap.mappings).length})
-      </p>
 
       {/* Filters + Export */}
       <div className="flex flex-wrap gap-3 items-end">
@@ -391,11 +748,20 @@ export default function AdminPage() {
   );
 }
 
-function StatCard({ label, value, color }: { label: string; value: number; color?: string }) {
+// --- Shared Components ---
+
+function StatCard({ label, value, color, subtitle, isText }: {
+  label: string;
+  value: number | string;
+  color?: string;
+  subtitle?: string;
+  isText?: boolean;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-3 text-center">
-      <p className={`text-2xl font-bold ${color || 'text-gray-900'}`}>{value}</p>
+      <p className={`${isText ? 'text-lg' : 'text-2xl'} font-bold ${color || 'text-gray-900'}`}>{value}</p>
       <p className="text-xs text-gray-500">{label}</p>
+      {subtitle && <p className="text-xs text-gray-400 mt-0.5">{subtitle}</p>}
     </div>
   );
 }

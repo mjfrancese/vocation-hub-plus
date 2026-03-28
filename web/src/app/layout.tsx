@@ -37,8 +37,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">{children}</main>
         <footer className="border-t border-gray-200 mt-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500">
-            <Link href="/admin/" className="text-gray-400 hover:text-gray-600 mr-3">Admin</Link>
-            {' | '}
             Vocation Hub+ is an unofficial tool. Data sourced from the{' '}
             <a
               href="https://vocationhub.episcopalchurch.org/PositionSearch"
