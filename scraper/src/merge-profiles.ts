@@ -87,7 +87,7 @@ function main() {
       vh_id: p.id,
       profile_url: p.url,
       diocese: getField(f, 'Diocese'),
-      congregation: getField(f, 'Congregation', 'Community Name', 'Name'),
+      congregation: getField(f, 'Congregation', 'Community Name', 'Congregation Name'),
       position_type: getField(f, 'Position Title/Role', 'Position Type'),
       status: getField(f, 'Current status'),
       order_of_ministry: getField(f, 'Order(s) of Ministry'),
