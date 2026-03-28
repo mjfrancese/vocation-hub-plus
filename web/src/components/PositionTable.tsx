@@ -27,6 +27,22 @@ export default function PositionTable({ positions }: PositionTableProps) {
   const sorted = [...positions].sort((a, b) => {
     const aVal = a[sortField] || '';
     const bVal = b[sortField] || '';
+    // Date fields: parse MM/DD/YYYY to compare chronologically
+    if (sortField === 'receiving_names_from' || sortField === 'updated_on_hub') {
+      const parseDate = (s: string) => {
+        // Handle range like "02/18/2026 to 03/31/2026" - use first date
+        const first = s.split(' to ')[0].trim();
+        const m = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+        if (m) return new Date(parseInt(m[3]), parseInt(m[1]) - 1, parseInt(m[2])).getTime();
+        // Try natural date parsing as fallback
+        const d = new Date(first);
+        return isNaN(d.getTime()) ? 0 : d.getTime();
+      };
+      const aTime = parseDate(aVal);
+      const bTime = parseDate(bVal);
+      const cmp = aTime - bTime;
+      return sortDir === 'asc' ? cmp : -cmp;
+    }
     const cmp = aVal.localeCompare(bVal);
     return sortDir === 'asc' ? cmp : -cmp;
   });

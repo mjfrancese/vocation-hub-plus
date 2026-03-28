@@ -264,6 +264,10 @@ function main() {
         else if (order.includes('bishop')) positionType = 'Bishop';
         else positionType = profile.order_of_ministry;
       }
+      // Multi-point calls (shared ministry) with no type - infer as part-time rector
+      if (!positionType && profile.congregation && profile.congregation.includes('\n')) {
+        positionType = 'Priest-in-Charge Shared Ministry';
+      }
 
       extended.push({
         vh_id: vhId,

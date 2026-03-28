@@ -177,7 +177,7 @@ function MultiSelect({
 
       {open && (
         <div className="absolute mt-14 z-50 bg-white border border-gray-200 rounded-md shadow-lg
-                        max-h-64 overflow-hidden flex flex-col w-full sm:min-w-[220px]">
+                        max-h-96 overflow-hidden flex flex-col w-full sm:min-w-[220px]">
           {options.length > 5 && (
             <div className="p-2 border-b border-gray-100">
               <input
@@ -191,7 +191,7 @@ function MultiSelect({
               />
             </div>
           )}
-          <div className="overflow-y-auto max-h-52">
+          <div className="overflow-y-auto max-h-80">
             {filtered.length === 0 && (
               <div className="px-3 py-2 text-sm text-gray-400">No matches</div>
             )}
