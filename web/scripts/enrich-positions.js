@@ -112,14 +112,49 @@ function main() {
   }
 
   // Enrich public positions (from search results)
+  let noVhIdCount = 0, badUrlCleared = 0;
   for (const pos of positions) {
-    const vhId = pos.vh_id;
+    let vhId = pos.vh_id;
     if (!pos.city) pos.city = extractCity(pos.name);
 
     // Fix bogus 1900 year in receiving dates
     if (pos.receiving_names_from) pos.receiving_names_from = fixBogusYear(pos.receiving_names_from);
     if (pos.receiving_names_to) pos.receiving_names_to = fixBogusYear(pos.receiving_names_to);
     if (pos.receiving_date) pos.receiving_date = fixBogusYear(pos.receiving_date);
+
+    // Extract vh_id from profile_url if missing, and validate the mapping
+    if (!vhId && pos.profile_url) {
+      const urlMatch = pos.profile_url.match(/PositionView\/(\d+)/);
+      if (urlMatch) {
+        const candidateId = parseInt(urlMatch[1], 10);
+        // Validate: check if this VH ID's profile matches this position's name/diocese
+        const profile = allProfiles ? allProfiles.find(p => p.vh_id === candidateId) : null;
+        if (profile) {
+          const posNorm = normalizeChurchName(pos.name);
+          const profNorm = normalizeChurchName(profile.congregation || '');
+          const posWords = posNorm.split(/\s+/).filter(w => w.length >= 3);
+          const profWords = profNorm.split(/\s+/).filter(w => w.length >= 3);
+          const genericWords = new Set(['church', 'episcopal', 'parish', 'chapel', 'cathedral', 'mission', 'memorial', 'diocese']);
+          const posKey = posWords.filter(w => !genericWords.has(w));
+          const profKey = profWords.filter(w => !genericWords.has(w));
+          if (posKey.length > 0 && profKey.length > 0 && posKey.some(w => profKey.includes(w))) {
+            vhId = candidateId;
+            pos.vh_id = candidateId;
+          } else {
+            // Mismatched profile_url - clear it to avoid sending users to wrong page
+            console.log(`  Cleared mismatched profile_url: ${pos.name} -> VH ${candidateId} (${profile.congregation || 'no name'})`);
+            pos.profile_url = null;
+            badUrlCleared++;
+          }
+        } else {
+          // Profile not found in all-profiles, but URL might still be valid
+          vhId = candidateId;
+          pos.vh_id = candidateId;
+        }
+      }
+    }
+
+    if (!vhId) noVhIdCount++;
 
     // Fix profile_url: always construct from vh_id to avoid scraper mapping bugs
     if (vhId) {
@@ -161,6 +196,8 @@ function main() {
   console.log(`Public positions: ${positions.length}`);
   console.log(`  Church matches: ${churchMatches}`);
   console.log(`  Parochial matches: ${parochialMatches}`);
+  if (noVhIdCount) console.log(`  No VH ID: ${noVhIdCount}`);
+  if (badUrlCleared) console.log(`  Bad profile URLs cleared: ${badUrlCleared}`);
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'enriched-positions.json'),

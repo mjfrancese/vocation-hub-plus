@@ -73,16 +73,29 @@ export function getPositions(): Position[] {
 
   const publicPositions = rawPositions.map(raw => {
     const pos = raw as unknown as Position;
-    const vhId = pos.vh_id;
+    // Extract vh_id from profile_url if missing
+    let vhId = pos.vh_id;
+    if (!vhId && pos.profile_url) {
+      const m = pos.profile_url.match(/PositionView\/(\d+)/);
+      if (m) vhId = parseInt(m[1], 10);
+    }
     // Look up VH status from profile if not on position
     const profile = vhId ? allProfiles.find(p => p.vh_id === vhId) : undefined;
 
+    // Derive vh_status: use enriched value, then profile lookup, then map scraper status
+    let vhStatus = pos.vh_status || profile?.status || '';
+    if (!vhStatus && pos.status === 'new') {
+      // Scraper status "new" means it appeared in VH search results recently
+      vhStatus = 'Receiving names';
+    }
+
     return {
       ...pos,
+      vh_id: vhId ?? pos.vh_id,
       city: pos.city || extractCity(pos.name),
       state: pos.state || (pos.church_info as Position['church_info'])?.state || getStateForDiocese(pos.diocese || ''),
       visibility: 'public' as const,
-      vh_status: pos.vh_status || profile?.status || '',
+      vh_status: vhStatus,
       deep_scrape_fields: pos.deep_scrape_fields || (vhId ? profileFields[String(vhId)] : undefined),
       is_new: computeIsNew(pos),
     };
