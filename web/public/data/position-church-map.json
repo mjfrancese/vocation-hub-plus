@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-03-28T03:29:25.858Z",
-    "totalMapped": 400,
-    "totalFlagged": 655,
+    "lastUpdated": "2026-03-28T06:58:02.269Z",
+    "totalMapped": 404,
+    "totalFlagged": 651,
     "totalPositions": 1055
   },
   "mappings": {
@@ -889,10 +889,10 @@
       "flagged": true
     },
     "8914": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
+      "church_nid": 1584,
+      "confidence": "exact",
+      "match_method": "name_exact_city",
+      "flagged": false
     },
     "8915": {
       "church_nid": null,
@@ -5539,16 +5539,16 @@
       "flagged": false
     },
     "10352": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
+      "church_nid": 8992,
+      "confidence": "exact",
+      "match_method": "name_exact",
+      "flagged": false
     },
     "10353": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
+      "church_nid": 5002,
+      "confidence": "exact",
+      "match_method": "name_exact_city",
+      "flagged": false
     },
     "10354": {
       "church_nid": 4924,
@@ -6027,8 +6027,8 @@
     },
     "10599": {
       "church_nid": 4102,
-      "confidence": "exact",
-      "match_method": "name_exact_city",
+      "confidence": "high",
+      "match_method": "name_high_confidence",
       "flagged": false
     },
     "10600": {
@@ -6218,10 +6218,10 @@
       "flagged": false
     },
     "10674": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
+      "church_nid": 4152,
+      "confidence": "exact",
+      "match_method": "name_exact_city",
+      "flagged": false
     },
     "10675": {
       "church_nid": 4066,

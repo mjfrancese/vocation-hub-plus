@@ -1,88 +1,5 @@
 [
   {
-    "vh_id": 10695,
-    "name": "St Matthias Episcopal Church",
-    "diocese": "Southern Virginia",
-    "state": "VA",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10695",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "St Matthias Episcopal Church",
-    "receiving_names_from": "03/27/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 5293,
-      "name": "St. Matthias' Episcopal Church",
-      "street": "11300 W Huguenot Rd",
-      "city": "Midlothian",
-      "state": "VA",
-      "zip": "23113-1121",
-      "phone": "804-464-1841",
-      "email": "st.matthias@stmatmidlo.com",
-      "website": "http://stmatmidlo.com/",
-      "type": "church",
-      "lat": 37.52558,
-      "lng": -77.60483
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Matthias Episcopal Church (Midlothian)",
-      "years": {
-        "2015": {
-          "averageAttendance": 216,
-          "plateAndPledge": 411559,
-          "membership": 729
-        },
-        "2016": {
-          "averageAttendance": 198,
-          "plateAndPledge": 396857,
-          "membership": 414
-        },
-        "2017": {
-          "averageAttendance": 198,
-          "plateAndPledge": 451606,
-          "membership": 425
-        },
-        "2018": {
-          "averageAttendance": 188,
-          "plateAndPledge": 525326,
-          "membership": 430
-        },
-        "2019": {
-          "averageAttendance": 176,
-          "plateAndPledge": 499005,
-          "membership": 433
-        },
-        "2020": {
-          "averageAttendance": 99,
-          "plateAndPledge": 488515,
-          "membership": 433
-        },
-        "2021": {
-          "averageAttendance": 66,
-          "plateAndPledge": 477106,
-          "membership": 435
-        },
-        "2022": {
-          "averageAttendance": 97,
-          "plateAndPledge": 467829,
-          "membership": 407
-        },
-        "2023": {
-          "averageAttendance": 135,
-          "plateAndPledge": 505883,
-          "membership": 410
-        },
-        "2024": {
-          "averageAttendance": 116,
-          "plateAndPledge": 513559,
-          "membership": null
-        }
-      }
-    }
-  },
-  {
     "vh_id": 10694,
     "name": "St Pauls Episcopal Church",
     "diocese": "Utah",
@@ -524,13 +441,13 @@
     }
   },
   {
-    "vh_id": 10683,
+    "vh_id": 10682,
     "name": "St Andrews Episcopal Church",
-    "diocese": "Milwaukee",
-    "state": "WI",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10683",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "diocese": "Wisconsin",
+    "state": "",
+    "vh_status": "Profile complete",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10682",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Andrews Episcopal Church",
     "receiving_names_from": "03/19/2026",
     "receiving_names_to": "Open ended",
@@ -659,19 +576,6 @@
     }
   },
   {
-    "vh_id": 10674,
-    "name": "St Johns Episcopal Church",
-    "diocese": "North Carolina",
-    "state": "NC",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10674",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "St Johns Episcopal Church",
-    "receiving_names_from": "03/17/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true
-  },
-  {
     "vh_id": 10664,
     "name": "Position in Northwestern Pennsylvania",
     "diocese": "Northwestern Pennsylvania",
@@ -683,89 +587,6 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true
-  },
-  {
-    "vh_id": 10658,
-    "name": "St Michaels Church Episcopal",
-    "diocese": "Connecticut",
-    "state": "CT",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10658",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "St Michaels Church Episcopal",
-    "receiving_names_from": "03/10/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 1507,
-      "name": "St. Michael's Church Episcopal",
-      "street": "25 South St",
-      "city": "Litchfield",
-      "state": "CT",
-      "zip": "06759-4005",
-      "phone": "(860) 567-9465",
-      "email": "office@stmichaels-litchfield.org",
-      "website": "https://stmichaels-litchfield.org/",
-      "type": "church",
-      "lat": 41.74624,
-      "lng": -73.18875
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Michaels Church Episcopal (Litchfield)",
-      "years": {
-        "2015": {
-          "averageAttendance": 78,
-          "plateAndPledge": 231911,
-          "membership": 415
-        },
-        "2016": {
-          "averageAttendance": 70,
-          "plateAndPledge": 253634,
-          "membership": 387
-        },
-        "2017": {
-          "averageAttendance": 66,
-          "plateAndPledge": 283654,
-          "membership": 382
-        },
-        "2018": {
-          "averageAttendance": 72,
-          "plateAndPledge": 292437,
-          "membership": 382
-        },
-        "2019": {
-          "averageAttendance": 71,
-          "plateAndPledge": 293667,
-          "membership": 44
-        },
-        "2020": {
-          "averageAttendance": 92,
-          "plateAndPledge": 286304,
-          "membership": 45
-        },
-        "2021": {
-          "averageAttendance": 82,
-          "plateAndPledge": 261530,
-          "membership": 45
-        },
-        "2022": {
-          "averageAttendance": 59,
-          "plateAndPledge": 291856,
-          "membership": 118
-        },
-        "2023": {
-          "averageAttendance": 71,
-          "plateAndPledge": 277727,
-          "membership": 165
-        },
-        "2024": {
-          "averageAttendance": 59,
-          "plateAndPledge": 221919,
-          "membership": null
-        }
-      }
-    }
   },
   {
     "vh_id": 10656,
@@ -1626,34 +1447,6 @@
     }
   },
   {
-    "vh_id": 10627,
-    "name": "Trinity Parish & Old Swedes Church",
-    "diocese": "Delaware",
-    "state": "DE",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10627",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "Trinity Parish & Old Swedes Church",
-    "receiving_names_from": "03/26/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 2678,
-      "name": "Trinity Episcopal Parish ",
-      "street": "1108 N Adams St",
-      "city": "Wilmington",
-      "state": "DE",
-      "zip": "19801-1327",
-      "phone": "302-652-8605",
-      "email": "office@trinityparishde.org",
-      "website": "http://www.trinityoldswedes.church",
-      "type": "church",
-      "lat": 39.75027,
-      "lng": -75.55485
-    },
-    "match_confidence": "exact"
-  },
-  {
     "vh_id": 10624,
     "name": "Christ Episcopal Church",
     "diocese": "Pittsburgh",
@@ -2095,12 +1888,12 @@
     }
   },
   {
-    "vh_id": 10598,
+    "vh_id": 10599,
     "name": "St Matthews Parish Church",
     "diocese": "North Carolina",
     "state": "NC",
     "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10598",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10599",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Matthews Parish Church",
     "receiving_names_from": "02/19/2026",
@@ -2120,7 +1913,7 @@
       "lat": 36.07613,
       "lng": -79.09551
     },
-    "match_confidence": "exact",
+    "match_confidence": "high",
     "parochial": {
       "congregationCity": "St Matthews Parish Church (Hillsborough)",
       "years": {
@@ -5597,47 +5390,6 @@
         }
       }
     }
-  },
-  {
-    "vh_id": 10353,
-    "name": "St Pauls Episcopal Church",
-    "diocese": "San Joaquin",
-    "state": "CA",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10353",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "St Pauls Episcopal Church",
-    "receiving_names_from": "02/28/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true
-  },
-  {
-    "vh_id": 10352,
-    "name": "Zion Episcopal Church",
-    "diocese": "Vermont",
-    "state": "VT",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10352",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "Zion Episcopal Church",
-    "receiving_names_from": "01/01/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 9474,
-      "name": "St. John's Chapel (Summer Chapel)",
-      "street": "3512 Main St, ",
-      "city": "Manchester",
-      "state": "VT",
-      "zip": "05254",
-      "phone": "",
-      "email": "",
-      "website": "https://www.zionchurchmanchester.org/",
-      "type": "church",
-      "lat": 43.16116,
-      "lng": -73.07173
-    },
-    "match_confidence": "high"
   },
   {
     "vh_id": 10351,
@@ -11138,19 +10890,6 @@
     "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "",
-    "receiving_names_to": "Open ended",
-    "open_ended": true
-  },
-  {
-    "vh_id": 10175,
-    "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "diocese": "South Dakota",
-    "state": "SD",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "receiving_names_from": "09/15/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true
   },
@@ -32356,89 +32095,6 @@
     "open_ended": true
   },
   {
-    "vh_id": 8950,
-    "name": "St James (Glastonbury)\nTrinity (Wethersfield)",
-    "diocese": "Connecticut",
-    "state": "CT",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8950",
-    "position_type": "Rector/Priest-in-Charge",
-    "congregation": "St James (Glastonbury)\nTrinity (Wethersfield)",
-    "receiving_names_from": "03/06/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 1488,
-      "name": "St. James' Episcopal Church",
-      "street": "2584 Main St",
-      "city": "Glastonbury",
-      "state": "CT",
-      "zip": "06033-4220",
-      "phone": "(860) 633-8333",
-      "email": "parishadmin@stjamesgl.org",
-      "website": "https://www.stjamesgl.org/",
-      "type": "church",
-      "lat": 41.71503,
-      "lng": -72.60966
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St James Episcopal Church (Glastonbury)",
-      "years": {
-        "2015": {
-          "averageAttendance": 101,
-          "plateAndPledge": 280656,
-          "membership": 452
-        },
-        "2016": {
-          "averageAttendance": 111,
-          "plateAndPledge": 270113,
-          "membership": 468
-        },
-        "2017": {
-          "averageAttendance": 101,
-          "plateAndPledge": 256589,
-          "membership": 348
-        },
-        "2018": {
-          "averageAttendance": 91,
-          "plateAndPledge": 268936,
-          "membership": 352
-        },
-        "2019": {
-          "averageAttendance": 90,
-          "plateAndPledge": 261202,
-          "membership": 310
-        },
-        "2020": {
-          "averageAttendance": 88,
-          "plateAndPledge": 244695,
-          "membership": 310
-        },
-        "2021": {
-          "averageAttendance": 48,
-          "plateAndPledge": 242902,
-          "membership": 279
-        },
-        "2022": {
-          "averageAttendance": 70,
-          "plateAndPledge": 249079,
-          "membership": 316
-        },
-        "2023": {
-          "averageAttendance": 63,
-          "plateAndPledge": 219239,
-          "membership": 319
-        },
-        "2024": {
-          "averageAttendance": 61,
-          "plateAndPledge": 216983,
-          "membership": null
-        }
-      }
-    }
-  },
-  {
     "vh_id": 8948,
     "name": "Position in California",
     "diocese": "California",
@@ -32661,19 +32317,6 @@
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/15/2025",
-    "receiving_names_to": "Open ended",
-    "open_ended": true
-  },
-  {
-    "vh_id": 8914,
-    "name": "Christ Episcopal Church",
-    "diocese": "Connecticut",
-    "state": "",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8914",
-    "position_type": "Rector/Priest-in-Charge",
-    "congregation": "Christ Episcopal Church",
-    "receiving_names_from": "11/28/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true
   },
@@ -34935,89 +34578,6 @@
         "2024": {
           "averageAttendance": 207,
           "plateAndPledge": 557512,
-          "membership": null
-        }
-      }
-    }
-  },
-  {
-    "vh_id": 8611,
-    "name": "St Pauls Episcopal Church",
-    "diocese": "Atlanta",
-    "state": "GA",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8611",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "St Pauls Episcopal Church",
-    "receiving_names_from": "03/01/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 6840,
-      "name": "St. Paul's Episcopal Church",
-      "street": "576 Roscoe Rd",
-      "city": "Newnan",
-      "state": "GA",
-      "zip": "30263",
-      "phone": "770-253-4264",
-      "email": "parishadmin@stpaulsnewnan.org",
-      "website": "http://www.stpaulsnewnan.org",
-      "type": "church",
-      "lat": 33.40872,
-      "lng": -84.811282
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Newnan)",
-      "years": {
-        "2015": {
-          "averageAttendance": 215,
-          "plateAndPledge": 561205,
-          "membership": 755
-        },
-        "2016": {
-          "averageAttendance": 186,
-          "plateAndPledge": 542267,
-          "membership": 700
-        },
-        "2017": {
-          "averageAttendance": 208,
-          "plateAndPledge": 559456,
-          "membership": 715
-        },
-        "2018": {
-          "averageAttendance": 175,
-          "plateAndPledge": 549729,
-          "membership": 732
-        },
-        "2019": {
-          "averageAttendance": 179,
-          "plateAndPledge": 609028,
-          "membership": 733
-        },
-        "2020": {
-          "averageAttendance": 166,
-          "plateAndPledge": 508209,
-          "membership": 731
-        },
-        "2021": {
-          "averageAttendance": 100,
-          "plateAndPledge": 545724,
-          "membership": 740
-        },
-        "2022": {
-          "averageAttendance": 124,
-          "plateAndPledge": 565865,
-          "membership": 739
-        },
-        "2023": {
-          "averageAttendance": 142,
-          "plateAndPledge": 617577,
-          "membership": 514
-        },
-        "2024": {
-          "averageAttendance": 149,
-          "plateAndPledge": 598137,
           "membership": null
         }
       }

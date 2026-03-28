@@ -1,56 +1,138 @@
 {
+  "8602": [
+    {
+      "label": "Congregation",
+      "value": "St Peters Episcopal Church"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "706-291-9111"
+    },
+    {
+      "label": "Order(s) of Ministry",
+      "value": "Priest"
+    },
+    {
+      "label": "Geographic Location",
+      "value": "Southeast"
+    },
+    {
+      "label": "Work Environment",
+      "value": "In Person"
+    },
+    {
+      "label": "Ministry Setting",
+      "value": "Mixed Setting"
+    },
+    {
+      "label": "Average Sunday Attendance",
+      "value": "163"
+    },
+    {
+      "label": "Annual Budget",
+      "value": "845256"
+    },
+    {
+      "label": "Range",
+      "value": "$50,001 - $75,000"
+    },
+    {
+      "label": "Range",
+      "value": "Compensation for the Associate Rector position is $64,500 (negotiable).   Total Compensation includes SECA, which is $4590."
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "No Housing or Stipend Provided"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "In compliance with CPF requirements"
+    },
+    {
+      "label": "Healthcare Options",
+      "value": "Full family"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "Dental: Yes"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Four weeks of vacation"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Two weeks of Continuing Education. Budget up to $2,000 per year."
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Sabbatical eligibility after five to eight years of ordained ministry"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "n/a"
+    },
+    {
+      "label": "Leadership skills (maximum of 5)",
+      "value": "Church Governance"
+    },
+    {
+      "label": "Ministry skills  (maximum of 10)",
+      "value": "Academic/Theology"
+    },
+    {
+      "label": "Languages spoken",
+      "value": "English, Spanish"
+    },
+    {
+      "label": "Languages written",
+      "value": "English"
+    },
+    {
+      "label": "Language(s) required to lead worship",
+      "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/23/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "stpetersrome.org",
+      "value": "https://vocationhub.episcopalchurch.org/"
+    },
+    {
+      "label": "https://www.facebook.com/profile.php?id=1000643428",
+      "value": "https://vocationhub.episcopalchurch.org/"
+    },
+    {
+      "label": "https://www.youtube.com/@StPetersRomeGA1844",
+      "value": "https://vocationhub.episcopalchurch.org/"
+    }
+  ],
   "8603": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Atlanta"
-    },
     {
       "label": "Congregation",
       "value": "Holy Innocents Episcopal Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Assistant/Associate/Curate"
-    },
-    {
-      "label": "",
-      "value": "The Curate will work closely with the Rector to lead, manage, and facilitate the parish's liturgical, pastoral, and spiritual life.  The Curate will oversee specific ministries as delegated by the Rector while assisting with preaching, services, staff management, and other duties as assigned."
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "To apply for the Curate position, contact The Rev. Dr. Bill Murray - bmurray@holyinnocents.org."
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "The Rev. Dr. Bill Murray"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Rector"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Holy Innocents', Sandy Springs"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "404-255-4023"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "bmurray@holyinnocents.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -151,6 +233,30 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/01/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Worshipping Community Website",
+      "value": "https://holyinnocents.org/"
+    },
+    {
+      "label": "Instagram",
+      "value": "https://instagram.com/hiecatl/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://facebook.com/hiecatlanta"
+    },
+    {
+      "label": "YouTube",
+      "value": "https://youtube.com/c/HIECatlanta"
     }
   ],
   "8606": [
@@ -305,60 +411,170 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "12/05/2025"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church Website",
+      "value": "https://stanthonyswinder.com/"
+    },
+    {
+      "label": "YouTube",
+      "value": "https://www.youtube.com/watch?v=GMwXQyNTlBs"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.facebook.com/stanthonyswinder"
+    }
+  ],
+  "8611": [
+    {
+      "label": "Congregation",
+      "value": "St Pauls Episcopal Church"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "404-444-6015"
+    },
+    {
+      "label": "Order(s) of Ministry",
+      "value": "Priest"
+    },
+    {
+      "label": "Geographic Location",
+      "value": "Southeast"
+    },
+    {
+      "label": "Work Environment",
+      "value": "In Person"
+    },
+    {
+      "label": "Ministry Setting",
+      "value": "Suburban"
+    },
+    {
+      "label": "Average Sunday Attendance",
+      "value": "157"
+    },
+    {
+      "label": "Annual Budget",
+      "value": "777557"
+    },
+    {
+      "label": "Range",
+      "value": "$50,001 - $75,000"
+    },
+    {
+      "label": "Range",
+      "value": "Compensation for the Associate Rector position is $69,972. Total compensation includes SECA, which is $4972."
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "No Housing or Stipend Provided"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "In compliance with CPF requirements"
+    },
+    {
+      "label": "Healthcare Options",
+      "value": "Clergy only"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "Dental insurance: Yes"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Four weeks of vacation"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Two weeks of Continuing Education. Budget: up to $1,000 per year"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Sabbatical eligibility after five to eight years of ordained ministry"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Related travel up to $1500"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Life Insurance"
+    },
+    {
+      "label": "What are your community's hopes for this position, and what qualities in applicants will help you live into them?",
+      "value": "Our search committee held multiple listening sessions with our parishioners. We received valuable input that we synthesized into four attributes we desire in our candidates for Associate\nRector:\n\nStrategic Catalyst for Dynamic Ministries\n* Discovers parishioners’ talents and gifts and inspires them to use their gifts to grow St. Paul’s and its\nimpact on each other and the community.\n* Is willing to experiment and learn by developing intergenerational and other creative programming.\n\nEngaging Relationship Developer\n* Passionately builds relationships with children, youth, and families, cultivating connection with our\ndiocese, the wider community, and the life of the church through shared ministries.\n* Values diversity and adapts to different settings and people with pastoral sensitivity.\n* Brings a healthy sense of humor to ministry.\n\nEffective Collaborative Leader\n* Seeks collaboration with parishioners and with other clergy and staff, fostering a culture of belonging.\n* Is intrinsically motivated and organized. Values accountability and quality communication.\n\nInspirational Spiritual Guide\n* Helps create and oversee compelling children and youth formation by balancing biblical knowledge and spiritual growth programming with engaging activities at church and in the community.\n* Impacts parishioners through sermons, reflections, spiritual practices, discussions and activities."
+    },
+    {
+      "label": "Leadership skills (maximum of 5)",
+      "value": "Appreciative Inquiry, Collaborative Leadership, Congregational Development, Strategic Planning, Quality Communication"
+    },
+    {
+      "label": "Ministry skills  (maximum of 10)",
+      "value": "Formation, Intergenerational Formation, Pastoral Care, Prayer & Spirituality, Laity Empowerment"
+    },
+    {
+      "label": "Languages spoken",
+      "value": "English"
+    },
+    {
+      "label": "Languages written",
+      "value": "English"
+    },
+    {
+      "label": "Language(s) required to lead worship",
+      "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/01/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Worshipping Community Website",
+      "value": "https://stpaulsnewnan.org/"
+    },
+    {
+      "label": "YouTube",
+      "value": "https://www.youtube.com/@stpaulsepiscopalchurch"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.%20facebook.com/StPaulsNewnan"
     }
   ],
   "8614": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Atlanta"
-    },
     {
       "label": "Congregation",
       "value": "St Lukes Episcopal Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "The Rector serves as the pastoral and supervisory leader of the parish, providing spiritual oversight, sacramental ministry, and organizational leadership, ensuring alignment with diocesan policies and the mission of the church."
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "Please use this link to apply:  https://app.smartsheet.com/b/form/f55483f72c194ae5ba47605747ed103e"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Drew Atkinson Putt"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Search Chair"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "St. Luke's Episcopal Church, Atlanta, GA 30308"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "678-431-3820"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "drewputt63@gmail.com"
     },
     {
       "label": "Order(s) of Ministry",
@@ -459,6 +675,152 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/23/1900"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church Website",
+      "value": "https://www.stlukesatlanta.org/"
+    }
+  ],
+  "8615": [
+    {
+      "label": "Congregation",
+      "value": "Church of the Resurrection"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "706-865-9680; 816-797-833"
+    },
+    {
+      "label": "Order(s) of Ministry",
+      "value": "Priest"
+    },
+    {
+      "label": "Geographic Location",
+      "value": "Southeast"
+    },
+    {
+      "label": "Work Environment",
+      "value": "In Person"
+    },
+    {
+      "label": "Ministry Setting",
+      "value": "Rural"
+    },
+    {
+      "label": "Average Sunday Attendance",
+      "value": "76"
+    },
+    {
+      "label": "Annual Budget",
+      "value": "430914"
+    },
+    {
+      "label": "Range",
+      "value": "$75,001 - $100,000"
+    },
+    {
+      "label": "Range",
+      "value": "$85,000  /   Total Compensation includes SECA = $6040. Travel Account= $2000. Business/Professional Account = $1000.  Life Insurance provided."
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "No Housing or Stipend Provided"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "N/A"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "Half"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "Total Compensation includes SECA = $6040."
+    },
+    {
+      "label": "Pension Plan",
+      "value": "In compliance with CPF requirements"
+    },
+    {
+      "label": "Healthcare Options",
+      "value": "Clergy +1"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "Dental: No"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "4 weeks"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "2 weeks (standard)  /  $500-$1,000 per year"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Yes"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Yes"
+    },
+    {
+      "label": "What are your community's hopes for this position, and what qualities in applicants will help you live into them?",
+      "value": "Words describing the gifts and skills essential to the future leaders of our worshipping community\nChrist-Centered, open-minded, fun-loving, committed, humble, compassionate, flexible, inclusive, long-term thinkers and planners"
+    },
+    {
+      "label": "Leadership skills (maximum of 5)",
+      "value": "Church Governance"
+    },
+    {
+      "label": "Ministry skills  (maximum of 10)",
+      "value": "Academic/Theology"
+    },
+    {
+      "label": "Languages spoken",
+      "value": "English"
+    },
+    {
+      "label": "Languages written",
+      "value": "English"
+    },
+    {
+      "label": "Language(s) required to lead worship",
+      "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/18/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church Website",
+      "value": "http://resurrectionsautee.com/"
+    },
+    {
+      "label": "Church Website",
+      "value": "https://rechurch1755@gmail.com/"
+    },
+    {
+      "label": "YouTube",
+      "value": "https://resurrectionepiscopal-saut6063/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://the%20episcopal%20church%20of%20the%20resurrection%20sautee,%20ga/"
     }
   ],
   "8914": [
@@ -593,60 +955,24 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "11/28/2025"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
     }
   ],
   "8930": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Connecticut"
-    },
     {
       "label": "Congregation",
       "value": "Christ Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Part Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "N/A"
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "Apply on https://www.episcopalct.org/open-positions/clergy-employment/ and look for Christ Church Roxbury."
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Kevin Olds"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon for Congregations & Transitions"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "ECCT"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "na"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "kolds@episcopalct.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -727,16 +1053,72 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/06/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
     }
   ],
   "8950": [
+    {
+      "label": "Type",
+      "value": "Congregation (Multipoint)"
+    },
+    {
+      "label": "Diocese",
+      "value": "Connecticut"
+    },
+    {
+      "label": "Name",
+      "value": "Wethersfield and Glastonbury"
+    },
     {
       "label": "",
       "value": "St James (Glastonbury)\nTrinity (Wethersfield)"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "Located on opposite sides of the CT river, these two congregations have laid the groundwork for together welcoming a priest for a FT call. St. James is located in downtown Glastonbury with a nice physical plant and well-positioned to engaged in ministry to the community. Trinity is located in Old Wethersfield in a lovely historic building. They are excited for what the future could hold for them."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Apply on https://www.episcopalct.org/open-positions/clergy-employment/ and look for St. James Glastonbury and Trinity Wethersfield."
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Kevin Olds"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon for Congregations & Transitions"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "ECCT"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "na"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "kolds@episcopalct.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -813,20 +1195,44 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/06/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Instagram",
+      "value": "https://www.instagram.com/stjamesepiscopalchurchgl"
+    },
+    {
+      "label": "Website",
+      "value": "https://www.stjamesgl.org/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.facebook.com/StJamesGlastonbury"
     }
   ],
-  "10292": [
+  "10175": [
     {
       "label": "Type",
-      "value": "Congregation"
+      "value": "Congregation (Multipoint)"
     },
     {
       "label": "Diocese",
-      "value": "North Carolina"
+      "value": "South Dakota"
     },
     {
-      "label": "Congregation",
-      "value": "Calvary Episcopal Church"
+      "label": "Name",
+      "value": "Rosebud Episcopal Mission West"
+    },
+    {
+      "label": "",
+      "value": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)"
     },
     {
       "label": "Type of Work",
@@ -834,11 +1240,11 @@
     },
     {
       "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
+      "value": "Superintending Presbyter"
     },
     {
       "label": "",
-      "value": "This is a Rector (Time-Certain) position\n•\tRector Time Certain is Rector in all but tenure\n•\tSigns three year Letter of Agreement.\n•\tBefore the start of the final year of the contract, the vestry may ask the Bishop to grant tenure to the Rector or the final year can allow for priest and congregation each to transition"
+      "value": "This position is on the Rosebud Indian Reservation in south-central South Dakota. These congregations are small in *attendance,* but the Rosebud Episcopal Mission is huge in impact and reaching the people of the Rosebud. Serving here means serving in one of the three poorest counties in the United States, so poverty -- and responding to it faithfully -- is a major part of life on the Rosebud. As Superintending Presbyter, you will be in charge of these congregations, but worry not: They do not all worship on Sundays! Three do: Church of Jesus, Rosebud; Trinity, Mission; and Holy Innocents, Parmelee. The latter is in the final stages of being rebuilt after burning down due to arson. The other congregations worship on a sporadic basis, sometimes once a month, sometimes two to five times a year. \nA major portion of your time on the Rosebud will be focused on wakes and funerals, not just for members of the congregations, but for community members who have no church affiliation, or have not been to church in years. The Rosebud Episcopal Mission is recognized and valued for caring for all of the people of the Rosebud, especially in their times of great need. Forty or more funerals, each with two days of wakes, consume from 50 percent to 65 percent of your time. The funerals are not one-hour services, but can take from four to 10 hours.\nThe ideal candidate will be someone who is open and willing to learn about and respect the Lakota culture and history, and will learn how to work together with Lakota spiritual leaders without cultural apprehension. Speaking the Lakota language is not necessary, but being willing to learn how to sing in Lakota is essential. (Worry not: The people will teach you!)"
     },
     {
       "label": "Current status",
@@ -846,27 +1252,157 @@
     },
     {
       "label": "",
-      "value": "Upload Resume, Cover letter addressed to the vestry, and Vocation Hub profile here:  https://episdionc.formstack.com/forms/applications"
+      "value": "Please view the profile movies and written profile at https://www.episcopalchurchsd.org/page/rosebud. Send a letter of application, as well as your current resume and current candidate profile, as well as the answer to the question below, to The Rev. Dr. Lauren R. Stanley, Canon to the Ordinary, lauren@episcopalchurchsd.org. For more information, contact Canon Stanley at 605-494-2020."
     },
     {
       "label": "Applicant narrative questions",
-      "value": "Marion Sprott"
+      "value": "1. How do you approach pastoral care in your ministry?, 7. Have you led or participated in multilingual or cross-cultural worship?, 9. In what ways have you grown in cultural competency as a leader?, 10. What theological convictions shape your ministry?, 15. How do you take care of your well-being-spiritually, emotionally, and physically?"
     },
     {
       "label": "Applicant narrative questions",
-      "value": "Canon for Transitions"
+      "value": "The Rev. Dr. Lauren R. Stanley"
     },
     {
       "label": "Applicant narrative questions",
-      "value": "Diocese of North Carolina"
+      "value": "Canon to the Ordinary"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Episcopal Diocese of South Dakota"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "W: 605-494-2020 C: 605-82"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "lauren@episcopalchurchsd.org;"
+    },
+    {
+      "label": "Order(s) of Ministry",
+      "value": "Priest"
+    },
+    {
+      "label": "Geographic Location",
+      "value": "Plains"
+    },
+    {
+      "label": "Work Environment",
+      "value": "In Person"
+    },
+    {
+      "label": "Ministry Setting",
+      "value": "Rural"
+    },
+    {
+      "label": "Range",
+      "value": "$25,001 - $50,000"
+    },
+    {
+      "label": "Range",
+      "value": "Salary is dependent upon years of experience. The range actually is $38,000 - $50,000, unless the candidate has more than 20 years of experience. This position is part of the grant that the Diocese of South Dakota receives from The General Convention for our work with the Indigenous population."
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "Rectory"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "Three-bedroom, 1.5-bath, with a fireplace, central air and central heating (propane), with a fenced yard."
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "0"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "In compliance with CPF requirements"
+    },
+    {
+      "label": "Healthcare Options",
+      "value": "Full family"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "Dental: Yes (members pay 100 percent of the monthly premium)\nHealth Care: Each clergy person pays 15 percent of the monthly bill for the insurance. (That is taken out of their paychecks automatically.)"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Five weeks, including five Sundays\n15 National Holidays"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "2 weeks, along with $1,000 yearly. Clergy are required to do continuing education every year, and file a report on that education yearly."
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Yes: Three months after five years of service."
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "Mileage provided at the current IRS rate."
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "The Mission Council is encouraged to pay for the cellular service only of the clergy person. (All other portions of the cellular bill are the responsibility of the clergy.)"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "South Dakota has a great Bishop and clergy who will be supportive and caring. The priest who takes this position will have two mentors, one from the Pine Ridge Episcopal Mission, who has great experience on the reservation just to the west of the Rosebud. The other mentor will be the Canon to the Ordinary, who served on the Rosebud for 8.5 years.\n\nThis position is not for the faint of heart. It requires a love for all of God's beloved children, an ability to be flexible every single day, a willingness to learn about and respect the Lakota culture and history, and ability to build your own support system off the reservation.\n\nThe Rosebud Episcopal Mission was created in 1875 at the request of Lakota leader Sinte Gleska (Spotted Tail), who requested an Episcopal priest, an Episcopal teacher, and a translator."
+    },
+    {
+      "label": "What are your community's hopes for this position, and what qualities in applicants will help you live into them?",
+      "value": "More than anything, the people of the Rosebud are praying for a priest who will love them, no matter what. They pray for a person who will be out in the community, who will learn about and respect the Lakota way of life, especially from the Sicangu (Burnt Thigh Nation) perspective. They pray for a person who will be present, who will NOT appropriate the culture to themselves but who will defend that culture. \n\nThe ideal candidate is someone who has lived in the context of poverty (such as a Peace Corps volunteer, or a person who has been on mission visits to other countries). Because the Rosebud is one of the poorest counties in the nation (always in the top three, alas), the priest who comes to the Rosebud will need to understand how a community functions while dealing with the extreme poverty that is a part of everyday life. We are not asking the priest to be poor; we are seeking a priest who understands that helping each other and caring for each other is a core component of this ministry. We do not want a priest who constantly laments, \"Why can't people just ....\" We seek a priest who says, \"I understand ...\"\n\nWe are also seeking a priest who has a tremendous amount of patience, especially when it comes to building trust. The Lakota people have seen clergy come and go, and will wait and watch for a period of time before investing themselves in the latest person to come along. Respecting that waiting and watching, and working to build trust by showing up, and by supporting people, is a key component of this work.\n\nIn addition, because this is a multipoint position, it is imperative to NOT pick favorites among the congregations. Some of these congregations only worship two to six times per year. That doesn't mean they are not as worthy as those that worship weekly. (This falls under the category of \"Different is not better, it is not worse, it is simply 'different.'\") The priest may not hold worship services is each community weekly, but they will be in those communities for wakes, funerals, memorials, and celebrations. SHOWING UP is another key component.\n\nThere are some programs that are ongoing, such as the #FirewoodfortheElders program, which provides free firewood to those in need and is run by lay people who know what they are doing. The priest will help coordinate that work, and will need to do fundraising to support it (it is not part of the budget). The youth program is in the process of being re-created, again led by a lay person."
+    },
+    {
+      "label": "Leadership skills (maximum of 5)",
+      "value": "Adaptive Leadership, Change Management, Collaborative Leadership, Conflict Management, Fundraising"
+    },
+    {
+      "label": "Ministry skills  (maximum of 10)",
+      "value": "Advocacy Ministry, Community Building, Creation Care, Cultural Competency, Grief & Loss, Indigenous Ministry, Innovative Ministry, Mission, Multicultural Ministry, Racial Reconciliation"
+    },
+    {
+      "label": "Languages spoken",
+      "value": "English"
+    },
+    {
+      "label": "Languages written",
+      "value": "English"
+    },
+    {
+      "label": "Language(s) required to lead worship",
+      "value": "English, Lakota"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "09/15/2025"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "The Rosebud Episcopal Mission website",
+      "value": "https://rosebudepiscopalmissionsd.org/"
+    },
+    {
+      "label": "Rosebud Episcopal Mission Facebook page",
+      "value": "https://www.facebook.com/profile.php?id=100083012933158"
+    }
+  ],
+  "10292": [
+    {
+      "label": "Congregation",
+      "value": "Calvary Episcopal Church"
     },
     {
       "label": "Applicant narrative questions",
       "value": "919.600.5319"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "marion.sprott@episdionc.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -971,6 +1507,18 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/02/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "church website",
+      "value": "https://calvarywadesboro.org/"
     }
   ],
   "10318": [
@@ -1133,16 +1681,72 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/28/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
     }
   ],
   "10346": [
+    {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "North Carolina"
+    },
     {
       "label": "Congregation",
       "value": "St Thomas Episcopal Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "St. Thomas Episcopal Church is searching for a full-time, permanent rector to lead its parishioners through an energetic and spirit-driven expansion which includes leadership over current aging & dedicated congregation and the building of a Hispanic ministry within our own as we have discerned a calling to help our community in this manner."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Resume, Cover Letter addressed to Search Committee, OTM or Vocation Hub profile uploaded to: https://episdionc.formstack.com/forms/applications"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "5. What has been your experience leading change in the Church?"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Marion Sprott"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon for Transitions"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Diocese of North Carolina"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "9196005319"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "marion.sprott@episdionc.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -1247,6 +1851,18 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/28/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church website",
+      "value": "https://www.stthomaschurchreidsville.org/"
     }
   ],
   "10352": [
@@ -1409,6 +2025,22 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "01/01/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Parish website",
+      "value": "https://www.zionchurchmanchester.org/"
+    },
+    {
+      "label": "Parish profile",
+      "value": "https://www.zionchurchmanchester.org/parish-profile-copy"
     }
   ],
   "10353": [
@@ -1567,6 +2199,14 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/28/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
     }
   ],
   "10571": [
@@ -1621,10 +2261,6 @@
     {
       "label": "Applicant narrative questions",
       "value": "307-899-2731/843-906-5724"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "searchcommittee@christchurchcody.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -1733,6 +2369,26 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/28/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Christ Church website",
+      "value": "http://christchurchcody.org/"
+    },
+    {
+      "label": "Diocesan website search page",
+      "value": "http://diowy.info/christchurchcody"
+    },
+    {
+      "label": "Facebook page",
+      "value": "http://facebook.com/christ.church.cody"
     }
   ],
   "10598": [
@@ -1887,60 +2543,28 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/19/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "church home page",
+      "value": "https://stmatthewshillsborough.org/"
     }
   ],
   "10600": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Virginia"
-    },
     {
       "label": "Congregation",
       "value": "St Michaels Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "St. Michael’s embraces being a neighborhood church with deep personal bonds: we know each other by name, care for each other, are intergenerational, welcome newcomers, and take to heart the Gospel imperative to love our neighbors. We endeavor to discern God’s will and co-create in God’s work in our everyday lives through our relationships both within our parish and outside of the walls of the church."
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "If you feel called to enter into a discernment process with us, please submit the following materials via email to: rectorsearch@stmichaelsarlington.org\n? Resume/CV\n? Updated OTM Personal Ministry Portfolio\n? Letter of interest, describing why you feel called to apply for the position and the gifts you will bring to the role\n? Recording of a sermon"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Caroline Hayes & Laura Clarke"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Discernment Committee Co-chairs"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "St. Michael's"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "N/A"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "rectorsearch@stmichaelsarlington.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -2053,16 +2677,92 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/22/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church Website",
+      "value": "https://www.stmichaelsarlington.org/"
+    },
+    {
+      "label": "Church YouTube",
+      "value": "https://www.youtube.com/@saintmichaelsarlington8582"
+    },
+    {
+      "label": "Church Podcast",
+      "value": "https://podcasts.apple.com/us/podcast/st-michaels-episcopal-church-arlington-va/id1511151844"
+    },
+    {
+      "label": "InsideNoVa Article: \"Racial Reconciliation Effort",
+      "value": "https://www.insidenova.com/news/faith/q-a-racial-reconciliation-effort-at-arlington-churches/article_1187b804-33d0-11eb-b7cd-3fd3c69ac04e.html"
+    },
+    {
+      "label": "Volunteer Arlington Award Press Release",
+      "value": "https://volunteerarlington.org/arlington-cares-expandable/"
     }
   ],
   "10614": [
+    {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "Virginia"
+    },
     {
       "label": "Congregation",
       "value": "Trinity Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "Founded in 1859, Trinity Episcopal Church is a parish with deep roots and an open heart. For more than a century and a half, we have gathered as a diverse and welcoming community, believing that church is a place where everyone is known, valued, and invited into a relationship with God and one another. That belief is visible each time we worship together, especially when we share the Peace, not as a brief liturgical moment, but as a genuine exchange of connection, reunion, and joy. At Trinity, we strive to live the Gospel fully, swift to love and bold to live.\n\nTrinity is a lay-centered parish, shaped by collaboration, transparency, and a strong sense that “we are in this together.” Our worship life centers on the Rite Two Eucharist, offered on Sunday mornings at 8:30 and 11:00, with music and a choir enriching the later service. A quieter Wednesday noon healing service provides space for prayer, reflection, and restoration. Worship is rooted in the Book of Common Prayer and is reverent, warm, meaningful, and deeply human.\n\nPreaching matters to us. We value sermons that step out from behind the pulpit and speak to people in a relational, grounded, real-life way, lightly held rather than read. A sense of humor is welcome, not for performance, but because joy and authenticity help the Gospel take root.\n\nIn recent years, Trinity has demonstrated resilience and strong stewardship. We completed more than $200,000 in deferred maintenance from the sale of the Grey House, including upgrades to HVAC, electrical, water, and technology systems. With maintenance reserves and service contracts now in place, our campus is well cared for and positioned to support ministry for the long term."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "To discern with us, please submit a Letter expressing interest, resume, OTM/Vocational Hub Profile (if available), and a sermon recording to the Discernment Committee via the Rev. Will Dickinson, diocesan Transition Minister:"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "1. How do you approach pastoral care in your ministry?, 5. What has been your experience leading change in the Church?, 10. What theological convictions shape your ministry?, 14. How do you discern and adapt to the changing needs of your community?, 15. How do you take care of your well-being-spiritually, emotionally, and physically?"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "The Rev. Will Dickinson"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Transition Minister"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Diocese of Virginia"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "804.622.3172"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "wdickinson@episcopalvirginia.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -2171,6 +2871,14 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "02/24/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
     }
   ],
   "10627": [
@@ -2337,6 +3045,30 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English, Spanish"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/26/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Parish Website",
+      "value": "https://trinityoldswedes.church/"
+    },
+    {
+      "label": "Facebook Page",
+      "value": "https://www.facebook.com/TrinityparishDE/"
+    },
+    {
+      "label": "YouTube",
+      "value": "https://www.youtube.com/@TrinityParishDE"
+    },
+    {
+      "label": "Old Swedes Foundation",
+      "value": "https://oldswedes.org/"
     }
   ],
   "10643": [
@@ -2419,6 +3151,30 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/06/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Website",
+      "value": "https://www.trinity-torrington.org/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.facebook.com/profile.php?id=100064628536243"
+    },
+    {
+      "label": "Youtube",
+      "value": "https://www.youtube.com/watch?v=FzOguOnNzd0"
+    },
+    {
+      "label": "Instagram",
+      "value": "https://www.instagram.com/trinity_torrington?igsh=eTBjaG4wMWxma3Q2"
     }
   ],
   "10645": [
@@ -2509,6 +3265,22 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/06/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Website",
+      "value": "https://www.stjamesnl.org/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.facebook.com/search/top?g=st%20james%20episcopal%20church%20l(new%%2020london%2C%20ct)"
     }
   ],
   "10647": [
@@ -2643,60 +3415,36 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/06/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Website",
+      "value": "https://www.stmichaelsnaugatuck.org/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.facebook.com/groups/111458864250"
+    },
+    {
+      "label": "Youtube",
+      "value": "https://www.youtube.com/@st.michaelsonthegreeninnau4606/streams"
     }
   ],
   "10649": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Spokane"
-    },
     {
       "label": "Congregation",
       "value": "St James Episcopal Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "Rector"
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "Candidates wishing to apply for the position, please send the following to The Rev. Canon Susan Cleveley @ susanc@spokanediocese.org:\n1) A cover letter addressed to the Discernment Review Committee describing what appeals to you about St. James and in what specific ways can you see your ministry aligning with the stated needs and desires of St. James.\n2) OTM portfolio or Vocation Hub document (in pdf format)\n3) Resume"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "The Rev. Canon Susan Cleveley"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon to the Ordinary"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "The Episcopal Diocese of Spokane"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "5096243191 ext 2"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "susanc@spokanediocese.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -2801,6 +3549,26 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/12/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "St. James Episcopal Church Website",
+      "value": "https://www.stjamespullman.org/"
+    },
+    {
+      "label": "St. James Episcopal Church Facebook page",
+      "value": "https://www.facebook.com/StJamesPullman"
+    },
+    {
+      "label": "St. James Episcopal Church Instagram",
+      "value": "https://www.instagram.com/stjamespullman/"
     }
   ],
   "10658": [
@@ -2935,6 +3703,22 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/10/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Website",
+      "value": "https://www.stmichaels-litchfield.org/"
+    },
+    {
+      "label": "Facebook: St. Michael’s Parish",
+      "value": "https://vocationhub.episcopalchurch.org/"
     }
   ],
   "10665": [
@@ -3105,6 +3889,22 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/13/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Parish website",
+      "value": "https://stpeters-smyrna.church/"
+    },
+    {
+      "label": "Facebook page",
+      "value": "https://www.facebook.com/StPetersSmyrna"
     }
   ],
   "10668": [
@@ -3195,6 +3995,18 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/12/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Profile",
+      "value": "https://stdave.org/rector-search/"
     }
   ],
   "10669": [
@@ -3349,60 +4161,28 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/22/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church Website",
+      "value": "https://www.copleparish.com/"
     }
   ],
   "10671": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "East Tennessee"
-    },
     {
       "label": "Congregation",
       "value": "Holy Cross"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "Holy Cross Episcopal Church in Hixson, TN, just outside of Chattanooga, is looking for our next Priest-in-Charge! Hixson is a rapidly growing suburban area just outside of Chattanooga, and we are looking to grow with our community.\nWe are looking for a spiritual leader, who also plans to join us as a partner in ministry. Our culture is one of collegiality—we want you to bring your values and to appreciate ours. The next Priest-in-Charge of Holy Cross will find people willing to serve and looking for guidance and motivation in how best to do so. As one of our Vestry members put it, “There are a lot of big ‘Christ hearts’ in this parish. What we need is someone to help direct them.”\nWe recently completed a congregation-wide conversation geared toward creating our new mission statement: “Rooted in the love of Christ, we are a welcoming, inclusive, and joyful community where all belong. Through worship, service, and fellowship, we embrace tradition with a progressive spirit—striving always to love our neighbors as ourselves.”\nHoly Cross is the newest parish in the Diocese of East Tennessee. Our parish was formed out of the merger of two existing parishes in the Chattanooga area. As such, our “DNA” contains elements of each of those parishes, as well as a strand that is uniquely us--who we are now, rooted in the present and looking toward the future."
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "If you feel that you may be called to serve as Priest-in-Charge of Holy Cross, please submit a letter of interest, along with your resume or CV, a copy of your OTM portfolio, and recordings of two recent sermons to the Rev. Canon Joe Woodfin, jwoodfin@dioet.org."
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "The Rev. Canon Joe Woodfin"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon to the Ordinary"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Episcopal Diocese of East Tennessee"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "865.966.2110"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "jwoodfin@dioet.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -3507,64 +4287,28 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/13/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Our Website",
+      "value": "https://holycrosshixson.org/"
     }
   ],
   "10674": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "North Carolina"
-    },
     {
       "label": "Congregation",
       "value": "St Johns Episcopal Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "Our next rector will be a spiritually grounded and prayerful leader—compassionate, courageous, and deeply committed to inclusivity. They will listen attentively, offer wise personal counsel, and cultivate a collaborative environment that inspires and empowers others to grow in their ministries. A deep appreciation for music and its role in liturgy is essential, as music is central to how we express and experience our faith. In a vibrant and engaged parish, strong administrative and time management skills, paired with the ability to delegate and a healthy sense of humor, will be invaluable. Experience in nurturing and expanding youth involvement would also be an asset. The ideal candidate will preach sermons that are authentic, relatable, and rooted in Scripture—messages that connect the Gospel to everyday life, inspire reflection and action, challenge the listener, and include moments of humor and lasting encouragement."
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "Resume, Cover letter addressed to Search Committee, OTM or Vocation Hub profile uploaded to:  https://episdionc.formstack.com/forms/applications"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "3. What does stewardship mean to you, and how do you practice it?"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Marion Sprott"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon for Transitions"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Diocese of North Carolina"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "9196005319"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "marion.sprott@episdionc.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -3661,6 +4405,270 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/17/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church website",
+      "value": "https://stjohnswf.org/"
+    }
+  ],
+  "10675": [
+    {
+      "label": "Congregation",
+      "value": "St Johns Episcopal Church"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "7046200315"
+    },
+    {
+      "label": "Order(s) of Ministry",
+      "value": "Deacon (Transitional), Priest"
+    },
+    {
+      "label": "Geographic Location",
+      "value": "Southeast"
+    },
+    {
+      "label": "Work Environment",
+      "value": "In Person"
+    },
+    {
+      "label": "Ministry Setting",
+      "value": "Suburban"
+    },
+    {
+      "label": "Average Sunday Attendance",
+      "value": "240"
+    },
+    {
+      "label": "Annual Budget",
+      "value": "2109040"
+    },
+    {
+      "label": "Range",
+      "value": "$75,001 - $100,000"
+    },
+    {
+      "label": "Range",
+      "value": "$85,000 (negotiable)"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "No Housing or Stipend Provided"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "portion of cash salary to be set as housing allowance"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "0"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "In compliance with CPF requirements"
+    },
+    {
+      "label": "Healthcare Options",
+      "value": "Clergy only"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "0"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "4 weeks/5 sundays"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "2 weeks"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "cell phone allowance"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "ministry expense fund\nmoving expenses paid"
+    },
+    {
+      "label": "Location",
+      "value": "https://episdionc.org/administration-finance-resources/minimum-salary-guidelines/"
+    },
+    {
+      "label": "What are your community's hopes for this position, and what qualities in applicants will help you live into them?",
+      "value": "St. John’s has a broad-church style of liturgy, rooted in the richness of our Anglican tradition, and we\nare eager to continue that offering and hopeful to expand it. Ours is a congregation full of people\nwho will deeply care for you—not just as a priest, but as a person. You will find here a community\nthat prays faithfully, serves generously, and loves well.\nWhile our previous Associate Rector focused primarily on adult formation and pastoral care, I am\nvery open to shaping this role around the unique gifts and passions of the person God calls here\nnext. I believe strongly that clergy thrive when they are able to lean into their strengths, and I am\nexcited about the possibility of imagining that together.\nWe have also just completed a $3 million building renovation, and by God’s grace we carry very little\ndebt. The funding for this position is very stable, and we are in a healthy and hopeful season as a\nparish."
+    },
+    {
+      "label": "Leadership skills (maximum of 5)",
+      "value": "Collaborative Leadership, Servant Leadership"
+    },
+    {
+      "label": "Ministry skills  (maximum of 10)",
+      "value": "Adult Formation, Discipleship, Formation, Prayer & Spirituality, Preaching, Worship & Liturgy"
+    },
+    {
+      "label": "Languages spoken",
+      "value": "English"
+    },
+    {
+      "label": "Languages written",
+      "value": "English"
+    },
+    {
+      "label": "Language(s) required to lead worship",
+      "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/17/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Job description",
+      "value": "https://www.stje.org/_files/ugd/2f7303_0a4fcf56d38146859acfc440a5548428.pdf"
+    },
+    {
+      "label": "Church website",
+      "value": "https://www.stje.org/"
+    }
+  ],
+  "10676": [
+    {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Congregation",
+      "value": "Holy Trinity Episcopal Church"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "336-272-6149"
+    },
+    {
+      "label": "Order(s) of Ministry",
+      "value": "Deacon (Transitional), Priest"
+    },
+    {
+      "label": "Geographic Location",
+      "value": "Southeast"
+    },
+    {
+      "label": "Work Environment",
+      "value": "In Person"
+    },
+    {
+      "label": "Ministry Setting",
+      "value": "Urban"
+    },
+    {
+      "label": "Average Sunday Attendance",
+      "value": "264"
+    },
+    {
+      "label": "Annual Budget",
+      "value": "2149518"
+    },
+    {
+      "label": "Range",
+      "value": "$50,001 - $75,000"
+    },
+    {
+      "label": "Range",
+      "value": "$75,000"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "No Housing or Stipend Provided"
+    },
+    {
+      "label": "Type of Housing Provided",
+      "value": "Housing as allotted amount from salary"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "n/a"
+    },
+    {
+      "label": "Reimbursement Offered",
+      "value": "0"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "In compliance with CPF requirements"
+    },
+    {
+      "label": "Healthcare Options",
+      "value": "Clergy only"
+    },
+    {
+      "label": "Pension Plan",
+      "value": "Full cost of Health/Life/Dental/Vision insurance for employee"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "4 weeks/5 Sundays"
+    },
+    {
+      "label": "Vacation & Leave Details",
+      "value": "2 weeks"
+    },
+    {
+      "label": "Location",
+      "value": "https://episdionc.org/administration-finance-resources/minimum-salary-guidelines/"
+    },
+    {
+      "label": "Leadership skills (maximum of 5)",
+      "value": "Administration, Congregational Development, Organizational Development, Servant Leadership"
+    },
+    {
+      "label": "Ministry skills  (maximum of 10)",
+      "value": "Adult Formation, Children & Family Formation, Diversity, Equity, Inclusion, Intergenerational Formation, Mission, Preaching, Racial Reconciliation, Scripture Study, Youth & Young Adult Formation"
+    },
+    {
+      "label": "Languages spoken",
+      "value": "English"
+    },
+    {
+      "label": "Languages written",
+      "value": "English"
+    },
+    {
+      "label": "Language(s) required to lead worship",
+      "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/17/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Job Description",
+      "value": "https://episdionc.org/wp-content/uploads/2025/12/Associate-Rector-for-Adult-Christian-Formation-and-Parish-Life-Holy-Trinity-Greensboro.pdf"
+    },
+    {
+      "label": "Church website",
+      "value": "https://www.holy-trinity.com/"
     }
   ],
   "10683": [
@@ -3835,60 +4843,24 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/19/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
     }
   ],
   "10689": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Central Florida"
-    },
     {
       "label": "Congregation",
       "value": "Church of the Good Shepherd"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "The Episcopal Church of the Good Shepherd is a historic and beloved parish in Maitland, FL, with roots going back to 1883. Our property is a significant asset, encompassing our cherished historic chapel, a spacious Sanctuary built in 1967, a Parish Hall, and several outbuildings currently leased to the Celandine Life Prep Academy, a special needs school that brings meaningful weekday activity and community presence to our campus. Maitland is a thriving suburban community of approximately 20,000 residents located within the greater Orlando area, and it is experiencing steady, ongoing growth. That growth is reflected in new apartment construction near our church, bringing with it an influx of younger residents — exactly the demographic a vital, forward-looking parish seeks to engage. We see this as a genuine and exciting opportunity. Good Shepherd is beginning to take intentional steps to reach out to these newer neighbors, and we are eager for a Rector who shares our vision and will help lead that effort. While we are located in an area served by several churches, including two other Episcopal congregations within a few miles, we believe our history and our welcoming community give us a compelling foundation from which to grow. We are looking for a Rector who is energized by opportunity — someone ready to build on what we have and help shape what Good Shepherd will become."
-    },
-    {
-      "label": "Current status",
-      "value": "Beginning search"
-    },
-    {
-      "label": "",
-      "value": "Please contact Canon Ellis Brust, Canon for Clergy in Transition, for more information regarding this position. \nEmail: ebrust@cfdiocese.org\nPhone: 772-302-9661"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon Ellis Brust"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon for Clergy in Transition"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Episcopal Diocese of Central Florida"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "772-302-9661"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "ebrust@cfdiocese.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -3985,60 +4957,32 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/24/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Church Website",
+      "value": "https://goodshepherdmaitland.com/"
+    },
+    {
+      "label": "Facebook",
+      "value": "https://www.facebook.com/GoodShepherdMaitland/"
     }
   ],
   "10692": [
-    {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Southern Virginia"
-    },
     {
       "label": "Congregation",
       "value": "St Peter Episcopal Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Part Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "Part-time Rector"
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "If you are interested in discerning with St. Peter's, Norfolk, please e-mail your resume, cover letter, and Vocation Hub (or most recent OTM portfolio) pdf with sermon links to Mrs. Liz Villanueva, Director of Transition Ministry, at lvillanueva@diosova.org."
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Mrs. Liz Villanueva"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Director of Transition Ministry"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Episcopal Diocese of Southern Virginia"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "757-213-3390"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "lvillanueva@diosova.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -4139,6 +5083,26 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/26/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "St. Peter's Day School",
+      "value": "https://dayschool.stpeters-norfolk.org/"
+    },
+    {
+      "label": "Facebook Page",
+      "value": "https://www.facebook.com/profile.php?id=100064678602829"
+    },
+    {
+      "label": "Website",
+      "value": "https://www.stpeters-norfolk.org/index.html"
     }
   ],
   "10693": [
@@ -4293,6 +5257,26 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/26/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Parish website",
+      "value": "https://stjohnshalifax.blogspot.com/"
+    },
+    {
+      "label": "YouTube page",
+      "value": "https://www.youtube.com/@st.johnsepiscopalchurchhal3814"
+    },
+    {
+      "label": "Facebook page",
+      "value": "https://www.facebook.com/profile.php?id=100068503667887"
     }
   ],
   "10695": [
@@ -4447,6 +5431,22 @@
     {
       "label": "Language(s) required to lead worship",
       "value": "English"
+    },
+    {
+      "label": "Receiving names from",
+      "value": "03/27/2026"
+    },
+    {
+      "label": "To",
+      "value": "Open ended"
+    },
+    {
+      "label": "Parish website",
+      "value": "https://www.stmatmidlo.com/"
+    },
+    {
+      "label": "Facebook page",
+      "value": "https://www.facebook.com/profile.php?id=61569977023980"
     }
   ]
 }

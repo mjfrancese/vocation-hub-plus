@@ -9,13 +9,13 @@
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 19",
-    "first_seen": "2026-03-27T18:46:21.173Z",
-    "last_seen": "2026-03-27T18:46:21.173Z",
+    "first_seen": "2026-03-28T06:50:26.487Z",
+    "last_seen": "2026-03-28T06:50:26.487Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Zion (Manchester Center)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Vermont</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">01/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 19 </span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "vh_id": 10352,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10352",
     "detail_name": null,
     "address": null,
     "city": "Manchester Center",
@@ -41,7 +41,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 8992,
+      "name": "Zion Episcopal Church",
+      "street": "5167 Main St. ",
+      "city": "Manchester Center",
+      "state": "VT",
+      "zip": "05255",
+      "phone": "(802) 362-1987",
+      "email": "office@zionchurchmanchester.org",
+      "website": "http://www.zionchurchmanchester.org",
+      "type": "church",
+      "lat": 43.17834,
+      "lng": -73.05161
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Zion Episcopal Church (Manchester Center)",
+      "years": {
+        "2015": {
+          "averageAttendance": 109,
+          "plateAndPledge": 304708,
+          "membership": 646
+        },
+        "2016": {
+          "averageAttendance": 124,
+          "plateAndPledge": 288157,
+          "membership": 650
+        },
+        "2017": {
+          "averageAttendance": 120,
+          "plateAndPledge": 254734,
+          "membership": 642
+        },
+        "2018": {
+          "averageAttendance": 115,
+          "plateAndPledge": 246656,
+          "membership": 670
+        },
+        "2019": {
+          "averageAttendance": 110,
+          "plateAndPledge": 244465,
+          "membership": 680
+        },
+        "2020": {
+          "averageAttendance": 76,
+          "plateAndPledge": 188200,
+          "membership": 675
+        },
+        "2021": {
+          "averageAttendance": 39,
+          "plateAndPledge": 202255,
+          "membership": 310
+        },
+        "2022": {
+          "averageAttendance": 50,
+          "plateAndPledge": 206419,
+          "membership": 249
+        },
+        "2023": {
+          "averageAttendance": 60,
+          "plateAndPledge": 254868,
+          "membership": 157
+        },
+        "2024": {
+          "averageAttendance": 61,
+          "plateAndPledge": 242601,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
@@ -52,14 +122,14 @@
     "position_type": "Rector/Priest-in-Charge",
     "receiving_names_from": "03/06/2026",
     "receiving_names_to": "04/16/2026",
-    "updated_on_hub": "Yesterday, 9:12 AM",
-    "first_seen": "2026-03-27T18:46:21.173Z",
-    "last_seen": "2026-03-27T18:46:21.173Z",
+    "updated_on_hub": "March 26",
+    "first_seen": "2026-03-28T06:50:26.487Z",
+    "last_seen": "2026-03-28T06:50:26.487Z",
     "status": "new",
     "details_url": "",
-    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Wethersfield and Glastonbury, Diocese of Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">CongregationMP</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/16/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 9:12 AM</span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Wethersfield and Glastonbury, Diocese of Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">CongregationMP</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/16/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 26 </span></td>",
+    "vh_id": 8950,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8950",
     "detail_name": null,
     "address": null,
     "city": "",
@@ -85,7 +155,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 1488,
+      "name": "St. James' Episcopal Church",
+      "street": "2584 Main St",
+      "city": "Glastonbury",
+      "state": "CT",
+      "zip": "06033-4220",
+      "phone": "(860) 633-8333",
+      "email": "parishadmin@stjamesgl.org",
+      "website": "https://www.stjamesgl.org/",
+      "type": "church",
+      "lat": 41.71503,
+      "lng": -72.60966
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St James Episcopal Church (Glastonbury)",
+      "years": {
+        "2015": {
+          "averageAttendance": 101,
+          "plateAndPledge": 280656,
+          "membership": 452
+        },
+        "2016": {
+          "averageAttendance": 111,
+          "plateAndPledge": 270113,
+          "membership": 468
+        },
+        "2017": {
+          "averageAttendance": 101,
+          "plateAndPledge": 256589,
+          "membership": 348
+        },
+        "2018": {
+          "averageAttendance": 91,
+          "plateAndPledge": 268936,
+          "membership": 352
+        },
+        "2019": {
+          "averageAttendance": 90,
+          "plateAndPledge": 261202,
+          "membership": 310
+        },
+        "2020": {
+          "averageAttendance": 88,
+          "plateAndPledge": 244695,
+          "membership": 310
+        },
+        "2021": {
+          "averageAttendance": 48,
+          "plateAndPledge": 242902,
+          "membership": 279
+        },
+        "2022": {
+          "averageAttendance": 70,
+          "plateAndPledge": 249079,
+          "membership": 316
+        },
+        "2023": {
+          "averageAttendance": 63,
+          "plateAndPledge": 219239,
+          "membership": 319
+        },
+        "2024": {
+          "averageAttendance": 61,
+          "plateAndPledge": 216983,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
@@ -97,8 +237,8 @@
     "receiving_names_from": "03/06/2026",
     "receiving_names_to": "05/11/2026",
     "updated_on_hub": "March 18",
-    "first_seen": "2026-03-27T18:46:21.173Z",
-    "last_seen": "2026-03-27T18:46:21.173Z",
+    "first_seen": "2026-03-28T06:50:26.487Z",
+    "last_seen": "2026-03-28T06:50:26.487Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Trinity Torrington and Trinity Lime Rock, Diocese of Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">CongregationMP</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/11/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 18 </span></td>",
@@ -210,14 +350,14 @@
     "position_type": "Rector/Priest-in-Charge",
     "receiving_names_from": "03/26/2026",
     "receiving_names_to": "05/08/2026",
-    "updated_on_hub": "Yesterday, 1:39 PM",
-    "first_seen": "2026-03-27T18:46:21.173Z",
-    "last_seen": "2026-03-27T18:46:21.173Z",
+    "updated_on_hub": "March 26",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
-    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Trinity and Old Swedes (Wilmington)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Delaware</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/08/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 1:39 PM</span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Trinity and Old Swedes (Wilmington)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Delaware</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/08/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 26 </span></td>",
+    "vh_id": 10627,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10627",
     "detail_name": null,
     "address": null,
     "city": "Wilmington",
@@ -243,7 +383,22 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 2678,
+      "name": "Trinity Episcopal Parish ",
+      "street": "1108 N Adams St",
+      "city": "Wilmington",
+      "state": "DE",
+      "zip": "19801-1327",
+      "phone": "302-652-8605",
+      "email": "office@trinityparishde.org",
+      "website": "http://www.trinityoldswedes.church",
+      "type": "church",
+      "lat": 39.75027,
+      "lng": -75.55485
+    },
+    "match_confidence": "exact"
   },
   {
     "id": "5ebc3903341c6f9cf1cd1cbc5469820b562da15ebf8a31c4195a67bd5a7e59d0",
@@ -255,8 +410,8 @@
     "receiving_names_from": "02/24/2026",
     "receiving_names_to": "04/10/2026",
     "updated_on_hub": "February 24",
-    "first_seen": "2026-03-27T18:46:21.173Z",
-    "last_seen": "2026-03-27T18:46:21.173Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Trinity (Manassas)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/24/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">February 24 </span></td>",
@@ -369,8 +524,8 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 12",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St. David's (Austin)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Texas</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 12 </span></td>",
@@ -483,8 +638,8 @@
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 17",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Thomas (Reidsville)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
@@ -597,8 +752,8 @@
     "receiving_names_from": "03/13/2026",
     "receiving_names_to": "05/01/2026",
     "updated_on_hub": "March 13",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peters (Smyrna)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Delaware</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/13/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 13 </span></td>",
@@ -711,8 +866,8 @@
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "03/31/2026",
     "updated_on_hub": "March 11",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peters (Rome)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/23/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 11 </span></td>",
@@ -824,12 +979,12 @@
     "position_type": "Rector/Priest-in-Charge",
     "receiving_names_from": "03/26/2026",
     "receiving_names_to": "",
-    "updated_on_hub": "Today, 11:57 AM",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "updated_on_hub": "Yesterday, 11:57 AM",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
-    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peter (Norfolk)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Today, 11:57 AM</span></td>",
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peter (Norfolk)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 11:57 AM</span></td>",
     "vh_id": 10692,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10692",
     "detail_name": null,
@@ -939,13 +1094,13 @@
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 24",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Pauls (Visalia)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">San Joaquin</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 24 </span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "vh_id": 10353,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10353",
     "detail_name": null,
     "address": null,
     "city": "Visalia",
@@ -971,7 +1126,42 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 5002,
+      "name": "St. Paul's Episcopal Church",
+      "street": "120 N Hall Street",
+      "city": "Visalia",
+      "state": "CA",
+      "zip": "93291",
+      "phone": "(559) 627-8265",
+      "email": "stpaulsepiscopaloffice@gmail.com",
+      "website": "https://www.stpaulsepiscopalvisalia.com",
+      "type": "church",
+      "lat": 36.330737,
+      "lng": -119.308399
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Pauls Episcopal Church (Visalia)",
+      "years": {
+        "2022": {
+          "averageAttendance": 26,
+          "plateAndPledge": 82754,
+          "membership": 68
+        },
+        "2023": {
+          "averageAttendance": 32,
+          "plateAndPledge": 89137,
+          "membership": 74
+        },
+        "2024": {
+          "averageAttendance": 34,
+          "plateAndPledge": 106079,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
@@ -983,13 +1173,13 @@
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "04/12/2026",
     "updated_on_hub": "March 20",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Pauls (Newnan)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 20 </span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "vh_id": 8611,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8611",
     "detail_name": null,
     "address": null,
     "city": "Newnan",
@@ -1015,7 +1205,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 6840,
+      "name": "St. Paul's Episcopal Church",
+      "street": "576 Roscoe Rd",
+      "city": "Newnan",
+      "state": "GA",
+      "zip": "30263",
+      "phone": "770-253-4264",
+      "email": "parishadmin@stpaulsnewnan.org",
+      "website": "http://www.stpaulsnewnan.org",
+      "type": "church",
+      "lat": 33.40872,
+      "lng": -84.811282
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Pauls Episcopal Church (Newnan)",
+      "years": {
+        "2015": {
+          "averageAttendance": 215,
+          "plateAndPledge": 561205,
+          "membership": 755
+        },
+        "2016": {
+          "averageAttendance": 186,
+          "plateAndPledge": 542267,
+          "membership": 700
+        },
+        "2017": {
+          "averageAttendance": 208,
+          "plateAndPledge": 559456,
+          "membership": 715
+        },
+        "2018": {
+          "averageAttendance": 175,
+          "plateAndPledge": 549729,
+          "membership": 732
+        },
+        "2019": {
+          "averageAttendance": 179,
+          "plateAndPledge": 609028,
+          "membership": 733
+        },
+        "2020": {
+          "averageAttendance": 166,
+          "plateAndPledge": 508209,
+          "membership": 731
+        },
+        "2021": {
+          "averageAttendance": 100,
+          "plateAndPledge": 545724,
+          "membership": 740
+        },
+        "2022": {
+          "averageAttendance": 124,
+          "plateAndPledge": 565865,
+          "membership": 739
+        },
+        "2023": {
+          "averageAttendance": 142,
+          "plateAndPledge": 617577,
+          "membership": 514
+        },
+        "2024": {
+          "averageAttendance": 149,
+          "plateAndPledge": 598137,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
@@ -1027,8 +1287,8 @@
     "receiving_names_from": "03/06/2026",
     "receiving_names_to": "05/10/2026",
     "updated_on_hub": "March 10",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.486Z",
+    "last_seen": "2026-03-28T06:50:26.486Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Michaels (Naugatuck)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
@@ -1141,13 +1401,13 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "05/10/2026",
     "updated_on_hub": "March 10",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Michaels (Litchfield)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
-    "vh_id": 10647,
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10647",
+    "vh_id": 10658,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10658",
     "detail_name": null,
     "address": null,
     "city": "Litchfield",
@@ -1175,71 +1435,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1521,
-      "name": "St. Michael's Episcopal Parish",
-      "street": "500A Heatherwood Court",
-      "city": "Naugatuck",
+      "nid": 1507,
+      "name": "St. Michael's Church Episcopal",
+      "street": "25 South St",
+      "city": "Litchfield",
       "state": "CT",
-      "zip": "06770",
-      "phone": "2037298249",
-      "email": "stmichaelsnaugatuck@gmail.com",
-      "website": "https://www.stmichaelsnaugatuck.org/about_us",
+      "zip": "06759-4005",
+      "phone": "(860) 567-9465",
+      "email": "office@stmichaels-litchfield.org",
+      "website": "https://stmichaels-litchfield.org/",
       "type": "church",
-      "lat": 41.4902,
-      "lng": -73.056209
+      "lat": 41.74624,
+      "lng": -73.18875
     },
-    "match_confidence": "high",
+    "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Michaels Episcopal Parish (Naugatuck)",
+      "congregationCity": "St Michaels Church Episcopal (Litchfield)",
       "years": {
         "2015": {
-          "averageAttendance": 118,
-          "plateAndPledge": 129746,
-          "membership": 294
+          "averageAttendance": 78,
+          "plateAndPledge": 231911,
+          "membership": 415
         },
         "2016": {
-          "averageAttendance": 130,
-          "plateAndPledge": 142629,
-          "membership": 299
+          "averageAttendance": 70,
+          "plateAndPledge": 253634,
+          "membership": 387
         },
         "2017": {
-          "averageAttendance": 109,
-          "plateAndPledge": 130590,
-          "membership": 310
+          "averageAttendance": 66,
+          "plateAndPledge": 283654,
+          "membership": 382
         },
         "2018": {
-          "averageAttendance": 110,
-          "plateAndPledge": 143339,
-          "membership": 323
+          "averageAttendance": 72,
+          "plateAndPledge": 292437,
+          "membership": 382
         },
         "2019": {
-          "averageAttendance": 113,
-          "plateAndPledge": 134919,
-          "membership": 326
+          "averageAttendance": 71,
+          "plateAndPledge": 293667,
+          "membership": 44
         },
         "2020": {
-          "averageAttendance": 100,
-          "plateAndPledge": 138022,
-          "membership": 341
+          "averageAttendance": 92,
+          "plateAndPledge": 286304,
+          "membership": 45
         },
         "2021": {
-          "averageAttendance": 39,
-          "plateAndPledge": 130260,
-          "membership": 341
+          "averageAttendance": 82,
+          "plateAndPledge": 261530,
+          "membership": 45
         },
         "2022": {
-          "averageAttendance": 53,
-          "plateAndPledge": 125092,
-          "membership": 326
+          "averageAttendance": 59,
+          "plateAndPledge": 291856,
+          "membership": 118
         },
         "2023": {
-          "averageAttendance": 61,
-          "plateAndPledge": 129740,
-          "membership": 300
+          "averageAttendance": 71,
+          "plateAndPledge": 277727,
+          "membership": 165
         },
         "2024": {
-          "averageAttendance": 53,
-          "plateAndPledge": 118231,
+          "averageAttendance": 59,
+          "plateAndPledge": 221919,
           "membership": null
         }
       }
@@ -1255,8 +1515,8 @@
     "receiving_names_from": "02/22/2026",
     "receiving_names_to": "04/12/2026",
     "updated_on_hub": "February 24",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Michaels (Arlington)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/22/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">February 24 </span></td>",
@@ -1368,14 +1628,14 @@
     "position_type": "Rector/Priest-in-Charge",
     "receiving_names_from": "03/27/2026",
     "receiving_names_to": "04/10/2026",
-    "updated_on_hub": "Today, 11:43 AM",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "updated_on_hub": "Yesterday, 11:43 AM",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
-    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Matthias (Midlothian)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/27/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Today, 11:43 AM</span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Matthias (Midlothian)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/27/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 11:43 AM</span></td>",
+    "vh_id": 10695,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10695",
     "detail_name": null,
     "address": null,
     "city": "Midlothian",
@@ -1401,7 +1661,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 5293,
+      "name": "St. Matthias' Episcopal Church",
+      "street": "11300 W Huguenot Rd",
+      "city": "Midlothian",
+      "state": "VA",
+      "zip": "23113-1121",
+      "phone": "804-464-1841",
+      "email": "st.matthias@stmatmidlo.com",
+      "website": "http://stmatmidlo.com/",
+      "type": "church",
+      "lat": 37.52558,
+      "lng": -77.60483
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Matthias Episcopal Church (Midlothian)",
+      "years": {
+        "2015": {
+          "averageAttendance": 216,
+          "plateAndPledge": 411559,
+          "membership": 729
+        },
+        "2016": {
+          "averageAttendance": 198,
+          "plateAndPledge": 396857,
+          "membership": 414
+        },
+        "2017": {
+          "averageAttendance": 198,
+          "plateAndPledge": 451606,
+          "membership": 425
+        },
+        "2018": {
+          "averageAttendance": 188,
+          "plateAndPledge": 525326,
+          "membership": 430
+        },
+        "2019": {
+          "averageAttendance": 176,
+          "plateAndPledge": 499005,
+          "membership": 433
+        },
+        "2020": {
+          "averageAttendance": 99,
+          "plateAndPledge": 488515,
+          "membership": 433
+        },
+        "2021": {
+          "averageAttendance": 66,
+          "plateAndPledge": 477106,
+          "membership": 435
+        },
+        "2022": {
+          "averageAttendance": 97,
+          "plateAndPledge": 467829,
+          "membership": 407
+        },
+        "2023": {
+          "averageAttendance": 135,
+          "plateAndPledge": 505883,
+          "membership": 410
+        },
+        "2024": {
+          "averageAttendance": 116,
+          "plateAndPledge": 513559,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
@@ -1413,13 +1743,13 @@
     "receiving_names_from": "02/19/2026",
     "receiving_names_to": "03/23/2026",
     "updated_on_hub": "March 17",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Matthews (Hillsborough)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/19/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/23/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
-    "vh_id": 10599,
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10599",
+    "vh_id": 10598,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10598",
     "detail_name": null,
     "address": null,
     "city": "Hillsborough",
@@ -1526,12 +1856,12 @@
     "position_type": "Rector/Priest-in-Charge",
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "04/16/2026",
-    "updated_on_hub": "Yesterday, 11:53 AM",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "updated_on_hub": "March 26",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
-    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Lukes (Atlanta)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/23/1900</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/16/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 11:53 AM</span></td>",
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Lukes (Atlanta)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/23/1900</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/16/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 26 </span></td>",
     "vh_id": 8614,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8614",
     "detail_name": null,
@@ -1641,13 +1971,13 @@
     "receiving_names_from": "03/17/2026",
     "receiving_names_to": "04/12/2026",
     "updated_on_hub": "March 17",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Johns (Wake Forest)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/17/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
-    "vh_id": 10675,
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10675",
+    "vh_id": 10674,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10674",
     "detail_name": null,
     "address": null,
     "city": "Wake Forest",
@@ -1675,71 +2005,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 4066,
+      "nid": 4152,
       "name": "St. John's Episcopal Church",
-      "street": "1623 Carmel Rd",
-      "city": "Charlotte",
+      "street": "834 Durham Rd",
+      "city": "Wake Forest",
       "state": "NC",
-      "zip": "28226-5097",
-      "phone": "704-366-3034",
-      "email": "kerry@stje.org",
-      "website": "https://www.stje.org",
+      "zip": "27587",
+      "phone": "",
+      "email": "",
+      "website": "",
       "type": "church",
-      "lat": 35.14336,
-      "lng": -80.80051
+      "lat": 35.979706,
+      "lng": -78.535384
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Johns Episcopal Church (Charlotte)",
+      "congregationCity": "St Johns Episcopal Church (Wake Forest)",
       "years": {
         "2015": {
-          "averageAttendance": 491,
-          "plateAndPledge": 1534227,
-          "membership": 2743
+          "averageAttendance": 127,
+          "plateAndPledge": 266381,
+          "membership": 803
         },
         "2016": {
-          "averageAttendance": 461,
-          "plateAndPledge": 1537180,
-          "membership": 2738
+          "averageAttendance": 120,
+          "plateAndPledge": 265717,
+          "membership": 828
         },
         "2017": {
-          "averageAttendance": 424,
-          "plateAndPledge": 1475415,
-          "membership": 2711
+          "averageAttendance": 129,
+          "plateAndPledge": 305112,
+          "membership": 823
         },
         "2018": {
-          "averageAttendance": 344,
-          "plateAndPledge": 1336691,
-          "membership": 1921
+          "averageAttendance": 136,
+          "plateAndPledge": 341018,
+          "membership": 866
         },
         "2019": {
-          "averageAttendance": 363,
-          "plateAndPledge": 1392092,
-          "membership": 1612
+          "averageAttendance": 150,
+          "plateAndPledge": 374151,
+          "membership": 876
         },
         "2020": {
-          "averageAttendance": 374,
-          "plateAndPledge": 1407109,
-          "membership": 1579
+          "averageAttendance": 178,
+          "plateAndPledge": 358072,
+          "membership": 740
         },
         "2021": {
-          "averageAttendance": 153,
-          "plateAndPledge": 1561238,
-          "membership": 1563
+          "averageAttendance": 124,
+          "plateAndPledge": 412890,
+          "membership": 675
         },
         "2022": {
-          "averageAttendance": 222,
-          "plateAndPledge": 1393351,
-          "membership": 987
+          "averageAttendance": 95,
+          "plateAndPledge": 434508,
+          "membership": 529
         },
         "2023": {
-          "averageAttendance": 249,
-          "plateAndPledge": 1510981,
-          "membership": 937
+          "averageAttendance": 147,
+          "plateAndPledge": 517700,
+          "membership": 558
         },
         "2024": {
-          "averageAttendance": 244,
-          "plateAndPledge": 1693405,
+          "averageAttendance": 148,
+          "plateAndPledge": 565543,
           "membership": null
         }
       }
@@ -1755,8 +2085,8 @@
     "receiving_names_from": "03/17/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 23",
-    "first_seen": "2026-03-27T18:46:21.172Z",
-    "last_seen": "2026-03-27T18:46:21.172Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Johns (Charlotte)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/17/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 23 </span></td>",
@@ -1869,8 +2199,8 @@
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 24",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St John (Stockton)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">San Joaquin</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 24 </span></td>",
@@ -1927,12 +2257,12 @@
     "position_type": "Rector/Priest-in-Charge",
     "receiving_names_from": "03/26/2026",
     "receiving_names_to": "",
-    "updated_on_hub": "Today, 11:49 AM",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "updated_on_hub": "Yesterday, 11:49 AM",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
-    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St John (Halifax)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Today, 11:49 AM</span></td>",
+    "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St John (Halifax)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 11:49 AM</span></td>",
     "vh_id": 10693,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10693",
     "detail_name": null,
@@ -2042,8 +2372,8 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "05/01/2026",
     "updated_on_hub": "March 12",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.485Z",
+    "last_seen": "2026-03-28T06:50:26.485Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St James (Pullman)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Spokane</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 12 </span></td>",
@@ -2156,8 +2486,8 @@
     "receiving_names_from": "03/06/2026",
     "receiving_names_to": "05/10/2026",
     "updated_on_hub": "March 10",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St James (New London)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
@@ -2270,8 +2600,8 @@
     "receiving_names_from": "12/05/2025",
     "receiving_names_to": "03/31/2026",
     "updated_on_hub": "March 13",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Anthonys (Winder)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">12/05/2025</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 13 </span></td>",
@@ -2384,13 +2714,13 @@
     "receiving_names_from": "03/19/2026",
     "receiving_names_to": "04/30/2026",
     "updated_on_hub": "March 19",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Andrews (Madison)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Wisconsin</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/19/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/30/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 19 </span></td>",
-    "vh_id": 10682,
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10682",
+    "vh_id": 10683,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10683",
     "detail_name": null,
     "address": null,
     "city": "Madison",
@@ -2428,13 +2758,13 @@
     "receiving_names_from": "09/15/2025",
     "receiving_names_to": "",
     "updated_on_hub": "March 18",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rosebud Episcopal Mission West, Diocese of South Dakota</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">South Dakota</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">CongregationMP</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Other</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">09/15/2025</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 18 </span></td>",
-    "vh_id": null,
-    "profile_url": null,
+    "vh_id": 10175,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
     "detail_name": null,
     "address": null,
     "city": "",
@@ -2472,8 +2802,8 @@
     "receiving_names_from": "02/18/2026",
     "receiving_names_to": "03/31/2026",
     "updated_on_hub": "March 11",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Resurrection (Sautee Nacoochee)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/18/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 11 </span></td>",
@@ -2586,8 +2916,8 @@
     "receiving_names_from": "03/17/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 17",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Holy Trinity (Greensboro)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/17/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
@@ -2700,8 +3030,8 @@
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "03/20/2026",
     "updated_on_hub": "March 16",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Holy Innocents (Atlanta)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/20/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 16 </span></td>",
@@ -2814,8 +3144,8 @@
     "receiving_names_from": "03/13/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 13",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Holy Cross (Hixson)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">East Tennessee</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/13/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 13 </span></td>",
@@ -2873,8 +3203,8 @@
     "receiving_names_from": "03/24/2026",
     "receiving_names_to": "05/06/2026",
     "updated_on_hub": "March 25",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.484Z",
+    "last_seen": "2026-03-28T06:50:26.484Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Good Shepherd (Maitland)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Central Florida</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/24/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 25 </span></td>",
@@ -2987,8 +3317,8 @@
     "receiving_names_from": "03/22/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 22",
-    "first_seen": "2026-03-27T18:46:21.171Z",
-    "last_seen": "2026-03-27T18:46:21.171Z",
+    "first_seen": "2026-03-28T06:50:26.483Z",
+    "last_seen": "2026-03-28T06:50:26.483Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Cople (Kinsale)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/22/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 22 </span></td>",
@@ -3101,13 +3431,13 @@
     "receiving_names_from": "11/28/2025",
     "receiving_names_to": "05/06/2026",
     "updated_on_hub": "March 10",
-    "first_seen": "2026-03-27T18:46:21.170Z",
-    "last_seen": "2026-03-27T18:46:21.170Z",
+    "first_seen": "2026-03-28T06:50:26.483Z",
+    "last_seen": "2026-03-28T06:50:26.483Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Christ (Stratford)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">11/28/2025</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
-    "vh_id": 8930,
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8930",
+    "vh_id": 8914,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8914",
     "detail_name": null,
     "address": null,
     "city": "Stratford",
@@ -3135,71 +3465,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1563,
-      "name": "Christ Church",
-      "street": "4 Wellers Bridge Rd",
-      "city": "Roxbury",
+      "nid": 1584,
+      "name": "Christ Episcopal Church",
+      "street": "2000 Main St",
+      "city": "Stratford",
       "state": "CT",
-      "zip": "06783",
-      "phone": "860-354-4113",
-      "email": "christchurcroxbury@gmail.com",
-      "website": "http://www.christchurchroxbury.net",
+      "zip": "06615-6397",
+      "phone": "203-375-4447",
+      "email": "ccstratford@att.net",
+      "website": "https://christchurchstratford.org",
       "type": "church",
-      "lat": 41.5566,
-      "lng": -73.31068
+      "lat": 41.188404,
+      "lng": -73.13023
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "Christ Church (Roxbury)",
+      "congregationCity": "Christ Episcopal Church (Stratford)",
       "years": {
         "2015": {
-          "averageAttendance": 60,
-          "plateAndPledge": 106542,
-          "membership": 158
+          "averageAttendance": 84,
+          "plateAndPledge": 120649,
+          "membership": 362
         },
         "2016": {
-          "averageAttendance": 42,
-          "plateAndPledge": 91744,
-          "membership": 110
+          "averageAttendance": 85,
+          "plateAndPledge": 117375,
+          "membership": 384
         },
         "2017": {
-          "averageAttendance": 33,
-          "plateAndPledge": 72829,
-          "membership": 112
+          "averageAttendance": 86,
+          "plateAndPledge": 123494,
+          "membership": 387
         },
         "2018": {
-          "averageAttendance": 27,
-          "plateAndPledge": 86661,
-          "membership": 108
+          "averageAttendance": 75,
+          "plateAndPledge": 146289,
+          "membership": 391
         },
         "2019": {
-          "averageAttendance": 27,
-          "plateAndPledge": 58300,
-          "membership": 108
+          "averageAttendance": 70,
+          "plateAndPledge": 154813,
+          "membership": 395
         },
         "2020": {
-          "averageAttendance": 26,
-          "plateAndPledge": 38600,
-          "membership": 110
+          "averageAttendance": 61,
+          "plateAndPledge": 135559,
+          "membership": 396
         },
         "2021": {
-          "averageAttendance": 18,
-          "plateAndPledge": 58254,
-          "membership": 109
+          "averageAttendance": 48,
+          "plateAndPledge": 134725,
+          "membership": 216
         },
         "2022": {
-          "averageAttendance": 23,
-          "plateAndPledge": 91618,
-          "membership": 85
+          "averageAttendance": 66,
+          "plateAndPledge": 151229,
+          "membership": 230
         },
         "2023": {
-          "averageAttendance": 25,
-          "plateAndPledge": 128772,
-          "membership": 74
+          "averageAttendance": 83,
+          "plateAndPledge": 159453,
+          "membership": 213
         },
         "2024": {
-          "averageAttendance": 30,
-          "plateAndPledge": 96699,
+          "averageAttendance": 82,
+          "plateAndPledge": 172842,
           "membership": null
         }
       }
@@ -3215,8 +3545,8 @@
     "receiving_names_from": "03/06/2026",
     "receiving_names_to": "05/06/2026",
     "updated_on_hub": "March 18",
-    "first_seen": "2026-03-27T18:46:21.170Z",
-    "last_seen": "2026-03-27T18:46:21.170Z",
+    "first_seen": "2026-03-28T06:50:26.483Z",
+    "last_seen": "2026-03-28T06:50:26.483Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Christ (Roxbury)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 18 </span></td>",
@@ -3329,8 +3659,8 @@
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "05/01/2026",
     "updated_on_hub": "March 23",
-    "first_seen": "2026-03-27T18:46:21.170Z",
-    "last_seen": "2026-03-27T18:46:21.170Z",
+    "first_seen": "2026-03-28T06:50:26.483Z",
+    "last_seen": "2026-03-28T06:50:26.483Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Christ (Cody)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Wyoming</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 23 </span></td>",
@@ -3443,8 +3773,8 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "",
     "updated_on_hub": "March 23",
-    "first_seen": "2026-03-27T18:46:21.170Z",
-    "last_seen": "2026-03-27T18:46:21.170Z",
+    "first_seen": "2026-03-28T06:50:26.483Z",
+    "last_seen": "2026-03-28T06:50:26.483Z",
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Calvary (Wadesboro)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/02/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 23 </span></td>",
