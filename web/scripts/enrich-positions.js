@@ -160,6 +160,8 @@ function main() {
 
       // Backfill diocese from church_info if profile has none
       let diocese = profile.diocese || '';
+      // Guard: if diocese looks like a URL, clear it so we fall through to backfill
+      if (diocese && /^https?:\/\/|\.org|\.com|\.net|\.edu/i.test(diocese)) diocese = '';
       if (!diocese && data && data.church_info) {
         // Look up diocese from registry church data
         const church = Object.values(churches).find(c => String(c.nid) === String(data.church_info.nid));

@@ -14,5 +14,6 @@
   "8920": { "diocese": "Dallas", "state": "TX", "notes": "Unknown - 214 area code = Dallas TX, Plains geo" },
   "8636": { "diocese": "Central Pennsylvania", "state": "PA", "notes": "Unknown - 570 area code = NE Pennsylvania" },
   "8607": { "diocese": "Kansas", "state": "KS", "notes": "St Matthew - 620 area code = SW Kansas, registry match in Newton KS" },
-  "8579": { "diocese": "Arkansas", "state": "AR", "notes": "Unknown - 501 area code = central Arkansas" }
+  "8579": { "diocese": "Arkansas", "state": "AR", "notes": "Unknown - 501 area code = central Arkansas" },
+  "10650": { "diocese": "Maine", "state": "ME", "notes": "St Marys and St Jude - profile diocese was URL (episcopalmaine.org), Northeast Harbor ME" }
 }
