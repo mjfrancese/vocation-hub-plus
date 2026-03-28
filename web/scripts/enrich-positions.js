@@ -242,9 +242,12 @@ function main() {
         } else {
           inferredStatus = 'Developing profile';
         }
-      } else if (inferredStatus === 'Receiving names' && fromDate && fromDate < oneYearAgo) {
-        // Override stale "Receiving names" - if receiving date is over 1 year old,
-        // the position is almost certainly filled/closed
+      }
+
+      // Override ANY status to "Search complete" if receiving date is over 1 year old.
+      // Positions from 2017-2024 showing as "Receiving names", "Profile complete",
+      // "Developing profile", etc. are almost certainly filled/closed.
+      if (fromDate && fromDate < oneYearAgo && inferredStatus !== 'Search complete' && inferredStatus !== 'No longer receiving names') {
         inferredStatus = 'Search complete';
       }
 
