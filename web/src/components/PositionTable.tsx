@@ -27,14 +27,64 @@ export default function PositionTable({ positions }: PositionTableProps) {
   const sorted = [...positions].sort((a, b) => {
     const aVal = a[sortField] || '';
     const bVal = b[sortField] || '';
-    // Date fields: parse MM/DD/YYYY to compare chronologically
+    // Date fields: parse various formats to compare chronologically
     if (sortField === 'receiving_names_from' || sortField === 'updated_on_hub') {
       const parseDate = (s: string) => {
+        if (!s) return 0;
         // Handle range like "02/18/2026 to 03/31/2026" - use first date
         const first = s.split(' to ')[0].trim();
-        const m = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-        if (m) return new Date(parseInt(m[3]), parseInt(m[1]) - 1, parseInt(m[2])).getTime();
-        // Try natural date parsing as fallback
+
+        // MM/DD/YYYY format
+        const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+        if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2])).getTime();
+
+        // "Today, HH:MM AM/PM" format
+        if (first.startsWith('Today')) {
+          const now = new Date();
+          const timeMatch = first.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+          if (timeMatch) {
+            let h = parseInt(timeMatch[1]);
+            const m = parseInt(timeMatch[2]);
+            if (timeMatch[3].toUpperCase() === 'PM' && h !== 12) h += 12;
+            if (timeMatch[3].toUpperCase() === 'AM' && h === 12) h = 0;
+            return new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m).getTime();
+          }
+          return new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+        }
+
+        // "Yesterday, HH:MM AM/PM" format
+        if (first.startsWith('Yesterday')) {
+          const now = new Date();
+          return new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1).getTime();
+        }
+
+        // "Month DD" format (no year - assume current year)
+        const monthDay = first.match(/^([A-Z][a-z]+)\s+(\d{1,2})$/);
+        if (monthDay) {
+          const months: Record<string, number> = {
+            January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
+            July: 6, August: 7, September: 8, October: 9, November: 10, December: 11,
+          };
+          const mo = months[monthDay[1]];
+          if (mo !== undefined) {
+            return new Date(new Date().getFullYear(), mo, parseInt(monthDay[2])).getTime();
+          }
+        }
+
+        // "Month DD, YYYY" format
+        const monthDayYear = first.match(/^([A-Z][a-z]+)\s+(\d{1,2}),?\s+(\d{4})$/);
+        if (monthDayYear) {
+          const months: Record<string, number> = {
+            January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
+            July: 6, August: 7, September: 8, October: 9, November: 10, December: 11,
+          };
+          const mo = months[monthDayYear[1]];
+          if (mo !== undefined) {
+            return new Date(parseInt(monthDayYear[3]), mo, parseInt(monthDayYear[2])).getTime();
+          }
+        }
+
+        // Try native Date parsing as last resort
         const d = new Date(first);
         return isNaN(d.getTime()) ? 0 : d.getTime();
       };
