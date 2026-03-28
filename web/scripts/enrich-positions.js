@@ -20,6 +20,15 @@ function parseMMDDYYYY(str) {
   return new Date(parseInt(m[3]), parseInt(m[1]) - 1, parseInt(m[2]));
 }
 
+// Fix bogus 1900 year in dates - VH defaults empty year fields to 1900.
+// For live positions, the month/day are correct but year should be current year.
+function fixBogusYear(dateStr) {
+  if (!dateStr) return dateStr;
+  const currentYear = new Date().getFullYear();
+  // Replace /1900 with current year (handles both MM/DD/1900 standalone and in ranges)
+  return dateStr.replace(/\/1900\b/g, `/${currentYear}`);
+}
+
 function load(name) {
   const file = path.join(DATA_DIR, name);
   if (!fs.existsSync(file)) return null;
@@ -101,6 +110,11 @@ function main() {
   for (const pos of positions) {
     const vhId = pos.vh_id;
     if (!pos.city) pos.city = extractCity(pos.name);
+
+    // Fix bogus 1900 year in receiving dates
+    if (pos.receiving_names_from) pos.receiving_names_from = fixBogusYear(pos.receiving_names_from);
+    if (pos.receiving_names_to) pos.receiving_names_to = fixBogusYear(pos.receiving_names_to);
+    if (pos.receiving_date) pos.receiving_date = fixBogusYear(pos.receiving_date);
 
     // Fix profile_url: always construct from vh_id to avoid scraper mapping bugs
     if (vhId) {
@@ -229,6 +243,14 @@ function main() {
 
       if (data) extChurch++;
       if (data?.parochial) extParochial++;
+
+      // Fix bogus 1900 year in receiving dates before status inference
+      if (profile.receiving_names_from) {
+        profile.receiving_names_from = fixBogusYear(profile.receiving_names_from);
+      }
+      if (profile.receiving_names_to) {
+        profile.receiving_names_to = fixBogusYear(profile.receiving_names_to);
+      }
 
       // Infer status - mark stale positions as closed
       let inferredStatus = profile.status || '';
