@@ -249,6 +249,9 @@ function main() {
       if (data) extChurch++;
       if (data?.parochial) extParochial++;
 
+      // Track if original date was 01/01/1900 (means "no date ever entered")
+      const hadBogusDate = /^01\/01\/1900/.test(profile.receiving_names_from || '');
+
       // Fix bogus 1900 year in receiving dates before status inference
       if (profile.receiving_names_from) {
         profile.receiving_names_from = fixBogusYear(profile.receiving_names_from);
@@ -275,6 +278,13 @@ function main() {
       // Positions from 2017-2024 showing as "Receiving names", "Profile complete",
       // "Developing profile", etc. are almost certainly filled/closed.
       if (fromDate && fromDate < oneYearAgo && inferredStatus !== 'Search complete' && inferredStatus !== 'No longer receiving names') {
+        inferredStatus = 'Search complete';
+      }
+
+      // 01/01/1900 = "no date was ever entered" on VH. These profiles have no salary,
+      // no housing, no narrative -- they were started but never completed. Mark as closed
+      // regardless of what VH says their status is.
+      if (hadBogusDate && inferredStatus !== 'Search complete' && inferredStatus !== 'No longer receiving names') {
         inferredStatus = 'Search complete';
       }
 
