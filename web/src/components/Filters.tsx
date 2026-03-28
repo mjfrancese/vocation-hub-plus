@@ -13,18 +13,18 @@ export interface FilterConfig {
 
 interface FiltersProps {
   filters: FilterConfig[];
-  statusValue: string;
-  onStatusChange: (value: string) => void;
   onClear: () => void;
+  hideClosed: boolean;
+  onHideClosedChange: (value: boolean) => void;
 }
 
 export default function Filters({
   filters,
-  statusValue,
-  onStatusChange,
   onClear,
+  hideClosed,
+  onHideClosedChange,
 }: FiltersProps) {
-  const hasFilters = filters.some(f => f.selected.length > 0) || statusValue;
+  const hasFilters = filters.some(f => f.selected.length > 0);
 
   return (
     <div className="space-y-3">
@@ -39,20 +39,17 @@ export default function Filters({
             width={f.width || 'w-44'}
           />
         ))}
-        <div className="flex flex-col">
-          <label className="text-xs font-medium text-gray-500 mb-1">Status</label>
-          <select
-            value={statusValue}
-            onChange={(e) => onStatusChange(e.target.value)}
-            className="block w-32 py-2 px-3 border border-gray-300 rounded-md text-sm
-                       text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500
-                       focus:border-primary-500 bg-white"
-          >
-            <option value="">All</option>
-            <option value="active">Active</option>
-            <option value="new">New</option>
-            <option value="expired">Expired</option>
-          </select>
+        <div className="flex flex-col justify-end">
+          <label className="flex items-center gap-2 py-2 px-3 text-sm text-gray-600 cursor-pointer
+                            border border-gray-300 rounded-md hover:bg-gray-50 select-none">
+            <input
+              type="checkbox"
+              checked={hideClosed}
+              onChange={(e) => onHideClosedChange(e.target.checked)}
+              className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+            />
+            Hide closed
+          </label>
         </div>
         {hasFilters && (
           <button
@@ -75,9 +72,6 @@ export default function Filters({
                 onRemove={() => f.onChange(f.selected.filter((s) => s !== v))}
               />
             ))
-          )}
-          {statusValue && (
-            <Chip key="status" label={statusValue} onRemove={() => onStatusChange('')} />
           )}
         </div>
       )}

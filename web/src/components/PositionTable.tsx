@@ -87,7 +87,11 @@ export default function PositionTable({ positions }: PositionTableProps) {
               <tr
                 key={pos.id}
                 onClick={() => toggleExpand(pos.id)}
-                className="hover:bg-gray-50 cursor-pointer transition-colors"
+                className={`cursor-pointer transition-colors ${
+                  expandedId === pos.id
+                    ? 'bg-primary-50 border-l-4 border-l-primary-500'
+                    : 'hover:bg-gray-50'
+                }`}
               >
                 <td className="px-4 py-3 text-sm font-medium text-gray-900 max-w-xs truncate">
                   {pos.name}
@@ -99,7 +103,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   {pos.receiving_names_from ? (
                     <>
                       {pos.receiving_names_from}
-                      {pos.receiving_names_to && ` to ${pos.receiving_names_to}`}
+                      {pos.receiving_names_to && pos.receiving_names_to !== 'Open ended' && ` to ${pos.receiving_names_to}`}
                     </>
                   ) : pos.vh_status ? (
                     <span className="text-gray-400 italic">{pos.vh_status}</span>
@@ -116,7 +120,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
               </tr>
               {expandedId === pos.id && (
                 <tr key={`${pos.id}-detail`}>
-                  <td colSpan={7} className="px-4 py-4 bg-gray-50">
+                  <td colSpan={7} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
                     <ExpandedDetail pos={pos} />
                   </td>
                 </tr>

@@ -13,6 +13,13 @@ const path = require('path');
 
 const DATA_DIR = path.resolve(__dirname, '../public/data');
 
+function parseMMDDYYYY(str) {
+  if (!str) return null;
+  const m = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (!m) return null;
+  return new Date(parseInt(m[3]), parseInt(m[1]) - 1, parseInt(m[2]));
+}
+
 function load(name) {
   const file = path.join(DATA_DIR, name);
   if (!fs.existsSync(file)) return null;
@@ -125,14 +132,30 @@ function main() {
       if (data) extChurch++;
       if (data?.parochial) extParochial++;
 
+      // Infer status if empty
+      let inferredStatus = profile.status || '';
+      if (!inferredStatus) {
+        const fromDate = parseMMDDYYYY(profile.receiving_names_from);
+        if (fromDate) {
+          const twoYearsAgo = new Date();
+          twoYearsAgo.setFullYear(twoYearsAgo.getFullYear() - 2);
+          inferredStatus = fromDate >= twoYearsAgo ? 'Receiving names' : 'Search complete';
+        } else {
+          inferredStatus = 'Developing profile';
+        }
+      }
+
       extended.push({
         vh_id: vhId,
         name: displayName,
         diocese,
-        vh_status: profile.status || '',
+        vh_status: inferredStatus,
         profile_url: profile.profile_url || '',
         position_type: profile.position_type || '',
         congregation: profile.congregation || '',
+        receiving_names_from: profile.receiving_names_from || '',
+        receiving_names_to: profile.receiving_names_to || '',
+        open_ended: profile.open_ended || false,
         church_info: data ? data.church_info : undefined,
         match_confidence: data ? data.confidence : undefined,
         parochial: data?.parochial || undefined,

@@ -102,6 +102,10 @@ export function getPositions(): Position[] {
       const profile = allProfiles.find(p => p.vh_id === vhId);
       const state = (e.church_info as Position['church_info'])?.state || getStateForDiocese(diocese);
 
+      const receivingFrom = (e.receiving_names_from as string) || '';
+      const receivingTo = (e.receiving_names_to as string) || '';
+      const vhStatus = (e.vh_status as string) || '';
+
       extendedPositions.push({
         id: `vh_${vhId}`,
         name: (e.name as string) || `Position in ${diocese}`,
@@ -109,22 +113,22 @@ export function getPositions(): Position[] {
         state,
         organization_type: '',
         position_type: (e.position_type as string) || '',
-        receiving_names_from: '',
-        receiving_names_to: '',
+        receiving_names_from: receivingFrom,
+        receiving_names_to: receivingTo,
         updated_on_hub: '',
         first_seen: '',
         last_seen: '',
-        status: 'active',
+        status: vhStatus || 'active',
         details_url: '',
         visibility: 'extended',
-        vh_status: (e.vh_status as string) || '',
+        vh_status: vhStatus,
         vh_id: vhId,
         profile_url: (e.profile_url as string) || '',
         deep_scrape_fields: profile?.all_fields,
         church_info: e.church_info as Position['church_info'],
         match_confidence: (e.match_confidence as Position['match_confidence']) || undefined,
         parochial: e.parochial as Position['parochial'],
-        is_new: false, // Extended positions rely on VH status, not dates
+        is_new: computeIsNew({ receiving_names_from: receivingFrom }),
       });
     }
   }

@@ -10,7 +10,7 @@ export interface Position {
   updated_on_hub: string;
   first_seen: string;
   last_seen: string;
-  status: 'active' | 'expired' | 'new';
+  status: string;
   details_url: string;
 
   // Visibility: 'public' = in VH search results, 'extended' = only via direct URL

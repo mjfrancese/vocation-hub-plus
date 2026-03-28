@@ -19,10 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   Vocation Hub+
                 </Link>
                 <div className="hidden sm:flex gap-6">
-                  <NavLink href="/">Search</NavLink>
-                  <NavLink href="/new/">New Positions</NavLink>
-                  <NavLink href="/expired/">Closed</NavLink>
-                  <NavLink href="/historical/">All Positions</NavLink>
+                  <NavLink href="/">Positions</NavLink>
                   <NavLink href="/analytics/">Analytics</NavLink>
                   <NavLink href="/about/">About</NavLink>
                 </div>
@@ -75,10 +72,7 @@ function MobileMenu() {
         </svg>
       </summary>
       <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-        <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Search</Link>
-        <Link href="/new/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">New Positions</Link>
-        <Link href="/expired/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Closed</Link>
-        <Link href="/historical/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">All Positions</Link>
+        <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Positions</Link>
         <Link href="/analytics/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Analytics</Link>
         <Link href="/about/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">About</Link>
       </div>

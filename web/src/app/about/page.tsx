@@ -1,7 +1,17 @@
-import { getMeta } from '@/lib/data';
+'use client';
+
+import { useMemo } from 'react';
+import { getPositions } from '@/lib/data';
+import { isClosedStatus, isActiveStatus, isDevelopingStatus, isInterimStatus } from '@/lib/status-helpers';
 
 export default function AboutPage() {
-  const meta = getMeta();
+  const positions = useMemo(() => getPositions(), []);
+
+  const total = positions.length;
+  const receiving = positions.filter(p => isActiveStatus(p.vh_status || '')).length;
+  const developing = positions.filter(p => isDevelopingStatus(p.vh_status || '')).length;
+  const interim = positions.filter(p => isInterimStatus(p.vh_status || '')).length;
+  const closed = positions.filter(p => isClosedStatus(p.vh_status || '')).length;
 
   return (
     <div className="max-w-3xl mx-auto space-y-8">
@@ -42,14 +52,11 @@ export default function AboutPage() {
         <h2 className="text-lg font-semibold text-gray-900">How it works</h2>
         <div className="bg-white border border-gray-200 rounded-lg p-6">
           <ol className="list-decimal list-inside space-y-2 text-gray-600">
-            <li>An automated process collects all position listings from Vocation Hub twice daily</li>
-            <li>Positions are compared against previous data to detect new, updated, and removed listings</li>
-            <li>The results are published to this site so you can search and filter them freely</li>
+            <li>An automated process collects position listings and detailed profile data from Vocation Hub</li>
+            <li>Each position is enriched with church directory data, parochial reports, and location information</li>
+            <li>The results are published here so you can search, filter, and compare positions freely</li>
           </ol>
         </div>
-        <p className="text-sm text-gray-500">
-          Data is refreshed every morning and evening (6:00 AM and 6:00 PM UTC).
-        </p>
       </section>
 
       <section className="space-y-4">
@@ -57,9 +64,11 @@ export default function AboutPage() {
         <div className="bg-white border border-gray-200 rounded-lg p-6">
           <ul className="list-disc list-inside space-y-2 text-gray-600">
             <li>Search across all positions by keyword (name, diocese, position type, and more)</li>
-            <li>Filter by diocese, position type, and status</li>
-            <li>See newly posted positions at a glance</li>
-            <li>Track when positions are filled or removed</li>
+            <li>Filter by state, diocese, position type, compensation, status, and more</li>
+            <li>View detailed profile data including compensation, benefits, and community narratives</li>
+            <li>Church directory integration with addresses and parochial report trends</li>
+            <li>Analytics dashboard with charts on compensation, geography, and attendance</li>
+            <li>Quick-filter chips to jump to new, receiving, developing, or closed positions</li>
             <li>Export any filtered view to CSV</li>
             <li>Mobile friendly</li>
           </ul>
@@ -68,17 +77,13 @@ export default function AboutPage() {
 
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-gray-900">Current Data</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard label="Total Positions" value={meta.totalPositions} />
-          <StatCard label="Active" value={meta.activeCount} />
-          <StatCard label="New" value={meta.newCount} />
-          <StatCard label="Expired" value={meta.expiredCount} />
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <StatCard label="Total Positions" value={total} />
+          <StatCard label="Receiving" value={receiving} />
+          <StatCard label="Developing" value={developing} />
+          <StatCard label="Interim" value={interim} />
+          <StatCard label="Closed" value={closed} />
         </div>
-        {meta.lastScrape && (
-          <p className="text-sm text-gray-500">
-            Last refreshed: {new Date(meta.lastScrape.scraped_at).toLocaleString()} ({meta.lastScrape.total_found} positions found)
-          </p>
-        )}
       </section>
 
       <section className="space-y-4">
