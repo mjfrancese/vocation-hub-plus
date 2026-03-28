@@ -205,6 +205,17 @@ export const DIOCESE_TO_STATE: Record<string, string> = {
 
   // Wyoming
   "Wyoming": "WY",
+
+  // Wisconsin (merged diocese)
+  "Wisconsin": "WI",
+  "Great Lakes": "MI",
+
+  // Territories & International
+  "Puerto Rico": "PR",
+  "Virgin Islands": "VI",
+  "Taiwan": "",
+  "Churches in Europe": "",
+  "Convocation of Episcopal Churches in Europe": "",
 };
 
 /**

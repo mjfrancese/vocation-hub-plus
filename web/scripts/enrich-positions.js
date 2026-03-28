@@ -22,10 +22,15 @@ function parseMMDDYYYY(str) {
 
 // Fix bogus 1900 year in dates - VH defaults empty year fields to 1900.
 // For live positions, the month/day are correct but year should be current year.
+// EXCEPTION: 01/01/1900 means "no date was ever entered" - clear it entirely.
 function fixBogusYear(dateStr) {
   if (!dateStr) return dateStr;
   const currentYear = new Date().getFullYear();
-  // Replace /1900 with current year (handles both MM/DD/1900 standalone and in ranges)
+  // If the entire string is 01/01/1900, it means no date was entered - return empty
+  if (dateStr.trim() === '01/01/1900') return '';
+  // For range strings like "01/01/1900 to 01/01/1900", clear entirely
+  if (/^01\/01\/1900\s*(to\s*01\/01\/1900)?$/.test(dateStr.trim())) return '';
+  // For any remaining /1900 dates with real month/day, fix to current year
   return dateStr.replace(/\/1900\b/g, `/${currentYear}`);
 }
 

@@ -80,6 +80,7 @@ export function getPositions(): Position[] {
     return {
       ...pos,
       city: pos.city || extractCity(pos.name),
+      state: pos.state || (pos.church_info as Position['church_info'])?.state || getStateForDiocese(pos.diocese || ''),
       visibility: 'public' as const,
       vh_status: pos.vh_status || profile?.status || '',
       deep_scrape_fields: pos.deep_scrape_fields || (vhId ? profileFields[String(vhId)] : undefined),
