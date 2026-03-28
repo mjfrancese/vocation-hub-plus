@@ -1,5 +1,17 @@
 [
   {
+    "vh_id": 10695,
+    "name": "St Matthias Episcopal Church",
+    "diocese": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10695",
+    "position_type": "",
+    "congregation": "St Matthias Episcopal Church",
+    "receiving_names_from": "03/27/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
     "vh_id": 10694,
     "name": "St Pauls Episcopal Church",
     "diocese": "Utah",
@@ -364,12 +376,12 @@
     }
   },
   {
-    "vh_id": 10682,
+    "vh_id": 10683,
     "name": "St Andrews Episcopal Church",
-    "diocese": "Wisconsin",
-    "vh_status": "Profile complete",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10682",
-    "position_type": "Rector/Priest-in-Charge",
+    "diocese": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10683",
+    "position_type": "",
     "congregation": "St Andrews Episcopal Church",
     "receiving_names_from": "03/19/2026",
     "receiving_names_to": "Open ended",
@@ -424,168 +436,16 @@
     "open_ended": true
   },
   {
-    "vh_id": 10676,
-    "name": "Holy Trinity Episcopal Church",
-    "diocese": "North Carolina",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10676",
-    "position_type": "Assistant/Associate/Curate",
-    "congregation": "Holy Trinity Episcopal Church",
-    "receiving_names_from": "03/17/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 4090,
-      "name": "Holy Trinity Episcopal Church",
-      "street": "607 N Greene St",
-      "city": "Greensboro",
-      "state": "NC",
-      "zip": "27401-2023",
-      "phone": "336-272-6149x272",
-      "email": "",
-      "website": "http://www.holy-trinity.com/",
-      "type": "church",
-      "lat": 36.07922,
-      "lng": -79.79128
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "Holy Trinity Episcopal Church (Greensboro)",
-      "years": {
-        "2015": {
-          "averageAttendance": 570,
-          "plateAndPledge": 1721629,
-          "membership": 2446
-        },
-        "2016": {
-          "averageAttendance": 570,
-          "plateAndPledge": 1881651,
-          "membership": 2491
-        },
-        "2017": {
-          "averageAttendance": 572,
-          "plateAndPledge": 1774307,
-          "membership": 2517
-        },
-        "2018": {
-          "averageAttendance": 585,
-          "plateAndPledge": 1802456,
-          "membership": 2545
-        },
-        "2019": {
-          "averageAttendance": 485,
-          "plateAndPledge": 1695034,
-          "membership": 2553
-        },
-        "2020": {
-          "averageAttendance": 413,
-          "plateAndPledge": 1673842,
-          "membership": 2548
-        },
-        "2021": {
-          "averageAttendance": 140,
-          "plateAndPledge": 1646011,
-          "membership": 2690
-        },
-        "2022": {
-          "averageAttendance": 228,
-          "plateAndPledge": 1562750,
-          "membership": 2675
-        },
-        "2023": {
-          "averageAttendance": 265,
-          "plateAndPledge": 1865266,
-          "membership": 2343
-        },
-        "2024": {
-          "averageAttendance": 269,
-          "plateAndPledge": 1883630,
-          "membership": null
-        }
-      }
-    }
-  },
-  {
-    "vh_id": 10675,
+    "vh_id": 10674,
     "name": "St Johns Episcopal Church",
-    "diocese": "North Carolina",
+    "diocese": "",
     "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10675",
-    "position_type": "Assistant/Associate/Curate",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10674",
+    "position_type": "",
     "congregation": "St Johns Episcopal Church",
     "receiving_names_from": "03/17/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 4066,
-      "name": "St. John's Episcopal Church",
-      "street": "1623 Carmel Rd",
-      "city": "Charlotte",
-      "state": "NC",
-      "zip": "28226-5097",
-      "phone": "704-366-3034",
-      "email": "kerry@stje.org",
-      "website": "https://www.stje.org",
-      "type": "church",
-      "lat": 35.14336,
-      "lng": -80.80051
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Johns Episcopal Church (Charlotte)",
-      "years": {
-        "2015": {
-          "averageAttendance": 491,
-          "plateAndPledge": 1534227,
-          "membership": 2743
-        },
-        "2016": {
-          "averageAttendance": 461,
-          "plateAndPledge": 1537180,
-          "membership": 2738
-        },
-        "2017": {
-          "averageAttendance": 424,
-          "plateAndPledge": 1475415,
-          "membership": 2711
-        },
-        "2018": {
-          "averageAttendance": 344,
-          "plateAndPledge": 1336691,
-          "membership": 1921
-        },
-        "2019": {
-          "averageAttendance": 363,
-          "plateAndPledge": 1392092,
-          "membership": 1612
-        },
-        "2020": {
-          "averageAttendance": 374,
-          "plateAndPledge": 1407109,
-          "membership": 1579
-        },
-        "2021": {
-          "averageAttendance": 153,
-          "plateAndPledge": 1561238,
-          "membership": 1563
-        },
-        "2022": {
-          "averageAttendance": 222,
-          "plateAndPledge": 1393351,
-          "membership": 987
-        },
-        "2023": {
-          "averageAttendance": 249,
-          "plateAndPledge": 1510981,
-          "membership": 937
-        },
-        "2024": {
-          "averageAttendance": 244,
-          "plateAndPledge": 1693405,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10664,
@@ -595,6 +455,18 @@
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10664",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "",
+    "receiving_names_from": "03/10/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
+    "vh_id": 10658,
+    "name": "St Michaels Church Episcopal",
+    "diocese": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10658",
+    "position_type": "",
+    "congregation": "St Michaels Church Episcopal",
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true
@@ -1362,6 +1234,18 @@
     }
   },
   {
+    "vh_id": 10627,
+    "name": "Trinity Parish & Old Swedes Church",
+    "diocese": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10627",
+    "position_type": "",
+    "congregation": "Trinity Parish & Old Swedes Church",
+    "receiving_names_from": "03/26/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
     "vh_id": 10624,
     "name": "Christ Episcopal Church",
     "diocese": "Pittsburgh",
@@ -1656,11 +1540,11 @@
     }
   },
   {
-    "vh_id": 10599,
+    "vh_id": 10598,
     "name": "St Matthews Parish Church",
     "diocese": "North Carolina",
     "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10599",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10598",
     "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Matthews Parish Church",
     "receiving_names_from": "02/19/2026",
@@ -4190,6 +4074,30 @@
         }
       }
     }
+  },
+  {
+    "vh_id": 10353,
+    "name": "St Pauls Episcopal Church",
+    "diocese": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10353",
+    "position_type": "",
+    "congregation": "St Pauls Episcopal Church",
+    "receiving_names_from": "02/28/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
+    "vh_id": 10352,
+    "name": "Zion Episcopal Church",
+    "diocese": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10352",
+    "position_type": "",
+    "congregation": "Zion Episcopal Church",
+    "receiving_names_from": "01/01/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
   },
   {
     "vh_id": 10351,
@@ -28036,6 +27944,18 @@
     "open_ended": true
   },
   {
+    "vh_id": 8950,
+    "name": "St James (Glastonbury)\nTrinity (Wethersfield)",
+    "diocese": "Connecticut",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8950",
+    "position_type": "Rector/Priest-in-Charge",
+    "congregation": "St James (Glastonbury)\nTrinity (Wethersfield)",
+    "receiving_names_from": "03/06/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
     "vh_id": 8948,
     "name": "Position in California",
     "diocese": "California",
@@ -28176,6 +28096,18 @@
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "12/15/2025",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
+    "vh_id": 8914,
+    "name": "Christ Episcopal Church",
+    "diocese": "Connecticut",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8914",
+    "position_type": "Rector/Priest-in-Charge",
+    "congregation": "Christ Episcopal Church",
+    "receiving_names_from": "11/28/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true
   },
@@ -30292,88 +30224,6 @@
     }
   },
   {
-    "vh_id": 8615,
-    "name": "Church of the Resurrection",
-    "diocese": "Atlanta",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8615",
-    "position_type": "Rector/Priest-in-Charge",
-    "congregation": "Church of the Resurrection",
-    "receiving_names_from": "02/18/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 2227,
-      "name": "Church of the Resurrection",
-      "street": "1755 Duncan Bridge Rd",
-      "city": "Sautee Nacoochee",
-      "state": "GA",
-      "zip": "30571-3611",
-      "phone": "706-865-9680",
-      "email": "rechurch1755@gmail.com",
-      "website": "https://www.resurrectionsautee.com",
-      "type": "church",
-      "lat": 34.65025,
-      "lng": -83.69578
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "Church of the Resurrection (Sautee Nacoochee)",
-      "years": {
-        "2015": {
-          "averageAttendance": 115,
-          "plateAndPledge": 243268,
-          "membership": 262
-        },
-        "2016": {
-          "averageAttendance": 110,
-          "plateAndPledge": 221206,
-          "membership": 256
-        },
-        "2017": {
-          "averageAttendance": 107,
-          "plateAndPledge": 270207,
-          "membership": 267
-        },
-        "2018": {
-          "averageAttendance": 110,
-          "plateAndPledge": 259279,
-          "membership": 266
-        },
-        "2019": {
-          "averageAttendance": 108,
-          "plateAndPledge": 247020,
-          "membership": 270
-        },
-        "2020": {
-          "averageAttendance": 104,
-          "plateAndPledge": 222653,
-          "membership": 267
-        },
-        "2021": {
-          "averageAttendance": 65,
-          "plateAndPledge": 232568,
-          "membership": 267
-        },
-        "2022": {
-          "averageAttendance": 88,
-          "plateAndPledge": 243429,
-          "membership": 171
-        },
-        "2023": {
-          "averageAttendance": 82,
-          "plateAndPledge": 241331,
-          "membership": 174
-        },
-        "2024": {
-          "averageAttendance": 76,
-          "plateAndPledge": 308872,
-          "membership": null
-        }
-      }
-    }
-  },
-  {
     "vh_id": 8611,
     "name": "St Pauls Episcopal Church",
     "diocese": "",
@@ -30638,88 +30488,6 @@
         "2024": {
           "averageAttendance": 70,
           "plateAndPledge": 214427,
-          "membership": null
-        }
-      }
-    }
-  },
-  {
-    "vh_id": 8602,
-    "name": "St Peters Episcopal Church",
-    "diocese": "Atlanta",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8602",
-    "position_type": "Assistant/Associate/Curate",
-    "congregation": "St Peters Episcopal Church",
-    "receiving_names_from": "02/23/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 2224,
-      "name": "St. Peter's Episcopal Church",
-      "street": "101 E 4th Ave",
-      "city": "Rome",
-      "state": "GA",
-      "zip": "30161-3119",
-      "phone": "706-291-9111",
-      "email": "",
-      "website": "http://stpetersrome.org/ministries/canterbury/",
-      "type": "church",
-      "lat": 34.253966,
-      "lng": -85.170719
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Peters Episcopal Church (Rome)",
-      "years": {
-        "2015": {
-          "averageAttendance": 201,
-          "plateAndPledge": 628502,
-          "membership": 960
-        },
-        "2016": {
-          "averageAttendance": 186,
-          "plateAndPledge": 668505,
-          "membership": 995
-        },
-        "2017": {
-          "averageAttendance": 203,
-          "plateAndPledge": 705325,
-          "membership": 739
-        },
-        "2018": {
-          "averageAttendance": 196,
-          "plateAndPledge": 699084,
-          "membership": 729
-        },
-        "2019": {
-          "averageAttendance": 248,
-          "plateAndPledge": 739770,
-          "membership": 733
-        },
-        "2020": {
-          "averageAttendance": 229,
-          "plateAndPledge": 803608,
-          "membership": 675
-        },
-        "2021": {
-          "averageAttendance": 118,
-          "plateAndPledge": 794033,
-          "membership": 678
-        },
-        "2022": {
-          "averageAttendance": 154,
-          "plateAndPledge": 853158,
-          "membership": 619
-        },
-        "2023": {
-          "averageAttendance": 170,
-          "plateAndPledge": 855281,
-          "membership": 505
-        },
-        "2024": {
-          "averageAttendance": 166,
-          "plateAndPledge": 819697,
           "membership": null
         }
       }

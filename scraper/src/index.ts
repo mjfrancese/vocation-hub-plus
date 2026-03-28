@@ -70,9 +70,8 @@ async function main(): Promise<void> {
             if (pagerText && !pagerText.includes('0 - 0 of 0')) {
               const result = await discoverAndScrapePositions(page, CONFIG.url);
 
-              // Save ID mapping
-              const sortedPositions = [...positions].sort((a, b) => a.name.localeCompare(b.name));
-              saveIdMapping(sortedPositions, result.ids);
+              // Save ID mapping (positions are in search table order, same as result.ids)
+              saveIdMapping(positions, result.ids);
 
               // Save profile fields for the frontend
               saveProfileFields(result.profiles);

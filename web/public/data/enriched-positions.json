@@ -102,7 +102,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Trinity Torrington and Trinity Lime Rock, Diocese of Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">CongregationMP</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/11/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 18 </span></td>",
-    "vh_id": null,
+    "vh_id": 10643,
     "profile_url": null,
     "detail_name": null,
     "address": null,
@@ -190,7 +190,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Trinity (Manassas)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/24/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">February 24 </span></td>",
-    "vh_id": null,
+    "vh_id": 10614,
     "profile_url": null,
     "detail_name": null,
     "address": null,
@@ -217,7 +217,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 1789,
+      "name": "Trinity Church",
+      "street": "9325 West St",
+      "city": "Manassas",
+      "state": "VA",
+      "zip": "20110-5197",
+      "phone": "703 368-4231",
+      "email": "carole@trinityepiscopalchurch.org",
+      "website": "https://www.trinityepiscopalchurch.org",
+      "type": "church",
+      "lat": 38.75226,
+      "lng": -77.47315
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "Trinity Church (Manassas)",
+      "years": {
+        "2015": {
+          "averageAttendance": 272,
+          "plateAndPledge": 522845,
+          "membership": 1134
+        },
+        "2016": {
+          "averageAttendance": 272,
+          "plateAndPledge": 522845,
+          "membership": 1134
+        },
+        "2017": {
+          "averageAttendance": 272,
+          "plateAndPledge": 522845,
+          "membership": 1134
+        },
+        "2018": {
+          "averageAttendance": 226,
+          "plateAndPledge": 464992,
+          "membership": 1159
+        },
+        "2019": {
+          "averageAttendance": 219,
+          "plateAndPledge": 464992,
+          "membership": 1159
+        },
+        "2020": {
+          "averageAttendance": 0,
+          "plateAndPledge": 0,
+          "membership": 1159
+        },
+        "2021": {
+          "averageAttendance": 86,
+          "plateAndPledge": 425465,
+          "membership": 981
+        },
+        "2022": {
+          "averageAttendance": 109,
+          "plateAndPledge": 390906,
+          "membership": 871
+        },
+        "2023": {
+          "averageAttendance": 123,
+          "plateAndPledge": 403636,
+          "membership": 670
+        },
+        "2024": {
+          "averageAttendance": 109,
+          "plateAndPledge": 386926,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "9c2aa24afefd5ee185764545891790f3bde07e26fceb8cedbbf75c0f737b308e",
@@ -234,7 +304,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St. David's (Austin)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Texas</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 12 </span></td>",
-    "vh_id": null,
+    "vh_id": 10668,
     "profile_url": null,
     "detail_name": null,
     "address": null,
@@ -261,7 +331,77 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null
+    "raw_content": null,
+    "church_info": {
+      "nid": 5609,
+      "name": "St. David's Episcopal Church",
+      "street": "301 E 8th St",
+      "city": "Austin",
+      "state": "TX",
+      "zip": "78701-3280",
+      "phone": "512-610-3500",
+      "email": "info@stdave.org",
+      "website": "http://www.stdave.org",
+      "type": "church",
+      "lat": 30.26882,
+      "lng": -97.73914
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Davids Episcopal Church (Austin)",
+      "years": {
+        "2015": {
+          "averageAttendance": 677,
+          "plateAndPledge": 2022576,
+          "membership": 2222
+        },
+        "2016": {
+          "averageAttendance": 705,
+          "plateAndPledge": 1895099,
+          "membership": 2138
+        },
+        "2017": {
+          "averageAttendance": 598,
+          "plateAndPledge": 1883571,
+          "membership": 2010
+        },
+        "2018": {
+          "averageAttendance": 551,
+          "plateAndPledge": 1829096,
+          "membership": 1976
+        },
+        "2019": {
+          "averageAttendance": 536,
+          "plateAndPledge": 1727484,
+          "membership": 1934
+        },
+        "2020": {
+          "averageAttendance": 533,
+          "plateAndPledge": 1592225,
+          "membership": 1892
+        },
+        "2021": {
+          "averageAttendance": 237,
+          "plateAndPledge": 1474300,
+          "membership": 1875
+        },
+        "2022": {
+          "averageAttendance": 235,
+          "plateAndPledge": 1468909,
+          "membership": 1863
+        },
+        "2023": {
+          "averageAttendance": 251,
+          "plateAndPledge": 1306158,
+          "membership": 1852
+        },
+        "2024": {
+          "averageAttendance": 253,
+          "plateAndPledge": 1613117,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
@@ -278,7 +418,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Thomas (Reidsville)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
-    "vh_id": 10352,
+    "vh_id": 10346,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10352",
     "detail_name": null,
     "address": null,
@@ -307,75 +447,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 4128,
-      "name": "St. Thomas Episcopal Church ",
-      "street": "315 Lindsey St",
-      "city": "Reidsville",
+      "nid": 7233,
+      "name": "Diocesan House",
+      "street": "4800 Six Forks Road",
+      "city": "Raleigh",
       "state": "NC",
-      "zip": "27320-3649",
-      "phone": "336-349-3511",
-      "email": "office@stthomasreidsville.org",
-      "website": "http://www.stthomasreidsville.org",
-      "type": "church",
-      "lat": 36.359111,
-      "lng": -79.667012
+      "zip": "27609",
+      "phone": "(919) 834-7474",
+      "email": "communications@episdionc.org",
+      "website": "http://www.episdionc.org",
+      "type": "other",
+      "lat": 35.84529,
+      "lng": -78.64266
     },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Thomas Episcopal Church (Reidsville)",
-      "years": {
-        "2015": {
-          "averageAttendance": 57,
-          "plateAndPledge": 169841,
-          "membership": 170
-        },
-        "2016": {
-          "averageAttendance": 50,
-          "plateAndPledge": 165605,
-          "membership": 169
-        },
-        "2017": {
-          "averageAttendance": 42,
-          "plateAndPledge": 162943,
-          "membership": 136
-        },
-        "2018": {
-          "averageAttendance": 40,
-          "plateAndPledge": 152944,
-          "membership": 113
-        },
-        "2019": {
-          "averageAttendance": 21,
-          "plateAndPledge": 138365,
-          "membership": 109
-        },
-        "2020": {
-          "averageAttendance": 22,
-          "plateAndPledge": 116088,
-          "membership": 109
-        },
-        "2021": {
-          "averageAttendance": 27,
-          "plateAndPledge": 122841,
-          "membership": 111
-        },
-        "2022": {
-          "averageAttendance": 28,
-          "plateAndPledge": 165818,
-          "membership": 103
-        },
-        "2023": {
-          "averageAttendance": 37,
-          "plateAndPledge": 145196,
-          "membership": 104
-        },
-        "2024": {
-          "averageAttendance": 32,
-          "plateAndPledge": 260931,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
@@ -392,7 +477,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peters (Smyrna)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Delaware</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/13/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 13 </span></td>",
-    "vh_id": 8950,
+    "vh_id": 10665,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8950",
     "detail_name": null,
     "address": null,
@@ -436,7 +521,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peters (Rome)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/23/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 11 </span></td>",
-    "vh_id": 10643,
+    "vh_id": 8602,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10643",
     "detail_name": null,
     "address": null,
@@ -550,7 +635,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Peter (Norfolk)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Today, 11:57 AM</span></td>",
-    "vh_id": 10627,
+    "vh_id": 10692,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10627",
     "detail_name": null,
     "address": null,
@@ -664,7 +749,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Pauls (Visalia)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">San Joaquin</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 24 </span></td>",
-    "vh_id": 10614,
+    "vh_id": null,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10614",
     "detail_name": null,
     "address": null,
@@ -691,42 +776,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "nid": 5002,
-      "name": "St. Paul's Episcopal Church",
-      "street": "120 N Hall Street",
-      "city": "Visalia",
-      "state": "CA",
-      "zip": "93291",
-      "phone": "(559) 627-8265",
-      "email": "stpaulsepiscopaloffice@gmail.com",
-      "website": "https://www.stpaulsepiscopalvisalia.com",
-      "type": "church",
-      "lat": 36.330737,
-      "lng": -119.308399
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Visalia)",
-      "years": {
-        "2022": {
-          "averageAttendance": 26,
-          "plateAndPledge": 82754,
-          "membership": 68
-        },
-        "2023": {
-          "averageAttendance": 32,
-          "plateAndPledge": 89137,
-          "membership": 74
-        },
-        "2024": {
-          "averageAttendance": 34,
-          "plateAndPledge": 106079,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
@@ -743,7 +793,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Pauls (Newnan)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 20 </span></td>",
-    "vh_id": 10668,
+    "vh_id": null,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10668",
     "detail_name": null,
     "address": null,
@@ -770,77 +820,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "nid": 6840,
-      "name": "St. Paul's Episcopal Church",
-      "street": "576 Roscoe Rd",
-      "city": "Newnan",
-      "state": "GA",
-      "zip": "30263",
-      "phone": "770-253-4264",
-      "email": "parishadmin@stpaulsnewnan.org",
-      "website": "http://www.stpaulsnewnan.org",
-      "type": "church",
-      "lat": 33.40872,
-      "lng": -84.811282
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Pauls Episcopal Church (Newnan)",
-      "years": {
-        "2015": {
-          "averageAttendance": 215,
-          "plateAndPledge": 561205,
-          "membership": 755
-        },
-        "2016": {
-          "averageAttendance": 186,
-          "plateAndPledge": 542267,
-          "membership": 700
-        },
-        "2017": {
-          "averageAttendance": 208,
-          "plateAndPledge": 559456,
-          "membership": 715
-        },
-        "2018": {
-          "averageAttendance": 175,
-          "plateAndPledge": 549729,
-          "membership": 732
-        },
-        "2019": {
-          "averageAttendance": 179,
-          "plateAndPledge": 609028,
-          "membership": 733
-        },
-        "2020": {
-          "averageAttendance": 166,
-          "plateAndPledge": 508209,
-          "membership": 731
-        },
-        "2021": {
-          "averageAttendance": 100,
-          "plateAndPledge": 545724,
-          "membership": 740
-        },
-        "2022": {
-          "averageAttendance": 124,
-          "plateAndPledge": 565865,
-          "membership": 739
-        },
-        "2023": {
-          "averageAttendance": 142,
-          "plateAndPledge": 617577,
-          "membership": 514
-        },
-        "2024": {
-          "averageAttendance": 149,
-          "plateAndPledge": 598137,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
@@ -857,7 +837,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Michaels (Naugatuck)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
-    "vh_id": 10346,
+    "vh_id": 10647,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10346",
     "detail_name": null,
     "address": null,
@@ -886,20 +866,75 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
-      "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
+      "nid": 1507,
+      "name": "St. Michael's Church Episcopal",
+      "street": "25 South St",
+      "city": "Litchfield",
+      "state": "CT",
+      "zip": "06759-4005",
+      "phone": "(860) 567-9465",
+      "email": "office@stmichaels-litchfield.org",
+      "website": "https://stmichaels-litchfield.org/",
+      "type": "church",
+      "lat": 41.74624,
+      "lng": -73.18875
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Michaels Church Episcopal (Litchfield)",
+      "years": {
+        "2015": {
+          "averageAttendance": 78,
+          "plateAndPledge": 231911,
+          "membership": 415
+        },
+        "2016": {
+          "averageAttendance": 70,
+          "plateAndPledge": 253634,
+          "membership": 387
+        },
+        "2017": {
+          "averageAttendance": 66,
+          "plateAndPledge": 283654,
+          "membership": 382
+        },
+        "2018": {
+          "averageAttendance": 72,
+          "plateAndPledge": 292437,
+          "membership": 382
+        },
+        "2019": {
+          "averageAttendance": 71,
+          "plateAndPledge": 293667,
+          "membership": 44
+        },
+        "2020": {
+          "averageAttendance": 92,
+          "plateAndPledge": 286304,
+          "membership": 45
+        },
+        "2021": {
+          "averageAttendance": 82,
+          "plateAndPledge": 261530,
+          "membership": 45
+        },
+        "2022": {
+          "averageAttendance": 59,
+          "plateAndPledge": 291856,
+          "membership": 118
+        },
+        "2023": {
+          "averageAttendance": 71,
+          "plateAndPledge": 277727,
+          "membership": 165
+        },
+        "2024": {
+          "averageAttendance": 59,
+          "plateAndPledge": 221919,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
@@ -916,7 +951,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Michaels (Litchfield)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
-    "vh_id": 10665,
+    "vh_id": 10647,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10665",
     "detail_name": null,
     "address": null,
@@ -1030,7 +1065,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Michaels (Arlington)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/22/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">February 24 </span></td>",
-    "vh_id": 10692,
+    "vh_id": 10600,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10692",
     "detail_name": null,
     "address": null,
@@ -1144,7 +1179,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Matthias (Midlothian)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/27/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Today, 11:43 AM</span></td>",
-    "vh_id": 10353,
+    "vh_id": null,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10353",
     "detail_name": null,
     "address": null,
@@ -1171,77 +1206,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "nid": 5293,
-      "name": "St. Matthias' Episcopal Church",
-      "street": "11300 W Huguenot Rd",
-      "city": "Midlothian",
-      "state": "VA",
-      "zip": "23113-1121",
-      "phone": "804-464-1841",
-      "email": "st.matthias@stmatmidlo.com",
-      "website": "http://stmatmidlo.com/",
-      "type": "church",
-      "lat": 37.52558,
-      "lng": -77.60483
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Matthias Episcopal Church (Midlothian)",
-      "years": {
-        "2015": {
-          "averageAttendance": 216,
-          "plateAndPledge": 411559,
-          "membership": 729
-        },
-        "2016": {
-          "averageAttendance": 198,
-          "plateAndPledge": 396857,
-          "membership": 414
-        },
-        "2017": {
-          "averageAttendance": 198,
-          "plateAndPledge": 451606,
-          "membership": 425
-        },
-        "2018": {
-          "averageAttendance": 188,
-          "plateAndPledge": 525326,
-          "membership": 430
-        },
-        "2019": {
-          "averageAttendance": 176,
-          "plateAndPledge": 499005,
-          "membership": 433
-        },
-        "2020": {
-          "averageAttendance": 99,
-          "plateAndPledge": 488515,
-          "membership": 433
-        },
-        "2021": {
-          "averageAttendance": 66,
-          "plateAndPledge": 477106,
-          "membership": 435
-        },
-        "2022": {
-          "averageAttendance": 97,
-          "plateAndPledge": 467829,
-          "membership": 407
-        },
-        "2023": {
-          "averageAttendance": 135,
-          "plateAndPledge": 505883,
-          "membership": 410
-        },
-        "2024": {
-          "averageAttendance": 116,
-          "plateAndPledge": 513559,
-          "membership": null
-        }
-      }
-    }
+    "raw_content": null
   },
   {
     "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
@@ -1258,7 +1223,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Matthews (Hillsborough)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/19/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/23/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
-    "vh_id": 10647,
+    "vh_id": 10599,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10647",
     "detail_name": null,
     "address": null,
@@ -1287,75 +1252,20 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 4102,
-      "name": "St. Matthew's Episcopal Church",
-      "street": "210 St. Mary's Road",
-      "city": "Hillsborough",
+      "nid": 7233,
+      "name": "Diocesan House",
+      "street": "4800 Six Forks Road",
+      "city": "Raleigh",
       "state": "NC",
-      "zip": "27278-2518",
-      "phone": "919-732-9308",
-      "email": "welcome@stmatthewshillsborough.org",
-      "website": "http://www.stmatthewshillsborough.org",
-      "type": "church",
-      "lat": 36.07613,
-      "lng": -79.09551
+      "zip": "27609",
+      "phone": "(919) 834-7474",
+      "email": "communications@episdionc.org",
+      "website": "http://www.episdionc.org",
+      "type": "other",
+      "lat": 35.84529,
+      "lng": -78.64266
     },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Matthews Parish Church (Hillsborough)",
-      "years": {
-        "2015": {
-          "averageAttendance": 179,
-          "plateAndPledge": 458431,
-          "membership": 366
-        },
-        "2016": {
-          "averageAttendance": 179,
-          "plateAndPledge": 460571,
-          "membership": 359
-        },
-        "2017": {
-          "averageAttendance": 181,
-          "plateAndPledge": 479579,
-          "membership": 340
-        },
-        "2018": {
-          "averageAttendance": 162,
-          "plateAndPledge": 472288,
-          "membership": 360
-        },
-        "2019": {
-          "averageAttendance": 179,
-          "plateAndPledge": 466342,
-          "membership": 345
-        },
-        "2020": {
-          "averageAttendance": 198,
-          "plateAndPledge": 487421,
-          "membership": 353
-        },
-        "2021": {
-          "averageAttendance": 79,
-          "plateAndPledge": 531509,
-          "membership": 319
-        },
-        "2022": {
-          "averageAttendance": 124,
-          "plateAndPledge": 516189,
-          "membership": 283
-        },
-        "2023": {
-          "averageAttendance": 147,
-          "plateAndPledge": 560931,
-          "membership": 346
-        },
-        "2024": {
-          "averageAttendance": 160,
-          "plateAndPledge": 606765,
-          "membership": null
-        }
-      }
-    }
+    "match_confidence": "exact"
   },
   {
     "id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
@@ -1372,7 +1282,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Lukes (Atlanta)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/23/1900</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/16/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Yesterday, 11:53 AM</span></td>",
-    "vh_id": 10658,
+    "vh_id": 8614,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10658",
     "detail_name": null,
     "address": null,
@@ -1486,7 +1396,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Johns (Wake Forest)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/17/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
-    "vh_id": 10600,
+    "vh_id": 10675,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10600",
     "detail_name": null,
     "address": null,
@@ -1515,71 +1425,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1704,
-      "name": "St. Michael's Church",
-      "street": "1132 N Ivanhoe St",
-      "city": "Arlington",
-      "state": "VA",
-      "zip": "22205-2445",
-      "phone": "703-241-2474",
-      "email": "parishoffice@stmichaelsarlington.org",
-      "website": "http://stmichaelsarlington.org/",
+      "nid": 4066,
+      "name": "St. John's Episcopal Church",
+      "street": "1623 Carmel Rd",
+      "city": "Charlotte",
+      "state": "NC",
+      "zip": "28226-5097",
+      "phone": "704-366-3034",
+      "email": "kerry@stje.org",
+      "website": "https://www.stje.org",
       "type": "church",
-      "lat": 38.882359,
-      "lng": -77.132383
+      "lat": 35.14336,
+      "lng": -80.80051
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "St Michaels Church (Arlington)",
+      "congregationCity": "St Johns Episcopal Church (Charlotte)",
       "years": {
         "2015": {
-          "averageAttendance": 109,
-          "plateAndPledge": 290550,
-          "membership": 227
+          "averageAttendance": 491,
+          "plateAndPledge": 1534227,
+          "membership": 2743
         },
         "2016": {
-          "averageAttendance": 101,
-          "plateAndPledge": 308206,
-          "membership": 230
+          "averageAttendance": 461,
+          "plateAndPledge": 1537180,
+          "membership": 2738
         },
         "2017": {
-          "averageAttendance": 105,
-          "plateAndPledge": 264512,
-          "membership": 219
+          "averageAttendance": 424,
+          "plateAndPledge": 1475415,
+          "membership": 2711
         },
         "2018": {
-          "averageAttendance": 105,
-          "plateAndPledge": 264719,
-          "membership": 225
+          "averageAttendance": 344,
+          "plateAndPledge": 1336691,
+          "membership": 1921
         },
         "2019": {
-          "averageAttendance": 106,
-          "plateAndPledge": 288867,
-          "membership": 235
+          "averageAttendance": 363,
+          "plateAndPledge": 1392092,
+          "membership": 1612
         },
         "2020": {
-          "averageAttendance": 115,
-          "plateAndPledge": 301273,
-          "membership": 242
+          "averageAttendance": 374,
+          "plateAndPledge": 1407109,
+          "membership": 1579
         },
         "2021": {
-          "averageAttendance": 52,
-          "plateAndPledge": 326115,
-          "membership": 264
+          "averageAttendance": 153,
+          "plateAndPledge": 1561238,
+          "membership": 1563
         },
         "2022": {
-          "averageAttendance": 64,
-          "plateAndPledge": 367172,
-          "membership": 210
+          "averageAttendance": 222,
+          "plateAndPledge": 1393351,
+          "membership": 987
         },
         "2023": {
-          "averageAttendance": 63,
-          "plateAndPledge": 396575,
-          "membership": 193
+          "averageAttendance": 249,
+          "plateAndPledge": 1510981,
+          "membership": 937
         },
         "2024": {
-          "averageAttendance": 71,
-          "plateAndPledge": 447678,
+          "averageAttendance": 244,
+          "plateAndPledge": 1693405,
           "membership": null
         }
       }
@@ -1600,7 +1510,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Johns (Charlotte)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/17/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 23 </span></td>",
-    "vh_id": 10695,
+    "vh_id": 10675,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10695",
     "detail_name": null,
     "address": null,
@@ -1714,7 +1624,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St John (Stockton)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">San Joaquin</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/28/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 24 </span></td>",
-    "vh_id": 10598,
+    "vh_id": 10318,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10598",
     "detail_name": null,
     "address": null,
@@ -1741,22 +1651,7 @@
     "website_url": null,
     "social_media_links": null,
     "narrative_reflections": null,
-    "raw_content": null,
-    "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
-      "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
-    },
-    "match_confidence": "exact"
+    "raw_content": null
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
@@ -1773,7 +1668,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St John (Halifax)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Southern Virginia</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/26/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">Today, 11:49 AM</span></td>",
-    "vh_id": 8614,
+    "vh_id": 10693,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8614",
     "detail_name": null,
     "address": null,
@@ -1887,7 +1782,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St James (Pullman)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Spokane</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/12/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/01/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 12 </span></td>",
-    "vh_id": 10674,
+    "vh_id": 10649,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10674",
     "detail_name": null,
     "address": null,
@@ -1916,20 +1811,75 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 7233,
-      "name": "Diocesan House",
-      "street": "4800 Six Forks Road",
-      "city": "Raleigh",
-      "state": "NC",
-      "zip": "27609",
-      "phone": "(919) 834-7474",
-      "email": "communications@episdionc.org",
-      "website": "http://www.episdionc.org",
-      "type": "other",
-      "lat": 35.84529,
-      "lng": -78.64266
+      "nid": 5504,
+      "name": "St. James Episcopal Church, Pullman",
+      "street": "1410 NE Stadium Way",
+      "city": "Pullman",
+      "state": "WA",
+      "zip": "99163-3897",
+      "phone": "509-332-1742",
+      "email": "office@stjamespullman.org",
+      "website": "http://stjamespullman.org",
+      "type": "church",
+      "lat": 46.736874,
+      "lng": -117.162606
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St James Episcopal Church (Pullman)",
+      "years": {
+        "2015": {
+          "averageAttendance": 62,
+          "plateAndPledge": 163934,
+          "membership": 185
+        },
+        "2016": {
+          "averageAttendance": 63,
+          "plateAndPledge": 176243,
+          "membership": 188
+        },
+        "2017": {
+          "averageAttendance": 60,
+          "plateAndPledge": 183609,
+          "membership": 209
+        },
+        "2018": {
+          "averageAttendance": 59,
+          "plateAndPledge": 185299,
+          "membership": 214
+        },
+        "2019": {
+          "averageAttendance": 53,
+          "plateAndPledge": 174857,
+          "membership": 219
+        },
+        "2020": {
+          "averageAttendance": 53,
+          "plateAndPledge": 173627,
+          "membership": 221
+        },
+        "2021": {
+          "averageAttendance": 28,
+          "plateAndPledge": 161476,
+          "membership": 220
+        },
+        "2022": {
+          "averageAttendance": 40,
+          "plateAndPledge": 192347,
+          "membership": 126
+        },
+        "2023": {
+          "averageAttendance": 41,
+          "plateAndPledge": 182906,
+          "membership": 137
+        },
+        "2024": {
+          "averageAttendance": 42,
+          "plateAndPledge": 193776,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
@@ -1946,7 +1896,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St James (New London)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/10/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
-    "vh_id": 10318,
+    "vh_id": 10645,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10318",
     "detail_name": null,
     "address": null,
@@ -2060,7 +2010,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Anthonys (Winder)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">12/05/2025</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 13 </span></td>",
-    "vh_id": 10693,
+    "vh_id": 8606,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10693",
     "detail_name": null,
     "address": null,
@@ -2174,7 +2124,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">St Andrews (Madison)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Wisconsin</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/19/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">04/30/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 19 </span></td>",
-    "vh_id": 10649,
+    "vh_id": 10682,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10649",
     "detail_name": null,
     "address": null,
@@ -2218,7 +2168,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rosebud Episcopal Mission West, Diocese of South Dakota</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">South Dakota</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">CongregationMP</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Other</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">09/15/2025</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 18 </span></td>",
-    "vh_id": 10645,
+    "vh_id": null,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10645",
     "detail_name": null,
     "address": null,
@@ -2262,7 +2212,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Resurrection (Sautee Nacoochee)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Atlanta</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">02/18/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/31/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 11 </span></td>",
-    "vh_id": 8606,
+    "vh_id": 8615,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8606",
     "detail_name": null,
     "address": null,
@@ -2376,7 +2326,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Holy Trinity (Greensboro)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">North Carolina</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Assistant/Associate/Curate</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">03/17/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\"></span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 17 </span></td>",
-    "vh_id": 10683,
+    "vh_id": 10676,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10683",
     "detail_name": null,
     "address": null,
@@ -2891,7 +2841,7 @@
     "status": "new",
     "details_url": "",
     "raw_html": "<!--!--><!--!--><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"0\" data-cell-selection-index=\"0\" class=\"k-table-td\" style=\"\"><span class=\"published\">Christ (Stratford)</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"1\" data-cell-selection-index=\"1\" class=\"k-table-td\" style=\"\"><span class=\"published\">Connecticut</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"2\" data-cell-selection-index=\"2\" class=\"k-table-td\" style=\"\"><span class=\"published\">Congregation</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"3\" data-cell-selection-index=\"3\" class=\"k-table-td\" style=\"\"><span class=\"published\">Rector/Priest-in-Charge</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"4\" data-cell-selection-index=\"4\" class=\"k-table-td\" style=\"\"><span class=\"published\">11/28/2025</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"5\" data-cell-selection-index=\"5\" class=\"k-table-td\" style=\"\"><span class=\"published\">05/06/2026</span></td><!--!--><td role=\"gridcell\" colspan=\"1\" data-col-index=\"6\" data-cell-selection-index=\"6\" class=\"k-table-td\" style=\"\"><span class=\"published\">March 10 </span></td>",
-    "vh_id": 8914,
+    "vh_id": 8930,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8914",
     "detail_name": null,
     "address": null,
@@ -2920,71 +2870,71 @@
     "narrative_reflections": null,
     "raw_content": null,
     "church_info": {
-      "nid": 1584,
-      "name": "Christ Episcopal Church",
-      "street": "2000 Main St",
-      "city": "Stratford",
+      "nid": 1563,
+      "name": "Christ Church",
+      "street": "4 Wellers Bridge Rd",
+      "city": "Roxbury",
       "state": "CT",
-      "zip": "06615-6397",
-      "phone": "203-375-4447",
-      "email": "ccstratford@att.net",
-      "website": "https://christchurchstratford.org",
+      "zip": "06783",
+      "phone": "860-354-4113",
+      "email": "christchurcroxbury@gmail.com",
+      "website": "http://www.christchurchroxbury.net",
       "type": "church",
-      "lat": 41.188404,
-      "lng": -73.13023
+      "lat": 41.5566,
+      "lng": -73.31068
     },
     "match_confidence": "exact",
     "parochial": {
-      "congregationCity": "Christ Episcopal Church (Stratford)",
+      "congregationCity": "Christ Church (Roxbury)",
       "years": {
         "2015": {
-          "averageAttendance": 84,
-          "plateAndPledge": 120649,
-          "membership": 362
+          "averageAttendance": 60,
+          "plateAndPledge": 106542,
+          "membership": 158
         },
         "2016": {
-          "averageAttendance": 85,
-          "plateAndPledge": 117375,
-          "membership": 384
+          "averageAttendance": 42,
+          "plateAndPledge": 91744,
+          "membership": 110
         },
         "2017": {
-          "averageAttendance": 86,
-          "plateAndPledge": 123494,
-          "membership": 387
+          "averageAttendance": 33,
+          "plateAndPledge": 72829,
+          "membership": 112
         },
         "2018": {
-          "averageAttendance": 75,
-          "plateAndPledge": 146289,
-          "membership": 391
+          "averageAttendance": 27,
+          "plateAndPledge": 86661,
+          "membership": 108
         },
         "2019": {
-          "averageAttendance": 70,
-          "plateAndPledge": 154813,
-          "membership": 395
+          "averageAttendance": 27,
+          "plateAndPledge": 58300,
+          "membership": 108
         },
         "2020": {
-          "averageAttendance": 61,
-          "plateAndPledge": 135559,
-          "membership": 396
+          "averageAttendance": 26,
+          "plateAndPledge": 38600,
+          "membership": 110
         },
         "2021": {
-          "averageAttendance": 48,
-          "plateAndPledge": 134725,
-          "membership": 216
+          "averageAttendance": 18,
+          "plateAndPledge": 58254,
+          "membership": 109
         },
         "2022": {
-          "averageAttendance": 66,
-          "plateAndPledge": 151229,
-          "membership": 230
+          "averageAttendance": 23,
+          "plateAndPledge": 91618,
+          "membership": 85
         },
         "2023": {
-          "averageAttendance": 83,
-          "plateAndPledge": 159453,
-          "membership": 213
+          "averageAttendance": 25,
+          "plateAndPledge": 128772,
+          "membership": 74
         },
         "2024": {
-          "averageAttendance": 82,
-          "plateAndPledge": 172842,
+          "averageAttendance": 30,
+          "plateAndPledge": 96699,
           "membership": null
         }
       }
