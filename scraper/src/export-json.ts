@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { getAllPositionsWithDetails, getRecentChanges, getDetailHistory, getScrapeStats } from './db.js';
+import { getAllPositionsWithDetails, getRecentChanges, getDetailHistory, getScrapeStats, getDiscoveryStats } from './db.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 
@@ -14,6 +14,8 @@ export function exportJson(): void {
   const detailHistory = getDetailHistory(500);
   const stats = getScrapeStats();
 
+  const discovery = getDiscoveryStats();
+
   const meta = {
     lastUpdated: new Date().toISOString(),
     totalPositions: positions.length,
@@ -21,6 +23,7 @@ export function exportJson(): void {
     expiredCount: positions.filter((p) => p.status === 'expired').length,
     newCount: positions.filter((p) => p.status === 'new').length,
     lastScrape: stats || null,
+    discoveryStatus: discovery,
   };
 
   const outputDirs = [

@@ -68,6 +68,7 @@ function main() {
   const allProfiles = load('all-profiles.json');
   const profileFields = load('profile-fields.json');
   const dioceseOverrides = load('manual-diocese-overrides.json') || {};
+  const manualVhIds = load('manual-vh-ids.json') || {};
 
   if (!positions) { console.error('No positions.json found'); process.exit(1); }
 
@@ -152,6 +153,13 @@ function main() {
           pos.vh_id = candidateId;
         }
       }
+    }
+
+    // Layer 1: Apply manual VH ID overrides for positions the scraper couldn't map
+    if (!vhId && manualVhIds[pos.id]) {
+      vhId = manualVhIds[pos.id].vh_id;
+      pos.vh_id = vhId;
+      console.log(`  Applied manual VH ID: ${pos.name} -> VH ${vhId}`);
     }
 
     if (!vhId) noVhIdCount++;
@@ -372,6 +380,83 @@ function main() {
   }
 
   console.log('\nEnriched data written to enriched-positions.json and enriched-extended.json');
+
+  // --- Layer 1: Generate gap report ---
+  // Identifies positions that need attention: missing VH ID, missing church data, etc.
+  const gaps = [];
+
+  // Public positions missing VH ID
+  for (const pos of positions) {
+    if (!pos.vh_id) {
+      gaps.push({
+        type: 'missing_vh_id',
+        source: 'public',
+        id: pos.id,
+        name: pos.name,
+        diocese: pos.diocese,
+        state: pos.state,
+        receiving_from: pos.receiving_names_from || '',
+        note: 'Scraper click-through failed. Needs manual VH ID or backfill.',
+      });
+    }
+  }
+
+  // Public positions missing church data despite having VH ID
+  for (const pos of positions) {
+    if (pos.vh_id && !pos.church_info) {
+      gaps.push({
+        type: 'missing_church_match',
+        source: 'public',
+        vh_id: pos.vh_id,
+        name: pos.name,
+        diocese: pos.diocese,
+        note: 'Has VH ID but no church registry match.',
+      });
+    }
+  }
+
+  // Extended positions missing church data (only active ones)
+  {
+    const extForGaps = load('enriched-extended.json') || [];
+    for (const ext of extForGaps) {
+      const status = ext.vh_status || '';
+      if (status === 'Search complete' || status === 'No longer receiving names') continue;
+      if (!ext.church_info && ext.vh_id) {
+        gaps.push({
+          type: 'missing_church_match',
+          source: 'extended',
+          vh_id: ext.vh_id,
+          name: ext.name,
+          diocese: ext.diocese || '',
+          note: 'Active extended position with no church registry match.',
+        });
+      }
+    }
+  }
+
+  // Write gap report
+  const gapReport = {
+    generated_at: new Date().toISOString(),
+    summary: {
+      missing_vh_id: gaps.filter(g => g.type === 'missing_vh_id').length,
+      missing_church_match: gaps.filter(g => g.type === 'missing_church_match').length,
+      total: gaps.length,
+    },
+    gaps,
+  };
+
+  fs.writeFileSync(
+    path.join(DATA_DIR, 'needs-backfill.json'),
+    JSON.stringify(gapReport, null, 2)
+  );
+
+  if (gapReport.summary.total > 0) {
+    console.log(`\nGap report: ${gapReport.summary.total} positions need attention`);
+    if (gapReport.summary.missing_vh_id > 0)
+      console.log(`  Missing VH ID: ${gapReport.summary.missing_vh_id} (add to manual-vh-ids.json or wait for backfill)`);
+    if (gapReport.summary.missing_church_match > 0)
+      console.log(`  Missing church match: ${gapReport.summary.missing_church_match}`);
+  }
 }
 
 main();

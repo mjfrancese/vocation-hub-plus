@@ -118,6 +118,22 @@ function initSchema(db: Database.Database): void {
 
     CREATE INDEX IF NOT EXISTS idx_detail_history_position ON position_detail_history(position_id);
     CREATE INDEX IF NOT EXISTS idx_detail_history_date ON position_detail_history(changed_at);
+
+    -- Layer 3: Track discovery attempts for positions missing VH IDs
+    CREATE TABLE IF NOT EXISTS discovery_attempts (
+      position_id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      diocese TEXT NOT NULL,
+      attempts INTEGER NOT NULL DEFAULT 0,
+      last_attempted_at DATETIME,
+      last_error TEXT,
+      resolved_at DATETIME,
+      resolved_vh_id INTEGER,
+      FOREIGN KEY (position_id) REFERENCES positions(id)
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_discovery_attempts_unresolved
+      ON discovery_attempts(attempts) WHERE resolved_at IS NULL;
   `);
 }
 
@@ -447,6 +463,97 @@ export function getDetailHistory(limit: number = 500): Record<string, unknown>[]
     ORDER BY h.changed_at DESC
     LIMIT ?
   `).all(limit) as Record<string, unknown>[];
+}
+
+// --- Layer 3: Discovery attempt tracking ---
+
+export interface BackfillCandidate {
+  position_id: string;
+  name: string;
+  diocese: string;
+  attempts: number;
+}
+
+/** Get positions that need VH ID backfill (no VH ID, not yet resolved, < maxAttempts tries) */
+export function getBackfillCandidates(maxAttempts: number = 5): BackfillCandidate[] {
+  const d = getDb();
+
+  // Ensure the discovery_attempts table exists (idempotent)
+  d.exec(`
+    CREATE TABLE IF NOT EXISTS discovery_attempts (
+      position_id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      diocese TEXT NOT NULL,
+      attempts INTEGER NOT NULL DEFAULT 0,
+      last_attempted_at DATETIME,
+      last_error TEXT,
+      resolved_at DATETIME,
+      resolved_vh_id INTEGER
+    )
+  `);
+
+  return d.prepare(`
+    SELECT p.id as position_id, p.name, p.diocese,
+           COALESCE(da.attempts, 0) as attempts
+    FROM positions p
+    LEFT JOIN position_vh_ids m ON p.id = m.position_id
+    LEFT JOIN discovery_attempts da ON p.id = da.position_id
+    WHERE p.status IN ('active', 'new')
+      AND m.position_id IS NULL
+      AND (da.resolved_at IS NULL)
+      AND (da.attempts IS NULL OR da.attempts < ?)
+    ORDER BY COALESCE(da.attempts, 0) ASC, p.last_seen DESC
+  `).all(maxAttempts) as BackfillCandidate[];
+}
+
+/** Record a failed discovery attempt */
+export function recordDiscoveryAttempt(positionId: string, name: string, diocese: string, error: string): void {
+  const d = getDb();
+  d.prepare(`
+    INSERT INTO discovery_attempts (position_id, name, diocese, attempts, last_attempted_at, last_error)
+    VALUES (?, ?, ?, 1, datetime('now'), ?)
+    ON CONFLICT(position_id) DO UPDATE SET
+      attempts = attempts + 1,
+      last_attempted_at = datetime('now'),
+      last_error = ?
+  `).run(positionId, name, diocese, error, error);
+}
+
+/** Record a successful discovery (backfill resolved) */
+export function recordDiscoverySuccess(positionId: string, vhId: number): void {
+  const d = getDb();
+  d.prepare(`
+    INSERT INTO discovery_attempts (position_id, name, diocese, attempts, resolved_at, resolved_vh_id)
+    VALUES (?, '', '', 0, datetime('now'), ?)
+    ON CONFLICT(position_id) DO UPDATE SET
+      resolved_at = datetime('now'),
+      resolved_vh_id = ?
+  `).run(positionId, vhId, vhId);
+}
+
+/** Get summary of discovery attempt status */
+export function getDiscoveryStats(): { pending: number; failed: number; resolved: number } {
+  const d = getDb();
+  d.exec(`
+    CREATE TABLE IF NOT EXISTS discovery_attempts (
+      position_id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      diocese TEXT NOT NULL,
+      attempts INTEGER NOT NULL DEFAULT 0,
+      last_attempted_at DATETIME,
+      last_error TEXT,
+      resolved_at DATETIME,
+      resolved_vh_id INTEGER
+    )
+  `);
+  const stats = d.prepare(`
+    SELECT
+      COUNT(*) FILTER (WHERE resolved_at IS NULL AND attempts < 5) as pending,
+      COUNT(*) FILTER (WHERE resolved_at IS NULL AND attempts >= 5) as failed,
+      COUNT(*) FILTER (WHERE resolved_at IS NOT NULL) as resolved
+    FROM discovery_attempts
+  `).get() as { pending: number; failed: number; resolved: number };
+  return stats || { pending: 0, failed: 0, resolved: 0 };
 }
 
 export function closeDb(): void {

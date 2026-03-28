@@ -3,12 +3,13 @@ import { navigateToSearch } from './navigate.js';
 import { searchAllPositions } from './select-states.js';
 import { clickSearchAndExtract, RawPosition } from './scrape-results.js';
 import { applyDiff } from './diff.js';
-import { logScrape, closeDb, getDb } from './db.js';
+import { logScrape, closeDb, getDb, recordDiscoveryAttempt, recordDiscoverySuccess, getDiscoveryStats } from './db.js';
 import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 import { sleep } from './navigate.js';
 import { discoverAndScrapePositions, type DiscoveredId } from './discover-ids-from-search.js';
+import { runBackfill } from './backfill.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -70,11 +71,21 @@ async function main(): Promise<void> {
             if (pagerText && !pagerText.includes('0 - 0 of 0')) {
               const result = await discoverAndScrapePositions(page, CONFIG.url);
 
-              // Save ID mapping (positions are in search table order, same as result.ids)
+              // Save ID mapping
               saveIdMapping(positions, result.ids);
 
               // Save profile fields for the frontend
               saveProfileFields(result.profiles);
+
+              // Layer 3: Track failures for positions that weren't discovered
+              const discoveredVhIds = new Set(result.ids.map(d => d.id));
+              const unmappedAfterPhase2 = getPositionsWithoutVhId();
+              for (const posId of unmappedAfterPhase2) {
+                const pos = positions.find(p => p.id === posId);
+                if (pos) {
+                  recordDiscoveryAttempt(posId, pos.name, pos.diocese, 'not_found_in_phase2');
+                }
+              }
             }
           } else {
             logger.info('All active positions already have VH IDs');
@@ -86,6 +97,44 @@ async function main(): Promise<void> {
         logger.warn('Phase 2 failed (non-fatal)', {
           error: detailErr instanceof Error ? detailErr.message : String(detailErr),
         });
+      }
+
+      // Phase 3: Targeted backfill for positions that Phase 2 missed.
+      // Uses name-based search instead of row clicking for better reliability.
+      try {
+        const elapsed3 = Date.now() - startTime;
+        const timeLeft3 = CONFIG.maxRuntime - elapsed3 - 60_000;
+
+        if (timeLeft3 > 60_000) {
+          const backfillResult = await runBackfill(page, CONFIG.url, 5);
+
+          if (backfillResult.succeeded > 0) {
+            // Save the newly discovered ID mappings
+            for (const prof of backfillResult.profiles) {
+              // Find the position to create the mapping
+              const d = getDb();
+              d.prepare(
+                'INSERT OR REPLACE INTO position_vh_ids (position_id, vh_id, name, diocese) ' +
+                'SELECT da.position_id, ?, da.name, da.diocese FROM discovery_attempts da WHERE da.resolved_vh_id = ?'
+              ).run(prof.id, prof.id);
+            }
+
+            // Save profile fields
+            saveProfileFields(backfillResult.profiles);
+          }
+        } else {
+          logger.info('Not enough time for Phase 3 backfill', { timeLeft: timeLeft3 });
+        }
+      } catch (backfillErr) {
+        logger.warn('Phase 3 backfill failed (non-fatal)', {
+          error: backfillErr instanceof Error ? backfillErr.message : String(backfillErr),
+        });
+      }
+
+      // Log discovery stats
+      const discoveryStats = getDiscoveryStats();
+      if (discoveryStats.pending > 0 || discoveryStats.failed > 0) {
+        logger.info('Discovery tracking', discoveryStats);
       }
 
       const durationMs = Date.now() - startTime;

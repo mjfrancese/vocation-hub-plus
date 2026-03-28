@@ -1,0 +1,4 @@
+{
+  "_comment": "Manual VH ID assignments for positions where the scraper click-through failed. Key is the position hash ID from positions.json, value has vh_id and a note.",
+  "_instructions": "To find the VH ID: go to vocationhub.episcopalchurch.org/PositionSearch, search for the position, click it, and grab the number from the URL (e.g. /PositionView/12345 -> vh_id: 12345). Then add an entry here with the position's hash ID as the key."
+}
