@@ -40,6 +40,7 @@ function main() {
   const positions = load('positions.json');
   const allProfiles = load('all-profiles.json');
   const profileFields = load('profile-fields.json');
+  const dioceseOverrides = load('manual-diocese-overrides.json') || {};
 
   if (!positions) { console.error('No positions.json found'); process.exit(1); }
 
@@ -105,22 +106,75 @@ function main() {
     JSON.stringify(positions, null, 2)
   );
 
+  // Build website -> church lookup for fallback matching
+  function normUrl(u) {
+    if (!u) return '';
+    return u.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '').toLowerCase();
+  }
+  const churchByWebsite = {};
+  for (const c of Object.values(churches)) {
+    const w = normUrl(c.website);
+    if (w) churchByWebsite[w] = c;
+  }
+
   // Build extended positions: ALL profiles not in search results
   if (allProfiles) {
     const publicVhIds = new Set(positions.map(p => p.vh_id).filter(Boolean));
     let extChurch = 0, extParochial = 0;
+    let websiteMatches = 0;
 
     const extended = [];
     for (const profile of allProfiles) {
       if (publicVhIds.has(profile.vh_id)) continue;
 
       const vhId = profile.vh_id;
-      const diocese = profile.diocese || '';
-      const data = getChurchData(vhId);
+      let data = getChurchData(vhId);
+
+      // Fallback: try website-based matching if no church match exists
+      if (!data && profile.website) {
+        const pw = normUrl(profile.website);
+        const church = pw && churchByWebsite[pw];
+        if (church) {
+          websiteMatches++;
+          data = {
+            church_info: {
+              nid: church.nid,
+              name: church.name,
+              street: church.street,
+              city: church.city,
+              state: church.state,
+              zip: church.zip,
+              phone: church.phone,
+              email: church.email,
+              website: church.website,
+              type: church.type,
+              lat: church.lat,
+              lng: church.lng,
+            },
+            parochial: church.parochial || null,
+            confidence: 'high',
+            match_method: 'website',
+          };
+        }
+      }
+
+      // Backfill diocese from church_info if profile has none
+      let diocese = profile.diocese || '';
+      if (!diocese && data && data.church_info) {
+        // Look up diocese from registry church data
+        const church = Object.values(churches).find(c => String(c.nid) === String(data.church_info.nid));
+        if (church && church.diocese) diocese = church.diocese;
+      }
+
+      // Apply manual overrides for positions we've identified by phone/website/geo
+      const override = dioceseOverrides[String(vhId)];
+      if (override) {
+        if (!diocese && override.diocese) diocese = override.diocese;
+      }
 
       // Build display name: use congregation if available, else church name if exact match
       let displayName = profile.congregation || '';
-      if (!displayName && data && data.confidence === 'exact') {
+      if (!displayName && data && (data.confidence === 'exact' || data.confidence === 'high')) {
         displayName = `${data.church_info.name}, ${data.church_info.city}, ${data.church_info.state}`;
       }
 
@@ -145,13 +199,28 @@ function main() {
         }
       }
 
+      // Determine state from church_info, override, or profile
+      const state = data?.church_info?.state || (override && override.state) || '';
+
+      // Fallback position_type from order_of_ministry
+      let positionType = profile.position_type || '';
+      if (!positionType && profile.order_of_ministry) {
+        // Map order to common position type
+        const order = profile.order_of_ministry.toLowerCase();
+        if (order.includes('priest')) positionType = 'Rector / Vicar / Priest-in-Charge';
+        else if (order.includes('deacon')) positionType = 'Deacon';
+        else if (order.includes('bishop')) positionType = 'Bishop';
+        else positionType = profile.order_of_ministry;
+      }
+
       extended.push({
         vh_id: vhId,
         name: displayName,
         diocese,
+        state,
         vh_status: inferredStatus,
         profile_url: profile.profile_url || '',
-        position_type: profile.position_type || '',
+        position_type: positionType,
         congregation: profile.congregation || '',
         receiving_names_from: profile.receiving_names_from || '',
         receiving_names_to: profile.receiving_names_to || '',
@@ -163,7 +232,7 @@ function main() {
     }
 
     console.log(`Extended positions: ${extended.length}`);
-    console.log(`  Church matches: ${extChurch}`);
+    console.log(`  Church matches: ${extChurch} (${websiteMatches} via website)`);
     console.log(`  Parochial matches: ${extParochial}`);
 
     fs.writeFileSync(

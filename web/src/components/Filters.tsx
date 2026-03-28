@@ -25,41 +25,64 @@ export default function Filters({
   onHideClosedChange,
 }: FiltersProps) {
   const hasFilters = filters.some(f => f.selected.length > 0);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const activeCount = filters.reduce((n, f) => n + f.selected.length, 0);
 
   return (
     <div className="space-y-3">
-      <div className="flex flex-wrap gap-3 items-end">
-        {filters.map((f) => (
-          <MultiSelect
-            key={f.key}
-            label={f.label}
-            options={f.options}
-            selected={f.selected}
-            onChange={f.onChange}
-            width={f.width || 'w-44'}
-          />
-        ))}
-        <div className="flex flex-col justify-end">
-          <label className="flex items-center gap-2 py-2 px-3 text-sm text-gray-600 cursor-pointer
-                            border border-gray-300 rounded-md hover:bg-gray-50 select-none">
-            <input
-              type="checkbox"
-              checked={hideClosed}
-              onChange={(e) => onHideClosedChange(e.target.checked)}
-              className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+      {/* Mobile: toggle button */}
+      <div className="sm:hidden">
+        <button
+          onClick={() => setFiltersOpen(!filtersOpen)}
+          className="w-full flex items-center justify-between px-3 py-2.5 border border-gray-300
+                     rounded-md text-sm text-gray-700 bg-white"
+        >
+          <span className="flex items-center gap-2">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            Filters {activeCount > 0 && `(${activeCount})`}
+          </span>
+          <svg className={`w-4 h-4 transition-transform ${filtersOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Filter dropdowns: always visible on sm+, collapsible on mobile */}
+      <div className={`${filtersOpen ? 'block' : 'hidden'} sm:block`}>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 items-end">
+          {filters.map((f) => (
+            <MultiSelect
+              key={f.key}
+              label={f.label}
+              options={f.options}
+              selected={f.selected}
+              onChange={f.onChange}
             />
-            Hide closed
-          </label>
+          ))}
+          <div className="flex flex-col justify-end">
+            <label className="flex items-center gap-2 py-2 px-3 text-sm text-gray-600 cursor-pointer
+                              border border-gray-300 rounded-md hover:bg-gray-50 select-none">
+              <input
+                type="checkbox"
+                checked={hideClosed}
+                onChange={(e) => onHideClosedChange(e.target.checked)}
+                className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
+              />
+              Hide closed
+            </label>
+          </div>
+          {hasFilters && (
+            <button
+              onClick={onClear}
+              className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900
+                         border border-gray-300 rounded-md hover:bg-gray-50"
+            >
+              Clear all
+            </button>
+          )}
         </div>
-        {hasFilters && (
-          <button
-            onClick={onClear}
-            className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900
-                       border border-gray-300 rounded-md hover:bg-gray-50"
-          >
-            Clear all
-          </button>
-        )}
       </div>
 
       {hasFilters && (
@@ -101,7 +124,6 @@ function MultiSelect({
   options,
   selected,
   onChange,
-  width = 'w-44',
 }: {
   label: string;
   options: string[];
@@ -137,13 +159,13 @@ function MultiSelect({
   }
 
   return (
-    <div className="flex flex-col" ref={ref}>
+    <div className="relative flex flex-col" ref={ref}>
       <label className="text-xs font-medium text-gray-500 mb-1">{label}</label>
       <button
         onClick={() => setOpen(!open)}
-        className={`${width} py-2 px-3 border border-gray-300 rounded-md text-sm text-left
+        className="w-full py-2 px-3 border border-gray-300 rounded-md text-sm text-left
                    text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500
-                   focus:border-primary-500 bg-white flex items-center justify-between`}
+                   focus:border-primary-500 bg-white flex items-center justify-between"
       >
         <span className="truncate">
           {selected.length === 0 ? 'All' : `${selected.length} selected`}
@@ -155,7 +177,7 @@ function MultiSelect({
 
       {open && (
         <div className="absolute mt-14 z-50 bg-white border border-gray-200 rounded-md shadow-lg
-                        max-h-64 overflow-hidden flex flex-col" style={{ minWidth: '220px' }}>
+                        max-h-64 overflow-hidden flex flex-col w-full sm:min-w-[220px]">
           {options.length > 5 && (
             <div className="p-2 border-b border-gray-100">
               <input

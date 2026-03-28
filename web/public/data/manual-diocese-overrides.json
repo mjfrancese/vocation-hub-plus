@@ -1,0 +1,18 @@
+{
+  "_comment": "Manual diocese/state overrides for extended positions missing this data. Identified via phone area codes, website URLs, congregation names, and geographic clues.",
+  "10688": { "diocese": "Iowa", "state": "IA", "notes": "St Stephens - website contains 'newtoniowa', registry match in Newton, IA" },
+  "10683": { "diocese": "Milwaukee", "state": "WI", "notes": "St Andrews - 608 area code = Madison WI area" },
+  "10678": { "diocese": "Missouri", "state": "MO", "notes": "Unknown - 314 area code = St Louis MO, Midwest geo" },
+  "10674": { "diocese": "North Carolina", "state": "NC", "notes": "St Johns - website stjohnswf.org = Wake Forest NC" },
+  "10592": { "diocese": "Newark", "state": "NJ", "notes": "Christ Budd Lake / St James Hackettstown - both in Newark diocese NJ" },
+  "10353": { "diocese": "San Joaquin", "state": "CA", "notes": "St Pauls - 209 area code = Modesto CA area, West Coast geo" },
+  "10227": { "diocese": "Missouri", "state": "MO", "notes": "St Patricks - 314 area code = St Louis MO, Midwest geo" },
+  "10217": { "diocese": "Rochester", "state": "NY", "notes": "Unknown - 585 area code = Rochester NY" },
+  "10197": { "diocese": "Southern Ohio", "state": "OH", "notes": "Epiphany Urbana / Our Saviour Mechanicsburg - registry match in Urbana OH" },
+  "10175": { "diocese": "South Dakota", "state": "SD", "notes": "Rosebud Episcopal Mission - multiple SD churches, Plains geo" },
+  "8922": { "diocese": "Central Pennsylvania", "state": "PA", "notes": "Unknown - 570 area code = NE Pennsylvania" },
+  "8920": { "diocese": "Dallas", "state": "TX", "notes": "Unknown - 214 area code = Dallas TX, Plains geo" },
+  "8636": { "diocese": "Central Pennsylvania", "state": "PA", "notes": "Unknown - 570 area code = NE Pennsylvania" },
+  "8607": { "diocese": "Kansas", "state": "KS", "notes": "St Matthew - 620 area code = SW Kansas, registry match in Newton KS" },
+  "8579": { "diocese": "Arkansas", "state": "AR", "notes": "Unknown - 501 area code = central Arkansas" }
+}

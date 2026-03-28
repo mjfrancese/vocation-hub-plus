@@ -54,82 +54,144 @@ export default function PositionTable({ positions }: PositionTableProps) {
   }
 
   return (
-    <div className="overflow-x-auto border border-gray-200 rounded-lg">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
-            {COLUMNS.map((col) => (
-              <th
-                key={col.key}
-                onClick={() => handleSort(col.key)}
-                className="px-4 py-3 text-left text-xs font-medium text-gray-500
-                           uppercase tracking-wider cursor-pointer hover:bg-gray-100
-                           select-none"
-              >
-                <span className="flex items-center gap-1">
-                  {col.label}
-                  {sortField === col.key && (
-                    <span className="text-primary-600">
-                      {sortDir === 'asc' ? '\u2191' : '\u2193'}
-                    </span>
-                  )}
-                </span>
-              </th>
+    <>
+      {/* Mobile: card layout */}
+      <div className="sm:hidden space-y-2">
+        {/* Mobile sort control */}
+        <div className="flex items-center gap-2 text-sm text-gray-500 px-1">
+          <span>Sort by</span>
+          <select
+            value={sortField}
+            onChange={(e) => { setSortField(e.target.value as SortField); setSortDir('asc'); }}
+            className="border border-gray-300 rounded px-2 py-1 text-sm bg-white"
+          >
+            {COLUMNS.map(col => (
+              <option key={col.key} value={col.key}>{col.label}</option>
             ))}
-            <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Status
-            </th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {sorted.map((pos) => (
-            <>
-              <tr
-                key={pos.id}
-                onClick={() => toggleExpand(pos.id)}
-                className={`cursor-pointer transition-colors ${
-                  expandedId === pos.id
-                    ? 'bg-primary-50 border-l-4 border-l-primary-500'
-                    : 'hover:bg-gray-50'
-                }`}
-              >
-                <td className="px-4 py-3 text-sm font-medium text-gray-900 max-w-xs truncate">
-                  {pos.name}
-                </td>
-                <td className="px-4 py-3 text-sm text-gray-600">{pos.diocese}</td>
-                <td className="px-4 py-3 text-sm text-gray-600">{pos.state}</td>
-                <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
-                <td className="px-4 py-3 text-sm text-gray-600">
-                  {pos.receiving_names_from ? (
-                    <>
-                      {pos.receiving_names_from}
-                      {pos.receiving_names_to && pos.receiving_names_to !== 'Open ended' && ` to ${pos.receiving_names_to}`}
-                    </>
-                  ) : pos.vh_status ? (
-                    <span className="text-gray-400 italic">{pos.vh_status}</span>
-                  ) : null}
-                </td>
-                <td className="px-4 py-3 text-sm text-gray-600">{pos.updated_on_hub}</td>
-                <td className="px-4 py-3">
-                  {pos.vh_status ? (
-                    <StatusBadge status={pos.vh_status} />
-                  ) : (
-                    <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
-                  )}
-                </td>
-              </tr>
-              {expandedId === pos.id && (
-                <tr key={`${pos.id}-detail`}>
-                  <td colSpan={7} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
-                    <ExpandedDetail pos={pos} />
+          </select>
+          <button
+            onClick={() => setSortDir(sortDir === 'asc' ? 'desc' : 'asc')}
+            className="text-primary-600 font-medium"
+          >
+            {sortDir === 'asc' ? '\u2191' : '\u2193'}
+          </button>
+        </div>
+
+        {sorted.map((pos) => (
+          <div key={pos.id}>
+            <div
+              onClick={() => toggleExpand(pos.id)}
+              className={`border rounded-lg p-3 cursor-pointer transition-colors ${
+                expandedId === pos.id
+                  ? 'bg-primary-50 border-l-4 border-l-primary-500 border-primary-200'
+                  : 'bg-white border-gray-200 hover:bg-gray-50'
+              }`}
+            >
+              <div className="flex items-start justify-between gap-2">
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-gray-900 text-sm leading-tight">{pos.name}</p>
+                  <p className="text-xs text-gray-500 mt-1">{pos.diocese} &middot; {pos.state}</p>
+                </div>
+                {pos.vh_status ? (
+                  <StatusBadge status={pos.vh_status} />
+                ) : (
+                  <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
+                )}
+              </div>
+              <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
+                {pos.position_type && <span>{pos.position_type}</span>}
+                {pos.receiving_names_from && (
+                  <span>&middot; {pos.receiving_names_from}</span>
+                )}
+              </div>
+            </div>
+            {expandedId === pos.id && (
+              <div className="border border-t-0 border-primary-200 rounded-b-lg p-3 bg-primary-50/40 border-l-4 border-l-primary-500">
+                <ExpandedDetail pos={pos} />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: table layout */}
+      <div className="hidden sm:block overflow-x-auto border border-gray-200 rounded-lg">
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-50">
+            <tr>
+              {COLUMNS.map((col) => (
+                <th
+                  key={col.key}
+                  onClick={() => handleSort(col.key)}
+                  className="px-4 py-3 text-left text-xs font-medium text-gray-500
+                             uppercase tracking-wider cursor-pointer hover:bg-gray-100
+                             select-none"
+                >
+                  <span className="flex items-center gap-1">
+                    {col.label}
+                    {sortField === col.key && (
+                      <span className="text-primary-600">
+                        {sortDir === 'asc' ? '\u2191' : '\u2193'}
+                      </span>
+                    )}
+                  </span>
+                </th>
+              ))}
+              <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Status
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {sorted.map((pos) => (
+              <>
+                <tr
+                  key={pos.id}
+                  onClick={() => toggleExpand(pos.id)}
+                  className={`cursor-pointer transition-colors ${
+                    expandedId === pos.id
+                      ? 'bg-primary-50 border-l-4 border-l-primary-500'
+                      : 'hover:bg-gray-50'
+                  }`}
+                >
+                  <td className="px-4 py-3 text-sm font-medium text-gray-900 max-w-xs truncate">
+                    {pos.name}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-gray-600">{pos.diocese}</td>
+                  <td className="px-4 py-3 text-sm text-gray-600">{pos.state}</td>
+                  <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
+                  <td className="px-4 py-3 text-sm text-gray-600">
+                    {pos.receiving_names_from ? (
+                      <>
+                        {pos.receiving_names_from}
+                        {pos.receiving_names_to && pos.receiving_names_to !== 'Open ended' && ` to ${pos.receiving_names_to}`}
+                      </>
+                    ) : pos.vh_status ? (
+                      <span className="text-gray-400 italic">{pos.vh_status}</span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-gray-600">{pos.updated_on_hub}</td>
+                  <td className="px-4 py-3">
+                    {pos.vh_status ? (
+                      <StatusBadge status={pos.vh_status} />
+                    ) : (
+                      <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
+                    )}
                   </td>
                 </tr>
-              )}
-            </>
-          ))}
-        </tbody>
-      </table>
-    </div>
+                {expandedId === pos.id && (
+                  <tr key={`${pos.id}-detail`}>
+                    <td colSpan={7} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
+                      <ExpandedDetail pos={pos} />
+                    </td>
+                  </tr>
+                )}
+              </>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 

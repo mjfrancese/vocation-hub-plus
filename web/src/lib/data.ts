@@ -100,7 +100,7 @@ export function getPositions(): Position[] {
 
       const diocese = (e.diocese as string) || '';
       const profile = allProfiles.find(p => p.vh_id === vhId);
-      const state = (e.church_info as Position['church_info'])?.state || getStateForDiocese(diocese);
+      const state = (e.state as string) || (e.church_info as Position['church_info'])?.state || getStateForDiocese(diocese);
 
       const receivingFrom = (e.receiving_names_from as string) || '';
       const receivingTo = (e.receiving_names_to as string) || '';
