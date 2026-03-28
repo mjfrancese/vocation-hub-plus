@@ -5,6 +5,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Vocation Hub+',
   description: 'Nationwide search for Episcopal Church positions',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,8 +18,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-14">
               <div className="flex items-center gap-8">
-                <Link href="/" className="text-lg font-bold text-primary-700">
-                  Vocation Hub+
+                <Link href="/" className="text-lg font-bold text-primary-700 flex items-center gap-0.5">
+                  Vocation Hub
+                  <CrossIcon className="w-2.5 h-2.5 text-primary-700 ml-0.5" />
                 </Link>
                 <div className="hidden sm:flex gap-6">
                   <NavLink href="/">Positions</NavLink>
@@ -60,6 +64,14 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
     >
       {children}
     </Link>
+  );
+}
+
+function CrossIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="95.1,40.4 95.1,37.5 88.1,37.5 88.1,41.4 58.5,41.4 58.5,11.9 62.5,11.9 62.5,4.9 59.6,4.9 51.7,0 48.7,0 40.4,4.9 37.5,4.9 37.5,11.9 41.4,11.9 41.4,41.4 11.8,41.4 11.8,37.5 4.9,37.5 4.9,40.4 0,48.3 0,51.3 4.9,59.5 4.9,62.5 11.8,62.5 11.8,58.5 41.4,58.5 41.4,88.1 37.5,88.1 37.5,95.1 40.4,95.1 48.3,100 51.3,100 59.5,95.1 62.5,95.1 62.5,88.1 58.5,88.1 58.5,58.5 88.1,58.5 88.1,62.5 95.1,62.5 95.1,59.6 100,51.7 100,48.7 95.1,40.4"/>
+    </svg>
   );
 }
 
