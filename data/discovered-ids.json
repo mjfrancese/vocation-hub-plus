@@ -1,8 +1,8 @@
 {
-  "scannedAt": "2026-03-27T03:32:22.303Z",
+  "scannedAt": "2026-03-29T22:43:03.342Z",
   "range": {
-    "start": 8500,
-    "end": 11000
+    "start": 8529,
+    "end": 10695
   },
   "validIds": [
     8529,
@@ -1062,11 +1062,5 @@
     10694,
     10695
   ],
-  "totalChecked": 2501,
-  "totalFound": 1055,
-  "durationSeconds": 337.521,
-  "scanRange": {
-    "start": 8529,
-    "end": 12500
-  }
+  "totalFound": 1056
 }

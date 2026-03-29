@@ -1111,10 +1111,10 @@
   {
     "vh_id": 10688,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10688",
-    "diocese": "",
+    "diocese": "Iowa",
     "congregation": "St Stephens Episcopal Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Developing profile",
     "order_of_ministry": "Priest",
     "geographic_location": "Midwest",
     "work_environment": "In Person",
@@ -1138,12 +1138,60 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Iowa"
+      },
+      {
         "label": "Congregation",
         "value": "St Stephens Episcopal Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Part Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "",
+        "value": "We seek a Priest in Charge who will help us continue to equip and support our lay people for ministry in the community and who will warmly welcome all the community groups that use our building throughout the week. We need a collaborative and flexible priest, who can also help us operate more efficiently and effectively. As this is a half-time call, we would be open to a priest serving 2 Sundays a month or more (with less time present during the week)."
+      },
+      {
+        "label": "Current status",
+        "value": "Developing profile"
+      },
+      {
+        "label": "",
+        "value": "Clergy interested in applying for positions should submit portfolio, resume and letter of interest to the Rev. Canon Meg Wagner at mwagner@iowaepiscopal.org. Please do not contact the congregation directly.\nContact the Rev. Canon Meg Wagner 515-850-5220"
+      },
+      {
+        "label": "Applicant narrative questions",
+        "value": "1. How do you approach pastoral care in your ministry?, 6. How do you incorporate accessibility and inclusion in your ministry?, 14. How do you discern and adapt to the changing needs of your community?"
+      },
+      {
+        "label": "",
+        "value": "The Rev. Cn. Meg Wagner"
+      },
+      {
+        "label": "",
+        "value": "Canon to the Ordinary"
+      },
+      {
+        "label": "",
+        "value": "Episcopal Diocese of Iowa"
+      },
+      {
         "label": "Phone Number",
         "value": "515-850-5220"
+      },
+      {
+        "label": "",
+        "value": "mwagner@iowaepiscopal.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -1246,10 +1294,10 @@
   {
     "vh_id": 10686,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10686",
-    "diocese": "",
+    "diocese": "Atlanta",
     "congregation": "St Julians Episcopal Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Southeast",
     "work_environment": "Hybrid",
@@ -1273,12 +1321,56 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Atlanta"
+      },
+      {
         "label": "Congregation",
         "value": "St Julians Episcopal Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Part Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "",
+        "value": "Part Time Priest In Charge.  20 hrs/wk or less."
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "Please use this link to apply:  https://app.smartsheet.com/b/form/f55483f72c194ae5ba47605747ed103e"
+      },
+      {
+        "label": "",
+        "value": "Phil Murray"
+      },
+      {
+        "label": "",
+        "value": "Senior Warden"
+      },
+      {
+        "label": "",
+        "value": "St. Julian's, Douglasville, GA 30135"
+      },
+      {
         "label": "Phone Number",
         "value": "404 610 2531"
+      },
+      {
+        "label": "",
+        "value": "pmurray201344@gmail.com"
       },
       {
         "label": "Order(s) of Ministry",
@@ -1671,10 +1763,10 @@
   {
     "vh_id": 10683,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10683",
-    "diocese": "",
+    "diocese": "Wisconsin",
     "congregation": "St Andrews Episcopal Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Profile complete",
     "order_of_ministry": "Priest",
     "geographic_location": "Midwest",
     "work_environment": "In Person",
@@ -1698,12 +1790,60 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Wisconsin"
+      },
+      {
         "label": "Congregation",
         "value": "St Andrews Episcopal Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "",
+        "value": "Full-time position in a healthy congregation near the downtown Madison area."
+      },
+      {
+        "label": "Current status",
+        "value": "Profile complete"
+      },
+      {
+        "label": "",
+        "value": "Send letter of interest, resume and Vocation Hub/OTM information to Canon Scott Leannah, scott@diowis.org."
+      },
+      {
+        "label": "Applicant narrative questions",
+        "value": "1. How do you approach pastoral care in your ministry?, 2. How are you preparing yourself for the Church of the future?, 5. What has been your experience leading change in the Church?"
+      },
+      {
+        "label": "",
+        "value": "Henry Peters"
+      },
+      {
+        "label": "",
+        "value": "Co-chair, St. Andrews search committee."
+      },
+      {
+        "label": "",
+        "value": "St. Andrew's Episcopal Church, Madison"
+      },
+      {
         "label": "Phone Number",
         "value": "608-203-8152"
+      },
+      {
+        "label": "",
+        "value": "henry3@chorus.net"
       },
       {
         "label": "Order(s) of Ministry",
@@ -2298,10 +2438,10 @@
   {
     "vh_id": 10677,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10677",
-    "diocese": "",
+    "diocese": "Louisiana",
     "congregation": "Trinity Episcopal Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Assistant/Associate/Curate",
+    "status": "Beginning search",
     "order_of_ministry": "Priest",
     "geographic_location": "Southeast",
     "work_environment": "In Person",
@@ -2325,12 +2465,60 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Louisiana"
+      },
+      {
         "label": "Congregation",
         "value": "Trinity Episcopal Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Assistant/Associate/Curate"
+      },
+      {
+        "label": "",
+        "value": "The Director of Engagement is a dynamic, relational leader responsible for\nfostering a vibrant, welcoming community at Trinity Episcopal Church. This position\nconnects parishioners to the life of the church, ensures a comprehensive, warm welcome for\nnewcomers, and cultivates a strong, supported volunteer base. The Director will drive\nengagement through strategic, person-to-person outreach, care for our senior population, and\norganizing parish-wide fellowship events."
+      },
+      {
+        "label": "Current status",
+        "value": "Beginning search"
+      },
+      {
+        "label": "",
+        "value": "Those interested in applying should send a resume, cover letter, and references to Trinity’s HR\nDirector, Gabriella Frank at:gfrank@trinitynola.com"
+      },
+      {
+        "label": "Applicant narrative questions",
+        "value": "1. How do you approach pastoral care in your ministry?, 2. How are you preparing yourself for the Church of the future?, 6. How do you incorporate accessibility and inclusion in your ministry?, 14. How do you discern and adapt to the changing needs of your community?"
+      },
+      {
+        "label": "",
+        "value": "Morgan MacIntire"
+      },
+      {
+        "label": "",
+        "value": "Canon to the Ordinary"
+      },
+      {
+        "label": "",
+        "value": "The Episcopal Diocese of Louisiana"
+      },
+      {
         "label": "Phone Number",
         "value": "5046767444"
+      },
+      {
+        "label": "",
+        "value": "mmacintire@edola.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -3304,10 +3492,10 @@
   {
     "vh_id": 10668,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10668",
-    "diocese": "Texas",
+    "diocese": "",
     "congregation": "St Davids Episcopal Church",
-    "position_type": "Rector/Priest-in-Charge",
-    "status": "Receiving names",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "Southeast",
     "work_environment": "In Person",
@@ -3331,56 +3519,12 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Texas"
-      },
-      {
         "label": "Congregation",
         "value": "St Davids Episcopal Church"
       },
       {
-        "label": "Type of Work",
-        "value": "Full Time"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector/Priest-in-Charge"
-      },
-      {
-        "label": "",
-        "value": "Rector of program-sized parish in downtown Austin. \nhttps://stdave.org/rector-search/"
-      },
-      {
-        "label": "Current status",
-        "value": "Receiving names"
-      },
-      {
-        "label": "",
-        "value": "Email resume to kjohnson@epicenter.org"
-      },
-      {
-        "label": "",
-        "value": "Kellaura Johnson"
-      },
-      {
-        "label": "",
-        "value": "Canon"
-      },
-      {
-        "label": "",
-        "value": "The Episcopal Diocese of Texas"
-      },
-      {
         "label": "Phone Number",
         "value": "713-353-2118"
-      },
-      {
-        "label": "",
-        "value": "kjohnson@epicenter.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -3753,10 +3897,10 @@
   {
     "vh_id": 10658,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10658",
-    "diocese": "",
+    "diocese": "Connecticut",
     "congregation": "St Michaels Church Episcopal",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Northeast",
     "work_environment": "In Person",
@@ -3780,12 +3924,56 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Connecticut"
+      },
+      {
         "label": "Congregation",
         "value": "St Michaels Church Episcopal"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "",
+        "value": "n/a"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "Apply on https://www.episcopalct.org/open-positions/clergy-employment/ and look for St. Michael's Litchfield"
+      },
+      {
+        "label": "",
+        "value": "Kevin Olds"
+      },
+      {
+        "label": "",
+        "value": "Canon for Congregations & Transitions"
+      },
+      {
+        "label": "",
+        "value": "ECCT"
+      },
+      {
         "label": "Phone Number",
         "value": "n/a"
+      },
+      {
+        "label": "",
+        "value": "kolds@episcopalct.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -5253,10 +5441,10 @@
   {
     "vh_id": 10634,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10634",
-    "diocese": "Ohio",
+    "diocese": "",
     "congregation": "St Johns Church Episcopal",
-    "position_type": "Rector/Priest-in-Charge",
-    "status": "Receiving names",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "Midwest",
     "work_environment": "In Person",
@@ -5280,56 +5468,12 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Ohio"
-      },
-      {
         "label": "Congregation",
         "value": "St Johns Church Episcopal"
       },
       {
-        "label": "Type of Work",
-        "value": "Full Time"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector/Priest-in-Charge"
-      },
-      {
-        "label": "",
-        "value": "St. John’s Episcopal Church, a vibrant and historic parish in downtown Youngstown, seeks a full-time Priest-in-Charge to lead us into our next chapter of faithful ministry. Deeply committed to inclusion, artistic expression, and community partnership, St. John’s is a welcoming, outward-facing parish eager to grow in vitality and impact.\n\nThe Priest-in-Charge will serve as pastor, spiritual leader, and chief collaborator—guiding worship, nurturing discipleship, and equipping lay leaders for shared ministry. This priest will build on St. John’s strong foundation of engaged laity, compassionate outreach, and creative liturgical life, while helping the congregation clarify vision, strengthen stewardship, and deepen relationships within the wider community.\n\nPrimary responsibilities include:\n\nProviding inspiring, grounded preaching and sacramental leadership.\n\nOffering attentive pastoral care in collaboration with established lay ministries.\n\nFostering inclusive Christian formation for all ages.\n\nEncouraging artistic and musical expression as integral to worship and parish identity.\n\nStrengthening partnerships in the Youngstown community and within the Diocese of Ohio.\n\nSupporting effective administration, financial stewardship, and strategic planning alongside parish leadership.\n\nSt. John’s seeks a priest who listens well, communicates transparently, and leads collaboratively. The ideal candidate will value diverse perspectives, honor the parish’s rich history, and inspire confidence as we grow into a renewed season of shared purpose. A heart for inclusion—including LGBTQ+ affirmation—and a passion for engaging younger generations are essential.\n\nWith a strong lay leadership base, established outreach ministries, and a deep commitment to being a beacon of hope in downtown Youngstown, St. John’s is ready for a priest who will help us live more fully into God’s unfolding vision for our future."
-      },
-      {
-        "label": "Current status",
-        "value": "Receiving names"
-      },
-      {
-        "label": "",
-        "value": "Send OTM, resume, cover letter to the Rev. Canon Jessie Gutgsell Dodson, Canon to the Ordinary. Jdodson@dohio.org"
-      },
-      {
-        "label": "",
-        "value": "Jessie Gutgsell Dodson"
-      },
-      {
-        "label": "",
-        "value": "Canon to the Ordinary"
-      },
-      {
-        "label": "",
-        "value": "Episcopal Diocese of Ohio"
-      },
-      {
         "label": "Phone Number",
         "value": "216-774-0447"
-      },
-      {
-        "label": "",
-        "value": "jdodson@dohio.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -5673,10 +5817,10 @@
   {
     "vh_id": 10627,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10627",
-    "diocese": "",
+    "diocese": "Delaware",
     "congregation": "Trinity Parish & Old Swedes Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Mid-Atlantic",
     "work_environment": "In Person",
@@ -5700,12 +5844,60 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Delaware"
+      },
+      {
         "label": "Congregation",
         "value": "Trinity Parish & Old Swedes Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "",
+        "value": "Parish Rector"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "Reach out for more information or if you are ready to do so, you may submit your résumé, OTM materials, and a letter of introduction and interest."
+      },
+      {
+        "label": "Applicant narrative questions",
+        "value": "2. How are you preparing yourself for the Church of the future?, 5. What has been your experience leading change in the Church?, 7. Have you led or participated in multilingual or cross-cultural worship?, 8. How do you use technology in your ministry?, 10. What theological convictions shape your ministry?, 14. How do you discern and adapt to the changing needs of your community?, 16. In what ways are you engaged in your wider Church or local community?"
+      },
+      {
+        "label": "",
+        "value": "The Rev. Canon Brad Hinton"
+      },
+      {
+        "label": "",
+        "value": "Canon to the Ordinary"
+      },
+      {
+        "label": "",
+        "value": "The Episcopal Church in Delaware"
+      },
+      {
         "label": "Phone Number",
         "value": "302-256-0374"
+      },
+      {
+        "label": "",
+        "value": "bhinton@delaware.church"
       },
       {
         "label": "Order(s) of Ministry",
@@ -5844,10 +6036,10 @@
   {
     "vh_id": 10624,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10624",
-    "diocese": "Pittsburgh",
+    "diocese": "",
     "congregation": "Christ Episcopal Church",
-    "position_type": "Rector/Priest-in-Charge",
-    "status": "Profile complete",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "Northeast",
     "work_environment": "In Person",
@@ -5871,60 +6063,12 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Pittsburgh"
-      },
-      {
         "label": "Congregation",
         "value": "Christ Episcopal Church"
       },
       {
-        "label": "Type of Work",
-        "value": "Part Time"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector/Priest-in-Charge"
-      },
-      {
-        "label": "",
-        "value": "Christ Episcopal Church is a small, vibrant, and welcoming parish located in the heart of downtown Indiana, Pennsylvania. Our church community is situated in a picturesque university town nestled in the Allegheny mountains, approximately 60 miles from Pittsburgh. We are seeking a priest-in-charge who will actively support our ongoing spiritual journey and provide leadership as we strive to share God’s love through acts of service to others."
-      },
-      {
-        "label": "Current status",
-        "value": "Profile complete"
-      },
-      {
-        "label": "",
-        "value": "If you feel called to enter into discernment with Christ Church, please submit the following materials via email to the Rev. Kimberly Karashin, Interim Transition Minister, at kkarashin@episcopalpgh.org\n•\tResume/CV\n•\tUpdated OTM or Vocation Hub profile\n•\tLink to online sermon(s)\n•\tLetter of interest describing why you feel called to apply for the position and the gifts you will bring to the role"
-      },
-      {
-        "label": "Applicant narrative questions",
-        "value": "1. How do you approach pastoral care in your ministry?, 5. What has been your experience leading change in the Church?, 10. What theological convictions shape your ministry?"
-      },
-      {
-        "label": "",
-        "value": "The Rev. Kimberly Karashin"
-      },
-      {
-        "label": "",
-        "value": "Interim Transition Minister"
-      },
-      {
-        "label": "",
-        "value": "Episcopal Diocese of Pittsburgh"
-      },
-      {
         "label": "Phone Number",
         "value": "412-721-0853 x254"
-      },
-      {
-        "label": "",
-        "value": "kkarashin@episcopalpgh.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -6214,10 +6358,10 @@
   {
     "vh_id": 10616,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10616",
-    "diocese": "Georgia",
+    "diocese": "",
     "congregation": "St Thomas Episcopal Church",
-    "position_type": "Rector/Priest-in-Charge",
-    "status": "Developing profile",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "Southeast",
     "work_environment": "In Person",
@@ -6241,36 +6385,8 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Georgia"
-      },
-      {
         "label": "Congregation",
         "value": "St Thomas Episcopal Church"
-      },
-      {
-        "label": "Type of Work",
-        "value": "Full Time"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector/Priest-in-Charge"
-      },
-      {
-        "label": "",
-        "value": "details can be added"
-      },
-      {
-        "label": "Current status",
-        "value": "Developing profile"
-      },
-      {
-        "label": "",
-        "value": "to be added"
       },
       {
         "label": "Order(s) of Ministry",
@@ -18153,10 +18269,10 @@
   {
     "vh_id": 10319,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10319",
-    "diocese": "San Joaquin",
+    "diocese": "",
     "congregation": "",
-    "position_type": "Rector/Priest-in-Charge",
-    "status": "Receiving names",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "West Coast",
     "work_environment": "In Person",
@@ -18180,56 +18296,8 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "San Joaquin"
-      },
-      {
-        "label": "Type of Work",
-        "value": "Full Time"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector/Priest-in-Charge"
-      },
-      {
-        "label": "",
-        "value": "St Francis is hoping their next Priest will be inspiring, creative, energetic and enthusiastic in their preaching and leadership.  They are seeking someone who is collaborative with ecumenical and community partners.  They seek someone who is a person of dee and abiding faith, and who respects diversity of all levels and is committed to providing pastoral care to the parishioners."
-      },
-      {
-        "label": "Current status",
-        "value": "Receiving names"
-      },
-      {
-        "label": "",
-        "value": "Send cover letter, resume and vocation hub profile, along with two video sermons to:  canonanna@diosanjoaquin.org"
-      },
-      {
-        "label": "Applicant narrative questions",
-        "value": "1. How do you approach pastoral care in your ministry?, 2. How are you preparing yourself for the Church of the future?, 3. What does stewardship mean to you, and how do you practice it?, 4. How have you experienced and addressed conflict in ministry?, 5. What has been your experience leading change in the Church?, 6. How do you incorporate accessibility and inclusion in your ministry?, 8. How do you use technology in your ministry?, 12. Describe a recent ministry experiment or innovation., 14. How do you discern and adapt to the changing needs of your community?, 15. How do you take care of your well-being-spiritually, emotionally, and physically?, 16. In what ways are you engaged in your wider Church or local community?"
-      },
-      {
-        "label": "",
-        "value": "The Rev. Cn. Anna Carmichael"
-      },
-      {
-        "label": "",
-        "value": "Canon to the Ordinary"
-      },
-      {
-        "label": "",
-        "value": "Episcopal Diocese of San Joaquin"
-      },
-      {
         "label": "Phone Number",
         "value": "209-576-0104"
-      },
-      {
-        "label": "",
-        "value": "canonanna@diosanjoaquin.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -18332,10 +18400,10 @@
   {
     "vh_id": 10318,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10318",
-    "diocese": "San Joaquin",
+    "diocese": "",
     "congregation": "St John the Evangelist Epis Church",
-    "position_type": "Rector/Priest-in-Charge",
-    "status": "Receiving names",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "West Coast",
     "work_environment": "In Person",
@@ -18359,60 +18427,12 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "San Joaquin"
-      },
-      {
         "label": "Congregation",
         "value": "St John the Evangelist Epis Church"
       },
       {
-        "label": "Type of Work",
-        "value": "Full Time"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector/Priest-in-Charge"
-      },
-      {
-        "label": "",
-        "value": "St John’s is located in downtown Stockton, is visible and accessible to the community. Our vision is to embody Christ’s authentic hospitality, as we see our church where every person is welcomed at the table, fully belonging and deeply known. Our dream is to have a clergy person who will take on the liturgical and pastoral responsibility of our church, stimulate our growth, lead us by example, with discernment, consistency, inclusivity, compassion and courage. It is the hope of the Bishop and Diocesan Council that under the guidance of the new Priest-in-Charge, St. John’s will continue to grow our congregation, remain fervent to our ministries, serve our community, and help us move from Mission to Parish status. \n\nWho we hope is “Called to be” with us… \n--Collaborative: must be “hands on” with our community and our partners such as Uplift All Foundation, and be present when services such as showers, laundry, meals, medical checks, etc are being provided \n--Welcoming: St John’s is a place for everyone, a sanctuary for those struggling with mental health and addiction, the unhoused and forgotten; we are guided by the Spirit to love and serve all \n--Community focused: our message of “love and care for all” travels throughout the city. We are present at Pride events in June and October, we participate in the Run and Walk for the Emergency Food Bank, we aid the work of the Mercy Peddlers, we host fundraising events \n---Entrepreneurial: have big dreams and big ideas for how we can develop our ministries in the heart of downtown Stockton, a priest who is inspiring, creative, energetic and enthusiastic, as well as having financial management experience; we aspire to explore Latino ministry in our context. Our urban location is bisected by the Cinco de Mayo and Our Lady of Guadalupe events. \n--Faithful: this clergy person will need to be able to navigate the complexities of partnership and change while being rooted in their call from God, and they need to be able to share that faith and love with others"
-      },
-      {
-        "label": "Current status",
-        "value": "Receiving names"
-      },
-      {
-        "label": "",
-        "value": "Send cover letter, resume, and vocations hub profile along with two video sermons to canonanna@diosanjoaquin.org"
-      },
-      {
-        "label": "Applicant narrative questions",
-        "value": "1. How do you approach pastoral care in your ministry?, 2. How are you preparing yourself for the Church of the future?, 3. What does stewardship mean to you, and how do you practice it?, 4. How have you experienced and addressed conflict in ministry?, 5. What has been your experience leading change in the Church?, 6. How do you incorporate accessibility and inclusion in your ministry?, 13. What is a ministry risk you've taken, and what came of it?, 14. How do you discern and adapt to the changing needs of your community?, 16. In what ways are you engaged in your wider Church or local community?"
-      },
-      {
-        "label": "",
-        "value": "The Rev. Cn. Anna Carmichael"
-      },
-      {
-        "label": "",
-        "value": "Canon to the Ordinary"
-      },
-      {
-        "label": "",
-        "value": "Episcopal Diocese of San Joaquin"
-      },
-      {
         "label": "Phone Number",
         "value": "209-576-0104"
-      },
-      {
-        "label": "",
-        "value": "canonanna@diosanjoaquin.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -20005,10 +20025,10 @@
   {
     "vh_id": 10300,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10300",
-    "diocese": "Spokane",
+    "diocese": "",
     "congregation": "",
-    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-    "status": "Receiving names",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -20032,32 +20052,8 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Spokane"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector / Vicar / Priest-in-Charge (Part-time)"
-      },
-      {
-        "label": "Current status",
-        "value": "Receiving names"
-      },
-      {
-        "label": "",
-        "value": "The Rev. Cn Susan Cleveley"
-      },
-      {
         "label": "Phone Number",
         "value": "(509) 325-5252 5096243191 ext 2 2083101817"
-      },
-      {
-        "label": "",
-        "value": "susanc@spokanediocese.org; office@standrewsspokane.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -20100,10 +20096,10 @@
   {
     "vh_id": 10299,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10299",
-    "diocese": "Spokane",
+    "diocese": "",
     "congregation": "",
-    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-    "status": "Receiving names",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -20127,32 +20123,8 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Spokane"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector / Vicar / Priest-in-Charge (Part-time)"
-      },
-      {
-        "label": "Current status",
-        "value": "Receiving names"
-      },
-      {
-        "label": "",
-        "value": "The Rev. Cn Susan Cleveley"
-      },
-      {
         "label": "Phone Number",
         "value": "509-926-6450 2083101817 5"
-      },
-      {
-        "label": "",
-        "value": "susanc@spokanediocese.org; office@resurrectionspok"
       },
       {
         "label": "Order(s) of Ministry",
@@ -26561,10 +26533,10 @@
   {
     "vh_id": 10227,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10227",
-    "diocese": "",
+    "diocese": "Southern Ohio",
     "congregation": "St Patricks Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Developing profile",
     "order_of_ministry": "Priest",
     "geographic_location": "Midwest",
     "work_environment": "In Person",
@@ -26588,12 +26560,52 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Southern Ohio"
+      },
+      {
         "label": "Congregation",
         "value": "St Patricks Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "Current status",
+        "value": "Developing profile"
+      },
+      {
+        "label": "",
+        "value": "To apply please submit a cover letter, resume, and OTM or Vocation Hub portfolio to: the Rev. Melanie Slane, diocesan transition minister at transitions@diosohio.org. Subject Line: “St. Patrick’s Rector.\" We appreciate your interest and will contact you as soon as we have received your materials to discuss next steps for your application process."
+      },
+      {
+        "label": "",
+        "value": "Melanie Slane"
+      },
+      {
+        "label": "",
+        "value": "Transition Minister"
+      },
+      {
+        "label": "",
+        "value": "Diocese of Southern Ohio"
+      },
+      {
         "label": "Phone Number",
         "value": "314-306-5751"
+      },
+      {
+        "label": "",
+        "value": "transitions@diosohio.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -27460,10 +27472,10 @@
   {
     "vh_id": 10217,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10217",
-    "diocese": "",
+    "diocese": "Rochester",
     "congregation": "",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -27487,8 +27499,32 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Rochester"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector / Vicar / Priest-in-Charge (Part-time)"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "Bishop Kara Wagner Sherer"
+      },
+      {
         "label": "Phone Number",
         "value": "585-315-6604"
+      },
+      {
+        "label": "",
+        "value": "transitions@episcopalrochester.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -29428,10 +29464,10 @@
   {
     "vh_id": 10197,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10197",
-    "diocese": "",
+    "diocese": "Southern Ohio",
     "congregation": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Midwest",
     "work_environment": "In Person",
@@ -29455,12 +29491,56 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation (Multipoint)"
+      },
+      {
+        "label": "Diocese",
+        "value": "Southern Ohio"
+      },
+      {
+        "label": "Name",
+        "value": "Northern Miami Valley Episcopal Cluster"
+      },
+      {
         "label": "This is a position serving multiple congregations or organizations.",
         "value": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)"
       },
       {
+        "label": "Type of Work",
+        "value": "Part Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "",
+        "value": "to be added"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "to be added"
+      },
+      {
+        "label": "Applicant narrative questions",
+        "value": "1. How do you approach pastoral care in your ministry?, 12. Describe a recent ministry experiment or innovation."
+      },
+      {
+        "label": "",
+        "value": "Melanie Slane"
+      },
+      {
         "label": "Phone Number",
         "value": "740-610-5234 937-935-9815"
+      },
+      {
+        "label": "",
+        "value": "clh24esq@yahoo.com; office@nmvec.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -35536,10 +35616,10 @@
   {
     "vh_id": 10106,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10106",
-    "diocese": "Michigan",
+    "diocese": "",
     "congregation": "",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "status": "Search complete",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -35563,32 +35643,8 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "Michigan"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector / Vicar / Priest-in-Charge"
-      },
-      {
-        "label": "Current status",
-        "value": "Search complete"
-      },
-      {
-        "label": "",
-        "value": "Canon Jim Gettel"
-      },
-      {
         "label": "Phone Number",
         "value": "313-833-4424"
-      },
-      {
-        "label": "",
-        "value": "jgettel@edomi.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -47936,10 +47992,10 @@
   {
     "vh_id": 9889,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9889",
-    "diocese": "New Jersey",
+    "diocese": "",
     "congregation": "",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "status": "Search complete",
+    "position_type": "",
+    "status": "",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -47963,32 +48019,8 @@
     "open_ended": true,
     "all_fields": [
       {
-        "label": "Type",
-        "value": "Congregation"
-      },
-      {
-        "label": "Diocese",
-        "value": "New Jersey"
-      },
-      {
-        "label": "Position Title/Role",
-        "value": "Rector / Vicar / Priest-in-Charge"
-      },
-      {
-        "label": "Current status",
-        "value": "Search complete"
-      },
-      {
-        "label": "",
-        "value": "Rhonda Jackson"
-      },
-      {
         "label": "Phone Number",
         "value": "732-449-6173 609.394.5281 Ext 42"
-      },
-      {
-        "label": "",
-        "value": "rjackson@dioceseofnj.org; urielsg@optonline.net"
       },
       {
         "label": "Order(s) of Ministry",
@@ -70323,6 +70355,117 @@
       {
         "label": "Receiving names from",
         "value": "03/31/2026"
+      },
+      {
+        "label": "To",
+        "value": "Open ended"
+      }
+    ]
+  },
+  {
+    "vh_id": 9424,
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9424",
+    "diocese": "Los Angeles",
+    "congregation": "",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "status": "Receiving names",
+    "order_of_ministry": "Priest",
+    "geographic_location": "West Coast",
+    "work_environment": "In Person",
+    "ministry_setting": "Suburban",
+    "avg_sunday_attendance": "0",
+    "annual_budget": "0",
+    "salary_range": "",
+    "housing_type": "",
+    "pension": "",
+    "healthcare": "",
+    "reimbursement": "",
+    "vacation": "One month, including 5 Sundays (standard)",
+    "leadership_skills": "",
+    "ministry_skills": "",
+    "languages": "",
+    "contact_email": "",
+    "website": "",
+    "facebook": "",
+    "receiving_names_from": "04/01/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true,
+    "all_fields": [
+      {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Los Angeles"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector / Vicar / Priest-in-Charge"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "The Rev. Canon Thomas Quijada-Discavage"
+      },
+      {
+        "label": "Phone Number",
+        "value": "626-799-9194 3233507675"
+      },
+      {
+        "label": "",
+        "value": "tdiscavage@ladiocese.org"
+      },
+      {
+        "label": "Order(s) of Ministry",
+        "value": "Priest"
+      },
+      {
+        "label": "Geographic Location",
+        "value": "West Coast"
+      },
+      {
+        "label": "Work Environment",
+        "value": "In Person"
+      },
+      {
+        "label": "Ministry Setting",
+        "value": "Suburban"
+      },
+      {
+        "label": "Average Sunday Attendance",
+        "value": "0"
+      },
+      {
+        "label": "Annual Budget",
+        "value": "0"
+      },
+      {
+        "label": "Details",
+        "value": "0"
+      },
+      {
+        "label": "Details",
+        "value": "Dental: Yes"
+      },
+      {
+        "label": "Vacation & Leave Details",
+        "value": "One month, including 5 Sundays (standard)"
+      },
+      {
+        "label": "Continuing Education Details",
+        "value": "2 (standard)"
+      },
+      {
+        "label": "Sabbatical Provision Details",
+        "value": "Yes"
+      },
+      {
+        "label": "Receiving names from",
+        "value": "04/01/2026"
       },
       {
         "label": "To",
@@ -93028,10 +93171,10 @@
   {
     "vh_id": 8922,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8922",
-    "diocese": "",
+    "diocese": "Central Pennsylvania",
     "congregation": "",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -93055,8 +93198,32 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Central Pennsylvania"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector / Vicar / Priest-in-Charge"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "The Rev. Canon Veronica Donohue"
+      },
+      {
         "label": "Phone Number",
         "value": "570-218-2445"
+      },
+      {
+        "label": "",
+        "value": "vchappell@diocesecpa.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -93210,10 +93377,10 @@
   {
     "vh_id": 8920,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8920",
-    "diocese": "",
+    "diocese": "Dallas",
     "congregation": "",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Plains",
     "work_environment": "",
@@ -93237,8 +93404,32 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Dallas"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector / Vicar / Priest-in-Charge"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "The Rev. Dr. Elizabeth Papazoglakis"
+      },
+      {
         "label": "Phone Number",
         "value": "(214) 340-4196 214-826-83"
+      },
+      {
+        "label": "",
+        "value": "transitionconsultant@edod.org; RectorSearchCommitt"
       },
       {
         "label": "Order(s) of Ministry",
@@ -100309,10 +100500,10 @@
   {
     "vh_id": 8636,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8636",
-    "diocese": "",
+    "diocese": "Bethlehem",
     "congregation": "",
-    "position_type": "",
-    "status": "",
+    "position_type": "Priest-in-Charge Shared Ministry",
+    "status": "Search complete",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -100336,8 +100527,28 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Bethlehem"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Priest-in-Charge Shared Ministry"
+      },
+      {
+        "label": "Current status",
+        "value": "Search complete"
+      },
+      {
         "label": "Phone Number",
         "value": "570-278-2954"
+      },
+      {
+        "label": "",
+        "value": "stpaulsmontrose@epix.net"
       },
       {
         "label": "Order(s) of Ministry",
@@ -100972,10 +101183,10 @@
   {
     "vh_id": 8611,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8611",
-    "diocese": "",
+    "diocese": "Atlanta",
     "congregation": "St Pauls Episcopal Church",
-    "position_type": "",
-    "status": "",
+    "position_type": "Assistant/Associate/Curate",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Southeast",
     "work_environment": "In Person",
@@ -100999,12 +101210,56 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Atlanta"
+      },
+      {
         "label": "Congregation",
         "value": "St Pauls Episcopal Church"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Assistant/Associate/Curate"
+      },
+      {
+        "label": "",
+        "value": "Our commitment to you, our new associate rector, is to cultivate an environment that encourages you to grow, deepen, and lean confidently into your unique gifts of ministry, supported by collaborative leadership and space for faithful innovation.  Working closely with the Rector, staff, and lay leaders, you will share in the full sacramental and pastoral life of our vibrant and inclusive parish through intergenerational ministries that includes oversight of our children and youth ministries."
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "To apply for this position, contact Anne Graner, Search Chair - search@stpaulsnewnan.org"
+      },
+      {
+        "label": "",
+        "value": "Anne Graner"
+      },
+      {
+        "label": "",
+        "value": "Search Chair"
+      },
+      {
+        "label": "",
+        "value": "St. Paul's Episcopal Church, Newnan, GA"
+      },
+      {
         "label": "Phone Number",
         "value": "404-444-6015"
+      },
+      {
+        "label": "",
+        "value": "search@stpaulsnewnan.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -101226,10 +101481,10 @@
   {
     "vh_id": 8607,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8607",
-    "diocese": "",
+    "diocese": "Arizona",
     "congregation": "The Episcopal Church of St Matthew",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector/Priest-in-Charge",
+    "status": "Receiving names",
     "order_of_ministry": "Priest",
     "geographic_location": "Southwest",
     "work_environment": "In Person",
@@ -101253,12 +101508,48 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Arizona"
+      },
+      {
         "label": "Congregation",
         "value": "The Episcopal Church of St Matthew"
       },
       {
+        "label": "Type of Work",
+        "value": "Full Time"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector/Priest-in-Charge"
+      },
+      {
+        "label": "Current status",
+        "value": "Receiving names"
+      },
+      {
+        "label": "",
+        "value": "Rev. Cn. Anita Braden"
+      },
+      {
+        "label": "",
+        "value": "Canon to the Ordinary"
+      },
+      {
+        "label": "",
+        "value": "Diocese of Arizona"
+      },
+      {
         "label": "Phone Number",
         "value": "620-254-0976"
+      },
+      {
+        "label": "",
+        "value": "anita@azdiocese.org"
       },
       {
         "label": "Order(s) of Ministry",
@@ -103932,10 +104223,10 @@
   {
     "vh_id": 8579,
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8579",
-    "diocese": "",
+    "diocese": "Arkansas",
     "congregation": "",
-    "position_type": "",
-    "status": "",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "status": "Search complete",
     "order_of_ministry": "Priest",
     "geographic_location": "",
     "work_environment": "",
@@ -103959,8 +104250,32 @@
     "open_ended": true,
     "all_fields": [
       {
+        "label": "Type",
+        "value": "Congregation"
+      },
+      {
+        "label": "Diocese",
+        "value": "Arkansas"
+      },
+      {
+        "label": "Position Title/Role",
+        "value": "Rector / Vicar / Priest-in-Charge"
+      },
+      {
+        "label": "Current status",
+        "value": "Search complete"
+      },
+      {
+        "label": "",
+        "value": "The Rev. Canon Jason Alexander"
+      },
+      {
         "label": "Phone Number",
         "value": "501-268-5270 501-372-2168"
+      },
+      {
+        "label": "",
+        "value": "jalexander@episcopalarkansas.org; tpce@ipa.net"
       },
       {
         "label": "Order(s) of Ministry",

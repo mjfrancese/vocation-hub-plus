@@ -253,13 +253,83 @@
     "name": "St Stephens Episcopal Church",
     "diocese": "Iowa",
     "state": "IA",
-    "vh_status": "Receiving names",
+    "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10688",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Stephens Episcopal Church",
     "receiving_names_from": "05/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 3206,
+      "name": "St. Stephen's Episcopal Church",
+      "street": "223 E 4th St N",
+      "city": "Newton",
+      "state": "IA",
+      "zip": "50208-3214",
+      "phone": "641-792-6971",
+      "email": "ststephn@windstream.net",
+      "website": "",
+      "type": "church",
+      "lat": 41.70117,
+      "lng": -93.05017
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Stephens Episcopal Church (Newton)",
+      "years": {
+        "2015": {
+          "averageAttendance": 47,
+          "plateAndPledge": 125139,
+          "membership": 217
+        },
+        "2016": {
+          "averageAttendance": 46,
+          "plateAndPledge": 87606,
+          "membership": 98
+        },
+        "2017": {
+          "averageAttendance": 40,
+          "plateAndPledge": 115706,
+          "membership": 99
+        },
+        "2018": {
+          "averageAttendance": 33,
+          "plateAndPledge": 101080,
+          "membership": 96
+        },
+        "2019": {
+          "averageAttendance": 28,
+          "plateAndPledge": 101171,
+          "membership": 101
+        },
+        "2020": {
+          "averageAttendance": 26,
+          "plateAndPledge": 57408,
+          "membership": 97
+        },
+        "2021": {
+          "averageAttendance": 19,
+          "plateAndPledge": 42243,
+          "membership": 97
+        },
+        "2022": {
+          "averageAttendance": 21,
+          "plateAndPledge": 46607,
+          "membership": 102
+        },
+        "2023": {
+          "averageAttendance": 22,
+          "plateAndPledge": 48610,
+          "membership": 103
+        },
+        "2024": {
+          "averageAttendance": 21,
+          "plateAndPledge": 45346,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10686,
@@ -268,7 +338,7 @@
     "state": "GA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10686",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Julians Episcopal Church",
     "receiving_names_from": "03/20/2026",
     "receiving_names_to": "Open ended",
@@ -637,9 +707,9 @@
     "name": "Trinity Episcopal Church",
     "diocese": "Louisiana",
     "state": "LA",
-    "vh_status": "Receiving names",
+    "vh_status": "Beginning search",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10677",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Assistant/Associate/Curate",
     "congregation": "Trinity Episcopal Church",
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
@@ -1316,7 +1386,7 @@
     "state": "OH",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10634",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "St Johns Church Episcopal",
     "receiving_names_from": "04/21/2026",
     "receiving_names_to": "Open ended",
@@ -1646,9 +1716,9 @@
     "name": "Christ Episcopal Church",
     "diocese": "Pittsburgh",
     "state": "PA",
-    "vh_status": "Profile complete",
+    "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10624",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "Christ Episcopal Church",
     "receiving_names_from": "04/07/2026",
     "receiving_names_to": "Open ended",
@@ -1810,11 +1880,11 @@
   {
     "vh_id": 10616,
     "name": "St Thomas Episcopal Church",
-    "diocese": "Georgia",
+    "diocese": "",
     "state": "",
-    "vh_status": "Developing profile",
+    "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10616",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "St Thomas Episcopal Church",
     "receiving_names_from": "04/01/2026",
     "receiving_names_to": "Open ended",
@@ -6245,12 +6315,12 @@
   },
   {
     "vh_id": 10319,
-    "name": "Position in San Joaquin",
-    "diocese": "San Joaquin",
+    "name": "Unknown Position",
+    "diocese": "",
     "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10319",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "Open ended",
@@ -6930,169 +7000,29 @@
   },
   {
     "vh_id": 10300,
-    "name": "St. Andrew's Episcopal Church, Spokane, Spokane, WA",
-    "diocese": "Spokane",
-    "state": "WA",
+    "name": "Unknown Position",
+    "diocese": "",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10300",
-    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "08/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 5511,
-      "name": "St. Andrew's Episcopal Church, Spokane",
-      "street": "2404 N Howard St",
-      "city": "Spokane",
-      "state": "WA",
-      "zip": "99205-3215",
-      "phone": "509-325-5252 ",
-      "email": "office@standrewsspokane.org",
-      "website": "http://www.standrewsspokane.org",
-      "type": "church",
-      "lat": 47.679648,
-      "lng": -117.419955
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Andrews Episcopal Church (Spokane)",
-      "years": {
-        "2015": {
-          "averageAttendance": 54,
-          "plateAndPledge": 71701,
-          "membership": 154
-        },
-        "2016": {
-          "averageAttendance": 50,
-          "plateAndPledge": 65236,
-          "membership": 161
-        },
-        "2017": {
-          "averageAttendance": 44,
-          "plateAndPledge": 64365,
-          "membership": 69
-        },
-        "2018": {
-          "averageAttendance": 35,
-          "plateAndPledge": 52761,
-          "membership": 69
-        },
-        "2019": {
-          "averageAttendance": 40,
-          "plateAndPledge": 60417,
-          "membership": 74
-        },
-        "2020": {
-          "averageAttendance": 35,
-          "plateAndPledge": 53948,
-          "membership": 72
-        },
-        "2021": {
-          "averageAttendance": 22,
-          "plateAndPledge": 59049,
-          "membership": 51
-        },
-        "2022": {
-          "averageAttendance": 23,
-          "plateAndPledge": 59110,
-          "membership": 40
-        },
-        "2023": {
-          "averageAttendance": 24,
-          "plateAndPledge": 45848,
-          "membership": 35
-        },
-        "2024": {
-          "averageAttendance": 22,
-          "plateAndPledge": 95951,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10299,
-    "name": "Church of the Resurrection, Spokane Valley, Spokane Valley, WA",
-    "diocese": "Spokane",
-    "state": "WA",
+    "name": "Unknown Position",
+    "diocese": "",
+    "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10299",
-    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "08/31/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "church_info": {
-      "nid": 5514,
-      "name": "Church of the Resurrection, Spokane Valley",
-      "street": "15319 E 8th Ave",
-      "city": "Spokane Valley",
-      "state": "WA",
-      "zip": "99037-8828",
-      "phone": "(509) 926-6450",
-      "email": "ecorwebmaster@resurrectionspokane.org",
-      "website": "https://resurrectionspokane.spokanediocese.org",
-      "type": "church",
-      "lat": 47.65016,
-      "lng": -117.19846
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "Church of the Resurrection (Spokane Valley)",
-      "years": {
-        "2015": {
-          "averageAttendance": 83,
-          "plateAndPledge": 145293,
-          "membership": 173
-        },
-        "2016": {
-          "averageAttendance": 84,
-          "plateAndPledge": 124829,
-          "membership": 159
-        },
-        "2017": {
-          "averageAttendance": 82,
-          "plateAndPledge": 132807,
-          "membership": 161
-        },
-        "2018": {
-          "averageAttendance": 81,
-          "plateAndPledge": 141967,
-          "membership": 158
-        },
-        "2019": {
-          "averageAttendance": 72,
-          "plateAndPledge": 145254,
-          "membership": 158
-        },
-        "2020": {
-          "averageAttendance": 88,
-          "plateAndPledge": 102895,
-          "membership": 148
-        },
-        "2021": {
-          "averageAttendance": 43,
-          "plateAndPledge": 130745,
-          "membership": 145
-        },
-        "2022": {
-          "averageAttendance": 40,
-          "plateAndPledge": 134982,
-          "membership": 144
-        },
-        "2023": {
-          "averageAttendance": 41,
-          "plateAndPledge": 165640,
-          "membership": 105
-        },
-        "2024": {
-          "averageAttendance": 45,
-          "plateAndPledge": 127310,
-          "membership": null
-        }
-      }
-    }
+    "open_ended": true
   },
   {
     "vh_id": 10298,
@@ -10835,15 +10765,85 @@
   {
     "vh_id": 10227,
     "name": "St Patricks Church",
-    "diocese": "Missouri",
-    "state": "MO",
-    "vh_status": "Receiving names",
+    "diocese": "Southern Ohio",
+    "state": "OH",
+    "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10227",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Patricks Church",
     "receiving_names_from": "05/13/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5208,
+      "name": "St. Patrick's Episcopal Church",
+      "street": "7121 Muirfield Dr",
+      "city": "Dublin",
+      "state": "OH",
+      "zip": "43017-2863",
+      "phone": "614-766-2664",
+      "email": "church@pats-dublin.org",
+      "website": "https://pats-dublin.org",
+      "type": "church",
+      "lat": 40.11375,
+      "lng": -83.15511
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "St Patricks Episcopal Church (Dublin)",
+      "years": {
+        "2015": {
+          "averageAttendance": 250,
+          "plateAndPledge": 501061,
+          "membership": 946
+        },
+        "2016": {
+          "averageAttendance": 253,
+          "plateAndPledge": 546268,
+          "membership": 957
+        },
+        "2017": {
+          "averageAttendance": 268,
+          "plateAndPledge": 534954,
+          "membership": 984
+        },
+        "2018": {
+          "averageAttendance": 260,
+          "plateAndPledge": 524567,
+          "membership": 1021
+        },
+        "2019": {
+          "averageAttendance": 263,
+          "plateAndPledge": 555840,
+          "membership": 978
+        },
+        "2020": {
+          "averageAttendance": 291,
+          "plateAndPledge": 506761,
+          "membership": 956
+        },
+        "2021": {
+          "averageAttendance": 77,
+          "plateAndPledge": 568233,
+          "membership": 866
+        },
+        "2022": {
+          "averageAttendance": 151,
+          "plateAndPledge": 513353,
+          "membership": 663
+        },
+        "2023": {
+          "averageAttendance": 154,
+          "plateAndPledge": 488160,
+          "membership": 584
+        },
+        "2024": {
+          "averageAttendance": 173,
+          "plateAndPledge": 586462,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10226,
@@ -11236,7 +11236,7 @@
     "state": "NY",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10217",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "05/15/2025",
     "receiving_names_to": "Open ended",
@@ -11846,11 +11846,81 @@
     "state": "OH",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10197",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5239,
+      "name": "Church of the Epiphany",
+      "street": "230 Scioto St",
+      "city": "Urbana",
+      "state": "OH",
+      "zip": "43078-2128",
+      "phone": "(937) 653-3497",
+      "email": "office@nmvec.org",
+      "website": "https://www.nmvec.org",
+      "type": "church",
+      "lat": 40.10822,
+      "lng": -83.74951
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Epiphany (Urbana)",
+      "years": {
+        "2015": {
+          "averageAttendance": 32,
+          "plateAndPledge": 57134,
+          "membership": 44
+        },
+        "2016": {
+          "averageAttendance": 28,
+          "plateAndPledge": 57040,
+          "membership": 45
+        },
+        "2017": {
+          "averageAttendance": 29,
+          "plateAndPledge": 63378,
+          "membership": 45
+        },
+        "2018": {
+          "averageAttendance": 20,
+          "plateAndPledge": 45959,
+          "membership": 46
+        },
+        "2019": {
+          "averageAttendance": 21,
+          "plateAndPledge": 48419,
+          "membership": 46
+        },
+        "2020": {
+          "averageAttendance": 19,
+          "plateAndPledge": 41897,
+          "membership": 45
+        },
+        "2021": {
+          "averageAttendance": 17,
+          "plateAndPledge": 49053,
+          "membership": 46
+        },
+        "2022": {
+          "averageAttendance": 27,
+          "plateAndPledge": 55541,
+          "membership": 49
+        },
+        "2023": {
+          "averageAttendance": 34,
+          "plateAndPledge": 58131,
+          "membership": 52
+        },
+        "2024": {
+          "averageAttendance": 35,
+          "plateAndPledge": 70352,
+          "membership": null
+        }
+      }
+    }
   },
   {
     "vh_id": 10196,
@@ -13983,8 +14053,8 @@
   },
   {
     "vh_id": 10106,
-    "name": "Position in Michigan",
-    "diocese": "Michigan",
+    "name": "Unknown Position",
+    "diocese": "",
     "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10106",
@@ -19450,8 +19520,8 @@
   },
   {
     "vh_id": 9889,
-    "name": "Position in New Jersey",
-    "diocese": "New Jersey",
+    "name": "Unknown Position",
+    "diocese": "",
     "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9889",
@@ -28321,6 +28391,19 @@
     "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "03/31/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true
+  },
+  {
+    "vh_id": 9424,
+    "name": "Position in Los Angeles",
+    "diocese": "Los Angeles",
+    "state": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9424",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "congregation": "",
+    "receiving_names_from": "04/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true
   },
@@ -38886,7 +38969,7 @@
     "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8636",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Priest-in-Charge Shared Ministry",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
@@ -39144,11 +39227,11 @@
   {
     "vh_id": 8607,
     "name": "The Episcopal Church of St Matthew",
-    "diocese": "Kansas",
+    "diocese": "Arizona",
     "state": "KS",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8607",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "The Episcopal Church of St Matthew",
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
