@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import StatusBadge from './StatusBadge';
 import ParochialTrends from './ParochialTrends';
@@ -210,9 +210,8 @@ export default function PositionTable({ positions }: PositionTableProps) {
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
             {sorted.map((pos) => (
-              <>
+              <Fragment key={pos.id}>
                 <tr
-                  key={pos.id}
                   onClick={() => toggleExpand(pos.id)}
                   className={`cursor-pointer transition-colors ${
                     expandedId === pos.id
@@ -252,7 +251,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     </td>
                   </tr>
                 )}
-              </>
+              </Fragment>
             ))}
           </tbody>
         </table>
