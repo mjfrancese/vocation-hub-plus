@@ -9,6 +9,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { normalizeChurchName, normalizeDiocese } = require('./lib/normalization');
 
 const DATA_DIR = path.resolve(__dirname, '../public/data');
 
@@ -16,43 +17,6 @@ function load(name) {
   const file = path.join(DATA_DIR, name);
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf-8'));
-}
-
-// --- Diocese normalization ---
-
-function normalizeDiocese(diocese) {
-  return diocese
-    .toLowerCase()
-    .replace(/^the\s+/i, '')
-    .replace(/^episcopal\s+church\s+(in\s+)?/i, '')
-    .replace(/^episcopal\s+diocese\s+(of\s+)?/i, '')
-    .replace(/^diocese\s+of\s+/i, '')
-    .replace(/^diocesis\s+de\s+/i, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-// --- Church name normalization ---
-
-function normalizeChurchName(name) {
-  return (name || '')
-    .toLowerCase()
-    .replace(/\bsaints?\b/g, 'st')
-    .replace(/\bsts\.?\s/g, 'st ')
-    .replace(/\bst\.\s*/g, 'st ')
-    .replace(/\bmount\b/g, 'mt')
-    .replace(/\bmt\.\s*/g, 'mt ')
-    .replace(/\s*\/.*$/, '')
-    .replace(/['\u2018\u2019`]/g, '')
-    .replace(/\([^)]*\)/g, '')
-    .replace(/,.*$/, '')
-    .replace(/-/g, ' ')
-    .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
-    .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
-    .replace(/[^a-z0-9\s]/g, '')
-    .replace(/([a-z]{4,})s\b/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 // --- Parochial name parsing ---

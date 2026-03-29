@@ -10,6 +10,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { normalizeChurchName } = require('./lib/normalization');
 
 const DATA_DIR = path.resolve(__dirname, '../public/data');
 
@@ -44,27 +45,6 @@ function extractCity(name) {
   const m = (name || '').match(/\(([^)]+)\)$/);
   if (m) return m[1].trim();
   return '';
-}
-
-function normalizeChurchName(name) {
-  return (name || '')
-    .toLowerCase()
-    .replace(/\bsaints?\b/g, 'st')
-    .replace(/\bsts\.?\s/g, 'st ')
-    .replace(/\bst\.\s*/g, 'st ')
-    .replace(/\bmount\b/g, 'mt')
-    .replace(/\bmt\.\s*/g, 'mt ')
-    .replace(/\s*\/.*$/, '')
-    .replace(/['\u2018\u2019`]/g, '')
-    .replace(/\([^)]*\)/g, '')
-    .replace(/,.*$/, '')
-    .replace(/-/g, ' ')
-    .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
-    .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
-    .replace(/[^a-z0-9\s]/g, '')
-    .replace(/([a-z]{4,})s\b/g, '$1')
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 // --- Main ---
