@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Legend,
@@ -24,13 +24,19 @@ interface Profile {
   all_fields: Array<{ label: string; value: string }>;
 }
 
-import profilesData from '../../../public/data/all-profiles.json';
-
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#f97316', '#84cc16', '#6366f1'];
 
 export default function AnalyticsPage() {
-  const profiles = useMemo(() => profilesData as unknown as Profile[], []);
+  const [profiles, setProfiles] = useState<Profile[]>([]);
+  const [loading, setLoading] = useState(true);
   const [showActive, setShowActive] = useState(false);
+
+  useEffect(() => {
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    fetch(`${base}/data/all-profiles.json`)
+      .then(r => r.json())
+      .then((data: Profile[]) => { setProfiles(data); setLoading(false); });
+  }, []);
 
   const filtered = useMemo(() => {
     if (!showActive) return profiles;
@@ -158,6 +164,14 @@ export default function AnalyticsPage() {
     }
     return buckets.map(b => ({ name: b.label, value: counts[b.label] })).filter(d => d.value > 0);
   }, [filtered]);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <p className="text-gray-500">Loading analytics data...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-8">

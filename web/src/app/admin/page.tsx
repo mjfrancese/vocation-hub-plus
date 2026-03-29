@@ -78,15 +78,6 @@ interface MetaData {
   } | null;
 }
 
-import profilesData from '../../../public/data/all-profiles.json';
-import registryData from '../../../public/data/church-registry.json';
-import mapData from '../../../public/data/position-church-map.json';
-import metaData from '../../../public/data/meta.json';
-
-let gapReportData: GapReport | null = null;
-try {
-  gapReportData = require('../../../public/data/needs-backfill.json');
-} catch { /* may not exist yet */ }
 
 // --- Auth Gate ---
 
@@ -162,20 +153,40 @@ export default function AdminPage() {
     return <AccessGate onAuth={() => setAuthed(true)} />;
   }
 
-  return <AdminDashboard />;
+  return <AdminDashboard authed={authed} />;
 }
 
-function AdminDashboard() {
-  const profiles = profilesData as unknown as Profile[];
-  const registry = registryData as unknown as RegistryData;
-  const positionMap = mapData as unknown as MapData;
-  const meta = metaData as unknown as MetaData;
-  const gapReport = gapReportData;
+function AdminDashboard({ authed }: { authed: boolean }) {
+  const [profilesData, setProfiles] = useState<Profile[]>([]);
+  const [registryData, setRegistry] = useState<RegistryData | null>(null);
+  const [mapData, setMapData] = useState<MapData | null>(null);
+  const [metaData, setMeta] = useState<MetaData | null>(null);
+  const [gapReportData, setGapReport] = useState<GapReport | null>(null);
+  const [dataLoading, setDataLoading] = useState(true);
 
   const [activeTab, setActiveTab] = useState<'overview' | 'review'>('overview');
 
   // Local overrides stored in localStorage
   const [overrides, setOverrides] = useState<Record<string, ReviewAction>>({});
+
+  useEffect(() => {
+    if (!authed) return;
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    Promise.all([
+      fetch(`${base}/data/all-profiles.json`).then(r => r.json()),
+      fetch(`${base}/data/church-registry.json`).then(r => r.json()),
+      fetch(`${base}/data/position-church-map.json`).then(r => r.json()),
+      fetch(`${base}/data/meta.json`).then(r => r.json()),
+      fetch(`${base}/data/needs-backfill.json`).then(r => r.json()).catch(() => null),
+    ]).then(([profiles, registry, map, meta, gaps]) => {
+      setProfiles(profiles);
+      setRegistry(registry);
+      setMapData(map);
+      setMeta(meta);
+      setGapReport(gaps);
+      setDataLoading(false);
+    });
+  }, [authed]);
 
   useEffect(() => {
     try {
@@ -191,11 +202,12 @@ function AdminDashboard() {
 
   // Flagged positions with profile data
   const flaggedItems = useMemo(() => {
-    const mappings = positionMap.mappings;
+    if (!mapData) return [];
+    const mappings = mapData.mappings;
     const items: Array<{ vhId: string; profile: Profile; mapping: Mapping }> = [];
     for (const [vhId, mapping] of Object.entries(mappings)) {
       if (!mapping.flagged) continue;
-      const profile = profiles.find(p => String(p.vh_id) === vhId);
+      const profile = profilesData.find(p => String(p.vh_id) === vhId);
       if (!profile) continue;
       items.push({ vhId, profile, mapping });
     }
@@ -206,7 +218,21 @@ function AdminDashboard() {
       return a.profile.diocese.localeCompare(b.profile.diocese);
     });
     return items;
-  }, [profiles, positionMap]);
+  }, [profilesData, mapData]);
+
+  if (dataLoading) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <p className="text-gray-500">Loading admin data...</p>
+      </div>
+    );
+  }
+
+  const profiles = profilesData;
+  const registry = registryData!;
+  const positionMap = mapData!;
+  const meta = metaData!;
+  const gapReport = gapReportData;
 
   const reviewedCount = Object.keys(overrides).length;
   const assignedCount = Object.values(overrides).filter(v => typeof v === 'object').length;
