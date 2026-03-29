@@ -92,9 +92,9 @@ try {
 
 const AUTH_KEY = 'vhp-admin-auth';
 const STORAGE_KEY = 'vhp-manual-mappings';
-// Simple hash check -- not meant to be cryptographically secure,
-// just enough to keep casual visitors out of a static site admin panel.
-function checkPassword(input: string): boolean {
+// Simple hash check -- not a security boundary, just a casual access gate
+// for a static site review tool.
+function checkAccessCode(input: string): boolean {
   let hash = 0;
   for (let i = 0; i < input.length; i++) {
     hash = ((hash << 5) - hash + input.charCodeAt(i)) | 0;
@@ -102,42 +102,43 @@ function checkPassword(input: string): boolean {
   return hash === -1077942682;
 }
 
-function PasswordGate({ onAuth }: { onAuth: () => void }) {
-  const [password, setPassword] = useState('');
+function AccessGate({ onAuth }: { onAuth: () => void }) {
+  const [code, setCode] = useState('');
   const [error, setError] = useState(false);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (checkPassword(password)) {
+    if (checkAccessCode(code)) {
       sessionStorage.setItem(AUTH_KEY, 'true');
       onAuth();
     } else {
       setError(true);
-      setPassword('');
+      setCode('');
     }
   }
 
   return (
     <div className="flex items-center justify-center min-h-[60vh]">
       <form onSubmit={handleSubmit} className="bg-white border border-gray-200 rounded-lg p-8 w-full max-w-sm shadow-sm">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Admin Access</h2>
-        <p className="text-sm text-gray-500 mb-4">Enter the admin password to continue.</p>
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Review Tool Access</h2>
+        <p className="text-sm text-gray-500 mb-4">Enter the access code to continue.</p>
+        <p className="text-xs text-gray-400 mb-3">This is a review tool access gate, not a security boundary.</p>
         <input
           type="password"
-          value={password}
-          onChange={e => { setPassword(e.target.value); setError(false); }}
-          placeholder="Password"
+          value={code}
+          onChange={e => { setCode(e.target.value); setError(false); }}
+          placeholder="Access code"
           className={`w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-primary-500 focus:border-primary-500 ${
             error ? 'border-red-300 bg-red-50' : 'border-gray-300'
           }`}
           autoFocus
         />
-        {error && <p className="text-xs text-red-600 mt-1">Incorrect password</p>}
+        {error && <p className="text-xs text-red-600 mt-1">Incorrect access code</p>}
         <button
           type="submit"
           className="w-full mt-3 px-4 py-2 text-sm bg-primary-600 text-white rounded-md hover:bg-primary-700"
         >
-          Sign In
+          Continue
         </button>
       </form>
     </div>
@@ -158,7 +159,7 @@ export default function AdminPage() {
   }, []);
 
   if (!authed) {
-    return <PasswordGate onAuth={() => setAuthed(true)} />;
+    return <AccessGate onAuth={() => setAuthed(true)} />;
   }
 
   return <AdminDashboard />;
