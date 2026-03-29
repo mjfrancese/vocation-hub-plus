@@ -10,6 +10,7 @@ import { logger } from './logger.js';
 import { sleep } from './navigate.js';
 import { discoverAndScrapePositions, type DiscoveredId } from './discover-ids-from-search.js';
 import { runBackfill } from './backfill.js';
+import { checkQuality } from './quality-check.js';
 
 import fs from 'fs';
 import path from 'path';
@@ -52,6 +53,8 @@ async function main(): Promise<void> {
       // Phase 2: Discover VH IDs AND extract detail data in ONE pass.
       // Clicks each row, captures URL, extracts profile data while
       // on the profile page, then goes back. No second pass needed.
+      let phase2Success = true;
+      let phase3Success = true;
       try {
         const elapsed = Date.now() - startTime;
         const timeLeft = CONFIG.maxRuntime - elapsed - 120_000;
@@ -95,6 +98,7 @@ async function main(): Promise<void> {
           logger.warn('Not enough time for Phase 2', { elapsed, timeLeft });
         }
       } catch (detailErr) {
+        phase2Success = false;
         logger.warn('Phase 2 failed (non-fatal)', {
           error: detailErr instanceof Error ? detailErr.message : String(detailErr),
         });
@@ -127,6 +131,7 @@ async function main(): Promise<void> {
           logger.info('Not enough time for Phase 3 backfill', { timeLeft: timeLeft3 });
         }
       } catch (backfillErr) {
+        phase3Success = false;
         logger.warn('Phase 3 backfill failed (non-fatal)', {
           error: backfillErr instanceof Error ? backfillErr.message : String(backfillErr),
         });
@@ -141,6 +146,20 @@ async function main(): Promise<void> {
       const durationMs = Date.now() - startTime;
       logScrape(positions.length, diff.newCount, diff.expiredCount, durationMs, 'success');
       exportJson();
+
+      const qualityReport = checkQuality({
+        totalPositions: positions.length,
+        newCount: diff.newCount,
+        expiredCount: diff.expiredCount,
+        phase2Success,
+        phase3Success,
+      });
+
+      if (!qualityReport.pass) {
+        logger.warn('Data quality check failed', {
+          checks: qualityReport.checks.filter(c => !c.pass),
+        });
+      }
 
       logger.info('Scrape completed successfully', {
         duration: `${(durationMs / 1000).toFixed(1)}s`,
