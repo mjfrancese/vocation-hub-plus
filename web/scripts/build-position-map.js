@@ -12,6 +12,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { normalizeChurchName, normalizeDiocese, normalizePhone } = require('./lib/normalization');
 
 const DATA_DIR = path.resolve(__dirname, '../public/data');
 
@@ -19,51 +20,6 @@ function load(name) {
   const file = path.join(DATA_DIR, name);
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf-8'));
-}
-
-// --- Normalization ---
-
-function normalizeDiocese(diocese) {
-  return diocese
-    .toLowerCase()
-    .replace(/^the\s+/i, '')
-    .replace(/^episcopal\s+church\s+(in\s+)?/i, '')
-    .replace(/^episcopal\s+diocese\s+(of\s+)?/i, '')
-    .replace(/^diocese\s+of\s+/i, '')
-    .replace(/^diocesis\s+de\s+/i, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function normalizeChurchName(name) {
-  return (name || '')
-    .toLowerCase()
-    // Abbreviation standardization
-    .replace(/\bsaints?\b/g, 'st')        // saint/saints -> st
-    .replace(/\bsts\.?\s/g, 'st ')         // sts./sts -> st (plural saints abbrev)
-    .replace(/\bst\.\s*/g, 'st ')          // st. -> st
-    .replace(/\bmount\b/g, 'mt')           // mount -> mt
-    .replace(/\bmt\.\s*/g, 'mt ')          // mt. -> mt
-    // Strip bilingual suffix (after slash)
-    .replace(/\s*\/.*$/, '')
-    // Strip apostrophes and smart quotes
-    .replace(/['\u2018\u2019`]/g, '')
-    // Strip parenthetical content
-    .replace(/\([^)]*\)/g, '')
-    // Strip comma suffix (city in registry names)
-    .replace(/,.*$/, '')
-    // Replace hyphens with spaces
-    .replace(/-/g, ' ')
-    // Strip stop words
-    .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
-    .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
-    // Strip all remaining punctuation (catches &, periods, etc.)
-    .replace(/[^a-z0-9\s]/g, '')
-    // Normalize possessive/plural trailing 's' (words 5+ chars)
-    .replace(/([a-z]{4,})s\b/g, '$1')
-    // Collapse whitespace
-    .replace(/\s+/g, ' ')
-    .trim();
 }
 
 // Common church name tokens that don't help distinguish churches
@@ -95,15 +51,6 @@ function normUrl(u) {
 function extractDomain(url) {
   if (!url) return '';
   return url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase();
-}
-
-function normalizePhone(phone) {
-  if (!phone) return '';
-  const digits = phone.replace(/\D/g, '');
-  // Strip leading country code (1 for US)
-  if (digits.length === 11 && digits[0] === '1') return digits.slice(1);
-  if (digits.length === 10) return digits;
-  return ''; // Invalid length
 }
 
 function buildRegistryIndexes(registry) {
