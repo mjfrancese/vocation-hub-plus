@@ -18,7 +18,7 @@ concurrency:
 jobs:
   deep-scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 55
+    timeout-minutes: 65
 
     steps:
       - name: Checkout repository
@@ -87,7 +87,7 @@ jobs:
             echo "=== Scraping chunk $i of $((CHUNK_COUNT - 1)) ==="
             npx tsx src/deep-scrape.ts $i $CHUNK_SIZE
           done
-        timeout-minutes: 35
+        timeout-minutes: 50
 
       - name: Merge profiles into all-profiles.json
         working-directory: scraper

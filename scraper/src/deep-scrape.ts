@@ -142,8 +142,8 @@ async function main() {
   const results: ProfileData[] = [];
   const startTime = Date.now();
 
-  // Use 3 parallel pages for detail scraping (need more wait time per page)
-  const pageCount = 3;
+  // Use 5 parallel pages for detail scraping
+  const pageCount = 5;
   const pages = await Promise.all(
     Array.from({ length: pageCount }, () => context.newPage())
   );
