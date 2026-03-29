@@ -108,6 +108,7 @@ export default function HomePage() {
     'Developing': ['Beginning search', 'Developing profile', 'Profile complete', 'Developing self study'],
     'Interim': ['Seeking interim', 'Interim in place'],
     'Closed': ['Search complete', 'No longer receiving names'],
+    'Unknown': [],
   };
   const statusOptions = useMemo(() => Object.keys(STATUS_GROUPS), []);
   const statusGroupMap = useMemo(() => {
@@ -123,7 +124,7 @@ export default function HomePage() {
     const counts: Record<string, number> = {};
     for (const p of allPositions) {
       const s = p.vh_status || p.status || '';
-      const group = statusGroupMap[s] || 'Closed';
+      const group = statusGroupMap[s] || 'Unknown';
       counts[group] = (counts[group] || 0) + 1;
     }
     return counts;
@@ -155,12 +156,12 @@ export default function HomePage() {
       results = results.filter(p => selectedHealthcare.includes(getProfileField(p, 'Healthcare Options')));
     if (selectedStatuses.length > 0)
       results = results.filter(p => {
-        const group = statusGroupMap[p.vh_status || p.status || ''] || 'Closed';
+        const group = statusGroupMap[p.vh_status || p.status || ''] || 'Unknown';
         return selectedStatuses.includes(group);
       });
     if (hideClosed)
       results = results.filter(p => {
-        const group = statusGroupMap[p.vh_status || ''] || 'Closed';
+        const group = statusGroupMap[p.vh_status || ''] || 'Unknown';
         return group !== 'Closed';
       });
 
@@ -205,12 +206,6 @@ export default function HomePage() {
         setHideClosed(false);
       }
     }
-  }
-
-  function showNew() {
-    setSelectedStatuses([]);
-    setHideClosed(false);
-    // We'll filter by is_new in the results instead
   }
 
   const [showNewOnly, setShowNewOnly] = useState(false);
