@@ -35,7 +35,13 @@ jobs:
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm ci --workspace=web
+        run: npm ci
+
+      - name: Run scraper tests
+        run: npm run test --workspace=scraper
+
+      - name: Lint frontend
+        run: npm run lint --workspace=web
 
       - name: Build registry, position map, and enrich positions
         working-directory: web
