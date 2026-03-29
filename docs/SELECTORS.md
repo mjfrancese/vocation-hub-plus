@@ -10,6 +10,17 @@ how it maps to the Vocation Hub's Telerik Blazor UI components.
 |----------|-------|---------|
 | `pageTitle` | `text=Position Search` | Confirms we are on the correct page |
 
+## Search Input
+
+The scraper triggers a full nationwide search by clearing all filters and
+entering a single space into the Community Name field, which the Vocation Hub
+treats as a wildcard that matches all records.
+
+| Selector | Value | Purpose |
+|----------|-------|---------|
+| `communityNameInput` | `input[type="text"]` | The community name text input field |
+| `communityNameLabel` | `text=Community name` | The label for the community name field |
+
 ## MultiSelect Dropdowns
 
 The Vocation Hub uses Telerik Blazor `TelerikMultiSelect` components for
@@ -22,6 +33,10 @@ filtering by state, diocese, position type, and organization type.
 | `stateInput` | `input.k-input-inner[placeholder*="state" i]` | The text input inside the state multiselect |
 | `stateWrapper` | `.telerik-blazor.k-multiselect.k-input` | The outer wrapper of the state multiselect |
 | `stateLabel` | `label:has-text("State(s)")` | The label element for the state field |
+
+**Note**: The scraper does not select individual states. State is not a column
+in the results table. Instead, state is derived from the Diocese field using
+an internal diocese-to-state mapping after scraping.
 
 ### Diocese(s)
 
@@ -73,7 +88,7 @@ These are used to verify selections by counting chips after each click.
 
 | Selector | Value | Purpose |
 |----------|-------|---------|
-| `searchButton` | `button:has-text("Search")` | The main search submit button |
+| `searchButton` | `button:has-text("Search"):not(:has-text("New"))` | The main search submit button (exact match to avoid matching "New Search") |
 | `newSearchButton` | `button:has-text("New Search")` | Resets the form |
 
 ## Results Grid
@@ -86,7 +101,10 @@ The search results are displayed in a Telerik `TelerikGrid` component.
 | `resultsTable` | `.k-grid-table, table.k-table` | The HTML table inside the grid |
 | `resultsRow` | `tbody tr` | Individual result rows |
 | `resultsCell` | `td` | Table cells within a row |
+| `resultsHeader` | `thead th` | Header cells, used to determine column order |
 | `noResults` | `text=No records matching` | Text shown when no results match |
+| `itemCount` | `text=/\d+ - \d+ of \d+ items/` | Matches the item count display |
+| `zeroItems` | `text=0 - 0 of 0 items` | Matches when the result set is empty |
 
 ### Table Column Order
 
@@ -96,12 +114,15 @@ Based on inspection, the results table columns are:
 |-------|---------|
 | 0 | Name (church/organization) |
 | 1 | Diocese |
-| 2 | State |
-| 3 | Organization Type |
-| 4 | Position Type |
-| 5 | Receiving Names From |
-| 6 | Receiving Names To |
-| 7 | Updated (date) |
+| 2 | Organization Type |
+| 3 | Position Type |
+| 4 | Receiving Names From |
+| 5 | Receiving Names To |
+| 6 | Updated (date) |
+
+**Note**: There is no State column in the results table. State is derived
+from the Diocese field after extraction using an internal diocese-to-state
+mapping.
 
 ## Pagination
 
