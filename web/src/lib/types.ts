@@ -68,6 +68,23 @@ export interface Position {
     lng: number | null;
   };
 
+  // Diocese-level percentile rankings (computed at build time)
+  diocese_percentiles?: {
+    asa?: number;
+    asa_value?: number;
+    plate_pledge?: number;
+    plate_pledge_value?: number;
+    membership?: number;
+    membership_value?: number;
+  };
+
+  // Estimated total compensation (computed at build time)
+  estimated_total_comp?: number;
+  comp_breakdown?: {
+    stipend: number;
+    housing?: number;
+  };
+
   // Enriched parochial data (from Power BI cross-reference)
   parochial?: {
     congregationCity: string;
@@ -114,6 +131,7 @@ export type SortField =
   | 'position_type'
   | 'receiving_names_from'
   | 'updated_on_hub'
-  | 'first_seen';
+  | 'first_seen'
+  | 'estimated_total_comp';
 
 export type SortDirection = 'asc' | 'desc';

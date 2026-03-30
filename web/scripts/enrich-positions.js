@@ -47,6 +47,169 @@ function extractCity(name) {
   return '';
 }
 
+/**
+ * Compute diocese-level percentile rankings for positions with parochial data.
+ * For each metric (ASA, plate & pledge, membership), computes what percentile
+ * the position's congregation is within its diocese (fraction of congregations
+ * in the same diocese with a LOWER value, as 0-100 integer).
+ */
+function computeDiocesePercentiles(positions) {
+  const parochialData = load('parochial-data.json');
+  if (!parochialData || !parochialData.congregations) {
+    console.log('Diocese percentiles: 0 positions (no parochial data)');
+    return;
+  }
+
+  // Build diocese-level metric arrays from ALL congregations using most recent year
+  const dioceseMetrics = {}; // { dioceseName: { asa: [], platePledge: [], membership: [] } }
+  for (const cong of parochialData.congregations) {
+    if (!cong.diocese || !cong.years) continue;
+    const yearKeys = Object.keys(cong.years).sort();
+    if (yearKeys.length === 0) continue;
+    const latest = cong.years[yearKeys[yearKeys.length - 1]];
+    if (!latest) continue;
+
+    if (!dioceseMetrics[cong.diocese]) {
+      dioceseMetrics[cong.diocese] = { asa: [], platePledge: [], membership: [] };
+    }
+    const dm = dioceseMetrics[cong.diocese];
+    if (latest.averageAttendance != null && latest.averageAttendance > 0) {
+      dm.asa.push(latest.averageAttendance);
+    }
+    if (latest.plateAndPledge != null && latest.plateAndPledge > 0) {
+      dm.platePledge.push(latest.plateAndPledge);
+    }
+    if (latest.membership != null && latest.membership > 0) {
+      dm.membership.push(latest.membership);
+    }
+  }
+
+  // Sort each array for efficient percentile computation
+  for (const dm of Object.values(dioceseMetrics)) {
+    dm.asa.sort((a, b) => a - b);
+    dm.platePledge.sort((a, b) => a - b);
+    dm.membership.sort((a, b) => a - b);
+  }
+
+  // Helper: compute percentile (fraction below) as 0-100 integer
+  function percentile(sortedArr, value) {
+    let below = 0;
+    for (let i = 0; i < sortedArr.length; i++) {
+      if (sortedArr[i] < value) below++;
+      else break; // sorted, so no more below
+    }
+    return Math.round((below / sortedArr.length) * 100);
+  }
+
+  let count = 0;
+  for (const pos of positions) {
+    if (!pos.parochial || !pos.diocese) continue;
+    const dm = dioceseMetrics[pos.diocese];
+    if (!dm) continue;
+
+    // Get most recent year data for this position's congregation
+    const yearKeys = Object.keys(pos.parochial.years || {}).sort();
+    if (yearKeys.length === 0) continue;
+    const latest = pos.parochial.years[yearKeys[yearKeys.length - 1]];
+    if (!latest) continue;
+
+    const pctile = {};
+    if (latest.averageAttendance != null && latest.averageAttendance > 0 && dm.asa.length > 0) {
+      pctile.asa = percentile(dm.asa, latest.averageAttendance);
+      pctile.asa_value = latest.averageAttendance;
+    }
+    if (latest.plateAndPledge != null && latest.plateAndPledge > 0 && dm.platePledge.length > 0) {
+      pctile.plate_pledge = percentile(dm.platePledge, latest.plateAndPledge);
+      pctile.plate_pledge_value = latest.plateAndPledge;
+    }
+    if (latest.membership != null && latest.membership > 0 && dm.membership.length > 0) {
+      pctile.membership = percentile(dm.membership, latest.membership);
+      pctile.membership_value = latest.membership;
+    }
+
+    if (Object.keys(pctile).length > 0) {
+      pos.diocese_percentiles = pctile;
+      count++;
+    }
+  }
+
+  console.log(`Diocese percentiles: ${count} positions`);
+}
+
+/**
+ * Parse a stipend string like "$50,000" into a number.
+ * Returns null for non-numeric placeholders (DOE, TBD, etc.).
+ */
+function parseStipend(str) {
+  if (!str || typeof str !== 'string') return null;
+  const upper = str.trim().toUpperCase();
+  if (/^(DOE|TBD|NEGOTIABLE|N\/A|SEE|CONTACT|VARIES)/.test(upper)) return null;
+  const cleaned = str.replace(/[$,\s]/g, '');
+  const m = cleaned.match(/^(\d+\.?\d*)/);
+  if (!m) return null;
+  const val = parseFloat(m[1]);
+  return val > 0 ? val : null;
+}
+
+/**
+ * Compute estimated total compensation for positions.
+ * Uses position-level stipend fields, falling back to profile fields.
+ * Adds $20,000 housing estimate when housing is provided.
+ */
+function computeEstimatedTotalComp(positions, profileFields) {
+  let count = 0;
+  for (const pos of positions) {
+    let minStipend = parseStipend(pos.minimum_stipend);
+    let maxStipend = parseStipend(pos.maximum_stipend);
+
+    // Fallback: check profile fields for stipend data
+    if (minStipend == null && maxStipend == null && profileFields && pos.vh_id) {
+      const fields = profileFields[String(pos.vh_id)];
+      if (Array.isArray(fields)) {
+        for (const f of fields) {
+          const label = (f.label || '').toLowerCase();
+          if (label.includes('minimum') && label.includes('stipend') && minStipend == null) {
+            minStipend = parseStipend(f.value);
+          }
+          if (label.includes('maximum') && label.includes('stipend') && maxStipend == null) {
+            maxStipend = parseStipend(f.value);
+          }
+        }
+      }
+    }
+
+    if (minStipend == null && maxStipend == null) continue;
+
+    let basePay;
+    if (minStipend != null && maxStipend != null) {
+      basePay = (minStipend + maxStipend) / 2;
+    } else {
+      basePay = minStipend != null ? minStipend : maxStipend;
+    }
+
+    let totalComp = basePay;
+    let housingValue = 0;
+
+    const housingType = (pos.housing_type || '').toLowerCase();
+    const housingProvided = housingType &&
+      !housingType.includes('no housing') &&
+      (/rectory|housing provided|bed|bath|required/.test(housingType));
+
+    if (housingProvided) {
+      housingValue = 20000;
+      totalComp += housingValue;
+    }
+
+    pos.estimated_total_comp = Math.round(totalComp);
+    pos.comp_breakdown = { stipend: Math.round(basePay) };
+    if (housingValue > 0) {
+      pos.comp_breakdown.housing = housingValue;
+    }
+    count++;
+  }
+  console.log(`Estimated total comp: ${count} positions`);
+}
+
 // --- Main ---
 
 function main() {
@@ -194,6 +357,9 @@ function main() {
   console.log(`  Parochial matches: ${parochialMatches}`);
   if (noVhIdCount) console.log(`  No VH ID: ${noVhIdCount}`);
   if (badUrlCleared) console.log(`  Bad profile URLs cleared: ${badUrlCleared}`);
+
+  computeDiocesePercentiles(positions);
+  computeEstimatedTotalComp(positions, profileFields);
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'enriched-positions.json'),
@@ -360,6 +526,9 @@ function main() {
     console.log(`Extended positions: ${extended.length}`);
     console.log(`  Church matches: ${extChurch} (${websiteMatches} via website)`);
     console.log(`  Parochial matches: ${extParochial}`);
+
+    computeDiocesePercentiles(extended);
+    computeEstimatedTotalComp(extended, profileFields);
 
     fs.writeFileSync(
       path.join(DATA_DIR, 'enriched-extended.json'),

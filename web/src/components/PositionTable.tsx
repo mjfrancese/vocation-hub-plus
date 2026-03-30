@@ -16,6 +16,7 @@ const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'state', label: 'State' },
   { key: 'diocese', label: 'Diocese' },
   { key: 'position_type', label: 'Position' },
+  { key: 'estimated_total_comp' as SortField, label: 'Est. Comp' },
   { key: 'receiving_names_from', label: 'Receiving Names' },
   { key: 'updated_on_hub', label: 'Updated' },
 ];
@@ -112,8 +113,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
       aVal = getState(a);
       bVal = getState(b);
     } else {
-      aVal = a[sortField] || '';
-      bVal = b[sortField] || '';
+      aVal = String(a[sortField] || '');
+      bVal = String(b[sortField] || '');
+    }
+    if (sortField === 'estimated_total_comp') {
+      const aNum = a.estimated_total_comp || 0;
+      const bNum = b.estimated_total_comp || 0;
+      return sortDir === 'asc' ? aNum - bNum : bNum - aNum;
     }
     // Date fields: parse various formats to compare chronologically
     if (sortField === 'receiving_names_from' || sortField === 'updated_on_hub') {
@@ -267,6 +273,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 {pos.receiving_names_from && (
                   <span>&middot; {pos.receiving_names_from}</span>
                 )}
+                {pos.estimated_total_comp && (
+                  <span className="text-green-700 font-medium">&middot; ${pos.estimated_total_comp.toLocaleString()}</span>
+                )}
                 {timeOnMarket(pos) && (
                   <span className="text-gray-400">&middot; {timeOnMarket(pos)}</span>
                 )}
@@ -338,6 +347,17 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   <td className="px-4 py-3 text-sm text-gray-600">{pos.diocese}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">
+                    {pos.estimated_total_comp ? (
+                      <span title={
+                        pos.comp_breakdown
+                          ? `Stipend: $${pos.comp_breakdown.stipend.toLocaleString()}${pos.comp_breakdown.housing ? ` + Housing: ~$${pos.comp_breakdown.housing.toLocaleString()}` : ''}`
+                          : undefined
+                      }>
+                        ${pos.estimated_total_comp.toLocaleString()} est.
+                      </span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-gray-600">
                     {pos.receiving_names_from ? (
                       <>
                         {pos.receiving_names_from}
@@ -365,7 +385,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 </tr>
                 {expandedId === pos.id && (
                   <tr key={`${pos.id}-detail`}>
-                    <td colSpan={8} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
+                    <td colSpan={9} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
                       <ExpandedDetail pos={pos} />
                     </td>
                   </tr>
@@ -450,6 +470,49 @@ function ParishSnapshot({ pos }: { pos: Position }) {
   );
 }
 
+function ordinalSuffix(n: number): string {
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 13) return 'th';
+  const mod10 = n % 10;
+  if (mod10 === 1) return 'st';
+  if (mod10 === 2) return 'nd';
+  if (mod10 === 3) return 'rd';
+  return 'th';
+}
+
+function formatDollarCompact(value: number): string {
+  if (value >= 1000) return `$${Math.round(value / 1000)}k`;
+  return `$${value.toLocaleString()}`;
+}
+
+function DioceseContext({ pos }: { pos: Position }) {
+  if (!pos.diocese_percentiles || !pos.diocese) return null;
+
+  const dp = pos.diocese_percentiles;
+  const items: string[] = [];
+
+  if (dp.asa != null && dp.asa_value != null) {
+    items.push(`ASA of ${dp.asa_value} \u2014 larger than ${dp.asa}% of parishes in the Diocese of ${pos.diocese}`);
+  }
+  if (dp.plate_pledge != null && dp.plate_pledge_value != null) {
+    items.push(`Annual giving of ${formatDollarCompact(dp.plate_pledge_value)} \u2014 ${dp.plate_pledge}${ordinalSuffix(dp.plate_pledge)} percentile in diocese`);
+  }
+  if (dp.membership != null && dp.membership_value != null) {
+    items.push(`Membership of ${dp.membership_value} \u2014 ${dp.membership}${ordinalSuffix(dp.membership)} percentile in diocese`);
+  }
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className="border border-blue-200 rounded-lg p-3 bg-blue-50 text-sm text-blue-800">
+      <div className="font-medium text-blue-700 mb-1">Diocese Context</div>
+      {items.map((item, i) => (
+        <div key={i}>{item}</div>
+      ))}
+    </div>
+  );
+}
+
 function ExpandedDetail({ pos }: { pos: Position }) {
   const fields = pos.deep_scrape_fields || [];
   const hasDeepData = fields.length > 0;
@@ -496,6 +559,7 @@ function ExpandedDetail({ pos }: { pos: Position }) {
     return (
       <div className="space-y-4">
         <ParishSnapshot pos={pos} />
+        <DioceseContext pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <DetailField label="Organization Type" value={pos.organization_type} />
           <DetailField label="Full/Part Time" value={pos.full_part_time} />
@@ -522,10 +586,21 @@ function ExpandedDetail({ pos }: { pos: Position }) {
     <div className="space-y-5">
       {/* Parish health snapshot */}
       <ParishSnapshot pos={pos} />
+      <DioceseContext pos={pos} />
 
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-        <DetailField label="Compensation" value={salary} highlight />
+        <DetailField
+          label="Compensation"
+          value={
+            pos.estimated_total_comp
+              ? `$${pos.estimated_total_comp.toLocaleString()} est. total${
+                  pos.comp_breakdown?.housing ? ` (Stipend: $${pos.comp_breakdown.stipend.toLocaleString()} + Housing: ~$${pos.comp_breakdown.housing.toLocaleString()})` : ''
+                }`
+              : salary
+          }
+          highlight
+        />
         <DetailField label="Housing" value={housing} />
         <DetailField label="Avg Sunday Attendance" value={attendance} />
         <DetailField label="Annual Budget" value={budget ? `$${Number(budget).toLocaleString()}` : ''} />
