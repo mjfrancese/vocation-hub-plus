@@ -36,14 +36,28 @@ function getState(pos: Position): string {
   return pos.church_info?.state || pos.state || '';
 }
 
-/** Compute human-readable time since first_seen */
-function timeOnMarket(firstSeen: string | undefined): string {
-  if (!firstSeen) return '';
-  const seen = new Date(firstSeen);
-  if (isNaN(seen.getTime())) return '';
+/** Parse a date string in various formats (ISO, MM/DD/YYYY, "Month DD, YYYY") */
+function parseAnyDate(s: string): Date | null {
+  if (!s) return null;
+  // Handle range like "02/18/2026 to 03/31/2026" or "03/12/2026 -" -- use first date
+  const first = s.split(/\s+(?:to|-)\s*/)[0].trim();
+  // MM/DD/YYYY
+  const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
+  // ISO or other parseable format
+  const d = new Date(first);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+/** Compute human-readable time since listing was posted.
+ *  Uses first_seen, falls back to receiving_names_from start date. */
+function timeOnMarket(pos: Position): string {
+  const seen = parseAnyDate(pos.first_seen) || parseAnyDate(pos.receiving_names_from);
+  if (!seen) return '';
   const now = new Date();
   const diffMs = now.getTime() - seen.getTime();
   const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  if (days < 0) return ''; // future date
   if (days < 1) return 'today';
   if (days === 1) return '1 day';
   if (days < 30) return `${days} days`;
@@ -250,8 +264,8 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 {pos.receiving_names_from && (
                   <span>&middot; {pos.receiving_names_from}</span>
                 )}
-                {timeOnMarket(pos.first_seen) && (
-                  <span className="text-gray-400">&middot; {timeOnMarket(pos.first_seen)}</span>
+                {timeOnMarket(pos) && (
+                  <span className="text-gray-400">&middot; {timeOnMarket(pos)}</span>
                 )}
               </div>
             </div>
@@ -324,7 +338,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     {pos.receiving_names_from ? (
                       <>
                         {pos.receiving_names_from}
-                        {pos.receiving_names_to && pos.receiving_names_to !== 'Open ended' && ` to ${pos.receiving_names_to}`}
+                        {pos.receiving_names_to && pos.receiving_names_to !== 'Open ended'
+                          && !pos.receiving_names_from.includes(' - ')
+                          && ` to ${pos.receiving_names_to}`}
                       </>
                     ) : pos.vh_status ? (
                       <span className="text-gray-400 italic">{pos.vh_status}</span>
@@ -332,8 +348,8 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   </td>
                   <td className="px-4 py-3 text-sm text-gray-600">
                     <div>{pos.updated_on_hub}</div>
-                    {timeOnMarket(pos.first_seen) && (
-                      <div className="text-xs text-gray-400">{timeOnMarket(pos.first_seen)} listed</div>
+                    {timeOnMarket(pos) && (
+                      <div className="text-xs text-gray-400">{timeOnMarket(pos)} listed</div>
                     )}
                   </td>
                   <td className="px-4 py-3">

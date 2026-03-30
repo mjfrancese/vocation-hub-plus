@@ -3,7 +3,7 @@ import { navigateToSearch } from './navigate.js';
 import { searchAllPositions } from './select-states.js';
 import { clickSearchAndExtract, RawPosition } from './scrape-results.js';
 import { applyDiff } from './diff.js';
-import { logScrape, closeDb, getDb, recordDiscoveryAttempt, recordDiscoverySuccess, getDiscoveryStats } from './db.js';
+import { logScrape, closeDb, getDb, recordDiscoveryAttempt, recordDiscoverySuccess, getDiscoveryStats, seedFirstSeenFromJson } from './db.js';
 import { exportJson } from './export-json.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
@@ -28,6 +28,9 @@ async function main(): Promise<void> {
     logger.error('Maximum runtime exceeded, aborting');
     process.exit(1);
   }, CONFIG.maxRuntime);
+
+  // Seed first_seen from existing JSON when DB is fresh (preserves historical dates)
+  seedFirstSeenFromJson();
 
   const { browser, context, page } = await launchBrowser();
 

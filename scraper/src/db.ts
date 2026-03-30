@@ -137,6 +137,71 @@ function initSchema(db: Database.Database): void {
   `);
 }
 
+/**
+ * Seed the database with first_seen values from the existing positions.json.
+ * This preserves historical first_seen dates when the DB is recreated from scratch
+ * (e.g., on CI or after git clean). Only inserts positions that don't already exist.
+ */
+export function seedFirstSeenFromJson(): void {
+  const jsonPaths = [
+    path.resolve(__dirname, '../../web/public/data/positions.json'),
+    path.resolve(__dirname, '../output/positions.json'),
+  ];
+
+  let existingPositions: Array<Record<string, unknown>> | null = null;
+  for (const p of jsonPaths) {
+    if (fs.existsSync(p)) {
+      try {
+        existingPositions = JSON.parse(fs.readFileSync(p, 'utf-8'));
+        logger.info('Seeding first_seen from existing JSON', { path: p, count: existingPositions!.length });
+        break;
+      } catch {
+        // skip corrupt files
+      }
+    }
+  }
+
+  if (!existingPositions || existingPositions.length === 0) return;
+
+  const d = getDb();
+  const count = (d.prepare('SELECT COUNT(*) as c FROM positions').get() as { c: number }).c;
+  if (count > 0) {
+    logger.info('Database already has positions, skipping seed');
+    return;
+  }
+
+  const insert = d.prepare(
+    `INSERT OR IGNORE INTO positions (id, name, diocese, state, organization_type, position_type,
+      receiving_names_from, receiving_names_to, updated_on_hub, first_seen, last_seen,
+      status, details_url)
+     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+  );
+
+  const tx = d.transaction(() => {
+    for (const pos of existingPositions!) {
+      insert.run(
+        pos.id || '',
+        pos.name || '',
+        pos.diocese || '',
+        pos.state || '',
+        pos.organization_type || '',
+        pos.position_type || '',
+        pos.receiving_names_from || '',
+        pos.receiving_names_to || '',
+        pos.updated_on_hub || '',
+        pos.first_seen || new Date().toISOString(),
+        pos.last_seen || new Date().toISOString(),
+        pos.status || 'active',
+        pos.details_url || '',
+      );
+    }
+  });
+  tx();
+
+  const seeded = (d.prepare('SELECT COUNT(*) as c FROM positions').get() as { c: number }).c;
+  logger.info('Seeded positions from JSON', { count: seeded });
+}
+
 export function upsertPosition(position: RawPosition): 'new' | 'updated' | 'unchanged' {
   const d = getDb();
   const now = new Date().toISOString();
