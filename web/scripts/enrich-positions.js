@@ -175,6 +175,31 @@ function computeEstimatedTotalComp(positions, profileFields) {
             maxStipend = parseStipend(f.value);
           }
         }
+
+        // Fallback: parse "Range" fields from VH profiles.
+        // VH stores two Range fields: a bucket (e.g. "$50,001 - $75,000") and
+        // a specific value/narrative (e.g. "$85,000" or "Salary is $85,000").
+        if (minStipend == null && maxStipend == null) {
+          const rangeFields = fields.filter(f => (f.label || '').toLowerCase() === 'range');
+          for (const rf of rangeFields) {
+            const val = (rf.value || '').trim();
+            // Try to parse a range like "$50,001 - $75,000"
+            const rangeMatch = val.match(/\$?([\d,]+)\s*[-\u2013]\s*\$?([\d,]+)/);
+            if (rangeMatch && minStipend == null) {
+              const lo = parseStipend(rangeMatch[1]);
+              const hi = parseStipend(rangeMatch[2]);
+              if (lo != null) minStipend = lo;
+              if (hi != null) maxStipend = hi;
+              continue;
+            }
+            // Try to parse a single dollar amount from narrative text
+            const singleMatch = val.match(/\$\s*([\d,]+)/);
+            if (singleMatch && minStipend == null && maxStipend == null) {
+              const parsed = parseStipend(singleMatch[1]);
+              if (parsed != null) minStipend = parsed;
+            }
+          }
+        }
       }
     }
 
@@ -190,7 +215,19 @@ function computeEstimatedTotalComp(positions, profileFields) {
     let totalComp = basePay;
     let housingValue = 0;
 
-    const housingType = (pos.housing_type || '').toLowerCase();
+    let housingType = (pos.housing_type || '').toLowerCase();
+    // Fallback: check profile fields for housing type
+    if (!housingType && profileFields && pos.vh_id) {
+      const fields = profileFields[String(pos.vh_id)];
+      if (Array.isArray(fields)) {
+        for (const f of fields) {
+          if ((f.label || '').toLowerCase().includes('housing')) {
+            housingType = (f.value || '').toLowerCase();
+            break;
+          }
+        }
+      }
+    }
     const housingProvided = housingType &&
       !housingType.includes('no housing') &&
       (/rectory|housing provided|bed|bath|required/.test(housingType));
