@@ -203,6 +203,36 @@ function computeEstimatedTotalComp(positions, profileFields) {
       }
     }
 
+    // Fallback: parse salary_range field (available on extended/all-profiles positions)
+    if (minStipend == null && maxStipend == null && pos.salary_range) {
+      const rangeMatch = pos.salary_range.match(/\$?([\d,]+)\s*[-\u2013]\s*\$?([\d,]+)/);
+      if (rangeMatch) {
+        minStipend = parseStipend(rangeMatch[1]);
+        maxStipend = parseStipend(rangeMatch[2]);
+      }
+    }
+
+    // Fallback: parse all_fields Range entries (available on all-profiles positions)
+    if (minStipend == null && maxStipend == null && Array.isArray(pos.all_fields)) {
+      const rangeFields = pos.all_fields.filter(f => (f.label || '').toLowerCase() === 'range');
+      for (const rf of rangeFields) {
+        const val = (rf.value || '').trim();
+        const rangeMatch = val.match(/\$?([\d,]+)\s*[-\u2013]\s*\$?([\d,]+)/);
+        if (rangeMatch && minStipend == null) {
+          const lo = parseStipend(rangeMatch[1]);
+          const hi = parseStipend(rangeMatch[2]);
+          if (lo != null) minStipend = lo;
+          if (hi != null) maxStipend = hi;
+          continue;
+        }
+        const singleMatch = val.match(/\$\s*([\d,]+)/);
+        if (singleMatch && minStipend == null && maxStipend == null) {
+          const parsed = parseStipend(singleMatch[1]);
+          if (parsed != null) minStipend = parsed;
+        }
+      }
+    }
+
     if (minStipend == null && maxStipend == null) continue;
 
     let basePay;
@@ -682,6 +712,10 @@ function main() {
         church_info: data ? data.church_info : undefined,
         match_confidence: data ? data.confidence : undefined,
         parochial: data?.parochial || undefined,
+        // Carry through fields needed for comp estimation
+        salary_range: profile.salary_range || undefined,
+        housing_type: profile.housing_type || undefined,
+        all_fields: profile.all_fields || undefined,
       });
     }
 
@@ -693,6 +727,12 @@ function main() {
     computeEstimatedTotalComp(extended, profileFields);
     computeSimilarPositions(extended);
     attachCensusData(extended);
+
+    // Strip temporary fields not needed by the frontend
+    for (const pos of extended) {
+      delete pos.salary_range;
+      delete pos.all_fields;
+    }
 
     fs.writeFileSync(
       path.join(DATA_DIR, 'enriched-extended.json'),
