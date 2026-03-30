@@ -50,11 +50,14 @@ function parseAnyDate(s: string): Date | null {
 }
 
 /** Compute human-readable time since listing was posted.
- *  Uses first_seen, falls back to receiving_names_from start date. */
+ *  Uses first_seen (if older than 1 day), falls back to receiving_names_from start date. */
 function timeOnMarket(pos: Position): string {
-  const seen = parseAnyDate(pos.first_seen) || parseAnyDate(pos.receiving_names_from);
-  if (!seen) return '';
   const now = new Date();
+  const firstSeen = parseAnyDate(pos.first_seen);
+  // Skip first_seen if it's less than 1 day old (likely a DB reset artifact)
+  const usableFirstSeen = firstSeen && (now.getTime() - firstSeen.getTime()) > 86400000 ? firstSeen : null;
+  const seen = usableFirstSeen || parseAnyDate(pos.receiving_names_from);
+  if (!seen) return '';
   const diffMs = now.getTime() - seen.getTime();
   const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
   if (days < 0) return ''; // future date
