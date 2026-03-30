@@ -1,12 +1,22 @@
 [
   {
     "id": 1,
-    "position_id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
+    "position_id": "34e7666e5e31915335213b5b0e407c257c873847b99b1c6659081768cabcaab5",
     "change_type": "updated",
-    "changed_at": "2026-03-30 07:18:47",
-    "details": "{\"state\":{\"before\":\"\",\"after\":\"WI\"}}",
-    "name": "St Andrews (Madison)",
-    "diocese": "Wisconsin",
+    "changed_at": "2026-03-30 18:50:50",
+    "details": "{\"updated_on_hub\":{\"before\":\"March 25\",\"after\":\"Today, 12:39 PM\"}}",
+    "name": "Good Shepherd (Maitland)",
+    "diocese": "Central Florida",
+    "position_type": "Rector/Priest-in-Charge"
+  },
+  {
+    "id": 2,
+    "position_id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
+    "change_type": "updated",
+    "changed_at": "2026-03-30 18:50:50",
+    "details": "{\"updated_on_hub\":{\"before\":\"March 26\",\"after\":\"Today, 9:37 AM\"}}",
+    "name": "St Lukes (Atlanta)",
+    "diocese": "Atlanta",
     "position_type": "Rector/Priest-in-Charge"
   }
 ]

@@ -523,12 +523,56 @@
   ],
   "8611": [
     {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "Atlanta"
+    },
+    {
       "label": "Congregation",
       "value": "St Pauls Episcopal Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Assistant/Associate/Curate"
+    },
+    {
+      "label": "",
+      "value": "Our commitment to you, our new associate rector, is to cultivate an environment that encourages you to grow, deepen, and lean confidently into your unique gifts of ministry, supported by collaborative leadership and space for faithful innovation.  Working closely with the Rector, staff, and lay leaders, you will share in the full sacramental and pastoral life of our vibrant and inclusive parish through intergenerational ministries that includes oversight of our children and youth ministries."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "To apply for this position, contact Anne Graner, Search Chair - search@stpaulsnewnan.org"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Anne Graner"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Search Chair"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "St. Paul's Episcopal Church, Newnan, GA"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "404-444-6015"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "search@stpaulsnewnan.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -678,7 +722,7 @@
     },
     {
       "label": "",
-      "value": "The Rector serves as the pastoral and supervisory leader of the parish, providing spiritual oversight, sacramental ministry, and organizational leadership, ensuring alignment with diocesan policies and the mission of the church."
+      "value": "Our next Rector will serve as the pastoral and supervisory leader of our church, providing spiritual oversight, sacramental ministry, and organizational leadership while ensuring alignment with the mission of our church.\n \nWe seek a rector to lead a vibrant, growing, downtown parish that is rooted in worship, service, and community engagement. Located in the heart of Atlanta, St. Luke’s is a “big tent” congregation marked by deep relationships, intellectual curiosity, and a commitment to living out the Gospel in both church and city life.\n \nOur next Rector will serve as our spiritual leader, preacher, and shepherd, inspiring us through thoughtful, theologically grounded preaching and a visible, authentic faith and love of our community. Our next Rector will guide a congregation that values both Anglican tradition and expansive, inclusive theology, while fostering worship that is reverent, joyful, and compelling.\n \nAs a loving pastor and leader of our church staff, our next Rector will lead a talented clergy and lay team, steward significant financial and real estate assets, and work collaboratively with the Vestry in a culture of transparency and shared leadership. The role requires experience managing organizational complexity and the ability to cultivate trust, communicate clearly, and align vision with execution.\n \nWe seek a leader who embraces our identity as a public church that is deeply engaged in the civic, social, and spiritual life of Atlanta. Our Rector will strengthen existing ministries while identifying new opportunities to expand our church’s impact, particularly in outreach, justice, and community partnerships.\n \nEqually important is the ability to nurture a connected parish life by developing lay leadership, fostering small-group engagement, and supporting families, children, and youth as central to the future of St. Luke's. Our next Rector will help deepen pathways for belonging and spiritual growth across generations.\n \nThe ideal candidate is approachable, warm, and grounded, with integrity, humility, and a sense of humor. St. Luke’s seeks a Rector who honors our history, builds on our momentum, and casts a compelling vision for the future; guiding us to grow in faith, strengthen our relationships, and serve as a transformative presence in the heart of Atlanta."
     },
     {
       "label": "Current status",
@@ -786,15 +830,15 @@
     },
     {
       "label": "What are your community's hopes for this position, and what qualities in applicants will help you live into them?",
-      "value": "Words describing the gifts and skills essential to the future leaders of our worshipping community: \nEmpowering leader; Loving pastor; Courageous preacher; Spiritual energizer."
+      "value": "St. Luke’s is in a healthy place during this transitional period. That fact was confirmed by our recent parish survey of the congregation as well as multiple “listening” sessions with engaged members and staff. Our parishioners are feeling wholeness, fulfillment, and peace, and we are guided by purpose and passion with intention. Now is the time for us to turn outward and discern what God is calling us to do next with our abundance. \n\nOur next Rector will be a key to growth and incorporating new people into the life of our church. \n\nWe seek a Rector who is exhilarated by the call and challenge of leading a church of St. Luke’s size, potential, and unique gifts. That will require a senior leader who is an inspiring preacher, is spiritually gifted, and who will continue to build trust through transparency around information sharing and decision making while working collaboratively with the Vestry and congregation. \n\nWe seek a Rector who will be fulfilled by their role and our community and who has the experience to effectively lead our staff, engage with our finances, and lovingly manage the complexity that an endowed parish with a 120-year-old beloved building requires. \n\nOur next Rector should value an engaged congregation and work to identify and cultivate lay leaders who can bring fresh ideas and renewed energy. We seek a leader who recognizes St. Luke’s for the remarkable place that it is and has a vision for building on our unique strengths as a church community and a cornerstone of the civic fabric of our city. \n\nAccording to our congregation, desired qualities of the St. Luke’s Rector include being approachable, warm, welcoming, respectful and accepting, and genuine, with integrity and a sense of humor. \n\nWe pray for a Rector that can connect in-reach and outreach opportunities and create small communities within the church, especially for families, children, and youth. \n\nWe want a pastor who can be with us in times of need and lift us with God’s presence. We also feel an overriding yearning for stability and the continued growth in our ministries that our new Rector’s presence will bring. \n\nWe are excited to find and welcome our next Rector, who will shepherd St. Luke’s in its vital role as a leader and life-changer in Atlanta, and we look forward to discerning, with our next Rector, how the Spirit is calling all of us to flourish and serve in the years ahead."
     },
     {
       "label": "Leadership skills (maximum of 5)",
-      "value": "Church Governance"
+      "value": "Collaborative Leadership, Congregational Development, Fundraising, Personnel/Staff Development, Strategic Planning"
     },
     {
       "label": "Ministry skills  (maximum of 10)",
-      "value": "Academic/Theology"
+      "value": "Academic/Theology, Adult Formation, Asset Based Community Development, Children & Family Formation, Evangelism, Pastoral Care, Prayer & Spirituality, Preaching, Worship & Liturgy, Youth & Young Adult Formation"
     },
     {
       "label": "Languages spoken",
@@ -1285,12 +1329,60 @@
   ],
   "8950": [
     {
+      "label": "Type",
+      "value": "Congregation (Multipoint)"
+    },
+    {
+      "label": "Diocese",
+      "value": "Connecticut"
+    },
+    {
+      "label": "Name",
+      "value": "Wethersfield and Glastonbury"
+    },
+    {
       "label": "",
       "value": "St James (Glastonbury)\nTrinity (Wethersfield)"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "Located on opposite sides of the CT river, these two congregations have laid the groundwork for together welcoming a priest for a FT call. St. James is located in downtown Glastonbury with a nice physical plant and well-positioned to engaged in ministry to the community. Trinity is located in Old Wethersfield in a lovely historic building. They are excited for what the future could hold for them."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Apply on https://www.episcopalct.org/open-positions/clergy-employment/ and look for St. James Glastonbury and Trinity Wethersfield."
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Kevin Olds"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon for Congregations & Transitions"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "ECCT"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "na"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "kolds@episcopalct.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -1391,12 +1483,64 @@
   ],
   "10175": [
     {
+      "label": "Type",
+      "value": "Congregation (Multipoint)"
+    },
+    {
+      "label": "Diocese",
+      "value": "South Dakota"
+    },
+    {
+      "label": "Name",
+      "value": "Rosebud Episcopal Mission West"
+    },
+    {
       "label": "",
       "value": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Superintending Presbyter"
+    },
+    {
+      "label": "",
+      "value": "This position is on the Rosebud Indian Reservation in south-central South Dakota. These congregations are small in *attendance,* but the Rosebud Episcopal Mission is huge in impact and reaching the people of the Rosebud. Serving here means serving in one of the three poorest counties in the United States, so poverty -- and responding to it faithfully -- is a major part of life on the Rosebud. As Superintending Presbyter, you will be in charge of these congregations, but worry not: They do not all worship on Sundays! Three do: Church of Jesus, Rosebud; Trinity, Mission; and Holy Innocents, Parmelee. The latter is in the final stages of being rebuilt after burning down due to arson. The other congregations worship on a sporadic basis, sometimes once a month, sometimes two to five times a year. \nA major portion of your time on the Rosebud will be focused on wakes and funerals, not just for members of the congregations, but for community members who have no church affiliation, or have not been to church in years. The Rosebud Episcopal Mission is recognized and valued for caring for all of the people of the Rosebud, especially in their times of great need. Forty or more funerals, each with two days of wakes, consume from 50 percent to 65 percent of your time. The funerals are not one-hour services, but can take from four to 10 hours.\nThe ideal candidate will be someone who is open and willing to learn about and respect the Lakota culture and history, and will learn how to work together with Lakota spiritual leaders without cultural apprehension. Speaking the Lakota language is not necessary, but being willing to learn how to sing in Lakota is essential. (Worry not: The people will teach you!)"
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Please view the profile movies and written profile at https://www.episcopalchurchsd.org/page/rosebud. Send a letter of application, as well as your current resume and current candidate profile, as well as the answer to the question below, to The Rev. Dr. Lauren R. Stanley, Canon to the Ordinary, lauren@episcopalchurchsd.org. For more information, contact Canon Stanley at 605-494-2020."
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "1. How do you approach pastoral care in your ministry?, 7. Have you led or participated in multilingual or cross-cultural worship?, 9. In what ways have you grown in cultural competency as a leader?, 10. What theological convictions shape your ministry?, 15. How do you take care of your well-being-spiritually, emotionally, and physically?"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "The Rev. Dr. Lauren R. Stanley"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon to the Ordinary"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Episcopal Diocese of South Dakota"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "W: 605-494-2020 C: 605-82"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "lauren@episcopalchurchsd.org;"
     },
     {
       "label": "Order(s) of Ministry",
@@ -2031,12 +2175,60 @@
   ],
   "10352": [
     {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "Vermont"
+    },
+    {
       "label": "Congregation",
       "value": "Zion Episcopal Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "Spiritual leader and pastor of a year-round congregation and a summer chapel. Zion has complete a 3 year priest-in-charge assignment which helped them shift from a 20+ yr rectorship to an empowered laity. Together they addressed a financial deficit, sold the rectory outside of town and invested the proceeds into renovating the rectory near the church and made a significant contribution to their endowment. The congregation has a significant impact in the community and has built relationships with ecumenical partners in the area. Their next priest has an opportunity to build on the current culture of tranparency, inclusion and collaboration."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Letter, resume and OTM portfolio to Transition@diovermont.org\nCanon Linda L Grenz"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "1. How do you approach pastoral care in your ministry?, 2. How are you preparing yourself for the Church of the future?, 3. What does stewardship mean to you, and how do you practice it?, 4. How have you experienced and addressed conflict in ministry?, 5. What has been your experience leading change in the Church?, 6. How do you incorporate accessibility and inclusion in your ministry?, 12. Describe a recent ministry experiment or innovation., 13. What is a ministry risk you've taken, and what came of it?, 14. How do you discern and adapt to the changing needs of your community?"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon Linda Grenz"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon for Transition Ministry"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Diocese of Vermont"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "413-221-0571"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "transition@diovermont.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -2999,12 +3191,60 @@
   ],
   "10627": [
     {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "Delaware"
+    },
+    {
       "label": "Congregation",
       "value": "Trinity Parish & Old Swedes Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "Parish Rector"
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Reach out for more information or if you are ready to do so, you may submit your résumé, OTM materials, and a letter of introduction and interest."
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "2. How are you preparing yourself for the Church of the future?, 5. What has been your experience leading change in the Church?, 7. Have you led or participated in multilingual or cross-cultural worship?, 8. How do you use technology in your ministry?, 10. What theological convictions shape your ministry?, 14. How do you discern and adapt to the changing needs of your community?, 16. In what ways are you engaged in your wider Church or local community?"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "The Rev. Canon Brad Hinton"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon to the Ordinary"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "The Episcopal Church in Delaware"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "302-256-0374"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "bhinton@delaware.church"
     },
     {
       "label": "Order(s) of Ministry",
@@ -4113,56 +4353,12 @@
   ],
   "10668": [
     {
-      "label": "Type",
-      "value": "Congregation"
-    },
-    {
-      "label": "Diocese",
-      "value": "Texas"
-    },
-    {
       "label": "Congregation",
       "value": "St Davids Episcopal Church"
     },
     {
-      "label": "Type of Work",
-      "value": "Full Time"
-    },
-    {
-      "label": "Position Title/Role",
-      "value": "Rector/Priest-in-Charge"
-    },
-    {
-      "label": "",
-      "value": "Rector of program-sized parish in downtown Austin. \nhttps://stdave.org/rector-search/"
-    },
-    {
-      "label": "Current status",
-      "value": "Receiving names"
-    },
-    {
-      "label": "",
-      "value": "Email resume to kjohnson@epicenter.org"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Kellaura Johnson"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "Canon"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "The Episcopal Diocese of Texas"
-    },
-    {
       "label": "Applicant narrative questions",
       "value": "713-353-2118"
-    },
-    {
-      "label": "Applicant narrative questions",
-      "value": "kjohnson@epicenter.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -4595,12 +4791,60 @@
   ],
   "10674": [
     {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "North Carolina"
+    },
+    {
       "label": "Congregation",
       "value": "St Johns Episcopal Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Rector/Priest-in-Charge"
+    },
+    {
+      "label": "",
+      "value": "Our next rector will be a spiritually grounded and prayerful leader—compassionate, courageous, and deeply committed to inclusivity. They will listen attentively, offer wise personal counsel, and cultivate a collaborative environment that inspires and empowers others to grow in their ministries. A deep appreciation for music and its role in liturgy is essential, as music is central to how we express and experience our faith. In a vibrant and engaged parish, strong administrative and time management skills, paired with the ability to delegate and a healthy sense of humor, will be invaluable. Experience in nurturing and expanding youth involvement would also be an asset. The ideal candidate will preach sermons that are authentic, relatable, and rooted in Scripture—messages that connect the Gospel to everyday life, inspire reflection and action, challenge the listener, and include moments of humor and lasting encouragement."
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Resume, Cover letter addressed to Search Committee, OTM or Vocation Hub profile uploaded to:  https://episdionc.formstack.com/forms/applications"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "3. What does stewardship mean to you, and how do you practice it?"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Marion Sprott"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Canon for Transitions"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Diocese of North Carolina"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "9196005319"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "marion.sprott@episdionc.org"
     },
     {
       "label": "Order(s) of Ministry",
@@ -4713,12 +4957,56 @@
   ],
   "10675": [
     {
+      "label": "Type",
+      "value": "Congregation"
+    },
+    {
+      "label": "Diocese",
+      "value": "North Carolina"
+    },
+    {
       "label": "Congregation",
       "value": "St Johns Episcopal Church"
     },
     {
+      "label": "Type of Work",
+      "value": "Full Time"
+    },
+    {
+      "label": "Position Title/Role",
+      "value": "Assistant/Associate/Curate"
+    },
+    {
+      "label": "",
+      "value": "Leading Sunday adult formation programs\nLeading and/or functioning as staff liaison to midweek adult formation offerings\nParticipating fully in the liturgical life of the parish, including preaching and celebrating on a regular rotation with the rector\nOverseeing adult Pastoral Care\nAdditional ministry areas based on gifts, interests, and parish needs\nsupport additional initiatives and projects as directed by the Rector"
+    },
+    {
+      "label": "Current status",
+      "value": "Receiving names"
+    },
+    {
+      "label": "",
+      "value": "Resume, Cover letter addressed to the Rector, OTM portfolio or Vocation Hub profile to \nThe Rev. Peter Floyd, Rector\npeter@stje.org"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Peter Floyd"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "Rector"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "St. John's, Charlotte"
+    },
+    {
       "label": "Applicant narrative questions",
       "value": "7046200315"
+    },
+    {
+      "label": "Applicant narrative questions",
+      "value": "peter@stje.org"
     },
     {
       "label": "Order(s) of Ministry",
