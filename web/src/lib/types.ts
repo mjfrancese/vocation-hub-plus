@@ -149,13 +149,8 @@ export interface Meta {
 
 export type SortField =
   | 'name'
-  | 'city'
   | 'diocese'
-  | 'state'
-  | 'position_type'
   | 'receiving_names_from'
-  | 'updated_on_hub'
-  | 'first_seen'
-  | 'estimated_total_comp';
+  | 'quality_score';
 
 export type SortDirection = 'asc' | 'desc';
