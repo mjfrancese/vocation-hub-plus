@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { getPositions, getMeta, getUniqueValues, getChanges } from '@/lib/data';
 import { createSearchIndex, searchPositions } from '@/lib/search';
 import { Position } from '@/lib/types';
@@ -19,6 +20,8 @@ import PositionTable from '@/components/PositionTable';
 import ExportButton from '@/components/ExportButton';
 import LastUpdated from '@/components/LastUpdated';
 import ChangeLog from '@/components/ChangeLog';
+
+const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
 export default function HomePage() {
   const allPositions = useMemo(() => getPositions(), []);
@@ -209,6 +212,7 @@ export default function HomePage() {
   }
 
   const [showNewOnly, setShowNewOnly] = useState(false);
+  const [viewMode, setViewMode] = useState<'table' | 'map'>('table');
 
   const displayedPositions = useMemo(() => {
     if (showNewOnly) return filtered.filter(p => p.is_new);
@@ -227,6 +231,24 @@ export default function HomePage() {
             {displayedPositions.length} of {allPositions.length} positions
             {hasActiveFilters || query || hideClosed || showNewOnly ? ' (filtered)' : ''}
           </span>
+          <div className="flex items-center bg-gray-100 rounded-lg p-0.5">
+            <button
+              onClick={() => setViewMode('table')}
+              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                viewMode === 'table' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Table
+            </button>
+            <button
+              onClick={() => setViewMode('map')}
+              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                viewMode === 'map' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Map
+            </button>
+          </div>
           <ExportButton positions={displayedPositions} />
         </div>
       </div>
@@ -292,7 +314,11 @@ export default function HomePage() {
         onHideClosedChange={setHideClosed}
       />
 
-      <PositionTable positions={displayedPositions} />
+      {viewMode === 'table' ? (
+        <PositionTable positions={displayedPositions} />
+      ) : (
+        <MapView positions={displayedPositions} />
+      )}
 
       {changes.length > 0 && (
         <div className="mt-8">
