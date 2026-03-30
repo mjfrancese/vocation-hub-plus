@@ -108,6 +108,7 @@ export interface Meta {
 
 export type SortField =
   | 'name'
+  | 'city'
   | 'diocese'
   | 'state'
   | 'position_type'
