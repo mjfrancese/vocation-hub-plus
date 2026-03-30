@@ -131,16 +131,8 @@ function MetricCard({
       <div className="text-gray-500 mb-1">{label}</div>
       <div className="text-lg font-semibold text-gray-900">{displayValue}</div>
       {trend && (
-        <div
-          className={`text-xs ${
-            trend.direction === 'up'
-              ? 'text-green-600'
-              : trend.direction === 'down'
-                ? 'text-red-600'
-                : 'text-gray-400'
-          }`}
-        >
-          {trend.direction === 'up' ? '+' : ''}
+        <div className="text-xs text-gray-500">
+          {trend.pct > 0 ? '+' : ''}
           {trend.pct.toFixed(0)}% over period
         </div>
       )}

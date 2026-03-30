@@ -2,7 +2,6 @@
 
 import { Fragment, useState, useCallback } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
-import StatusBadge from './StatusBadge';
 import QualityBadge, { QualityScoreDetail } from './QualityBadge';
 import ParochialTrends from './ParochialTrends';
 import { isGibberish } from '@/lib/gibberish-detector';
@@ -71,51 +70,26 @@ function timeOnMarket(pos: Position): string {
   return years === 1 ? '1 year' : `${years} years`;
 }
 
-/**
- * Compute trend for a parochial metric across all available years.
- * Uses earliest and latest non-null values (matching ParochialTrends component).
- * Threshold: >10% = up/down, otherwise flat.
- */
-function computeParochialTrend(
-  years: Record<string, { averageAttendance: number | null; plateAndPledge: number | null; membership: number | null }>,
-  metric: 'averageAttendance' | 'plateAndPledge' | 'membership',
-): { direction: 'up' | 'down' | 'flat'; pct: number; earliest: number; latest: number; yearSpan: string } | null {
-  const sorted = Object.keys(years).sort();
+/** Get latest ASA value and year range for hover context */
+function getLatestAsa(pos: Position): { value: number; range: string } | null {
+  if (!pos.parochial) return null;
+  const sorted = Object.keys(pos.parochial.years).sort();
   let earliest: number | null = null;
-  let earliestYear = '';
   let latest: number | null = null;
-  let latestYear = '';
 
   for (const y of sorted) {
-    const v = years[y][metric];
+    const v = pos.parochial.years[y].averageAttendance;
     if (v != null && v > 0) {
-      if (earliest === null) { earliest = v; earliestYear = y; }
+      if (earliest === null) earliest = v;
       latest = v;
-      latestYear = y;
     }
   }
 
-  if (earliest === null || latest === null || earliest === 0) return null;
-  if (earliestYear === latestYear) return null;
-
-  const pct = Math.round(((latest - earliest) / earliest) * 100);
-  const direction = pct > 10 ? 'up' as const : pct < -10 ? 'down' as const : 'flat' as const;
-  return { direction, pct, earliest, latest, yearSpan: `${earliestYear}-${latestYear}` };
-}
-
-/** Get ASA trend info for a position */
-function getAsaTrend(pos: Position): { direction: 'up' | 'down' | 'flat'; pct: number; earliest: number; latest: number; yearSpan: string } | null {
-  if (!pos.parochial) return null;
-  return computeParochialTrend(pos.parochial.years, 'averageAttendance');
-}
-
-function TrendArrow({ trend }: { trend: ReturnType<typeof getAsaTrend> }) {
-  if (!trend) return null;
-  const { direction, pct, earliest, latest, yearSpan } = trend;
-  const tooltip = `ASA: ${earliest} \u2192 ${latest} (${pct > 0 ? '+' : ''}${pct}%) over ${yearSpan}`;
-  if (direction === 'up') return <span className="text-green-600 text-xs font-medium cursor-help" title={tooltip}>{'\u25B2'}</span>;
-  if (direction === 'down') return <span className="text-red-500 text-xs font-medium cursor-help" title={tooltip}>{'\u25BC'}</span>;
-  return <span className="text-gray-400 text-xs cursor-help" title={tooltip}>{'\u2014'}</span>;
+  if (latest === null) return null;
+  const range = earliest !== null && earliest !== latest
+    ? `${sorted[0]}: ${earliest}, ${sorted[sorted.length - 1]}: ${latest}`
+    : `${sorted[sorted.length - 1]}`;
+  return { value: latest, range };
 }
 
 export default function PositionTable({ positions }: PositionTableProps) {
@@ -229,7 +203,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
           const city = getCity(pos);
           const state = getState(pos);
           const locationParts = [city && state ? `${city}, ${state}` : city || state, pos.diocese].filter(Boolean);
-          const trend = getAsaTrend(pos);
+          const asa = getLatestAsa(pos);
           return (
             <div key={pos.id} id={`position-row-${pos.id}`}>
               <div
@@ -252,7 +226,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     </p>
                   </div>
                   <div className="flex items-center gap-1.5 flex-shrink-0">
-                    <TrendArrow trend={trend} />
+                    {asa && <span className="text-xs text-gray-400" title={asa.range}>ASA {asa.value}</span>}
                     <QualityBadge pos={pos} />
                   </div>
                 </div>
@@ -326,7 +300,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
               const city = getCity(pos);
               const state = getState(pos);
               const locationPrimary = city && state ? `${city}, ${state}` : city || state || '';
-              const trend = getAsaTrend(pos);
+              const asa = getLatestAsa(pos);
               const receivingStart = pos.receiving_names_from
                 ? pos.receiving_names_from.split(' to ')[0].split(' - ')[0]
                 : '';
@@ -387,9 +361,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     <td className="px-3 py-2">
                       <QualityBadge pos={pos} />
                     </td>
-                    {/* Trend */}
+                    {/* ASA */}
                     <td className="px-2 py-2 text-center w-12">
-                      <TrendArrow trend={trend} />
+                      {asa && (
+                        <span className="text-xs text-gray-500 cursor-help" title={asa.range}>
+                          {asa.value}
+                        </span>
+                      )}
                     </td>
                   </tr>
                   {expandedId === pos.id && (
@@ -423,70 +401,6 @@ export default function PositionTable({ positions }: PositionTableProps) {
   );
 }
 
-function trendLabel(pct: number): string {
-  const abs = Math.abs(pct);
-  if (abs <= 10) return 'flat';
-  return `${pct > 0 ? 'up' : 'down'} ${abs}%`;
-}
-
-function trendWord(direction: 'up' | 'down' | 'flat'): string {
-  if (direction === 'up') return 'growing';
-  if (direction === 'down') return 'declining';
-  return 'stable';
-}
-
-function ParishSnapshot({ pos }: { pos: Position }) {
-  if (!pos.parochial || Object.keys(pos.parochial.years).length === 0) return null;
-
-  const asa = computeParochialTrend(pos.parochial.years, 'averageAttendance');
-  const giving = computeParochialTrend(pos.parochial.years, 'plateAndPledge');
-  const membership = computeParochialTrend(pos.parochial.years, 'membership');
-
-  if (!asa && !giving && !membership) return null;
-
-  // Determine overall assessment using weighted scoring.
-  // ASA and membership are weighted more heavily than giving since
-  // financial trends can be misleading (inflation, one-time gifts).
-  let score = 0;
-  const weights = { averageAttendance: 2, membership: 2, plateAndPledge: 1 };
-  const metrics = [
-    { trend: asa, weight: weights.averageAttendance },
-    { trend: membership, weight: weights.membership },
-    { trend: giving, weight: weights.plateAndPledge },
-  ];
-  for (const { trend, weight } of metrics) {
-    if (!trend) continue;
-    if (trend.direction === 'up') score += weight;
-    else if (trend.direction === 'down') score -= weight;
-  }
-
-  let overallLabel: string;
-  let overallColor: string;
-  if (score > 0) {
-    overallLabel = 'Growing parish';
-    overallColor = 'text-green-700 bg-green-50 border-green-200';
-  } else if (score < 0) {
-    overallLabel = 'Declining';
-    overallColor = 'text-red-700 bg-red-50 border-red-200';
-  } else {
-    overallLabel = 'Mixed trends';
-    overallColor = 'text-amber-700 bg-amber-50 border-amber-200';
-  }
-
-  const parts: string[] = [];
-  if (asa) parts.push(`ASA ${trendLabel(asa.pct)}`);
-  if (giving) parts.push(`giving ${trendLabel(giving.pct)}`);
-  if (membership) parts.push(`membership ${trendWord(membership.direction)}`);
-
-  return (
-    <div className={`rounded-lg border p-3 text-sm ${overallColor}`}>
-      <span className="font-semibold">{overallLabel}</span>
-      {parts.length > 0 && (
-        <span className="ml-1"> &mdash; {parts.join(', ')}</span>
-      )}
-    </div>
-  );
-}
 
 function ordinalSuffix(n: number): string {
   const mod100 = n % 100;
@@ -635,7 +549,6 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
     // Fallback to basic detail fields
     return (
       <div className="space-y-4">
-        <ParishSnapshot pos={pos} />
         <DioceseContext pos={pos} />
         <CommunityContext pos={pos} />
         <QualityScoreDetail pos={pos} />
@@ -664,8 +577,6 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
 
   return (
     <div className="space-y-5">
-      {/* Parish health snapshot */}
-      <ParishSnapshot pos={pos} />
       <DioceseContext pos={pos} />
       <CommunityContext pos={pos} />
       <QualityScoreDetail pos={pos} />
