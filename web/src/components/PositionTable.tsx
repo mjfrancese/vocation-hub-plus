@@ -360,6 +360,77 @@ export default function PositionTable({ positions }: PositionTableProps) {
   );
 }
 
+function computeMetricTrend(
+  years: Record<string, { averageAttendance: number | null; plateAndPledge: number | null; membership: number | null }>,
+  metric: 'averageAttendance' | 'plateAndPledge' | 'membership',
+): { direction: 'up' | 'down' | 'flat'; pct: number } | null {
+  const sorted = Object.keys(years).sort();
+  const recent = sorted.slice(-5);
+  const values = recent
+    .map(y => years[y][metric])
+    .filter((v): v is number => v !== null && v > 0);
+  if (values.length < 2) return null;
+  const first = values[0];
+  const last = values[values.length - 1];
+  const pct = Math.round(((last - first) / first) * 100);
+  const direction = pct > 10 ? 'up' : pct < -10 ? 'down' : 'flat';
+  return { direction, pct };
+}
+
+function trendLabel(pct: number): string {
+  const abs = Math.abs(pct);
+  if (abs <= 10) return 'flat';
+  return `${pct > 0 ? 'up' : 'down'} ${abs}%`;
+}
+
+function trendWord(direction: 'up' | 'down' | 'flat'): string {
+  if (direction === 'up') return 'growing';
+  if (direction === 'down') return 'declining';
+  return 'stable';
+}
+
+function ParishSnapshot({ pos }: { pos: Position }) {
+  if (!pos.parochial || Object.keys(pos.parochial.years).length === 0) return null;
+
+  const asa = computeMetricTrend(pos.parochial.years, 'averageAttendance');
+  const giving = computeMetricTrend(pos.parochial.years, 'plateAndPledge');
+  const membership = computeMetricTrend(pos.parochial.years, 'membership');
+
+  if (!asa && !giving && !membership) return null;
+
+  // Determine overall assessment
+  const directions = [asa?.direction, giving?.direction, membership?.direction].filter(Boolean);
+  const upCount = directions.filter(d => d === 'up').length;
+  const downCount = directions.filter(d => d === 'down').length;
+
+  let overallLabel: string;
+  let overallColor: string;
+  if (upCount > downCount) {
+    overallLabel = 'Growing parish';
+    overallColor = 'text-green-700 bg-green-50 border-green-200';
+  } else if (downCount > upCount) {
+    overallLabel = 'Declining';
+    overallColor = 'text-red-700 bg-red-50 border-red-200';
+  } else {
+    overallLabel = 'Stable parish';
+    overallColor = 'text-amber-700 bg-amber-50 border-amber-200';
+  }
+
+  const parts: string[] = [];
+  if (asa) parts.push(`ASA ${trendLabel(asa.pct)}`);
+  if (giving) parts.push(`giving ${trendLabel(giving.pct)}`);
+  if (membership) parts.push(`membership ${trendWord(membership.direction)}`);
+
+  return (
+    <div className={`rounded-lg border p-3 text-sm ${overallColor}`}>
+      <span className="font-semibold">{overallLabel}</span>
+      {parts.length > 0 && (
+        <span className="ml-1"> &mdash; {parts.join(', ')}</span>
+      )}
+    </div>
+  );
+}
+
 function ExpandedDetail({ pos }: { pos: Position }) {
   const fields = pos.deep_scrape_fields || [];
   const hasDeepData = fields.length > 0;
@@ -405,6 +476,7 @@ function ExpandedDetail({ pos }: { pos: Position }) {
     // Fallback to basic detail fields
     return (
       <div className="space-y-4">
+        <ParishSnapshot pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <DetailField label="Organization Type" value={pos.organization_type} />
           <DetailField label="Full/Part Time" value={pos.full_part_time} />
@@ -429,6 +501,9 @@ function ExpandedDetail({ pos }: { pos: Position }) {
 
   return (
     <div className="space-y-5">
+      {/* Parish health snapshot */}
+      <ParishSnapshot pos={pos} />
+
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
         <DetailField label="Compensation" value={salary} highlight />
