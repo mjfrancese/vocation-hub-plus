@@ -36,6 +36,24 @@ function getState(pos: Position): string {
   return pos.church_info?.state || pos.state || '';
 }
 
+/** Compute human-readable time since first_seen */
+function timeOnMarket(firstSeen: string | undefined): string {
+  if (!firstSeen) return '';
+  const seen = new Date(firstSeen);
+  if (isNaN(seen.getTime())) return '';
+  const now = new Date();
+  const diffMs = now.getTime() - seen.getTime();
+  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+  if (days < 1) return 'today';
+  if (days === 1) return '1 day';
+  if (days < 30) return `${days} days`;
+  const months = Math.floor(days / 30);
+  if (months === 1) return '1 month';
+  if (months < 12) return `${months} months`;
+  const years = Math.floor(months / 12);
+  return years === 1 ? '1 year' : `${years} years`;
+}
+
 export default function PositionTable({ positions }: PositionTableProps) {
   const [sortField, setSortField] = useState<SortField>('name');
   const [sortDir, setSortDir] = useState<SortDirection>('asc');
@@ -207,6 +225,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 {pos.receiving_names_from && (
                   <span>&middot; {pos.receiving_names_from}</span>
                 )}
+                {timeOnMarket(pos.first_seen) && (
+                  <span className="text-gray-400">&middot; {timeOnMarket(pos.first_seen)}</span>
+                )}
               </div>
             </div>
             {expandedId === pos.id && (
@@ -281,7 +302,12 @@ export default function PositionTable({ positions }: PositionTableProps) {
                       <span className="text-gray-400 italic">{pos.vh_status}</span>
                     ) : null}
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{pos.updated_on_hub}</td>
+                  <td className="px-4 py-3 text-sm text-gray-600">
+                    <div>{pos.updated_on_hub}</div>
+                    {timeOnMarket(pos.first_seen) && (
+                      <div className="text-xs text-gray-400">{timeOnMarket(pos.first_seen)} listed</div>
+                    )}
+                  </td>
                   <td className="px-4 py-3">
                     {pos.vh_status ? (
                       <StatusBadge status={pos.vh_status} />
