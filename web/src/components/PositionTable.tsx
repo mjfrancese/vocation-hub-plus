@@ -3,6 +3,7 @@
 import { Fragment, useState, useCallback } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import StatusBadge from './StatusBadge';
+import QualityBadge, { QualityScoreDetail } from './QualityBadge';
 import ParochialTrends from './ParochialTrends';
 import { isGibberish } from '@/lib/gibberish-detector';
 import ComparisonBar from './ComparisonBar';
@@ -295,11 +296,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     {getCity(pos) && <>{getCity(pos)} &middot; </>}{getState(pos)} &middot; {pos.diocese}
                   </p>
                 </div>
-                {pos.vh_status ? (
-                  <StatusBadge status={pos.vh_status} />
-                ) : (
-                  <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
-                )}
+                <QualityBadge pos={pos} />
               </div>
               <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
                 {pos.position_type && <span>{pos.position_type}</span>}
@@ -441,11 +438,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     )}
                   </td>
                   <td className="px-4 py-3">
-                    {pos.vh_status ? (
-                      <StatusBadge status={pos.vh_status} />
-                    ) : (
-                      <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
-                    )}
+                    <QualityBadge pos={pos} />
                   </td>
                 </tr>
                 {expandedId === pos.id && (
@@ -699,6 +692,7 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
         <ParishSnapshot pos={pos} />
         <DioceseContext pos={pos} />
         <CommunityContext pos={pos} />
+        <QualityScoreDetail pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <DetailField label="Organization Type" value={pos.organization_type} />
           <DetailField label="Full/Part Time" value={pos.full_part_time} />
@@ -728,6 +722,7 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
       <ParishSnapshot pos={pos} />
       <DioceseContext pos={pos} />
       <CommunityContext pos={pos} />
+      <QualityScoreDetail pos={pos} />
 
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">

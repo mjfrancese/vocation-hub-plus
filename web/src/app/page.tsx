@@ -262,6 +262,32 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* About this data */}
+      <details className="text-sm text-gray-600">
+        <summary className="cursor-pointer text-gray-500 hover:text-gray-700 inline-flex items-center gap-1">
+          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-xs font-medium">i</span>
+          About this data
+        </summary>
+        <div className="mt-2 space-y-2 pl-5 border-l-2 border-gray-200 text-gray-600">
+          <p>
+            <strong>Active Listings</strong> appear in the Episcopal Vocation Hub&#39;s current search results
+            and are confirmed to be accepting applications.
+          </p>
+          <p>
+            <strong>Directory Listings</strong> are positions found in the Vocation Hub&#39;s profile directory
+            that are not currently in active search results. They may be in development, recently closed, or
+            awaiting updates. We include them when they have enough information to be useful. Each directory
+            listing shows a quality score (0-100) based on how complete and current the listing data is.
+          </p>
+          <p>
+            All listings are enriched with data from the Episcopal Asset Map (church directory) and General
+            Convention Parochial Reports (attendance, giving, and membership trends) where a match could be
+            identified. This enrichment data is provided for context and may not reflect the current state
+            of the parish.
+          </p>
+        </div>
+      </details>
+
       {/* Quick filter chips */}
       <div className="flex flex-wrap gap-2">
         <QuickChip
