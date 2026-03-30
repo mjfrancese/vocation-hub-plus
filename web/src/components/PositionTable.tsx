@@ -342,7 +342,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-3 py-3 w-10">
+              <th className="px-1 py-3 w-8">
                 <span className="sr-only">Compare</span>
               </th>
               {COLUMNS.map((col) => (
@@ -380,7 +380,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                       : 'hover:bg-gray-50'
                   }`}
                 >
-                  <td className="px-3 py-3 w-10" onClick={(e) => e.stopPropagation()}>
+                  <td className="px-1 py-3 w-8 text-center" onClick={(e) => e.stopPropagation()}>
                     <input
                       type="checkbox"
                       checked={comparedIds.has(pos.id)}
@@ -403,10 +403,10 @@ export default function PositionTable({ positions }: PositionTableProps) {
                       <TrendArrow trend={getAsaTrend(pos)} />
                     </span>
                   </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{getCity(pos)}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{getState(pos)}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{pos.diocese}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
+                  <td className="px-3 py-3 text-sm text-gray-600">{getCity(pos)}</td>
+                  <td className="px-2 py-3 text-sm text-gray-600">{getState(pos)}</td>
+                  <td className="px-3 py-3 text-sm text-gray-600">{pos.diocese}</td>
+                  <td className="px-3 py-3 text-sm text-gray-600">{pos.position_type}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">
                     {pos.estimated_total_comp ? (
                       <span title={
