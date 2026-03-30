@@ -78,6 +78,13 @@ export interface Position {
     membership_value?: number;
   };
 
+  // Estimated total compensation (computed at build time)
+  estimated_total_comp?: number;
+  comp_breakdown?: {
+    stipend: number;
+    housing?: number;
+  };
+
   // Enriched parochial data (from Power BI cross-reference)
   parochial?: {
     congregationCity: string;
@@ -124,6 +131,7 @@ export type SortField =
   | 'position_type'
   | 'receiving_names_from'
   | 'updated_on_hub'
-  | 'first_seen';
+  | 'first_seen'
+  | 'estimated_total_comp';
 
 export type SortDirection = 'asc' | 'desc';

@@ -16,6 +16,7 @@ const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'state', label: 'State' },
   { key: 'diocese', label: 'Diocese' },
   { key: 'position_type', label: 'Position' },
+  { key: 'estimated_total_comp' as SortField, label: 'Est. Comp' },
   { key: 'receiving_names_from', label: 'Receiving Names' },
   { key: 'updated_on_hub', label: 'Updated' },
 ];
@@ -112,8 +113,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
       aVal = getState(a);
       bVal = getState(b);
     } else {
-      aVal = a[sortField] || '';
-      bVal = b[sortField] || '';
+      aVal = String(a[sortField] || '');
+      bVal = String(b[sortField] || '');
+    }
+    if (sortField === 'estimated_total_comp') {
+      const aNum = a.estimated_total_comp || 0;
+      const bNum = b.estimated_total_comp || 0;
+      return sortDir === 'asc' ? aNum - bNum : bNum - aNum;
     }
     // Date fields: parse various formats to compare chronologically
     if (sortField === 'receiving_names_from' || sortField === 'updated_on_hub') {
@@ -267,6 +273,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 {pos.receiving_names_from && (
                   <span>&middot; {pos.receiving_names_from}</span>
                 )}
+                {pos.estimated_total_comp && (
+                  <span className="text-green-700 font-medium">&middot; ${pos.estimated_total_comp.toLocaleString()}</span>
+                )}
                 {timeOnMarket(pos) && (
                   <span className="text-gray-400">&middot; {timeOnMarket(pos)}</span>
                 )}
@@ -338,6 +347,17 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   <td className="px-4 py-3 text-sm text-gray-600">{pos.diocese}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">
+                    {pos.estimated_total_comp ? (
+                      <span title={
+                        pos.comp_breakdown
+                          ? `Stipend: $${pos.comp_breakdown.stipend.toLocaleString()}${pos.comp_breakdown.housing ? ` + Housing: ~$${pos.comp_breakdown.housing.toLocaleString()}` : ''}`
+                          : undefined
+                      }>
+                        ${pos.estimated_total_comp.toLocaleString()} est.
+                      </span>
+                    ) : null}
+                  </td>
+                  <td className="px-4 py-3 text-sm text-gray-600">
                     {pos.receiving_names_from ? (
                       <>
                         {pos.receiving_names_from}
@@ -365,7 +385,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 </tr>
                 {expandedId === pos.id && (
                   <tr key={`${pos.id}-detail`}>
-                    <td colSpan={8} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
+                    <td colSpan={9} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
                       <ExpandedDetail pos={pos} />
                     </td>
                   </tr>
@@ -570,7 +590,17 @@ function ExpandedDetail({ pos }: { pos: Position }) {
 
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-        <DetailField label="Compensation" value={salary} highlight />
+        <DetailField
+          label="Compensation"
+          value={
+            pos.estimated_total_comp
+              ? `$${pos.estimated_total_comp.toLocaleString()} est. total${
+                  pos.comp_breakdown?.housing ? ` (Stipend: $${pos.comp_breakdown.stipend.toLocaleString()} + Housing: ~$${pos.comp_breakdown.housing.toLocaleString()})` : ''
+                }`
+              : salary
+          }
+          highlight
+        />
         <DetailField label="Housing" value={housing} />
         <DetailField label="Avg Sunday Attendance" value={attendance} />
         <DetailField label="Annual Budget" value={budget ? `$${Number(budget).toLocaleString()}` : ''} />

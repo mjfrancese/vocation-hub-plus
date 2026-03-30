@@ -143,6 +143,8 @@ export function getPositions(): Position[] {
         match_confidence: (e.match_confidence as Position['match_confidence']) || undefined,
         parochial: e.parochial as Position['parochial'],
         diocese_percentiles: e.diocese_percentiles as Position['diocese_percentiles'],
+        estimated_total_comp: e.estimated_total_comp as number | undefined,
+        comp_breakdown: e.comp_breakdown as Position['comp_breakdown'],
         is_new: computeIsNew({ receiving_names_from: receivingFrom }),
       });
     }
