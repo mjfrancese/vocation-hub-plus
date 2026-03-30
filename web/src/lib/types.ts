@@ -68,6 +68,16 @@ export interface Position {
     lng: number | null;
   };
 
+  // Diocese-level percentile rankings (computed at build time)
+  diocese_percentiles?: {
+    asa?: number;
+    asa_value?: number;
+    plate_pledge?: number;
+    plate_pledge_value?: number;
+    membership?: number;
+    membership_value?: number;
+  };
+
   // Enriched parochial data (from Power BI cross-reference)
   parochial?: {
     congregationCity: string;

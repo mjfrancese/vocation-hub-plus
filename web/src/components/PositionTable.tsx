@@ -450,6 +450,49 @@ function ParishSnapshot({ pos }: { pos: Position }) {
   );
 }
 
+function ordinalSuffix(n: number): string {
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 13) return 'th';
+  const mod10 = n % 10;
+  if (mod10 === 1) return 'st';
+  if (mod10 === 2) return 'nd';
+  if (mod10 === 3) return 'rd';
+  return 'th';
+}
+
+function formatDollarCompact(value: number): string {
+  if (value >= 1000) return `$${Math.round(value / 1000)}k`;
+  return `$${value.toLocaleString()}`;
+}
+
+function DioceseContext({ pos }: { pos: Position }) {
+  if (!pos.diocese_percentiles || !pos.diocese) return null;
+
+  const dp = pos.diocese_percentiles;
+  const items: string[] = [];
+
+  if (dp.asa != null && dp.asa_value != null) {
+    items.push(`ASA of ${dp.asa_value} \u2014 larger than ${dp.asa}% of parishes in the Diocese of ${pos.diocese}`);
+  }
+  if (dp.plate_pledge != null && dp.plate_pledge_value != null) {
+    items.push(`Annual giving of ${formatDollarCompact(dp.plate_pledge_value)} \u2014 ${dp.plate_pledge}${ordinalSuffix(dp.plate_pledge)} percentile in diocese`);
+  }
+  if (dp.membership != null && dp.membership_value != null) {
+    items.push(`Membership of ${dp.membership_value} \u2014 ${dp.membership}${ordinalSuffix(dp.membership)} percentile in diocese`);
+  }
+
+  if (items.length === 0) return null;
+
+  return (
+    <div className="border border-blue-200 rounded-lg p-3 bg-blue-50 text-sm text-blue-800">
+      <div className="font-medium text-blue-700 mb-1">Diocese Context</div>
+      {items.map((item, i) => (
+        <div key={i}>{item}</div>
+      ))}
+    </div>
+  );
+}
+
 function ExpandedDetail({ pos }: { pos: Position }) {
   const fields = pos.deep_scrape_fields || [];
   const hasDeepData = fields.length > 0;
@@ -496,6 +539,7 @@ function ExpandedDetail({ pos }: { pos: Position }) {
     return (
       <div className="space-y-4">
         <ParishSnapshot pos={pos} />
+        <DioceseContext pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <DetailField label="Organization Type" value={pos.organization_type} />
           <DetailField label="Full/Part Time" value={pos.full_part_time} />
@@ -522,6 +566,7 @@ function ExpandedDetail({ pos }: { pos: Position }) {
     <div className="space-y-5">
       {/* Parish health snapshot */}
       <ParishSnapshot pos={pos} />
+      <DioceseContext pos={pos} />
 
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">

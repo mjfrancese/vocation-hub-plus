@@ -142,6 +142,7 @@ export function getPositions(): Position[] {
         church_info: e.church_info as Position['church_info'],
         match_confidence: (e.match_confidence as Position['match_confidence']) || undefined,
         parochial: e.parochial as Position['parochial'],
+        diocese_percentiles: e.diocese_percentiles as Position['diocese_percentiles'],
         is_new: computeIsNew({ receiving_names_from: receivingFrom }),
       });
     }
