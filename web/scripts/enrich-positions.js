@@ -136,6 +136,80 @@ function computeDiocesePercentiles(positions) {
   console.log(`Diocese percentiles: ${count} positions`);
 }
 
+/**
+ * Parse a stipend string like "$50,000" into a number.
+ * Returns null for non-numeric placeholders (DOE, TBD, etc.).
+ */
+function parseStipend(str) {
+  if (!str || typeof str !== 'string') return null;
+  const upper = str.trim().toUpperCase();
+  if (/^(DOE|TBD|NEGOTIABLE|N\/A|SEE|CONTACT|VARIES)/.test(upper)) return null;
+  const cleaned = str.replace(/[$,\s]/g, '');
+  const m = cleaned.match(/^(\d+\.?\d*)/);
+  if (!m) return null;
+  const val = parseFloat(m[1]);
+  return val > 0 ? val : null;
+}
+
+/**
+ * Compute estimated total compensation for positions.
+ * Uses position-level stipend fields, falling back to profile fields.
+ * Adds $20,000 housing estimate when housing is provided.
+ */
+function computeEstimatedTotalComp(positions, profileFields) {
+  let count = 0;
+  for (const pos of positions) {
+    let minStipend = parseStipend(pos.minimum_stipend);
+    let maxStipend = parseStipend(pos.maximum_stipend);
+
+    // Fallback: check profile fields for stipend data
+    if (minStipend == null && maxStipend == null && profileFields && pos.vh_id) {
+      const fields = profileFields[String(pos.vh_id)];
+      if (Array.isArray(fields)) {
+        for (const f of fields) {
+          const label = (f.label || '').toLowerCase();
+          if (label.includes('minimum') && label.includes('stipend') && minStipend == null) {
+            minStipend = parseStipend(f.value);
+          }
+          if (label.includes('maximum') && label.includes('stipend') && maxStipend == null) {
+            maxStipend = parseStipend(f.value);
+          }
+        }
+      }
+    }
+
+    if (minStipend == null && maxStipend == null) continue;
+
+    let basePay;
+    if (minStipend != null && maxStipend != null) {
+      basePay = (minStipend + maxStipend) / 2;
+    } else {
+      basePay = minStipend != null ? minStipend : maxStipend;
+    }
+
+    let totalComp = basePay;
+    let housingValue = 0;
+
+    const housingType = (pos.housing_type || '').toLowerCase();
+    const housingProvided = housingType &&
+      !housingType.includes('no housing') &&
+      (/rectory|housing provided|bed|bath|required/.test(housingType));
+
+    if (housingProvided) {
+      housingValue = 20000;
+      totalComp += housingValue;
+    }
+
+    pos.estimated_total_comp = Math.round(totalComp);
+    pos.comp_breakdown = { stipend: Math.round(basePay) };
+    if (housingValue > 0) {
+      pos.comp_breakdown.housing = housingValue;
+    }
+    count++;
+  }
+  console.log(`Estimated total comp: ${count} positions`);
+}
+
 // --- Main ---
 
 function main() {
@@ -285,6 +359,7 @@ function main() {
   if (badUrlCleared) console.log(`  Bad profile URLs cleared: ${badUrlCleared}`);
 
   computeDiocesePercentiles(positions);
+  computeEstimatedTotalComp(positions, profileFields);
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'enriched-positions.json'),
@@ -453,6 +528,7 @@ function main() {
     console.log(`  Parochial matches: ${extParochial}`);
 
     computeDiocesePercentiles(extended);
+    computeEstimatedTotalComp(extended, profileFields);
 
     fs.writeFileSync(
       path.join(DATA_DIR, 'enriched-extended.json'),
