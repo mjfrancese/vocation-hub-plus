@@ -275,7 +275,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
               className={`border rounded-lg p-3 cursor-pointer transition-colors ${
                 expandedId === pos.id
                   ? 'bg-primary-50 border-l-4 border-l-primary-500 border-primary-200'
-                  : 'bg-white border-gray-200 hover:bg-gray-50'
+                  : pos.visibility === 'extended_hidden'
+                    ? 'bg-gray-50/60 border-gray-200 text-gray-400 hover:bg-gray-100'
+                    : 'bg-white border-gray-200 hover:bg-gray-50'
               }`}
             >
               <div className="flex items-start justify-between gap-2">
@@ -377,7 +379,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   className={`cursor-pointer transition-colors ${
                     expandedId === pos.id
                       ? 'bg-primary-50 border-l-4 border-l-primary-500'
-                      : 'hover:bg-gray-50'
+                      : pos.visibility === 'extended_hidden'
+                        ? 'bg-gray-50/60 text-gray-400 hover:bg-gray-100'
+                        : 'hover:bg-gray-50'
                   }`}
                 >
                   <td className="px-3 py-3 w-10" onClick={(e) => e.stopPropagation()}>

@@ -212,11 +212,20 @@ export default function HomePage() {
   }
 
   const [showNewOnly, setShowNewOnly] = useState(false);
+  const [showHiddenListings, setShowHiddenListings] = useState(false);
   const [viewMode, setViewMode] = useState<'table' | 'map'>('table');
 
   const displayedPositions = useMemo(() => {
-    if (showNewOnly) return filtered.filter(p => p.is_new);
-    return filtered;
+    let results = filtered;
+    if (showNewOnly) results = results.filter(p => p.is_new);
+    if (!showHiddenListings) results = results.filter(p => p.visibility !== 'extended_hidden');
+    return results;
+  }, [filtered, showNewOnly, showHiddenListings]);
+
+  const hiddenCount = useMemo(() => {
+    let results = filtered;
+    if (showNewOnly) results = results.filter(p => p.is_new);
+    return results.filter(p => p.visibility === 'extended_hidden').length;
   }, [filtered, showNewOnly]);
 
   return (
@@ -315,7 +324,34 @@ export default function HomePage() {
       />
 
       {viewMode === 'table' ? (
-        <PositionTable positions={displayedPositions} />
+        <>
+          <PositionTable positions={displayedPositions} />
+          {hiddenCount > 0 && (
+            <div className="text-sm text-gray-500 mt-3 text-center">
+              {showHiddenListings ? (
+                <>
+                  Showing all {displayedPositions.length} results, including {hiddenCount} below the quality threshold.{' '}
+                  <button
+                    onClick={() => setShowHiddenListings(false)}
+                    className="text-primary-600 hover:text-primary-800 underline"
+                  >
+                    Hide low-quality listings
+                  </button>
+                </>
+              ) : (
+                <>
+                  Showing {displayedPositions.length} results. {hiddenCount} additional listings did not meet the quality threshold.{' '}
+                  <button
+                    onClick={() => setShowHiddenListings(true)}
+                    className="text-primary-600 hover:text-primary-800 underline"
+                  >
+                    Include all listings
+                  </button>
+                </>
+              )}
+            </div>
+          )}
+        </>
       ) : (
         <MapView positions={displayedPositions} />
       )}
