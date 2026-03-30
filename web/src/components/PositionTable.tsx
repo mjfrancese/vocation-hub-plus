@@ -3,6 +3,7 @@
 import { Fragment, useState, useCallback } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import StatusBadge from './StatusBadge';
+import QualityBadge, { QualityScoreDetail } from './QualityBadge';
 import ParochialTrends from './ParochialTrends';
 import { isGibberish } from '@/lib/gibberish-detector';
 import ComparisonBar from './ComparisonBar';
@@ -14,13 +15,9 @@ interface PositionTableProps {
 
 const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'name', label: 'Church' },
-  { key: 'city', label: 'City' },
-  { key: 'state', label: 'State' },
-  { key: 'diocese', label: 'Diocese' },
-  { key: 'position_type', label: 'Position' },
-  { key: 'estimated_total_comp' as SortField, label: 'Est. Comp' },
-  { key: 'receiving_names_from', label: 'Receiving Names' },
-  { key: 'updated_on_hub', label: 'Updated' },
+  { key: 'diocese', label: 'Location' },
+  { key: 'receiving_names_from', label: 'Dates' },
+  { key: 'quality_score', label: 'Status' },
 ];
 
 /** Get the display name for a position: prefer church_info.name, fall back to pos.name */
@@ -74,28 +71,51 @@ function timeOnMarket(pos: Position): string {
   return years === 1 ? '1 year' : `${years} years`;
 }
 
-/** Compute ASA trend direction from parochial data (most recent 5 years) */
-function getAsaTrend(pos: Position): 'up' | 'down' | 'flat' | null {
-  if (!pos.parochial) return null;
-  const years = Object.keys(pos.parochial.years).sort();
-  const recent = years.slice(-5);
-  const values = recent
-    .map(y => pos.parochial!.years[y].averageAttendance)
-    .filter((v): v is number => v !== null && v > 0);
-  if (values.length < 2) return null;
-  const first = values[0];
-  const last = values[values.length - 1];
-  const pctChange = (last - first) / first;
-  if (pctChange > 0.1) return 'up';
-  if (pctChange < -0.1) return 'down';
-  return 'flat';
+/**
+ * Compute trend for a parochial metric across all available years.
+ * Uses earliest and latest non-null values (matching ParochialTrends component).
+ * Threshold: >10% = up/down, otherwise flat.
+ */
+function computeParochialTrend(
+  years: Record<string, { averageAttendance: number | null; plateAndPledge: number | null; membership: number | null }>,
+  metric: 'averageAttendance' | 'plateAndPledge' | 'membership',
+): { direction: 'up' | 'down' | 'flat'; pct: number; earliest: number; latest: number; yearSpan: string } | null {
+  const sorted = Object.keys(years).sort();
+  let earliest: number | null = null;
+  let earliestYear = '';
+  let latest: number | null = null;
+  let latestYear = '';
+
+  for (const y of sorted) {
+    const v = years[y][metric];
+    if (v != null && v > 0) {
+      if (earliest === null) { earliest = v; earliestYear = y; }
+      latest = v;
+      latestYear = y;
+    }
+  }
+
+  if (earliest === null || latest === null || earliest === 0) return null;
+  if (earliestYear === latestYear) return null;
+
+  const pct = Math.round(((latest - earliest) / earliest) * 100);
+  const direction = pct > 10 ? 'up' as const : pct < -10 ? 'down' as const : 'flat' as const;
+  return { direction, pct, earliest, latest, yearSpan: `${earliestYear}-${latestYear}` };
 }
 
-function TrendArrow({ trend }: { trend: 'up' | 'down' | 'flat' | null }) {
+/** Get ASA trend info for a position */
+function getAsaTrend(pos: Position): { direction: 'up' | 'down' | 'flat'; pct: number; earliest: number; latest: number; yearSpan: string } | null {
+  if (!pos.parochial) return null;
+  return computeParochialTrend(pos.parochial.years, 'averageAttendance');
+}
+
+function TrendArrow({ trend }: { trend: ReturnType<typeof getAsaTrend> }) {
   if (!trend) return null;
-  if (trend === 'up') return <span className="text-green-600 text-xs font-medium" title="ASA trending up">{'\u25B2'}</span>;
-  if (trend === 'down') return <span className="text-red-500 text-xs font-medium" title="ASA trending down">{'\u25BC'}</span>;
-  return <span className="text-gray-400 text-xs" title="ASA flat">{'\u2014'}</span>;
+  const { direction, pct, earliest, latest, yearSpan } = trend;
+  const tooltip = `ASA: ${earliest} \u2192 ${latest} (${pct > 0 ? '+' : ''}${pct}%) over ${yearSpan}`;
+  if (direction === 'up') return <span className="text-green-600 text-xs font-medium cursor-help" title={tooltip}>{'\u25B2'}</span>;
+  if (direction === 'down') return <span className="text-red-500 text-xs font-medium cursor-help" title={tooltip}>{'\u25BC'}</span>;
+  return <span className="text-gray-400 text-xs cursor-help" title={tooltip}>{'\u2014'}</span>;
 }
 
 export default function PositionTable({ positions }: PositionTableProps) {
@@ -124,90 +144,26 @@ export default function PositionTable({ positions }: PositionTableProps) {
   const comparedPositions = positions.filter(p => comparedIds.has(p.id));
 
   const sorted = [...positions].sort((a, b) => {
+    if (sortField === 'quality_score') {
+      const aNum = a.quality_score ?? 0;
+      const bNum = b.quality_score ?? 0;
+      return sortDir === 'asc' ? aNum - bNum : bNum - aNum;
+    }
+    if (sortField === 'receiving_names_from') {
+      const aTime = parseAnyDate(a.receiving_names_from)?.getTime() || 0;
+      const bTime = parseAnyDate(b.receiving_names_from)?.getTime() || 0;
+      return sortDir === 'asc' ? aTime - bTime : bTime - aTime;
+    }
     let aVal: string, bVal: string;
     if (sortField === 'name') {
       aVal = getChurchName(a).text;
       bVal = getChurchName(b).text;
-    } else if (sortField === 'city') {
-      aVal = getCity(a);
-      bVal = getCity(b);
-    } else if (sortField === 'state') {
-      aVal = getState(a);
-      bVal = getState(b);
+    } else if (sortField === 'diocese') {
+      aVal = a.diocese || '';
+      bVal = b.diocese || '';
     } else {
       aVal = String(a[sortField] || '');
       bVal = String(b[sortField] || '');
-    }
-    if (sortField === 'estimated_total_comp') {
-      const aNum = a.estimated_total_comp || 0;
-      const bNum = b.estimated_total_comp || 0;
-      return sortDir === 'asc' ? aNum - bNum : bNum - aNum;
-    }
-    // Date fields: parse various formats to compare chronologically
-    if (sortField === 'receiving_names_from' || sortField === 'updated_on_hub') {
-      const parseDate = (s: string) => {
-        if (!s) return 0;
-        // Handle range like "02/18/2026 to 03/31/2026" - use first date
-        const first = s.split(' to ')[0].trim();
-
-        // MM/DD/YYYY format
-        const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-        if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2])).getTime();
-
-        // "Today, HH:MM AM/PM" format
-        if (first.startsWith('Today')) {
-          const now = new Date();
-          const timeMatch = first.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i);
-          if (timeMatch) {
-            let h = parseInt(timeMatch[1]);
-            const m = parseInt(timeMatch[2]);
-            if (timeMatch[3].toUpperCase() === 'PM' && h !== 12) h += 12;
-            if (timeMatch[3].toUpperCase() === 'AM' && h === 12) h = 0;
-            return new Date(now.getFullYear(), now.getMonth(), now.getDate(), h, m).getTime();
-          }
-          return new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
-        }
-
-        // "Yesterday, HH:MM AM/PM" format
-        if (first.startsWith('Yesterday')) {
-          const now = new Date();
-          return new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1).getTime();
-        }
-
-        // "Month DD" format (no year - assume current year)
-        const monthDay = first.match(/^([A-Z][a-z]+)\s+(\d{1,2})$/);
-        if (monthDay) {
-          const months: Record<string, number> = {
-            January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
-            July: 6, August: 7, September: 8, October: 9, November: 10, December: 11,
-          };
-          const mo = months[monthDay[1]];
-          if (mo !== undefined) {
-            return new Date(new Date().getFullYear(), mo, parseInt(monthDay[2])).getTime();
-          }
-        }
-
-        // "Month DD, YYYY" format
-        const monthDayYear = first.match(/^([A-Z][a-z]+)\s+(\d{1,2}),?\s+(\d{4})$/);
-        if (monthDayYear) {
-          const months: Record<string, number> = {
-            January: 0, February: 1, March: 2, April: 3, May: 4, June: 5,
-            July: 6, August: 7, September: 8, October: 9, November: 10, December: 11,
-          };
-          const mo = months[monthDayYear[1]];
-          if (mo !== undefined) {
-            return new Date(parseInt(monthDayYear[3]), mo, parseInt(monthDayYear[2])).getTime();
-          }
-        }
-
-        // Try native Date parsing as last resort
-        const d = new Date(first);
-        return isNaN(d.getTime()) ? 0 : d.getTime();
-      };
-      const aTime = parseDate(aVal);
-      const bTime = parseDate(bVal);
-      const cmp = aTime - bTime;
-      return sortDir === 'asc' ? cmp : -cmp;
     }
     const cmp = aVal.localeCompare(bVal);
     return sortDir === 'asc' ? cmp : -cmp;
@@ -268,73 +224,69 @@ export default function PositionTable({ positions }: PositionTableProps) {
           </button>
         </div>
 
-        {sorted.map((pos) => (
-          <div key={pos.id} id={`position-row-${pos.id}`}>
-            <div
-              onClick={() => toggleExpand(pos.id)}
-              className={`border rounded-lg p-3 cursor-pointer transition-colors ${
-                expandedId === pos.id
-                  ? 'bg-primary-50 border-l-4 border-l-primary-500 border-primary-200'
-                  : 'bg-white border-gray-200 hover:bg-gray-50'
-              }`}
-            >
-              <div className="flex items-start justify-between gap-2">
-                <div className="min-w-0 flex-1">
-                  {(() => {
-                    const church = getChurchName(pos);
-                    return (
-                      <p className={`font-medium text-sm leading-tight flex items-center gap-1.5 ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
-                        {church.text}
-                        <TrendArrow trend={getAsaTrend(pos)} />
-                      </p>
-                    );
-                  })()}
-                  <p className="text-xs text-gray-500 mt-1">
-                    {getCity(pos) && <>{getCity(pos)} &middot; </>}{getState(pos)} &middot; {pos.diocese}
-                  </p>
+        {sorted.map((pos) => {
+          const church = getChurchName(pos);
+          const city = getCity(pos);
+          const state = getState(pos);
+          const locationParts = [city && state ? `${city}, ${state}` : city || state, pos.diocese].filter(Boolean);
+          const trend = getAsaTrend(pos);
+          return (
+            <div key={pos.id} id={`position-row-${pos.id}`}>
+              <div
+                onClick={() => toggleExpand(pos.id)}
+                className={`border rounded-lg p-3 cursor-pointer transition-colors ${
+                  expandedId === pos.id
+                    ? 'bg-primary-50 border-l-4 border-l-primary-500 border-primary-200'
+                    : pos.visibility === 'extended_hidden'
+                      ? 'bg-gray-50/60 border-gray-200 text-gray-400 hover:bg-gray-100'
+                      : 'bg-white border-gray-200 hover:bg-gray-50'
+                }`}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0 flex-1">
+                    <p className={`font-medium text-sm leading-tight ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
+                      {church.text}
+                    </p>
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      {locationParts.join(' \u00B7 ') || '\u00A0'}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-1.5 flex-shrink-0">
+                    <TrendArrow trend={trend} />
+                    <QualityBadge pos={pos} />
+                  </div>
                 </div>
-                {pos.vh_status ? (
-                  <StatusBadge status={pos.vh_status} />
-                ) : (
-                  <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
-                )}
+                <div className="flex items-center gap-2 mt-1.5 text-xs text-gray-500">
+                  {pos.position_type && <span>{pos.position_type}</span>}
+                  {pos.receiving_names_from && (
+                    <span>&middot; {pos.receiving_names_from.split(' to ')[0].split(' - ')[0]}</span>
+                  )}
+                </div>
+                <div className="mt-2">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); toggleCompare(pos.id); }}
+                    disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
+                    className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
+                      comparedIds.has(pos.id)
+                        ? 'bg-primary-100 border-primary-300 text-primary-700'
+                        : comparedIds.size >= MAX_COMPARE
+                          ? 'bg-gray-50 border-gray-200 text-gray-300 cursor-not-allowed'
+                          : 'bg-white border-gray-300 text-gray-600 hover:border-primary-300'
+                    }`}
+                    title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : undefined}
+                  >
+                    {comparedIds.has(pos.id) ? '\u2713 Compare' : '+ Compare'}
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center gap-3 mt-2 text-xs text-gray-500">
-                {pos.position_type && <span>{pos.position_type}</span>}
-                {pos.receiving_names_from && (
-                  <span>&middot; {pos.receiving_names_from}</span>
-                )}
-                {pos.estimated_total_comp && (
-                  <span className="text-green-700 font-medium">&middot; ${pos.estimated_total_comp.toLocaleString()}</span>
-                )}
-                {timeOnMarket(pos) && (
-                  <span className="text-gray-400">&middot; {timeOnMarket(pos)}</span>
-                )}
-              </div>
-              <div className="mt-2">
-                <button
-                  onClick={(e) => { e.stopPropagation(); toggleCompare(pos.id); }}
-                  disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
-                  className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
-                    comparedIds.has(pos.id)
-                      ? 'bg-primary-100 border-primary-300 text-primary-700'
-                      : comparedIds.size >= MAX_COMPARE
-                        ? 'bg-gray-50 border-gray-200 text-gray-300 cursor-not-allowed'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-primary-300'
-                  }`}
-                  title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : undefined}
-                >
-                  {comparedIds.has(pos.id) ? '\u2713 Compare' : '+ Compare'}
-                </button>
-              </div>
+              {expandedId === pos.id && (
+                <div className="border border-t-0 border-primary-200 rounded-b-lg p-3 bg-primary-50/40 border-l-4 border-l-primary-500">
+                  <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
+                </div>
+              )}
             </div>
-            {expandedId === pos.id && (
-              <div className="border border-t-0 border-primary-200 rounded-b-lg p-3 bg-primary-50/40 border-l-4 border-l-primary-500">
-                <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
-              </div>
-            )}
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Desktop: table layout */}
@@ -342,14 +294,14 @@ export default function PositionTable({ positions }: PositionTableProps) {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-1 py-3 w-8">
+              <th className="px-2 py-3 w-10">
                 <span className="sr-only">Compare</span>
               </th>
               {COLUMNS.map((col) => (
                 <th
                   key={col.key}
                   onClick={() => handleSort(col.key)}
-                  className="px-4 py-3 text-left text-xs font-medium text-gray-500
+                  className="px-3 py-3 text-left text-xs font-medium text-gray-500
                              uppercase tracking-wider cursor-pointer hover:bg-gray-100
                              select-none"
                 >
@@ -363,96 +315,93 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   </span>
                 </th>
               ))}
-              <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Status
+              <th className="px-2 py-3 text-center text-xs font-medium text-gray-400 uppercase tracking-wider w-12">
+                ASA
               </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {sorted.map((pos) => (
-              <Fragment key={pos.id}>
-                <tr
-                  id={`position-row-${pos.id}`}
-                  onClick={() => toggleExpand(pos.id)}
-                  className={`cursor-pointer transition-colors ${
-                    expandedId === pos.id
-                      ? 'bg-primary-50 border-l-4 border-l-primary-500'
-                      : 'hover:bg-gray-50'
-                  }`}
-                >
-                  <td className="px-1 py-3 w-8 text-center" onClick={(e) => e.stopPropagation()}>
-                    <input
-                      type="checkbox"
-                      checked={comparedIds.has(pos.id)}
-                      disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
-                      onChange={() => toggleCompare(pos.id)}
-                      className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 disabled:opacity-40 disabled:cursor-not-allowed"
-                      title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Select to compare'}
-                    />
-                  </td>
-                  <td className="px-4 py-3 text-sm font-medium max-w-xs truncate">
-                    <span className="flex items-center gap-1.5">
-                      {(() => {
-                        const church = getChurchName(pos);
-                        return (
-                          <span className={church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}>
-                            {church.text}
-                          </span>
-                        );
-                      })()}
-                      <TrendArrow trend={getAsaTrend(pos)} />
-                    </span>
-                  </td>
-                  <td className="px-3 py-3 text-sm text-gray-600">{getCity(pos)}</td>
-                  <td className="px-2 py-3 text-sm text-gray-600">{getState(pos)}</td>
-                  <td className="px-3 py-3 text-sm text-gray-600">{pos.diocese}</td>
-                  <td className="px-3 py-3 text-sm text-gray-600">{pos.position_type}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">
-                    {pos.estimated_total_comp ? (
-                      <span title={
-                        pos.comp_breakdown
-                          ? `Stipend: $${pos.comp_breakdown.stipend.toLocaleString()}${pos.comp_breakdown.housing ? ` + Housing: ~$${pos.comp_breakdown.housing.toLocaleString()}` : ''}`
-                          : undefined
-                      }>
-                        ${pos.estimated_total_comp.toLocaleString()} est.
-                      </span>
-                    ) : null}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">
-                    {pos.receiving_names_from ? (
-                      <>
-                        {pos.receiving_names_from}
-                        {pos.receiving_names_to && pos.receiving_names_to !== 'Open ended'
-                          && !pos.receiving_names_from.includes(' - ')
-                          && ` to ${pos.receiving_names_to}`}
-                      </>
-                    ) : pos.vh_status ? (
-                      <span className="text-gray-400 italic">{pos.vh_status}</span>
-                    ) : null}
-                  </td>
-                  <td className="px-4 py-3 text-sm text-gray-600">
-                    <div>{pos.updated_on_hub}</div>
-                    {timeOnMarket(pos) && (
-                      <div className="text-xs text-gray-400">{timeOnMarket(pos)} listed</div>
-                    )}
-                  </td>
-                  <td className="px-4 py-3">
-                    {pos.vh_status ? (
-                      <StatusBadge status={pos.vh_status} />
-                    ) : (
-                      <StatusBadge status={pos.status === 'new' ? 'Receiving names' : pos.status} />
-                    )}
-                  </td>
-                </tr>
-                {expandedId === pos.id && (
-                  <tr key={`${pos.id}-detail`}>
-                    <td colSpan={10} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
-                      <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
+            {sorted.map((pos) => {
+              const church = getChurchName(pos);
+              const city = getCity(pos);
+              const state = getState(pos);
+              const locationPrimary = city && state ? `${city}, ${state}` : city || state || '';
+              const trend = getAsaTrend(pos);
+              const receivingStart = pos.receiving_names_from
+                ? pos.receiving_names_from.split(' to ')[0].split(' - ')[0]
+                : '';
+              return (
+                <Fragment key={pos.id}>
+                  <tr
+                    id={`position-row-${pos.id}`}
+                    onClick={() => toggleExpand(pos.id)}
+                    className={`cursor-pointer transition-colors ${
+                      expandedId === pos.id
+                        ? 'bg-primary-50 border-l-4 border-l-primary-500'
+                        : pos.visibility === 'extended_hidden'
+                          ? 'bg-gray-50/60 text-gray-400 hover:bg-gray-100'
+                          : 'hover:bg-gray-50'
+                    }`}
+                  >
+                    <td className="px-2 py-2 w-10" onClick={(e) => e.stopPropagation()}>
+                      <input
+                        type="checkbox"
+                        checked={comparedIds.has(pos.id)}
+                        disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
+                        onChange={() => toggleCompare(pos.id)}
+                        className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 disabled:opacity-40 disabled:cursor-not-allowed"
+                        title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Select to compare'}
+                      />
+                    </td>
+                    {/* Church */}
+                    <td className="px-3 py-2 text-sm max-w-xs">
+                      <div className={`font-medium truncate ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
+                        {church.text}
+                      </div>
+                      <div className="text-xs text-gray-400 truncate">{pos.position_type || '\u00A0'}</div>
+                    </td>
+                    {/* Location */}
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      <div className="truncate">{locationPrimary || '\u00A0'}</div>
+                      <div className="text-xs text-gray-400 truncate">{pos.diocese || '\u00A0'}</div>
+                    </td>
+                    {/* Dates */}
+                    <td className="px-3 py-2 text-sm text-gray-600">
+                      {receivingStart ? (
+                        <>
+                          <div>{receivingStart}</div>
+                          <div className="text-xs text-gray-400">
+                            {pos.updated_on_hub ? `Updated ${pos.updated_on_hub}` : '\u00A0'}
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="italic text-gray-400">{pos.vh_status || '\u00A0'}</div>
+                          <div className="text-xs text-gray-400">
+                            {pos.updated_on_hub ? `Updated ${pos.updated_on_hub}` : '\u00A0'}
+                          </div>
+                        </>
+                      )}
+                    </td>
+                    {/* Status (quality badge) */}
+                    <td className="px-3 py-2">
+                      <QualityBadge pos={pos} />
+                    </td>
+                    {/* Trend */}
+                    <td className="px-2 py-2 text-center w-12">
+                      <TrendArrow trend={trend} />
                     </td>
                   </tr>
-                )}
-              </Fragment>
-            ))}
+                  {expandedId === pos.id && (
+                    <tr key={`${pos.id}-detail`}>
+                      <td colSpan={7} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
+                        <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -474,23 +423,6 @@ export default function PositionTable({ positions }: PositionTableProps) {
   );
 }
 
-function computeMetricTrend(
-  years: Record<string, { averageAttendance: number | null; plateAndPledge: number | null; membership: number | null }>,
-  metric: 'averageAttendance' | 'plateAndPledge' | 'membership',
-): { direction: 'up' | 'down' | 'flat'; pct: number } | null {
-  const sorted = Object.keys(years).sort();
-  const recent = sorted.slice(-5);
-  const values = recent
-    .map(y => years[y][metric])
-    .filter((v): v is number => v !== null && v > 0);
-  if (values.length < 2) return null;
-  const first = values[0];
-  const last = values[values.length - 1];
-  const pct = Math.round(((last - first) / first) * 100);
-  const direction = pct > 10 ? 'up' : pct < -10 ? 'down' : 'flat';
-  return { direction, pct };
-}
-
 function trendLabel(pct: number): string {
   const abs = Math.abs(pct);
   if (abs <= 10) return 'flat';
@@ -506,27 +438,38 @@ function trendWord(direction: 'up' | 'down' | 'flat'): string {
 function ParishSnapshot({ pos }: { pos: Position }) {
   if (!pos.parochial || Object.keys(pos.parochial.years).length === 0) return null;
 
-  const asa = computeMetricTrend(pos.parochial.years, 'averageAttendance');
-  const giving = computeMetricTrend(pos.parochial.years, 'plateAndPledge');
-  const membership = computeMetricTrend(pos.parochial.years, 'membership');
+  const asa = computeParochialTrend(pos.parochial.years, 'averageAttendance');
+  const giving = computeParochialTrend(pos.parochial.years, 'plateAndPledge');
+  const membership = computeParochialTrend(pos.parochial.years, 'membership');
 
   if (!asa && !giving && !membership) return null;
 
-  // Determine overall assessment
-  const directions = [asa?.direction, giving?.direction, membership?.direction].filter(Boolean);
-  const upCount = directions.filter(d => d === 'up').length;
-  const downCount = directions.filter(d => d === 'down').length;
+  // Determine overall assessment using weighted scoring.
+  // ASA and membership are weighted more heavily than giving since
+  // financial trends can be misleading (inflation, one-time gifts).
+  let score = 0;
+  const weights = { averageAttendance: 2, membership: 2, plateAndPledge: 1 };
+  const metrics = [
+    { trend: asa, weight: weights.averageAttendance },
+    { trend: membership, weight: weights.membership },
+    { trend: giving, weight: weights.plateAndPledge },
+  ];
+  for (const { trend, weight } of metrics) {
+    if (!trend) continue;
+    if (trend.direction === 'up') score += weight;
+    else if (trend.direction === 'down') score -= weight;
+  }
 
   let overallLabel: string;
   let overallColor: string;
-  if (upCount > downCount) {
+  if (score > 0) {
     overallLabel = 'Growing parish';
     overallColor = 'text-green-700 bg-green-50 border-green-200';
-  } else if (downCount > upCount) {
+  } else if (score < 0) {
     overallLabel = 'Declining';
     overallColor = 'text-red-700 bg-red-50 border-red-200';
   } else {
-    overallLabel = 'Stable parish';
+    overallLabel = 'Mixed trends';
     overallColor = 'text-amber-700 bg-amber-50 border-amber-200';
   }
 
@@ -695,6 +638,7 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
         <ParishSnapshot pos={pos} />
         <DioceseContext pos={pos} />
         <CommunityContext pos={pos} />
+        <QualityScoreDetail pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <DetailField label="Organization Type" value={pos.organization_type} />
           <DetailField label="Full/Part Time" value={pos.full_part_time} />
@@ -724,6 +668,7 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
       <ParishSnapshot pos={pos} />
       <DioceseContext pos={pos} />
       <CommunityContext pos={pos} />
+      <QualityScoreDetail pos={pos} />
 
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">

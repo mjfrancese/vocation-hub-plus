@@ -13,8 +13,13 @@ export interface Position {
   status: string;
   details_url: string;
 
-  // Visibility: 'public' = in VH search results, 'extended' = only via direct URL
-  visibility?: 'public' | 'extended';
+  // Visibility: 'public' = in VH search results, 'extended' = directory listing,
+  // 'extended_hidden' = directory listing below quality threshold
+  visibility?: 'public' | 'extended' | 'extended_hidden';
+  // Quality score (0-100) computed at build time
+  quality_score?: number;
+  // Scoring components that contributed to the quality score
+  quality_components?: string[];
   // VH's own status field (e.g. "Receiving names", "Search complete")
   vh_status?: string;
   // Match confidence from position-church mapping
@@ -144,13 +149,8 @@ export interface Meta {
 
 export type SortField =
   | 'name'
-  | 'city'
   | 'diocese'
-  | 'state'
-  | 'position_type'
   | 'receiving_names_from'
-  | 'updated_on_hub'
-  | 'first_seen'
-  | 'estimated_total_comp';
+  | 'quality_score';
 
 export type SortDirection = 'asc' | 'desc';

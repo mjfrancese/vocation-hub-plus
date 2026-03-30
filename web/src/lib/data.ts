@@ -94,7 +94,9 @@ export function getPositions(): Position[] {
       vh_id: vhId ?? pos.vh_id,
       city: pos.city || extractCity(pos.name),
       state: pos.state || (pos.church_info as Position['church_info'])?.state || getStateForDiocese(pos.diocese || ''),
-      visibility: 'public' as const,
+      visibility: pos.visibility || 'public',
+      quality_score: pos.quality_score,
+      quality_components: pos.quality_components,
       vh_status: vhStatus,
       deep_scrape_fields: pos.deep_scrape_fields || (vhId ? profileFields[String(vhId)] : undefined),
       is_new: computeIsNew(pos),
@@ -120,6 +122,7 @@ export function getPositions(): Position[] {
       const receivingTo = (e.receiving_names_to as string) || '';
       const vhStatus = (e.vh_status as string) || '';
 
+      const visibility = (e.visibility as string) || 'extended';
       extendedPositions.push({
         id: `vh_${vhId}`,
         name: (e.name as string) || `Position in ${diocese}`,
@@ -134,7 +137,9 @@ export function getPositions(): Position[] {
         last_seen: '',
         status: vhStatus || 'active',
         details_url: '',
-        visibility: 'extended',
+        visibility: visibility as Position['visibility'],
+        quality_score: (e.quality_score as number) || undefined,
+        quality_components: (e.quality_components as string[]) || undefined,
         vh_status: vhStatus,
         vh_id: vhId,
         profile_url: (e.profile_url as string) || '',

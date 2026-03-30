@@ -212,11 +212,20 @@ export default function HomePage() {
   }
 
   const [showNewOnly, setShowNewOnly] = useState(false);
+  const [showHiddenListings, setShowHiddenListings] = useState(false);
   const [viewMode, setViewMode] = useState<'table' | 'map'>('table');
 
   const displayedPositions = useMemo(() => {
-    if (showNewOnly) return filtered.filter(p => p.is_new);
-    return filtered;
+    let results = filtered;
+    if (showNewOnly) results = results.filter(p => p.is_new);
+    if (!showHiddenListings) results = results.filter(p => p.visibility !== 'extended_hidden');
+    return results;
+  }, [filtered, showNewOnly, showHiddenListings]);
+
+  const hiddenCount = useMemo(() => {
+    let results = filtered;
+    if (showNewOnly) results = results.filter(p => p.is_new);
+    return results.filter(p => p.visibility === 'extended_hidden').length;
   }, [filtered, showNewOnly]);
 
   return (
@@ -252,6 +261,32 @@ export default function HomePage() {
           <ExportButton positions={displayedPositions} />
         </div>
       </div>
+
+      {/* About this data */}
+      <details className="text-sm text-gray-600">
+        <summary className="cursor-pointer text-gray-500 hover:text-gray-700 inline-flex items-center gap-1">
+          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-xs font-medium">i</span>
+          About this data
+        </summary>
+        <div className="mt-2 space-y-2 pl-5 border-l-2 border-gray-200 text-gray-600">
+          <p>
+            <strong>Active Listings</strong> appear in the Episcopal Vocation Hub&#39;s current search results
+            and are confirmed to be accepting applications.
+          </p>
+          <p>
+            <strong>Directory Listings</strong> are positions found in the Vocation Hub&#39;s profile directory
+            that are not currently in active search results. They may be in development, recently closed, or
+            awaiting updates. We include them when they have enough information to be useful. Each directory
+            listing shows a quality score (0-100) based on how complete and current the listing data is.
+          </p>
+          <p>
+            All listings are enriched with data from the Episcopal Asset Map (church directory) and General
+            Convention Parochial Reports (attendance, giving, and membership trends) where a match could be
+            identified. This enrichment data is provided for context and may not reflect the current state
+            of the parish.
+          </p>
+        </div>
+      </details>
 
       {/* Quick filter chips */}
       <div className="flex flex-wrap gap-2">
@@ -315,7 +350,34 @@ export default function HomePage() {
       />
 
       {viewMode === 'table' ? (
-        <PositionTable positions={displayedPositions} />
+        <>
+          <PositionTable positions={displayedPositions} />
+          {hiddenCount > 0 && (
+            <div className="text-sm text-gray-500 mt-3 text-center">
+              {showHiddenListings ? (
+                <>
+                  Showing all {displayedPositions.length} results, including {hiddenCount} below the quality threshold.{' '}
+                  <button
+                    onClick={() => setShowHiddenListings(false)}
+                    className="text-primary-600 hover:text-primary-800 underline"
+                  >
+                    Hide low-quality listings
+                  </button>
+                </>
+              ) : (
+                <>
+                  Showing {displayedPositions.length} results. {hiddenCount} additional listings did not meet the quality threshold.{' '}
+                  <button
+                    onClick={() => setShowHiddenListings(true)}
+                    className="text-primary-600 hover:text-primary-800 underline"
+                  >
+                    Include all listings
+                  </button>
+                </>
+              )}
+            </div>
+          )}
+        </>
       ) : (
         <MapView positions={displayedPositions} />
       )}

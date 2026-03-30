@@ -182,7 +182,12 @@
     "census": {
       "median_household_income": 113837,
       "population": 49620
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "a01db93f5280e9242603b8daccffd3124b2c0babe022cb2b4bf8eb70af46602f",
@@ -306,7 +311,12 @@
     "census": {
       "median_household_income": 42453,
       "population": 16545
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
@@ -491,7 +501,12 @@
     "census": {
       "median_household_income": 66762,
       "population": 35563
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
@@ -676,7 +691,12 @@
     "census": {
       "median_household_income": 138838,
       "population": 29251
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
@@ -862,7 +882,12 @@
     "census": {
       "median_household_income": 87091,
       "population": 4100
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
@@ -1048,7 +1073,12 @@
     "census": {
       "median_household_income": 94525,
       "population": 28048
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "27cee984957f11193c460249d87c6260aec7b92e71ab6e8348d0c16da2b0c56f",
@@ -1233,7 +1263,12 @@
     "census": {
       "median_household_income": 147734,
       "population": 26392
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
@@ -1419,7 +1454,12 @@
     "census": {
       "median_household_income": 206369,
       "population": 18523
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
@@ -1605,7 +1645,12 @@
     "census": {
       "median_household_income": 118527,
       "population": 5550
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
@@ -1790,7 +1835,12 @@
     "census": {
       "median_household_income": 91114,
       "population": 31741
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
@@ -1975,7 +2025,12 @@
     "census": {
       "median_household_income": 74853,
       "population": 59462
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
@@ -2125,7 +2180,12 @@
     "census": {
       "median_household_income": 75679,
       "population": 61439
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
@@ -2310,7 +2370,12 @@
     "census": {
       "median_household_income": 65421,
       "population": 19994
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
@@ -2495,7 +2560,12 @@
     "census": {
       "median_household_income": 55496,
       "population": 34314
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
@@ -2680,7 +2750,12 @@
     "census": {
       "median_household_income": 72279,
       "population": 26204
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
@@ -2866,7 +2941,12 @@
     "census": {
       "median_household_income": 50070,
       "population": 37213
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "9c2aa24afefd5ee185764545891790f3bde07e26fceb8cedbbf75c0f737b308e",
@@ -3040,7 +3120,12 @@
     "census": {
       "median_household_income": 148049,
       "population": 10659
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "7a439067c0ecddca3379266775c3c236ae1d1c53ec513b68470b03cfcd8c5c73",
@@ -3089,7 +3174,12 @@
     "comp_breakdown": {
       "stipend": 37501,
       "housing": 20000
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
@@ -3269,7 +3359,12 @@
     "census": {
       "median_household_income": 44911,
       "population": 5457
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "1e419306d36f52d1bd663c3f0d4ad78b74fa7d82cbd9eed9a10bbb07a900ff11",
@@ -3454,7 +3549,12 @@
     "census": {
       "median_household_income": 74081,
       "population": 46599
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
@@ -3640,7 +3740,12 @@
     "census": {
       "median_household_income": 56237,
       "population": 27600
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "b1980125a8b54642d5d27c8f35f8f35830ad1fe3af9d2ec4abde6e37e3e5795c",
@@ -3826,7 +3931,12 @@
     "census": {
       "median_household_income": 43316,
       "population": 33829
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
@@ -4011,7 +4121,12 @@
     "census": {
       "median_household_income": 47661,
       "population": 6133
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "011ccf42e33ebaebb3935010301539bea318acdadca45a6198bb5b3c1a737cd2",
@@ -4174,7 +4289,12 @@
     "census": {
       "median_household_income": 66487,
       "population": 78831
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "90bb851c38377858cd84a3f81a7d244d15828fee6a8808ae3043109cbb1330c1",
@@ -4359,7 +4479,12 @@
     "census": {
       "median_household_income": 116220,
       "population": 38475
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
@@ -4544,7 +4669,12 @@
     "census": {
       "median_household_income": 116593,
       "population": 78666
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
@@ -4729,7 +4859,12 @@
     "census": {
       "median_household_income": 78429,
       "population": 23377
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "2762cbb2f87edf45c2137612383774e04351f8d1fb754641dfbfe561782cd23d",
@@ -4914,7 +5049,12 @@
     "census": {
       "median_household_income": 78636,
       "population": 16252
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "78fdaa5dcd1536d6b5c236d1a8d044c6d0ff96d6bd277eee1d437b9c33a79120",
@@ -5099,7 +5239,12 @@
     "census": {
       "median_household_income": 65091,
       "population": 609
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "34e7666e5e31915335213b5b0e407c257c873847b99b1c6659081768cabcaab5",
@@ -5284,7 +5429,12 @@
     "census": {
       "median_household_income": 88599,
       "population": 22815
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "8a32ca68e73d4a2cbdc9ed70d506fb7d0679c984c6b88d4f6e940db2c1afffab",
@@ -5386,7 +5536,12 @@
     "census": {
       "median_household_income": 79088,
       "population": 44039
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "2aaff22ec6c77b87d61cb8d5ab687aac2219c75d68980a4691594376d499ffac",
@@ -5571,7 +5726,12 @@
     "census": {
       "median_household_income": 173761,
       "population": 22585
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "2a44f02d4725bde4b9c1a0381701c314fc2f6ad3abcb2b9d937acdd1ce8fed01",
@@ -5745,7 +5905,12 @@
     "census": {
       "median_household_income": 43092,
       "population": 21253
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
@@ -5930,7 +6095,12 @@
     "census": {
       "median_household_income": 64185,
       "population": 3344
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "e9eac5409744c83279977486c59a7c1f48c89d20c5159ab6860c9292ff45ef09",
@@ -6116,7 +6286,12 @@
     "census": {
       "median_household_income": 34808,
       "population": 9707
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "7cc134144c846094b4dfab81ebd0bd6db2567024fa2dd71e76081f78ca0a5a38",
@@ -6302,7 +6477,12 @@
     "census": {
       "median_household_income": 71202,
       "population": 15932
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   },
   {
     "id": "d14159ebcf7a2900adbd9666d296eeaee3209ae8c93f57a98b3954c632071520",
@@ -6487,6 +6667,11 @@
     "census": {
       "median_household_income": 131667,
       "population": 2061
-    }
+    },
+    "quality_score": 100,
+    "quality_components": [
+      "Public listing (100)"
+    ],
+    "visibility": "public"
   }
 ]

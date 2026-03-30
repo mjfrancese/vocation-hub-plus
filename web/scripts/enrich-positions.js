@@ -400,6 +400,108 @@ function attachCensusData(positions) {
   console.log(`Census data: ${count} positions`);
 }
 
+/**
+ * Compute quality_score (0-100) and quality_components for each position.
+ * Public listings always get score 100. Extended listings are scored per rubric.
+ * Also sets visibility: 'public', 'extended', or 'extended_hidden'.
+ */
+function computeQualityScores(positions, isPublic) {
+  const now = new Date();
+  const oneYearAgo = new Date(now);
+  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+  const threeMonthsAgo = new Date(now);
+  threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+
+  const ACTIVE_STATUSES = ['Receiving names', 'Reopened', 'Seeking interim'];
+  const IN_PROGRESS_STATUSES = ['Developing profile', 'Beginning search', 'Profile complete'];
+
+  for (const pos of positions) {
+    if (isPublic) {
+      pos.quality_score = 100;
+      pos.quality_components = ['Public listing (100)'];
+      pos.visibility = 'public';
+      continue;
+    }
+
+    let score = 0;
+    const components = [];
+    const status = pos.vh_status || '';
+
+    // Listing legitimacy (60 points max)
+    if (ACTIVE_STATUSES.includes(status)) {
+      score += 25;
+      components.push('Active status (25)');
+    } else if (IN_PROGRESS_STATUSES.includes(status)) {
+      score += 15;
+      components.push('In-progress status (15)');
+    }
+
+    const fromDate = parseMMDDYYYY(pos.receiving_names_from);
+    if (fromDate && fromDate >= oneYearAgo) {
+      score += 15;
+      components.push('Recent date (15)');
+      if (fromDate >= threeMonthsAgo) {
+        score += 5;
+        components.push('Very recent date (5)');
+      }
+    }
+
+    const name = pos.name || '';
+    if (name && !name.startsWith('Position in') && name !== 'Unknown Position') {
+      score += 10;
+      components.push('Congregation identified (10)');
+    }
+
+    const posName = pos.congregation || pos.position_title || '';
+    if (posName && !posName.startsWith('Position in')) {
+      score += 5;
+      components.push('Position named (5)');
+    }
+
+    // Data richness (40 points max)
+    if (pos.church_info) {
+      score += 10;
+      components.push('Church matched (10)');
+    }
+
+    if (pos.parochial && Object.keys(pos.parochial.years || {}).length > 0) {
+      score += 10;
+      components.push('Parochial data (10)');
+    }
+
+    if (pos.position_type) {
+      score += 5;
+      components.push('Position type (5)');
+    }
+
+    if (pos.state) {
+      score += 5;
+      components.push('State known (5)');
+    }
+
+    if (pos.match_confidence === 'exact') {
+      score += 5;
+      components.push('Exact match (5)');
+    }
+
+    const toDate = pos.receiving_names_to || '';
+    if (toDate && toDate !== 'Open ended') {
+      score += 5;
+      components.push('End date set (5)');
+    }
+
+    pos.quality_score = Math.min(score, 100);
+    pos.quality_components = components;
+    pos.visibility = score >= 50 ? 'extended' : 'extended_hidden';
+  }
+
+  const avg = positions.length > 0
+    ? Math.round(positions.reduce((s, p) => s + (p.quality_score || 0), 0) / positions.length)
+    : 0;
+  const hidden = positions.filter(p => p.visibility === 'extended_hidden').length;
+  console.log(`Quality scores: avg ${avg}, ${hidden} hidden (< 50)`);
+}
+
 // --- Main ---
 
 function main() {
@@ -552,6 +654,7 @@ function main() {
   computeEstimatedTotalComp(positions, profileFields);
   computeSimilarPositions(positions);
   attachCensusData(positions);
+  computeQualityScores(positions, true);
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'enriched-positions.json'),
@@ -727,6 +830,7 @@ function main() {
     computeEstimatedTotalComp(extended, profileFields);
     computeSimilarPositions(extended);
     attachCensusData(extended);
+    computeQualityScores(extended, false);
 
     // Strip temporary fields not needed by the frontend
     for (const pos of extended) {
