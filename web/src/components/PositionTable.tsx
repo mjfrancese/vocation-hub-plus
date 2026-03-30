@@ -11,13 +11,30 @@ interface PositionTableProps {
 }
 
 const COLUMNS: Array<{ key: SortField; label: string }> = [
-  { key: 'name', label: 'Name' },
-  { key: 'diocese', label: 'Diocese' },
+  { key: 'name', label: 'Church' },
+  { key: 'city', label: 'City' },
   { key: 'state', label: 'State' },
+  { key: 'diocese', label: 'Diocese' },
   { key: 'position_type', label: 'Position' },
   { key: 'receiving_names_from', label: 'Receiving Names' },
   { key: 'updated_on_hub', label: 'Updated' },
 ];
+
+/** Get the display name for a position: prefer church_info.name, fall back to pos.name */
+function getChurchName(pos: Position): { text: string; isEnriched: boolean } {
+  if (pos.church_info?.name) return { text: pos.church_info.name, isEnriched: true };
+  return { text: pos.name, isEnriched: false };
+}
+
+/** Get the city for a position: prefer church_info.city, fall back to pos.city */
+function getCity(pos: Position): string {
+  return pos.church_info?.city || pos.city || '';
+}
+
+/** Get the state for a position: prefer church_info.state, fall back to pos.state */
+function getState(pos: Position): string {
+  return pos.church_info?.state || pos.state || '';
+}
 
 export default function PositionTable({ positions }: PositionTableProps) {
   const [sortField, setSortField] = useState<SortField>('name');
@@ -25,8 +42,20 @@ export default function PositionTable({ positions }: PositionTableProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const sorted = [...positions].sort((a, b) => {
-    const aVal = a[sortField] || '';
-    const bVal = b[sortField] || '';
+    let aVal: string, bVal: string;
+    if (sortField === 'name') {
+      aVal = getChurchName(a).text;
+      bVal = getChurchName(b).text;
+    } else if (sortField === 'city') {
+      aVal = getCity(a);
+      bVal = getCity(b);
+    } else if (sortField === 'state') {
+      aVal = getState(a);
+      bVal = getState(b);
+    } else {
+      aVal = a[sortField] || '';
+      bVal = b[sortField] || '';
+    }
     // Date fields: parse various formats to compare chronologically
     if (sortField === 'receiving_names_from' || sortField === 'updated_on_hub') {
       const parseDate = (s: string) => {
@@ -155,8 +184,17 @@ export default function PositionTable({ positions }: PositionTableProps) {
             >
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0 flex-1">
-                  <p className="font-medium text-gray-900 text-sm leading-tight">{pos.name}</p>
-                  <p className="text-xs text-gray-500 mt-1">{pos.diocese} &middot; {pos.state}</p>
+                  {(() => {
+                    const church = getChurchName(pos);
+                    return (
+                      <p className={`font-medium text-sm leading-tight ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
+                        {church.text}
+                      </p>
+                    );
+                  })()}
+                  <p className="text-xs text-gray-500 mt-1">
+                    {getCity(pos) && <>{getCity(pos)} &middot; </>}{getState(pos)} &middot; {pos.diocese}
+                  </p>
                 </div>
                 {pos.vh_status ? (
                   <StatusBadge status={pos.vh_status} />
@@ -219,11 +257,19 @@ export default function PositionTable({ positions }: PositionTableProps) {
                       : 'hover:bg-gray-50'
                   }`}
                 >
-                  <td className="px-4 py-3 text-sm font-medium text-gray-900 max-w-xs truncate">
-                    {pos.name}
+                  <td className="px-4 py-3 text-sm font-medium max-w-xs truncate">
+                    {(() => {
+                      const church = getChurchName(pos);
+                      return (
+                        <span className={church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}>
+                          {church.text}
+                        </span>
+                      );
+                    })()}
                   </td>
+                  <td className="px-4 py-3 text-sm text-gray-600">{getCity(pos)}</td>
+                  <td className="px-4 py-3 text-sm text-gray-600">{getState(pos)}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">{pos.diocese}</td>
-                  <td className="px-4 py-3 text-sm text-gray-600">{pos.state}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">{pos.position_type}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">
                     {pos.receiving_names_from ? (
@@ -246,7 +292,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 </tr>
                 {expandedId === pos.id && (
                   <tr key={`${pos.id}-detail`}>
-                    <td colSpan={7} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
+                    <td colSpan={8} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
                       <ExpandedDetail pos={pos} />
                     </td>
                   </tr>
