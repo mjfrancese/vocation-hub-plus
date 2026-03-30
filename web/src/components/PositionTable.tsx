@@ -71,28 +71,51 @@ function timeOnMarket(pos: Position): string {
   return years === 1 ? '1 year' : `${years} years`;
 }
 
-/** Compute ASA trend direction from parochial data (most recent 5 years) */
-function getAsaTrend(pos: Position): 'up' | 'down' | 'flat' | null {
-  if (!pos.parochial) return null;
-  const years = Object.keys(pos.parochial.years).sort();
-  const recent = years.slice(-5);
-  const values = recent
-    .map(y => pos.parochial!.years[y].averageAttendance)
-    .filter((v): v is number => v !== null && v > 0);
-  if (values.length < 2) return null;
-  const first = values[0];
-  const last = values[values.length - 1];
-  const pctChange = (last - first) / first;
-  if (pctChange > 0.1) return 'up';
-  if (pctChange < -0.1) return 'down';
-  return 'flat';
+/**
+ * Compute trend for a parochial metric across all available years.
+ * Uses earliest and latest non-null values (matching ParochialTrends component).
+ * Threshold: >10% = up/down, otherwise flat.
+ */
+function computeParochialTrend(
+  years: Record<string, { averageAttendance: number | null; plateAndPledge: number | null; membership: number | null }>,
+  metric: 'averageAttendance' | 'plateAndPledge' | 'membership',
+): { direction: 'up' | 'down' | 'flat'; pct: number; earliest: number; latest: number; yearSpan: string } | null {
+  const sorted = Object.keys(years).sort();
+  let earliest: number | null = null;
+  let earliestYear = '';
+  let latest: number | null = null;
+  let latestYear = '';
+
+  for (const y of sorted) {
+    const v = years[y][metric];
+    if (v != null && v > 0) {
+      if (earliest === null) { earliest = v; earliestYear = y; }
+      latest = v;
+      latestYear = y;
+    }
+  }
+
+  if (earliest === null || latest === null || earliest === 0) return null;
+  if (earliestYear === latestYear) return null;
+
+  const pct = Math.round(((latest - earliest) / earliest) * 100);
+  const direction = pct > 10 ? 'up' as const : pct < -10 ? 'down' as const : 'flat' as const;
+  return { direction, pct, earliest, latest, yearSpan: `${earliestYear}-${latestYear}` };
 }
 
-function TrendArrow({ trend }: { trend: 'up' | 'down' | 'flat' | null }) {
+/** Get ASA trend info for a position */
+function getAsaTrend(pos: Position): { direction: 'up' | 'down' | 'flat'; pct: number; earliest: number; latest: number; yearSpan: string } | null {
+  if (!pos.parochial) return null;
+  return computeParochialTrend(pos.parochial.years, 'averageAttendance');
+}
+
+function TrendArrow({ trend }: { trend: ReturnType<typeof getAsaTrend> }) {
   if (!trend) return null;
-  if (trend === 'up') return <span className="text-green-600 text-xs font-medium" title="ASA trending up">{'\u25B2'}</span>;
-  if (trend === 'down') return <span className="text-red-500 text-xs font-medium" title="ASA trending down">{'\u25BC'}</span>;
-  return <span className="text-gray-400 text-xs" title="ASA flat">{'\u2014'}</span>;
+  const { direction, pct, earliest, latest, yearSpan } = trend;
+  const tooltip = `ASA: ${earliest} \u2192 ${latest} (${pct > 0 ? '+' : ''}${pct}%) over ${yearSpan}`;
+  if (direction === 'up') return <span className="text-green-600 text-xs font-medium cursor-help" title={tooltip}>{'\u25B2'}</span>;
+  if (direction === 'down') return <span className="text-red-500 text-xs font-medium cursor-help" title={tooltip}>{'\u25BC'}</span>;
+  return <span className="text-gray-400 text-xs cursor-help" title={tooltip}>{'\u2014'}</span>;
 }
 
 export default function PositionTable({ positions }: PositionTableProps) {
@@ -400,23 +423,6 @@ export default function PositionTable({ positions }: PositionTableProps) {
   );
 }
 
-function computeMetricTrend(
-  years: Record<string, { averageAttendance: number | null; plateAndPledge: number | null; membership: number | null }>,
-  metric: 'averageAttendance' | 'plateAndPledge' | 'membership',
-): { direction: 'up' | 'down' | 'flat'; pct: number } | null {
-  const sorted = Object.keys(years).sort();
-  const recent = sorted.slice(-5);
-  const values = recent
-    .map(y => years[y][metric])
-    .filter((v): v is number => v !== null && v > 0);
-  if (values.length < 2) return null;
-  const first = values[0];
-  const last = values[values.length - 1];
-  const pct = Math.round(((last - first) / first) * 100);
-  const direction = pct > 10 ? 'up' : pct < -10 ? 'down' : 'flat';
-  return { direction, pct };
-}
-
 function trendLabel(pct: number): string {
   const abs = Math.abs(pct);
   if (abs <= 10) return 'flat';
@@ -432,27 +438,38 @@ function trendWord(direction: 'up' | 'down' | 'flat'): string {
 function ParishSnapshot({ pos }: { pos: Position }) {
   if (!pos.parochial || Object.keys(pos.parochial.years).length === 0) return null;
 
-  const asa = computeMetricTrend(pos.parochial.years, 'averageAttendance');
-  const giving = computeMetricTrend(pos.parochial.years, 'plateAndPledge');
-  const membership = computeMetricTrend(pos.parochial.years, 'membership');
+  const asa = computeParochialTrend(pos.parochial.years, 'averageAttendance');
+  const giving = computeParochialTrend(pos.parochial.years, 'plateAndPledge');
+  const membership = computeParochialTrend(pos.parochial.years, 'membership');
 
   if (!asa && !giving && !membership) return null;
 
-  // Determine overall assessment
-  const directions = [asa?.direction, giving?.direction, membership?.direction].filter(Boolean);
-  const upCount = directions.filter(d => d === 'up').length;
-  const downCount = directions.filter(d => d === 'down').length;
+  // Determine overall assessment using weighted scoring.
+  // ASA and membership are weighted more heavily than giving since
+  // financial trends can be misleading (inflation, one-time gifts).
+  let score = 0;
+  const weights = { averageAttendance: 2, membership: 2, plateAndPledge: 1 };
+  const metrics = [
+    { trend: asa, weight: weights.averageAttendance },
+    { trend: membership, weight: weights.membership },
+    { trend: giving, weight: weights.plateAndPledge },
+  ];
+  for (const { trend, weight } of metrics) {
+    if (!trend) continue;
+    if (trend.direction === 'up') score += weight;
+    else if (trend.direction === 'down') score -= weight;
+  }
 
   let overallLabel: string;
   let overallColor: string;
-  if (upCount > downCount) {
+  if (score > 0) {
     overallLabel = 'Growing parish';
     overallColor = 'text-green-700 bg-green-50 border-green-200';
-  } else if (downCount > upCount) {
+  } else if (score < 0) {
     overallLabel = 'Declining';
     overallColor = 'text-red-700 bg-red-50 border-red-200';
   } else {
-    overallLabel = 'Stable parish';
+    overallLabel = 'Mixed trends';
     overallColor = 'text-amber-700 bg-amber-50 border-amber-200';
   }
 
