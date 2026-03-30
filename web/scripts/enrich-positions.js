@@ -305,6 +305,34 @@ function computeSimilarPositions(allPositions) {
   console.log(`Similar positions: ${count} positions with recommendations`);
 }
 
+/**
+ * Attach census demographic data to positions based on zip code.
+ * Reads census-data.json (produced by fetch-census-data.js) and attaches
+ * median_household_income and population to each position that has a zip.
+ */
+function attachCensusData(positions) {
+  const censusData = load('census-data.json');
+  if (!censusData || Object.keys(censusData).length === 0) {
+    console.log('Census data: 0 positions (no census-data.json)');
+    return;
+  }
+
+  let count = 0;
+  for (const pos of positions) {
+    const rawZip = (pos.church_info && pos.church_info.zip) || pos.postal_code || '';
+    const zip = rawZip.replace(/[^0-9]/g, '').substring(0, 5);
+    if (zip.length !== 5) continue;
+
+    const data = censusData[zip];
+    if (data) {
+      pos.census = data;
+      count++;
+    }
+  }
+
+  console.log(`Census data: ${count} positions`);
+}
+
 // --- Main ---
 
 function main() {
@@ -456,6 +484,7 @@ function main() {
   computeDiocesePercentiles(positions);
   computeEstimatedTotalComp(positions, profileFields);
   computeSimilarPositions(positions);
+  attachCensusData(positions);
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'enriched-positions.json'),
@@ -626,6 +655,7 @@ function main() {
     computeDiocesePercentiles(extended);
     computeEstimatedTotalComp(extended, profileFields);
     computeSimilarPositions(extended);
+    attachCensusData(extended);
 
     fs.writeFileSync(
       path.join(DATA_DIR, 'enriched-extended.json'),

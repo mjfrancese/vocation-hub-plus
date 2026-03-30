@@ -85,6 +85,12 @@ export interface Position {
     housing?: number;
   };
 
+  // Census/demographic data (attached at build time)
+  census?: {
+    median_household_income?: number;
+    population?: number;
+  };
+
   // Similar positions (computed at build time)
   similar_positions?: Array<{
     id: string;

@@ -143,7 +143,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 50036,
+      "population": 19165
+    }
   },
   {
     "vh_id": 10691,
@@ -289,7 +293,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 105876,
+      "population": 19938
+    }
   },
   {
     "vh_id": 10690,
@@ -435,7 +443,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 71442,
+      "population": 38459
+    }
   },
   {
     "vh_id": 10688,
@@ -581,7 +593,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 57274,
+      "population": 20339
+    }
   },
   {
     "vh_id": 10686,
@@ -727,7 +743,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 89336,
+      "population": 67299
+    }
   },
   {
     "vh_id": 10685,
@@ -873,7 +893,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59850,
+      "population": 23997
+    }
   },
   {
     "vh_id": 10684,
@@ -1045,7 +1069,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121536,
+      "population": 51966
+    }
   },
   {
     "vh_id": 10679,
@@ -1160,7 +1188,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 41563,
+      "population": 554
+    }
   },
   {
     "vh_id": 10677,
@@ -1306,7 +1338,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 78674,
+      "population": 13202
+    }
   },
   {
     "vh_id": 10664,
@@ -1465,7 +1501,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 152865,
+      "population": 10170
+    }
   },
   {
     "vh_id": 10655,
@@ -1611,7 +1651,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 99570,
+      "population": 18046
+    }
   },
   {
     "vh_id": 10653,
@@ -1757,7 +1801,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 99570,
+      "population": 18046
+    }
   },
   {
     "vh_id": 10650,
@@ -1903,7 +1951,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 144875,
+      "population": 487
+    }
   },
   {
     "vh_id": 10646,
@@ -2049,7 +2101,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 230545,
+      "population": 18473
+    }
   },
   {
     "vh_id": 10636,
@@ -2195,7 +2251,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 75625,
+      "population": 127
+    }
   },
   {
     "vh_id": 10635,
@@ -2341,7 +2401,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 75838,
+      "population": 5169
+    }
   },
   {
     "vh_id": 10634,
@@ -2487,7 +2551,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 10850,
+      "population": 960
+    }
   },
   {
     "vh_id": 10633,
@@ -2633,7 +2701,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 30739,
+      "population": 17964
+    }
   },
   {
     "vh_id": 10632,
@@ -2779,7 +2851,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 99081,
+      "population": 20558
+    }
   },
   {
     "vh_id": 10631,
@@ -2925,7 +3001,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 96250,
+      "population": 23425
+    }
   },
   {
     "vh_id": 10624,
@@ -3071,7 +3151,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 55127,
+      "population": 30941
+    }
   },
   {
     "vh_id": 10623,
@@ -3217,7 +3301,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 71584,
+      "population": 21650
+    }
   },
   {
     "vh_id": 10616,
@@ -3376,7 +3464,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 69417,
+      "population": 13565
+    }
   },
   {
     "vh_id": 10606,
@@ -3600,7 +3692,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51017,
+      "population": 10092
+    }
   },
   {
     "vh_id": 10585,
@@ -3746,7 +3842,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51624,
+      "population": 12882
+    }
   },
   {
     "vh_id": 10584,
@@ -3892,7 +3992,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 39281,
+      "population": 16851
+    }
   },
   {
     "vh_id": 10583,
@@ -4038,7 +4142,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 62035,
+      "population": 60377
+    }
   },
   {
     "vh_id": 10582,
@@ -4218,7 +4326,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 62505,
+      "population": 25850
+    }
   },
   {
     "vh_id": 10578,
@@ -4372,7 +4484,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51283,
+      "population": 13280
+    }
   },
   {
     "vh_id": 10576,
@@ -4513,7 +4629,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 31218,
+      "population": 1297
+    }
   },
   {
     "vh_id": 10575,
@@ -4659,7 +4779,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 131973,
+      "population": 52596
+    }
   },
   {
     "vh_id": 10574,
@@ -4839,7 +4963,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 64861,
+      "population": 10758
+    }
   },
   {
     "vh_id": 10566,
@@ -4998,7 +5126,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 79694,
+      "population": 15946
+    }
   },
   {
     "vh_id": 10564,
@@ -5183,7 +5315,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 78363,
+      "population": 58946
+    }
   },
   {
     "vh_id": 10560,
@@ -5342,7 +5478,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 100953,
+      "population": 30652
+    }
   },
   {
     "vh_id": 10555,
@@ -5488,7 +5628,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103813,
+      "population": 45072
+    }
   },
   {
     "vh_id": 10554,
@@ -5647,7 +5791,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 106930,
+      "population": 4734
+    }
   },
   {
     "vh_id": 10552,
@@ -5793,7 +5941,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 129775,
+      "population": 12932
+    }
   },
   {
     "vh_id": 10551,
@@ -5821,7 +5973,11 @@
       "lat": 38.90358,
       "lng": -77.06203
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 145048,
+      "population": 23797
+    }
   },
   {
     "vh_id": 10550,
@@ -5849,7 +6005,10 @@
       "lat": 38.36565,
       "lng": -76.78539
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "population": 775
+    }
   },
   {
     "vh_id": 10549,
@@ -5995,7 +6154,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103813,
+      "population": 45072
+    }
   },
   {
     "vh_id": 10548,
@@ -6154,7 +6317,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 169489,
+      "population": 32570
+    }
   },
   {
     "vh_id": 10546,
@@ -6300,7 +6467,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103813,
+      "population": 45072
+    }
   },
   {
     "vh_id": 10545,
@@ -6472,7 +6643,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 97327,
+      "population": 67127
+    }
   },
   {
     "vh_id": 10542,
@@ -6573,7 +6748,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 107130,
+      "population": 70043
+    }
   },
   {
     "vh_id": 10541,
@@ -6719,7 +6898,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 79446,
+      "population": 36583
+    }
   },
   {
     "vh_id": 10540,
@@ -6865,7 +7048,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 228311,
+      "population": 17390
+    }
   },
   {
     "vh_id": 10539,
@@ -7024,7 +7211,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 123134,
+      "population": 29545
+    }
   },
   {
     "vh_id": 10537,
@@ -7170,7 +7361,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 106560,
+      "population": 32254
+    }
   },
   {
     "vh_id": 10536,
@@ -7329,7 +7524,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 145048,
+      "population": 23797
+    }
   },
   {
     "vh_id": 10534,
@@ -7475,7 +7674,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 91563,
+      "population": 71560
+    }
   },
   {
     "vh_id": 10533,
@@ -7621,7 +7824,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 169489,
+      "population": 32570
+    }
   },
   {
     "vh_id": 10532,
@@ -7767,7 +7974,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 185873,
+      "population": 31080
+    }
   },
   {
     "vh_id": 10531,
@@ -7808,7 +8019,11 @@
       "lat": 38.88171,
       "lng": -76.99751
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 155054,
+      "population": 34585
+    }
   },
   {
     "vh_id": 10529,
@@ -7980,7 +8195,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76691,
+      "population": 44610
+    }
   },
   {
     "vh_id": 10524,
@@ -8126,7 +8345,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 52475,
+      "population": 25767
+    }
   },
   {
     "vh_id": 10522,
@@ -8272,7 +8495,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 68725,
+      "population": 1556
+    }
   },
   {
     "vh_id": 10471,
@@ -8418,7 +8645,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 77870,
+      "population": 34942
+    }
   },
   {
     "vh_id": 10462,
@@ -8577,7 +8808,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58669,
+      "population": 3664
+    }
   },
   {
     "vh_id": 10403,
@@ -8723,7 +8958,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 70647,
+      "population": 3993
+    }
   },
   {
     "vh_id": 10402,
@@ -8882,7 +9121,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103186,
+      "population": 21416
+    }
   },
   {
     "vh_id": 10400,
@@ -9132,7 +9375,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 74418,
+      "population": 16268
+    }
   },
   {
     "vh_id": 10389,
@@ -9330,7 +9577,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 60365,
+      "population": 2682
+    }
   },
   {
     "vh_id": 10351,
@@ -9441,7 +9692,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 64973,
+      "population": 35292
+    }
   },
   {
     "vh_id": 10347,
@@ -9626,7 +9881,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58224,
+      "population": 45161
+    }
   },
   {
     "vh_id": 10342,
@@ -9772,7 +10031,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 106916,
+      "population": 96988
+    }
   },
   {
     "vh_id": 10340,
@@ -9918,7 +10181,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 102687,
+      "population": 24285
+    }
   },
   {
     "vh_id": 10336,
@@ -10142,7 +10409,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84893,
+      "population": 20445
+    }
   },
   {
     "vh_id": 10325,
@@ -10288,7 +10559,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 130333,
+      "population": 16731
+    }
   },
   {
     "vh_id": 10324,
@@ -10447,7 +10722,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 48256,
+      "population": 48214
+    }
   },
   {
     "vh_id": 10321,
@@ -10488,7 +10767,11 @@
       "lat": 40.55017,
       "lng": -80.02495
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 104918,
+      "population": 44149
+    }
   },
   {
     "vh_id": 10319,
@@ -10647,7 +10930,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 157997,
+      "population": 20545
+    }
   },
   {
     "vh_id": 10315,
@@ -10793,7 +11080,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 63691,
+      "population": 37533
+    }
   },
   {
     "vh_id": 10314,
@@ -10939,7 +11230,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51494,
+      "population": 31094
+    }
   },
   {
     "vh_id": 10312,
@@ -11137,7 +11432,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 50348,
+      "population": 16313
+    }
   },
   {
     "vh_id": 10307,
@@ -11296,7 +11595,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 93643,
+      "population": 36277
+    }
   },
   {
     "vh_id": 10305,
@@ -11442,7 +11745,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 119732,
+      "population": 22124
+    }
   },
   {
     "vh_id": 10304,
@@ -11614,7 +11921,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 44095,
+      "population": 16741
+    }
   },
   {
     "vh_id": 10300,
@@ -11799,7 +12110,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 94048,
+      "population": 11313
+    }
   },
   {
     "vh_id": 10296,
@@ -11945,7 +12260,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 70580,
+      "population": 12993
+    }
   },
   {
     "vh_id": 10295,
@@ -12130,7 +12449,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 55596,
+      "population": 22430
+    }
   },
   {
     "vh_id": 10287,
@@ -12341,7 +12664,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84421,
+      "population": 11043
+    }
   },
   {
     "vh_id": 10281,
@@ -12369,7 +12696,11 @@
       "lat": 32.74771,
       "lng": -117.24467
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 101042,
+      "population": 29435
+    }
   },
   {
     "vh_id": 10279,
@@ -12528,7 +12859,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 43362,
+      "population": 76518
+    }
   },
   {
     "vh_id": 10274,
@@ -12674,7 +13009,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 222589,
+      "population": 17605
+    }
   },
   {
     "vh_id": 10273,
@@ -12820,7 +13159,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 161908,
+      "population": 9068
+    }
   },
   {
     "vh_id": 10272,
@@ -12848,7 +13191,11 @@
       "lat": 40.8994,
       "lng": -73.85622
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 75750,
+      "population": 15390
+    }
   },
   {
     "vh_id": 10271,
@@ -13007,7 +13354,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 75221,
+      "population": 2170
+    }
   },
   {
     "vh_id": 10269,
@@ -13153,7 +13504,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 26400,
+      "population": 41073
+    }
   },
   {
     "vh_id": 10268,
@@ -13299,7 +13654,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 122841,
+      "population": 4344
+    }
   },
   {
     "vh_id": 10267,
@@ -13445,7 +13804,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84764,
+      "population": 42211
+    }
   },
   {
     "vh_id": 10266,
@@ -13473,7 +13836,11 @@
       "lat": 41.825224,
       "lng": -73.619341
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 87083,
+      "population": 4521
+    }
   },
   {
     "vh_id": 10265,
@@ -13619,7 +13986,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121217,
+      "population": 20527
+    }
   },
   {
     "vh_id": 10264,
@@ -13765,7 +14136,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 87321,
+      "population": 3373
+    }
   },
   {
     "vh_id": 10263,
@@ -13911,7 +14286,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 105037,
+      "population": 9603
+    }
   },
   {
     "vh_id": 10262,
@@ -14057,7 +14436,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 111418,
+      "population": 22888
+    }
   },
   {
     "vh_id": 10261,
@@ -14085,7 +14468,11 @@
       "lat": 41.07495,
       "lng": -73.85915
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 107574,
+      "population": 23912
+    }
   },
   {
     "vh_id": 10260,
@@ -14231,7 +14618,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 67252,
+      "population": 70555
+    }
   },
   {
     "vh_id": 10259,
@@ -14377,7 +14768,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 119333,
+      "population": 15800
+    }
   },
   {
     "vh_id": 10258,
@@ -14523,7 +14918,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121556,
+      "population": 22595
+    }
   },
   {
     "vh_id": 10257,
@@ -14669,7 +15068,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 166994,
+      "population": 62774
+    }
   },
   {
     "vh_id": 10256,
@@ -14815,7 +15218,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 171111,
+      "population": 4975
+    }
   },
   {
     "vh_id": 10255,
@@ -14961,7 +15368,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 188732,
+      "population": 7407
+    }
   },
   {
     "vh_id": 10254,
@@ -15107,7 +15518,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 149432,
+      "population": 40642
+    }
   },
   {
     "vh_id": 10253,
@@ -15203,6 +15618,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 102212,
+      "population": 36816
     }
   },
   {
@@ -15349,7 +15768,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 250001,
+      "population": 12867
+    }
   },
   {
     "vh_id": 10250,
@@ -15495,7 +15918,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 83288,
+      "population": 14066
+    }
   },
   {
     "vh_id": 10249,
@@ -15641,7 +16068,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 90654,
+      "population": 15609
+    }
   },
   {
     "vh_id": 10248,
@@ -15787,7 +16218,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 86695,
+      "population": 25401
+    }
   },
   {
     "vh_id": 10247,
@@ -15933,7 +16368,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 65289,
+      "population": 35138
+    }
   },
   {
     "vh_id": 10246,
@@ -16079,7 +16518,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 152863,
+      "population": 53877
+    }
   },
   {
     "vh_id": 10245,
@@ -16162,6 +16605,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 137253,
+      "population": 56695
     }
   },
   {
@@ -16308,7 +16755,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 149432,
+      "population": 40642
+    }
   },
   {
     "vh_id": 10243,
@@ -16454,7 +16905,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103436,
+      "population": 94355
+    }
   },
   {
     "vh_id": 10242,
@@ -16600,7 +17055,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 114698,
+      "population": 14222
+    }
   },
   {
     "vh_id": 10241,
@@ -16746,7 +17205,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 86695,
+      "population": 25401
+    }
   },
   {
     "vh_id": 10240,
@@ -16892,7 +17355,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 67252,
+      "population": 70555
+    }
   },
   {
     "vh_id": 10239,
@@ -17038,7 +17505,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 96163,
+      "population": 9287
+    }
   },
   {
     "vh_id": 10238,
@@ -17184,7 +17655,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 230434,
+      "population": 18077
+    }
   },
   {
     "vh_id": 10237,
@@ -17330,7 +17805,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 228185,
+      "population": 10797
+    }
   },
   {
     "vh_id": 10236,
@@ -17476,7 +17955,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 208462,
+      "population": 608
+    }
   },
   {
     "vh_id": 10235,
@@ -17635,7 +18118,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 83884,
+      "population": 5208
+    }
   },
   {
     "vh_id": 10233,
@@ -17781,7 +18268,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 201534,
+      "population": 9613
+    }
   },
   {
     "vh_id": 10232,
@@ -17809,7 +18300,11 @@
       "lat": 32.74771,
       "lng": -117.24467
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 101042,
+      "population": 29435
+    }
   },
   {
     "vh_id": 10231,
@@ -17981,7 +18476,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 128587,
+      "population": 41837
+    }
   },
   {
     "vh_id": 10226,
@@ -18127,7 +18626,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 70388,
+      "population": 22538
+    }
   },
   {
     "vh_id": 10225,
@@ -18273,7 +18776,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 77868,
+      "population": 38849
+    }
   },
   {
     "vh_id": 10224,
@@ -18471,7 +18978,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 92602,
+      "population": 8855
+    }
   },
   {
     "vh_id": 10219,
@@ -18617,7 +19128,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59963,
+      "population": 45290
+    }
   },
   {
     "vh_id": 10217,
@@ -18776,7 +19291,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 45256,
+      "population": 27279
+    }
   },
   {
     "vh_id": 10215,
@@ -18948,7 +19467,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 35069,
+      "population": 20031
+    }
   },
   {
     "vh_id": 10212,
@@ -19094,7 +19617,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 35069,
+      "population": 20031
+    }
   },
   {
     "vh_id": 10211,
@@ -19344,7 +19871,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46627,
+      "population": 17784
+    }
   },
   {
     "vh_id": 10202,
@@ -19516,7 +20047,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 53915,
+      "population": 11698
+    }
   },
   {
     "vh_id": 10199,
@@ -19688,7 +20223,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 69137,
+      "population": 20269
+    }
   },
   {
     "vh_id": 10196,
@@ -19847,7 +20386,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 110639,
+      "population": 18306
+    }
   },
   {
     "vh_id": 10194,
@@ -20071,7 +20614,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 155714,
+      "population": 9057
+    }
   },
   {
     "vh_id": 10178,
@@ -20217,7 +20764,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 115161,
+      "population": 17069
+    }
   },
   {
     "vh_id": 10177,
@@ -20415,7 +20966,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 40000,
+      "population": 310
+    }
   },
   {
     "vh_id": 10165,
@@ -20561,7 +21116,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59445,
+      "population": 51931
+    }
   },
   {
     "vh_id": 10164,
@@ -20589,7 +21148,11 @@
       "lat": 32.74771,
       "lng": -117.24467
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 101042,
+      "population": 29435
+    }
   },
   {
     "vh_id": 10163,
@@ -20617,7 +21180,11 @@
       "lat": 32.74771,
       "lng": -117.24467
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 101042,
+      "population": 29435
+    }
   },
   {
     "vh_id": 10160,
@@ -20713,6 +21280,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 84878,
+      "population": 28256
     }
   },
   {
@@ -20796,6 +21367,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 84878,
+      "population": 28256
     }
   },
   {
@@ -20892,6 +21467,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 84878,
+      "population": 28256
     }
   },
   {
@@ -20959,7 +21538,11 @@
       "lat": 41.71319,
       "lng": -86.21581
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 72664,
+      "population": 6532
+    }
   },
   {
     "vh_id": 10144,
@@ -21157,7 +21740,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 95981,
+      "population": 16081
+    }
   },
   {
     "vh_id": 10134,
@@ -21303,7 +21890,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 98576,
+      "population": 11260
+    }
   },
   {
     "vh_id": 10133,
@@ -21553,7 +22144,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 98586,
+      "population": 13573
+    }
   },
   {
     "vh_id": 10122,
@@ -21699,7 +22294,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 67521,
+      "population": 66422
+    }
   },
   {
     "vh_id": 10121,
@@ -21845,7 +22444,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58224,
+      "population": 45161
+    }
   },
   {
     "vh_id": 10120,
@@ -22017,7 +22620,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 94048,
+      "population": 11313
+    }
   },
   {
     "vh_id": 10117,
@@ -22176,7 +22783,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 104555,
+      "population": 40675
+    }
   },
   {
     "vh_id": 10115,
@@ -22335,7 +22946,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 101881,
+      "population": 26999
+    }
   },
   {
     "vh_id": 10113,
@@ -22481,7 +23096,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 102687,
+      "population": 24285
+    }
   },
   {
     "vh_id": 10112,
@@ -22627,7 +23246,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58224,
+      "population": 45161
+    }
   },
   {
     "vh_id": 10111,
@@ -22773,7 +23396,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 157997,
+      "population": 20545
+    }
   },
   {
     "vh_id": 10110,
@@ -23075,7 +23702,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58224,
+      "population": 45161
+    }
   },
   {
     "vh_id": 10092,
@@ -23234,7 +23865,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 102420,
+      "population": 43799
+    }
   },
   {
     "vh_id": 10090,
@@ -23393,7 +24028,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 147675,
+      "population": 17425
+    }
   },
   {
     "vh_id": 10088,
@@ -23486,7 +24125,11 @@
       "lat": 42.74338,
       "lng": -83.28419
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 128386,
+      "population": 12103
+    }
   },
   {
     "vh_id": 10081,
@@ -23632,7 +24275,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 157997,
+      "population": 20545
+    }
   },
   {
     "vh_id": 10080,
@@ -23778,7 +24425,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 151556,
+      "population": 21738
+    }
   },
   {
     "vh_id": 10079,
@@ -23950,7 +24601,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 86768,
+      "population": 23932
+    }
   },
   {
     "vh_id": 10068,
@@ -24096,7 +24751,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58224,
+      "population": 45161
+    }
   },
   {
     "vh_id": 10067,
@@ -24242,7 +24901,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76226,
+      "population": 26888
+    }
   },
   {
     "vh_id": 10066,
@@ -24401,7 +25064,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 25357,
+      "population": 3616
+    }
   },
   {
     "vh_id": 10063,
@@ -24560,7 +25227,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 169792,
+      "population": 14639
+    }
   },
   {
     "vh_id": 10048,
@@ -24719,7 +25390,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 147267,
+      "population": 29461
+    }
   },
   {
     "vh_id": 10046,
@@ -24786,7 +25461,11 @@
       "lat": 40.64337,
       "lng": -74.09286
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 84855,
+      "population": 40331
+    }
   },
   {
     "vh_id": 10042,
@@ -24932,7 +25611,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 145864,
+      "population": 54369
+    }
   },
   {
     "vh_id": 10041,
@@ -25078,7 +25761,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 152863,
+      "population": 53877
+    }
   },
   {
     "vh_id": 10040,
@@ -25237,7 +25924,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 208462,
+      "population": 608
+    }
   },
   {
     "vh_id": 10038,
@@ -25383,7 +26074,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 161236,
+      "population": 33586
+    }
   },
   {
     "vh_id": 10037,
@@ -25529,7 +26224,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 243514,
+      "population": 41107
+    }
   },
   {
     "vh_id": 10036,
@@ -25714,7 +26413,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 250001,
+      "population": 12867
+    }
   },
   {
     "vh_id": 10032,
@@ -25873,7 +26576,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 137253,
+      "population": 56695
+    }
   },
   {
     "vh_id": 10030,
@@ -26032,7 +26739,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 228185,
+      "population": 10797
+    }
   },
   {
     "vh_id": 10028,
@@ -26191,7 +26902,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 105523,
+      "population": 26239
+    }
   },
   {
     "vh_id": 10026,
@@ -26337,7 +27052,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 213674,
+      "population": 13283
+    }
   },
   {
     "vh_id": 10025,
@@ -26509,7 +27228,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 111418,
+      "population": 22888
+    }
   },
   {
     "vh_id": 10022,
@@ -26655,7 +27378,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 106916,
+      "population": 96988
+    }
   },
   {
     "vh_id": 10021,
@@ -26827,7 +27554,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 145934,
+      "population": 50772
+    }
   },
   {
     "vh_id": 10018,
@@ -26986,7 +27717,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 228185,
+      "population": 10797
+    }
   },
   {
     "vh_id": 10016,
@@ -27145,7 +27880,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 114698,
+      "population": 14222
+    }
   },
   {
     "vh_id": 10014,
@@ -27228,6 +27967,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 137253,
+      "population": 56695
     }
   },
   {
@@ -27374,7 +28117,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121217,
+      "population": 20527
+    }
   },
   {
     "vh_id": 10012,
@@ -27428,7 +28175,11 @@
       "lat": 25.83698,
       "lng": -80.19671
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 33629,
+      "population": 31807
+    }
   },
   {
     "vh_id": 10006,
@@ -27600,7 +28351,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 40052,
+      "population": 3984
+    }
   },
   {
     "vh_id": 10003,
@@ -27746,7 +28501,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 72189,
+      "population": 55336
+    }
   },
   {
     "vh_id": 10000,
@@ -27892,7 +28651,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76226,
+      "population": 26888
+    }
   },
   {
     "vh_id": 9998,
@@ -28038,7 +28801,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 154505,
+      "population": 25443
+    }
   },
   {
     "vh_id": 9997,
@@ -28184,7 +28951,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 91974,
+      "population": 4667
+    }
   },
   {
     "vh_id": 9996,
@@ -28330,7 +29101,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76636,
+      "population": 38898
+    }
   },
   {
     "vh_id": 9995,
@@ -28476,7 +29251,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 149614,
+      "population": 14902
+    }
   },
   {
     "vh_id": 9993,
@@ -28635,7 +29414,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 16651,
+      "population": 9626
+    }
   },
   {
     "vh_id": 9991,
@@ -28781,7 +29564,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 81656,
+      "population": 59932
+    }
   },
   {
     "vh_id": 9984,
@@ -28809,7 +29596,11 @@
       "lat": 32.74771,
       "lng": -117.24467
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 101042,
+      "population": 29435
+    }
   },
   {
     "vh_id": 9979,
@@ -29007,7 +29798,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 44977,
+      "population": 25899
+    }
   },
   {
     "vh_id": 9965,
@@ -29153,7 +29948,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58221,
+      "population": 58136
+    }
   },
   {
     "vh_id": 9964,
@@ -29312,7 +30111,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 68445,
+      "population": 38844
+    }
   },
   {
     "vh_id": 9962,
@@ -29353,7 +30156,11 @@
       "lat": 27.77317,
       "lng": -82.63896
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 65058,
+      "population": 17464
+    }
   },
   {
     "vh_id": 9960,
@@ -29512,7 +30319,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 163929,
+      "population": 10853
+    }
   },
   {
     "vh_id": 9958,
@@ -29723,7 +30534,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 111141,
+      "population": 12913
+    }
   },
   {
     "vh_id": 9945,
@@ -29882,7 +30697,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 100335,
+      "population": 36522
+    }
   },
   {
     "vh_id": 9942,
@@ -30028,7 +30847,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 163613,
+      "population": 14773
+    }
   },
   {
     "vh_id": 9941,
@@ -30174,7 +30997,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 64978,
+      "population": 29316
+    }
   },
   {
     "vh_id": 9940,
@@ -30320,7 +31147,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 96460,
+      "population": 14639
+    }
   },
   {
     "vh_id": 9939,
@@ -30466,7 +31297,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 60815,
+      "population": 17958
+    }
   },
   {
     "vh_id": 9938,
@@ -30612,7 +31447,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 72963,
+      "population": 45562
+    }
   },
   {
     "vh_id": 9937,
@@ -30721,6 +31560,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 47293,
+      "population": 35555
     }
   },
   {
@@ -30945,7 +31788,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 148735,
+      "population": 18075
+    }
   },
   {
     "vh_id": 9898,
@@ -31091,7 +31938,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 188429,
+      "population": 5819
+    }
   },
   {
     "vh_id": 9896,
@@ -31250,7 +32101,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103481,
+      "population": 20927
+    }
   },
   {
     "vh_id": 9894,
@@ -31396,7 +32251,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 105419,
+      "population": 48140
+    }
   },
   {
     "vh_id": 9892,
@@ -31568,7 +32427,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 148542,
+      "population": 17110
+    }
   },
   {
     "vh_id": 9889,
@@ -31766,7 +32629,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 115000,
+      "population": 12519
+    }
   },
   {
     "vh_id": 9883,
@@ -31925,7 +32792,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 88552,
+      "population": 31812
+    }
   },
   {
     "vh_id": 9880,
@@ -31966,7 +32837,11 @@
       "lat": 40.36695,
       "lng": -79.98108
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 70216,
+      "population": 29383
+    }
   },
   {
     "vh_id": 9844,
@@ -32125,7 +33000,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 54503,
+      "population": 39405
+    }
   },
   {
     "vh_id": 9823,
@@ -32271,7 +33150,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 135735,
+      "population": 1922
+    }
   },
   {
     "vh_id": 9822,
@@ -32417,7 +33300,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 91007,
+      "population": 42914
+    }
   },
   {
     "vh_id": 9821,
@@ -32628,7 +33515,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 75237,
+      "population": 8364
+    }
   },
   {
     "vh_id": 9814,
@@ -32839,7 +33730,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 64385,
+      "population": 17508
+    }
   },
   {
     "vh_id": 9808,
@@ -32998,7 +33893,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84512,
+      "population": 26001
+    }
   },
   {
     "vh_id": 9806,
@@ -33144,7 +34043,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 50372,
+      "population": 19064
+    }
   },
   {
     "vh_id": 9805,
@@ -33290,7 +34193,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 94983,
+      "population": 43687
+    }
   },
   {
     "vh_id": 9804,
@@ -33501,7 +34408,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84893,
+      "population": 20445
+    }
   },
   {
     "vh_id": 9798,
@@ -33647,7 +34558,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58722,
+      "population": 45900
+    }
   },
   {
     "vh_id": 9797,
@@ -33803,7 +34718,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 43337,
+      "population": 7328
+    }
   },
   {
     "vh_id": 9795,
@@ -33949,7 +34868,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 80985,
+      "population": 29182
+    }
   },
   {
     "vh_id": 9794,
@@ -34095,7 +35018,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 89389,
+      "population": 28656
+    }
   },
   {
     "vh_id": 9793,
@@ -34254,7 +35181,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 75013,
+      "population": 14941
+    }
   },
   {
     "vh_id": 9791,
@@ -34400,7 +35331,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 80439,
+      "population": 41382
+    }
   },
   {
     "vh_id": 9790,
@@ -34559,7 +35494,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 48256,
+      "population": 48214
+    }
   },
   {
     "vh_id": 9788,
@@ -34705,7 +35644,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 90266,
+      "population": 31810
+    }
   },
   {
     "vh_id": 9787,
@@ -34851,7 +35794,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 140687,
+      "population": 20930
+    }
   },
   {
     "vh_id": 9786,
@@ -35023,7 +35970,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 151833,
+      "population": 12173
+    }
   },
   {
     "vh_id": 9780,
@@ -35169,7 +36120,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 104350,
+      "population": 18476
+    }
   },
   {
     "vh_id": 9779,
@@ -35354,7 +36309,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 94496,
+      "population": 7575
+    }
   },
   {
     "vh_id": 9773,
@@ -35500,7 +36459,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 54194,
+      "population": 27926
+    }
   },
   {
     "vh_id": 9772,
@@ -35802,7 +36765,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 71768,
+      "population": 49906
+    }
   },
   {
     "vh_id": 9759,
@@ -36104,7 +37071,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46903,
+      "population": 24284
+    }
   },
   {
     "vh_id": 9738,
@@ -36289,7 +37260,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 85059,
+      "population": 50921
+    }
   },
   {
     "vh_id": 9729,
@@ -36474,7 +37449,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 45719,
+      "population": 48987
+    }
   },
   {
     "vh_id": 9725,
@@ -36646,7 +37625,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 42349,
+      "population": 30370
+    }
   },
   {
     "vh_id": 9706,
@@ -36805,7 +37788,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 78376,
+      "population": 12572
+    }
   },
   {
     "vh_id": 9703,
@@ -36964,7 +37951,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 61210,
+      "population": 49434
+    }
   },
   {
     "vh_id": 9700,
@@ -37110,7 +38101,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 106640,
+      "population": 22546
+    }
   },
   {
     "vh_id": 9699,
@@ -37256,7 +38251,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 95231,
+      "population": 13347
+    }
   },
   {
     "vh_id": 9698,
@@ -37402,7 +38401,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58059,
+      "population": 32615
+    }
   },
   {
     "vh_id": 9697,
@@ -37613,7 +38616,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 56659,
+      "population": 40848
+    }
   },
   {
     "vh_id": 9663,
@@ -37785,7 +38792,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 118320,
+      "population": 38006
+    }
   },
   {
     "vh_id": 9660,
@@ -37983,7 +38994,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 60655,
+      "population": 37375
+    }
   },
   {
     "vh_id": 9653,
@@ -38168,7 +39183,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 87241,
+      "population": 35824
+    }
   },
   {
     "vh_id": 9649,
@@ -38353,7 +39372,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 111683,
+      "population": 6420
+    }
   },
   {
     "vh_id": 9640,
@@ -38512,7 +39535,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 71641,
+      "population": 36557
+    }
   },
   {
     "vh_id": 9638,
@@ -38658,7 +39685,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 117932,
+      "population": 18379
+    }
   },
   {
     "vh_id": 9637,
@@ -38830,7 +39861,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 170144,
+      "population": 28683
+    }
   },
   {
     "vh_id": 9633,
@@ -38976,7 +40011,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 117124,
+      "population": 39856
+    }
   },
   {
     "vh_id": 9632,
@@ -39122,7 +40161,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 131648,
+      "population": 22286
+    }
   },
   {
     "vh_id": 9631,
@@ -39268,7 +40311,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 151833,
+      "population": 12173
+    }
   },
   {
     "vh_id": 9630,
@@ -39440,7 +40487,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 163613,
+      "population": 14773
+    }
   },
   {
     "vh_id": 9627,
@@ -39540,6 +40591,10 @@
     "diocese_percentiles": {
       "plate_pledge": 97,
       "plate_pledge_value": 726099
+    },
+    "census": {
+      "median_household_income": 183657,
+      "population": 18311
     }
   },
   {
@@ -39686,7 +40741,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 203690,
+      "population": 10765
+    }
   },
   {
     "vh_id": 9624,
@@ -39832,7 +40891,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 250001,
+      "population": 5886
+    }
   },
   {
     "vh_id": 9623,
@@ -39886,7 +40949,11 @@
       "lat": 42.32618,
       "lng": -71.2321
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 250001,
+      "population": 5589
+    }
   },
   {
     "vh_id": 9620,
@@ -40032,7 +41099,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 118877,
+      "population": 25150
+    }
   },
   {
     "vh_id": 9619,
@@ -40178,7 +41249,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76448,
+      "population": 9282
+    }
   },
   {
     "vh_id": 9618,
@@ -40350,7 +41425,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 114933,
+      "population": 41479
+    }
   },
   {
     "vh_id": 9615,
@@ -40378,7 +41457,11 @@
       "lat": 42.53671,
       "lng": -71.04539
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 157955,
+      "population": 13072
+    }
   },
   {
     "vh_id": 9614,
@@ -40524,7 +41607,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 136887,
+      "population": 13861
+    }
   },
   {
     "vh_id": 9613,
@@ -40670,7 +41757,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 170326,
+      "population": 24143
+    }
   },
   {
     "vh_id": 9612,
@@ -40842,7 +41933,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 98474,
+      "population": 41611
+    }
   },
   {
     "vh_id": 9609,
@@ -40896,7 +41991,11 @@
       "lat": 42.35322,
       "lng": -71.18361
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 133936,
+      "population": 12706
+    }
   },
   {
     "vh_id": 9606,
@@ -41042,7 +42141,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 162694,
+      "population": 35612
+    }
   },
   {
     "vh_id": 9604,
@@ -41070,7 +42173,11 @@
       "lat": 42.366494,
       "lng": -71.054518
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 106625,
+      "population": 6688
+    }
   },
   {
     "vh_id": 9603,
@@ -41216,7 +42323,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 132970,
+      "population": 22124
+    }
   },
   {
     "vh_id": 9602,
@@ -41362,7 +42473,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 230625,
+      "population": 11004
+    }
   },
   {
     "vh_id": 9601,
@@ -41521,7 +42636,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 171250,
+      "population": 21709
+    }
   },
   {
     "vh_id": 9599,
@@ -41680,7 +42799,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 56896,
+      "population": 18867
+    }
   },
   {
     "vh_id": 9597,
@@ -41708,7 +42831,11 @@
       "lat": 27.08001,
       "lng": -82.37954
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 80824,
+      "population": 16426
+    }
   },
   {
     "vh_id": 9596,
@@ -41854,7 +42981,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 66438,
+      "population": 18558
+    }
   },
   {
     "vh_id": 9595,
@@ -42065,7 +43196,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 127306,
+      "population": 18356
+    }
   },
   {
     "vh_id": 9589,
@@ -42211,7 +43346,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 110893,
+      "population": 9074
+    }
   },
   {
     "vh_id": 9588,
@@ -42370,7 +43509,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 99615,
+      "population": 11214
+    }
   },
   {
     "vh_id": 9586,
@@ -42516,7 +43659,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 66268,
+      "population": 19116
+    }
   },
   {
     "vh_id": 9585,
@@ -42688,7 +43835,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 80681,
+      "population": 28818
+    }
   },
   {
     "vh_id": 9582,
@@ -42834,7 +43985,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 47711,
+      "population": 34437
+    }
   },
   {
     "vh_id": 9581,
@@ -42980,7 +44135,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 90363,
+      "population": 20017
+    }
   },
   {
     "vh_id": 9580,
@@ -43139,7 +44298,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 170379,
+      "population": 4218
+    }
   },
   {
     "vh_id": 9578,
@@ -43285,7 +44448,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 47766,
+      "population": 18341
+    }
   },
   {
     "vh_id": 9577,
@@ -43326,7 +44493,11 @@
       "lat": 42.32631,
       "lng": -71.257825
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 136375,
+      "population": 1438
+    }
   },
   {
     "vh_id": 9575,
@@ -43354,7 +44525,11 @@
       "lat": 26.138682,
       "lng": -81.759974
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 67932,
+      "population": 24269
+    }
   },
   {
     "vh_id": 9573,
@@ -43500,7 +44675,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 111742,
+      "population": 10767
+    }
   },
   {
     "vh_id": 9572,
@@ -43698,7 +44877,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121006,
+      "population": 7602
+    }
   },
   {
     "vh_id": 9567,
@@ -43844,7 +45027,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 81024,
+      "population": 45781
+    }
   },
   {
     "vh_id": 9566,
@@ -43979,6 +45166,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 105263,
+      "population": 33017
     }
   },
   {
@@ -44177,7 +45368,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 66438,
+      "population": 18558
+    }
   },
   {
     "vh_id": 9556,
@@ -44323,7 +45518,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121006,
+      "population": 7602
+    }
   },
   {
     "vh_id": 9554,
@@ -44482,7 +45681,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 166994,
+      "population": 62774
+    }
   },
   {
     "vh_id": 9551,
@@ -44641,7 +45844,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 148505,
+      "population": 16041
+    }
   },
   {
     "vh_id": 9549,
@@ -44787,7 +45994,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 115048,
+      "population": 63873
+    }
   },
   {
     "vh_id": 9548,
@@ -44985,7 +46196,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 250001,
+      "population": 11759
+    }
   },
   {
     "vh_id": 9541,
@@ -45157,7 +46372,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 68445,
+      "population": 38844
+    }
   },
   {
     "vh_id": 9537,
@@ -45303,7 +46522,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 80681,
+      "population": 28818
+    }
   },
   {
     "vh_id": 9536,
@@ -45475,7 +46698,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46903,
+      "population": 24284
+    }
   },
   {
     "vh_id": 9533,
@@ -45751,7 +46978,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 29059,
+      "population": 22544
+    }
   },
   {
     "vh_id": 9418,
@@ -45910,7 +47141,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 92813,
+      "population": 18648
+    }
   },
   {
     "vh_id": 9416,
@@ -46056,7 +47291,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 34818,
+      "population": 18635
+    }
   },
   {
     "vh_id": 9415,
@@ -46228,7 +47467,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 50757,
+      "population": 39628
+    }
   },
   {
     "vh_id": 9408,
@@ -46400,7 +47643,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59684,
+      "population": 27044
+    }
   },
   {
     "vh_id": 9403,
@@ -46546,7 +47793,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 70975,
+      "population": 42135
+    }
   },
   {
     "vh_id": 9402,
@@ -46757,7 +48008,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 113525,
+      "population": 20212
+    }
   },
   {
     "vh_id": 9375,
@@ -46929,7 +48184,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 95869,
+      "population": 40026
+    }
   },
   {
     "vh_id": 9366,
@@ -47075,7 +48334,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 49785,
+      "population": 12335
+    }
   },
   {
     "vh_id": 9365,
@@ -47221,7 +48484,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 62500,
+      "population": 2384
+    }
   },
   {
     "vh_id": 9364,
@@ -47419,7 +48686,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 78546,
+      "population": 5366
+    }
   },
   {
     "vh_id": 9352,
@@ -47591,7 +48862,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 92684,
+      "population": 62373
+    }
   },
   {
     "vh_id": 9349,
@@ -47763,7 +49038,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 141089,
+      "population": 44444
+    }
   },
   {
     "vh_id": 9345,
@@ -47885,6 +49164,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 50234,
+      "population": 8626
     }
   },
   {
@@ -48057,7 +49340,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 103238,
+      "population": 57367
+    }
   },
   {
     "vh_id": 9338,
@@ -48203,7 +49490,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 140092,
+      "population": 53333
+    }
   },
   {
     "vh_id": 9337,
@@ -48375,7 +49666,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 142263,
+      "population": 66518
+    }
   },
   {
     "vh_id": 9334,
@@ -48547,7 +49842,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 159688,
+      "population": 12983
+    }
   },
   {
     "vh_id": 9330,
@@ -48732,7 +50031,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 104943,
+      "population": 28619
+    }
   },
   {
     "vh_id": 9324,
@@ -48904,7 +50207,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 65630,
+      "population": 27661
+    }
   },
   {
     "vh_id": 9316,
@@ -49128,7 +50435,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 92174,
+      "population": 15572
+    }
   },
   {
     "vh_id": 9301,
@@ -49300,7 +50611,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 71048,
+      "population": 42648
+    }
   },
   {
     "vh_id": 9296,
@@ -49446,7 +50761,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 47406,
+      "population": 20877
+    }
   },
   {
     "vh_id": 9295,
@@ -49696,7 +51015,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 237455,
+      "population": 31688
+    }
   },
   {
     "vh_id": 9268,
@@ -49907,7 +51230,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51595,
+      "population": 18686
+    }
   },
   {
     "vh_id": 9229,
@@ -50079,7 +51406,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 77115,
+      "population": 23113
+    }
   },
   {
     "vh_id": 9214,
@@ -50251,7 +51582,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 69153,
+      "population": 28037
+    }
   },
   {
     "vh_id": 9211,
@@ -50397,7 +51732,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 52783,
+      "population": 18465
+    }
   },
   {
     "vh_id": 9210,
@@ -50634,7 +51973,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59684,
+      "population": 27044
+    }
   },
   {
     "vh_id": 9202,
@@ -50897,7 +52240,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 171265,
+      "population": 49217
+    }
   },
   {
     "vh_id": 9165,
@@ -51056,7 +52403,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 222878,
+      "population": 61414
+    }
   },
   {
     "vh_id": 9162,
@@ -51280,7 +52631,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 54291,
+      "population": 31376
+    }
   },
   {
     "vh_id": 9154,
@@ -51491,7 +52846,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59578,
+      "population": 20688
+    }
   },
   {
     "vh_id": 9148,
@@ -51650,7 +53009,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 61558,
+      "population": 49722
+    }
   },
   {
     "vh_id": 9146,
@@ -51809,7 +53172,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46693,
+      "population": 22729
+    }
   },
   {
     "vh_id": 9143,
@@ -51955,7 +53322,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 83330,
+      "population": 22373
+    }
   },
   {
     "vh_id": 9142,
@@ -52114,7 +53485,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84735,
+      "population": 10544
+    }
   },
   {
     "vh_id": 9140,
@@ -52155,7 +53530,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9138,
@@ -52183,7 +53562,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9137,
@@ -52211,7 +53594,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9136,
@@ -52239,7 +53626,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9135,
@@ -52267,7 +53658,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9134,
@@ -52295,7 +53690,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9133,
@@ -52441,7 +53840,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76130,
+      "population": 29870
+    }
   },
   {
     "vh_id": 9132,
@@ -52469,7 +53872,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9131,
@@ -52497,7 +53904,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9130,
@@ -52525,7 +53936,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9129,
@@ -52553,7 +53968,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9128,
@@ -52607,7 +54026,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9125,
@@ -52779,7 +54202,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76130,
+      "population": 29870
+    }
   },
   {
     "vh_id": 9122,
@@ -52820,7 +54247,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9120,
@@ -52903,6 +54334,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 172285,
+      "population": 19180
     }
   },
   {
@@ -53062,7 +54497,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 215126,
+      "population": 11209
+    }
   },
   {
     "vh_id": 9117,
@@ -53090,7 +54529,11 @@
       "lat": 34.07326,
       "lng": -118.25938
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 80549,
+      "population": 64769
+    }
   },
   {
     "vh_id": 9116,
@@ -53236,7 +54679,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76130,
+      "population": 29870
+    }
   },
   {
     "vh_id": 9115,
@@ -53345,6 +54792,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 129030,
+      "population": 36420
     }
   },
   {
@@ -53428,6 +54879,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 129030,
+      "population": 36420
     }
   },
   {
@@ -53524,6 +54979,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 172285,
+      "population": 19180
     }
   },
   {
@@ -53607,6 +55066,10 @@
           "membership": null
         }
       }
+    },
+    "census": {
+      "median_household_income": 129030,
+      "population": 36420
     }
   },
   {
@@ -53753,7 +55216,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 71450,
+      "population": 40534
+    }
   },
   {
     "vh_id": 9106,
@@ -53912,7 +55379,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 45056,
+      "population": 21733
+    }
   },
   {
     "vh_id": 9103,
@@ -54071,7 +55542,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84735,
+      "population": 10544
+    }
   },
   {
     "vh_id": 9101,
@@ -54099,7 +55574,11 @@
       "lat": 37.90319,
       "lng": -87.0447
     },
-    "match_confidence": "high"
+    "match_confidence": "high",
+    "census": {
+      "median_household_income": 61534,
+      "population": 2274
+    }
   },
   {
     "vh_id": 9099,
@@ -54153,7 +55632,11 @@
       "lat": 39.2666,
       "lng": -86.24981
     },
-    "match_confidence": "exact"
+    "match_confidence": "exact",
+    "census": {
+      "median_household_income": 61356,
+      "population": 7747
+    }
   },
   {
     "vh_id": 9095,
@@ -54325,7 +55808,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 121496,
+      "population": 51250
+    }
   },
   {
     "vh_id": 9092,
@@ -54497,7 +55984,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 105057,
+      "population": 43112
+    }
   },
   {
     "vh_id": 9089,
@@ -54643,7 +56134,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84735,
+      "population": 10544
+    }
   },
   {
     "vh_id": 9088,
@@ -54802,7 +56297,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46693,
+      "population": 22729
+    }
   },
   {
     "vh_id": 9086,
@@ -54948,7 +56447,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46693,
+      "population": 22729
+    }
   },
   {
     "vh_id": 9085,
@@ -55159,7 +56662,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 83330,
+      "population": 22373
+    }
   },
   {
     "vh_id": 9079,
@@ -55305,7 +56812,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 84735,
+      "population": 10544
+    }
   },
   {
     "vh_id": 9078,
@@ -55490,7 +57001,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46693,
+      "population": 22729
+    }
   },
   {
     "vh_id": 9074,
@@ -55688,7 +57203,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 45056,
+      "population": 21733
+    }
   },
   {
     "vh_id": 9069,
@@ -55860,7 +57379,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 40527,
+      "population": 4497
+    }
   },
   {
     "vh_id": 9066,
@@ -56019,7 +57542,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 59578,
+      "population": 20688
+    }
   },
   {
     "vh_id": 9064,
@@ -56191,7 +57718,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46693,
+      "population": 22729
+    }
   },
   {
     "vh_id": 9061,
@@ -56363,7 +57894,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 36326,
+      "population": 41004
+    }
   },
   {
     "vh_id": 9053,
@@ -56522,7 +58057,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 65375,
+      "population": 49462
+    }
   },
   {
     "vh_id": 9050,
@@ -56707,7 +58246,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 63975,
+      "population": 13882
+    }
   },
   {
     "vh_id": 8962,
@@ -56848,7 +58391,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 99185,
+      "population": 30799
+    }
   },
   {
     "vh_id": 8961,
@@ -57007,7 +58554,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 122691,
+      "population": 38380
+    }
   },
   {
     "vh_id": 8959,
@@ -57166,7 +58717,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 49192,
+      "population": 23441
+    }
   },
   {
     "vh_id": 8951,
@@ -57403,7 +58958,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 58222,
+      "population": 2513
+    }
   },
   {
     "vh_id": 8922,
@@ -57588,7 +59147,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 83195,
+      "population": 13762
+    }
   },
   {
     "vh_id": 8915,
@@ -57838,7 +59401,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 64911,
+      "population": 65740
+    }
   },
   {
     "vh_id": 8895,
@@ -58023,7 +59590,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 85573,
+      "population": 38861
+    }
   },
   {
     "vh_id": 8888,
@@ -58169,7 +59740,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 61069,
+      "population": 41342
+    }
   },
   {
     "vh_id": 8887,
@@ -58315,7 +59890,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 250001,
+      "population": 19416
+    }
   },
   {
     "vh_id": 8886,
@@ -58500,7 +60079,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 74970,
+      "population": 7161
+    }
   },
   {
     "vh_id": 8863,
@@ -58659,7 +60242,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 46603,
+      "population": 18120
+    }
   },
   {
     "vh_id": 8853,
@@ -58831,7 +60418,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 60528,
+      "population": 3707
+    }
   },
   {
     "vh_id": 8849,
@@ -59003,7 +60594,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 199800,
+      "population": 27785
+    }
   },
   {
     "vh_id": 8838,
@@ -59201,7 +60796,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 68768,
+      "population": 12070
+    }
   },
   {
     "vh_id": 8832,
@@ -59347,7 +60946,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 101422,
+      "population": 34022
+    }
   },
   {
     "vh_id": 8824,
@@ -59558,7 +61161,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 211854,
+      "population": 24721
+    }
   },
   {
     "vh_id": 8802,
@@ -59730,7 +61337,11 @@
         "estimated_total_comp": null,
         "score": 4
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 220323,
+      "population": 31312
+    }
   },
   {
     "vh_id": 8791,
@@ -59967,7 +61578,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 116596,
+      "population": 63340
+    }
   },
   {
     "vh_id": 8755,
@@ -60113,7 +61728,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 199800,
+      "population": 27785
+    }
   },
   {
     "vh_id": 8754,
@@ -60337,7 +61956,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 211854,
+      "population": 24721
+    }
   },
   {
     "vh_id": 8735,
@@ -60548,7 +62171,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 68768,
+      "population": 12070
+    }
   },
   {
     "vh_id": 8711,
@@ -60707,7 +62334,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 69827,
+      "population": 29345
+    }
   },
   {
     "vh_id": 8664,
@@ -60866,7 +62497,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 41390,
+      "population": 51640
+    }
   },
   {
     "vh_id": 8660,
@@ -61012,7 +62647,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 109263,
+      "population": 24092
+    }
   },
   {
     "vh_id": 8659,
@@ -61158,7 +62797,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51636,
+      "population": 33472
+    }
   },
   {
     "vh_id": 8658,
@@ -61304,7 +62947,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 65197,
+      "population": 7782
+    }
   },
   {
     "vh_id": 8657,
@@ -61463,7 +63110,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 98173,
+      "population": 27112
+    }
   },
   {
     "vh_id": 8637,
@@ -61622,7 +63273,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 65197,
+      "population": 7782
+    }
   },
   {
     "vh_id": 8635,
@@ -61781,7 +63436,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51636,
+      "population": 33472
+    }
   },
   {
     "vh_id": 8608,
@@ -61927,7 +63586,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 35865,
+      "population": 4133
+    }
   },
   {
     "vh_id": 8607,
@@ -62086,7 +63749,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51186,
+      "population": 6089
+    }
   },
   {
     "vh_id": 8604,
@@ -62232,7 +63899,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 55778,
+      "population": 7719
+    }
   },
   {
     "vh_id": 8597,
@@ -62404,7 +64075,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 48588,
+      "population": 22725
+    }
   },
   {
     "vh_id": 8594,
@@ -62550,7 +64225,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 57728,
+      "population": 61759
+    }
   },
   {
     "vh_id": 8593,
@@ -62696,7 +64375,11 @@
         "estimated_total_comp": null,
         "score": 3
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 57843,
+      "population": 18583
+    }
   },
   {
     "vh_id": 8592,
@@ -62842,7 +64525,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 47665,
+      "population": 28615
+    }
   },
   {
     "vh_id": 8591,
@@ -63157,7 +64844,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 49169,
+      "population": 47780
+    }
   },
   {
     "vh_id": 8575,
@@ -63329,7 +65020,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 51863,
+      "population": 30023
+    }
   },
   {
     "vh_id": 8572,
@@ -63501,7 +65196,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 76739,
+      "population": 44822
+    }
   },
   {
     "vh_id": 8569,
@@ -63686,7 +65385,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 34870,
+      "population": 13550
+    }
   },
   {
     "vh_id": 8565,
@@ -63858,7 +65561,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 50084,
+      "population": 27857
+    }
   },
   {
     "vh_id": 8557,
@@ -64017,7 +65724,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 65483,
+      "population": 22500
+    }
   },
   {
     "vh_id": 8555,
@@ -64215,7 +65926,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 106439,
+      "population": 4244
+    }
   },
   {
     "vh_id": 8550,
@@ -64374,7 +66089,11 @@
         "estimated_total_comp": null,
         "score": 7
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 56810,
+      "population": 1379
+    }
   },
   {
     "vh_id": 8548,
@@ -64585,7 +66304,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 77813,
+      "population": 4197
+    }
   },
   {
     "vh_id": 8542,
@@ -64744,7 +66467,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 100829,
+      "population": 35708
+    }
   },
   {
     "vh_id": 8540,
@@ -64903,7 +66630,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 100829,
+      "population": 35708
+    }
   },
   {
     "vh_id": 8538,
@@ -65062,7 +66793,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 63551,
+      "population": 16769
+    }
   },
   {
     "vh_id": 8536,
@@ -65247,7 +66982,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 53371,
+      "population": 15233
+    }
   },
   {
     "vh_id": 8531,
@@ -65393,7 +67132,11 @@
         "estimated_total_comp": null,
         "score": 5
       }
-    ]
+    ],
+    "census": {
+      "median_household_income": 41078,
+      "population": 1489
+    }
   },
   {
     "vh_id": 8530,

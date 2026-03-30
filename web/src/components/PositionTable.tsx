@@ -588,6 +588,32 @@ function DioceseContext({ pos }: { pos: Position }) {
   );
 }
 
+function CommunityContext({ pos }: { pos: Position }) {
+  if (!pos.census) return null;
+  const { median_household_income, population } = pos.census;
+  if (median_household_income == null && population == null) return null;
+
+  // Compare stipend to area median household income when both are available
+  let contextNote = '';
+  if (median_household_income && pos.comp_breakdown?.stipend) {
+    const ratio = (pos.comp_breakdown.stipend / median_household_income).toFixed(1);
+    contextNote = `Stipend is ${ratio}x the area median household income`;
+  }
+
+  return (
+    <div className="border border-teal-200 rounded-lg p-3 bg-teal-50 text-sm text-teal-800">
+      <div className="font-medium text-teal-700 mb-1">Community Context</div>
+      {median_household_income != null && (
+        <div>Median household income: ${median_household_income.toLocaleString()}</div>
+      )}
+      {population != null && (
+        <div>Area population: {population.toLocaleString()}</div>
+      )}
+      {contextNote && <div className="mt-1 text-teal-600">{contextNote}</div>}
+    </div>
+  );
+}
+
 function SimilarPositions({ pos, onNavigate }: { pos: Position; onNavigate: (id: string) => void }) {
   if (!pos.similar_positions || pos.similar_positions.length === 0) return null;
 
@@ -668,6 +694,7 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
       <div className="space-y-4">
         <ParishSnapshot pos={pos} />
         <DioceseContext pos={pos} />
+        <CommunityContext pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
           <DetailField label="Organization Type" value={pos.organization_type} />
           <DetailField label="Full/Part Time" value={pos.full_part_time} />
@@ -696,6 +723,7 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
       {/* Parish health snapshot */}
       <ParishSnapshot pos={pos} />
       <DioceseContext pos={pos} />
+      <CommunityContext pos={pos} />
 
       {/* Key highlights */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
