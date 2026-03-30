@@ -54,6 +54,30 @@ function timeOnMarket(firstSeen: string | undefined): string {
   return years === 1 ? '1 year' : `${years} years`;
 }
 
+/** Compute ASA trend direction from parochial data (most recent 5 years) */
+function getAsaTrend(pos: Position): 'up' | 'down' | 'flat' | null {
+  if (!pos.parochial) return null;
+  const years = Object.keys(pos.parochial.years).sort();
+  const recent = years.slice(-5);
+  const values = recent
+    .map(y => pos.parochial!.years[y].averageAttendance)
+    .filter((v): v is number => v !== null && v > 0);
+  if (values.length < 2) return null;
+  const first = values[0];
+  const last = values[values.length - 1];
+  const pctChange = (last - first) / first;
+  if (pctChange > 0.1) return 'up';
+  if (pctChange < -0.1) return 'down';
+  return 'flat';
+}
+
+function TrendArrow({ trend }: { trend: 'up' | 'down' | 'flat' | null }) {
+  if (!trend) return null;
+  if (trend === 'up') return <span className="text-green-600 text-xs font-medium" title="ASA trending up">{'\u25B2'}</span>;
+  if (trend === 'down') return <span className="text-red-500 text-xs font-medium" title="ASA trending down">{'\u25BC'}</span>;
+  return <span className="text-gray-400 text-xs" title="ASA flat">{'\u2014'}</span>;
+}
+
 export default function PositionTable({ positions }: PositionTableProps) {
   const [sortField, setSortField] = useState<SortField>('name');
   const [sortDir, setSortDir] = useState<SortDirection>('asc');
@@ -205,8 +229,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   {(() => {
                     const church = getChurchName(pos);
                     return (
-                      <p className={`font-medium text-sm leading-tight ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
+                      <p className={`font-medium text-sm leading-tight flex items-center gap-1.5 ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
                         {church.text}
+                        <TrendArrow trend={getAsaTrend(pos)} />
                       </p>
                     );
                   })()}
@@ -279,14 +304,17 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   }`}
                 >
                   <td className="px-4 py-3 text-sm font-medium max-w-xs truncate">
-                    {(() => {
-                      const church = getChurchName(pos);
-                      return (
-                        <span className={church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}>
-                          {church.text}
-                        </span>
-                      );
-                    })()}
+                    <span className="flex items-center gap-1.5">
+                      {(() => {
+                        const church = getChurchName(pos);
+                        return (
+                          <span className={church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}>
+                            {church.text}
+                          </span>
+                        );
+                      })()}
+                      <TrendArrow trend={getAsaTrend(pos)} />
+                    </span>
                   </td>
                   <td className="px-4 py-3 text-sm text-gray-600">{getCity(pos)}</td>
                   <td className="px-4 py-3 text-sm text-gray-600">{getState(pos)}</td>
