@@ -408,17 +408,6 @@
         "score": 6
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10655",
         "vh_id": 10655,
         "name": "Christ United (St Annes)",
@@ -450,6 +439,17 @@
         "asa": 25,
         "estimated_total_comp": null,
         "score": 5
+      },
+      {
+        "id": "10584",
+        "vh_id": 10584,
+        "name": "St. Augustine's Episcopal Church",
+        "city": "Gary",
+        "state": "IN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 20,
+        "estimated_total_comp": 62501,
+        "score": 5
       }
     ],
     "census": {
@@ -462,155 +462,75 @@
     "name": "St Stephens Episcopal Church",
     "diocese": "Iowa",
     "state": "IA",
-    "vh_status": "Developing profile",
+    "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10688",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "St Stephens Episcopal Church",
     "receiving_names_from": "05/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": 3206,
-      "name": "St. Stephen's Episcopal Church",
-      "street": "223 E 4th St N",
-      "city": "Newton",
-      "state": "IA",
-      "zip": "50208-3214",
-      "phone": "641-792-6971",
-      "email": "ststephn@windstream.net",
-      "website": "",
-      "type": "church",
-      "lat": 41.70117,
-      "lng": -93.05017
-    },
-    "match_confidence": "exact",
-    "parochial": {
-      "congregationCity": "St Stephens Episcopal Church (Newton)",
-      "years": {
-        "2015": {
-          "averageAttendance": 47,
-          "plateAndPledge": 125139,
-          "membership": 217
-        },
-        "2016": {
-          "averageAttendance": 46,
-          "plateAndPledge": 87606,
-          "membership": 98
-        },
-        "2017": {
-          "averageAttendance": 40,
-          "plateAndPledge": 115706,
-          "membership": 99
-        },
-        "2018": {
-          "averageAttendance": 33,
-          "plateAndPledge": 101080,
-          "membership": 96
-        },
-        "2019": {
-          "averageAttendance": 28,
-          "plateAndPledge": 101171,
-          "membership": 101
-        },
-        "2020": {
-          "averageAttendance": 26,
-          "plateAndPledge": 57408,
-          "membership": 97
-        },
-        "2021": {
-          "averageAttendance": 19,
-          "plateAndPledge": 42243,
-          "membership": 97
-        },
-        "2022": {
-          "averageAttendance": 21,
-          "plateAndPledge": 46607,
-          "membership": 102
-        },
-        "2023": {
-          "averageAttendance": 22,
-          "plateAndPledge": 48610,
-          "membership": 103
-        },
-        "2024": {
-          "averageAttendance": 21,
-          "plateAndPledge": 45346,
-          "membership": null
-        }
-      }
-    },
     "housing_type": "No Housing or Stipend Provided",
-    "diocese_percentiles": {
-      "asa": 54,
-      "asa_value": 21,
-      "plate_pledge": 56,
-      "plate_pledge_value": 45346
-    },
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
     },
     "similar_positions": [
       {
-        "id": "10584",
-        "vh_id": 10584,
-        "name": "St. Augustine's Episcopal Church",
-        "city": "Gary",
-        "state": "IN",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 20,
-        "estimated_total_comp": 62501,
-        "score": 6
-      },
-      {
-        "id": "10690",
-        "vh_id": 10690,
-        "name": "St. James the Apostle / Iglesia de Santiago",
-        "city": "Oakland",
-        "state": "CA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 20,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
         "id": "10686",
         "vh_id": 10686,
         "name": "St. Julian's Episcopal Church",
         "city": "Douglasville",
         "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
       {
-        "id": "10655",
-        "vh_id": 10655,
-        "name": "Christ United (St Annes)",
-        "city": "Dewitt",
-        "state": "MI",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 18,
+        "id": "9297",
+        "vh_id": 9297,
+        "name": "Christ Episcopal Church",
+        "city": "Cedar Rapids",
+        "state": "IA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 98,
         "estimated_total_comp": null,
-        "score": 5
+        "score": 4
       },
       {
-        "id": "10653",
-        "vh_id": 10653,
-        "name": "Christ United (St Annes)",
-        "city": "Dewitt",
-        "state": "MI",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 18,
+        "id": "9155",
+        "vh_id": 9155,
+        "name": "St. John's by the Campus",
+        "city": "Ames",
+        "state": "IA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 70,
         "estimated_total_comp": null,
-        "score": 5
+        "score": 4
+      },
+      {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
+        "score": 3
       }
-    ],
-    "census": {
-      "median_household_income": 57274,
-      "population": 20339
-    }
+    ]
   },
   {
     "vh_id": 10686,
@@ -619,7 +539,7 @@
     "state": "GA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10686",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "St Julians Episcopal Church",
     "receiving_names_from": "03/20/2026",
     "receiving_names_to": "Open ended",
@@ -712,7 +632,7 @@
         "name": "Christ Episcopal Church",
         "city": "Indiana",
         "state": "PA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 38,
         "estimated_total_comp": 37501,
         "score": 6
@@ -720,44 +640,44 @@
       {
         "id": "10688",
         "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
+        "name": "St Stephens Episcopal Church",
+        "city": "",
         "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
         "estimated_total_comp": 37501,
         "score": 5
       },
       {
-        "id": "10646",
-        "vh_id": 10646,
-        "name": "St. Matthew's Episcopal Church",
-        "city": "Wilton",
-        "state": "CT",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 52,
-        "estimated_total_comp": 182501,
-        "score": 5
-      },
-      {
-        "id": "10635",
-        "vh_id": 10635,
-        "name": "St. Boniface Episcopal Church",
-        "city": "Comfort",
-        "state": "TX",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 42,
+        "id": "10575",
+        "vh_id": 10575,
+        "name": "St. Thomas, Croom",
+        "city": "Upper Marlboro",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 38,
         "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10615",
-        "vh_id": 10615,
-        "name": "St. Andrew's Episcopal Church",
-        "city": "Livingston",
-        "state": "MT",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 36,
+        "id": "10543",
+        "vh_id": 10543,
+        "name": "St. Paul's Rock Creek",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 48,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10542",
+        "vh_id": 10542,
+        "name": "St. Monica and St. James Capitol Hill",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 53,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -901,15 +821,15 @@
         "score": 5
       },
       {
-        "id": "10227",
-        "vh_id": 10227,
-        "name": "St. Patrick's Episcopal Church",
-        "city": "Dublin",
-        "state": "OH",
+        "id": "8604",
+        "vh_id": 8604,
+        "name": "Church of Our Saviour",
+        "city": "Lakeside",
+        "state": "AZ",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": 173,
+        "asa": 70,
         "estimated_total_comp": null,
-        "score": 5
+        "score": 4
       }
     ],
     "census": {
@@ -1052,6 +972,17 @@
     },
     "similar_positions": [
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10633",
         "vh_id": 10633,
         "name": "Calvary Church",
@@ -1092,17 +1023,6 @@
         "state": "NY",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 80,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10351",
-        "vh_id": 10351,
-        "name": "Church of the Resurrection",
-        "city": "Millville",
-        "state": "NJ",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 66,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -1220,15 +1140,15 @@
     },
     "similar_positions": [
       {
-        "id": "10319",
-        "vh_id": 10319,
-        "name": "Unknown Position",
+        "id": "10197",
+        "vh_id": 10197,
+        "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
         "city": "",
-        "state": "",
+        "state": "OH",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
+        "estimated_total_comp": 62501,
+        "score": 5
       },
       {
         "id": "10636",
@@ -1238,17 +1158,6 @@
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 13,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "St Thomas Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
         "estimated_total_comp": 87501,
         "score": 3
       },
@@ -1285,9 +1194,9 @@
     "name": "Trinity Episcopal Church",
     "diocese": "Louisiana",
     "state": "LA",
-    "vh_status": "Beginning search",
+    "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10677",
-    "position_type": "Assistant/Associate/Curate",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "Trinity Episcopal Church",
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
@@ -1386,46 +1295,46 @@
         "score": 5
       },
       {
-        "id": "10343",
-        "vh_id": 10343,
-        "name": "St. Andrew's Episcopal Church",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 235,
+        "id": "10547",
+        "vh_id": 10547,
+        "name": "St. Alban's Episcopal Church",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 278,
         "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10212",
-        "vh_id": 10212,
-        "name": "Cathedral Church of St. John",
-        "city": "Albuquerque",
-        "state": "NM",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 259,
+        "id": "10532",
+        "vh_id": 10532,
+        "name": "All Saints, Chevy Chase",
+        "city": "Chevy Chase",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 318,
         "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10089",
-        "vh_id": 10089,
-        "name": "Christ Church Cranbrook",
-        "city": "Bloomfield Hills",
-        "state": "MI",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 372,
+        "id": "10254",
+        "vh_id": 10254,
+        "name": "St. James' Church",
+        "city": "New York",
+        "state": "NY",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 373,
         "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "9788",
-        "vh_id": 9788,
-        "name": "St. Michael & All Angels Church",
-        "city": "Portland",
-        "state": "OR",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 270,
+        "id": "10219",
+        "vh_id": 10219,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Oxford",
+        "state": "MS",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 319,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -1721,17 +1630,6 @@
         "score": 5
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10584",
         "vh_id": 10584,
         "name": "St. Augustine's Episcopal Church",
@@ -1739,6 +1637,17 @@
         "state": "IN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 20,
+        "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
+        "id": "10524",
+        "vh_id": 10524,
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
+        "state": "TN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 19,
         "estimated_total_comp": 62501,
         "score": 5
       }
@@ -1871,17 +1780,6 @@
         "score": 5
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10584",
         "vh_id": 10584,
         "name": "St. Augustine's Episcopal Church",
@@ -1889,6 +1787,17 @@
         "state": "IN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 20,
+        "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
+        "id": "10524",
+        "vh_id": 10524,
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
+        "state": "TN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 19,
         "estimated_total_comp": 62501,
         "score": 5
       }
@@ -1994,17 +1903,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -2045,6 +1943,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 58,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10537",
+        "vh_id": 10537,
+        "name": "St. Stephen & the Incarnation",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 91,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -2150,17 +2059,6 @@
     },
     "similar_positions": [
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St. Julian's Episcopal Church",
-        "city": "Douglasville",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 46,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10635",
         "vh_id": 10635,
         "name": "St. Boniface Episcopal Church",
@@ -2203,6 +2101,17 @@
         "asa": 62,
         "estimated_total_comp": 87501,
         "score": 5
+      },
+      {
+        "id": "10306",
+        "vh_id": 10306,
+        "name": "St. Mark's Episcopal Church",
+        "city": "Palm Beach Gardens",
+        "state": "FL",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 296,
+        "estimated_total_comp": 200001,
+        "score": 4
       }
     ],
     "census": {
@@ -2348,13 +2257,13 @@
         "score": 4
       },
       {
-        "id": "10631",
-        "vh_id": 10631,
-        "name": "St. Michael's Episcopal Church",
-        "city": "Mandeville",
-        "state": "LA",
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": 90,
+        "asa": 78,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -2454,17 +2363,6 @@
     },
     "similar_positions": [
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St. Julian's Episcopal Church",
-        "city": "Douglasville",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 46,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10646",
         "vh_id": 10646,
         "name": "St. Matthew's Episcopal Church",
@@ -2473,6 +2371,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 52,
         "estimated_total_comp": 182501,
+        "score": 5
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
         "score": 5
       },
       {
@@ -2521,7 +2430,7 @@
     "state": "OH",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10634",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Johns Church Episcopal",
     "receiving_names_from": "04/21/2026",
     "receiving_names_to": "Open ended",
@@ -2609,59 +2518,59 @@
     },
     "similar_positions": [
       {
-        "id": "9991",
-        "vh_id": 9991,
-        "name": "St. Hubert's Church",
-        "city": "Kirtland Hills",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 71,
-        "estimated_total_comp": null,
+        "id": "10631",
+        "vh_id": 10631,
+        "name": "St. Michael's Episcopal Church",
+        "city": "Mandeville",
+        "state": "LA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 90,
+        "estimated_total_comp": 87501,
+        "score": 8
+      },
+      {
+        "id": "9686",
+        "vh_id": 9686,
+        "name": "St. Luke's Episcopal Church",
+        "city": "Billings",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 62,
+        "estimated_total_comp": 87501,
         "score": 7
       },
       {
-        "id": "9966",
-        "vh_id": 9966,
-        "name": "Christ Episcopal Church",
-        "city": "Warren",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 67,
+        "id": "9417",
+        "vh_id": 9417,
+        "name": "St. Ann's Episcopal Church",
+        "city": "Windham",
+        "state": "ME",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 77,
         "estimated_total_comp": null,
-        "score": 7
+        "score": 6
       },
       {
-        "id": "9944",
-        "vh_id": 9944,
-        "name": "Christ Episcopal Church",
-        "city": "Shaker Heights",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "id": "10680",
+        "vh_id": 10680,
+        "name": "St. Christopher, The Parish Church of",
+        "city": "Kailua",
+        "state": "HI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10633",
+        "vh_id": 10633,
+        "name": "Calvary Church",
+        "city": "Louisville",
+        "state": "KY",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 88,
         "estimated_total_comp": null,
-        "score": 7
-      },
-      {
-        "id": "9836",
-        "vh_id": 9836,
-        "name": "St. Michael's in the Hills Church",
-        "city": "Toledo",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 74,
-        "estimated_total_comp": null,
-        "score": 7
-      },
-      {
-        "id": "9822",
-        "vh_id": 9822,
-        "name": "St. Timothy's Church",
-        "city": "Perrysburg",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 89,
-        "estimated_total_comp": null,
-        "score": 7
+        "score": 5
       }
     ],
     "census": {
@@ -2792,6 +2701,17 @@
         "score": 5
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10631",
         "vh_id": 10631,
         "name": "St. Michael's Episcopal Church",
@@ -2800,17 +2720,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 90,
         "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
-        "id": "10559",
-        "vh_id": 10559,
-        "name": "St. Mark's Episcopal Church",
-        "city": "Orchard Park",
-        "state": "NY",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 88,
-        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -2942,17 +2851,6 @@
         "score": 5
       },
       {
-        "id": "10227",
-        "vh_id": 10227,
-        "name": "St. Patrick's Episcopal Church",
-        "city": "Dublin",
-        "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 173,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
         "id": "10178",
         "vh_id": 10178,
         "name": "All Saints' Episcopal Church",
@@ -2960,6 +2858,17 @@
         "state": "FL",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 138,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9698",
+        "vh_id": 9698,
+        "name": "Episcopal Church of the Ascension",
+        "city": "Clearwater",
+        "state": "FL",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 188,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -3064,6 +2973,17 @@
     },
     "similar_positions": [
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 8
+      },
+      {
         "id": "8560",
         "vh_id": 8560,
         "name": "All Saints of the Desert Episcopal Church",
@@ -3084,17 +3004,6 @@
         "asa": 105,
         "estimated_total_comp": 82501,
         "score": 7
-      },
-      {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 6
       },
       {
         "id": "9417",
@@ -3129,9 +3038,9 @@
     "name": "Christ Episcopal Church",
     "diocese": "Pittsburgh",
     "state": "PA",
-    "vh_status": "Receiving names",
+    "vh_status": "Profile complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10624",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "Christ Episcopal Church",
     "receiving_names_from": "04/07/2026",
     "receiving_names_to": "Open ended",
@@ -3224,53 +3133,53 @@
         "name": "St. Julian's Episcopal Church",
         "city": "Douglasville",
         "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 46,
         "estimated_total_comp": 37501,
         "score": 6
       },
       {
-        "id": "10575",
-        "vh_id": 10575,
-        "name": "St. Thomas, Croom",
-        "city": "Upper Marlboro",
-        "state": "MD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "id": "10635",
+        "vh_id": 10635,
+        "name": "St. Boniface Episcopal Church",
+        "city": "Comfort",
+        "state": "TX",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 42,
         "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10569",
-        "vh_id": 10569,
-        "name": "St. Peter's Episcopal Church",
-        "city": "Ripon",
-        "state": "WI",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 29,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10325",
-        "vh_id": 10325,
-        "name": "St. James' Episcopal Church",
-        "city": "Dexter",
-        "state": "MI",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "id": "10615",
+        "vh_id": 10615,
+        "name": "St. Andrew's Episcopal Church",
+        "city": "Livingston",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 36,
         "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10323",
-        "vh_id": 10323,
-        "name": "St. Thomas Episcopal Church",
-        "city": "Eugene",
-        "state": "OR",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 47,
+        "id": "10576",
+        "vh_id": 10576,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Muskegon",
+        "state": "MI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 42,
         "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10565",
+        "vh_id": 10565,
+        "name": "Mt. Zion Episcopal Church",
+        "city": "Hedgesville",
+        "state": "WV",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 36,
+        "estimated_total_comp": 62501,
         "score": 5
       }
     ],
@@ -3437,11 +3346,11 @@
   {
     "vh_id": 10616,
     "name": "St Thomas Episcopal Church",
-    "diocese": "",
+    "diocese": "Georgia",
     "state": "",
-    "vh_status": "Receiving names",
+    "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10616",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "St Thomas Episcopal Church",
     "receiving_names_from": "04/01/2026",
     "receiving_names_to": "Open ended",
@@ -3453,28 +3362,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10678",
-        "vh_id": 10678,
-        "name": "St. Mark's Episcopal Church, Portland",
-        "city": "Portland",
-        "state": "MO",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 11,
-        "estimated_total_comp": 62501,
-        "score": 3
-      },
-      {
         "id": "10583",
         "vh_id": 10583,
         "name": "Trinity Episcopal Church",
@@ -3483,7 +3370,7 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 120,
         "estimated_total_comp": 87501,
-        "score": 3
+        "score": 5
       },
       {
         "id": "10580",
@@ -3494,7 +3381,7 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 87501,
-        "score": 3
+        "score": 5
       },
       {
         "id": "10574",
@@ -3505,7 +3392,29 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 87501,
-        "score": 3
+        "score": 5
+      },
+      {
+        "id": "10691",
+        "vh_id": 10691,
+        "name": "St. Mary Anne's Episcopal Church",
+        "city": "North East",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 105,
+        "estimated_total_comp": 82501,
+        "score": 4
+      },
+      {
+        "id": "10636",
+        "vh_id": 10636,
+        "name": "St Paul's Episcopal Church",
+        "city": "Virginia City",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 13,
+        "estimated_total_comp": 87501,
+        "score": 4
       }
     ]
   },
@@ -3610,6 +3519,17 @@
         "score": 5
       },
       {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10576",
         "vh_id": 10576,
         "name": "St. Paul's Episcopal Church",
@@ -3640,17 +3560,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 41,
         "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Church of the Epiphany",
-        "city": "Urbana",
-        "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 35,
-        "estimated_total_comp": 62501,
         "score": 5
       }
     ],
@@ -3752,6 +3661,17 @@
         "score": 4
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 4
+      },
+      {
         "id": "10631",
         "vh_id": 10631,
         "name": "St. Michael's Episcopal Church",
@@ -3759,17 +3679,6 @@
         "state": "LA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 90,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Episcopal Church",
-        "city": "Clarksville",
-        "state": "TN",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 120,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -3930,17 +3839,6 @@
         "score": 5
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10584",
         "vh_id": 10584,
         "name": "St. Augustine's Episcopal Church",
@@ -3971,6 +3869,17 @@
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 26,
         "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "8605",
+        "vh_id": 8605,
+        "name": "Church of the Mediator",
+        "city": "Washington",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 28,
+        "estimated_total_comp": 25000,
         "score": 5
       }
     ],
@@ -4235,17 +4144,6 @@
         "score": 7
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 6
-      },
-      {
         "id": "10690",
         "vh_id": 10690,
         "name": "St. James the Apostle / Iglesia de Santiago",
@@ -4275,6 +4173,17 @@
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 18,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10588",
+        "vh_id": 10588,
+        "name": "Church of the Good Shepherd",
+        "city": "Houlton",
+        "state": "ME",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 25,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -4484,6 +4393,17 @@
     },
     "similar_positions": [
       {
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St Thomas Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10583",
         "vh_id": 10583,
         "name": "Trinity Episcopal Church",
@@ -4524,17 +4444,6 @@
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 13,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10631",
-        "vh_id": 10631,
-        "name": "St. Michael's Episcopal Church",
-        "city": "Mandeville",
-        "state": "LA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 90,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -4652,7 +4561,7 @@
         "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 78,
         "estimated_total_comp": 87501,
         "score": 3
@@ -4934,17 +4843,6 @@
     },
     "similar_positions": [
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St. Julian's Episcopal Church",
-        "city": "Douglasville",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 46,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10646",
         "vh_id": 10646,
         "name": "St. Matthew's Episcopal Church",
@@ -4964,6 +4862,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 42,
         "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
         "score": 5
       },
       {
@@ -5084,13 +4993,13 @@
     },
     "similar_positions": [
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -5163,6 +5072,17 @@
     },
     "similar_positions": [
       {
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St Thomas Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10583",
         "vh_id": 10583,
         "name": "Trinity Episcopal Church",
@@ -5203,17 +5123,6 @@
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 13,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10631",
-        "vh_id": 10631,
-        "name": "St. Michael's Episcopal Church",
-        "city": "Mandeville",
-        "state": "LA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 90,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -5498,17 +5407,6 @@
     },
     "similar_positions": [
       {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Church of the Epiphany",
-        "city": "Urbana",
-        "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 35,
-        "estimated_total_comp": 62501,
-        "score": 8
-      },
-      {
         "id": "10635",
         "vh_id": 10635,
         "name": "St. Boniface Episcopal Church",
@@ -5517,6 +5415,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 42,
         "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
         "score": 5
       },
       {
@@ -5894,14 +5803,14 @@
         "score": 5
       },
       {
-        "id": "10633",
-        "vh_id": 10633,
-        "name": "Calvary Church",
-        "city": "Louisville",
-        "state": "KY",
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": 88,
-        "estimated_total_comp": null,
+        "asa": 78,
+        "estimated_total_comp": 87501,
         "score": 5
       }
     ],
@@ -6196,6 +6105,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10650",
         "vh_id": 10650,
         "name": "St. Mary and St. Jude",
@@ -6204,17 +6124,6 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 73,
         "estimated_total_comp": 132501,
-        "score": 5
-      },
-      {
-        "id": "10552",
-        "vh_id": 10552,
-        "name": "St. Anne's",
-        "city": "Damascus",
-        "state": "MD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 60,
-        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -6313,6 +6222,17 @@
     },
     "similar_positions": [
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10650",
         "vh_id": 10650,
         "name": "St. Mary and St. Jude",
@@ -6353,17 +6273,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10538",
-        "vh_id": 10538,
-        "name": "All Souls Episcopal Church",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 58,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -6548,6 +6457,17 @@
         "score": 5
       },
       {
+        "id": "10299",
+        "vh_id": 10299,
+        "name": "Church of the Resurrection, Spokane Valley",
+        "city": "Spokane Valley",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10165",
         "vh_id": 10165,
         "name": "St. Stephen's Memorial Church",
@@ -6566,17 +6486,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 36,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10067",
-        "vh_id": 10067,
-        "name": "Church of the Incarnation (Pittsfield Township)",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 38,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -6689,6 +6598,17 @@
     },
     "similar_positions": [
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10555",
         "vh_id": 10555,
         "name": "Grace Church, Silver Spring",
@@ -6729,17 +6649,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 235,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9940",
-        "vh_id": 9940,
-        "name": "Church of the Good Shepherd",
-        "city": "Tequesta",
-        "state": "FL",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 214,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -7037,13 +6946,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -7153,6 +7062,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10552",
         "vh_id": 10552,
         "name": "St. Anne's",
@@ -7160,17 +7080,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10471",
-        "vh_id": 10471,
-        "name": "Calvary Church",
-        "city": "Front Royal",
-        "state": "VA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 49,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -7442,17 +7351,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -7471,6 +7369,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 91,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10535",
+        "vh_id": 10535,
+        "name": "St. Patrick's, DC",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 80,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -7616,6 +7525,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10552",
         "vh_id": 10552,
         "name": "St. Anne's",
@@ -7623,17 +7543,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10471",
-        "vh_id": 10471,
-        "name": "Calvary Church",
-        "city": "Front Royal",
-        "state": "VA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 49,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -7755,17 +7664,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10540",
         "vh_id": 10540,
         "name": "Church of the Redeemer",
@@ -7784,6 +7682,17 @@
         "state": "NY",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10305",
+        "vh_id": 10305,
+        "name": "St. Brendan's Episcopal Church ",
+        "city": "Sewickley (Franklin Park)",
+        "state": "PA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 86,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -7929,17 +7838,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10552",
         "vh_id": 10552,
         "name": "St. Anne's",
@@ -7947,6 +7845,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -8346,6 +8255,17 @@
     },
     "similar_positions": [
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10547",
         "vh_id": 10547,
         "name": "St. Alban's Episcopal Church",
@@ -8386,17 +8306,6 @@
         "state": "NY",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 361,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9700",
-        "vh_id": 9700,
-        "name": "St. John's Episcopal Church",
-        "city": "Tampa",
-        "state": "FL",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 244,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -8567,17 +8476,6 @@
     },
     "similar_positions": [
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St. Julian's Episcopal Church",
-        "city": "Douglasville",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 46,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10635",
         "vh_id": 10635,
         "name": "St. Boniface Episcopal Church",
@@ -8586,6 +8484,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 42,
         "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
         "score": 5
       },
       {
@@ -8744,17 +8653,6 @@
         "score": 6
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10655",
         "vh_id": 10655,
         "name": "Christ United (St Annes)",
@@ -8774,6 +8672,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 18,
         "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10583",
+        "vh_id": 10583,
+        "name": "Trinity Episcopal Church",
+        "city": "Clarksville",
+        "state": "TN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 120,
+        "estimated_total_comp": 87501,
         "score": 5
       }
     ],
@@ -8894,6 +8803,17 @@
         "score": 5
       },
       {
+        "id": "10299",
+        "vh_id": 10299,
+        "name": "Church of the Resurrection, Spokane Valley",
+        "city": "Spokane Valley",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10275",
         "vh_id": 10275,
         "name": "Church of Our Savior, Manhattan",
@@ -8912,17 +8832,6 @@
         "state": "NY",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 39,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10260",
-        "vh_id": 10260,
-        "name": "Saint Paul's Church, Spring Valley",
-        "city": "Spring Valley",
-        "state": "NY",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 36,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -9033,13 +8942,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -9346,17 +9255,6 @@
         "score": 5
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10655",
         "vh_id": 10655,
         "name": "Christ United (St Annes)",
@@ -9387,6 +9285,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 20,
         "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
+        "id": "10577",
+        "vh_id": 10577,
+        "name": "St. James Church",
+        "city": "Albion",
+        "state": "MI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 14,
+        "estimated_total_comp": 107501,
         "score": 5
       }
     ],
@@ -9520,6 +9429,17 @@
         "score": 5
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10633",
         "vh_id": 10633,
         "name": "Calvary Church",
@@ -9539,17 +9459,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 90,
         "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
-        "id": "10354",
-        "vh_id": 10354,
-        "name": "Christ Church",
-        "city": "Rochester",
-        "state": "NY",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -10154,6 +10063,17 @@
         "score": 5
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10401",
         "vh_id": 10401,
         "name": "St. Martin in the Fields",
@@ -10172,17 +10092,6 @@
         "state": "NJ",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 73,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10135",
-        "vh_id": 10135,
-        "name": "Holy Trinity Episcopal Church",
-        "city": "South River",
-        "state": "NJ",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 70,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -10865,7 +10774,7 @@
         "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
@@ -10999,17 +10908,6 @@
     },
     "similar_positions": [
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10576",
         "vh_id": 10576,
         "name": "St. Paul's Episcopal Church",
@@ -11050,6 +10948,17 @@
         "state": "NY",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 32,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10263",
+        "vh_id": 10263,
+        "name": "St. Paul's Church, Pleasant Valley",
+        "city": "Pleasant Valley",
+        "state": "NY",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 39,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -11173,13 +11082,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -11269,12 +11178,12 @@
   },
   {
     "vh_id": 10319,
-    "name": "Unknown Position",
-    "diocese": "",
+    "name": "Position in San Joaquin",
+    "diocese": "San Joaquin",
     "state": "",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10319",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector/Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "Open ended",
@@ -11287,25 +11196,58 @@
     },
     "similar_positions": [
       {
-        "id": "10678",
-        "vh_id": 10678,
-        "name": "St. Mark's Episcopal Church, Portland",
-        "city": "Portland",
-        "state": "MO",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 11,
+        "id": "10584",
+        "vh_id": 10584,
+        "name": "St. Augustine's Episcopal Church",
+        "city": "Gary",
+        "state": "IN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 20,
         "estimated_total_comp": 62501,
         "score": 4
       },
       {
-        "id": "10650",
-        "vh_id": 10650,
-        "name": "St. Mary and St. Jude",
-        "city": "Northeast Harbor",
-        "state": "ME",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 73,
-        "estimated_total_comp": 132501,
+        "id": "10565",
+        "vh_id": 10565,
+        "name": "Mt. Zion Episcopal Church",
+        "city": "Hedgesville",
+        "state": "WV",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 36,
+        "estimated_total_comp": 62501,
+        "score": 4
+      },
+      {
+        "id": "10524",
+        "vh_id": 10524,
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
+        "state": "TN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 19,
+        "estimated_total_comp": 62501,
+        "score": 4
+      },
+      {
+        "id": "10691",
+        "vh_id": 10691,
+        "name": "St. Mary Anne's Episcopal Church",
+        "city": "North East",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 105,
+        "estimated_total_comp": 82501,
+        "score": 3
+      },
+      {
+        "id": "10646",
+        "vh_id": 10646,
+        "name": "St. Matthew's Episcopal Church",
+        "city": "Wilton",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 52,
+        "estimated_total_comp": 182501,
         "score": 3
       }
     ]
@@ -12396,6 +12338,17 @@
     },
     "similar_positions": [
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -12438,17 +12391,6 @@
         "asa": 53,
         "estimated_total_comp": null,
         "score": 5
-      },
-      {
-        "id": "10538",
-        "vh_id": 10538,
-        "name": "All Souls Episcopal Church",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 58,
-        "estimated_total_comp": null,
-        "score": 5
       }
     ],
     "census": {
@@ -12458,29 +12400,295 @@
   },
   {
     "vh_id": 10300,
-    "name": "Unknown Position",
-    "diocese": "",
-    "state": "",
+    "name": "St. Andrew's Episcopal Church, Spokane, Spokane, WA",
+    "diocese": "Spokane",
+    "state": "WA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10300",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "08/01/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5511,
+      "name": "St. Andrew's Episcopal Church, Spokane",
+      "street": "2404 N Howard St",
+      "city": "Spokane",
+      "state": "WA",
+      "zip": "99205-3215",
+      "phone": "509-325-5252 ",
+      "email": "office@standrewsspokane.org",
+      "website": "http://www.standrewsspokane.org",
+      "type": "church",
+      "lat": 47.679648,
+      "lng": -117.419955
+    },
+    "match_confidence": "exact",
+    "parochial": {
+      "congregationCity": "St Andrews Episcopal Church (Spokane)",
+      "years": {
+        "2015": {
+          "averageAttendance": 54,
+          "plateAndPledge": 71701,
+          "membership": 154
+        },
+        "2016": {
+          "averageAttendance": 50,
+          "plateAndPledge": 65236,
+          "membership": 161
+        },
+        "2017": {
+          "averageAttendance": 44,
+          "plateAndPledge": 64365,
+          "membership": 69
+        },
+        "2018": {
+          "averageAttendance": 35,
+          "plateAndPledge": 52761,
+          "membership": 69
+        },
+        "2019": {
+          "averageAttendance": 40,
+          "plateAndPledge": 60417,
+          "membership": 74
+        },
+        "2020": {
+          "averageAttendance": 35,
+          "plateAndPledge": 53948,
+          "membership": 72
+        },
+        "2021": {
+          "averageAttendance": 22,
+          "plateAndPledge": 59049,
+          "membership": 51
+        },
+        "2022": {
+          "averageAttendance": 23,
+          "plateAndPledge": 59110,
+          "membership": 40
+        },
+        "2023": {
+          "averageAttendance": 24,
+          "plateAndPledge": 45848,
+          "membership": 35
+        },
+        "2024": {
+          "averageAttendance": 22,
+          "plateAndPledge": 95951,
+          "membership": null
+        }
+      }
+    },
+    "diocese_percentiles": {
+      "asa": 44,
+      "asa_value": 22,
+      "plate_pledge": 55,
+      "plate_pledge_value": 95951
+    },
+    "similar_positions": [
+      {
+        "id": "9733",
+        "vh_id": 9733,
+        "name": "St. David Emmanuel, Shoreline",
+        "city": "Shoreline",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 18,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "10297",
+        "vh_id": 10297,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Romeo",
+        "state": "MI",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 18,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9796",
+        "vh_id": 9796,
+        "name": "Church of St. John by the Sea",
+        "city": "Bandon",
+        "state": "OR",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9356",
+        "vh_id": 9356,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Bridgton",
+        "state": "ME",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 26,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9339",
+        "vh_id": 9339,
+        "name": "St. Luke's Episcopal Church",
+        "city": "Hollister",
+        "state": "CA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 17,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "vh_id": 10299,
-    "name": "Unknown Position",
-    "diocese": "",
-    "state": "",
+    "name": "Church of the Resurrection, Spokane Valley, Spokane Valley, WA",
+    "diocese": "Spokane",
+    "state": "WA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10299",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
     "congregation": "",
     "receiving_names_from": "08/31/2026",
     "receiving_names_to": "Open ended",
-    "open_ended": true
+    "open_ended": true,
+    "church_info": {
+      "nid": 5514,
+      "name": "Church of the Resurrection, Spokane Valley",
+      "street": "15319 E 8th Ave",
+      "city": "Spokane Valley",
+      "state": "WA",
+      "zip": "99037-8828",
+      "phone": "(509) 926-6450",
+      "email": "ecorwebmaster@resurrectionspokane.org",
+      "website": "https://resurrectionspokane.spokanediocese.org",
+      "type": "church",
+      "lat": 47.65016,
+      "lng": -117.19846
+    },
+    "match_confidence": "high",
+    "parochial": {
+      "congregationCity": "Church of the Resurrection (Spokane Valley)",
+      "years": {
+        "2015": {
+          "averageAttendance": 83,
+          "plateAndPledge": 145293,
+          "membership": 173
+        },
+        "2016": {
+          "averageAttendance": 84,
+          "plateAndPledge": 124829,
+          "membership": 159
+        },
+        "2017": {
+          "averageAttendance": 82,
+          "plateAndPledge": 132807,
+          "membership": 161
+        },
+        "2018": {
+          "averageAttendance": 81,
+          "plateAndPledge": 141967,
+          "membership": 158
+        },
+        "2019": {
+          "averageAttendance": 72,
+          "plateAndPledge": 145254,
+          "membership": 158
+        },
+        "2020": {
+          "averageAttendance": 88,
+          "plateAndPledge": 102895,
+          "membership": 148
+        },
+        "2021": {
+          "averageAttendance": 43,
+          "plateAndPledge": 130745,
+          "membership": 145
+        },
+        "2022": {
+          "averageAttendance": 40,
+          "plateAndPledge": 134982,
+          "membership": 144
+        },
+        "2023": {
+          "averageAttendance": 41,
+          "plateAndPledge": 165640,
+          "membership": 105
+        },
+        "2024": {
+          "averageAttendance": 45,
+          "plateAndPledge": 127310,
+          "membership": null
+        }
+      }
+    },
+    "diocese_percentiles": {
+      "asa": 72,
+      "asa_value": 45,
+      "plate_pledge": 67,
+      "plate_pledge_value": 127310
+    },
+    "similar_positions": [
+      {
+        "id": "10549",
+        "vh_id": 10549,
+        "name": "Good Shepherd Episcopal Church",
+        "city": "Silver Spring",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 36,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10522",
+        "vh_id": 10522,
+        "name": "St. Andrew's Episcopal Church",
+        "city": "Burt",
+        "state": "NY",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 41,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10165",
+        "vh_id": 10165,
+        "name": "St. Stephen's Memorial Church",
+        "city": "Lynn",
+        "state": "MA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 43,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10123",
+        "vh_id": 10123,
+        "name": "St. George's Episcopal Church",
+        "city": "Milford",
+        "state": "MI",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 36,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10067",
+        "vh_id": 10067,
+        "name": "Church of the Incarnation (Pittsfield Township)",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 38,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "vh_id": 10298,
@@ -12618,6 +12826,17 @@
         "score": 5
       },
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10118",
         "vh_id": 10118,
         "name": "St. Paul's Episcopal Church",
@@ -12625,17 +12844,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 18,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9796",
-        "vh_id": 9796,
-        "name": "Church of St. John by the Sea",
-        "city": "Bandon",
-        "state": "OR",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 22,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -12784,7 +12992,7 @@
         "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 78,
         "estimated_total_comp": 87501,
         "score": 3
@@ -13250,15 +13458,26 @@
     },
     "similar_positions": [
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
+        "asa": 38,
         "estimated_total_comp": 37501,
         "score": 5
+      },
+      {
+        "id": "10688",
+        "vh_id": 10688,
+        "name": "St Stephens Episcopal Church",
+        "city": "",
+        "state": "IA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 37501,
+        "score": 3
       },
       {
         "id": "10686",
@@ -13266,10 +13485,21 @@
         "name": "St. Julian's Episcopal Church",
         "city": "Douglasville",
         "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 46,
         "estimated_total_comp": 37501,
-        "score": 5
+        "score": 3
+      },
+      {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 3
       },
       {
         "id": "10631",
@@ -13280,28 +13510,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 90,
         "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
-        "estimated_total_comp": 37501,
-        "score": 3
-      },
-      {
-        "id": "10584",
-        "vh_id": 10584,
-        "name": "St. Augustine's Episcopal Church",
-        "city": "Gary",
-        "state": "IN",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 20,
-        "estimated_total_comp": 62501,
         "score": 3
       }
     ]
@@ -16066,6 +16274,17 @@
         "score": 7
       },
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10533",
         "vh_id": 10533,
         "name": "St. Columba's ",
@@ -16095,17 +16314,6 @@
         "state": "MS",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 319,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9939",
-        "vh_id": 9939,
-        "name": "St. Mary's Episcopal Church",
-        "city": "Stuart",
-        "state": "FL",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 421,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -18926,153 +19134,16 @@
   {
     "vh_id": 10227,
     "name": "St Patricks Church",
-    "diocese": "Southern Ohio",
-    "state": "OH",
-    "vh_status": "Developing profile",
+    "diocese": "Missouri",
+    "state": "MO",
+    "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10227",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "St Patricks Church",
     "receiving_names_from": "05/13/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": 5208,
-      "name": "St. Patrick's Episcopal Church",
-      "street": "7121 Muirfield Dr",
-      "city": "Dublin",
-      "state": "OH",
-      "zip": "43017-2863",
-      "phone": "614-766-2664",
-      "email": "church@pats-dublin.org",
-      "website": "https://pats-dublin.org",
-      "type": "church",
-      "lat": 40.11375,
-      "lng": -83.15511
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "St Patricks Episcopal Church (Dublin)",
-      "years": {
-        "2015": {
-          "averageAttendance": 250,
-          "plateAndPledge": 501061,
-          "membership": 946
-        },
-        "2016": {
-          "averageAttendance": 253,
-          "plateAndPledge": 546268,
-          "membership": 957
-        },
-        "2017": {
-          "averageAttendance": 268,
-          "plateAndPledge": 534954,
-          "membership": 984
-        },
-        "2018": {
-          "averageAttendance": 260,
-          "plateAndPledge": 524567,
-          "membership": 1021
-        },
-        "2019": {
-          "averageAttendance": 263,
-          "plateAndPledge": 555840,
-          "membership": 978
-        },
-        "2020": {
-          "averageAttendance": 291,
-          "plateAndPledge": 506761,
-          "membership": 956
-        },
-        "2021": {
-          "averageAttendance": 77,
-          "plateAndPledge": 568233,
-          "membership": 866
-        },
-        "2022": {
-          "averageAttendance": 151,
-          "plateAndPledge": 513353,
-          "membership": 663
-        },
-        "2023": {
-          "averageAttendance": 154,
-          "plateAndPledge": 488160,
-          "membership": 584
-        },
-        "2024": {
-          "averageAttendance": 173,
-          "plateAndPledge": 586462,
-          "membership": null
-        }
-      }
-    },
-    "housing_type": "Cash Stipend",
-    "diocese_percentiles": {
-      "asa": 91,
-      "asa_value": 173,
-      "plate_pledge": 90,
-      "plate_pledge_value": 586462
-    },
-    "similar_positions": [
-      {
-        "id": "10685",
-        "vh_id": 10685,
-        "name": "St. Francis-in-the-Valley",
-        "city": "Green Valley",
-        "state": "AZ",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 142,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10632",
-        "vh_id": 10632,
-        "name": "Christ the King Episcopal Church",
-        "city": "Santa Rosa Beach",
-        "state": "FL",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 152,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Church of the Epiphany",
-        "city": "Urbana",
-        "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 35,
-        "estimated_total_comp": 62501,
-        "score": 5
-      },
-      {
-        "id": "10694",
-        "vh_id": 10694,
-        "name": "St. Paul's Episcopal Church",
-        "city": "Salt Lake City",
-        "state": "UT",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 109,
-        "estimated_total_comp": null,
-        "score": 3
-      },
-      {
-        "id": "10690",
-        "vh_id": 10690,
-        "name": "St. James the Apostle / Iglesia de Santiago",
-        "city": "Oakland",
-        "state": "CA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 20,
-        "estimated_total_comp": null,
-        "score": 3
-      }
-    ],
-    "census": {
-      "median_household_income": 128587,
-      "population": 41837
-    }
+    "housing_type": "Cash Stipend"
   },
   {
     "vh_id": 10226,
@@ -19314,6 +19385,17 @@
     },
     "similar_positions": [
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -19354,17 +19436,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10538",
-        "vh_id": 10538,
-        "name": "All Souls Episcopal Church",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 58,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -19527,17 +19598,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -19567,6 +19627,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -19666,6 +19737,17 @@
     },
     "similar_positions": [
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10547",
         "vh_id": 10547,
         "name": "St. Alban's Episcopal Church",
@@ -19708,17 +19790,6 @@
         "asa": 361,
         "estimated_total_comp": null,
         "score": 5
-      },
-      {
-        "id": "9700",
-        "vh_id": 9700,
-        "name": "St. John's Episcopal Church",
-        "city": "Tampa",
-        "state": "FL",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 244,
-        "estimated_total_comp": null,
-        "score": 5
       }
     ],
     "census": {
@@ -19733,7 +19804,7 @@
     "state": "NY",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10217",
-    "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "05/15/2025",
     "receiving_names_to": "Open ended",
@@ -20043,7 +20114,7 @@
         "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
@@ -20155,17 +20226,6 @@
     },
     "similar_positions": [
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10343",
         "vh_id": 10343,
         "name": "St. Andrew's Episcopal Church",
@@ -20206,6 +20266,17 @@
         "state": "FL",
         "position_type": "Assistant/Associate/Curate",
         "asa": 269,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9409",
+        "vh_id": 9409,
+        "name": "St. John's Episcopal Church, Wilmington, North Carolina",
+        "city": "Wilmington",
+        "state": "NC",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 196,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -20409,13 +20480,13 @@
     },
     "similar_positions": [
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -20585,17 +20656,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10541",
         "vh_id": 10541,
         "name": "St. Andrew's, College Park",
@@ -20638,6 +20698,17 @@
         "asa": 80,
         "estimated_total_comp": null,
         "score": 5
+      },
+      {
+        "id": "10354",
+        "vh_id": 10354,
+        "name": "Christ Church",
+        "city": "Rochester",
+        "state": "NY",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
       }
     ],
     "census": {
@@ -20678,153 +20749,73 @@
     "state": "OH",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10197",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": 5239,
-      "name": "Church of the Epiphany",
-      "street": "230 Scioto St",
-      "city": "Urbana",
-      "state": "OH",
-      "zip": "43078-2128",
-      "phone": "(937) 653-3497",
-      "email": "office@nmvec.org",
-      "website": "https://www.nmvec.org",
-      "type": "church",
-      "lat": 40.10822,
-      "lng": -83.74951
-    },
-    "match_confidence": "high",
-    "parochial": {
-      "congregationCity": "Church of the Epiphany (Urbana)",
-      "years": {
-        "2015": {
-          "averageAttendance": 32,
-          "plateAndPledge": 57134,
-          "membership": 44
-        },
-        "2016": {
-          "averageAttendance": 28,
-          "plateAndPledge": 57040,
-          "membership": 45
-        },
-        "2017": {
-          "averageAttendance": 29,
-          "plateAndPledge": 63378,
-          "membership": 45
-        },
-        "2018": {
-          "averageAttendance": 20,
-          "plateAndPledge": 45959,
-          "membership": 46
-        },
-        "2019": {
-          "averageAttendance": 21,
-          "plateAndPledge": 48419,
-          "membership": 46
-        },
-        "2020": {
-          "averageAttendance": 19,
-          "plateAndPledge": 41897,
-          "membership": 45
-        },
-        "2021": {
-          "averageAttendance": 17,
-          "plateAndPledge": 49053,
-          "membership": 46
-        },
-        "2022": {
-          "averageAttendance": 27,
-          "plateAndPledge": 55541,
-          "membership": 49
-        },
-        "2023": {
-          "averageAttendance": 34,
-          "plateAndPledge": 58131,
-          "membership": 52
-        },
-        "2024": {
-          "averageAttendance": 35,
-          "plateAndPledge": 70352,
-          "membership": null
-        }
-      }
-    },
     "housing_type": "Cash Stipend",
-    "diocese_percentiles": {
-      "asa": 43,
-      "asa_value": 35,
-      "plate_pledge": 23,
-      "plate_pledge_value": 70352
-    },
     "estimated_total_comp": 62501,
     "comp_breakdown": {
       "stipend": 62501
     },
     "similar_positions": [
       {
-        "id": "10565",
-        "vh_id": 10565,
-        "name": "Mt. Zion Episcopal Church",
-        "city": "Hedgesville",
-        "state": "WV",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 36,
+        "id": "10678",
+        "vh_id": 10678,
+        "name": "St. Mark's Episcopal Church, Portland",
+        "city": "Portland",
+        "state": "MO",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 11,
         "estimated_total_comp": 62501,
-        "score": 8
-      },
-      {
-        "id": "10635",
-        "vh_id": 10635,
-        "name": "St. Boniface Episcopal Church",
-        "city": "Comfort",
-        "state": "TX",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 42,
-        "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10615",
-        "vh_id": 10615,
-        "name": "St. Andrew's Episcopal Church",
-        "city": "Livingston",
-        "state": "MT",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 36,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10576",
-        "vh_id": 10576,
-        "name": "St. Paul's Episcopal Church",
-        "city": "Muskegon",
-        "state": "MI",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 42,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10525",
-        "vh_id": 10525,
+        "id": "9992",
+        "vh_id": 9992,
         "name": "Trinity Episcopal Church",
-        "city": "Hamburg",
-        "state": "NY",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 41,
+        "city": "Toledo",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 98,
         "estimated_total_comp": null,
-        "score": 5
+        "score": 4
+      },
+      {
+        "id": "9991",
+        "vh_id": 9991,
+        "name": "St. Hubert's Church",
+        "city": "Kirtland Hills",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "9966",
+        "vh_id": 9966,
+        "name": "Christ Episcopal Church",
+        "city": "Warren",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 67,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "9944",
+        "vh_id": 9944,
+        "name": "Christ Episcopal Church",
+        "city": "Shaker Heights",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 88,
+        "estimated_total_comp": null,
+        "score": 4
       }
-    ],
-    "census": {
-      "median_household_income": 69137,
-      "population": 20269
-    }
+    ]
   },
   {
     "vh_id": 10196,
@@ -21190,17 +21181,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -21208,6 +21188,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10552",
+        "vh_id": 10552,
+        "name": "St. Anne's",
+        "city": "Damascus",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 60,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -22317,17 +22308,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -22335,6 +22315,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10552",
+        "vh_id": 10552,
+        "name": "St. Anne's",
+        "city": "Damascus",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 60,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -22456,17 +22447,6 @@
         "score": 7
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10541",
         "vh_id": 10541,
         "name": "St. Andrew's, College Park",
@@ -22485,6 +22465,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10537",
+        "vh_id": 10537,
+        "name": "St. Stephen & the Incarnation",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 91,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -22860,6 +22851,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10576",
         "vh_id": 10576,
         "name": "St. Paul's Episcopal Church",
@@ -22878,17 +22880,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 61,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10552",
-        "vh_id": 10552,
-        "name": "St. Anne's",
-        "city": "Damascus",
-        "state": "MD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 60,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -23812,17 +23803,6 @@
         "score": 7
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10541",
         "vh_id": 10541,
         "name": "St. Andrew's, College Park",
@@ -23841,6 +23821,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10537",
+        "vh_id": 10537,
+        "name": "St. Stephen & the Incarnation",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 91,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -24054,8 +24045,8 @@
   },
   {
     "vh_id": 10106,
-    "name": "Unknown Position",
-    "diocese": "",
+    "name": "Position in Michigan",
+    "diocese": "Michigan",
     "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10106",
@@ -24572,17 +24563,6 @@
     },
     "similar_positions": [
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "9959",
         "vh_id": 9959,
         "name": "Bethesda by the Sea Episcopal Church",
@@ -24623,6 +24603,17 @@
         "state": "MI",
         "position_type": "Assistant/Associate/Curate",
         "asa": 189,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "10093",
+        "vh_id": 10093,
+        "name": "St. Clare of Assisi Episcopal Church",
+        "city": "Ann Arbor",
+        "state": "MI",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 100,
         "estimated_total_comp": null,
         "score": 4
       }
@@ -25167,6 +25158,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10576",
         "vh_id": 10576,
         "name": "St. Paul's Episcopal Church",
@@ -25185,17 +25187,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 61,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10552",
-        "vh_id": 10552,
-        "name": "St. Anne's",
-        "city": "Damascus",
-        "state": "MD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 60,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -25630,6 +25621,17 @@
         "score": 7
       },
       {
+        "id": "8636",
+        "vh_id": 8636,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Montrose",
+        "state": "PA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
         "id": "10270",
         "vh_id": 10270,
         "name": "St. Thomas' Church, Amenia Union",
@@ -25648,17 +25650,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 18,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10029",
-        "vh_id": 10029,
-        "name": "St. Luke's Episcopal Church, Katonah",
-        "city": "Katonah",
-        "state": "NY",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 23,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -25793,17 +25784,6 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10575",
         "vh_id": 10575,
         "name": "St. Thomas, Croom",
@@ -25822,6 +25802,17 @@
         "state": "WI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 29,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10325",
+        "vh_id": 10325,
+        "name": "St. James' Episcopal Church",
+        "city": "Dexter",
+        "state": "MI",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 36,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -26629,6 +26620,17 @@
         "score": 7
       },
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10547",
         "vh_id": 10547,
         "name": "St. Alban's Episcopal Church",
@@ -26658,17 +26660,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 318,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10219",
-        "vh_id": 10219,
-        "name": "St. Peter's Episcopal Church",
-        "city": "Oxford",
-        "state": "MS",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 319,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -29689,14 +29680,14 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
+        "id": "10553",
+        "vh_id": 10553,
+        "name": "St. Luke's, DC",
+        "city": "Washington",
+        "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
+        "asa": 61,
+        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -29958,17 +29949,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 7
-      },
-      {
         "id": "9944",
         "vh_id": 9944,
         "name": "Christ Episcopal Church",
@@ -30000,6 +29980,17 @@
         "asa": 89,
         "estimated_total_comp": null,
         "score": 7
+      },
+      {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 5
       },
       {
         "id": "10541",
@@ -30108,17 +30099,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 7
-      },
-      {
         "id": "9966",
         "vh_id": 9966,
         "name": "Christ Episcopal Church",
@@ -30160,6 +30140,17 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 73,
         "estimated_total_comp": 132501,
+        "score": 5
+      },
+      {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
         "score": 5
       }
     ],
@@ -30342,17 +30333,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 7
-      },
-      {
         "id": "9991",
         "vh_id": 9991,
         "name": "St. Hubert's Church",
@@ -30383,6 +30363,17 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 73,
         "estimated_total_comp": 132501,
+        "score": 5
+      },
+      {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
         "score": 5
       },
       {
@@ -30503,13 +30494,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -31116,7 +31107,7 @@
         "name": "St. Julian's Episcopal Church",
         "city": "Douglasville",
         "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 46,
         "estimated_total_comp": 37501,
         "score": 3
@@ -31241,17 +31232,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 7
-      },
-      {
         "id": "9992",
         "vh_id": 9992,
         "name": "Trinity Episcopal Church",
@@ -31292,6 +31272,17 @@
         "state": "OH",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 74,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "9822",
+        "vh_id": 9822,
+        "name": "St. Timothy's Church",
+        "city": "Perrysburg",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 89,
         "estimated_total_comp": null,
         "score": 7
       }
@@ -31413,13 +31404,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -31563,6 +31554,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -31581,17 +31583,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10543",
-        "vh_id": 10543,
-        "name": "St. Paul's Rock Creek",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 48,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -32493,13 +32484,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -32656,17 +32647,6 @@
         "score": 5
       },
       {
-        "id": "8636",
-        "vh_id": 8636,
-        "name": "St. Paul's Episcopal Church",
-        "city": "Montrose",
-        "state": "PA",
-        "position_type": "Priest-in-Charge Shared Ministry",
-        "asa": 24,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
         "id": "10592",
         "vh_id": 10592,
         "name": "Christ (Budd Lake)\nSt James (Hackettstown)",
@@ -32696,6 +32676,17 @@
         "state": "CA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 20,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "10655",
+        "vh_id": 10655,
+        "name": "Christ United (St Annes)",
+        "city": "Dewitt",
+        "state": "MI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 18,
         "estimated_total_comp": null,
         "score": 3
       }
@@ -33033,8 +33024,8 @@
   },
   {
     "vh_id": 9889,
-    "name": "Unknown Position",
-    "diocese": "",
+    "name": "Position in New Jersey",
+    "diocese": "New Jersey",
     "state": "",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9889",
@@ -33358,6 +33349,17 @@
         "score": 5
       },
       {
+        "id": "10299",
+        "vh_id": 10299,
+        "name": "Church of the Resurrection, Spokane Valley",
+        "city": "Spokane Valley",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10165",
         "vh_id": 10165,
         "name": "St. Stephen's Memorial Church",
@@ -33376,17 +33378,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 36,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10067",
-        "vh_id": 10067,
-        "name": "Church of the Incarnation (Pittsfield Township)",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 38,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -33544,17 +33535,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 7
-      },
-      {
         "id": "9991",
         "vh_id": 9991,
         "name": "St. Hubert's Church",
@@ -33597,6 +33577,17 @@
         "asa": 89,
         "estimated_total_comp": null,
         "score": 7
+      },
+      {
+        "id": "10650",
+        "vh_id": 10650,
+        "name": "St. Mary and St. Jude",
+        "city": "Northeast Harbor",
+        "state": "ME",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": 132501,
+        "score": 5
       }
     ],
     "census": {
@@ -33844,17 +33835,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 7
-      },
-      {
         "id": "9992",
         "vh_id": 9992,
         "name": "Trinity Episcopal Church",
@@ -33895,6 +33875,17 @@
         "state": "OH",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 88,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "9836",
+        "vh_id": 9836,
+        "name": "St. Michael's in the Hills Church",
+        "city": "Toledo",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 74,
         "estimated_total_comp": null,
         "score": 7
       }
@@ -34081,6 +34072,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -34099,17 +34101,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10543",
-        "vh_id": 10543,
-        "name": "St. Paul's Rock Creek",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 48,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -34285,6 +34276,17 @@
         "score": 7
       },
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "9781",
         "vh_id": 9781,
         "name": "Trinity Episcopal Church",
@@ -34314,17 +34316,6 @@
         "state": "ME",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 26,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9322",
-        "vh_id": 9322,
-        "name": "St. John's Episcopal Church",
-        "city": "Bedford",
-        "state": "IN",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 23,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -34598,13 +34589,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -34759,17 +34750,6 @@
         "score": 7
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10541",
         "vh_id": 10541,
         "name": "St. Andrew's, College Park",
@@ -34788,6 +34768,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10537",
+        "vh_id": 10537,
+        "name": "St. Stephen & the Incarnation",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 91,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -35001,7 +34992,7 @@
         "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
@@ -35262,6 +35253,17 @@
     },
     "similar_positions": [
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10297",
         "vh_id": 10297,
         "name": "St. Paul's Episcopal Church",
@@ -35302,17 +35304,6 @@
         "state": "CA",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 17,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9322",
-        "vh_id": 9322,
-        "name": "St. John's Episcopal Church",
-        "city": "Bedford",
-        "state": "IN",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 23,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -35423,6 +35414,17 @@
         "score": 5
       },
       {
+        "id": "10299",
+        "vh_id": 10299,
+        "name": "Church of the Resurrection, Spokane Valley",
+        "city": "Spokane Valley",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10165",
         "vh_id": 10165,
         "name": "St. Stephen's Memorial Church",
@@ -35452,17 +35454,6 @@
         "state": "MA",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 46,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9882",
-        "vh_id": 9882,
-        "name": "Church of Christ the King",
-        "city": "Willingboro",
-        "state": "NJ",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 45,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -35584,17 +35575,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -35613,6 +35593,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -35769,14 +35760,14 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
-        "estimated_total_comp": 87501,
+        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -36188,17 +36179,6 @@
     },
     "similar_positions": [
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10343",
         "vh_id": 10343,
         "name": "St. Andrew's Episcopal Church",
@@ -36239,6 +36219,17 @@
         "state": "FL",
         "position_type": "Assistant/Associate/Curate",
         "asa": 269,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9116",
+        "vh_id": 9116,
+        "name": "Trinity Episcopal Church",
+        "city": "Santa Barbara",
+        "state": "CA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 245,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -36875,13 +36866,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -37030,7 +37021,7 @@
         "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 78,
         "estimated_total_comp": 87501,
         "score": 3
@@ -37320,17 +37311,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -37360,6 +37340,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -37804,6 +37795,17 @@
     },
     "similar_positions": [
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
         "id": "10297",
         "vh_id": 10297,
         "name": "St. Paul's Episcopal Church",
@@ -37846,17 +37848,6 @@
         "asa": 16,
         "estimated_total_comp": null,
         "score": 5
-      },
-      {
-        "id": "10690",
-        "vh_id": 10690,
-        "name": "St. James the Apostle / Iglesia de Santiago",
-        "city": "Oakland",
-        "state": "CA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 20,
-        "estimated_total_comp": null,
-        "score": 3
       }
     ],
     "census": {
@@ -38180,13 +38171,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -38332,6 +38323,17 @@
     },
     "similar_positions": [
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10650",
         "vh_id": 10650,
         "name": "St. Mary and St. Jude",
@@ -38372,17 +38374,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 48,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10542",
-        "vh_id": 10542,
-        "name": "St. Monica and St. James Capitol Hill",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 53,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -38517,17 +38508,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10540",
         "vh_id": 10540,
         "name": "Church of the Redeemer",
@@ -38546,6 +38526,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 91,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10535",
+        "vh_id": 10535,
+        "name": "St. Patrick's, DC",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 80,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -40110,7 +40101,7 @@
         "name": "St. Julian's Episcopal Church",
         "city": "Douglasville",
         "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 46,
         "estimated_total_comp": 37501,
         "score": 3
@@ -40255,13 +40246,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -40581,17 +40572,6 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10575",
         "vh_id": 10575,
         "name": "St. Thomas, Croom",
@@ -40610,6 +40590,17 @@
         "state": "WI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 29,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10325",
+        "vh_id": 10325,
+        "name": "St. James' Episcopal Church",
+        "city": "Dexter",
+        "state": "MI",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 36,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -45223,17 +45214,6 @@
     },
     "similar_positions": [
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10343",
         "vh_id": 10343,
         "name": "St. Andrew's Episcopal Church",
@@ -45274,6 +45254,17 @@
         "state": "FL",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 214,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9788",
+        "vh_id": 9788,
+        "name": "St. Michael & All Angels Church",
+        "city": "Portland",
+        "state": "OR",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 270,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -46766,13 +46757,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -47385,19 +47376,6 @@
     "open_ended": true
   },
   {
-    "vh_id": 9424,
-    "name": "Position in Los Angeles",
-    "diocese": "Los Angeles",
-    "state": "",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/9424",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "",
-    "receiving_names_from": "04/01/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true
-  },
-  {
     "vh_id": 9422,
     "name": "Position in Churches in Europe",
     "diocese": "Churches in Europe",
@@ -47463,6 +47441,17 @@
         "score": 4
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 4
+      },
+      {
         "id": "10631",
         "vh_id": 10631,
         "name": "St. Michael's Episcopal Church",
@@ -47474,20 +47463,9 @@
         "score": 4
       },
       {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Episcopal Church",
-        "city": "Clarksville",
-        "state": "TN",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 120,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10580",
-        "vh_id": 10580,
-        "name": "Christ Episcopal Church",
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St Thomas Episcopal Church",
         "city": "",
         "state": "",
         "position_type": "Rector/Priest-in-Charge",
@@ -47751,6 +47729,17 @@
     },
     "similar_positions": [
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 6
+      },
+      {
         "id": "10631",
         "vh_id": 10631,
         "name": "St. Michael's Episcopal Church",
@@ -47789,17 +47778,6 @@
         "name": "Calvary Church",
         "city": "Louisville",
         "state": "KY",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 88,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10559",
-        "vh_id": 10559,
-        "name": "St. Mark's Episcopal Church",
-        "city": "Orchard Park",
-        "state": "NY",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 88,
         "estimated_total_comp": null,
@@ -48487,7 +48465,7 @@
         "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
@@ -48498,7 +48476,7 @@
         "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 78,
         "estimated_total_comp": 87501,
         "score": 3
@@ -48681,6 +48659,17 @@
     },
     "similar_positions": [
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10541",
         "vh_id": 10541,
         "name": "St. Andrew's, College Park",
@@ -48721,17 +48710,6 @@
         "state": "MT",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 123,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10288",
-        "vh_id": 10288,
-        "name": "All Souls' Episcopal Church",
-        "city": "North Fort Myers",
-        "state": "FL",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 93,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -48879,6 +48857,17 @@
         "score": 7
       },
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10547",
         "vh_id": 10547,
         "name": "St. Alban's Episcopal Church",
@@ -48898,17 +48887,6 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 318,
         "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10306",
-        "vh_id": 10306,
-        "name": "St. Mark's Episcopal Church",
-        "city": "Palm Beach Gardens",
-        "state": "FL",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 296,
-        "estimated_total_comp": 200001,
         "score": 5
       }
     ],
@@ -49029,6 +49007,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -49047,17 +49036,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10543",
-        "vh_id": 10543,
-        "name": "St. Paul's Rock Creek",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 48,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -49157,17 +49135,6 @@
     },
     "similar_positions": [
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10089",
         "vh_id": 10089,
         "name": "Christ Church Cranbrook",
@@ -49210,6 +49177,17 @@
         "asa": 267,
         "estimated_total_comp": null,
         "score": 5
+      },
+      {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 3
       }
     ],
     "census": {
@@ -49370,6 +49348,17 @@
         "score": 5
       },
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "9809",
         "vh_id": 9809,
         "name": "Ascension Episcopal Parish",
@@ -49394,17 +49383,6 @@
       {
         "id": "9781",
         "vh_id": 9781,
-        "name": "Trinity Episcopal Church",
-        "city": "Wrentham",
-        "state": "MA",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 30,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9631",
-        "vh_id": 9631,
         "name": "Trinity Episcopal Church",
         "city": "Wrentham",
         "state": "MA",
@@ -49744,17 +49722,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10540",
         "vh_id": 10540,
         "name": "Church of the Redeemer",
@@ -49762,6 +49729,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10537",
+        "vh_id": 10537,
+        "name": "St. Stephen & the Incarnation",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 91,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -50548,17 +50526,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -50566,6 +50533,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10552",
+        "vh_id": 10552,
+        "name": "St. Anne's",
+        "city": "Damascus",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 60,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -50891,6 +50869,17 @@
         "score": 5
       },
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10297",
         "vh_id": 10297,
         "name": "St. Paul's Episcopal Church",
@@ -50920,17 +50909,6 @@
         "state": "OR",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 22,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9733",
-        "vh_id": 9733,
-        "name": "St. David Emmanuel, Shoreline",
-        "city": "Shoreline",
-        "state": "WA",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 18,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -51130,6 +51108,17 @@
         "score": 5
       },
       {
+        "id": "10299",
+        "vh_id": 10299,
+        "name": "Church of the Resurrection, Spokane Valley",
+        "city": "Spokane Valley",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10165",
         "vh_id": 10165,
         "name": "St. Stephen's Memorial Church",
@@ -51148,17 +51137,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 36,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10067",
-        "vh_id": 10067,
-        "name": "Church of the Incarnation (Pittsfield Township)",
-        "city": "Ann Arbor",
-        "state": "MI",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 38,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -51284,17 +51262,6 @@
     },
     "similar_positions": [
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10541",
         "vh_id": 10541,
         "name": "St. Andrew's, College Park",
@@ -51335,6 +51302,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 80,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10354",
+        "vh_id": 10354,
+        "name": "Christ Church",
+        "city": "Rochester",
+        "state": "NY",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -51914,17 +51892,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -51954,6 +51921,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -52095,7 +52073,7 @@
         "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
@@ -52255,13 +52233,13 @@
     },
     "similar_positions": [
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -52935,17 +52913,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -52964,6 +52931,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10543",
+        "vh_id": 10543,
+        "name": "St. Paul's Rock Creek",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 48,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -53120,14 +53098,14 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
-        "estimated_total_comp": 87501,
+        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -53315,17 +53293,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -53355,6 +53322,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 78,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -53693,6 +53671,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -53722,17 +53711,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 48,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10542",
-        "vh_id": 10542,
-        "name": "St. Monica and St. James Capitol Hill",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 53,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -54535,6 +54513,17 @@
         "score": 7
       },
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10555",
         "vh_id": 10555,
         "name": "Grace Church, Silver Spring",
@@ -54553,17 +54542,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 278,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10340",
-        "vh_id": 10340,
-        "name": "St. John's Episcopal Church",
-        "city": "Royal Oak",
-        "state": "MI",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 189,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -54897,6 +54875,17 @@
         "score": 7
       },
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10555",
         "vh_id": 10555,
         "name": "Grace Church, Silver Spring",
@@ -54915,17 +54904,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 278,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10340",
-        "vh_id": 10340,
-        "name": "St. John's Episcopal Church",
-        "city": "Royal Oak",
-        "state": "MI",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 189,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -55352,17 +55330,6 @@
     },
     "similar_positions": [
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10390",
         "vh_id": 10390,
         "name": "Holy Cross Faith Memorial Episcopal Church",
@@ -55403,6 +55370,17 @@
         "state": "NM",
         "position_type": "Assistant/Associate/Curate",
         "asa": 259,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10113",
+        "vh_id": 10113,
+        "name": "St. John's Episcopal Church",
+        "city": "Royal Oak",
+        "state": "MI",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 189,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -55889,13 +55867,13 @@
     },
     "similar_positions": [
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -56248,17 +56226,6 @@
         "score": 7
       },
       {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Episcopal Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Assistant/Associate/Curate",
-        "asa": 303,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10343",
         "vh_id": 10343,
         "name": "St. Andrew's Episcopal Church",
@@ -56266,6 +56233,17 @@
         "state": "MI",
         "position_type": "Assistant/Associate/Curate",
         "asa": 235,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10212",
+        "vh_id": 10212,
+        "name": "Cathedral Church of St. John",
+        "city": "Albuquerque",
+        "state": "NM",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 259,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -59075,13 +59053,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -59238,13 +59216,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -59401,17 +59379,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -59441,6 +59408,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10538",
+        "vh_id": 10538,
+        "name": "All Souls Episcopal Church",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 58,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -59555,6 +59533,17 @@
         "score": 4
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 4
+      },
+      {
         "id": "10631",
         "vh_id": 10631,
         "name": "St. Michael's Episcopal Church",
@@ -59562,17 +59551,6 @@
         "state": "LA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": 90,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Episcopal Church",
-        "city": "Clarksville",
-        "state": "TN",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 120,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -60370,14 +60348,14 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
+        "id": "10540",
+        "vh_id": 10540,
+        "name": "Church of the Redeemer",
+        "city": "Bethesda",
+        "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
-        "estimated_total_comp": 87501,
+        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -60498,6 +60476,17 @@
         "score": 7
       },
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -60516,17 +60505,6 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10543",
-        "vh_id": 10543,
-        "name": "St. Paul's Rock Creek",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 48,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -60837,6 +60815,17 @@
         "score": 7
       },
       {
+        "id": "8636",
+        "vh_id": 8636,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Montrose",
+        "state": "PA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
         "id": "10270",
         "vh_id": 10270,
         "name": "St. Thomas' Church, Amenia Union",
@@ -60855,17 +60844,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 18,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10029",
-        "vh_id": 10029,
-        "name": "St. Luke's Episcopal Church, Katonah",
-        "city": "Katonah",
-        "state": "NY",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 23,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -63683,6 +63661,17 @@
     },
     "similar_positions": [
       {
+        "id": "10300",
+        "vh_id": 10300,
+        "name": "St. Andrew's Episcopal Church, Spokane",
+        "city": "Spokane",
+        "state": "WA",
+        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10297",
         "vh_id": 10297,
         "name": "St. Paul's Episcopal Church",
@@ -63723,17 +63712,6 @@
         "state": "OR",
         "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
         "asa": 22,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9781",
-        "vh_id": 9781,
-        "name": "Trinity Episcopal Church",
-        "city": "Wrentham",
-        "state": "MA",
-        "position_type": "Rector / Vicar / Priest-in-Charge (Part-time)",
-        "asa": 30,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -63868,6 +63846,17 @@
         "score": 7
       },
       {
+        "id": "8636",
+        "vh_id": 8636,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Montrose",
+        "state": "PA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
         "id": "10270",
         "vh_id": 10270,
         "name": "St. Thomas' Church, Amenia Union",
@@ -63886,17 +63875,6 @@
         "state": "MI",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 18,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10029",
-        "vh_id": 10029,
-        "name": "St. Luke's Episcopal Church, Katonah",
-        "city": "Katonah",
-        "state": "NY",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 23,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -63926,7 +63904,7 @@
     "state": "PA",
     "vh_status": "Search complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8636",
-    "position_type": "Priest-in-Charge Shared Ministry",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "",
     "receiving_names_from": "",
     "receiving_names_to": "Open ended",
@@ -64009,28 +63987,6 @@
     },
     "similar_positions": [
       {
-        "id": "10249",
-        "vh_id": 10249,
-        "name": "Trinity Church, Fishkill",
-        "city": "Fishkill",
-        "state": "NY",
-        "position_type": "Priest-in-Charge Shared Ministry",
-        "asa": 29,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10237",
-        "vh_id": 10237,
-        "name": "St. Luke's Episcopal Church, Katonah",
-        "city": "Katonah",
-        "state": "NY",
-        "position_type": "Priest-in-Charge Shared Ministry",
-        "asa": 23,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
         "id": "10065",
         "vh_id": 10065,
         "name": "St. Mark's Episcopal Church",
@@ -64039,18 +63995,7 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 21,
         "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "9895",
-        "vh_id": 9895,
-        "name": "Trinity Episcopal Church",
-        "city": "Woodbridge",
-        "state": "NJ",
-        "position_type": "Priest-in-Charge Shared Ministry",
-        "asa": 21,
-        "estimated_total_comp": null,
-        "score": 5
+        "score": 7
       },
       {
         "id": "8870",
@@ -64060,6 +64005,39 @@
         "state": "PA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 20,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "8638",
+        "vh_id": 8638,
+        "name": "St. Brigid's Church",
+        "city": "Nazareth",
+        "state": "PA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 22,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "10569",
+        "vh_id": 10569,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Ripon",
+        "state": "WI",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 29,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10270",
+        "vh_id": 10270,
+        "name": "St. Thomas' Church, Amenia Union",
+        "city": "Amenia",
+        "state": "NY",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 19,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -64385,11 +64363,11 @@
   {
     "vh_id": 8607,
     "name": "The Episcopal Church of St Matthew",
-    "diocese": "Arizona",
+    "diocese": "Kansas",
     "state": "KS",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8607",
-    "position_type": "Rector/Priest-in-Charge",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
     "congregation": "The Episcopal Church of St Matthew",
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
@@ -64490,28 +64468,6 @@
     },
     "similar_positions": [
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St. Stephen's Episcopal Church",
-        "city": "Newton",
-        "state": "IA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 21,
-        "estimated_total_comp": 37501,
-        "score": 6
-      },
-      {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St. Julian's Episcopal Church",
-        "city": "Douglasville",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 46,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10588",
         "vh_id": 10588,
         "name": "Church of the Good Shepherd",
@@ -64523,15 +64479,26 @@
         "score": 5
       },
       {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Church of the Epiphany",
-        "city": "Urbana",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 3
+      },
+      {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": 35,
-        "estimated_total_comp": 62501,
-        "score": 5
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 3
       },
       {
         "id": "10631",
@@ -64542,6 +64509,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 90,
         "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
         "score": 3
       }
     ],
@@ -64651,6 +64629,17 @@
         "score": 5
       },
       {
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 78,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10401",
         "vh_id": 10401,
         "name": "St. Martin in the Fields",
@@ -64681,17 +64670,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": 62,
         "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
-        "id": "9417",
-        "vh_id": 9417,
-        "name": "St. Ann's Episcopal Church",
-        "city": "Windham",
-        "state": "ME",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": 77,
-        "estimated_total_comp": null,
         "score": 5
       }
     ],
@@ -64966,6 +64944,17 @@
     },
     "similar_positions": [
       {
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 46,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -65006,17 +64995,6 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 53,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10538",
-        "vh_id": 10538,
-        "name": "All Souls Episcopal Church",
-        "city": "Washington",
-        "state": "DC",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 58,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -65125,7 +65103,7 @@
         "name": "St. Julian's Episcopal Church",
         "city": "Douglasville",
         "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
@@ -65136,7 +65114,7 @@
         "name": "Christ Episcopal Church",
         "city": "Indiana",
         "state": "PA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": 38,
         "estimated_total_comp": 37501,
         "score": 5
@@ -65281,13 +65259,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -65589,6 +65567,17 @@
     },
     "similar_positions": [
       {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10533",
         "vh_id": 10533,
         "name": "St. Columba's ",
@@ -65629,17 +65618,6 @@
         "state": "MS",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 319,
-        "estimated_total_comp": null,
-        "score": 5
-      },
-      {
-        "id": "10038",
-        "vh_id": 10038,
-        "name": "St. Bartholomew's Church, Manhattan",
-        "city": "New York",
-        "state": "NY",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 361,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -65952,17 +65930,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -65992,6 +65959,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 78,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10537",
+        "vh_id": 10537,
+        "name": "St. Stephen & the Incarnation",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 91,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -66141,13 +66119,13 @@
         "score": 7
       },
       {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
+        "id": "10686",
+        "vh_id": 10686,
+        "name": "St. Julian's Episcopal Church",
+        "city": "Douglasville",
+        "state": "GA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 38,
+        "asa": 46,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -66355,14 +66333,14 @@
         "score": 5
       },
       {
-        "id": "10633",
-        "vh_id": 10633,
-        "name": "Calvary Church",
-        "city": "Louisville",
-        "state": "KY",
+        "id": "10634",
+        "vh_id": 10634,
+        "name": "St. John's Episcopal Church",
+        "city": "Youngstown",
+        "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": 88,
-        "estimated_total_comp": null,
+        "asa": 78,
+        "estimated_total_comp": 87501,
         "score": 5
       }
     ],
@@ -67565,17 +67543,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10540",
         "vh_id": 10540,
         "name": "Church of the Redeemer",
@@ -67594,6 +67561,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 91,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10535",
+        "vh_id": 10535,
+        "name": "St. Patrick's, DC",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 80,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -67754,17 +67732,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -67783,6 +67750,17 @@
         "state": "MD",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 60,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10543",
+        "vh_id": 10543,
+        "name": "St. Paul's Rock Creek",
+        "city": "Washington",
+        "state": "DC",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 48,
         "estimated_total_comp": null,
         "score": 5
       }
@@ -67915,17 +67893,6 @@
         "score": 5
       },
       {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "St. John's Episcopal Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 78,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10553",
         "vh_id": 10553,
         "name": "St. Luke's, DC",
@@ -67933,6 +67900,17 @@
         "state": "DC",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10552",
+        "vh_id": 10552,
+        "name": "St. Anne's",
+        "city": "Damascus",
+        "state": "MD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 60,
         "estimated_total_comp": null,
         "score": 5
       }

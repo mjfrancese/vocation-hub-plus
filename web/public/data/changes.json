@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "id": 1,
+    "position_id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
+    "change_type": "updated",
+    "changed_at": "2026-03-30 07:18:47",
+    "details": "{\"state\":{\"before\":\"\",\"after\":\"WI\"}}",
+    "name": "St Andrews (Madison)",
+    "diocese": "Wisconsin",
+    "position_type": "Rector/Priest-in-Charge"
+  }
+]

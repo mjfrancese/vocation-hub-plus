@@ -1,9 +1,9 @@
 {
   "meta": {
-    "lastUpdated": "2026-03-30T04:26:20.743Z",
-    "totalMapped": 472,
+    "lastUpdated": "2026-03-30T07:26:26.042Z",
+    "totalMapped": 471,
     "totalFlagged": 584,
-    "totalPositions": 1056
+    "totalPositions": 1055
   },
   "mappings": {
     "8529": {
@@ -2293,12 +2293,6 @@
       "flagged": true
     },
     "9422": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
-    },
-    "9424": {
       "church_nid": null,
       "confidence": "none",
       "match_method": "unmatched",
@@ -4765,10 +4759,10 @@
       "flagged": true
     },
     "10197": {
-      "church_nid": 5239,
-      "confidence": "high",
-      "match_method": "email_domain_website",
-      "flagged": false
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
     },
     "10198": {
       "church_nid": null,
@@ -4939,10 +4933,10 @@
       "flagged": false
     },
     "10227": {
-      "church_nid": 5208,
-      "confidence": "high",
-      "match_method": "name_high_confidence",
-      "flagged": false
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
     },
     "10228": {
       "church_nid": null,
@@ -5317,16 +5311,16 @@
       "flagged": true
     },
     "10299": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
+      "church_nid": 5514,
+      "confidence": "high",
+      "match_method": "partial_email_domain",
+      "flagged": false
     },
     "10300": {
-      "church_nid": null,
-      "confidence": "none",
-      "match_method": "unmatched",
-      "flagged": true
+      "church_nid": 5511,
+      "confidence": "exact",
+      "match_method": "email_unique",
+      "flagged": false
     },
     "10301": {
       "church_nid": 1248,
@@ -6296,10 +6290,10 @@
       "flagged": false
     },
     "10688": {
-      "church_nid": 3206,
-      "confidence": "exact",
-      "match_method": "name_exact",
-      "flagged": false
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
     },
     "10689": {
       "church_nid": 2318,

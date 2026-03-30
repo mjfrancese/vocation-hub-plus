@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T05:10:46.819Z",
+  "generated_at": "2026-03-30T07:26:26.456Z",
   "summary": {
     "missing_vh_id": 0,
     "missing_church_match": 79,
@@ -13,6 +13,14 @@
       "name": "Rosebud Episcopal Mission West, Diocese of South Dakota",
       "diocese": "South Dakota",
       "note": "Has VH ID but no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10688,
+      "name": "St Stephens Episcopal Church",
+      "diocese": "Iowa",
+      "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
@@ -51,7 +59,7 @@
       "source": "extended",
       "vh_id": 10616,
       "name": "St Thomas Episcopal Church",
-      "diocese": "",
+      "diocese": "Georgia",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -186,8 +194,8 @@
       "type": "missing_church_match",
       "source": "extended",
       "vh_id": 10319,
-      "name": "Unknown Position",
-      "diocese": "",
+      "name": "Position in San Joaquin",
+      "diocese": "San Joaquin",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -225,22 +233,6 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10300,
-      "name": "Unknown Position",
-      "diocese": "",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10299,
-      "name": "Unknown Position",
-      "diocese": "",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
       "vh_id": 10298,
       "name": "Position in Spokane",
       "diocese": "Spokane",
@@ -265,6 +257,14 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 10227,
+      "name": "St Patricks Church",
+      "diocese": "Missouri",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 10221,
       "name": "Position in New Jersey",
       "diocese": "New Jersey",
@@ -276,6 +276,14 @@
       "vh_id": 10217,
       "name": "Position in Rochester",
       "diocese": "Rochester",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10197,
+      "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
+      "diocese": "Southern Ohio",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -380,14 +388,6 @@
       "vh_id": 9425,
       "name": "Position in Hawaii",
       "diocese": "Hawaii",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 9424,
-      "name": "Position in Los Angeles",
-      "diocese": "Los Angeles",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -547,7 +547,7 @@
       "source": "extended",
       "vh_id": 8607,
       "name": "The Episcopal Church of St Matthew",
-      "diocese": "Arizona",
+      "diocese": "Kansas",
       "note": "Active extended position with no church registry match."
     },
     {
