@@ -1,10 +1,12 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useCallback } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import StatusBadge from './StatusBadge';
 import ParochialTrends from './ParochialTrends';
 import { isGibberish } from '@/lib/gibberish-detector';
+import ComparisonBar from './ComparisonBar';
+import ComparisonModal from './ComparisonModal';
 
 interface PositionTableProps {
   positions: Position[];
@@ -100,6 +102,26 @@ export default function PositionTable({ positions }: PositionTableProps) {
   const [sortField, setSortField] = useState<SortField>('name');
   const [sortDir, setSortDir] = useState<SortDirection>('asc');
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [comparedIds, setComparedIds] = useState<Set<string>>(new Set());
+  const [showComparison, setShowComparison] = useState(false);
+
+  const MAX_COMPARE = 3;
+
+  const toggleCompare = useCallback((id: string) => {
+    setComparedIds(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else if (next.size < MAX_COMPARE) {
+        next.add(id);
+      }
+      return next;
+    });
+  }, []);
+
+  const clearCompare = useCallback(() => setComparedIds(new Set()), []);
+
+  const comparedPositions = positions.filter(p => comparedIds.has(p.id));
 
   const sorted = [...positions].sort((a, b) => {
     let aVal: string, bVal: string;
@@ -213,10 +235,12 @@ export default function PositionTable({ positions }: PositionTableProps) {
     );
   }
 
+  const hasCompared = comparedIds.size > 0;
+
   return (
     <>
       {/* Mobile: card layout */}
-      <div className="sm:hidden space-y-2">
+      <div className={`sm:hidden space-y-2 ${hasCompared ? 'pb-20' : ''}`}>
         {/* Mobile sort control */}
         <div className="flex items-center gap-2 text-sm text-gray-500 px-1">
           <span>Sort by</span>
@@ -280,6 +304,22 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   <span className="text-gray-400">&middot; {timeOnMarket(pos)}</span>
                 )}
               </div>
+              <div className="mt-2">
+                <button
+                  onClick={(e) => { e.stopPropagation(); toggleCompare(pos.id); }}
+                  disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
+                  className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
+                    comparedIds.has(pos.id)
+                      ? 'bg-primary-100 border-primary-300 text-primary-700'
+                      : comparedIds.size >= MAX_COMPARE
+                        ? 'bg-gray-50 border-gray-200 text-gray-300 cursor-not-allowed'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-primary-300'
+                  }`}
+                  title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : undefined}
+                >
+                  {comparedIds.has(pos.id) ? '\u2713 Compare' : '+ Compare'}
+                </button>
+              </div>
             </div>
             {expandedId === pos.id && (
               <div className="border border-t-0 border-primary-200 rounded-b-lg p-3 bg-primary-50/40 border-l-4 border-l-primary-500">
@@ -291,10 +331,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
       </div>
 
       {/* Desktop: table layout */}
-      <div className="hidden sm:block overflow-x-auto border border-gray-200 rounded-lg">
+      <div className={`hidden sm:block overflow-x-auto border border-gray-200 rounded-lg ${hasCompared ? 'pb-20' : ''}`}>
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
+              <th className="px-3 py-3 w-10">
+                <span className="sr-only">Compare</span>
+              </th>
               {COLUMNS.map((col) => (
                 <th
                   key={col.key}
@@ -329,6 +372,16 @@ export default function PositionTable({ positions }: PositionTableProps) {
                       : 'hover:bg-gray-50'
                   }`}
                 >
+                  <td className="px-3 py-3 w-10" onClick={(e) => e.stopPropagation()}>
+                    <input
+                      type="checkbox"
+                      checked={comparedIds.has(pos.id)}
+                      disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
+                      onChange={() => toggleCompare(pos.id)}
+                      className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 disabled:opacity-40 disabled:cursor-not-allowed"
+                      title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Select to compare'}
+                    />
+                  </td>
                   <td className="px-4 py-3 text-sm font-medium max-w-xs truncate">
                     <span className="flex items-center gap-1.5">
                       {(() => {
@@ -385,7 +438,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 </tr>
                 {expandedId === pos.id && (
                   <tr key={`${pos.id}-detail`}>
-                    <td colSpan={9} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
+                    <td colSpan={10} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
                       <ExpandedDetail pos={pos} />
                     </td>
                   </tr>
@@ -395,6 +448,20 @@ export default function PositionTable({ positions }: PositionTableProps) {
           </tbody>
         </table>
       </div>
+
+      <ComparisonBar
+        selected={comparedPositions}
+        onRemove={(id) => toggleCompare(id)}
+        onClear={clearCompare}
+        onCompare={() => setShowComparison(true)}
+      />
+
+      {showComparison && comparedPositions.length >= 2 && (
+        <ComparisonModal
+          positions={comparedPositions}
+          onClose={() => setShowComparison(false)}
+        />
+      )}
     </>
   );
 }
