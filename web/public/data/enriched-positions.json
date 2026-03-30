@@ -111,7 +111,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 88,
+      "asa_value": 61,
+      "plate_pledge": 90,
+      "plate_pledge_value": 242601
+    },
+    "similar_positions": [
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
@@ -225,7 +288,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 68,
+      "asa_value": 61,
+      "plate_pledge": 70,
+      "plate_pledge_value": 216983
+    },
+    "similar_positions": [
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
+        "vh_id": 10645,
+        "name": "St. James' Episcopal Church",
+        "city": "New London",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
@@ -339,7 +465,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 56,
+      "asa_value": 49,
+      "plate_pledge": 60,
+      "plate_pledge_value": 174138
+    },
+    "similar_positions": [
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "a01db93f5280e9242603b8daccffd3124b2c0babe022cb2b4bf8eb70af46602f",
@@ -512,7 +701,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 73,
+      "asa_value": 109,
+      "plate_pledge": 73,
+      "plate_pledge_value": 386926
+    },
+    "similar_positions": [
+      {
+        "id": "27cee984957f11193c460249d87c6260aec7b92e71ab6e8348d0c16da2b0c56f",
+        "vh_id": 10695,
+        "name": "St. Matthias' Episcopal Church",
+        "city": "Midlothian",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 116,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
+        "vh_id": 10683,
+        "name": "St. Andrew's Episcopal Church",
+        "city": "Madison",
+        "state": "WI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 89,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2762cbb2f87edf45c2137612383774e04351f8d1fb754641dfbfe561782cd23d",
+        "vh_id": 8914,
+        "name": "Christ Episcopal Church",
+        "city": "Stratford",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 82,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "7cc134144c846094b4dfab81ebd0bd6db2567024fa2dd71e76081f78ca0a5a38",
+        "vh_id": 10571,
+        "name": "Christ Church",
+        "city": "Cody",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 92,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "9c2aa24afefd5ee185764545891790f3bde07e26fceb8cedbbf75c0f737b308e",
@@ -626,7 +878,37 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 93,
+      "asa_value": 253,
+      "plate_pledge": 95,
+      "plate_pledge_value": 1613117
+    },
+    "similar_positions": [
+      {
+        "id": "90bb851c38377858cd84a3f81a7d244d15828fee6a8808ae3043109cbb1330c1",
+        "vh_id": 10675,
+        "name": "St. John's Episcopal Church",
+        "city": "Charlotte",
+        "state": "NC",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 244,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "2a44f02d4725bde4b9c1a0381701c314fc2f6ad3abcb2b9d937acdd1ce8fed01",
+        "vh_id": 10676,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Greensboro",
+        "state": "NC",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 269,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
@@ -740,7 +1022,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 37,
+      "asa_value": 32,
+      "plate_pledge": 60,
+      "plate_pledge_value": 260931
+    },
+    "similar_positions": [
+      {
+        "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
+        "vh_id": 10353,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Visalia",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "d14159ebcf7a2900adbd9666d296eeaee3209ae8c93f57a98b3954c632071520",
+        "vh_id": 8930,
+        "name": "Christ Church",
+        "city": "Roxbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 30,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
+        "vh_id": 10598,
+        "name": "St. Matthew's Episcopal Church",
+        "city": "Hillsborough",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 160,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
+        "vh_id": 10674,
+        "name": "St. John's Episcopal Church",
+        "city": "Wake Forest",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 148,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "e9eac5409744c83279977486c59a7c1f48c89d20c5159ab6860c9292ff45ef09",
+        "vh_id": 10292,
+        "name": "Calvary Episcopal Church",
+        "city": "Wadesboro",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 21,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
@@ -854,7 +1199,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 59,
+      "asa_value": 57,
+      "plate_pledge": 56,
+      "plate_pledge_value": 179293
+    },
+    "similar_positions": [
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
@@ -968,7 +1376,59 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 79,
+      "asa_value": 166,
+      "plate_pledge": 81,
+      "plate_pledge_value": 819697
+    },
+    "similar_positions": [
+      {
+        "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
+        "vh_id": 8611,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Newnan",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 149,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "2aaff22ec6c77b87d61cb8d5ab687aac2219c75d68980a4691594376d499ffac",
+        "vh_id": 8603,
+        "name": "Holy Innocents",
+        "city": "Atlanta",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 338,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
+        "vh_id": 10598,
+        "name": "St. Matthew's Episcopal Church",
+        "city": "Hillsborough",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 160,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
+        "vh_id": 10674,
+        "name": "St. John's Episcopal Church",
+        "city": "Wake Forest",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 148,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
@@ -1082,7 +1542,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 57,
+      "asa_value": 45,
+      "plate_pledge": 57,
+      "plate_pledge_value": 147827
+    },
+    "similar_positions": [
+      {
+        "id": "78fdaa5dcd1536d6b5c236d1a8d044c6d0ff96d6bd277eee1d437b9c33a79120",
+        "vh_id": 10669,
+        "name": "Cople Parish",
+        "city": "Kinsale",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 48,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
+        "vh_id": 10353,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Visalia",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "b1980125a8b54642d5d27c8f35f8f35830ad1fe3af9d2ec4abde6e37e3e5795c",
+        "vh_id": 10649,
+        "name": "St. James Episcopal Church, Pullman",
+        "city": "Pullman",
+        "state": "WA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 42,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
@@ -1161,7 +1684,59 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 71,
+      "asa_value": 34,
+      "plate_pledge": 65,
+      "plate_pledge_value": 106079
+    },
+    "similar_positions": [
+      {
+        "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
+        "vh_id": 10346,
+        "name": "St. Thomas Episcopal Church ",
+        "city": "Reidsville",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 32,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "b1980125a8b54642d5d27c8f35f8f35830ad1fe3af9d2ec4abde6e37e3e5795c",
+        "vh_id": 10649,
+        "name": "St. James Episcopal Church, Pullman",
+        "city": "Pullman",
+        "state": "WA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 42,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "d14159ebcf7a2900adbd9666d296eeaee3209ae8c93f57a98b3954c632071520",
+        "vh_id": 8930,
+        "name": "Christ Church",
+        "city": "Roxbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 30,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "011ccf42e33ebaebb3935010301539bea318acdadca45a6198bb5b3c1a737cd2",
+        "vh_id": 10318,
+        "name": "St. John's Episcopal Church / Iglesia Episcopal San Juan",
+        "city": "Tulare",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 8,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
@@ -1275,7 +1850,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 70,
+      "asa_value": 149,
+      "plate_pledge": 77,
+      "plate_pledge_value": 598137
+    },
+    "similar_positions": [
+      {
+        "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
+        "vh_id": 8602,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Rome",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 166,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "2aaff22ec6c77b87d61cb8d5ab687aac2219c75d68980a4691594376d499ffac",
+        "vh_id": 8603,
+        "name": "Holy Innocents",
+        "city": "Atlanta",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 338,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "27cee984957f11193c460249d87c6260aec7b92e71ab6e8348d0c16da2b0c56f",
+        "vh_id": 10695,
+        "name": "St. Matthias' Episcopal Church",
+        "city": "Midlothian",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 116,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
+        "vh_id": 10598,
+        "name": "St. Matthew's Episcopal Church",
+        "city": "Hillsborough",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 160,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
+        "vh_id": 10674,
+        "name": "St. John's Episcopal Church",
+        "city": "Wake Forest",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 148,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
@@ -1389,7 +2027,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 63,
+      "asa_value": 53,
+      "plate_pledge": 43,
+      "plate_pledge_value": 118231
+    },
+    "similar_positions": [
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
@@ -1503,7 +2204,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 66,
+      "asa_value": 59,
+      "plate_pledge": 70,
+      "plate_pledge_value": 221919
+    },
+    "similar_positions": [
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
+        "vh_id": 10645,
+        "name": "St. James' Episcopal Church",
+        "city": "New London",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
@@ -1617,7 +2381,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 56,
+      "asa_value": 71,
+      "plate_pledge": 76,
+      "plate_pledge_value": 447678
+    },
+    "similar_positions": [
+      {
+        "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
+        "vh_id": 10693,
+        "name": "St. John Episcopal Church",
+        "city": "Halifax",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 62,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "27cee984957f11193c460249d87c6260aec7b92e71ab6e8348d0c16da2b0c56f",
@@ -1731,7 +2558,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 84,
+      "asa_value": 116,
+      "plate_pledge": 86,
+      "plate_pledge_value": 513559
+    },
+    "similar_positions": [
+      {
+        "id": "5ebc3903341c6f9cf1cd1cbc5469820b562da15ebf8a31c4195a67bd5a7e59d0",
+        "vh_id": 10614,
+        "name": "Trinity Church",
+        "city": "Manassas",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 109,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
+        "vh_id": 10683,
+        "name": "St. Andrew's Episcopal Church",
+        "city": "Madison",
+        "state": "WI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 89,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "7cc134144c846094b4dfab81ebd0bd6db2567024fa2dd71e76081f78ca0a5a38",
+        "vh_id": 10571,
+        "name": "Christ Church",
+        "city": "Cody",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 92,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
+        "vh_id": 10600,
+        "name": "St. Michael's Church",
+        "city": "Arlington",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
@@ -1845,7 +2735,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 81,
+      "asa_value": 160,
+      "plate_pledge": 79,
+      "plate_pledge_value": 606765
+    },
+    "similar_positions": [
+      {
+        "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
+        "vh_id": 10674,
+        "name": "St. John's Episcopal Church",
+        "city": "Wake Forest",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 148,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
+        "vh_id": 10346,
+        "name": "St. Thomas Episcopal Church ",
+        "city": "Reidsville",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 32,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "e9eac5409744c83279977486c59a7c1f48c89d20c5159ab6860c9292ff45ef09",
+        "vh_id": 10292,
+        "name": "Calvary Episcopal Church",
+        "city": "Wadesboro",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 21,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
+        "vh_id": 8602,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Rome",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 166,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
+        "vh_id": 8611,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Newnan",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 149,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
@@ -1959,7 +2912,48 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 96,
+      "asa_value": 393,
+      "plate_pledge": 97,
+      "plate_pledge_value": 2232777
+    },
+    "similar_positions": [
+      {
+        "id": "2aaff22ec6c77b87d61cb8d5ab687aac2219c75d68980a4691594376d499ffac",
+        "vh_id": 8603,
+        "name": "Holy Innocents",
+        "city": "Atlanta",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 338,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "1e419306d36f52d1bd663c3f0d4ad78b74fa7d82cbd9eed9a10bbb07a900ff11",
+        "vh_id": 8606,
+        "name": "St. Anthony's Episcopal Church",
+        "city": "Winder",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 48,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
+        "vh_id": 8615,
+        "name": "Church of the Resurrection",
+        "city": "Sautee Nacoochee",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 76,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
@@ -2073,7 +3067,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 79,
+      "asa_value": 148,
+      "plate_pledge": 78,
+      "plate_pledge_value": 565543
+    },
+    "similar_positions": [
+      {
+        "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
+        "vh_id": 10598,
+        "name": "St. Matthew's Episcopal Church",
+        "city": "Hillsborough",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 160,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "27cee984957f11193c460249d87c6260aec7b92e71ab6e8348d0c16da2b0c56f",
+        "vh_id": 10695,
+        "name": "St. Matthias' Episcopal Church",
+        "city": "Midlothian",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 116,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
+        "vh_id": 10346,
+        "name": "St. Thomas Episcopal Church ",
+        "city": "Reidsville",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 32,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "e9eac5409744c83279977486c59a7c1f48c89d20c5159ab6860c9292ff45ef09",
+        "vh_id": 10292,
+        "name": "Calvary Episcopal Church",
+        "city": "Wadesboro",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 21,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
+        "vh_id": 8602,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Rome",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 166,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "90bb851c38377858cd84a3f81a7d244d15828fee6a8808ae3043109cbb1330c1",
@@ -2187,7 +3244,37 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 90,
+      "asa_value": 244,
+      "plate_pledge": 94,
+      "plate_pledge_value": 1693405
+    },
+    "similar_positions": [
+      {
+        "id": "2a44f02d4725bde4b9c1a0381701c314fc2f6ad3abcb2b9d937acdd1ce8fed01",
+        "vh_id": 10676,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Greensboro",
+        "state": "NC",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 269,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "9c2aa24afefd5ee185764545891790f3bde07e26fceb8cedbbf75c0f737b308e",
+        "vh_id": 10668,
+        "name": "St. David's Episcopal Church",
+        "city": "Austin",
+        "state": "TX",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 253,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "011ccf42e33ebaebb3935010301539bea318acdadca45a6198bb5b3c1a737cd2",
@@ -2301,7 +3388,26 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 0,
+      "asa_value": 8,
+      "plate_pledge": 24,
+      "plate_pledge_value": 34525
+    },
+    "similar_positions": [
+      {
+        "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
+        "vh_id": 10353,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Visalia",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
@@ -2415,7 +3521,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 68,
+      "asa_value": 62,
+      "plate_pledge": 65,
+      "plate_pledge_value": 214333
+    },
+    "similar_positions": [
+      {
+        "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
+        "vh_id": 10600,
+        "name": "St. Michael's Church",
+        "city": "Arlington",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "78fdaa5dcd1536d6b5c236d1a8d044c6d0ff96d6bd277eee1d437b9c33a79120",
+        "vh_id": 10669,
+        "name": "Cople Parish",
+        "city": "Kinsale",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 48,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "b1980125a8b54642d5d27c8f35f8f35830ad1fe3af9d2ec4abde6e37e3e5795c",
@@ -2529,7 +3698,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 66,
+      "asa_value": 42,
+      "plate_pledge": 76,
+      "plate_pledge_value": 193776
+    },
+    "similar_positions": [
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
+        "vh_id": 10346,
+        "name": "St. Thomas Episcopal Church ",
+        "city": "Reidsville",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 32,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
+        "vh_id": 10353,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Visalia",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "1e419306d36f52d1bd663c3f0d4ad78b74fa7d82cbd9eed9a10bbb07a900ff11",
+        "vh_id": 8606,
+        "name": "St. Anthony's Episcopal Church",
+        "city": "Winder",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 48,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
@@ -2643,7 +3875,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 75,
+      "asa_value": 73,
+      "plate_pledge": 73,
+      "plate_pledge_value": 244869
+    },
+    "similar_positions": [
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "2762cbb2f87edf45c2137612383774e04351f8d1fb754641dfbfe561782cd23d",
+        "vh_id": 8914,
+        "name": "Christ Episcopal Church",
+        "city": "Stratford",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 82,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "1e419306d36f52d1bd663c3f0d4ad78b74fa7d82cbd9eed9a10bbb07a900ff11",
@@ -2757,7 +4052,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 24,
+      "asa_value": 48,
+      "plate_pledge": 13,
+      "plate_pledge_value": 84260
+    },
+    "similar_positions": [
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
@@ -2866,7 +4224,70 @@
           "membership": 245
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 93,
+      "asa_value": 89,
+      "plate_pledge": 99,
+      "plate_pledge_value": 501767
+    },
+    "similar_positions": [
+      {
+        "id": "5ebc3903341c6f9cf1cd1cbc5469820b562da15ebf8a31c4195a67bd5a7e59d0",
+        "vh_id": 10614,
+        "name": "Trinity Church",
+        "city": "Manassas",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 109,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
+        "vh_id": 10600,
+        "name": "St. Michael's Church",
+        "city": "Arlington",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
+        "vh_id": 10645,
+        "name": "St. James' Episcopal Church",
+        "city": "New London",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
+        "vh_id": 8615,
+        "name": "Church of the Resurrection",
+        "city": "Sautee Nacoochee",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 76,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2762cbb2f87edf45c2137612383774e04351f8d1fb754641dfbfe561782cd23d",
+        "vh_id": 8914,
+        "name": "Christ Episcopal Church",
+        "city": "Stratford",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 82,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "7a439067c0ecddca3379266775c3c236ae1d1c53ec513b68470b03cfcd8c5c73",
@@ -3024,7 +4445,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 42,
+      "asa_value": 76,
+      "plate_pledge": 53,
+      "plate_pledge_value": 308872
+    },
+    "similar_positions": [
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
+        "vh_id": 10600,
+        "name": "St. Michael's Church",
+        "city": "Arlington",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "2a44f02d4725bde4b9c1a0381701c314fc2f6ad3abcb2b9d937acdd1ce8fed01",
@@ -3138,7 +4622,37 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 93,
+      "asa_value": 269,
+      "plate_pledge": 95,
+      "plate_pledge_value": 1883630
+    },
+    "similar_positions": [
+      {
+        "id": "90bb851c38377858cd84a3f81a7d244d15828fee6a8808ae3043109cbb1330c1",
+        "vh_id": 10675,
+        "name": "St. John's Episcopal Church",
+        "city": "Charlotte",
+        "state": "NC",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 244,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "9c2aa24afefd5ee185764545891790f3bde07e26fceb8cedbbf75c0f737b308e",
+        "vh_id": 10668,
+        "name": "St. David's Episcopal Church",
+        "city": "Austin",
+        "state": "TX",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 253,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ]
   },
   {
     "id": "2aaff22ec6c77b87d61cb8d5ab687aac2219c75d68980a4691594376d499ffac",
@@ -3252,7 +4766,59 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 94,
+      "asa_value": 338,
+      "plate_pledge": 94,
+      "plate_pledge_value": 1708273
+    },
+    "similar_positions": [
+      {
+        "id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
+        "vh_id": 8614,
+        "name": "St. Luke's Episcopal Church",
+        "city": "Atlanta",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 393,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2a44f02d4725bde4b9c1a0381701c314fc2f6ad3abcb2b9d937acdd1ce8fed01",
+        "vh_id": 10676,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Greensboro",
+        "state": "NC",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 269,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "d20be0b3febe55855eca941ced0ce42afb730e45c8360bb0212b67df39c20ff9",
+        "vh_id": 8602,
+        "name": "St. Peter's Episcopal Church",
+        "city": "Rome",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 166,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "9e8ad1c8c6c17e08a5b9622c6bfa3e5e6c52a2d533828c503d3cbfc79c7ed261",
+        "vh_id": 8611,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Newnan",
+        "state": "GA",
+        "position_type": "Assistant/Associate/Curate",
+        "asa": 149,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "8a32ca68e73d4a2cbdc9ed70d506fb7d0679c984c6b88d4f6e940db2c1afffab",
@@ -3425,7 +4991,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 26,
+      "asa_value": 56,
+      "plate_pledge": 27,
+      "plate_pledge_value": 170647
+    },
+    "similar_positions": [
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "78fdaa5dcd1536d6b5c236d1a8d044c6d0ff96d6bd277eee1d437b9c33a79120",
@@ -3539,7 +5168,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 43,
+      "asa_value": 48,
+      "plate_pledge": 50,
+      "plate_pledge_value": 206548
+    },
+    "similar_positions": [
+      {
+        "id": "2ec8b23fa487d79b001183284374237ac6451ff40456c8cd758f10fee912e627",
+        "vh_id": 10692,
+        "name": "St. Peter Episcopal Church",
+        "city": "Norfolk",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 45,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "a4a0a0c3097b7911b29dc1cb810f081f52598586bae40810cefd5100e4431d8c",
+        "vh_id": 10665,
+        "name": "St. Peter's Church Smyrna",
+        "city": "Smyrna",
+        "state": "DE",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 57,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "bd392ed15b12ec9bf4ba56cae8614d5d4e8e868b1043bde934748f7cd76f1992",
+        "vh_id": 10658,
+        "name": "St. Michael's Church Episcopal",
+        "city": "Litchfield",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 59,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "2762cbb2f87edf45c2137612383774e04351f8d1fb754641dfbfe561782cd23d",
@@ -3653,7 +5345,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 79,
+      "asa_value": 82,
+      "plate_pledge": 59,
+      "plate_pledge_value": 172842
+    },
+    "similar_positions": [
+      {
+        "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
+        "vh_id": 10645,
+        "name": "St. James' Episcopal Church",
+        "city": "New London",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
+        "vh_id": 10600,
+        "name": "St. Michael's Church",
+        "city": "Arlington",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "ecdfad3ff9d72b6bc2d350c64db1dcdf6625d2e103df74a3717506a37a6170dd",
+        "vh_id": 10693,
+        "name": "St. John Episcopal Church",
+        "city": "Halifax",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 62,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
+        "vh_id": 10683,
+        "name": "St. Andrew's Episcopal Church",
+        "city": "Madison",
+        "state": "WI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 89,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
+        "vh_id": 8615,
+        "name": "Church of the Resurrection",
+        "city": "Sautee Nacoochee",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 76,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "d14159ebcf7a2900adbd9666d296eeaee3209ae8c93f57a98b3954c632071520",
@@ -3767,7 +5522,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 35,
+      "asa_value": 30,
+      "plate_pledge": 38,
+      "plate_pledge_value": 96699
+    },
+    "similar_positions": [
+      {
+        "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
+        "vh_id": 10346,
+        "name": "St. Thomas Episcopal Church ",
+        "city": "Reidsville",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 32,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
+        "vh_id": 10353,
+        "name": "St. Paul's Episcopal Church",
+        "city": "Visalia",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
+        "vh_id": 8950,
+        "name": "St. James' Episcopal Church",
+        "city": "Glastonbury",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "034f90a846203fcb8ee596af8a0d732617d4f62e2a4b1cea50aee3fa51eb8ae3",
+        "vh_id": 10643,
+        "name": "Trinity Episcopal Church",
+        "city": "Torrington",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 49,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "5db1d9648b59affd7d73ab0a66f0b6a0a447b1316484d9f95735a3d8dc0e75fa",
+        "vh_id": 10647,
+        "name": "St. Michael's Episcopal Parish",
+        "city": "Naugatuck",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 53,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   },
   {
     "id": "7cc134144c846094b4dfab81ebd0bd6db2567024fa2dd71e76081f78ca0a5a38",
@@ -3881,7 +5699,70 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 89,
+      "asa_value": 92,
+      "plate_pledge": 89,
+      "plate_pledge_value": 255274
+    },
+    "similar_positions": [
+      {
+        "id": "5ebc3903341c6f9cf1cd1cbc5469820b562da15ebf8a31c4195a67bd5a7e59d0",
+        "vh_id": 10614,
+        "name": "Trinity Church",
+        "city": "Manassas",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 109,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "095e0053b3bb85df589e45a68608f3193aa3aa53557ebf5107418706dfd4792f",
+        "vh_id": 10600,
+        "name": "St. Michael's Church",
+        "city": "Arlington",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 71,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "572ad51e1715ccf316c2146d9c06f2b487b1d2bb7043b089cbcf34d12309cbd4",
+        "vh_id": 10645,
+        "name": "St. James' Episcopal Church",
+        "city": "New London",
+        "state": "CT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "fc1f0af740717a89d5ac9b7dc2abd0a793e1b478019fbb32d641ca959ab5eb69",
+        "vh_id": 10683,
+        "name": "St. Andrew's Episcopal Church",
+        "city": "Madison",
+        "state": "WI",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 89,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
+        "vh_id": 8615,
+        "name": "Church of the Resurrection",
+        "city": "Sautee Nacoochee",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 76,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ]
   },
   {
     "id": "e9eac5409744c83279977486c59a7c1f48c89d20c5159ab6860c9292ff45ef09",
@@ -3995,6 +5876,47 @@
           "membership": null
         }
       }
-    }
+    },
+    "diocese_percentiles": {
+      "asa": 25,
+      "asa_value": 21,
+      "plate_pledge": 46,
+      "plate_pledge_value": 133518
+    },
+    "similar_positions": [
+      {
+        "id": "7141f50608003804c4843e0e6322a85286e831950c2607fac7da69cef0708896",
+        "vh_id": 10346,
+        "name": "St. Thomas Episcopal Church ",
+        "city": "Reidsville",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 32,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "5d9adf571a6fc95eaef4f7c34754c5babed7549eb0b4111444b6909f2ac292e8",
+        "vh_id": 10598,
+        "name": "St. Matthew's Episcopal Church",
+        "city": "Hillsborough",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 160,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "331fe31e22e9c13443a1c7f5a9becb5ab779b024546277d0c823809254f0051f",
+        "vh_id": 10674,
+        "name": "St. John's Episcopal Church",
+        "city": "Wake Forest",
+        "state": "NC",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 148,
+        "estimated_total_comp": null,
+        "score": 4
+      }
+    ]
   }
 ]

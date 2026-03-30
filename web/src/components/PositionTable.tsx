@@ -226,6 +226,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
     setExpandedId(expandedId === id ? null : id);
   }
 
+  function expandAndScrollTo(posId: string) {
+    setExpandedId(posId);
+    setTimeout(() => {
+      document.getElementById(`position-row-${posId}`)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  }
+
   if (positions.length === 0) {
     return (
       <div className="text-center py-12 text-gray-500">
@@ -262,7 +269,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
         </div>
 
         {sorted.map((pos) => (
-          <div key={pos.id}>
+          <div key={pos.id} id={`position-row-${pos.id}`}>
             <div
               onClick={() => toggleExpand(pos.id)}
               className={`border rounded-lg p-3 cursor-pointer transition-colors ${
@@ -323,7 +330,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
             </div>
             {expandedId === pos.id && (
               <div className="border border-t-0 border-primary-200 rounded-b-lg p-3 bg-primary-50/40 border-l-4 border-l-primary-500">
-                <ExpandedDetail pos={pos} />
+                <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
               </div>
             )}
           </div>
@@ -365,6 +372,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
             {sorted.map((pos) => (
               <Fragment key={pos.id}>
                 <tr
+                  id={`position-row-${pos.id}`}
                   onClick={() => toggleExpand(pos.id)}
                   className={`cursor-pointer transition-colors ${
                     expandedId === pos.id
@@ -439,7 +447,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                 {expandedId === pos.id && (
                   <tr key={`${pos.id}-detail`}>
                     <td colSpan={10} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
-                      <ExpandedDetail pos={pos} />
+                      <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
                     </td>
                   </tr>
                 )}
@@ -580,7 +588,40 @@ function DioceseContext({ pos }: { pos: Position }) {
   );
 }
 
-function ExpandedDetail({ pos }: { pos: Position }) {
+function SimilarPositions({ pos, onNavigate }: { pos: Position; onNavigate: (id: string) => void }) {
+  if (!pos.similar_positions || pos.similar_positions.length === 0) return null;
+
+  return (
+    <div className="border border-purple-200 rounded-lg p-3 bg-purple-50 text-sm">
+      <div className="font-medium text-purple-700 mb-2">Similar Positions</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+        {pos.similar_positions.map((sim) => (
+          <button
+            key={sim.id}
+            onClick={(e) => { e.stopPropagation(); onNavigate(sim.id); }}
+            className="text-left border border-purple-200 rounded-lg p-2.5 bg-white hover:bg-purple-50 transition-colors"
+          >
+            <div className="font-medium text-purple-900 text-sm truncate">{sim.name}</div>
+            <div className="text-xs text-purple-600 mt-0.5">
+              {sim.city && <>{sim.city}, </>}{sim.state}
+            </div>
+            <div className="text-xs text-gray-500 mt-1">
+              {sim.position_type && <span>{sim.position_type}</span>}
+            </div>
+            <div className="flex items-center gap-3 mt-1 text-xs text-gray-500">
+              {sim.asa != null && <span>ASA {sim.asa}</span>}
+              {sim.estimated_total_comp != null && (
+                <span className="text-green-700">${sim.estimated_total_comp.toLocaleString()}</span>
+              )}
+            </div>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: string) => void }) {
   const fields = pos.deep_scrape_fields || [];
   const hasDeepData = fields.length > 0;
 
@@ -634,6 +675,7 @@ function ExpandedDetail({ pos }: { pos: Position }) {
           <DetailField label="Last Seen" value={pos.last_seen} />
         </div>
         {hasParochial && <ParochialTrends data={pos.parochial!} />}
+        <SimilarPositions pos={pos} onNavigate={onNavigate} />
         {pos.profile_url && (
           <a
             href={pos.profile_url}
@@ -693,6 +735,9 @@ function ExpandedDetail({ pos }: { pos: Position }) {
 
       {/* Parochial Report Trends */}
       {hasParochial && <ParochialTrends data={pos.parochial!} />}
+
+      {/* Similar Positions */}
+      <SimilarPositions pos={pos} onNavigate={onNavigate} />
 
       {/* Skills */}
       {(leadershipSkills || ministrySkills) && (

@@ -85,6 +85,19 @@ export interface Position {
     housing?: number;
   };
 
+  // Similar positions (computed at build time)
+  similar_positions?: Array<{
+    id: string;
+    vh_id?: number;
+    name: string;
+    city: string;
+    state: string;
+    position_type: string;
+    asa?: number;
+    estimated_total_comp?: number;
+    score: number;
+  }>;
+
   // Enriched parochial data (from Power BI cross-reference)
   parochial?: {
     congregationCity: string;

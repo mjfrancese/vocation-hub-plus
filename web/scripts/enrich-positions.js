@@ -210,6 +210,101 @@ function computeEstimatedTotalComp(positions, profileFields) {
   console.log(`Estimated total comp: ${count} positions`);
 }
 
+/**
+ * Compute similar positions for each position based on weighted similarity scoring.
+ * Factors: ASA range (weight 3), compensation range (weight 2), same state (weight 2),
+ * same position type (weight 2), same housing type (weight 1). Minimum score of 3.
+ * Stores top 5 most similar positions per position.
+ */
+function computeSimilarPositions(allPositions) {
+  // Pre-extract data for each position
+  const posData = [];
+  for (const pos of allPositions) {
+    const id = pos.id || String(pos.vh_id);
+    if (!id) continue;
+
+    // Get ASA from most recent parochial year
+    let asa = null;
+    if (pos.parochial && pos.parochial.years) {
+      const yearKeys = Object.keys(pos.parochial.years).sort();
+      if (yearKeys.length > 0) {
+        const latest = pos.parochial.years[yearKeys[yearKeys.length - 1]];
+        if (latest && latest.averageAttendance != null && latest.averageAttendance > 0) {
+          asa = latest.averageAttendance;
+        }
+      }
+    }
+
+    const comp = pos.estimated_total_comp || null;
+    const state = (pos.church_info && pos.church_info.state) || pos.state || '';
+    const positionType = pos.position_type || '';
+    const housingType = (pos.housing_type || '').toLowerCase();
+    const name = (pos.church_info && pos.church_info.name) || pos.name || '';
+    const city = (pos.church_info && pos.church_info.city) || pos.city || '';
+
+    // Need at least ASA or comp to compute meaningful similarity
+    if (asa == null && comp == null) continue;
+
+    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, housingType, name, city });
+  }
+
+  let count = 0;
+  for (let i = 0; i < posData.length; i++) {
+    const a = posData[i];
+    const scored = [];
+
+    for (let j = 0; j < posData.length; j++) {
+      if (i === j) continue;
+      const b = posData[j];
+
+      let score = 0;
+
+      // ASA range bucket (within +/-25%)
+      if (a.asa != null && b.asa != null) {
+        const ratio = b.asa / a.asa;
+        if (ratio >= 0.75 && ratio <= 1.25) score += 3;
+      }
+
+      // Compensation range bucket (within +/-20%)
+      if (a.comp != null && b.comp != null) {
+        const ratio = b.comp / a.comp;
+        if (ratio >= 0.8 && ratio <= 1.2) score += 2;
+      }
+
+      // Same state
+      if (a.state && b.state && a.state === b.state) score += 2;
+
+      // Same position type
+      if (a.positionType && b.positionType && a.positionType === b.positionType) score += 2;
+
+      // Same housing type
+      if (a.housingType && b.housingType && a.housingType === b.housingType) score += 1;
+
+      if (score >= 3) {
+        scored.push({
+          id: b.id,
+          vh_id: b.vh_id,
+          name: b.name,
+          city: b.city,
+          state: b.state,
+          position_type: b.positionType,
+          asa: b.asa,
+          estimated_total_comp: b.comp,
+          score,
+        });
+      }
+    }
+
+    if (scored.length > 0) {
+      scored.sort((x, y) => y.score - x.score);
+      a.pos.similar_positions = scored.slice(0, 5);
+      count++;
+    }
+  }
+
+  console.log(`Similar positions: ${count} positions with recommendations`);
+}
+
 // --- Main ---
 
 function main() {
@@ -360,6 +455,7 @@ function main() {
 
   computeDiocesePercentiles(positions);
   computeEstimatedTotalComp(positions, profileFields);
+  computeSimilarPositions(positions);
 
   fs.writeFileSync(
     path.join(DATA_DIR, 'enriched-positions.json'),
@@ -529,6 +625,7 @@ function main() {
 
     computeDiocesePercentiles(extended);
     computeEstimatedTotalComp(extended, profileFields);
+    computeSimilarPositions(extended);
 
     fs.writeFileSync(
       path.join(DATA_DIR, 'enriched-extended.json'),
