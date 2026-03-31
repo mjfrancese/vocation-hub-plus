@@ -66,6 +66,13 @@ dist
 # SQLite
 *.db
 *.db-journal
+*.db-wal
+*.db-shm
+
+# Large data files (now sourced from SQLite DB)
+web/public/data/church-registry.json
+web/public/data/parochial-data.json
+web/public/data/churches.json
 
 # Screenshots (saved on scraper failure)
 screenshots/
