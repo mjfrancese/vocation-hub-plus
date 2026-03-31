@@ -1,0 +1,63 @@
+name: Compensation Data Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      pdf_url:
+        description: 'URL of CPG Compensation Report PDF'
+        required: true
+      year:
+        description: 'Report year (e.g., 2024)'
+        required: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install dependencies
+        run: |
+          cd web && npm ci
+          pip install -r scripts/requirements.txt
+
+      - name: Download vocationhub.db
+        uses: actions/download-artifact@v4
+        with:
+          name: vocationhub-db
+          path: data/
+
+      - name: Download PDF
+        run: curl -L -o /tmp/cpg-compensation.pdf "${{ github.event.inputs.pdf_url }}"
+
+      - name: Parse compensation data
+        run: python scripts/parse_cpg_compensation.py /tmp/cpg-compensation.pdf ${{ github.event.inputs.year }} --db-path data/vocationhub.db
+
+      - name: Upload vocationhub.db
+        uses: actions/upload-artifact@v4
+        with:
+          name: vocationhub-db
+          path: data/vocationhub.db
+          retention-days: 90
+
+      - name: Run enrichment
+        run: cd web && node scripts/enrich-positions-v2.js
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/public/data/enriched-positions.json web/public/data/enriched-extended.json
+          git diff --staged --quiet || git commit -m "chore: update compensation data for ${{ github.event.inputs.year }}"
+          git push

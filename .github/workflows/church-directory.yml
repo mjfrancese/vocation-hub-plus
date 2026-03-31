@@ -43,9 +43,16 @@ jobs:
         run: npx tsx src/scrape-parochial-reports.ts
         timeout-minutes: 10
 
-      - name: Build registry, position map, and enrich positions
+      - name: Download vocationhub.db
+        uses: actions/download-artifact@v4
+        with:
+          name: vocationhub-db
+          path: data/
+        continue-on-error: true
+
+      - name: Run enrichment
         working-directory: web
-        run: node scripts/build-registry.js && node scripts/build-position-map.js && node scripts/enrich-positions.js
+        run: node scripts/enrich-positions-v2.js
 
       - name: Upload screenshots
         if: always()

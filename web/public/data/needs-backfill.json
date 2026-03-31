@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-03-31T18:59:44.869Z",
+  "generated_at": "2026-03-31T22:36:21.072Z",
   "summary": {
     "missing_vh_id": 0,
-    "missing_church_match": 80,
-    "total": 80
+    "missing_church_match": 79,
+    "total": 79
   },
   "gaps": [
     {
       "type": "missing_church_match",
       "source": "public",
-      "vh_id": 8930,
+      "vh_id": 10175,
       "name": "Rosebud Episcopal Mission West, Diocese of South Dakota",
       "diocese": "South Dakota",
       "note": "Has VH ID but no church registry match."
@@ -324,14 +324,6 @@
       "vh_id": 10183,
       "name": "Position in Northern California",
       "diocese": "Northern California",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10175,
-      "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-      "diocese": "South Dakota",
       "note": "Active extended position with no church registry match."
     },
     {

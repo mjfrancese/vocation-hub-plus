@@ -90,6 +90,26 @@ export interface Position {
     housing?: number;
   };
 
+  compensation?: {
+    diocese_median: number;
+    diocese_female_median: number;
+    diocese_male_median: number;
+    diocese_clergy_count: number;
+    year: number;
+  };
+
+  current_clergy?: {
+    name: string;
+    position_title: string;
+    start_date: string;
+    years_tenure: number;
+  } | null;
+
+  parish_clergy_history?: {
+    recent_count: number;
+    avg_tenure_years: number;
+  };
+
   // Census/demographic data (attached at build time)
   census?: {
     median_household_income?: number;

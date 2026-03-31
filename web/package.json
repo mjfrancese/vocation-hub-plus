@@ -12,6 +12,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
+    "better-sqlite3": "^11.10.0",
     "fuse.js": "^7.0.0",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",

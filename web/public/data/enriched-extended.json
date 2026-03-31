@@ -145,10 +145,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 50036,
-      "population": 19165
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -1128,10 +1124,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 121536,
-      "population": 51966
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -1276,17 +1268,6 @@
         "score": 5
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-        "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
-      },
-      {
         "id": "10636",
         "vh_id": 10636,
         "name": "St Paul's Episcopal Church",
@@ -1320,10 +1301,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 41563,
-      "population": 554
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -1672,10 +1649,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 152865,
-      "population": 10170
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -2340,10 +2313,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 230545,
-      "population": 18473
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -2508,10 +2477,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 75625,
-      "population": 127
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -2672,10 +2637,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 75838,
-      "population": 5169
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -3338,10 +3299,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 96250,
-      "population": 23425
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -3676,10 +3633,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 71584,
-      "population": 21650
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -3924,10 +3877,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 69417,
-      "population": 13565
-    },
     "quality_score": 70,
     "quality_components": [
       "Recent date (15)",
@@ -4318,10 +4267,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 51017,
-      "population": 10092
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -4482,10 +4427,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 51624,
-      "population": 12882
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -4651,10 +4592,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 39281,
-      "population": 16851
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -4819,10 +4756,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 62035,
-      "population": 60377
-    },
     "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
@@ -5100,10 +5033,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 62505,
-      "population": 25850
-    },
     "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
@@ -5286,10 +5215,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 51283,
-      "population": 13280
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -5445,10 +5370,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 31218,
-      "population": 1297
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -5609,10 +5530,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 131973,
-      "population": 52596
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -5893,10 +5810,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 64861,
-      "population": 10758
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -6080,10 +5993,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 79694,
-      "population": 15946
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -6298,10 +6207,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 78363,
-      "population": 58946
-    },
     "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
@@ -6642,10 +6547,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 103813,
-      "population": 45072
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -6819,10 +6720,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 106930,
-      "population": 4734
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -6978,10 +6875,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 129775,
-      "population": 12932
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -7020,10 +6913,6 @@
       "lng": -77.06203
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 145048,
-      "population": 23797
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -7061,9 +6950,6 @@
       "lng": -76.78539
     },
     "match_confidence": "exact",
-    "census": {
-      "population": 775
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -7219,10 +7105,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 103813,
-      "population": 45072
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -7397,10 +7279,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 169489,
-      "population": 32570
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -7557,10 +7435,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 103813,
-      "population": 45072
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -7752,10 +7626,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 97327,
-      "population": 67127
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -7866,10 +7736,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 107130,
-      "population": 70043
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -8026,10 +7892,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 79446,
-      "population": 36583
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -8186,10 +8048,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 228311,
-      "population": 17390
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -8364,10 +8222,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 123134,
-      "population": 29545
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -8524,10 +8378,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 106560,
-      "population": 32254
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -8702,10 +8552,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 145048,
-      "population": 23797
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -8862,10 +8708,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 91563,
-      "population": 71560
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -9022,10 +8864,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 169489,
-      "population": 32570
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -9182,10 +9020,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 185873,
-      "population": 31080
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -9242,10 +9076,6 @@
       "lng": -76.99751
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 155054,
-      "population": 34585
-    },
     "quality_score": 50,
     "quality_components": [
       "Recent date (15)",
@@ -9438,10 +9268,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76691,
-      "population": 44610
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -9771,10 +9597,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 68725,
-      "population": 1556
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -9932,10 +9754,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 77870,
-      "population": 34942
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -10269,10 +10087,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 70647,
-      "population": 3993
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -10450,10 +10264,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 103186,
-      "population": 21416
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -10755,10 +10565,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 74418,
-      "population": 16268
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -11054,10 +10860,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 60365,
-      "population": 2682
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -11404,10 +11206,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 58224,
-      "population": 45161
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -11567,10 +11365,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 106916,
-      "population": 96988
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -11728,10 +11522,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 102687,
-      "population": 24285
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -12001,10 +11791,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 84893,
-      "population": 20445
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -12164,10 +11950,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 130333,
-      "population": 16731
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -12347,10 +12129,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 48256,
-      "population": 48214
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -12412,10 +12190,6 @@
       "lng": -80.02495
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 104918,
-      "population": 44149
-    },
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -12657,10 +12431,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 157997,
-      "population": 20545
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -12817,10 +12587,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 63691,
-      "population": 37533
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -12980,10 +12746,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 51494,
-      "population": 31094
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -13222,10 +12984,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 50348,
-      "population": 16313
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -13411,10 +13169,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 93643,
-      "population": 36277
-    },
     "quality_score": 65,
     "quality_components": [
       "Recent date (15)",
@@ -13573,10 +13327,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 119732,
-      "population": 22124
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -13774,10 +13524,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 44095,
-      "population": 16741
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -14275,10 +14021,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 94048,
-      "population": 11313
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -14438,10 +14180,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 70580,
-      "population": 12993
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -14659,10 +14397,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 55596,
-      "population": 22430
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -14913,10 +14647,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 84421,
-      "population": 11043
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -14958,10 +14688,6 @@
       "lng": -117.24467
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 101042,
-      "population": 29435
-    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -15203,10 +14929,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 43362,
-      "population": 76518
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -15363,10 +15085,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 222589,
-      "population": 17605
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -15523,10 +15241,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 161908,
-      "population": 9068
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -15564,10 +15278,6 @@
       "lng": -73.85622
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 75750,
-      "population": 15390
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -15740,10 +15450,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 75221,
-      "population": 2170
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -15899,10 +15605,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 26400,
-      "population": 41073
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -16058,10 +15760,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 122841,
-      "population": 4344
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -16218,10 +15916,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 84764,
-      "population": 42211
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -16260,10 +15954,6 @@
       "lng": -73.619341
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 87083,
-      "population": 4521
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -16418,10 +16108,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 121217,
-      "population": 20527
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -16577,10 +16263,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 87321,
-      "population": 3373
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -16737,10 +16419,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 105037,
-      "population": 9603
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -16896,10 +16574,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 111418,
-      "population": 22888
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -16938,10 +16612,6 @@
       "lng": -73.85915
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 107574,
-      "population": 23912
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -17097,10 +16767,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 67252,
-      "population": 70555
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -17256,10 +16922,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 119333,
-      "population": 15800
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -17416,10 +17078,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 121556,
-      "population": 22595
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -17576,10 +17234,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 166994,
-      "population": 62774
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -17736,10 +17390,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 171111,
-      "population": 4975
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -17895,10 +17545,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 188732,
-      "population": 7407
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -18054,10 +17700,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 149432,
-      "population": 40642
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -18168,10 +17810,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 102212,
-      "population": 36816
     },
     "quality_score": 40,
     "quality_components": [
@@ -18328,10 +17966,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 250001,
-      "population": 12867
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -18488,10 +18122,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 83288,
-      "population": 14066
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -18647,10 +18277,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 90654,
-      "population": 15609
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -18807,10 +18433,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 86695,
-      "population": 25401
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -18967,10 +18589,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 65289,
-      "population": 35138
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -19126,10 +18744,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 152863,
-      "population": 53877
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -19222,10 +18836,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 137253,
-      "population": 56695
     },
     "quality_score": 45,
     "quality_components": [
@@ -19383,10 +18993,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 149432,
-      "population": 40642
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -19542,10 +19148,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 103436,
-      "population": 94355
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -19702,10 +19304,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 114698,
-      "population": 14222
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -19862,10 +19460,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 86695,
-      "population": 25401
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -20024,10 +19618,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 67252,
-      "population": 70555
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -20185,10 +19775,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 96163,
-      "population": 9287
-    },
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -20345,10 +19931,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 230434,
-      "population": 18077
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -20504,10 +20086,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 228185,
-      "population": 10797
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -20664,10 +20242,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 208462,
-      "population": 608
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -20841,10 +20415,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 83884,
-      "population": 5208
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -21002,10 +20572,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 201534,
-      "population": 9613
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -21045,10 +20611,6 @@
       "lng": -117.24467
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 101042,
-      "population": 29435
-    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -21267,10 +20829,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 70388,
-      "population": 22538
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -21427,10 +20985,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 77868,
-      "population": 38849
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -21663,10 +21217,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 92602,
-      "population": 8855
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -21823,10 +21373,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 59963,
-      "population": 45290
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -22006,10 +21552,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 45256,
-      "population": 27279
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -22202,10 +21744,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 35069,
-      "population": 20031
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -22361,10 +21899,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 35069,
-      "population": 20031
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -22664,10 +22198,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 46627,
-      "population": 17784
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -22860,10 +22390,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 53915,
-      "population": 11698
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -22941,17 +22467,6 @@
         "score": 5
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-        "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
-      },
-      {
         "id": "9992",
         "vh_id": 9992,
         "name": "Trinity Episcopal Church",
@@ -22981,6 +22496,17 @@
         "state": "OH",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 67,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "9944",
+        "vh_id": 9944,
+        "name": "Christ Episcopal Church",
+        "city": "Shaker Heights",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 88,
         "estimated_total_comp": null,
         "score": 4
       }
@@ -23162,10 +22688,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 110639,
-      "population": 18306
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -23440,10 +22962,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 155714,
-      "population": 9057
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -23601,10 +23119,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 115161,
-      "population": 17069
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -23654,81 +23168,6 @@
       "Position type (5)"
     ],
     "visibility": "extended_hidden"
-  },
-  {
-    "vh_id": 10175,
-    "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "diocese": "South Dakota",
-    "state": "SD",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "receiving_names_from": "09/15/2025",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "housing_type": "Rectory",
-    "estimated_total_comp": 57501,
-    "comp_breakdown": {
-      "stipend": 37501,
-      "housing": 20000
-    },
-    "similar_positions": [
-      {
-        "id": "10678",
-        "vh_id": 10678,
-        "name": "St. Mark's Episcopal Church, Portland",
-        "city": "Portland",
-        "state": "MO",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 11,
-        "estimated_total_comp": 62501,
-        "score": 4
-      },
-      {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
-        "city": "",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 62501,
-        "score": 4
-      },
-      {
-        "id": "10650",
-        "vh_id": 10650,
-        "name": "St. Mary and St. Jude",
-        "city": "Northeast Harbor",
-        "state": "ME",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 73,
-        "estimated_total_comp": 132501,
-        "score": 3
-      },
-      {
-        "id": "10319",
-        "vh_id": 10319,
-        "name": "Position in San Joaquin",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 3
-      }
-    ],
-    "quality_score": 65,
-    "quality_components": [
-      "Active status (25)",
-      "Recent date (15)",
-      "Congregation identified (10)",
-      "Position named (5)",
-      "Position type (5)",
-      "State known (5)"
-    ],
-    "visibility": "extended"
   },
   {
     "vh_id": 10174,
@@ -23915,10 +23354,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 40000,
-      "population": 310
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -24078,10 +23513,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 59445,
-      "population": 51931
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -24121,10 +23552,6 @@
       "lng": -117.24467
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 101042,
-      "population": 29435
-    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -24164,10 +23591,6 @@
       "lng": -117.24467
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 101042,
-      "population": 29435
-    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -24282,10 +23705,6 @@
         }
       }
     },
-    "census": {
-      "median_household_income": 84878,
-      "population": 28256
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -24377,10 +23796,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 84878,
-      "population": 28256
     },
     "quality_score": 40,
     "quality_components": [
@@ -24492,10 +23907,6 @@
         }
       }
     },
-    "census": {
-      "median_household_income": 84878,
-      "population": 28256
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -24591,10 +24002,6 @@
       "lng": -86.21581
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 72664,
-      "population": 6532
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -24824,10 +24231,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 95981,
-      "population": 16081
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -24984,10 +24387,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 98576,
-      "population": 11260
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -25289,10 +24688,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 98586,
-      "population": 13573
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -25448,10 +24843,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 67521,
-      "population": 66422
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -25608,10 +24999,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 58224,
-      "population": 45161
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -25804,10 +25191,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 94048,
-      "population": 11313
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -25982,10 +25365,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 104555,
-      "population": 40675
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -26160,10 +25539,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 101881,
-      "population": 26999
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -26320,10 +25695,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 102687,
-      "population": 24285
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -26480,10 +25851,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 58224,
-      "population": 45161
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -26640,10 +26007,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 157997,
-      "population": 20545
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -27016,10 +26379,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 58224,
-      "population": 45161
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -27194,10 +26553,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 102420,
-      "population": 43799
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -27372,10 +26727,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 147675,
-      "population": 17425
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -27504,10 +26855,6 @@
       "lng": -83.28419
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 128386,
-      "population": 12103
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -27663,10 +27010,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 157997,
-      "population": 20545
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -27823,10 +27166,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 151556,
-      "population": 21738
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -28021,10 +27360,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 86768,
-      "population": 23932
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -28181,10 +27516,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 58224,
-      "population": 45161
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -28341,10 +27672,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76226,
-      "population": 26888
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -28518,10 +27845,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 25357,
-      "population": 3616
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -28696,10 +28019,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 169792,
-      "population": 14639
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -28874,10 +28193,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 147267,
-      "population": 29461
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -28970,10 +28285,6 @@
       "lng": -74.09286
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 84855,
-      "population": 40331
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -29128,10 +28439,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 145864,
-      "population": 54369
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -29288,10 +28595,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 152863,
-      "population": 53877
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -29466,10 +28769,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 208462,
-      "population": 608
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -29626,10 +28925,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 161236,
-      "population": 33586
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -29786,10 +29081,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 243514,
-      "population": 41107
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -30000,10 +29291,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 250001,
-      "population": 12867
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -30178,10 +29465,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 137253,
-      "population": 56695
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -30356,10 +29639,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 228185,
-      "population": 10797
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -30534,10 +29813,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 105523,
-      "population": 26239
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -30693,10 +29968,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 213674,
-      "population": 13283
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -30889,10 +30160,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 111418,
-      "population": 22888
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -31049,10 +30316,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 106916,
-      "population": 96988
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -31245,10 +30508,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 145934,
-      "population": 50772
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -31423,10 +30682,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 228185,
-      "population": 10797
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -31601,10 +30856,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 114698,
-      "population": 14222
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -31697,10 +30948,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 137253,
-      "population": 56695
     },
     "quality_score": 45,
     "quality_components": [
@@ -31858,10 +31105,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 121217,
-      "population": 20527
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -31935,10 +31178,6 @@
       "lng": -80.19671
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 33629,
-      "population": 31807
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -32130,10 +31369,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 40052,
-      "population": 3984
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -32290,10 +31525,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 72189,
-      "population": 55336
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -32450,10 +31681,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76226,
-      "population": 26888
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -32609,10 +31836,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 154505,
-      "population": 25443
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -32768,10 +31991,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 91974,
-      "population": 4667
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -32928,10 +32147,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76636,
-      "population": 38898
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -33088,10 +32303,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 149614,
-      "population": 14902
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -33265,10 +32476,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 16651,
-      "population": 9626
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -33425,10 +32632,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 81656,
-      "population": 59932
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -33467,10 +32670,6 @@
       "lng": -117.24467
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 101042,
-      "population": 29435
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -33698,10 +32897,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 44977,
-      "population": 25899
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -33858,10 +33053,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 58221,
-      "population": 58136
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -34035,10 +33226,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 68445,
-      "population": 38844
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -34095,10 +33282,6 @@
       "lng": -82.63896
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 65058,
-      "population": 17464
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -34272,10 +33455,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 163929,
-      "population": 10853
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -34522,10 +33701,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 111141,
-      "population": 12913
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -34699,10 +33874,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 100335,
-      "population": 36522
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -34859,10 +34030,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 163613,
-      "population": 14773
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -35019,10 +34186,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 64978,
-      "population": 29316
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -35178,10 +34341,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 96460,
-      "population": 14639
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -35338,10 +34497,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 60815,
-      "population": 17958
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -35498,10 +34653,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 72963,
-      "population": 45562
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -35629,10 +34780,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 47293,
-      "population": 35555
     },
     "quality_score": 40,
     "quality_components": [
@@ -35897,10 +35044,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 148735,
-      "population": 18075
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -36057,10 +35200,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 188429,
-      "population": 5819
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -36234,10 +35373,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 103481,
-      "population": 20927
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -36394,10 +35529,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 105419,
-      "population": 48140
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -36589,10 +35720,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 148542,
-      "population": 17110
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -36821,10 +35948,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 115000,
-      "population": 12519
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -36999,10 +36122,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 88552,
-      "population": 31812
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -37059,10 +36178,6 @@
       "lng": -79.98108
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 70216,
-      "population": 29383
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -37236,10 +36351,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 54503,
-      "population": 39405
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -37396,10 +36507,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 135735,
-      "population": 1922
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -37556,10 +36663,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 91007,
-      "population": 42914
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -37806,10 +36909,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 75237,
-      "population": 8364
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -38056,10 +37155,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 64385,
-      "population": 17508
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -38233,10 +37328,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 84512,
-      "population": 26001
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -38392,10 +37483,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 50372,
-      "population": 19064
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -38552,10 +37639,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 94983,
-      "population": 43687
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -38802,10 +37885,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 84893,
-      "population": 20445
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -38962,10 +38041,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 58722,
-      "population": 45900
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -39137,10 +38212,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 43337,
-      "population": 7328
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -39296,10 +38367,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 80985,
-      "population": 29182
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -39456,10 +38523,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 89389,
-      "population": 28656
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -39634,10 +38697,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 75013,
-      "population": 14941
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -39794,10 +38853,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 80439,
-      "population": 41382
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -39972,10 +39027,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 48256,
-      "population": 48214
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -40132,10 +39183,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 90266,
-      "population": 31810
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -40292,10 +39339,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 140687,
-      "population": 20930
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -40487,10 +39530,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 151833,
-      "population": 12173
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -40647,10 +39686,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 104350,
-      "population": 18476
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -40860,10 +39895,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 94496,
-      "population": 7575
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -41020,10 +40051,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 54194,
-      "population": 27926
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -41395,10 +40422,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 71768,
-      "population": 49906
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -41771,10 +40794,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 46903,
-      "population": 24284
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -41985,10 +41004,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 85059,
-      "population": 50921
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -42199,10 +41214,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 45719,
-      "population": 48987
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -42395,10 +41406,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 42349,
-      "population": 30370
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -42573,10 +41580,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 78376,
-      "population": 12572
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -42751,10 +41754,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 61210,
-      "population": 49434
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -42912,10 +41911,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 106640,
-      "population": 22546
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -43072,10 +42067,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 95231,
-      "population": 13347
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -43232,10 +42223,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 58059,
-      "population": 32615
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -43486,10 +42473,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 56659,
-      "population": 40848
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -43683,10 +42666,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 118320,
-      "population": 38006
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -43915,10 +42894,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 60655,
-      "population": 37375
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -44131,10 +43106,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 87241,
-      "population": 35824
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -44345,10 +43316,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 111683,
-      "population": 6420
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -44523,10 +43490,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 71641,
-      "population": 36557
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -44683,10 +43646,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 117932,
-      "population": 18379
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -44879,10 +43838,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 170144,
-      "population": 28683
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -45039,10 +43994,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 117124,
-      "population": 39856
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -45199,10 +44150,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 131648,
-      "population": 22286
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -45359,10 +44306,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 151833,
-      "population": 12173
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -45555,10 +44498,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 163613,
-      "population": 14773
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -45673,10 +44612,6 @@
     "diocese_percentiles": {
       "plate_pledge": 97,
       "plate_pledge_value": 726099
-    },
-    "census": {
-      "median_household_income": 183657,
-      "population": 18311
     },
     "quality_score": 45,
     "quality_components": [
@@ -45834,10 +44769,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 203690,
-      "population": 10765
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -45994,10 +44925,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 250001,
-      "population": 5886
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -46072,10 +44999,6 @@
       "lng": -71.2321
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 250001,
-      "population": 5589
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -46231,10 +45154,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 118877,
-      "population": 25150
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -46391,10 +45310,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 76448,
-      "population": 9282
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -46587,10 +45502,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 114933,
-      "population": 41479
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -46629,10 +45540,6 @@
       "lng": -71.04539
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 157955,
-      "population": 13072
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -46788,10 +45695,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 136887,
-      "population": 13861
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -46948,10 +45851,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 170326,
-      "population": 24143
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -47144,10 +46043,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 98474,
-      "population": 41611
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -47222,10 +46117,6 @@
       "lng": -71.18361
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 133936,
-      "population": 12706
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -47381,10 +46272,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 162694,
-      "population": 35612
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -47423,10 +46310,6 @@
       "lng": -71.054518
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 106625,
-      "population": 6688
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -47582,10 +46465,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 132970,
-      "population": 22124
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -47742,10 +46621,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 230625,
-      "population": 11004
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -47920,10 +46795,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 171250,
-      "population": 21709
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -48098,10 +46969,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 56896,
-      "population": 18867
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -48140,10 +47007,6 @@
       "lng": -82.37954
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 80824,
-      "population": 16426
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -48299,10 +47162,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 66438,
-      "population": 18558
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -48549,10 +47408,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 127306,
-      "population": 18356
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -48709,10 +47564,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 110893,
-      "population": 9074
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -48887,10 +47738,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 99615,
-      "population": 11214
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -49047,10 +47894,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 66268,
-      "population": 19116
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -49243,10 +48086,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 80681,
-      "population": 28818
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -49403,10 +48242,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 47711,
-      "population": 34437
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -49562,10 +48397,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 90363,
-      "population": 20017
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -49740,10 +48571,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 170379,
-      "population": 4218
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -49900,10 +48727,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 47766,
-      "population": 18341
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -49959,10 +48782,6 @@
       "lng": -71.257825
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 136375,
-      "population": 1438
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -50000,10 +48819,6 @@
       "lng": -81.759974
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 67932,
-      "population": 24269
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -50159,10 +48974,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 111742,
-      "population": 10767
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -50391,10 +49202,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 121006,
-      "population": 7602
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -50551,10 +49358,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 81024,
-      "population": 45781
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -50718,10 +49521,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 105263,
-      "population": 33017
     },
     "quality_score": 40,
     "quality_components": [
@@ -50950,10 +49749,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 66438,
-      "population": 18558
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -51110,10 +49905,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 121006,
-      "population": 7602
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -51288,10 +50079,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 166994,
-      "population": 62774
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -51466,10 +50253,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 148505,
-      "population": 16041
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -51626,10 +50409,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 115048,
-      "population": 63873
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -51858,10 +50637,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 250001,
-      "population": 11759
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -52054,10 +50829,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 68445,
-      "population": 38844
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -52214,10 +50985,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 80681,
-      "population": 28818
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -52410,10 +51177,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 46903,
-      "population": 24284
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -52801,10 +51564,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 29059,
-      "population": 22544
-    },
     "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
@@ -52985,10 +51744,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 92813,
-      "population": 18648
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -53149,10 +51904,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 34818,
-      "population": 18635
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -53350,10 +52101,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 50757,
-      "population": 39628
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -53551,10 +52298,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 59684,
-      "population": 27044
-    },
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -53711,10 +52454,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 70975,
-      "population": 42135
-    },
     "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
@@ -54033,10 +52772,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 113525,
-      "population": 20212
-    },
     "quality_score": 65,
     "quality_components": [
       "Recent date (15)",
@@ -54233,10 +52968,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 95869,
-      "population": 40026
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -54394,10 +53125,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 49785,
-      "population": 12335
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -54555,10 +53282,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 62500,
-      "population": 2384
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -54791,10 +53514,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 78546,
-      "population": 5366
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -54990,10 +53709,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 92684,
-      "population": 62373
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -55187,10 +53902,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 141089,
-      "population": 44444
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -55338,10 +54049,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 50234,
-      "population": 8626
     },
     "quality_score": 45,
     "quality_components": [
@@ -55538,10 +54245,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 103238,
-      "population": 57367
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -55697,10 +54400,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 140092,
-      "population": 53333
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -55893,10 +54592,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 142263,
-      "population": 66518
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -56088,10 +54783,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 159688,
-      "population": 12983
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -56301,10 +54992,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 104943,
-      "population": 28619
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -56497,10 +55184,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 65630,
-      "population": 27661
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -56764,10 +55447,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 92174,
-      "population": 15572
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -56960,10 +55639,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 71048,
-      "population": 42648
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -57428,10 +56103,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 237455,
-      "population": 31688
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -57678,10 +56349,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 51595,
-      "population": 18686
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -57873,10 +56540,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 77115,
-      "population": 23113
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -58069,10 +56732,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 69153,
-      "population": 28037
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -58228,10 +56887,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 52783,
-      "population": 18465
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -58513,10 +57168,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 59684,
-      "population": 27044
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -58834,10 +57485,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 171265,
-      "population": 49217
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -59012,10 +57659,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 222878,
-      "population": 61414
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -59280,10 +57923,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 54291,
-      "population": 31376
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -59530,10 +58169,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 59578,
-      "population": 20688
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -59708,10 +58343,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 61558,
-      "population": 49722
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -59886,10 +58517,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 46693,
-      "population": 22729
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -60046,10 +58673,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 83330,
-      "population": 22373
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -60224,10 +58847,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 84735,
-      "population": 10544
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -60283,10 +58902,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60323,10 +58938,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60363,10 +58974,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60403,10 +59010,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60443,10 +59046,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60483,10 +59082,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60641,10 +59236,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76130,
-      "population": 29870
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -60683,10 +59274,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60723,10 +59310,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60763,10 +59346,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60803,10 +59382,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -60879,10 +59454,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -61073,10 +59644,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76130,
-      "population": 29870
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -61133,10 +59700,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -61227,10 +59790,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 172285,
-      "population": 19180
     },
     "quality_score": 45,
     "quality_components": [
@@ -61406,10 +59965,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 215126,
-      "population": 11209
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -61448,10 +60003,6 @@
       "lng": -118.25938
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 80549,
-      "population": 64769
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -61606,10 +60157,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76130,
-      "population": 29870
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -61739,10 +60286,6 @@
         }
       }
     },
-    "census": {
-      "median_household_income": 129030,
-      "population": 36420
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -61835,10 +60378,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 129030,
-      "population": 36420
     },
     "quality_score": 45,
     "quality_components": [
@@ -61951,10 +60490,6 @@
         }
       }
     },
-    "census": {
-      "median_household_income": 172285,
-      "population": 19180
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -62047,10 +60582,6 @@
           "membership": null
         }
       }
-    },
-    "census": {
-      "median_household_income": 129030,
-      "population": 36420
     },
     "quality_score": 45,
     "quality_components": [
@@ -62208,10 +60739,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 71450,
-      "population": 40534
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -62385,10 +60912,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 45056,
-      "population": 21733
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -62562,10 +61085,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 84735,
-      "population": 10544
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -62604,10 +61123,6 @@
       "lng": -87.0447
     },
     "match_confidence": "high",
-    "census": {
-      "median_household_income": 61534,
-      "population": 2274
-    },
     "quality_score": 30,
     "quality_components": [
       "Congregation identified (10)",
@@ -62680,10 +61195,6 @@
       "lng": -86.24981
     },
     "match_confidence": "exact",
-    "census": {
-      "median_household_income": 61356,
-      "population": 7747
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -62875,10 +61386,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 121496,
-      "population": 51250
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63071,10 +61578,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 105057,
-      "population": 43112
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63231,10 +61734,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 84735,
-      "population": 10544
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63409,10 +61908,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 46693,
-      "population": 22729
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63569,10 +62064,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 46693,
-      "population": 22729
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63819,10 +62310,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 83330,
-      "population": 22373
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63979,10 +62466,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 84735,
-      "population": 10544
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -64193,10 +62676,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 46693,
-      "population": 22729
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -64425,10 +62904,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 45056,
-      "population": 21733
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -64620,10 +63095,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 40527,
-      "population": 4497
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -64798,10 +63269,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 59578,
-      "population": 20688
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -64998,10 +63465,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 46693,
-      "population": 22729
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -65194,10 +63657,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 36326,
-      "population": 41004
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -65372,10 +63831,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 65375,
-      "population": 49462
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -65585,10 +64040,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 63975,
-      "population": 13882
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -65743,10 +64194,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 99185,
-      "population": 30799
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -65927,10 +64374,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 122691,
-      "population": 38380
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -66110,10 +64553,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 49192,
-      "population": 23441
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -66472,10 +64911,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 58222,
-      "population": 2513
-    },
     "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
@@ -66695,10 +65130,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 83195,
-      "population": 13762
-    },
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -67003,10 +65434,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 64911,
-      "population": 65740
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -67217,10 +65644,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 85573,
-      "population": 38861
-    },
     "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
@@ -67379,10 +65802,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 61069,
-      "population": 41342
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -67539,10 +65958,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 250001,
-      "population": 19416
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -67753,10 +66168,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 74970,
-      "population": 7161
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -67931,10 +66342,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 46603,
-      "population": 18120
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -68127,10 +66534,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 60528,
-      "population": 3707
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -68323,10 +66726,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 199800,
-      "population": 27785
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -68555,10 +66954,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 68768,
-      "population": 12070
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -68715,10 +67110,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 101422,
-      "population": 34022
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -68965,10 +67356,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 211854,
-      "population": 24721
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -69160,10 +67547,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 220323,
-      "population": 31312
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -69446,10 +67829,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 116596,
-      "population": 63340
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -69606,10 +67985,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 199800,
-      "population": 27785
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -69874,10 +68249,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 211854,
-      "population": 24721
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -70123,10 +68494,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 68768,
-      "population": 12070
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -70302,10 +68669,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 69827,
-      "population": 29345
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -70479,10 +68842,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 41390,
-      "population": 51640
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -70638,10 +68997,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 109263,
-      "population": 24092
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -70798,10 +69153,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 51636,
-      "population": 33472
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -70958,10 +69309,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 65197,
-      "population": 7782
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -71135,10 +69482,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 98173,
-      "population": 27112
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -71312,10 +69655,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 65197,
-      "population": 7782
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -71489,10 +69828,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 51636,
-      "population": 33472
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -71649,10 +69984,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 35865,
-      "population": 4133
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -72205,10 +70536,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 48588,
-      "population": 22725
-    },
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -72365,10 +70692,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 57728,
-      "population": 61759
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -72532,10 +70855,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 57843,
-      "population": 18583
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -72695,10 +71014,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 47665,
-      "population": 28615
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -73089,10 +71404,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 49169,
-      "population": 47780
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -73285,10 +71596,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 51863,
-      "population": 30023
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -73480,10 +71787,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 76739,
-      "population": 44822
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -73694,10 +71997,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 34870,
-      "population": 13550
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -73895,10 +72194,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 50084,
-      "population": 27857
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -74080,10 +72375,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 65483,
-      "population": 22500
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -74327,10 +72618,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 106439,
-      "population": 4244
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -74511,10 +72798,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 56810,
-      "population": 1379
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -74765,10 +73048,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 77813,
-      "population": 4197
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -74943,10 +73222,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 100829,
-      "population": 35708
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -75121,10 +73396,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 100829,
-      "population": 35708
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -75301,10 +73572,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 63551,
-      "population": 16769
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -75519,10 +73786,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 53371,
-      "population": 15233
-    },
     "quality_score": 40,
     "quality_components": [
       "Congregation identified (10)",
@@ -75678,10 +73941,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 41078,
-      "population": 1489
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",

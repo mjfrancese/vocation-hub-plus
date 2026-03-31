@@ -301,6 +301,48 @@ export default function AnalyticsPage() {
           </BarChart>
         </ResponsiveContainer>
       </ChartCard>
+
+      {/* Compensation by Diocese */}
+      {(() => {
+        const compData = profiles
+          .filter((p: any) => p.compensation?.diocese_median)
+          .reduce((acc: Record<string, { diocese: string; median: number; count: number; year: number }>, p: any) => {
+            const diocese = p.diocese;
+            if (!acc[diocese]) {
+              acc[diocese] = {
+                diocese,
+                median: p.compensation.diocese_median,
+                count: p.compensation.diocese_clergy_count,
+                year: p.compensation.year,
+              };
+            }
+            return acc;
+          }, {});
+
+        const chartData = Object.values(compData)
+          .sort((a, b) => b.median - a.median)
+          .slice(0, 25);
+
+        return chartData.length > 0 ? (
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <h3 className="text-sm font-semibold text-gray-700 mb-3">
+              Compensation by Diocese (Median, Top 25)
+            </h3>
+            <ResponsiveContainer width="100%" height={500}>
+              <BarChart data={chartData} layout="vertical" margin={{ left: 120 }}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" tickFormatter={(v) => `$${(v / 1000).toFixed(0)}K`} />
+                <YAxis type="category" dataKey="diocese" width={110} tick={{ fontSize: 11 }} />
+                <Tooltip formatter={(v) => `$${Number(v).toLocaleString()}`} />
+                <Bar dataKey="median" fill="#6366f1" name="Median Compensation" />
+              </BarChart>
+            </ResponsiveContainer>
+            <p className="text-xs text-gray-400 mt-2">
+              Source: CPG Clergy Compensation Report ({chartData[0]?.year})
+            </p>
+          </div>
+        ) : null;
+      })()}
     </div>
   );
 }

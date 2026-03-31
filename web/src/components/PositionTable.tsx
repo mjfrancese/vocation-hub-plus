@@ -599,6 +599,39 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
         <DetailField label="Annual Budget" value={budget ? `$${Number(budget).toLocaleString()}` : ''} />
       </div>
 
+      {/* Compensation Context */}
+      {pos.compensation && (
+        <div className="text-sm text-gray-600">
+          <span className="font-medium">Diocese median:</span>{' '}
+          ${pos.compensation.diocese_median?.toLocaleString()}
+          {pos.estimated_total_comp && pos.compensation.diocese_median && (
+            <span className={
+              pos.estimated_total_comp >= pos.compensation.diocese_median
+                ? 'text-green-600 ml-2'
+                : 'text-amber-600 ml-2'
+            }>
+              ({pos.estimated_total_comp >= pos.compensation.diocese_median ? 'Above' : 'Below'} median)
+            </span>
+          )}
+          <span className="text-xs text-gray-400 ml-1">
+            ({pos.compensation.year}, n={pos.compensation.diocese_clergy_count})
+          </span>
+        </div>
+      )}
+
+      {/* Clergy Tenure */}
+      {pos.parish_clergy_history && (
+        <div className="text-sm text-gray-600">
+          {pos.current_clergy ? (
+            <span>Current: {pos.current_clergy.name} ({pos.current_clergy.position_title}, {pos.current_clergy.years_tenure} years)</span>
+          ) : (
+            pos.parish_clergy_history.avg_tenure_years > 0 && (
+              <span>Avg. clergy tenure: {pos.parish_clergy_history.avg_tenure_years} years</span>
+            )
+          )}
+        </div>
+      )}
+
       {/* Position details */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
         <DetailField label="Ministry Setting" value={setting} />

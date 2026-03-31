@@ -1,0 +1,69 @@
+name: Monthly Data Refresh
+
+on:
+  schedule:
+    - cron: '0 5 1 * *'  # 1st of month, 5am UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120  # First clergy run takes ~60min
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          cd web && npm ci
+          pip install -r scripts/requirements.txt
+
+      - name: Download vocationhub.db
+        uses: actions/download-artifact@v4
+        with:
+          name: vocationhub-db
+          path: data/
+        continue-on-error: true  # First run won't have artifact
+
+      - name: Import Asset Map
+        run: cd web && node scripts/import-asset-map.js
+
+      - name: Fetch ECDPlus parishes
+        run: cd web && node scripts/fetch-ecdplus-parishes.js
+
+      - name: Fetch ECDPlus clergy
+        run: cd web && node scripts/fetch-ecdplus-clergy.js
+
+      - name: Merge parishes
+        run: cd web && node scripts/merge-parishes.js
+
+      - name: Import parochial data
+        run: cd web && node scripts/import-parochial-data.js
+
+      - name: Upload vocationhub.db
+        uses: actions/upload-artifact@v4
+        with:
+          name: vocationhub-db
+          path: data/vocationhub.db
+          retention-days: 90
+
+      - name: Run enrichment
+        run: cd web && node scripts/enrich-positions-v2.js
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add web/public/data/enriched-positions.json web/public/data/enriched-extended.json web/public/data/position-church-map.json
+          git diff --staged --quiet || git commit -m "chore: monthly data refresh $(date +%Y-%m-%d)"
+          git push
