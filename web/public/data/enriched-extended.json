@@ -6291,11 +6291,10 @@
       "median_household_income": 78363,
       "population": 58946
     },
-    "quality_score": 80,
+    "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
-      "Very recent date (5)",
       "Congregation identified (10)",
       "Church matched (10)",
       "Parochial data (10)",
@@ -13612,10 +13611,9 @@
     "receiving_names_from": "12/31/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "quality_score": 25,
+    "quality_score": 20,
     "quality_components": [
       "Recent date (15)",
-      "Very recent date (5)",
       "Position type (5)"
     ],
     "visibility": "extended_hidden"
@@ -20019,11 +20017,10 @@
       "median_household_income": 67252,
       "population": 70555
     },
-    "quality_score": 85,
+    "quality_score": 80,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
-      "Very recent date (5)",
       "Congregation identified (10)",
       "Church matched (10)",
       "Parochial data (10)",
@@ -20837,11 +20834,10 @@
       "median_household_income": 83884,
       "population": 5208
     },
-    "quality_score": 85,
+    "quality_score": 80,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
-      "Very recent date (5)",
       "Congregation identified (10)",
       "Church matched (10)",
       "Parochial data (10)",
@@ -23837,11 +23833,10 @@
       "median_household_income": 40000,
       "population": 310
     },
-    "quality_score": 95,
+    "quality_score": 90,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
-      "Very recent date (5)",
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
@@ -53722,10 +53717,9 @@
         "score": 3
       }
     ],
-    "quality_score": 25,
+    "quality_score": 20,
     "quality_components": [
       "Recent date (15)",
-      "Very recent date (5)",
       "Position type (5)"
     ],
     "visibility": "extended_hidden"
@@ -54318,11 +54312,10 @@
       "median_household_income": 49785,
       "population": 12335
     },
-    "quality_score": 85,
+    "quality_score": 80,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
-      "Very recent date (5)",
       "Congregation identified (10)",
       "Church matched (10)",
       "Parochial data (10)",
