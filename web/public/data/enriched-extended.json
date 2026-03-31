@@ -1276,6 +1276,17 @@
         "score": 5
       },
       {
+        "id": "10175",
+        "vh_id": 10175,
+        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+        "city": "",
+        "state": "SD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 57501,
+        "score": 4
+      },
+      {
         "id": "10636",
         "vh_id": 10636,
         "name": "St Paul's Episcopal Church",
@@ -22930,6 +22941,17 @@
         "score": 5
       },
       {
+        "id": "10175",
+        "vh_id": 10175,
+        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+        "city": "",
+        "state": "SD",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 57501,
+        "score": 4
+      },
+      {
         "id": "9992",
         "vh_id": 9992,
         "name": "Trinity Episcopal Church",
@@ -22959,17 +22981,6 @@
         "state": "OH",
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": 67,
-        "estimated_total_comp": null,
-        "score": 4
-      },
-      {
-        "id": "9944",
-        "vh_id": 9944,
-        "name": "Christ Episcopal Church",
-        "city": "Shaker Heights",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": 88,
         "estimated_total_comp": null,
         "score": 4
       }
@@ -23643,6 +23654,81 @@
       "Position type (5)"
     ],
     "visibility": "extended_hidden"
+  },
+  {
+    "vh_id": 10175,
+    "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+    "diocese": "South Dakota",
+    "state": "SD",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "congregation": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+    "receiving_names_from": "09/15/2025",
+    "receiving_names_to": "Open ended",
+    "open_ended": true,
+    "housing_type": "Rectory",
+    "estimated_total_comp": 57501,
+    "comp_breakdown": {
+      "stipend": 37501,
+      "housing": 20000
+    },
+    "similar_positions": [
+      {
+        "id": "10678",
+        "vh_id": 10678,
+        "name": "St. Mark's Episcopal Church, Portland",
+        "city": "Portland",
+        "state": "MO",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 11,
+        "estimated_total_comp": 62501,
+        "score": 4
+      },
+      {
+        "id": "10197",
+        "vh_id": 10197,
+        "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
+        "city": "",
+        "state": "OH",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 4
+      },
+      {
+        "id": "10650",
+        "vh_id": 10650,
+        "name": "St. Mary and St. Jude",
+        "city": "Northeast Harbor",
+        "state": "ME",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 73,
+        "estimated_total_comp": 132501,
+        "score": 3
+      },
+      {
+        "id": "10319",
+        "vh_id": 10319,
+        "name": "Position in San Joaquin",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 57501,
+        "score": 3
+      }
+    ],
+    "quality_score": 65,
+    "quality_components": [
+      "Active status (25)",
+      "Recent date (15)",
+      "Congregation identified (10)",
+      "Position named (5)",
+      "Position type (5)",
+      "State known (5)"
+    ],
+    "visibility": "extended"
   },
   {
     "vh_id": 10174,

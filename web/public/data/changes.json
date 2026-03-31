@@ -3,8 +3,8 @@
     "id": 1,
     "position_id": "34e7666e5e31915335213b5b0e407c257c873847b99b1c6659081768cabcaab5",
     "change_type": "updated",
-    "changed_at": "2026-03-31 07:05:06",
-    "details": "{\"updated_on_hub\":{\"before\":\"Today, 12:39 PM\",\"after\":\"Yesterday, 12:39 PM\"}}",
+    "changed_at": "2026-03-31 18:51:57",
+    "details": "{\"updated_on_hub\":{\"before\":\"Yesterday, 12:39 PM\",\"after\":\"Yesterday, 1:39 PM\"}}",
     "name": "Good Shepherd (Maitland)",
     "diocese": "Central Florida",
     "position_type": "Rector/Priest-in-Charge"
@@ -13,8 +13,8 @@
     "id": 2,
     "position_id": "16e1ad5efd133be2652f20b3c4f580070696a685ffa70a684d29d22868e2c0bc",
     "change_type": "updated",
-    "changed_at": "2026-03-31 07:05:06",
-    "details": "{\"updated_on_hub\":{\"before\":\"Today, 9:37 AM\",\"after\":\"Yesterday, 9:37 AM\"}}",
+    "changed_at": "2026-03-31 18:51:57",
+    "details": "{\"updated_on_hub\":{\"before\":\"Yesterday, 9:37 AM\",\"after\":\"Yesterday, 10:37 AM\"}}",
     "name": "St Lukes (Atlanta)",
     "diocese": "Atlanta",
     "position_type": "Rector/Priest-in-Charge"
