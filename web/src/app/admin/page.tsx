@@ -174,7 +174,7 @@ function AdminDashboard({ authed }: { authed: boolean }) {
     const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
     Promise.all([
       fetch(`${base}/data/all-profiles.json`).then(r => r.json()),
-      fetch(`${base}/data/church-registry.json`).then(r => r.json()),
+      fetch(`${base}/data/church-registry.json`).then(r => r.json()).catch(() => ({ churches: {} })),
       fetch(`${base}/data/position-church-map.json`).then(r => r.json()),
       fetch(`${base}/data/meta.json`).then(r => r.json()),
       fetch(`${base}/data/needs-backfill.json`).then(r => r.json()).catch(() => null),
