@@ -102,12 +102,12 @@ describe('db module', () => {
       'idx_parish_aliases_normalized',
       'idx_clergy_canonical_residence',
       'idx_clergy_last_name',
-      'idx_clergy_positions_guid',
+      'idx_clergy_positions_clergy',
       'idx_clergy_positions_parish',
       'idx_clergy_positions_current',
       'idx_comp_diocesan_year',
       'idx_comp_diocesan_diocese',
-      'idx_parochial_parish_nid',
+      'idx_parochial_parish',
     ];
 
     it.each(expectedIndexes)('creates index: %s', (indexName) => {

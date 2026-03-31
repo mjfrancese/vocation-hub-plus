@@ -181,7 +181,7 @@ function initSchema(database) {
       FOREIGN KEY (parish_id) REFERENCES parishes(id)
     );
 
-    CREATE INDEX IF NOT EXISTS idx_clergy_positions_guid ON clergy_positions(clergy_guid);
+    CREATE INDEX IF NOT EXISTS idx_clergy_positions_clergy ON clergy_positions(clergy_guid);
     CREATE INDEX IF NOT EXISTS idx_clergy_positions_parish ON clergy_positions(parish_id);
     CREATE INDEX IF NOT EXISTS idx_clergy_positions_current ON clergy_positions(is_current) WHERE is_current = 1;
 
@@ -259,7 +259,7 @@ function initSchema(database) {
       UNIQUE(parish_nid, year)
     );
 
-    CREATE INDEX IF NOT EXISTS idx_parochial_parish_nid ON parochial_data(parish_nid);
+    CREATE INDEX IF NOT EXISTS idx_parochial_parish ON parochial_data(parish_nid);
 
     -- ============================================================
     -- Fetch log (audit trail for data pipeline runs)
