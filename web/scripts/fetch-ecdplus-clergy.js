@@ -32,10 +32,11 @@ function sleep(ms) {
  * @returns {Array<{guid: string, first_name: string, middle_name: string, last_name: string, street_city: string, street_state: string}>}
  */
 function parseClergyList(response) {
-  if (!response || !Array.isArray(response.results) || response.results.length === 0) {
+  const items = response?.data || response?.results;
+  if (!Array.isArray(items) || items.length === 0) {
     return [];
   }
-  return response.results.map(r => ({
+  return items.map(r => ({
     guid: r.guid,
     first_name: r.first_name || '',
     middle_name: r.middle_name || '',
@@ -310,7 +311,7 @@ async function fetchAllClergy() {
       }
 
       const detailData = await detailResponse.json();
-      const parsed = parseClergyDetail(detailData);
+      const parsed = parseClergyDetail(detailData.data || detailData);
 
       batch.push({
         guid: c.guid,

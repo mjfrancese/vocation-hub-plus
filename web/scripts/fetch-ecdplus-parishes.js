@@ -32,10 +32,11 @@ function sleep(ms) {
  * @returns {Array<{id: string, name: string, type: string, phone: string, maps_link: string}>}
  */
 function parseParishList(response) {
-  if (!response || !Array.isArray(response.results) || response.results.length === 0) {
+  const items = response?.data || response?.results;
+  if (!Array.isArray(items) || items.length === 0) {
     return [];
   }
-  return response.results.map(r => ({
+  return items.map(r => ({
     id: r.id,
     name: r.name,
     type: r.type,
@@ -246,7 +247,7 @@ async function fetchAllParishes() {
       }
 
       const detailData = await detailResponse.json();
-      const parsed = parseParishDetail(detailData);
+      const parsed = parseParishDetail(detailData.data || detailData);
       parsed.ecdplus_id = p.id;
 
       const result = upsertParish(db, {
