@@ -2735,6 +2735,10 @@
         "score": 5
       }
     ],
+    "census": {
+      "median_household_income": 72279,
+      "population": 26204
+    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"

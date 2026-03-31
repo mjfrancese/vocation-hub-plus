@@ -1124,10 +1124,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 121536,
-      "population": 51966
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -1653,10 +1649,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 152865,
-      "population": 10170
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -2321,10 +2313,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 230545,
-      "population": 18473
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -2649,10 +2637,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 75838,
-      "population": 5169
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -3315,10 +3299,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 96250,
-      "population": 23425
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -4447,10 +4427,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 51624,
-      "population": 12882
-    },
     "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
@@ -6017,10 +5993,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 79694,
-      "population": 15946
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -10115,10 +10087,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 70647,
-      "population": 3993
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -10296,10 +10264,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 103186,
-      "population": 21416
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -13205,10 +13169,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 93643,
-      "population": 36277
-    },
     "quality_score": 65,
     "quality_components": [
       "Recent date (15)",
@@ -41794,10 +41754,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 61210,
-      "population": 49434
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -42517,10 +42473,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 56659,
-      "population": 40848
-    },
     "quality_score": 50,
     "quality_components": [
       "Congregation identified (10)",
@@ -51792,10 +51744,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 92813,
-      "population": 18648
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -52824,10 +52772,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 113525,
-      "population": 20212
-    },
     "quality_score": 65,
     "quality_components": [
       "Recent date (15)",
@@ -58225,10 +58169,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 59578,
-      "population": 20688
-    },
     "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
@@ -63329,10 +63269,6 @@
         "score": 7
       }
     ],
-    "census": {
-      "median_household_income": 59578,
-      "population": 20688
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
@@ -70919,10 +70855,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 57843,
-      "population": 18583
-    },
     "quality_score": 90,
     "quality_components": [
       "Active status (25)",
@@ -72262,10 +72194,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 50084,
-      "population": 27857
-    },
     "quality_score": 95,
     "quality_components": [
       "Active status (25)",
