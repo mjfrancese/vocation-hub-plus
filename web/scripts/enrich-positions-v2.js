@@ -18,7 +18,6 @@ const path = require('path');
 const { getDb, closeDb } = require('./db');
 const {
   normalizeChurchName,
-  normalizeDiocese,
   normalizePhone,
   normalizeDomain,
 } = require('./lib/normalization');
