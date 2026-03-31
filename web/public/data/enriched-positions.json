@@ -308,10 +308,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 42453,
-      "population": 16545
-    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"
@@ -498,10 +494,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 66762,
-      "population": 35563
-    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"
@@ -688,10 +680,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 138838,
-      "population": 29251
-    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"
@@ -2747,10 +2735,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 72279,
-      "population": 26204
-    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"
@@ -3356,10 +3340,6 @@
         "score": 5
       }
     ],
-    "census": {
-      "median_household_income": 44911,
-      "population": 5457
-    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"
