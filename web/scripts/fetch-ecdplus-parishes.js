@@ -61,7 +61,16 @@ function parseParishDetail(detail) {
   let state = null;
   let zip = null;
 
-  if (detail.address) {
+  if (detail.address && typeof detail.address === 'object') {
+    // Structured address object from API: {address1, address2, city, state, postal_code}
+    const parts = [detail.address.address1, detail.address.address2, detail.address.address3]
+      .filter(Boolean);
+    address = parts.join(', ') || null;
+    city = detail.address.city || null;
+    state = detail.address.state || null;
+    zip = detail.address.postal_code || null;
+  } else if (detail.address && typeof detail.address === 'string') {
+    // Multiline string format (used in tests)
     const lines = detail.address.split('\n');
     if (lines.length >= 2) {
       const lastLine = lines[lines.length - 1];
@@ -72,11 +81,9 @@ function parseParishDetail(detail) {
         state = match[2];
         zip = match[3] || null;
       } else {
-        // Last line doesn't match; treat entire string as address
         address = detail.address;
       }
     } else {
-      // Single line -- check if it matches city/state/zip
       const match = lines[0].match(CITY_STATE_ZIP_RE);
       if (match) {
         city = match[1];

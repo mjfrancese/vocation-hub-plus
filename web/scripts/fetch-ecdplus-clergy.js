@@ -62,7 +62,16 @@ function parseClergyDetail(detail) {
   let state = null;
   let zip = null;
 
-  if (detail.published_address) {
+  if (detail.published_address && typeof detail.published_address === 'object') {
+    // Structured address object from API
+    const parts = [detail.published_address.address1, detail.published_address.address2, detail.published_address.address3]
+      .filter(Boolean);
+    address = parts.join(', ') || null;
+    city = detail.published_address.city || null;
+    state = detail.published_address.state || null;
+    zip = detail.published_address.postal_code || null;
+  } else if (detail.published_address && typeof detail.published_address === 'string') {
+    // Multiline string format (used in tests)
     const lines = detail.published_address.split('\n');
     if (lines.length >= 2) {
       const lastLine = lines[lines.length - 1];
@@ -93,18 +102,36 @@ function parseClergyDetail(detail) {
   const priest = ord.priesting_data || {};
   const bishop = ord.bishop_consecration_data || {};
 
-  // Positions
+  // Positions -- handle both "Present" and null for current positions,
+  // and start_date as number (year) or string (MM/DD/YYYY)
   const rawPositions = detail.principal_positions || [];
-  const positions = rawPositions.map(p => ({
-    position_title: p.position_title || '',
-    employer_name: p.employer_name || '',
-    employer_id: p.employer_id || '',
-    employer_address: p.employer_address || '',
-    employer_phone: p.employer_phone_number || '',
-    start_date: p.start_date || null,
-    end_date: p.end_date || null,
-    is_current: p.end_date == null ? 1 : 0,
-  }));
+  const positions = rawPositions.map(p => {
+    const endDate = p.end_date;
+    const isCurrent = endDate == null || endDate === 'Present' ? 1 : 0;
+    const startDate = typeof p.start_date === 'number'
+      ? `01/01/${p.start_date}`
+      : (p.start_date || null);
+    const endDateStr = isCurrent ? null
+      : (typeof endDate === 'number' ? `12/31/${endDate}` : endDate);
+
+    // Format employer_address if it's an object
+    let empAddr = p.employer_address || '';
+    if (empAddr && typeof empAddr === 'object') {
+      empAddr = [empAddr.address1, empAddr.city, empAddr.state, empAddr.postal_code]
+        .filter(Boolean).join(', ');
+    }
+
+    return {
+      position_title: p.position_title || '',
+      employer_name: p.employer_name || '',
+      employer_id: p.employer_id || '',
+      employer_address: empAddr,
+      employer_phone: p.employer_phone_number || '',
+      start_date: startDate,
+      end_date: endDateStr,
+      is_current: isCurrent,
+    };
+  });
 
   return {
     email: detail.email_address || '',
@@ -114,13 +141,13 @@ function parseClergyDetail(detail) {
     state,
     zip,
     country: null,
-    diaconate_date: diac.date || null,
+    diaconate_date: diac.deacon_date || diac.date || null,
     diaconate_bishop: diac.bishop || null,
     diaconate_diocese: diac.diocese || null,
-    priesting_date: priest.date || null,
+    priesting_date: priest.priest_date || priest.date || null,
     priesting_bishop: priest.bishop || null,
     priesting_diocese: priest.diocese || null,
-    bishop_consecration_date: bishop.date || null,
+    bishop_consecration_date: bishop.consecration_date || bishop.date || null,
     bishop_consecration_diocese: bishop.diocese || null,
     positions,
   };
