@@ -3,6 +3,12 @@ import fs from 'fs';
 import path from 'path';
 import os from 'os';
 import { createRequire } from 'module';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// DATA_DIR mirrors what enrich-positions-v2.js computes from its own __dirname
+const DATA_DIR = path.resolve(__dirname, '../../public/data');
 
 // Use createRequire so db.js and enrich-positions-v2.js share the same
 // CJS module cache (and thus the same DB singleton).
@@ -404,6 +410,281 @@ describe('enrich-positions-v2', () => {
       expect(positions[0].similar_positions).toBeDefined();
       expect(positions[0].similar_positions.length).toBeGreaterThanOrEqual(1);
       expect(positions[0].similar_positions[0].id).toBe('b');
+    });
+  });
+
+  // ---------------------------------------------------------------------------
+  // Helpers used by the file-backed tests below
+  // ---------------------------------------------------------------------------
+
+  function withTempDataFile(filename, content, fn) {
+    const filePath = path.join(DATA_DIR, filename);
+    const existed = fs.existsSync(filePath);
+    const original = existed ? fs.readFileSync(filePath) : null;
+    fs.writeFileSync(filePath, JSON.stringify(content));
+    try {
+      return fn(filePath);
+    } finally {
+      if (existed) {
+        fs.writeFileSync(filePath, original);
+      } else {
+        try { fs.unlinkSync(filePath); } catch { /* ignore */ }
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // computeDiocesePercentiles
+  // ---------------------------------------------------------------------------
+
+  describe('computeDiocesePercentiles', () => {
+    it('is a no-op when parochial-data.json is absent', () => {
+      const filePath = path.join(DATA_DIR, 'parochial-data.json');
+      const existed = fs.existsSync(filePath);
+      const original = existed ? fs.readFileSync(filePath) : null;
+      if (existed) fs.unlinkSync(filePath);
+      try {
+        const positions = [{ diocese: 'Virginia', parochial: { years: { '2023': { averageAttendance: 100 } } } }];
+        expect(() => computeDiocesePercentiles(positions)).not.toThrow();
+        expect(positions[0].diocese_percentiles).toBeUndefined();
+      } finally {
+        if (existed && original !== null) fs.writeFileSync(filePath, original);
+      }
+    });
+
+    it('computes percentile rankings within a diocese', () => {
+      const parochialData = {
+        congregations: [
+          { diocese: 'Virginia', years: { '2023': { averageAttendance: 50, plateAndPledge: 100000, membership: 200 } } },
+          { diocese: 'Virginia', years: { '2023': { averageAttendance: 100, plateAndPledge: 200000, membership: 400 } } },
+          { diocese: 'Virginia', years: { '2023': { averageAttendance: 200, plateAndPledge: 400000, membership: 800 } } },
+          { diocese: 'Virginia', years: { '2023': { averageAttendance: 300, plateAndPledge: 600000, membership: 1200 } } },
+        ],
+      };
+
+      withTempDataFile('parochial-data.json', parochialData, () => {
+        const positions = [
+          {
+            diocese: 'Virginia',
+            parochial: { years: { '2023': { averageAttendance: 200, plateAndPledge: 400000, membership: 800 } } },
+          },
+          {
+            diocese: 'Virginia',
+            parochial: { years: { '2023': { averageAttendance: 50, plateAndPledge: 100000, membership: 200 } } },
+          },
+          // Position with no diocese -- should be skipped
+          { parochial: { years: { '2023': { averageAttendance: 150 } } } },
+        ];
+
+        computeDiocesePercentiles(positions);
+
+        // ASA=200 is the 3rd of 4 values [50,100,200,300] => 2 values below => 50th percentile
+        expect(positions[0].diocese_percentiles).toBeDefined();
+        expect(positions[0].diocese_percentiles.asa).toBe(50);
+        expect(positions[0].diocese_percentiles.asa_value).toBe(200);
+
+        // ASA=50 is the 1st of 4 => 0 values below => 0th percentile
+        expect(positions[1].diocese_percentiles).toBeDefined();
+        expect(positions[1].diocese_percentiles.asa).toBe(0);
+
+        // Position with no diocese gets no percentiles
+        expect(positions[2].diocese_percentiles).toBeUndefined();
+      });
+    });
+
+    it('skips positions with no parochial data', () => {
+      const parochialData = {
+        congregations: [
+          { diocese: 'Virginia', years: { '2023': { averageAttendance: 100 } } },
+        ],
+      };
+
+      withTempDataFile('parochial-data.json', parochialData, () => {
+        const positions = [
+          { diocese: 'Virginia' }, // no parochial field
+          { diocese: 'Virginia', parochial: { years: {} } }, // empty years
+        ];
+        computeDiocesePercentiles(positions);
+        expect(positions[0].diocese_percentiles).toBeUndefined();
+        expect(positions[1].diocese_percentiles).toBeUndefined();
+      });
+    });
+  });
+
+  // ---------------------------------------------------------------------------
+  // attachCensusData
+  // ---------------------------------------------------------------------------
+
+  describe('attachCensusData', () => {
+    it('is a no-op when census-data.json is absent', () => {
+      const filePath = path.join(DATA_DIR, 'census-data.json');
+      const existed = fs.existsSync(filePath);
+      const original = existed ? fs.readFileSync(filePath) : null;
+      if (existed) fs.unlinkSync(filePath);
+      try {
+        const positions = [{ church_info: { zip: '22314' } }];
+        expect(() => attachCensusData(positions)).not.toThrow();
+        expect(positions[0].census).toBeUndefined();
+      } finally {
+        if (existed && original !== null) fs.writeFileSync(filePath, original);
+      }
+    });
+
+    it('attaches census data by zip from church_info', () => {
+      const censusData = {
+        '22314': { population: 50000, median_income: 85000, median_age: 38 },
+        '23220': { population: 30000, median_income: 62000, median_age: 35 },
+      };
+
+      withTempDataFile('census-data.json', censusData, () => {
+        const positions = [
+          { church_info: { zip: '22314' } },
+          { postal_code: '23220' },
+          { church_info: { zip: '99999' } }, // no match
+          { church_info: {} }, // no zip
+        ];
+
+        attachCensusData(positions);
+
+        expect(positions[0].census).toEqual({ population: 50000, median_income: 85000, median_age: 38 });
+        expect(positions[1].census).toEqual({ population: 30000, median_income: 62000, median_age: 35 });
+        expect(positions[2].census).toBeUndefined();
+        expect(positions[3].census).toBeUndefined();
+      });
+    });
+
+    it('normalises zip codes by stripping non-digits and truncating to 5', () => {
+      const censusData = { '22314': { population: 50000 } };
+
+      withTempDataFile('census-data.json', censusData, () => {
+        const positions = [
+          { church_info: { zip: '22314-1234' } }, // zip+4 format
+        ];
+
+        attachCensusData(positions);
+
+        expect(positions[0].census).toEqual({ population: 50000 });
+      });
+    });
+  });
+
+  // ---------------------------------------------------------------------------
+  // enrichPositions pipeline
+  // ---------------------------------------------------------------------------
+
+  describe('enrichPositions', () => {
+    const OUTPUT_FILES = ['enriched-positions.json', 'enriched-extended.json', 'needs-backfill.json'];
+
+    // Save and restore all data files touched by the pipeline
+    let savedFiles;
+
+    beforeEach(() => {
+      savedFiles = {};
+      const filesToSave = [
+        'positions.json', 'all-profiles.json', 'profile-fields.json',
+        'manual-diocese-overrides.json', 'manual-vh-ids.json',
+        ...OUTPUT_FILES,
+      ];
+      for (const name of filesToSave) {
+        const p = path.join(DATA_DIR, name);
+        savedFiles[name] = fs.existsSync(p) ? fs.readFileSync(p) : null;
+      }
+    });
+
+    afterEach(() => {
+      for (const [name, content] of Object.entries(savedFiles)) {
+        const p = path.join(DATA_DIR, name);
+        if (content !== null) {
+          fs.writeFileSync(p, content);
+        } else {
+          try { fs.unlinkSync(p); } catch { /* ignore */ }
+        }
+      }
+    });
+
+    it('runs without error on empty positions.json and writes output files', () => {
+      seedDB();
+
+      // Write minimal input files
+      fs.writeFileSync(path.join(DATA_DIR, 'positions.json'), JSON.stringify([]));
+      fs.writeFileSync(path.join(DATA_DIR, 'all-profiles.json'), JSON.stringify([]));
+
+      const { enrichPositions } = require('../enrich-positions-v2.js');
+      expect(() => enrichPositions()).not.toThrow();
+
+      // All three output files should have been written
+      for (const name of OUTPUT_FILES) {
+        expect(fs.existsSync(path.join(DATA_DIR, name))).toBe(true);
+      }
+
+      const enrichedPositions = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'enriched-positions.json'), 'utf-8'));
+      expect(Array.isArray(enrichedPositions)).toBe(true);
+      expect(enrichedPositions).toHaveLength(0);
+    });
+
+    it('enriches a single public position and produces gap report', () => {
+      seedDB();
+
+      const positions = [
+        {
+          id: 'p1',
+          vh_id: 1001,
+          name: "St. Paul's (Alexandria)",
+          diocese: 'Virginia',
+          state: 'VA',
+          website_url: 'http://stpauls.org',
+          contact_email: '',
+          contact_phone: '',
+          receiving_names_from: '01/01/2025',
+          receiving_names_to: '12/31/2026',
+          minimum_stipend: '$60,000',
+          maximum_stipend: '$80,000',
+          housing_type: '',
+        },
+      ];
+      fs.writeFileSync(path.join(DATA_DIR, 'positions.json'), JSON.stringify(positions));
+      fs.writeFileSync(path.join(DATA_DIR, 'all-profiles.json'), JSON.stringify([]));
+
+      const { enrichPositions } = require('../enrich-positions-v2.js');
+      expect(() => enrichPositions()).not.toThrow();
+
+      const enriched = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'enriched-positions.json'), 'utf-8'));
+      expect(enriched).toHaveLength(1);
+      expect(enriched[0].name).toBe("St. Paul's (Alexandria)");
+      // Should have been matched to the seeded parish
+      expect(enriched[0].church_info).toBeDefined();
+      expect(enriched[0].estimated_total_comp).toBe(70000);
+
+      // Gap report should exist and have a summary
+      const gapReport = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'needs-backfill.json'), 'utf-8'));
+      expect(gapReport.summary).toBeDefined();
+      expect(typeof gapReport.summary.total).toBe('number');
+      expect(gapReport.gaps).toBeInstanceOf(Array);
+    });
+
+    it('generates gap entries for positions missing a VH ID', () => {
+      seedDB();
+
+      const positions = [
+        {
+          id: 'p-no-vh',
+          name: 'Unknown Church',
+          diocese: 'Virginia',
+          state: 'VA',
+          // no vh_id, no profile_url
+        },
+      ];
+      fs.writeFileSync(path.join(DATA_DIR, 'positions.json'), JSON.stringify(positions));
+      fs.writeFileSync(path.join(DATA_DIR, 'all-profiles.json'), JSON.stringify([]));
+
+      const { enrichPositions } = require('../enrich-positions-v2.js');
+      enrichPositions();
+
+      const gapReport = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'needs-backfill.json'), 'utf-8'));
+      expect(gapReport.summary.missing_vh_id).toBe(1);
+      const missingEntry = gapReport.gaps.find(g => g.type === 'missing_vh_id');
+      expect(missingEntry).toBeDefined();
+      expect(missingEntry.id).toBe('p-no-vh');
     });
   });
 });
