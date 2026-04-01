@@ -27,6 +27,7 @@ const {
   attachCensusData,
   computeDiocesePercentiles,
   isGenericDomain,
+  computeParishContext,
 } = require('../enrich-positions-v2.js');
 
 let testDbPath;
@@ -569,6 +570,84 @@ describe('enrich-positions-v2', () => {
   });
 
   // ---------------------------------------------------------------------------
+  // computeParishContext
+  // ---------------------------------------------------------------------------
+
+  describe('computeParishContext', () => {
+    function seedParishContextData() {
+      const db = getDb();
+      // Parish with known clergy history and parochial data
+      db.prepare(`INSERT INTO parishes (id, name, diocese, source) VALUES (?, ?, ?, ?)`).run(100, 'St. Test Parish', 'Test Diocese', 'ecdplus');
+      // 3 clergy: one current, two historical
+      db.prepare(`INSERT INTO clergy (guid, first_name, last_name) VALUES (?, ?, ?)`).run('g1', 'Alice', 'Smith');
+      db.prepare(`INSERT INTO clergy (guid, first_name, last_name) VALUES (?, ?, ?)`).run('g2', 'Bob', 'Jones');
+      db.prepare(`INSERT INTO clergy (guid, first_name, last_name) VALUES (?, ?, ?)`).run('g3', 'Carol', 'Davis');
+      db.prepare(`INSERT INTO clergy_positions (clergy_guid, parish_id, position_title, start_date, end_date, is_current) VALUES (?, ?, ?, ?, ?, ?)`).run('g1', 100, 'Rector', '01/15/2020', null, 1);
+      db.prepare(`INSERT INTO clergy_positions (clergy_guid, parish_id, position_title, start_date, end_date, is_current) VALUES (?, ?, ?, ?, ?, ?)`).run('g2', 100, 'Rector', '06/01/2015', '12/31/2019', 0);
+      db.prepare(`INSERT INTO clergy_positions (clergy_guid, parish_id, position_title, start_date, end_date, is_current) VALUES (?, ?, ?, ?, ?, ?)`).run('g3', 100, 'Rector', '03/01/2010', '05/31/2015', 0);
+      // Parochial data: 5 years, declining attendance, growing giving
+      db.prepare(`INSERT INTO parochial_data (parish_nid, year, average_attendance, plate_and_pledge, membership, operating_revenue) VALUES (?, ?, ?, ?, ?, ?)`).run('nid100', 2019, 150, 250000, 320, 300000);
+      db.prepare(`INSERT INTO parochial_data (parish_nid, year, average_attendance, plate_and_pledge, membership, operating_revenue) VALUES (?, ?, ?, ?, ?, ?)`).run('nid100', 2020, 140, 260000, 310, 310000);
+      db.prepare(`INSERT INTO parochial_data (parish_nid, year, average_attendance, plate_and_pledge, membership, operating_revenue) VALUES (?, ?, ?, ?, ?, ?)`).run('nid100', 2021, 135, 270000, 305, 320000);
+      db.prepare(`INSERT INTO parochial_data (parish_nid, year, average_attendance, plate_and_pledge, membership, operating_revenue) VALUES (?, ?, ?, ?, ?, ?)`).run('nid100', 2022, 130, 280000, 298, 330000);
+      db.prepare(`INSERT INTO parochial_data (parish_nid, year, average_attendance, plate_and_pledge, membership, operating_revenue) VALUES (?, ?, ?, ?, ?, ?)`).run('nid100', 2023, 125, 290000, 290, 340000);
+      // Link parish to parochial via nid
+      db.prepare(`UPDATE parishes SET nid = ? WHERE id = ?`).run('nid100', 100);
+    }
+
+    it('computes clergy count and avg tenure', () => {
+      seedParishContextData();
+      const ctx = computeParishContext(100);
+      expect(ctx.clergy_count_10yr).toBe(3);
+      expect(ctx.current_clergy_count).toBe(1);
+      expect(ctx.avg_tenure_years).toBeGreaterThan(0);
+    });
+
+    it('computes attendance trend as declining', () => {
+      seedParishContextData();
+      const ctx = computeParishContext(100);
+      expect(ctx.attendance_trend).toBe('declining');
+      expect(ctx.attendance_change_pct).toBeLessThan(0);
+    });
+
+    it('computes giving trend as growing', () => {
+      seedParishContextData();
+      const ctx = computeParishContext(100);
+      expect(ctx.giving_trend).toBe('growing');
+      expect(ctx.giving_change_pct).toBeGreaterThan(0);
+    });
+
+    it('computes membership trend as declining', () => {
+      seedParishContextData();
+      const ctx = computeParishContext(100);
+      expect(ctx.membership_trend).toBe('declining');
+      expect(ctx.membership_change_pct).toBeLessThan(0);
+    });
+
+    it('returns null trends when no parochial data', () => {
+      const db = getDb();
+      db.prepare(`INSERT INTO parishes (id, name, diocese, source) VALUES (?, ?, ?, ?)`).run(200, 'No Data Parish', 'Test', 'ecdplus');
+      const ctx = computeParishContext(200);
+      expect(ctx.attendance_trend).toBeNull();
+      expect(ctx.giving_trend).toBeNull();
+      expect(ctx.membership_trend).toBeNull();
+      expect(ctx.years_of_data).toBe(0);
+    });
+
+    it('returns years_of_data count', () => {
+      seedParishContextData();
+      const ctx = computeParishContext(100);
+      expect(ctx.years_of_data).toBe(5);
+    });
+
+    it('includes latest_operating_revenue', () => {
+      seedParishContextData();
+      const ctx = computeParishContext(100);
+      expect(ctx.latest_operating_revenue).toBe(340000);
+    });
+  });
+
+  // ---------------------------------------------------------------------------
   // enrichPositions pipeline
   // ---------------------------------------------------------------------------
 
@@ -660,6 +739,37 @@ describe('enrich-positions-v2', () => {
       expect(gapReport.summary).toBeDefined();
       expect(typeof gapReport.summary.total).toBe('number');
       expect(gapReport.gaps).toBeInstanceOf(Array);
+    });
+
+    it('attaches parish_context to matched public positions', () => {
+      seedDB();
+
+      const positions = [
+        {
+          id: 'p1',
+          vh_id: 1001,
+          name: "St. Paul's (Alexandria)",
+          diocese: 'Virginia',
+          state: 'VA',
+          website_url: 'http://stpauls.org',
+          contact_email: '',
+          contact_phone: '',
+          receiving_names_from: '01/01/2025',
+          receiving_names_to: '12/31/2026',
+          minimum_stipend: '$60,000',
+          maximum_stipend: '$80,000',
+          housing_type: '',
+        },
+      ];
+      fs.writeFileSync(path.join(DATA_DIR, 'positions.json'), JSON.stringify(positions));
+      fs.writeFileSync(path.join(DATA_DIR, 'all-profiles.json'), JSON.stringify([]));
+
+      const { enrichPositions } = require('../enrich-positions-v2.js');
+      enrichPositions();
+
+      const enriched = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'enriched-positions.json'), 'utf-8'));
+      expect(enriched[0].parish_context).toBeDefined();
+      expect(typeof enriched[0].parish_context.clergy_count_10yr).toBe('number');
     });
 
     it('generates gap entries for positions missing a VH ID', () => {

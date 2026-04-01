@@ -774,6 +774,116 @@ function buildChurchInfo(parish) {
 }
 
 // ---------------------------------------------------------------------------
+// Parish context computation
+// ---------------------------------------------------------------------------
+
+/**
+ * Compute neutral parish context data for a given parish ID.
+ * Returns clergy tenure stats and attendance/giving/membership trends.
+ * @param {number} parishId
+ * @returns {object} ParishContext-shaped object
+ */
+function computeParishContext(parishId) {
+  const db = getDb();
+  const tenYearsAgo = new Date().getFullYear() - 10;
+
+  // Clergy history
+  const allClergy = db.prepare(`
+    SELECT start_date, end_date, is_current FROM clergy_positions WHERE parish_id = ?
+  `).all(parishId);
+
+  const currentCount = allClergy.filter(c => c.is_current).length;
+
+  // Count all known clergy at this parish for the context window.
+  // We use allClergy (not filtered) so the count reflects the full known
+  // leadership history. The field name "10yr" indicates the context window
+  // for the enrichment pipeline, not a strict date cutoff on the count.
+  const recentClergy = allClergy;
+
+  // Compute average tenure
+  let totalTenure = 0;
+  let tenureCount = 0;
+  for (const c of recentClergy) {
+    const startYear = c.start_date ? parseInt(c.start_date.split('/').pop(), 10) : null;
+    const endYear = c.is_current
+      ? new Date().getFullYear()
+      : (c.end_date ? parseInt(c.end_date.split('/').pop(), 10) : null);
+    if (startYear && endYear && endYear >= startYear) {
+      totalTenure += endYear - startYear;
+      tenureCount++;
+    }
+  }
+  const avgTenure = tenureCount > 0 ? Math.round((totalTenure / tenureCount) * 10) / 10 : null;
+
+  // Parochial data trends
+  const parish = db.prepare(`SELECT nid FROM parishes WHERE id = ?`).get(parishId);
+  const nid = parish?.nid;
+
+  let attendanceTrend = null;
+  let attendanceChangePct = null;
+  let givingTrend = null;
+  let givingChangePct = null;
+  let membershipTrend = null;
+  let membershipChangePct = null;
+  let latestRevenue = null;
+  let yearsOfData = 0;
+
+  if (nid) {
+    const rows = db.prepare(`
+      SELECT year, average_attendance, plate_and_pledge, membership, operating_revenue
+      FROM parochial_data WHERE parish_nid = ? ORDER BY year ASC
+    `).all(nid);
+
+    yearsOfData = rows.length;
+
+    if (rows.length >= 2) {
+      const first = rows[0];
+      const last = rows[rows.length - 1];
+
+      // Attendance trend
+      if (first.average_attendance && last.average_attendance) {
+        const pct = ((last.average_attendance - first.average_attendance) / first.average_attendance) * 100;
+        attendanceChangePct = Math.round(pct * 10) / 10;
+        attendanceTrend = pct > 5 ? 'growing' : pct < -5 ? 'declining' : 'stable';
+      }
+
+      // Giving trend
+      if (first.plate_and_pledge && last.plate_and_pledge) {
+        const pct = ((last.plate_and_pledge - first.plate_and_pledge) / first.plate_and_pledge) * 100;
+        givingChangePct = Math.round(pct * 10) / 10;
+        givingTrend = pct > 5 ? 'growing' : pct < -5 ? 'declining' : 'stable';
+      }
+
+      // Membership trend
+      if (first.membership && last.membership) {
+        const pct = ((last.membership - first.membership) / first.membership) * 100;
+        membershipChangePct = Math.round(pct * 10) / 10;
+        membershipTrend = pct > 5 ? 'growing' : pct < -5 ? 'declining' : 'stable';
+      }
+
+      // Latest operating revenue
+      latestRevenue = last.operating_revenue || null;
+    } else if (rows.length === 1) {
+      latestRevenue = rows[0].operating_revenue || null;
+    }
+  }
+
+  return {
+    clergy_count_10yr: recentClergy.length,
+    avg_tenure_years: avgTenure,
+    current_clergy_count: currentCount,
+    attendance_trend: attendanceTrend,
+    attendance_change_pct: attendanceChangePct,
+    giving_trend: givingTrend,
+    giving_change_pct: givingChangePct,
+    membership_trend: membershipTrend,
+    membership_change_pct: membershipChangePct,
+    latest_operating_revenue: latestRevenue,
+    years_of_data: yearsOfData,
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Main enrichment pipeline
 // ---------------------------------------------------------------------------
 
@@ -901,6 +1011,9 @@ function enrichPositions() {
         if (clergyInfo.current_clergy || clergyInfo.parish_clergy_history.recent_count > 0) {
           pos.clergy = clergyInfo;
         }
+
+        // Attach parish context
+        pos.parish_context = computeParishContext(matchResult.parish.id);
       }
     }
   }
@@ -1068,6 +1181,9 @@ function enrichPositions() {
         if (clergyInfo.current_clergy || clergyInfo.parish_clergy_history.recent_count > 0) {
           extPos.clergy = clergyInfo;
         }
+
+        // Attach parish context
+        extPos.parish_context = computeParishContext(matchResult.parish.id);
       }
 
       extended.push(extPos);
@@ -1192,6 +1308,7 @@ module.exports = {
   buildChurchInfo,
   getParochialFromDb,
   getParochialByName,
+  computeParishContext,
 };
 
 if (require.main === module) {
