@@ -11,7 +11,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 120  # First clergy run takes ~60min
+    timeout-minutes: 180  # Parishes ~50min + clergy ~90min + enrichment ~10min
 
     steps:
       - uses: actions/checkout@v4
