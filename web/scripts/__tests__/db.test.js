@@ -80,6 +80,7 @@ describe('db module', () => {
       'compensation_by_revenue',
       'parochial_data',
       'fetch_log',
+      'clergy_tokens',
     ];
 
     it.each(expectedTables)('creates table: %s', (tableName) => {
@@ -108,6 +109,7 @@ describe('db module', () => {
       'idx_comp_diocesan_year',
       'idx_comp_diocesan_diocese',
       'idx_parochial_parish',
+      'idx_clergy_tokens_guid',
     ];
 
     it.each(expectedIndexes)('creates index: %s', (indexName) => {

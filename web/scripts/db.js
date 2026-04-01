@@ -275,6 +275,18 @@ function initSchema(database) {
       status TEXT DEFAULT 'success',
       error TEXT
     );
+
+    -- ============================================================
+    -- Clergy tokens (HMAC tokens for personal benchmarking)
+    -- ============================================================
+    CREATE TABLE IF NOT EXISTS clergy_tokens (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      token TEXT NOT NULL UNIQUE,
+      clergy_guid TEXT NOT NULL REFERENCES clergy(guid),
+      claimed_at DATETIME DEFAULT (datetime('now'))
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_clergy_tokens_guid ON clergy_tokens(clergy_guid);
   `);
 }
 
