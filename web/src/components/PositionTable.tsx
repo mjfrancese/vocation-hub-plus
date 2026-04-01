@@ -23,20 +23,27 @@ const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'quality_score', label: 'Status' },
 ];
 
-/** Get the display name for a position: prefer church_info.name, fall back to pos.name */
+/** Get the display name for a position: prefer church_infos names, fall back to pos.name */
 function getChurchName(pos: Position): { text: string; isEnriched: boolean } {
-  if (pos.church_info?.name) return { text: pos.church_info.name, isEnriched: true };
+  if (pos.church_infos && pos.church_infos.length > 0) {
+    const names = pos.church_infos.map(c => c.name).filter(Boolean);
+    if (names.length > 0) return { text: names.join(' & '), isEnriched: true };
+  }
   return { text: pos.name, isEnriched: false };
 }
 
-/** Get the city for a position: prefer church_info.city, fall back to pos.city */
+/** Get the city for a position: prefer church_infos cities, fall back to pos.city */
 function getCity(pos: Position): string {
-  return pos.church_info?.city || pos.city || '';
+  if (pos.church_infos && pos.church_infos.length > 0) {
+    const cities = Array.from(new Set(pos.church_infos.map(c => c.city).filter(Boolean)));
+    if (cities.length > 0) return cities.join(' & ');
+  }
+  return pos.city || '';
 }
 
-/** Get the state for a position: prefer church_info.state, fall back to pos.state */
+/** Get the state for a position: prefer church_infos first entry, fall back to pos.state */
 function getState(pos: Position): string {
-  return pos.church_info?.state || pos.state || '';
+  return pos.church_infos?.[0]?.state || pos.state || '';
 }
 
 /** Parse a date string in various formats (ISO, MM/DD/YYYY, "Month DD, YYYY") */
@@ -76,13 +83,14 @@ function timeOnMarket(pos: Position): string {
 
 /** Get latest ASA value and year range for hover context */
 function getLatestAsa(pos: Position): { value: number; range: string } | null {
-  if (!pos.parochial) return null;
-  const sorted = Object.keys(pos.parochial.years).sort();
+  const parochial = pos.parochials?.[0];
+  if (!parochial) return null;
+  const sorted = Object.keys(parochial.years).sort();
   let earliest: number | null = null;
   let latest: number | null = null;
 
   for (const y of sorted) {
-    const v = pos.parochial.years[y].averageAttendance;
+    const v = parochial.years[y].averageAttendance;
     if (v != null && v > 0) {
       if (earliest === null) earliest = v;
       latest = v;
@@ -528,7 +536,7 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
   const hasDeepData = fields.length > 0;
 
   // Parochial data is pre-computed at build time (attached to position)
-  const hasParochial = !!pos.parochial && Object.keys(pos.parochial.years).length > 0;
+  const hasParochial = pos.parochials?.some(p => Object.keys(p.years).length > 0) ?? false;
 
   // Helper to find a field value by label keyword (skip gibberish)
   const findField = (...keywords: string[]): string => {
@@ -569,8 +577,16 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
     return (
       <div className="space-y-4">
         <DioceseContext pos={pos} />
-        {pos.parish_context && (
-          <ParishContextSection context={pos.parish_context} />
+        {pos.church_infos && pos.church_infos.length > 1 && (
+          <p className="text-sm text-gray-600 font-medium">
+            This position serves {pos.church_infos.length} congregations
+          </p>
+        )}
+        {pos.parish_contexts && pos.parish_contexts.length > 0 && (
+          <ParishContextSection
+            contexts={pos.parish_contexts}
+            churchNames={pos.church_infos?.map(c => c.name)}
+          />
         )}
         {meData && (
           <PersonalContext user={meData} position={pos} />
@@ -583,7 +599,13 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
           <DetailField label="First Seen" value={pos.first_seen} />
           <DetailField label="Last Seen" value={pos.last_seen} />
         </div>
-        {hasParochial && <ParochialTrends data={pos.parochial!} />}
+        {hasParochial && pos.parochials!.map((p, i) => (
+          <ParochialTrends
+            key={i}
+            data={p}
+            label={pos.parochials!.length > 1 ? pos.church_infos?.[i]?.name : undefined}
+          />
+        ))}
         <SimilarPositions pos={pos} onNavigate={onNavigate} />
         {pos.profile_url && (
           <a
@@ -603,8 +625,16 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
   return (
     <div className="space-y-5">
       <DioceseContext pos={pos} />
-      {pos.parish_context && (
-        <ParishContextSection context={pos.parish_context} />
+      {pos.church_infos && pos.church_infos.length > 1 && (
+        <p className="text-sm text-gray-600 font-medium">
+          This position serves {pos.church_infos.length} congregations
+        </p>
+      )}
+      {pos.parish_contexts && pos.parish_contexts.length > 0 && (
+        <ParishContextSection
+          contexts={pos.parish_contexts}
+          churchNames={pos.church_infos?.map(c => c.name)}
+        />
       )}
       {meData && (
         <PersonalContext user={meData} position={pos} />
@@ -682,7 +712,13 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
       )}
 
       {/* Parochial Report Trends */}
-      {hasParochial && <ParochialTrends data={pos.parochial!} />}
+      {hasParochial && pos.parochials!.map((p, i) => (
+        <ParochialTrends
+          key={i}
+          data={p}
+          label={pos.parochials!.length > 1 ? pos.church_infos?.[i]?.name : undefined}
+        />
+      ))}
 
       {/* Similar Positions */}
       <SimilarPositions pos={pos} onNavigate={onNavigate} />
@@ -704,29 +740,40 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
       )}
 
       {/* Church directory info */}
-      {pos.church_info && (
-        <div className="border border-gray-200 rounded-lg p-3 bg-white text-sm">
-          <div className="font-medium text-gray-700 mb-2">Church Directory</div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {pos.church_info.street && (
-              <div>
-                <span className="text-gray-500">Address</span>
-                <p className="text-gray-900">{pos.church_info.street}, {pos.church_info.city}, {pos.church_info.state} {pos.church_info.zip}</p>
+      {pos.church_infos && pos.church_infos.length > 0 && (
+        <div className={pos.church_infos.length > 1
+          ? "grid grid-cols-1 sm:grid-cols-2 gap-3"
+          : ""
+        }>
+          {pos.church_infos.map((church, i) => (
+            <div key={i} className="border border-gray-200 rounded-lg p-3 bg-white text-sm">
+              <div className="font-medium text-gray-700 mb-2">
+                {pos.church_infos!.length > 1
+                  ? `${church.name || `Church ${i + 1}`}`
+                  : 'Church Directory'}
               </div>
-            )}
-            {pos.church_info.phone && (
-              <div>
-                <span className="text-gray-500">Phone</span>
-                <p className="text-gray-900">{pos.church_info.phone}</p>
+              <div className="grid grid-cols-2 gap-3">
+                {church.street && (
+                  <div>
+                    <span className="text-gray-500">Address</span>
+                    <p className="text-gray-900">{church.street}, {church.city}, {church.state} {church.zip}</p>
+                  </div>
+                )}
+                {church.phone && (
+                  <div>
+                    <span className="text-gray-500">Phone</span>
+                    <p className="text-gray-900">{church.phone}</p>
+                  </div>
+                )}
+                {church.email && (
+                  <div>
+                    <span className="text-gray-500">Email</span>
+                    <p className="text-gray-900">{church.email}</p>
+                  </div>
+                )}
               </div>
-            )}
-            {pos.church_info.email && (
-              <div>
-                <span className="text-gray-500">Email</span>
-                <p className="text-gray-900">{pos.church_info.email}</p>
-              </div>
-            )}
-          </div>
+            </div>
+          ))}
         </div>
       )}
 
@@ -743,10 +790,10 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
             View full profile on Vocation Hub
           </a>
         )}
-        {(pos.website_url || pos.church_info?.website) && (
+        {(pos.website_url || pos.church_infos?.[0]?.website) && (
           <a
             href={(() => {
-              const url = pos.website_url || pos.church_info?.website || '';
+              const url = pos.website_url || pos.church_infos?.[0]?.website || '';
               return url.startsWith('http') ? url : `https://${url}`;
             })()}
             target="_blank"
