@@ -135,9 +135,9 @@ describe('computeAllComparisons', () => {
       state: 'TX',
       compensation: { diocese_median: 85000 },
       estimated_total_comp: 90000,
-      church_info: { lat: 29.76, lng: -95.37 },
+      church_infos: [{ lat: 29.76, lng: -95.37 }],
       census: { median_household_income: 60000, population: 40000 },
-      parish_context: { clergy_count_10yr: 2, avg_tenure_years: 3.5, current_clergy_count: 1 },
+      parish_contexts: [{ clergy_count_10yr: 2, avg_tenure_years: 3.5, current_clergy_count: 1 }],
       position_type: 'Rector',
     } as unknown as Position;
 

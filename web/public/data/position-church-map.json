@@ -1,8 +1,8 @@
 {
   "meta": {
-    "lastUpdated": "2026-03-31T22:36:20.271Z",
-    "totalMapped": 471,
-    "totalFlagged": 584,
+    "lastUpdated": "2026-04-01T18:39:17.348Z",
+    "totalMapped": 470,
+    "totalFlagged": 585,
     "totalPositions": 1055
   },
   "mappings": {
@@ -2017,10 +2017,10 @@
       "flagged": true
     },
     "9335": {
-      "church_nid": 2956,
-      "confidence": "high",
-      "match_method": "email_domain_website",
-      "flagged": false
+      "church_nid": null,
+      "confidence": "none",
+      "match_method": "unmatched",
+      "flagged": true
     },
     "9336": {
       "church_nid": null,
@@ -4615,9 +4615,9 @@
       "flagged": true
     },
     "10151": {
-      "church_nid": 7636,
-      "confidence": "high",
-      "match_method": "email_domain_website",
+      "church_nid": 7618,
+      "confidence": "exact",
+      "match_method": "email_unique_church",
       "flagged": false
     },
     "10154": {
@@ -4627,15 +4627,15 @@
       "flagged": true
     },
     "10155": {
-      "church_nid": 7636,
-      "confidence": "high",
-      "match_method": "email_domain_website",
+      "church_nid": 7618,
+      "confidence": "exact",
+      "match_method": "email_unique_church",
       "flagged": false
     },
     "10158": {
-      "church_nid": 7636,
-      "confidence": "high",
-      "match_method": "email_domain_website",
+      "church_nid": 7618,
+      "confidence": "exact",
+      "match_method": "email_unique_church",
       "flagged": false
     },
     "10160": {

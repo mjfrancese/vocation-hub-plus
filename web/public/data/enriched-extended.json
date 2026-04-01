@@ -164,10 +164,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 105876,
-      "population": 19938
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -398,10 +394,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 59850,
-      "population": 23997
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -852,10 +844,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 78674,
-      "population": 13202
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -992,10 +980,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 99570,
-      "population": 18046
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1053,10 +1037,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 99570,
-      "population": 18046
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1166,10 +1146,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 144875,
-      "population": 487
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -1612,10 +1588,6 @@
         "score": 4
       }
     ],
-    "census": {
-      "median_household_income": 10850,
-      "population": 960
-    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -1674,10 +1646,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 30739,
-      "population": 17964
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1735,10 +1703,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 99081,
-      "population": 20558
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1977,10 +1941,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 55127,
-      "population": 30941
-    },
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -3973,10 +3933,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 100953,
-      "population": 30652
-    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -4940,10 +4896,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 58669,
-      "population": 3664
-    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -5406,10 +5358,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 64973,
-      "population": 35292
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -22084,10 +22032,6 @@
         "score": 3
       }
     ],
-    "census": {
-      "median_household_income": 51186,
-      "population": 6089
-    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -22144,10 +22088,6 @@
         "years_of_data": 0
       }
     ],
-    "census": {
-      "median_household_income": 55778,
-      "population": 7719
-    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
