@@ -93,7 +93,8 @@ jobs:
         run: |
           git config user.name "VocationHub Bot"
           git config user.email "bot@vocationhubplus.dev"
-          git add web/public/data/ web/public/data/church-registry.json web/public/data/position-church-map.json
+          git add web/public/data/enriched-positions.json web/public/data/enriched-extended.json web/public/data/position-church-map.json
+          git add web/public/data/clergy-tokens.json web/public/data/clergy-search-index.json
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else

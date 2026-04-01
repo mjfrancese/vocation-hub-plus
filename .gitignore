@@ -69,9 +69,7 @@ dist
 *.db-wal
 *.db-shm
 
-# Large data files (now sourced from SQLite DB)
-web/public/data/church-registry.json
-web/public/data/parochial-data.json
+# Large intermediate data file (churches.json is only used during DB import)
 web/public/data/churches.json
 
 # Screenshots (saved on scraper failure)
