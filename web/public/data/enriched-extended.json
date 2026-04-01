@@ -13,21 +13,21 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "St Pauls Episcopal Church",
-        "street": "261 S 900 E",
-        "city": "Salt Lake City",
+        "nid": "5829",
+        "name": "St. Paul's Episcopal Church",
+        "street": "226 W Main St",
+        "city": "Vernal",
         "state": "UT",
-        "zip": "84102-2308",
-        "phone": "1 (801) 3225869",
-        "email": "admin@stpauls-slc.org",
-        "website": "http://www.stpauls-slc.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "84078-2506",
+        "phone": "1 (435) 781-1806",
+        "email": "rev.cgordon@gmail.com",
+        "website": "http://www.stpaulsvernal.org",
+        "type": "church",
+        "lat": 40.455616,
+        "lng": -109.536432
       }
     ],
-    "match_confidence": "medium",
+    "match_confidence": "low",
     "housing_type": "Cash Stipend",
     "parish_contexts": [
       {
@@ -71,8 +71,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Mary Annes Episcopal Church",
+        "nid": "2869",
+        "name": "St. Mary Anne's Episcopal Church",
         "street": "315 S Main St",
         "city": "North East",
         "state": "MD",
@@ -80,18 +80,30 @@
         "phone": "1 (410) 2875522",
         "email": "office@stmaryanne.org",
         "website": "http://www.stmaryanne.org/",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 39.59678,
+        "lng": -75.94269
       }
     ],
     "match_confidence": "exact",
     "housing_type": "Rectory",
+    "clergy": {
+      "current_clergy": {
+        "name": "John Schaeffer",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2022",
+        "years_tenure": 4
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 4
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 4,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -111,18 +123,18 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -144,8 +156,8 @@
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -153,17 +165,21 @@
         "score": 4
       },
       {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Church",
-        "city": "Clarksville",
-        "state": "TN",
+        "id": "10606",
+        "vh_id": 10606,
+        "name": "Grace Episcopal Church",
+        "city": "Brunswick",
+        "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
+        "asa": 34,
+        "estimated_total_comp": null,
         "score": 4
       }
     ],
+    "census": {
+      "median_household_income": 105876,
+      "population": 19938
+    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -182,7 +198,7 @@
     "vh_id": 10690,
     "name": "St James the Apostle Church",
     "diocese": "California",
-    "state": "",
+    "state": "CA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10690",
     "position_type": "Rector/Priest-in-Charge",
@@ -190,14 +206,52 @@
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
+    "church_infos": [
+      {
+        "nid": "640",
+        "name": "St. James the Apostle / Iglesia de Santiago",
+        "street": "1540 12th Ave",
+        "city": "Oakland",
+        "state": "CA",
+        "zip": "94606-3803",
+        "phone": "1 (510) 533-2136",
+        "email": "admin@stjamesoakland.org",
+        "website": "http://www.santiagooakland.org",
+        "type": "church",
+        "lat": 37.79161,
+        "lng": -122.24619
+      }
+    ],
+    "match_confidence": "high",
     "housing_type": "Cash Stipend",
-    "quality_score": 60,
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
+    "census": {
+      "median_household_income": 71442,
+      "population": 38459
+    },
+    "quality_score": 75,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
       "Congregation identified (10)",
       "Position named (5)",
-      "Position type (5)"
+      "Church matched (10)",
+      "Position type (5)",
+      "State known (5)"
     ],
     "visibility": "extended"
   },
@@ -220,24 +274,13 @@
     },
     "similar_positions": [
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St Julians Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
         "id": "10677",
         "vh_id": 10677,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
+        "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
       },
@@ -248,7 +291,7 @@
         "city": "Indiana",
         "state": "PA",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 38,
         "estimated_total_comp": 37501,
         "score": 3
       },
@@ -256,7 +299,7 @@
         "id": "10279",
         "vh_id": 10279,
         "name": "Church Of The Good Shepherd",
-        "city": "Staunton",
+        "city": "Galax",
         "state": "VA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -273,80 +316,6 @@
       "Position named (5)",
       "Position type (5)",
       "State known (5)"
-    ],
-    "visibility": "extended"
-  },
-  {
-    "vh_id": 10686,
-    "name": "St Julians Episcopal Church",
-    "diocese": "",
-    "state": "",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10686",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "St Julians Episcopal Church",
-    "receiving_names_from": "03/20/2026",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "housing_type": "No Housing or Stipend Provided",
-    "estimated_total_comp": 37501,
-    "comp_breakdown": {
-      "stipend": 37501
-    },
-    "similar_positions": [
-      {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St Stephens Episcopal Church",
-        "city": "",
-        "state": "IA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 5
-      },
-      {
-        "id": "10677",
-        "vh_id": 10677,
-        "name": "Trinity Church",
-        "city": "New Orleans",
-        "state": "LA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10624",
-        "vh_id": 10624,
-        "name": "Christ Episcopal Church",
-        "city": "Indiana",
-        "state": "PA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 3
-      },
-      {
-        "id": "10279",
-        "vh_id": 10279,
-        "name": "Church Of The Good Shepherd",
-        "city": "Staunton",
-        "state": "VA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 3
-      }
-    ],
-    "quality_score": 65,
-    "quality_components": [
-      "Active status (25)",
-      "Recent date (15)",
-      "Very recent date (5)",
-      "Congregation identified (10)",
-      "Position named (5)",
-      "Position type (5)"
     ],
     "visibility": "extended"
   },
@@ -394,6 +363,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 59850,
+      "population": 23997
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -421,18 +394,18 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Lukes Episcopal Church",
-        "street": "5555 N Tropical Trl",
-        "city": "Merritt Island",
+        "nid": "2335",
+        "name": "Cathedral Church of St. Luke",
+        "street": "130 N Magnolia Ave",
+        "city": "Orlando",
         "state": "FL",
-        "zip": "32953-7202",
-        "phone": "1 (321) 4525260",
-        "email": "stlukesmi-treasurer@cfl.rr.com",
-        "website": "http://WWW.STLUKESMI.ORG",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "32801-2300",
+        "phone": "1 (407) 8490680",
+        "email": "amichels@stlukescathedral.org",
+        "website": "http://www.ccslorlando.org",
+        "type": "church",
+        "lat": 28.544328,
+        "lng": -81.377492
       }
     ],
     "match_confidence": "low",
@@ -460,8 +433,8 @@
       {
         "id": "10623",
         "vh_id": 10623,
-        "name": "Saint Johns Cathedral",
-        "city": "Denver",
+        "name": "Saint Johns Episcopal Church",
+        "city": "New Castle",
         "state": "CO",
         "position_type": "Dean",
         "asa": null,
@@ -471,7 +444,7 @@
       {
         "id": "10306",
         "vh_id": 10306,
-        "name": "Saint Marks Church",
+        "name": "St. Mark's Episcopal Church",
         "city": "Palm Beach Gardens",
         "state": "FL",
         "position_type": "Rector/Priest-in-Charge",
@@ -497,7 +470,7 @@
     "vh_id": 10682,
     "name": "St Andrews Episcopal Church",
     "diocese": "Wisconsin",
-    "state": "WI",
+    "state": "",
     "vh_status": "Profile complete",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10682",
     "position_type": "Rector/Priest-in-Charge",
@@ -505,49 +478,15 @@
     "receiving_names_from": "03/19/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_infos": [
-      {
-        "nid": null,
-        "name": "Saint Andrews Church",
-        "street": "1833 Regent St",
-        "city": "Madison",
-        "state": "WI",
-        "zip": "53726-4119",
-        "phone": "1 (608) 2333249",
-        "email": "general@standrews-madison.org",
-        "website": "http://www.standrews-madison.org/",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
-      }
-    ],
-    "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_contexts": [
-      {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
-        "attendance_trend": null,
-        "attendance_change_pct": null,
-        "giving_trend": null,
-        "giving_change_pct": null,
-        "membership_trend": null,
-        "membership_change_pct": null,
-        "latest_operating_revenue": null,
-        "years_of_data": 0
-      }
-    ],
-    "quality_score": 70,
+    "quality_score": 55,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
       "Very recent date (5)",
       "Congregation identified (10)",
       "Position named (5)",
-      "Church matched (10)",
-      "Position type (5)",
-      "State known (5)"
+      "Position type (5)"
     ],
     "visibility": "extended"
   },
@@ -565,8 +504,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Christophers Church",
+        "nid": "1324",
+        "name": "St. Christopher, The Parish Church of",
         "street": "93 N Kainalu Dr",
         "city": "Kailua",
         "state": "HI",
@@ -574,12 +513,12 @@
         "phone": "1 (808) 2628176",
         "email": "admin@stchristopherkailua.org",
         "website": "http://www.stchristopherkailua.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 21.399158,
+        "lng": -157.740486
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -595,6 +534,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 121536,
+      "population": 51966
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -612,7 +555,7 @@
     "vh_id": 10679,
     "name": "St James Episcopal Church",
     "diocese": "Central Gulf Coast",
-    "state": "AL",
+    "state": "FL",
     "vh_status": "Developing profile",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10679",
     "position_type": "Rector/Priest-in-Charge",
@@ -622,26 +565,38 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint James Church",
-        "street": "100 Saint James Pl",
-        "city": "Eufaula",
-        "state": "AL",
-        "zip": "36027-1551",
-        "phone": "1 (334) 6873619",
-        "email": "stjames@eufaula.rr.com",
-        "website": "http://www.diocgc.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "nid": "1918",
+        "name": "St. James Episcopal Church",
+        "street": "800 22nd St",
+        "city": "Port Saint Joe",
+        "state": "FL",
+        "zip": "32456-2298",
+        "phone": "1 (850) 227-1845",
+        "email": "stjamespsj@fairpoint.net",
+        "website": "http://www.stjamesepiscopalchurch.org",
+        "type": "church",
+        "lat": 29.795653,
+        "lng": -85.288602
       }
     ],
     "match_confidence": "low",
+    "clergy": {
+      "current_clergy": {
+        "name": "William Adams",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2024",
+        "years_tenure": 2
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 2
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 2,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -695,20 +650,9 @@
         "score": 5
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-        "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
-      },
-      {
         "id": "10565",
         "vh_id": 10565,
-        "name": "Mount Zion Episcopal Church",
+        "name": "Mt. Zion Episcopal Church",
         "city": "Hedgesville",
         "state": "WV",
         "position_type": "Rector/Priest-in-Charge",
@@ -719,8 +663,8 @@
       {
         "id": "10524",
         "vh_id": 10524,
-        "name": "Saint Marys Cathedral",
-        "city": "Memphis",
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -741,7 +685,7 @@
   {
     "vh_id": 10677,
     "name": "Trinity Episcopal Church",
-    "diocese": "Diocese Of Louisiana",
+    "diocese": "Louisiana",
     "state": "LA",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10677",
@@ -752,8 +696,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Trinity Church",
+        "nid": "220",
+        "name": "Trinity Episcopal Church",
         "street": "1329 Jackson Ave",
         "city": "New Orleans",
         "state": "LA",
@@ -761,18 +705,96 @@
         "phone": "1 (504) 5220276",
         "email": "hhudson@trinitynola.com",
         "website": "http://www.trinitynola.com",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 29.9319,
+        "lng": -90.07843
       }
     ],
     "match_confidence": "exact",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 482,
+            "plateAndPledge": 1612374,
+            "membership": 2719,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 458,
+            "plateAndPledge": 1670642,
+            "membership": 2539,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 412,
+            "plateAndPledge": 1784918,
+            "membership": 2558,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 382,
+            "plateAndPledge": 1670456,
+            "membership": 2538,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 341,
+            "plateAndPledge": 1788881,
+            "membership": 2518,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 307,
+            "plateAndPledge": 1690825,
+            "membership": 2524,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 191,
+            "plateAndPledge": 1599788,
+            "membership": 2357,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 226,
+            "plateAndPledge": 1699417,
+            "membership": 2377,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 290,
+            "plateAndPledge": 1798077,
+            "membership": 2369,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 303,
+            "plateAndPledge": 1715589,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "housing_type": "No Housing or Stipend Provided",
+    "clergy": {
+      "current_clergy": {
+        "name": "Robert Price-Hadzor",
+        "position_title": "Associate Rector",
+        "start_date": "01/01/2023",
+        "years_tenure": 3
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 7.5
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 7.5,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -783,6 +805,12 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 98,
+      "asa_value": 303,
+      "plate_pledge": 98,
+      "plate_pledge_value": 1715589
+    },
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -800,6 +828,17 @@
         "score": 5
       },
       {
+        "id": "9296",
+        "vh_id": 9296,
+        "name": "Trinity Episcopal Church",
+        "city": "Morgan City",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 27,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
         "id": "10688",
         "vh_id": 10688,
         "name": "St Stephens Episcopal Church",
@@ -811,20 +850,9 @@
         "score": 3
       },
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St Julians Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 3
-      },
-      {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -844,7 +872,11 @@
         "score": 3
       }
     ],
-    "quality_score": 85,
+    "census": {
+      "median_household_income": 78674,
+      "population": 13202
+    },
+    "quality_score": 95,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -852,6 +884,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)",
       "Exact match (5)"
@@ -893,8 +926,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Thomas Church",
+        "nid": "1206",
+        "name": "St. Thomas Episcopal Church",
         "street": "9 W Wheelock St",
         "city": "Hanover",
         "state": "NH",
@@ -902,17 +935,29 @@
         "phone": "1 (603) 6434155",
         "email": "saint.thomas.hanover@gmail.com",
         "website": "http://www.saintthomashanover.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 43.702363,
+        "lng": -72.291053
       }
     ],
     "match_confidence": "low",
+    "clergy": {
+      "current_clergy": {
+        "name": "Guy Collins",
+        "position_title": "Rector and Episcopal Chaplain to Dartmouth",
+        "start_date": "01/01/2007",
+        "years_tenure": 19
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 19
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 19,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -923,6 +968,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 152865,
+      "population": 10170
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -950,8 +999,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Christ United Church",
+        "nid": "3523",
+        "name": "Christ United (St Annes)",
         "street": "1000 W Webb Rd",
         "city": "Dewitt",
         "state": "MI",
@@ -959,9 +1008,9 @@
         "phone": "1 (517) 6699308",
         "email": "terrylwilliamson@mac.com",
         "website": "http://www.christuniteddewitt.com/",
-        "type": "Mission",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 42.83231,
+        "lng": -84.54384
       }
     ],
     "match_confidence": "high",
@@ -980,6 +1029,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 99570,
+      "population": 18046
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1007,8 +1060,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Christ United Church",
+        "nid": "3523",
+        "name": "Christ United (St Annes)",
         "street": "1000 W Webb Rd",
         "city": "Dewitt",
         "state": "MI",
@@ -1016,9 +1069,9 @@
         "phone": "1 (517) 6699308",
         "email": "terrylwilliamson@mac.com",
         "website": "http://www.christuniteddewitt.com/",
-        "type": "Mission",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 42.83231,
+        "lng": -84.54384
       }
     ],
     "match_confidence": "high",
@@ -1037,6 +1090,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 99570,
+      "population": 18046
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1053,7 +1110,7 @@
   {
     "vh_id": 10650,
     "name": "St Marys and St Jude",
-    "diocese": "Diocese Of Maine",
+    "diocese": "Maine",
     "state": "ME",
     "vh_status": "Receiving names",
     "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10650",
@@ -1064,8 +1121,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "The Parish Of Saint Mary And Saint Jude",
+        "nid": "3372",
+        "name": "St. Mary and St. Jude",
         "street": "PO Box 105",
         "city": "Northeast Harbor",
         "state": "ME",
@@ -1073,9 +1130,9 @@
         "phone": "1 (207) 276-5588",
         "email": "ssmaryjude@roadrunner.com",
         "website": "http://www.maryjude.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 44.29176,
+        "lng": -68.28763
       }
     ],
     "match_confidence": "exact",
@@ -1115,8 +1172,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Saint James Episcopal Church",
-        "city": "Cheboygan",
+        "name": "Saint James Episcopal Mission",
+        "city": "Beaver Island",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1124,20 +1181,9 @@
         "score": 3
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-        "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 3
-      },
-      {
         "id": "8945",
         "vh_id": 8945,
-        "name": "Saint James Church",
+        "name": "St. James Episcopal Church",
         "city": "Fremont",
         "state": "CA",
         "position_type": "Rector/Priest-in-Charge",
@@ -1146,6 +1192,10 @@
         "score": 3
       }
     ],
+    "census": {
+      "median_household_income": 144875,
+      "population": 487
+    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -1174,8 +1224,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Matthews Episcopal Church",
+        "nid": "1605",
+        "name": "St. Matthew's Episcopal Church",
         "street": "36 New Canaan Rd",
         "city": "Wilton",
         "state": "CT",
@@ -1183,12 +1233,12 @@
         "phone": "1 (203) 7627400",
         "email": "office@stmatthewswilton.org",
         "website": "http://www.stmatthewswilton.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 41.17554,
+        "lng": -73.44379
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "housing_type": "Rectory",
     "parish_contexts": [
       {
@@ -1214,7 +1264,7 @@
       {
         "id": "10306",
         "vh_id": 10306,
-        "name": "Saint Marks Church",
+        "name": "St. Mark's Episcopal Church",
         "city": "Palm Beach Gardens",
         "state": "FL",
         "position_type": "Rector/Priest-in-Charge",
@@ -1225,7 +1275,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -1247,8 +1297,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Saint James Episcopal Church",
-        "city": "Cheboygan",
+        "name": "Saint James Episcopal Mission",
+        "city": "Beaver Island",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1267,6 +1317,10 @@
         "score": 3
       }
     ],
+    "census": {
+      "median_household_income": 230545,
+      "population": 18473
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1294,8 +1348,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Pauls Church",
+        "nid": "3717",
+        "name": "St Paul's Episcopal Church",
         "street": "102 E Idaho St",
         "city": "Virginia City",
         "state": "MT",
@@ -1303,13 +1357,13 @@
         "phone": "1 (406) 600-1128",
         "email": "episcopalchurch.stpauls@gmail.com",
         "website": "http://stpaulsvcmt.org/",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 45.292983,
+        "lng": -111.94366
       },
       {
-        "nid": null,
-        "name": "Trinity Church",
+        "nid": "3696",
+        "name": "Trinity Episcopal Church",
         "street": "93 Jeffers Rd",
         "city": "Ennis",
         "state": "MT",
@@ -1317,12 +1371,78 @@
         "phone": "1 (406) 600-1128",
         "email": "trinity@3rivers.net",
         "website": "http://www.trinityepiscopalmt.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 45.342413,
+        "lng": -111.7358
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 36,
+            "plateAndPledge": 71364,
+            "membership": 84,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 37,
+            "plateAndPledge": 69912,
+            "membership": 81,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 33,
+            "plateAndPledge": 75022,
+            "membership": 85,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 32,
+            "plateAndPledge": 77456,
+            "membership": 86,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 38,
+            "plateAndPledge": 71336,
+            "membership": 86,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 22,
+            "plateAndPledge": 71271,
+            "membership": 86,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 26,
+            "plateAndPledge": 75057,
+            "membership": 82,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 28,
+            "plateAndPledge": 74961,
+            "membership": 80,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 30,
+            "plateAndPledge": 84056,
+            "membership": 82,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 36,
+            "plateAndPledge": 81020,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -1351,15 +1471,32 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 66,
+      "asa_value": 36,
+      "plate_pledge": 50,
+      "plate_pledge_value": 81020
+    },
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
     },
     "similar_positions": [
       {
+        "id": "10574",
+        "vh_id": 10574,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Gillette",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 41,
+        "estimated_total_comp": 87501,
+        "score": 7
+      },
+      {
         "id": "9686",
         "vh_id": 9686,
-        "name": "Saint Lukes Church",
+        "name": "St. Luke's Episcopal Church",
         "city": "Billings",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
@@ -1368,51 +1505,44 @@
         "score": 6
       },
       {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
+        "id": "10606",
+        "vh_id": 10606,
+        "name": "Grace Episcopal Church",
+        "city": "Brunswick",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 82501,
         "score": 4
-      },
-      {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "Saint Johns Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10631",
-        "vh_id": 10631,
-        "name": "Saint Michaels Church",
-        "city": "Baton Rouge",
-        "state": "LA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 4
-      },
-      {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 4
       }
     ],
-    "quality_score": 70,
+    "census": {
+      "median_household_income": 75625,
+      "population": 127
+    },
+    "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
@@ -1420,6 +1550,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -1439,21 +1570,21 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Boniface Church",
-        "street": "116 US 87",
+        "nid": "6056",
+        "name": "St. Boniface Episcopal Church",
+        "street": "130 US HIghway 87",
         "city": "Comfort",
         "state": "TX",
-        "zip": "78013",
-        "phone": "1 (830) 995-3897",
-        "email": "boniface@hctc.net",
-        "website": "http://www.stboniface-comfort.org",
-        "type": "Chapel",
-        "lat": null,
-        "lng": null
+        "zip": "78013-3704",
+        "phone": "1 (830) 995-5708",
+        "email": "stbschool@hctc.net",
+        "website": "http://www.stboniface-comfort.org/school-index.html",
+        "type": "church",
+        "lat": 29.99008,
+        "lng": -98.90407
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -1469,6 +1600,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 75838,
+      "population": 5169
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1496,8 +1631,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Johns Church",
+        "nid": "4378",
+        "name": "St. John's Episcopal Church",
         "street": "323 Wick Ave",
         "city": "Youngstown",
         "state": "OH",
@@ -1505,9 +1640,9 @@
         "phone": "1 (330) 7433175",
         "email": "stjohnohio@gmail.com",
         "website": "http://www.stjohnohio.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 41.10343,
+        "lng": -80.64595
       }
     ],
     "match_confidence": "exact",
@@ -1546,7 +1681,7 @@
       {
         "id": "8560",
         "vh_id": 8560,
-        "name": "All Saints Of The Desert Episcopal Church",
+        "name": "All Saints of the Desert Episcopal Church",
         "city": "Sun City",
         "state": "AZ",
         "position_type": "Rector/Priest-in-Charge",
@@ -1557,7 +1692,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -1568,19 +1703,19 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1588,6 +1723,10 @@
         "score": 4
       }
     ],
+    "census": {
+      "median_household_income": 10850,
+      "population": 960
+    },
     "quality_score": 85,
     "quality_components": [
       "Active status (25)",
@@ -1631,6 +1770,72 @@
       }
     ],
     "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 131,
+            "plateAndPledge": 265988,
+            "membership": 420,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 93,
+            "plateAndPledge": 192539,
+            "membership": 387,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 98,
+            "plateAndPledge": 198397,
+            "membership": 221,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 97,
+            "plateAndPledge": 195225,
+            "membership": 215,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 95,
+            "plateAndPledge": 261154,
+            "membership": 216,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 96,
+            "plateAndPledge": 180148,
+            "membership": 216,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 42,
+            "plateAndPledge": 215068,
+            "membership": 212,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 76,
+            "plateAndPledge": 208850,
+            "membership": 225,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 80,
+            "plateAndPledge": 235310,
+            "membership": 241,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 88,
+            "plateAndPledge": 202044,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -1646,7 +1851,41 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 80,
+    "diocese_percentiles": {
+      "asa": 69,
+      "asa_value": 88,
+      "plate_pledge": 63,
+      "plate_pledge_value": 202044
+    },
+    "similar_positions": [
+      {
+        "id": "10580",
+        "vh_id": 10580,
+        "name": "Christ Church Cathedral",
+        "city": "Springfield",
+        "state": "MA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 103,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
+        "id": "10351",
+        "vh_id": 10351,
+        "name": "Church of the Resurrection",
+        "city": "Millville",
+        "state": "NJ",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 66,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ],
+    "census": {
+      "median_household_income": 30739,
+      "population": 17964
+    },
+    "quality_score": 90,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -1654,6 +1893,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -1703,6 +1943,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 99081,
+      "population": 20558
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1769,18 +2013,18 @@
       {
         "id": "10677",
         "vh_id": 10677,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
+        "asa": 303,
         "estimated_total_comp": 87501,
         "score": 5
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -1791,7 +2035,7 @@
       {
         "id": "8560",
         "vh_id": 8560,
-        "name": "All Saints Of The Desert Episcopal Church",
+        "name": "All Saints of the Desert Episcopal Church",
         "city": "Sun City",
         "state": "AZ",
         "position_type": "Rector/Priest-in-Charge",
@@ -1802,7 +2046,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -1813,11 +2057,11 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -1849,21 +2093,87 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "4759",
         "name": "Christ Episcopal Church",
         "street": "902 Philadelphia St",
         "city": "Indiana",
         "state": "PA",
         "zip": "15701-3912",
-        "phone": "1 (724) 4656129",
-        "email": "ccrector902@comcast.net",
-        "website": "http://www.christchurchindiana.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "phone": "724-465-6129",
+        "email": "christchurchindiana@gmail.com",
+        "website": "https://christchurchipa.org/",
+        "type": "church",
+        "lat": 40.62276,
+        "lng": -79.1562
       }
     ],
-    "match_confidence": "medium",
+    "match_confidence": "exact",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 40,
+            "plateAndPledge": 147196,
+            "membership": 99,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 41,
+            "plateAndPledge": 160660,
+            "membership": 97,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 41,
+            "plateAndPledge": 162124,
+            "membership": 91,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 40,
+            "plateAndPledge": 162247,
+            "membership": 77,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 42,
+            "plateAndPledge": 161681,
+            "membership": 84,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 40,
+            "plateAndPledge": 179025,
+            "membership": 80,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 21,
+            "plateAndPledge": 212865,
+            "membership": 79,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 28,
+            "plateAndPledge": 174305,
+            "membership": 71,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 34,
+            "plateAndPledge": 194165,
+            "membership": 72,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 38,
+            "plateAndPledge": 206663,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "housing_type": "No Housing or Stipend Provided",
     "parish_contexts": [
       {
@@ -1880,16 +2190,55 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 57,
+      "asa_value": 38,
+      "plate_pledge": 74,
+      "plate_pledge_value": 206663
+    },
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
     },
     "similar_positions": [
       {
+        "id": "10636",
+        "vh_id": 10636,
+        "name": "St Paul's Episcopal Church",
+        "city": "Virginia City",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 36,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
+        "id": "10606",
+        "vh_id": 10606,
+        "name": "Grace Episcopal Church",
+        "city": "Brunswick",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10574",
+        "vh_id": 10574,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Gillette",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 41,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
         "id": "10279",
         "vh_id": 10279,
         "name": "Church Of The Good Shepherd",
-        "city": "Staunton",
+        "city": "Galax",
         "state": "VA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1897,51 +2246,22 @@
         "score": 5
       },
       {
-        "id": "10688",
-        "vh_id": 10688,
-        "name": "St Stephens Episcopal Church",
-        "city": "",
-        "state": "IA",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
+        "id": "8593",
+        "vh_id": 8593,
+        "name": "Grace Church",
+        "city": "Lake Havasu City",
+        "state": "AZ",
+        "position_type": "Vicar",
+        "asa": 39,
         "estimated_total_comp": 37501,
-        "score": 3
-      },
-      {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St Julians Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 3
-      },
-      {
-        "id": "10634",
-        "vh_id": 10634,
-        "name": "Saint Johns Church",
-        "city": "Youngstown",
-        "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10631",
-        "vh_id": 10631,
-        "name": "Saint Michaels Church",
-        "city": "Baton Rouge",
-        "state": "LA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
+        "score": 5
       }
     ],
-    "quality_score": 70,
+    "census": {
+      "median_household_income": 55127,
+      "population": 30941
+    },
+    "quality_score": 85,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
@@ -1949,8 +2269,10 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
-      "State known (5)"
+      "State known (5)",
+      "Exact match (5)"
     ],
     "visibility": "extended"
   },
@@ -1969,15 +2291,15 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Johns Cathedral",
-        "street": "1350 N Washington St",
-        "city": "Denver",
+        "name": "Saint Johns Episcopal Church",
+        "street": "First Main St",
+        "city": "New Castle",
         "state": "CO",
-        "zip": "80203-2008",
-        "phone": "1 (303) 8317115",
-        "email": "accounting@sjcathedral.org",
-        "website": "http://www.sjcathedral.org",
-        "type": "Cathedral",
+        "zip": "81647",
+        "phone": "1 (970) 9842780",
+        "email": null,
+        "website": "http://",
+        "type": "Mission",
         "lat": null,
         "lng": null
       }
@@ -2007,8 +2329,8 @@
       {
         "id": "10684",
         "vh_id": 10684,
-        "name": "Saint Lukes Episcopal Church",
-        "city": "Merritt Island",
+        "name": "Cathedral Church of St. Luke",
+        "city": "Orlando",
         "state": "FL",
         "position_type": "Dean",
         "asa": null,
@@ -2054,27 +2376,39 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Thomas Church",
-        "street": "2 Saint Thomas Ave",
-        "city": "Savannah",
+        "nid": "3072",
+        "name": "St. Thomas Episcopal Church",
+        "street": "216 Remington Ave",
+        "city": "Thomasville",
         "state": "GA",
-        "zip": "31406-7533",
-        "phone": "1 (912) 3553110",
-        "email": "evangelone@aol.com",
-        "website": "http://www.stthomasioh.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "31792-5521",
+        "phone": "1 (229) 2265145",
+        "email": "stthomas@rose.net",
+        "website": "http://stthomasthomasville.org",
+        "type": "church",
+        "lat": 30.837577,
+        "lng": -83.976894
       }
     ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
+    "clergy": {
+      "current_clergy": {
+        "name": "Wallace Marsh",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2021",
+        "years_tenure": 5
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 5
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 5,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2093,22 +2427,22 @@
       {
         "id": "10583",
         "vh_id": 10583,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "Clarksville",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 120,
         "estimated_total_comp": 87501,
         "score": 5
       },
       {
         "id": "10580",
         "vh_id": 10580,
-        "name": "Christ Episcopal Church",
-        "city": "Sheffield",
+        "name": "Christ Church Cathedral",
+        "city": "Springfield",
         "state": "MA",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 103,
         "estimated_total_comp": 87501,
         "score": 5
       },
@@ -2119,14 +2453,14 @@
         "city": "Gillette",
         "state": "WY",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 41,
         "estimated_total_comp": 87501,
         "score": 5
       },
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -2137,11 +2471,11 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       }
@@ -2230,6 +2564,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 69417,
+      "population": 13565
+    },
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -2256,26 +2594,104 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Grace Church",
-        "street": "4 E Main St",
-        "city": "New Market",
+        "nid": "3437",
+        "name": "Grace Episcopal Church",
+        "street": "114 E A St",
+        "city": "Brunswick",
         "state": "MD",
-        "zip": "21774-6281",
-        "phone": "1 (301) 8653270",
-        "email": "gracechurchoffice@comcast.net",
-        "website": "http://www.gracenewmarket.ang-md.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "21716-1406",
+        "phone": "1 (301) 8348540",
+        "email": "rector@gracebrunswick.org",
+        "website": "http://gracebrunswick.org",
+        "type": "church",
+        "lat": 39.31259,
+        "lng": -77.62472
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 56,
+            "plateAndPledge": 100606,
+            "membership": 97,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 64,
+            "plateAndPledge": 120613,
+            "membership": 107,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 58,
+            "plateAndPledge": 108397,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 56,
+            "plateAndPledge": 101343,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 45,
+            "plateAndPledge": 90676,
+            "membership": 116,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 43,
+            "plateAndPledge": 85679,
+            "membership": 116,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 27,
+            "plateAndPledge": 94065,
+            "membership": 120,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 26,
+            "plateAndPledge": 102034,
+            "membership": 120,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 30,
+            "plateAndPledge": 117209,
+            "membership": 119,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 34,
+            "plateAndPledge": 123851,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "Edie Holton",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2020",
+        "years_tenure": 6
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 6
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 6,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2286,7 +2702,70 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 70,
+    "diocese_percentiles": {
+      "asa": 33,
+      "asa_value": 34,
+      "plate_pledge": 41,
+      "plate_pledge_value": 123851
+    },
+    "similar_positions": [
+      {
+        "id": "10636",
+        "vh_id": 10636,
+        "name": "St Paul's Episcopal Church",
+        "city": "Virginia City",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 36,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
+        "id": "10574",
+        "vh_id": 10574,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Gillette",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 41,
+        "estimated_total_comp": 87501,
+        "score": 5
+      },
+      {
+        "id": "10691",
+        "vh_id": 10691,
+        "name": "St. Mary Anne's Episcopal Church",
+        "city": "North East",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 82501,
+        "score": 4
+      },
+      {
+        "id": "9296",
+        "vh_id": 9296,
+        "name": "Trinity Episcopal Church",
+        "city": "Morgan City",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 27,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ],
+    "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
@@ -2294,6 +2773,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -2315,14 +2795,14 @@
       {
         "nid": null,
         "name": "Saint Andrews Church",
-        "street": "7859 Tick Neck Rd",
-        "city": "Pasadena",
+        "street": "22 Cumberland St",
+        "city": "Clear Spring",
         "state": "MD",
-        "zip": "21122-2264",
-        "phone": "1 (410) 2551070",
-        "email": "secretarystandrewspasadena@verizon.net",
-        "website": "http://www.standrewspasadena.com",
-        "type": "Parish",
+        "zip": "21722",
+        "phone": "1 (301) 842-2433",
+        "email": "revmccarty@gmail.com",
+        "website": "http://www.standrewsclearspring.org",
+        "type": "Mission",
         "lat": null,
         "lng": null
       }
@@ -2468,8 +2948,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Saint James Episcopal Church",
-        "city": "Cheboygan",
+        "name": "Saint James Episcopal Mission",
+        "city": "Beaver Island",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2479,7 +2959,7 @@
       {
         "id": "8945",
         "vh_id": 8945,
-        "name": "Saint James Church",
+        "name": "St. James Episcopal Church",
         "city": "Fremont",
         "state": "CA",
         "position_type": "Rector/Priest-in-Charge",
@@ -2490,18 +2970,18 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -2549,14 +3029,14 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Pauls Church",
-        "street": "209 W Main St",
-        "city": "Sharpsburg",
+        "name": "Saint Pauls Episcopal Church",
+        "street": "25 Church St",
+        "city": "Prince Frederick",
         "state": "MD",
-        "zip": "21782-1743",
-        "phone": "1 (301) 4327098",
-        "email": "stpaulssharpsburg@gmail.com",
-        "website": "http://www.stpaulssharpsburg.org",
+        "zip": "20678-4116",
+        "phone": "1 (410) 5352897",
+        "email": "stpaulsepis@verison.net",
+        "website": "http://www.stpaulspf.org",
         "type": "Parish",
         "lat": null,
         "lng": null
@@ -2633,8 +3113,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Church Of The Good Shepherd",
+        "nid": "3362",
+        "name": "Church of the Good Shepherd",
         "street": "116 Main St",
         "city": "Houlton",
         "state": "ME",
@@ -2642,9 +3122,9 @@
         "phone": "1 (207) 532-2927",
         "email": "goodshepherdhoulton@gmail.com",
         "website": "http://goodshepherdhoulton.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 46.12597,
+        "lng": -67.83559
       },
       {
         "nid": null,
@@ -2676,11 +3156,89 @@
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 43,
+            "plateAndPledge": 53626,
+            "membership": 108,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 47,
+            "plateAndPledge": 54352,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 53,
+            "plateAndPledge": 55595,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 49,
+            "plateAndPledge": 53004,
+            "membership": 118,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 40,
+            "plateAndPledge": 49031,
+            "membership": 114,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 30,
+            "plateAndPledge": 51820,
+            "membership": 114,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 22,
+            "plateAndPledge": 53341,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 22,
+            "plateAndPledge": 50298,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 24,
+            "plateAndPledge": 54271,
+            "membership": 48,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 25,
+            "plateAndPledge": 48918,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "Jessie Drysdale",
+        "position_title": "Deacon",
+        "start_date": "01/01/2003",
+        "years_tenure": 23
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 23
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 23,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2717,7 +3275,41 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 70,
+    "diocese_percentiles": {
+      "asa": 31,
+      "asa_value": 25,
+      "plate_pledge": 24,
+      "plate_pledge_value": 48918
+    },
+    "similar_positions": [
+      {
+        "id": "10525",
+        "vh_id": 10525,
+        "name": "Trinity Episcopal Church",
+        "city": "Fredonia",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "9296",
+        "vh_id": 9296,
+        "name": "Trinity Episcopal Church",
+        "city": "Morgan City",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 27,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ],
+    "census": {
+      "median_household_income": 51017,
+      "population": 10092
+    },
+    "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
@@ -2725,6 +3317,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -2774,6 +3367,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 50036,
+      "population": 19165
+    },
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -2808,7 +3405,7 @@
       {
         "id": "10565",
         "vh_id": 10565,
-        "name": "Mount Zion Episcopal Church",
+        "name": "Mt. Zion Episcopal Church",
         "city": "Hedgesville",
         "state": "WV",
         "position_type": "Rector/Priest-in-Charge",
@@ -2819,8 +3416,8 @@
       {
         "id": "10524",
         "vh_id": 10524,
-        "name": "Saint Marys Cathedral",
-        "city": "Memphis",
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2841,7 +3438,7 @@
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -2884,8 +3481,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Trinity Church",
+        "nid": "5559",
+        "name": "Trinity Episcopal Church",
         "street": "317 Franklin St",
         "city": "Clarksville",
         "state": "TN",
@@ -2893,12 +3490,78 @@
         "phone": "1 (931) 6452458",
         "email": "bethany@trinityparish.com",
         "website": "http://www.trinityparish.com",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 36.52829,
+        "lng": -87.35732
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 154,
+            "plateAndPledge": 317604,
+            "membership": 414,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 152,
+            "plateAndPledge": 354444,
+            "membership": 405,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 163,
+            "plateAndPledge": 380547,
+            "membership": 424,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 162,
+            "plateAndPledge": 381920,
+            "membership": 423,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 170,
+            "plateAndPledge": 371541,
+            "membership": 473,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 126,
+            "plateAndPledge": 395478,
+            "membership": 477,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 79,
+            "plateAndPledge": 360289,
+            "membership": 474,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 104,
+            "plateAndPledge": 342085,
+            "membership": 486,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 118,
+            "plateAndPledge": 383077,
+            "membership": 386,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 120,
+            "plateAndPledge": 431834,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "housing_type": "Cash Stipend",
     "parish_contexts": [
       {
@@ -2915,28 +3578,34 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 76,
+      "asa_value": 120,
+      "plate_pledge": 76,
+      "plate_pledge_value": 431834
+    },
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
     },
     "similar_positions": [
       {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
         "id": "10580",
         "vh_id": 10580,
-        "name": "Christ Episcopal Church",
-        "city": "Sheffield",
+        "name": "Christ Church Cathedral",
+        "city": "Springfield",
         "state": "MA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 103,
+        "estimated_total_comp": 87501,
+        "score": 8
+      },
+      {
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
+        "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 87501,
@@ -2949,15 +3618,15 @@
         "city": "Gillette",
         "state": "WY",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 41,
         "estimated_total_comp": 87501,
         "score": 5
       },
       {
         "id": "10524",
         "vh_id": 10524,
-        "name": "Saint Marys Cathedral",
-        "city": "Memphis",
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2967,7 +3636,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -2976,7 +3645,11 @@
         "score": 4
       }
     ],
-    "quality_score": 70,
+    "census": {
+      "median_household_income": 62035,
+      "population": 60377
+    },
+    "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
@@ -2984,6 +3657,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -3041,27 +3715,105 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Christ Episcopal Church",
-        "street": "180 S Main St",
-        "city": "Sheffield",
+        "nid": "998",
+        "name": "Christ Church Cathedral",
+        "street": "35 Chestnut St",
+        "city": "Springfield",
         "state": "MA",
-        "zip": "01257-9670",
-        "phone": "1 (413) 229-8811",
-        "email": "xchurch1@verizon.net",
-        "website": "http://www.christtrinitysheffield.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "01103-1705",
+        "phone": "1 (413) 736-2742",
+        "email": "cccspfld@gmail.com",
+        "website": "http://www.cccspfld.org/",
+        "type": "church",
+        "lat": 42.10339,
+        "lng": -72.58569
       }
     ],
-    "match_confidence": "medium",
+    "match_confidence": "low",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 185,
+            "plateAndPledge": 327329,
+            "membership": 524,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 193,
+            "plateAndPledge": 316223,
+            "membership": 541,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 191,
+            "plateAndPledge": 308026,
+            "membership": 551,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 192,
+            "plateAndPledge": 304312,
+            "membership": 576,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 185,
+            "plateAndPledge": 303424,
+            "membership": 581,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 173,
+            "plateAndPledge": 295869,
+            "membership": 569,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 82,
+            "plateAndPledge": 306116,
+            "membership": 581,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 103,
+            "plateAndPledge": 299430,
+            "membership": 581,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 121,
+            "plateAndPledge": 299016,
+            "membership": 581,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 103,
+            "plateAndPledge": 248959,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "housing_type": "Cash Stipend",
+    "clergy": {
+      "current_clergy": {
+        "name": "Kathryn Derose",
+        "position_title": "Deacon",
+        "start_date": "01/01/2024",
+        "years_tenure": 2
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 2
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 2,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -3072,28 +3824,45 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 92,
+      "asa_value": 103,
+      "plate_pledge": 86,
+      "plate_pledge_value": 248959
+    },
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
     },
     "similar_positions": [
       {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
-        "state": "GA",
+        "id": "10583",
+        "vh_id": 10583,
+        "name": "Trinity Episcopal Church",
+        "city": "Clarksville",
+        "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 120,
         "estimated_total_comp": 87501,
+        "score": 8
+      },
+      {
+        "id": "10633",
+        "vh_id": 10633,
+        "name": "Calvary Church",
+        "city": "Louisville",
+        "state": "KY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 88,
+        "estimated_total_comp": null,
         "score": 5
       },
       {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Church",
-        "city": "Clarksville",
-        "state": "TN",
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
+        "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 87501,
@@ -3106,34 +3875,23 @@
         "city": "Gillette",
         "state": "WY",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 41,
         "estimated_total_comp": 87501,
         "score": 5
       },
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 82501,
         "score": 4
-      },
-      {
-        "id": "10636",
-        "vh_id": 10636,
-        "name": "Saint Pauls Church",
-        "city": "Virginia City",
-        "state": "MT",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 4
       }
     ],
-    "quality_score": 80,
+    "quality_score": 90,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -3141,6 +3899,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -3182,14 +3941,14 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Pauls Church",
-        "street": "1006 3rd St",
-        "city": "Muskegon",
+        "name": "Saint Pauls Episcopal Church",
+        "street": "139 W Huron Ave",
+        "city": "Bad Axe",
         "state": "MI",
-        "zip": "49440-1206",
-        "phone": "1 (231) 7222112",
-        "email": "office@stpaulsmuskegon.org",
-        "website": "http://www.stpaulsmuskegon.org",
+        "zip": "48413-1102",
+        "phone": "1 (989) 7526020",
+        "email": "mollyg@eastmich.org",
+        "website": "http://www.stpaulsbadaxe.com",
         "type": "Parish",
         "lat": null,
         "lng": null
@@ -3239,28 +3998,28 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint James Episcopal Church",
-        "street": "202 S Huron St",
-        "city": "Cheboygan",
+        "name": "Saint James Episcopal Mission",
+        "street": "26055 Pine St",
+        "city": "Beaver Island",
         "state": "MI",
-        "zip": "49721-1920",
-        "phone": "1 (989) 7526020",
-        "email": "mollyg@eastmich.org",
-        "website": "http://stjamescheboygan.org",
-        "type": "Parish",
+        "zip": "49782-5217",
+        "phone": "1 (231) 4482241",
+        "email": null,
+        "website": "http://",
+        "type": "Mission",
         "lat": null,
         "lng": null
       },
       {
         "nid": null,
-        "name": "Trinity Episcopal Church",
-        "street": "101 E Mansion St",
-        "city": "Marshall",
+        "name": "Trinity Church",
+        "street": "321 N Main St",
+        "city": "Three Rivers",
         "state": "MI",
-        "zip": "49068-1117",
-        "phone": "1 (269) 7817881",
-        "email": "trinityepisbookkeeper@gmail.com",
-        "website": "http://www.trinityofmarshall.org",
+        "zip": "49093-1422",
+        "phone": "1 (269) 2733795",
+        "email": "trinity.church.tr@frontier.com",
+        "website": "http://www.trinity3rivers.org",
         "type": "Parish",
         "lat": null,
         "lng": null
@@ -3316,7 +4075,7 @@
       {
         "id": "8945",
         "vh_id": 8945,
-        "name": "Saint James Church",
+        "name": "St. James Episcopal Church",
         "city": "Fremont",
         "state": "CA",
         "position_type": "Rector/Priest-in-Charge",
@@ -3327,18 +4086,18 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -3386,14 +4145,14 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Pauls Church",
-        "street": "1006 3rd St",
-        "city": "Muskegon",
+        "name": "Saint Pauls Episcopal Church",
+        "street": "139 W Huron Ave",
+        "city": "Bad Axe",
         "state": "MI",
-        "zip": "49440-1206",
-        "phone": "1 (231) 7222112",
-        "email": "office@stpaulsmuskegon.org",
-        "website": "http://www.stpaulsmuskegon.org",
+        "zip": "48413-1102",
+        "phone": "1 (989) 7526020",
+        "email": "mollyg@eastmich.org",
+        "website": "http://www.stpaulsbadaxe.com",
         "type": "Parish",
         "lat": null,
         "lng": null
@@ -3413,7 +4172,7 @@
         "lng": null
       }
     ],
-    "match_confidence": "high",
+    "match_confidence": "low",
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -3505,6 +4264,72 @@
       }
     ],
     "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 48,
+            "plateAndPledge": 120018,
+            "membership": 124,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 40,
+            "plateAndPledge": 116827,
+            "membership": 123,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 39,
+            "plateAndPledge": 121520,
+            "membership": 108,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 40,
+            "plateAndPledge": 118253,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 34,
+            "plateAndPledge": 123908,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 37,
+            "plateAndPledge": 116299,
+            "membership": 89,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 29,
+            "plateAndPledge": 117681,
+            "membership": 89,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 37,
+            "plateAndPledge": 127002,
+            "membership": 86,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 42,
+            "plateAndPledge": 124239,
+            "membership": 85,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 41,
+            "plateAndPledge": 124510,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "housing_type": "Cash Stipend",
     "parish_contexts": [
       {
@@ -3521,16 +4346,44 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 76,
+      "asa_value": 41,
+      "plate_pledge": 80,
+      "plate_pledge_value": 124510
+    },
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
     },
     "similar_positions": [
       {
+        "id": "10636",
+        "vh_id": 10636,
+        "name": "St Paul's Episcopal Church",
+        "city": "Virginia City",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 36,
+        "estimated_total_comp": 87501,
+        "score": 7
+      },
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -3538,51 +4391,29 @@
         "score": 5
       },
       {
+        "id": "10606",
+        "vh_id": 10606,
+        "name": "Grace Episcopal Church",
+        "city": "Brunswick",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
         "id": "10583",
         "vh_id": 10583,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "Clarksville",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 120,
         "estimated_total_comp": 87501,
         "score": 5
-      },
-      {
-        "id": "10580",
-        "vh_id": 10580,
-        "name": "Christ Episcopal Church",
-        "city": "Sheffield",
-        "state": "MA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 5
-      },
-      {
-        "id": "10691",
-        "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
-        "city": "North East",
-        "state": "MD",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 82501,
-        "score": 4
-      },
-      {
-        "id": "10636",
-        "vh_id": 10636,
-        "name": "Saint Pauls Church",
-        "city": "Virginia City",
-        "state": "MT",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 4
       }
     ],
-    "quality_score": 80,
+    "quality_score": 90,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -3590,6 +4421,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -3691,8 +4523,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Mount Zion Episcopal Church",
+        "nid": "6151",
+        "name": "Mt. Zion Episcopal Church",
         "street": "PO Box 2246, 1 Zion Street",
         "city": "Hedgesville",
         "state": "WV",
@@ -3700,12 +4532,12 @@
         "phone": "1 (304) 702-7111",
         "email": "frbshoda@gmail.com",
         "website": "http://www.mtzionhedgesville.org",
-        "type": "Mission",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 39.553579,
+        "lng": -77.9952
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "housing_type": "Cash Stipend",
     "parish_contexts": [
       {
@@ -3730,8 +4562,8 @@
       {
         "id": "10524",
         "vh_id": 10524,
-        "name": "Saint Marys Cathedral",
-        "city": "Memphis",
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -3774,8 +4606,8 @@
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -3783,6 +4615,10 @@
         "score": 3
       }
     ],
+    "census": {
+      "median_household_income": 79694,
+      "population": 15946
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -3903,8 +4739,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Marks Church",
+        "nid": "6373",
+        "name": "St. Mark's Episcopal Church",
         "street": "6595 E Quaker St",
         "city": "Orchard Park",
         "state": "NY",
@@ -3912,17 +4748,29 @@
         "phone": "1 (716) 662-4418",
         "email": "rector@stmarksop.org",
         "website": "http://www.stmarksop.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 42.76749,
+        "lng": -78.74134
       }
     ],
     "match_confidence": "exact",
+    "clergy": {
+      "current_clergy": {
+        "name": "Shawn Clerkin",
+        "position_title": "Rector",
+        "start_date": "01/01/2026",
+        "years_tenure": 0
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 14
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 14,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -3933,6 +4781,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 100953,
+      "population": 30652
+    },
     "quality_score": 60,
     "quality_components": [
       "Recent date (15)",
@@ -4480,6 +5332,72 @@
       }
     ],
     "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 56,
+            "plateAndPledge": 135649,
+            "membership": 216,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 54,
+            "plateAndPledge": 115041,
+            "membership": 212,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 57,
+            "plateAndPledge": 120249,
+            "membership": 215,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 51,
+            "plateAndPledge": 167416,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 45,
+            "plateAndPledge": 113686,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 42,
+            "plateAndPledge": 114379,
+            "membership": 108,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 22,
+            "plateAndPledge": 112471,
+            "membership": 109,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 24,
+            "plateAndPledge": 113007,
+            "membership": 111,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 27,
+            "plateAndPledge": 108732,
+            "membership": 112,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 24,
+            "plateAndPledge": 143919,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -4495,7 +5413,59 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 70,
+    "diocese_percentiles": {
+      "asa": 49,
+      "asa_value": 24,
+      "plate_pledge": 82,
+      "plate_pledge_value": 143919
+    },
+    "similar_positions": [
+      {
+        "id": "10403",
+        "vh_id": 10403,
+        "name": "Grace Episcopal Church",
+        "city": "Randolph",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 18,
+        "estimated_total_comp": null,
+        "score": 7
+      },
+      {
+        "id": "10588",
+        "vh_id": 10588,
+        "name": "Church of the Good Shepherd",
+        "city": "Houlton",
+        "state": "ME",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 25,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "10355",
+        "vh_id": 10355,
+        "name": "Saint Peters Episcopal Church",
+        "city": "Henrietta",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 112501,
+        "score": 4
+      },
+      {
+        "id": "9296",
+        "vh_id": 9296,
+        "name": "Trinity Episcopal Church",
+        "city": "Morgan City",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 27,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ],
+    "quality_score": 80,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
@@ -4503,6 +5473,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -4522,21 +5493,21 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Marys Cathedral",
-        "street": "692 Poplar Ave",
-        "city": "Memphis",
+        "nid": "6020",
+        "name": "St. Mary Episcopal Church",
+        "street": "108 N King Ave",
+        "city": "Dyersburg",
         "state": "TN",
-        "zip": "38105-4512",
-        "phone": "1 (901) 5273361",
-        "email": "treasurer@stmarysmemphis.org",
-        "website": "http://www.stmarysmemphis.org/",
-        "type": "Cathedral",
-        "lat": null,
-        "lng": null
+        "zip": "38024-4610",
+        "phone": "731-285-3522",
+        "email": "office@stmarysdyersburg.org",
+        "website": "http://StMarysDyersburg.org",
+        "type": "church",
+        "lat": 36.03356,
+        "lng": -89.39052
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "exact",
     "housing_type": "Cash Stipend",
     "parish_contexts": [
       {
@@ -4561,18 +5532,18 @@
       {
         "id": "10583",
         "vh_id": 10583,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "Clarksville",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 120,
         "estimated_total_comp": 87501,
         "score": 5
       },
       {
         "id": "10565",
         "vh_id": 10565,
-        "name": "Mount Zion Episcopal Church",
+        "name": "Mt. Zion Episcopal Church",
         "city": "Hedgesville",
         "state": "WV",
         "position_type": "Rector/Priest-in-Charge",
@@ -4614,7 +5585,11 @@
         "score": 3
       }
     ],
-    "quality_score": 80,
+    "census": {
+      "median_household_income": 52475,
+      "population": 25767
+    },
+    "quality_score": 85,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -4623,7 +5598,8 @@
       "Position named (5)",
       "Church matched (10)",
       "Position type (5)",
-      "State known (5)"
+      "State known (5)",
+      "Exact match (5)"
     ],
     "visibility": "extended"
   },
@@ -4641,22 +5617,22 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Andrews Church",
-        "street": "3107 Main St",
-        "city": "Buffalo",
+        "nid": "6346",
+        "name": "St. Andrew's Episcopal Church",
+        "street": "2239 W Creek Rd",
+        "city": "Burt",
         "state": "NY",
-        "zip": "14214-1305",
-        "phone": "1 (716) 834-9337",
-        "email": "standrewsbuffalo@gmail.com",
-        "website": "http://standrewsbuffalo.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "14028",
+        "phone": "1 (716) 778-7633",
+        "email": "office@standrewsburt.com",
+        "website": "http://www.standrewsburt.com",
+        "type": "church",
+        "lat": 43.30912,
+        "lng": -78.71665
       },
       {
-        "nid": null,
-        "name": "Saint Pauls Episcopal Church",
+        "nid": "6364",
+        "name": "St. Paul's Episcopal Church",
         "street": "400 Ridge St",
         "city": "Lewiston",
         "state": "NY",
@@ -4664,12 +5640,12 @@
         "phone": "1 (716) 7544591",
         "email": "office@splewiston.org",
         "website": "http://www.splewiston.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 43.17404,
+        "lng": -79.04404
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -4685,9 +5661,9 @@
         "years_of_data": 0
       },
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 3,
+        "avg_tenure_years": 17,
+        "current_clergy_count": 3,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -4698,6 +5674,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 68725,
+      "population": 1556
+    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -4758,26 +5738,38 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Holy Innocents Church",
-        "street": "30 Rich Street",
+        "nid": "6340",
+        "name": "St. Paul's Cathedral in Buffalo",
+        "street": "139 Pearl St",
         "city": "Buffalo",
         "state": "NY",
-        "zip": "14211-3092",
-        "phone": "1 (716) 896-6386",
-        "email": null,
-        "website": "http://",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "14202",
+        "phone": "1 (716) 8550900",
+        "email": "office@spcbuffalo.org",
+        "website": "http://www.spcbuffalo.org",
+        "type": "church",
+        "lat": 42.88288,
+        "lng": -78.87631
       }
     ],
-    "match_confidence": "medium",
+    "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Rebecca Barnes",
+        "position_title": "Dean",
+        "start_date": "01/01/2024",
+        "years_tenure": 2
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 2
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 2,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -4788,6 +5780,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 58669,
+      "population": 3664
+    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -4812,26 +5808,104 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Grace Church",
-        "street": "100 Genesee St",
-        "city": "Lockport",
+        "nid": "6375",
+        "name": "Grace Episcopal Church",
+        "street": "21 N Washington St",
+        "city": "Randolph",
         "state": "NY",
-        "zip": "14094-4318",
-        "phone": "1 (716) 433-2878",
-        "email": "gracechurchlkpt@wny.twcbc.com",
-        "website": "http://www.gracelkpt.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "zip": "14772-1207",
+        "phone": "1 (716) 3586124",
+        "email": "treasurer@gracechurchrandolph.org",
+        "website": "https://www.gracechurchrandolph.org",
+        "type": "church",
+        "lat": 42.162126,
+        "lng": -78.982692
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 37,
+            "plateAndPledge": 47415,
+            "membership": 95,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 39,
+            "plateAndPledge": 47770,
+            "membership": 89,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 35,
+            "plateAndPledge": 48968,
+            "membership": 99,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 30,
+            "plateAndPledge": 48649,
+            "membership": 91,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 30,
+            "plateAndPledge": 53926,
+            "membership": 90,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 24,
+            "plateAndPledge": 47444,
+            "membership": 87,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 18,
+            "plateAndPledge": 37709,
+            "membership": 81,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 20,
+            "plateAndPledge": 37370,
+            "membership": 85,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 20,
+            "plateAndPledge": 38637,
+            "membership": 85,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 18,
+            "plateAndPledge": 35157,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "Michelle Boomgaard",
+        "position_title": "",
+        "start_date": "01/01/2020",
+        "years_tenure": 6
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 6
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 6,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -4842,11 +5916,46 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 35,
+    "diocese_percentiles": {
+      "asa": 39,
+      "asa_value": 18,
+      "plate_pledge": 28,
+      "plate_pledge_value": 35157
+    },
+    "similar_positions": [
+      {
+        "id": "10525",
+        "vh_id": 10525,
+        "name": "Trinity Episcopal Church",
+        "city": "Fredonia",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "10355",
+        "vh_id": 10355,
+        "name": "Saint Peters Episcopal Church",
+        "city": "Henrietta",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 112501,
+        "score": 4
+      }
+    ],
+    "census": {
+      "median_household_income": 70647,
+      "population": 3993
+    },
+    "quality_score": 45,
     "quality_components": [
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -4867,15 +5976,15 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Pauls Cathedral",
-        "street": "139 Pearl St",
-        "city": "Buffalo",
+        "name": "Saint Pauls Church",
+        "street": "2 Jackson St",
+        "city": "Holley",
         "state": "NY",
-        "zip": "14202",
-        "phone": "1 (716) 8550900",
-        "email": "office@spcbuffalo.org",
-        "website": "http://www.spcbuffalo.org",
-        "type": "Cathedral",
+        "zip": "14470-1106",
+        "phone": "1 (585) 638-5142",
+        "email": "SPECHOLLEY@GMAIL.COM",
+        "website": "http://specholley.org",
+        "type": "Parish",
         "lat": null,
         "lng": null
       }
@@ -4920,8 +6029,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Martin In The Fields",
+        "nid": "6355",
+        "name": "St. Martin in the Fields",
         "street": "2587 Baseline Rd",
         "city": "Grand Island",
         "state": "NY",
@@ -4929,17 +6038,29 @@
         "phone": "1 (716) 7733335",
         "email": "office@stmartinsgi.org",
         "website": "http://www.stmartinsgi.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 43.03222,
+        "lng": -78.96533
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Nicholas Evancho",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2020",
+        "years_tenure": 6
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 6
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 6,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -4950,6 +6071,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 103186,
+      "population": 21416
+    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -5240,8 +6365,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Saint James Episcopal Church",
-        "city": "Cheboygan",
+        "name": "Saint James Episcopal Mission",
+        "city": "Beaver Island",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -5249,37 +6374,37 @@
         "score": 4
       },
       {
+        "id": "10525",
+        "vh_id": 10525,
+        "name": "Trinity Episcopal Church",
+        "city": "Fredonia",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
+        "id": "10403",
+        "vh_id": 10403,
+        "name": "Grace Episcopal Church",
+        "city": "Randolph",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 18,
+        "estimated_total_comp": null,
+        "score": 4
+      },
+      {
         "id": "8945",
         "vh_id": 8945,
-        "name": "Saint James Church",
+        "name": "St. James Episcopal Church",
         "city": "Fremont",
         "state": "CA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 107501,
         "score": 4
-      },
-      {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
-        "state": "GA",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Church",
-        "city": "Clarksville",
-        "state": "TN",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
       }
     ],
     "quality_score": 80,
@@ -5327,7 +6452,7 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "3828",
         "name": "Church of the Resurrection",
         "street": "1209 West Main Street",
         "city": "Millville",
@@ -5336,12 +6461,36 @@
         "phone": "1 (609) 3199234",
         "email": "churchoftheresurrection@mail.com",
         "website": "http://cumberlandnjepiscopal.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 39.39913,
+        "lng": -75.06541
       }
     ],
     "match_confidence": "exact",
+    "parochials": [
+      {
+        "years": {
+          "2022": {
+            "averageAttendance": 56,
+            "plateAndPledge": 174913,
+            "membership": 136,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 58,
+            "plateAndPledge": 166982,
+            "membership": 141,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 66,
+            "plateAndPledge": 216295,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "housing_type": "Cash Stipend",
     "parish_contexts": [
       {
@@ -5358,13 +6507,81 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 80,
+    "diocese_percentiles": {
+      "asa": 70,
+      "asa_value": 66,
+      "plate_pledge": 77,
+      "plate_pledge_value": 216295
+    },
+    "similar_positions": [
+      {
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10583",
+        "vh_id": 10583,
+        "name": "Trinity Episcopal Church",
+        "city": "Clarksville",
+        "state": "TN",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 120,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10580",
+        "vh_id": 10580,
+        "name": "Christ Church Cathedral",
+        "city": "Springfield",
+        "state": "MA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 103,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10574",
+        "vh_id": 10574,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Gillette",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 41,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10565",
+        "vh_id": 10565,
+        "name": "Mt. Zion Episcopal Church",
+        "city": "Hedgesville",
+        "state": "WV",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 3
+      }
+    ],
+    "census": {
+      "median_household_income": 64973,
+      "population": 35292
+    },
+    "quality_score": 90,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
       "Very recent date (5)",
       "Congregation identified (10)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)",
       "Exact match (5)"
@@ -5424,8 +6641,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Christ Church",
+        "nid": "5838",
+        "name": "Christ Episcopal Church",
         "street": "5 Main St",
         "city": "Bethel",
         "state": "VT",
@@ -5433,12 +6650,78 @@
         "phone": "1 (802) 234-5680",
         "email": "christchurchbethel@gmail.com",
         "website": "http://christchurchbethel.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 43.832769,
+        "lng": -72.634512
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "medium",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 21,
+            "plateAndPledge": 26992,
+            "membership": 30,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 19,
+            "plateAndPledge": 25875,
+            "membership": 33,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 19,
+            "plateAndPledge": 25781,
+            "membership": 35,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 18,
+            "plateAndPledge": 26099,
+            "membership": 36,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 17,
+            "plateAndPledge": 22349,
+            "membership": 29,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 13,
+            "plateAndPledge": 15944,
+            "membership": 26,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 15,
+            "plateAndPledge": 15950,
+            "membership": 26,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 15,
+            "plateAndPledge": 15484,
+            "membership": 26,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 12,
+            "plateAndPledge": 18009,
+            "membership": 26,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 12,
+            "plateAndPledge": 19401,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -5454,13 +6737,20 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 65,
+    "diocese_percentiles": {
+      "asa": 17,
+      "asa_value": 12,
+      "plate_pledge": 21,
+      "plate_pledge_value": 19401
+    },
+    "quality_score": 75,
     "quality_components": [
       "In-progress status (15)",
       "Recent date (15)",
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -5796,7 +7086,7 @@
       {
         "id": "10565",
         "vh_id": 10565,
-        "name": "Mount Zion Episcopal Church",
+        "name": "Mt. Zion Episcopal Church",
         "city": "Hedgesville",
         "state": "WV",
         "position_type": "Rector/Priest-in-Charge",
@@ -5807,8 +7097,8 @@
       {
         "id": "10524",
         "vh_id": 10524,
-        "name": "Saint Marys Cathedral",
-        "city": "Memphis",
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -5818,7 +7108,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -5829,7 +7119,7 @@
       {
         "id": "10646",
         "vh_id": 10646,
-        "name": "Saint Matthews Episcopal Church",
+        "name": "St. Matthew's Episcopal Church",
         "city": "Wilton",
         "state": "CT",
         "position_type": "Rector/Priest-in-Charge",
@@ -6042,18 +7332,18 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Marks Church",
+        "nid": "5154",
+        "name": "St. Mark's Episcopal Church",
         "street": "3395 Burns Rd",
         "city": "Palm Beach Gardens",
         "state": "FL",
-        "zip": "33410-4322",
-        "phone": "1 (561) 6220956",
+        "zip": "33410-4394",
+        "phone": "561-622-0956",
         "email": "churchoffice@stmarkspbg.org",
-        "website": "http://www.stmarkspbg.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "website": null,
+        "type": "church",
+        "lat": 26.83143,
+        "lng": -80.08755
       }
     ],
     "match_confidence": "low",
@@ -6081,8 +7371,8 @@
       {
         "id": "10684",
         "vh_id": 10684,
-        "name": "Saint Lukes Episcopal Church",
-        "city": "Merritt Island",
+        "name": "Cathedral Church of St. Luke",
+        "city": "Orlando",
         "state": "FL",
         "position_type": "Dean",
         "asa": null,
@@ -6092,7 +7382,7 @@
       {
         "id": "10646",
         "vh_id": 10646,
-        "name": "Saint Matthews Episcopal Church",
+        "name": "St. Matthew's Episcopal Church",
         "city": "Wilton",
         "state": "CT",
         "position_type": "Rector/Priest-in-Charge",
@@ -6103,8 +7393,8 @@
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -6114,26 +7404,30 @@
       {
         "id": "10583",
         "vh_id": 10583,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "Clarksville",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 120,
         "estimated_total_comp": 87501,
         "score": 3
       },
       {
         "id": "10580",
         "vh_id": 10580,
-        "name": "Christ Episcopal Church",
-        "city": "Sheffield",
+        "name": "Christ Church Cathedral",
+        "city": "Springfield",
         "state": "MA",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 103,
         "estimated_total_comp": 87501,
         "score": 3
       }
     ],
+    "census": {
+      "median_household_income": 93643,
+      "population": 36277
+    },
     "quality_score": 50,
     "quality_components": [
       "Recent date (15)",
@@ -6557,14 +7851,14 @@
       {
         "nid": null,
         "name": "Church Of The Good Shepherd",
-        "street": "809 Lee Jackson Hwy",
-        "city": "Staunton",
+        "street": "9441 Grayson Parkway",
+        "city": "Galax",
         "state": "VA",
-        "zip": "24401-5510",
-        "phone": "1 (540) 377-9449",
-        "email": "goodsheperd@adelphia.net",
-        "website": "http://goodshepherd-staunton.com",
-        "type": "Mission",
+        "zip": "24333",
+        "phone": "1 (276) 236-4957",
+        "email": "cogs@embarqmail.com",
+        "website": "http://goodshepherdgalax.dioswva.org",
+        "type": "Parish",
         "lat": null,
         "lng": null
       }
@@ -6598,7 +7892,7 @@
         "city": "Indiana",
         "state": "PA",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 38,
         "estimated_total_comp": 37501,
         "score": 5
       },
@@ -6614,20 +7908,9 @@
         "score": 3
       },
       {
-        "id": "10686",
-        "vh_id": 10686,
-        "name": "St Julians Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 37501,
-        "score": 3
-      },
-      {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -6644,6 +7927,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10584",
+        "vh_id": 10584,
+        "name": "Position in Northern Indiana",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
         "score": 3
       }
     ],
@@ -8066,20 +9360,9 @@
         "score": 5
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-        "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
-      },
-      {
         "id": "10565",
         "vh_id": 10565,
-        "name": "Mount Zion Episcopal Church",
+        "name": "Mt. Zion Episcopal Church",
         "city": "Hedgesville",
         "state": "WV",
         "position_type": "Rector/Priest-in-Charge",
@@ -8090,8 +9373,8 @@
       {
         "id": "10524",
         "vh_id": 10524,
-        "name": "Saint Marys Cathedral",
-        "city": "Memphis",
+        "name": "St. Mary Episcopal Church",
+        "city": "Dyersburg",
         "state": "TN",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -8343,81 +9626,6 @@
     "visibility": "extended_hidden"
   },
   {
-    "vh_id": 10175,
-    "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "diocese": "South Dakota",
-    "state": "SD",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "receiving_names_from": "09/15/2025",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "housing_type": "Rectory",
-    "estimated_total_comp": 57501,
-    "comp_breakdown": {
-      "stipend": 37501,
-      "housing": 20000
-    },
-    "similar_positions": [
-      {
-        "id": "10678",
-        "vh_id": 10678,
-        "name": "Position in Missouri",
-        "city": "",
-        "state": "MO",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 62501,
-        "score": 4
-      },
-      {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
-        "city": "",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 62501,
-        "score": 4
-      },
-      {
-        "id": "10650",
-        "vh_id": 10650,
-        "name": "The Parish Of Saint Mary And Saint Jude",
-        "city": "Northeast Harbor",
-        "state": "ME",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 132501,
-        "score": 3
-      },
-      {
-        "id": "10319",
-        "vh_id": 10319,
-        "name": "Position in San Joaquin",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 3
-      }
-    ],
-    "quality_score": 65,
-    "quality_components": [
-      "Active status (25)",
-      "Recent date (15)",
-      "Congregation identified (10)",
-      "Position named (5)",
-      "Position type (5)",
-      "State known (5)"
-    ],
-    "visibility": "extended"
-  },
-  {
     "vh_id": 10174,
     "name": "Position in North Dakota",
     "diocese": "North Dakota",
@@ -8528,6 +9736,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 40000,
+      "population": 310
+    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -13306,8 +14518,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Johns Episcopal Church",
+        "nid": "5814",
+        "name": "St. John's Episcopal Church",
         "street": "85 E 100 N",
         "city": "Logan",
         "state": "UT",
@@ -13315,9 +14527,9 @@
         "phone": "1 (435) 7520331",
         "email": "stjohnsreceptionist@gmail.com",
         "website": "http://stjohnslogan.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 41.73338,
+        "lng": -111.83277
       }
     ],
     "match_confidence": "high",
@@ -13348,6 +14560,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 61210,
+      "population": 49434
+    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -13516,8 +14732,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Lukes Church",
+        "nid": "3688",
+        "name": "St. Luke's Episcopal Church",
         "street": "119 N 33rd St",
         "city": "Billings",
         "state": "MT",
@@ -13525,12 +14741,12 @@
         "phone": "1 (406) 252-7186",
         "email": "rector@stlukesbillings.org",
         "website": "http://www.stlukesbillings.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 45.779843,
+        "lng": -108.512009
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -13554,18 +14770,18 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 6
       },
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -13576,7 +14792,7 @@
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -13598,8 +14814,8 @@
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -13607,6 +14823,10 @@
         "score": 4
       }
     ],
+    "census": {
+      "median_household_income": 56659,
+      "population": 40848
+    },
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -13777,14 +14997,14 @@
       {
         "nid": null,
         "name": "Saint Marys Church",
-        "street": "16th Clay Sts",
-        "city": "West Columbia",
+        "street": "301 S Waco St",
+        "city": "Hillsboro",
         "state": "TX",
-        "zip": "77486",
-        "phone": "1 (979) 345-3456",
-        "email": "stmaryswc@centurylink.net",
-        "website": "http://stmaryswestcolumbia.org",
-        "type": "Parish",
+        "zip": "76645-3356",
+        "phone": "1 (254) 582-2255",
+        "email": "DAVIDSKELTON@SBCGLOBAL.NET",
+        "website": "http://",
+        "type": "Mission",
         "lat": null,
         "lng": null
       }
@@ -15922,7 +17142,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -15933,18 +17153,18 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -15966,8 +17186,8 @@
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -16044,18 +17264,18 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Anns Church",
-        "street": "1 Ocean Ave",
-        "city": "Kennebunkport",
+        "nid": "3391",
+        "name": "St. Ann's Episcopal Church",
+        "street": "40 Windham Center Rd",
+        "city": "Windham",
         "state": "ME",
-        "zip": "04046",
-        "phone": "1 (207) 967-8043",
-        "email": null,
-        "website": "http://www.episcopalmaine.org",
-        "type": "Summer Chapel",
-        "lat": null,
-        "lng": null
+        "zip": "04062",
+        "phone": "1 (207) 8928447",
+        "email": "stannsoffice@gmail.com",
+        "website": "http://stannsepiscopalchurch.com",
+        "type": "church",
+        "lat": 43.80023,
+        "lng": -70.44158
       }
     ],
     "match_confidence": "low",
@@ -16075,6 +17295,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 92813,
+      "population": 18648
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -16267,18 +17491,18 @@
       {
         "id": "10677",
         "vh_id": 10677,
-        "name": "Trinity Church",
+        "name": "Trinity Episcopal Church",
         "city": "New Orleans",
         "state": "LA",
         "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
+        "asa": 303,
         "estimated_total_comp": 87501,
         "score": 3
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -16300,8 +17524,8 @@
       {
         "id": "10623",
         "vh_id": 10623,
-        "name": "Saint Johns Cathedral",
-        "city": "Denver",
+        "name": "Saint Johns Episcopal Church",
+        "city": "New Castle",
         "state": "CO",
         "position_type": "Dean",
         "asa": null,
@@ -16311,7 +17535,7 @@
       {
         "id": "8560",
         "vh_id": 8560,
-        "name": "All Saints Of The Desert Episcopal Church",
+        "name": "All Saints of the Desert Episcopal Church",
         "city": "Sun City",
         "state": "AZ",
         "position_type": "Rector/Priest-in-Charge",
@@ -16418,8 +17642,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Pauls Church",
+        "nid": "211",
+        "name": "St. Paul's Episcopal Church",
         "street": "6249 Canal Blvd",
         "city": "New Orleans",
         "state": "LA",
@@ -16427,12 +17651,12 @@
         "phone": "1 (504) 488-3749",
         "email": "spchurch@stpauls-lakeview.org",
         "website": "http://www.stpaulsnola.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 30.00419,
+        "lng": -90.10757
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "housing_type": "No Housing or Stipend Provided",
     "parish_contexts": [
       {
@@ -16449,6 +17673,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 113525,
+      "population": 20212
+    },
     "quality_score": 50,
     "quality_components": [
       "Recent date (15)",
@@ -17339,21 +18567,87 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "208",
         "name": "Trinity Episcopal Church",
-        "street": "3552 Morning Glory Ave",
-        "city": "Baton Rouge",
+        "street": "302 Greenwood Street",
+        "city": "Morgan City",
         "state": "LA",
-        "zip": "70808-2865",
-        "phone": "1 (225) 3870396",
-        "email": "janie@trinitybr.org",
-        "website": "http://www.trinitybr.org",
-        "type": "Historical Church",
-        "lat": null,
-        "lng": null
+        "zip": "70380",
+        "phone": "(985) 384-7629",
+        "email": "TrinityEpiscopalMCLA@gmail.com",
+        "website": "http://www.trinitymorgancity.org",
+        "type": "church",
+        "lat": 29.697352,
+        "lng": -91.20875
       }
     ],
-    "match_confidence": "medium",
+    "match_confidence": "exact",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 40,
+            "plateAndPledge": 102907,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 42,
+            "plateAndPledge": 92694,
+            "membership": 113,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 39,
+            "plateAndPledge": 81887,
+            "membership": 73,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 36,
+            "plateAndPledge": 87947,
+            "membership": 62,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 37,
+            "plateAndPledge": 118231,
+            "membership": 67,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 32,
+            "plateAndPledge": 78554,
+            "membership": 63,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 27,
+            "plateAndPledge": 75087,
+            "membership": 46,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 26,
+            "plateAndPledge": 76217,
+            "membership": 46,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 31,
+            "plateAndPledge": 78760,
+            "membership": 45,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 27,
+            "plateAndPledge": 100327,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -17369,7 +18663,52 @@
         "years_of_data": 0
       }
     ],
-    "quality_score": 80,
+    "diocese_percentiles": {
+      "asa": 35,
+      "asa_value": 27,
+      "plate_pledge": 40,
+      "plate_pledge_value": 100327
+    },
+    "similar_positions": [
+      {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Episcopal Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": 303,
+        "estimated_total_comp": 87501,
+        "score": 4
+      },
+      {
+        "id": "10588",
+        "vh_id": 10588,
+        "name": "Church of the Good Shepherd",
+        "city": "Houlton",
+        "state": "ME",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 25,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "10525",
+        "vh_id": 10525,
+        "name": "Trinity Episcopal Church",
+        "city": "Fredonia",
+        "state": "NY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 24,
+        "estimated_total_comp": null,
+        "score": 3
+      }
+    ],
+    "census": {
+      "median_household_income": 47406,
+      "population": 20877
+    },
+    "quality_score": 95,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -17377,8 +18716,10 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
-      "State known (5)"
+      "State known (5)",
+      "Exact match (5)"
     ],
     "visibility": "extended"
   },
@@ -19790,8 +21131,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "All Saints Church",
+        "nid": "3129",
+        "name": "Episcopal Church of All Saints",
         "street": "1559 Central Ave",
         "city": "Indianapolis",
         "state": "IN",
@@ -19799,17 +21140,29 @@
         "phone": "1 (317) 635-2538",
         "email": "rector@allsaintsindy.org",
         "website": "http://www.allsaintsindy.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 39.78826,
+        "lng": -86.1489
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Jeffrey Lee",
+        "position_title": "Interim",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 10
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 10,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -19820,6 +21173,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 59578,
+      "population": 20688
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -20246,8 +21603,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint James Church",
+        "nid": "625",
+        "name": "St. James Episcopal Church",
         "street": "37051 Cabrillo Dr",
         "city": "Fremont",
         "state": "CA",
@@ -20255,18 +21612,30 @@
         "phone": "1 (510) 7971492",
         "email": "admin@saintj.com",
         "website": "http://www.saintj.com",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 37.551514,
+        "lng": -122.017038
       }
     ],
     "match_confidence": "low",
     "housing_type": "Rectory",
+    "clergy": {
+      "current_clergy": {
+        "name": "William Hale",
+        "position_title": "Assisting Priest",
+        "start_date": "01/01/2020",
+        "years_tenure": 6
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 11
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 11,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -20308,8 +21677,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Saint James Episcopal Church",
-        "city": "Cheboygan",
+        "name": "Saint James Episcopal Mission",
+        "city": "Beaver Island",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -20319,18 +21688,18 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -21979,8 +23348,8 @@
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -21990,7 +23359,7 @@
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -22016,7 +23385,7 @@
         "city": "Indiana",
         "state": "PA",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 38,
         "estimated_total_comp": 37501,
         "score": 3
       },
@@ -22032,6 +23401,10 @@
         "score": 3
       }
     ],
+    "census": {
+      "median_household_income": 51186,
+      "population": 6089
+    },
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -22088,6 +23461,10 @@
         "years_of_data": 0
       }
     ],
+    "census": {
+      "median_household_income": 55778,
+      "population": 7719
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -22134,15 +23511,15 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Stephens Church",
-        "street": "2750 Cardinal Dr",
-        "city": "Sierra Vista",
+        "name": "Saint Stephens Episcopal Church",
+        "street": "749 E 11th St",
+        "city": "Douglas",
         "state": "AZ",
-        "zip": "85635-5447",
-        "phone": "1 (520) 4584432",
-        "email": "office@ststephensaz.org",
-        "website": "http://www.ststephensaz.org",
-        "type": "Parish",
+        "zip": "85607-2240",
+        "phone": "1 (520) 364-7971",
+        "email": "richardaguilar70@yahoo.com",
+        "website": "http://",
+        "type": "Mission",
         "lat": null,
         "lng": null
       }
@@ -22210,15 +23587,15 @@
     "church_infos": [
       {
         "nid": null,
-        "name": "Saint Stephens Church",
-        "street": "2750 Cardinal Dr",
-        "city": "Sierra Vista",
+        "name": "Saint Stephens Episcopal Church",
+        "street": "749 E 11th St",
+        "city": "Douglas",
         "state": "AZ",
-        "zip": "85635-5447",
-        "phone": "1 (520) 4584432",
-        "email": "office@ststephensaz.org",
-        "website": "http://www.ststephensaz.org",
-        "type": "Parish",
+        "zip": "85607-2240",
+        "phone": "1 (520) 364-7971",
+        "email": "richardaguilar70@yahoo.com",
+        "website": "http://",
+        "type": "Mission",
         "lat": null,
         "lng": null
       }
@@ -22266,8 +23643,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Grace Episcopal Church",
+        "nid": "2049",
+        "name": "Grace Church",
         "street": "111 Bunker Dr",
         "city": "Lake Havasu City",
         "state": "AZ",
@@ -22275,12 +23652,78 @@
         "phone": "1 (928) 8552525",
         "email": "office@grace-episcopal.net",
         "website": "http://www.grace-episcopal.net",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 34.474383,
+        "lng": -114.316999
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 102,
+            "plateAndPledge": 117008,
+            "membership": 206,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 98,
+            "plateAndPledge": 134458,
+            "membership": 225,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 92,
+            "plateAndPledge": 130925,
+            "membership": 233,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 77,
+            "plateAndPledge": 130771,
+            "membership": 228,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 78,
+            "plateAndPledge": 123191,
+            "membership": 232,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 89,
+            "plateAndPledge": 72498,
+            "membership": 236,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 26,
+            "plateAndPledge": 61575,
+            "membership": 230,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 41,
+            "plateAndPledge": 94675,
+            "membership": 80,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 43,
+            "plateAndPledge": 94530,
+            "membership": 79,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 39,
+            "plateAndPledge": 107591,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -22296,11 +23739,67 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 28,
+      "asa_value": 39,
+      "plate_pledge": 41,
+      "plate_pledge_value": 107591
+    },
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
     },
-    "quality_score": 80,
+    "similar_positions": [
+      {
+        "id": "10624",
+        "vh_id": 10624,
+        "name": "Christ Episcopal Church",
+        "city": "Indiana",
+        "state": "PA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 38,
+        "estimated_total_comp": 37501,
+        "score": 5
+      },
+      {
+        "id": "10636",
+        "vh_id": 10636,
+        "name": "St Paul's Episcopal Church",
+        "city": "Virginia City",
+        "state": "MT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 36,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10606",
+        "vh_id": 10606,
+        "name": "Grace Episcopal Church",
+        "city": "Brunswick",
+        "state": "MD",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 34,
+        "estimated_total_comp": null,
+        "score": 3
+      },
+      {
+        "id": "10574",
+        "vh_id": 10574,
+        "name": "Holy Trinity Episcopal Church",
+        "city": "Gillette",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 41,
+        "estimated_total_comp": 87501,
+        "score": 3
+      }
+    ],
+    "census": {
+      "median_household_income": 57843,
+      "population": 18583
+    },
+    "quality_score": 90,
     "quality_components": [
       "Active status (25)",
       "Recent date (15)",
@@ -22308,6 +23807,7 @@
       "Congregation identified (10)",
       "Position named (5)",
       "Church matched (10)",
+      "Parochial data (10)",
       "Position type (5)",
       "State known (5)"
     ],
@@ -22814,8 +24314,8 @@
     "open_ended": true,
     "church_infos": [
       {
-        "nid": null,
-        "name": "All Saints Of The Desert Episcopal Church",
+        "nid": "2074",
+        "name": "All Saints of the Desert Episcopal Church",
         "street": "9502 W Hutton Dr",
         "city": "Sun City",
         "state": "AZ",
@@ -22823,12 +24323,12 @@
         "phone": "1 (623) 9748404",
         "email": "parishadmin@desertsaints.org",
         "website": "http://www.desertsaints.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 33.63371,
+        "lng": -112.26417
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
     "housing_type": "No Housing or Stipend Provided",
     "parish_contexts": [
       {
@@ -22853,7 +24353,7 @@
       {
         "id": "10634",
         "vh_id": 10634,
-        "name": "Saint Johns Church",
+        "name": "St. John's Episcopal Church",
         "city": "Youngstown",
         "state": "OH",
         "position_type": "Rector/Priest-in-Charge",
@@ -22875,7 +24375,7 @@
       {
         "id": "10691",
         "vh_id": 10691,
-        "name": "Saint Mary Annes Episcopal Church",
+        "name": "St. Mary Anne's Episcopal Church",
         "city": "North East",
         "state": "MD",
         "position_type": "Rector/Priest-in-Charge",
@@ -22886,19 +24386,19 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Saint Pauls Church",
+        "name": "St Paul's Episcopal Church",
         "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 36,
         "estimated_total_comp": 87501,
         "score": 4
       },
       {
         "id": "10616",
         "vh_id": 10616,
-        "name": "Saint Thomas Church",
-        "city": "Savannah",
+        "name": "St. Thomas Episcopal Church",
+        "city": "Thomasville",
         "state": "GA",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -22906,6 +24406,10 @@
         "score": 4
       }
     ],
+    "census": {
+      "median_household_income": 50084,
+      "population": 27857
+    },
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
