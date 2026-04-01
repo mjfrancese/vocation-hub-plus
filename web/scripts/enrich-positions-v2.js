@@ -276,6 +276,68 @@ function matchPositionToParish(position) {
   return null;
 }
 
+/**
+ * Multi-parish matching orchestrator.
+ * Splits position names on \n and " and ", matches each part independently,
+ * and returns the set that produces the most matches.
+ *
+ * @param {object} position - { name, diocese, website_url, contact_email, contact_phone }
+ * @returns {Array<{ parish, confidence, method }>} Array of match results (may be empty)
+ */
+function matchPositionToParishes(position) {
+  // Try unsplit match first
+  const unsplitMatch = matchPositionToParish(position);
+  const unsplitResults = unsplitMatch ? [unsplitMatch] : [];
+
+  // Split name into candidate parts
+  const rawName = (position.name || '').replace(/,\s*Diocese of.*/i, '');
+  let parts = rawName.split(/\n/).map(s => s.trim()).filter(Boolean);
+
+  // Further split each part on " and " (but not if part looks like "Saints X and Y")
+  const expandedParts = [];
+  for (const part of parts) {
+    if (/^(saints?|ss\.?)\s/i.test(part)) {
+      expandedParts.push(part);
+    } else {
+      const subParts = part.split(/\s+and\s+/i).map(s => s.trim()).filter(Boolean);
+      expandedParts.push(...subParts);
+    }
+  }
+
+  // If we only got 1 part (no splitting happened), return the unsplit result
+  if (expandedParts.length <= 1) {
+    return unsplitResults;
+  }
+
+  // Match each part independently
+  const splitResults = [];
+  const seenParishIds = new Set();
+
+  for (const part of expandedParts) {
+    const syntheticPosition = {
+      name: part,
+      diocese: position.diocese,
+      website_url: '',
+      contact_email: '',
+      contact_phone: '',
+    };
+
+    const match = matchPositionToParish(syntheticPosition);
+    if (match && !seenParishIds.has(match.parish.id)) {
+      seenParishIds.add(match.parish.id);
+      splitResults.push(match);
+    }
+  }
+
+  // Use split results if they produced more distinct matches
+  if (splitResults.length > unsplitResults.length) {
+    console.log(`  Multi-parish split: "${position.name}" -> ${splitResults.length} matches (was ${unsplitResults.length})`);
+    return splitResults;
+  }
+
+  return unsplitResults;
+}
+
 // ---------------------------------------------------------------------------
 // DB-backed compensation attachment
 // ---------------------------------------------------------------------------
@@ -432,13 +494,14 @@ function computeDiocesePercentiles(positions) {
 
   let count = 0;
   for (const pos of positions) {
-    if (!pos.parochial || !pos.diocese) continue;
+    const posParochial = pos.parochials && pos.parochials[0];
+    if (!posParochial || !pos.diocese) continue;
     const dm = dioceseMetrics[pos.diocese];
     if (!dm) continue;
 
-    const yearKeys = Object.keys(pos.parochial.years || {}).sort();
+    const yearKeys = Object.keys(posParochial.years || {}).sort();
     if (yearKeys.length === 0) continue;
-    const latest = pos.parochial.years[yearKeys[yearKeys.length - 1]];
+    const latest = posParochial.years[yearKeys[yearKeys.length - 1]];
     if (!latest) continue;
 
     const pctile = {};
@@ -596,10 +659,11 @@ function computeSimilarPositions(allPositions) {
     if (!id) continue;
 
     let asa = null;
-    if (pos.parochial && pos.parochial.years) {
-      const yearKeys = Object.keys(pos.parochial.years).sort();
+    const firstParochial = pos.parochials && pos.parochials[0];
+    if (firstParochial && firstParochial.years) {
+      const yearKeys = Object.keys(firstParochial.years).sort();
       if (yearKeys.length > 0) {
-        const latest = pos.parochial.years[yearKeys[yearKeys.length - 1]];
+        const latest = firstParochial.years[yearKeys[yearKeys.length - 1]];
         if (latest && latest.averageAttendance != null && latest.averageAttendance > 0) {
           asa = latest.averageAttendance;
         }
@@ -607,11 +671,11 @@ function computeSimilarPositions(allPositions) {
     }
 
     const comp = pos.estimated_total_comp || null;
-    const state = (pos.church_info && pos.church_info.state) || pos.state || '';
+    const state = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].state) || pos.state || '';
     const positionType = pos.position_type || '';
     const housingType = (pos.housing_type || '').toLowerCase();
-    const name = (pos.church_info && pos.church_info.name) || pos.name || '';
-    const city = (pos.church_info && pos.church_info.city) || pos.city || '';
+    const name = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].name) || pos.name || '';
+    const city = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].city) || pos.city || '';
 
     if (asa == null && comp == null) continue;
 
@@ -681,7 +745,7 @@ function attachCensusData(positions) {
 
   let count = 0;
   for (const pos of positions) {
-    const rawZip = (pos.church_info && pos.church_info.zip) || pos.postal_code || '';
+    const rawZip = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].zip) || pos.postal_code || '';
     const zip = rawZip.replace(/[^0-9]/g, '').substring(0, 5);
     if (zip.length !== 5) continue;
 
@@ -753,12 +817,12 @@ function computeQualityScores(positions, isPublic) {
     }
 
     // Data richness (40 points max)
-    if (pos.church_info) {
+    if (pos.church_infos && pos.church_infos.length > 0) {
       score += 10;
       components.push('Church matched (10)');
     }
 
-    if (pos.parochial && Object.keys(pos.parochial.years || {}).length > 0) {
+    if (pos.parochials && pos.parochials[0] && Object.keys(pos.parochials[0].years || {}).length > 0) {
       score += 10;
       components.push('Parochial data (10)');
     }
@@ -1060,8 +1124,8 @@ function enrichPositions() {
       pos.profile_url = `https://vocationhub.episcopalchurch.org/PositionView/${vhId}`;
     }
 
-    // Match position to parish via DB
-    const matchResult = matchPositionToParish({
+    // Match position to parish(es) via DB
+    const matchResults = matchPositionToParishes({
       name: pos.name,
       diocese: pos.diocese,
       website_url: pos.website_url || '',
@@ -1069,55 +1133,64 @@ function enrichPositions() {
       contact_phone: pos.contact_phone || '',
     });
 
-    if (matchResult) {
-      // For duplicate VH IDs, cross-validate the church name
+    if (matchResults.length > 0) {
+      // For duplicate VH IDs with single match, cross-validate the church name
       // Skip this check for city-based matches (multi-congregation positions)
       let nameMatch = true;
-      const isCityMatch = matchResult.method && /city|town|word/.test(matchResult.method);
-      if (!isCityMatch && vhIdCounts[vhId] > 1 && pos.name && matchResult.parish) {
-        const posNorm = normalizeChurchName(pos.name);
-        const churchNorm = normalizeChurchName(matchResult.parish.name);
-        if (posNorm && churchNorm) {
-          const posWords = posNorm.split(/\s+/).filter(w => w.length >= 3);
-          const churchWords = churchNorm.split(/\s+/).filter(w => w.length >= 3);
-          const genericWords = new Set(['church', 'episcopal', 'parish', 'chapel', 'cathedral', 'mission', 'memorial']);
-          const posKey = posWords.filter(w => !genericWords.has(w));
-          const churchKey = churchWords.filter(w => !genericWords.has(w));
-          if (posKey.length > 0 && churchKey.length > 0 && !posKey.some(w => churchKey.includes(w))) {
-            nameMatch = false;
+      if (matchResults.length === 1) {
+        const matchResult = matchResults[0];
+        const isCityMatch = matchResult.method && /city|town|word/.test(matchResult.method);
+        if (!isCityMatch && vhIdCounts[vhId] > 1 && pos.name && matchResult.parish) {
+          const posNorm = normalizeChurchName(pos.name);
+          const churchNorm = normalizeChurchName(matchResult.parish.name);
+          if (posNorm && churchNorm) {
+            const posWords = posNorm.split(/\s+/).filter(w => w.length >= 3);
+            const churchWords = churchNorm.split(/\s+/).filter(w => w.length >= 3);
+            const genericWords = new Set(['church', 'episcopal', 'parish', 'chapel', 'cathedral', 'mission', 'memorial']);
+            const posKey = posWords.filter(w => !genericWords.has(w));
+            const churchKey = churchWords.filter(w => !genericWords.has(w));
+            if (posKey.length > 0 && churchKey.length > 0 && !posKey.some(w => churchKey.includes(w))) {
+              nameMatch = false;
+            }
           }
         }
       }
 
       if (nameMatch) {
         churchMatches++;
-        pos.church_info = buildChurchInfo(matchResult.parish);
-        pos.match_confidence = matchResult.confidence;
+        pos.church_infos = matchResults.map(r => buildChurchInfo(r.parish));
+        pos.match_confidence = matchResults[0].confidence;
 
-        // Get parochial data: try by NID-based name, or by parish name + city
-        const parishNameWithCity = matchResult.parish.city
-          ? `${matchResult.parish.name} (${matchResult.parish.city})`
-          : matchResult.parish.name;
-        const parochial = getParochialByName(parishNameWithCity)
-          || getParochialByName(matchResult.parish.name)
-          || getParochialFromDb(matchResult.parish.nid);
-        if (parochial) {
+        // Get parochial data for all matched parishes
+        const parochials = [];
+        for (const r of matchResults) {
+          const parishNameWithCity = r.parish.city
+            ? `${r.parish.name} (${r.parish.city})`
+            : r.parish.name;
+          const parochial = getParochialByName(parishNameWithCity)
+            || getParochialByName(r.parish.name)
+            || getParochialFromDb(r.parish.nid);
+          if (parochial) {
+            parochials.push(parochial);
+          }
+        }
+        if (parochials.length > 0) {
           parochialMatches++;
-          pos.parochial = parochial;
+          pos.parochials = parochials;
         }
 
         // Attach compensation from DB
         const enriched = attachCompensation(pos);
         if (enriched.compensation) pos.compensation = enriched.compensation;
 
-        // Attach clergy info from DB
-        const clergyInfo = attachClergyInfo(matchResult.parish.id);
+        // Attach clergy info from DB (first match only)
+        const clergyInfo = attachClergyInfo(matchResults[0].parish.id);
         if (clergyInfo.current_clergy || clergyInfo.parish_clergy_history.recent_count > 0) {
           pos.clergy = clergyInfo;
         }
 
-        // Attach parish context
-        pos.parish_context = computeParishContext(matchResult.parish.id);
+        // Attach parish contexts for all matches
+        pos.parish_contexts = matchResults.map(r => computeParishContext(r.parish.id));
       }
     }
   }
@@ -1152,13 +1225,14 @@ function enrichPositions() {
       const vhId = profile.vh_id;
 
       // Try matching via DB
-      let matchResult = matchPositionToParish({
+      const matchResults = matchPositionToParishes({
         name: profile.congregation || '',
         diocese: profile.diocese || '',
         website_url: profile.website || '',
         contact_email: '',
         contact_phone: '',
       });
+      let matchResult = matchResults.length > 0 ? matchResults[0] : null;
 
       // Backfill diocese from church_info if profile has none
       let diocese = profile.diocese || '';
@@ -1173,21 +1247,27 @@ function enrichPositions() {
         if (!diocese && override.diocese) diocese = override.diocese;
       }
 
-      // Build church data from match
-      let churchInfo = null;
-      let parochial = null;
+      // Build church data from match(es)
+      let churchInfos = [];
+      let parochials = [];
+      let parishContexts = [];
       let matchConfidence = null;
 
-      if (matchResult) {
-        churchInfo = buildChurchInfo(matchResult.parish);
-        matchConfidence = matchResult.confidence;
+      if (matchResults.length > 0) {
+        churchInfos = matchResults.map(r => buildChurchInfo(r.parish));
+        matchConfidence = matchResults[0].confidence;
 
-        const parishNameWithCity = matchResult.parish.city
-          ? `${matchResult.parish.name} (${matchResult.parish.city})`
-          : matchResult.parish.name;
-        parochial = getParochialByName(parishNameWithCity)
-          || getParochialByName(matchResult.parish.name)
-          || getParochialFromDb(matchResult.parish.nid);
+        for (const r of matchResults) {
+          const parishNameWithCity = r.parish.city
+            ? `${r.parish.name} (${r.parish.city})`
+            : r.parish.name;
+          const parochial = getParochialByName(parishNameWithCity)
+            || getParochialByName(r.parish.name)
+            || getParochialFromDb(r.parish.nid);
+          if (parochial) parochials.push(parochial);
+        }
+
+        parishContexts = matchResults.map(r => computeParishContext(r.parish.id));
       }
 
       // Build display name
@@ -1199,8 +1279,8 @@ function enrichPositions() {
         displayName = diocese ? `Position in ${diocese}` : 'Unknown Position';
       }
 
-      if (matchResult) extChurch++;
-      if (parochial) extParochial++;
+      if (matchResults.length > 0) extChurch++;
+      if (parochials.length > 0) extParochial++;
       if (matchResult && matchResult.method === 'website') websiteMatches++;
 
       // Track if original date was 01/01/1900
@@ -1264,9 +1344,9 @@ function enrichPositions() {
         receiving_names_from: profile.receiving_names_from || '',
         receiving_names_to: profile.receiving_names_to || '',
         open_ended: profile.open_ended || false,
-        church_info: churchInfo || undefined,
+        church_infos: churchInfos.length > 0 ? churchInfos : undefined,
         match_confidence: matchConfidence || undefined,
-        parochial: parochial || undefined,
+        parochials: parochials.length > 0 ? parochials : undefined,
         // Carry through fields needed for comp estimation
         salary_range: profile.salary_range || undefined,
         housing_type: profile.housing_type || undefined,
@@ -1279,15 +1359,15 @@ function enrichPositions() {
         if (enriched.compensation) extPos.compensation = enriched.compensation;
       }
 
-      // Attach clergy info from DB
+      // Attach clergy info from DB (first match only)
       if (matchResult && matchResult.parish) {
         const clergyInfo = attachClergyInfo(matchResult.parish.id);
         if (clergyInfo.current_clergy || clergyInfo.parish_clergy_history.recent_count > 0) {
           extPos.clergy = clergyInfo;
         }
 
-        // Attach parish context
-        extPos.parish_context = computeParishContext(matchResult.parish.id);
+        // Attach parish contexts for all matches
+        extPos.parish_contexts = parishContexts.length > 0 ? parishContexts : undefined;
       }
 
       extended.push(extPos);
@@ -1336,7 +1416,7 @@ function enrichPositions() {
   }
 
   for (const pos of positions) {
-    if (pos.vh_id && !pos.church_info) {
+    if (pos.vh_id && (!pos.church_infos || pos.church_infos.length === 0)) {
       gaps.push({
         type: 'missing_church_match',
         source: 'public',
@@ -1353,7 +1433,7 @@ function enrichPositions() {
     for (const ext of extForGaps) {
       const status = ext.vh_status || '';
       if (status === 'Search complete' || status === 'No longer receiving names') continue;
-      if (!ext.church_info && ext.vh_id) {
+      if ((!ext.church_infos || ext.church_infos.length === 0) && ext.vh_id) {
         gaps.push({
           type: 'missing_church_match',
           source: 'extended',
@@ -1396,6 +1476,7 @@ function enrichPositions() {
 
 module.exports = {
   matchPositionToParish,
+  matchPositionToParishes,
   attachCompensation,
   attachClergyInfo,
   enrichPositions,

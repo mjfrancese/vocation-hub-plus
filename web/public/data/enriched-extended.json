@@ -11,35 +11,39 @@
     "receiving_names_from": "04/06/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "St Pauls Episcopal Church",
-      "street": "261 S 900 E",
-      "city": "Salt Lake City",
-      "state": "UT",
-      "zip": "84102-2308",
-      "phone": "1 (801) 3225869",
-      "email": "admin@stpauls-slc.org",
-      "website": "http://www.stpauls-slc.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "St Pauls Episcopal Church",
+        "street": "261 S 900 E",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "zip": "84102-2308",
+        "phone": "1 (801) 3225869",
+        "email": "admin@stpauls-slc.org",
+        "website": "http://www.stpauls-slc.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -65,35 +69,39 @@
     "receiving_names_from": "03/25/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Mary Annes Episcopal Church",
-      "street": "315 S Main St",
-      "city": "North East",
-      "state": "MD",
-      "zip": "21901-3915",
-      "phone": "1 (410) 2875522",
-      "email": "office@stmaryanne.org",
-      "website": "http://www.stmaryanne.org/",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Mary Annes Episcopal Church",
+        "street": "315 S Main St",
+        "city": "North East",
+        "state": "MD",
+        "zip": "21901-3915",
+        "phone": "1 (410) 2875522",
+        "email": "office@stmaryanne.org",
+        "website": "http://www.stmaryanne.org/",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "exact",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 82501,
     "comp_breakdown": {
       "stipend": 62501,
@@ -103,8 +111,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -358,34 +366,38 @@
     "receiving_names_from": "04/15/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Episcopal Church Of Saint Francis-In-The-Valley",
-      "street": "600 S La Canada Dr",
-      "city": "Green Valley",
-      "state": "AZ",
-      "zip": "85614-1902",
-      "phone": "1 (520) 6251370",
-      "email": "deborah@stfrancisgvaz.org",
-      "website": "http://stfrancis.azdiocese.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Episcopal Church Of Saint Francis-In-The-Valley",
+        "street": "600 S La Canada Dr",
+        "city": "Green Valley",
+        "state": "AZ",
+        "zip": "85614-1902",
+        "phone": "1 (520) 6251370",
+        "email": "deborah@stfrancisgvaz.org",
+        "website": "http://stfrancis.azdiocese.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 59850,
       "population": 23997
@@ -415,35 +427,39 @@
     "receiving_names_from": "03/23/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Lukes Episcopal Church",
-      "street": "5555 N Tropical Trl",
-      "city": "Merritt Island",
-      "state": "FL",
-      "zip": "32953-7202",
-      "phone": "1 (321) 4525260",
-      "email": "stlukesmi-treasurer@cfl.rr.com",
-      "website": "http://WWW.STLUKESMI.ORG",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Lukes Episcopal Church",
+        "street": "5555 N Tropical Trl",
+        "city": "Merritt Island",
+        "state": "FL",
+        "zip": "32953-7202",
+        "phone": "1 (321) 4525260",
+        "email": "stlukesmi-treasurer@cfl.rr.com",
+        "website": "http://WWW.STLUKESMI.ORG",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 162501,
     "comp_breakdown": {
       "stipend": 162501
@@ -497,35 +513,39 @@
     "receiving_names_from": "03/19/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Andrews Church",
-      "street": "1833 Regent St",
-      "city": "Madison",
-      "state": "WI",
-      "zip": "53726-4119",
-      "phone": "1 (608) 2333249",
-      "email": "general@standrews-madison.org",
-      "website": "http://www.standrews-madison.org/",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Andrews Church",
+        "street": "1833 Regent St",
+        "city": "Madison",
+        "state": "WI",
+        "zip": "53726-4119",
+        "phone": "1 (608) 2333249",
+        "email": "general@standrews-madison.org",
+        "website": "http://www.standrews-madison.org/",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -551,34 +571,38 @@
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Christophers Church",
-      "street": "93 N Kainalu Dr",
-      "city": "Kailua",
-      "state": "HI",
-      "zip": "96734-2331",
-      "phone": "1 (808) 2628176",
-      "email": "admin@stchristopherkailua.org",
-      "website": "http://www.stchristopherkailua.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Christophers Church",
+        "street": "93 N Kainalu Dr",
+        "city": "Kailua",
+        "state": "HI",
+        "zip": "96734-2331",
+        "phone": "1 (808) 2628176",
+        "email": "admin@stchristopherkailua.org",
+        "website": "http://www.stchristopherkailua.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -604,34 +628,38 @@
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint James Church",
-      "street": "100 Saint James Pl",
-      "city": "Eufaula",
-      "state": "AL",
-      "zip": "36027-1551",
-      "phone": "1 (334) 6873619",
-      "email": "stjames@eufaula.rr.com",
-      "website": "http://www.diocgc.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint James Church",
+        "street": "100 Saint James Pl",
+        "city": "Eufaula",
+        "state": "AL",
+        "zip": "36027-1551",
+        "phone": "1 (334) 6873619",
+        "email": "stjames@eufaula.rr.com",
+        "website": "http://www.diocgc.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -730,35 +758,39 @@
     "receiving_names_from": "03/18/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Trinity Church",
-      "street": "1329 Jackson Ave",
-      "city": "New Orleans",
-      "state": "LA",
-      "zip": "70130-5131",
-      "phone": "1 (504) 5220276",
-      "email": "hhudson@trinitynola.com",
-      "website": "http://www.trinitynola.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Trinity Church",
+        "street": "1329 Jackson Ave",
+        "city": "New Orleans",
+        "state": "LA",
+        "zip": "70130-5131",
+        "phone": "1 (504) 5220276",
+        "email": "hhudson@trinitynola.com",
+        "website": "http://www.trinitynola.com",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "exact",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -871,34 +903,38 @@
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Thomas Church",
-      "street": "9 W Wheelock St",
-      "city": "Hanover",
-      "state": "NH",
-      "zip": "03755-1710",
-      "phone": "1 (603) 6434155",
-      "email": "saint.thomas.hanover@gmail.com",
-      "website": "http://www.saintthomashanover.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Thomas Church",
+        "street": "9 W Wheelock St",
+        "city": "Hanover",
+        "state": "NH",
+        "zip": "03755-1710",
+        "phone": "1 (603) 6434155",
+        "email": "saint.thomas.hanover@gmail.com",
+        "website": "http://www.saintthomashanover.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -924,34 +960,38 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Christ United Church",
-      "street": "1000 W Webb Rd",
-      "city": "Dewitt",
-      "state": "MI",
-      "zip": "48820-8396",
-      "phone": "1 (517) 6699308",
-      "email": "terrylwilliamson@mac.com",
-      "website": "http://www.christuniteddewitt.com/",
-      "type": "Mission",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Christ United Church",
+        "street": "1000 W Webb Rd",
+        "city": "Dewitt",
+        "state": "MI",
+        "zip": "48820-8396",
+        "phone": "1 (517) 6699308",
+        "email": "terrylwilliamson@mac.com",
+        "website": "http://www.christuniteddewitt.com/",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "high",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 99570,
       "population": 18046
@@ -981,34 +1021,38 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Christ United Church",
-      "street": "1000 W Webb Rd",
-      "city": "Dewitt",
-      "state": "MI",
-      "zip": "48820-8396",
-      "phone": "1 (517) 6699308",
-      "email": "terrylwilliamson@mac.com",
-      "website": "http://www.christuniteddewitt.com/",
-      "type": "Mission",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Christ United Church",
+        "street": "1000 W Webb Rd",
+        "city": "Dewitt",
+        "state": "MI",
+        "zip": "48820-8396",
+        "phone": "1 (517) 6699308",
+        "email": "terrylwilliamson@mac.com",
+        "website": "http://www.christuniteddewitt.com/",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "high",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 99570,
       "population": 18046
@@ -1038,35 +1082,39 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "The Parish Of Saint Mary And Saint Jude",
-      "street": "PO Box 105",
-      "city": "Northeast Harbor",
-      "state": "ME",
-      "zip": "04662-0105",
-      "phone": "1 (207) 276-5588",
-      "email": "ssmaryjude@roadrunner.com",
-      "website": "http://www.maryjude.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "The Parish Of Saint Mary And Saint Jude",
+        "street": "PO Box 105",
+        "city": "Northeast Harbor",
+        "state": "ME",
+        "zip": "04662-0105",
+        "phone": "1 (207) 276-5588",
+        "email": "ssmaryjude@roadrunner.com",
+        "website": "http://www.maryjude.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "exact",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 132501,
     "comp_breakdown": {
       "stipend": 112501,
@@ -1087,8 +1135,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Trinity Episcopal Church",
-        "city": "Marshall",
+        "name": "Saint James Episcopal Church",
+        "city": "Cheboygan",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1148,35 +1196,39 @@
     "receiving_names_from": "03/06/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Matthews Episcopal Church",
-      "street": "36 New Canaan Rd",
-      "city": "Wilton",
-      "state": "CT",
-      "zip": "06897-3310",
-      "phone": "1 (203) 7627400",
-      "email": "office@stmatthewswilton.org",
-      "website": "http://www.stmatthewswilton.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Matthews Episcopal Church",
+        "street": "36 New Canaan Rd",
+        "city": "Wilton",
+        "state": "CT",
+        "zip": "06897-3310",
+        "phone": "1 (203) 7627400",
+        "email": "office@stmatthewswilton.org",
+        "website": "http://www.stmatthewswilton.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 182501,
     "comp_breakdown": {
       "stipend": 162501,
@@ -1219,8 +1271,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Trinity Episcopal Church",
-        "city": "Marshall",
+        "name": "Saint James Episcopal Church",
+        "city": "Cheboygan",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1264,34 +1316,65 @@
     "receiving_names_from": "04/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Trinity Church",
-      "street": "93 Jeffers Rd",
-      "city": "Ennis",
-      "state": "MT",
-      "zip": "59729-9026",
-      "phone": "1 (406) 600-1128",
-      "email": "trinity@3rivers.net",
-      "website": "http://www.trinityepiscopalmt.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Pauls Church",
+        "street": "102 E Idaho St",
+        "city": "Virginia City",
+        "state": "MT",
+        "zip": "59755-7757",
+        "phone": "1 (406) 600-1128",
+        "email": "episcopalchurch.stpauls@gmail.com",
+        "website": "http://stpaulsvcmt.org/",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Trinity Church",
+        "street": "93 Jeffers Rd",
+        "city": "Ennis",
+        "state": "MT",
+        "zip": "59729-9026",
+        "phone": "1 (406) 600-1128",
+        "email": "trinity@3rivers.net",
+        "website": "http://www.trinityepiscopalmt.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "high",
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -1378,34 +1461,38 @@
     "receiving_names_from": "03/23/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Boniface Church",
-      "street": "116 US 87",
-      "city": "Comfort",
-      "state": "TX",
-      "zip": "78013",
-      "phone": "1 (830) 995-3897",
-      "email": "boniface@hctc.net",
-      "website": "http://www.stboniface-comfort.org",
-      "type": "Chapel",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Boniface Church",
+        "street": "116 US 87",
+        "city": "Comfort",
+        "state": "TX",
+        "zip": "78013",
+        "phone": "1 (830) 995-3897",
+        "email": "boniface@hctc.net",
+        "website": "http://www.stboniface-comfort.org",
+        "type": "Chapel",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -1431,35 +1518,39 @@
     "receiving_names_from": "04/21/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Johns Church",
-      "street": "323 Wick Ave",
-      "city": "Youngstown",
-      "state": "OH",
-      "zip": "44503-1003",
-      "phone": "1 (330) 7433175",
-      "email": "stjohnohio@gmail.com",
-      "website": "http://www.stjohnohio.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Johns Church",
+        "street": "323 Wick Ave",
+        "city": "Youngstown",
+        "state": "OH",
+        "zip": "44503-1003",
+        "phone": "1 (330) 7433175",
+        "email": "stjohnohio@gmail.com",
+        "website": "http://www.stjohnohio.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "exact",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -1501,8 +1592,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1551,34 +1642,38 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Calvary Church",
-      "street": "821 S 4th St",
-      "city": "Louisville",
-      "state": "KY",
-      "zip": "40203-2115",
-      "phone": "1 (502) 587-6011",
-      "email": "bookkeeper@calvaryepiscopal.org",
-      "website": "http://www.calvaryepiscopal.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Calvary Church",
+        "street": "821 S 4th St",
+        "city": "Louisville",
+        "state": "KY",
+        "zip": "40203-2115",
+        "phone": "1 (502) 587-6011",
+        "email": "bookkeeper@calvaryepiscopal.org",
+        "website": "http://www.calvaryepiscopal.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 30739,
       "population": 17964
@@ -1608,34 +1703,38 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Christ The King Episcopal Church",
-      "street": "480 N County Highway 393",
-      "city": "Santa Rosa Beach",
-      "state": "FL",
-      "zip": "32459-5362",
-      "phone": "1 (850) 2673332",
-      "email": "office@christthekingfl.org",
-      "website": "http://www.christthekingepiscopal.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Christ The King Episcopal Church",
+        "street": "480 N County Highway 393",
+        "city": "Santa Rosa Beach",
+        "state": "FL",
+        "zip": "32459-5362",
+        "phone": "1 (850) 2673332",
+        "email": "office@christthekingfl.org",
+        "website": "http://www.christthekingepiscopal.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 99081,
       "population": 20558
@@ -1665,35 +1764,39 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Michaels Church",
-      "street": "1666 77th Ave",
-      "city": "Baton Rouge",
-      "state": "LA",
-      "zip": "70807",
-      "phone": "1 (225) 3578852",
-      "email": "smecbr@bellsouth.net",
-      "website": "http://www.stmichaelbr.org",
-      "type": "Mission",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Michaels Church",
+        "street": "1666 77th Ave",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "zip": "70807",
+        "phone": "1 (225) 3578852",
+        "email": "smecbr@bellsouth.net",
+        "website": "http://www.stmichaelbr.org",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -1746,8 +1849,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -1780,35 +1883,39 @@
     "receiving_names_from": "04/07/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Christ Episcopal Church",
-      "street": "902 Philadelphia St",
-      "city": "Indiana",
-      "state": "PA",
-      "zip": "15701-3912",
-      "phone": "1 (724) 4656129",
-      "email": "ccrector902@comcast.net",
-      "website": "http://www.christchurchindiana.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Christ Episcopal Church",
+        "street": "902 Philadelphia St",
+        "city": "Indiana",
+        "state": "PA",
+        "zip": "15701-3912",
+        "phone": "1 (724) 4656129",
+        "email": "ccrector902@comcast.net",
+        "website": "http://www.christchurchindiana.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
@@ -1899,35 +2006,39 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Johns Cathedral",
-      "street": "1350 N Washington St",
-      "city": "Denver",
-      "state": "CO",
-      "zip": "80203-2008",
-      "phone": "1 (303) 8317115",
-      "email": "accounting@sjcathedral.org",
-      "website": "http://www.sjcathedral.org",
-      "type": "Cathedral",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Johns Cathedral",
+        "street": "1350 N Washington St",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "80203-2008",
+        "phone": "1 (303) 8317115",
+        "email": "accounting@sjcathedral.org",
+        "website": "http://www.sjcathedral.org",
+        "type": "Cathedral",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 187501,
     "comp_breakdown": {
       "stipend": 187501
@@ -1981,35 +2092,39 @@
     "receiving_names_from": "04/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Thomas Church",
-      "street": "2 Saint Thomas Ave",
-      "city": "Savannah",
-      "state": "GA",
-      "zip": "31406-7533",
-      "phone": "1 (912) 3553110",
-      "email": "evangelone@aol.com",
-      "website": "http://www.stthomasioh.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Thomas Church",
+        "street": "2 Saint Thomas Ave",
+        "city": "Savannah",
+        "state": "GA",
+        "zip": "31406-7533",
+        "phone": "1 (912) 3553110",
+        "email": "evangelone@aol.com",
+        "website": "http://www.stthomasioh.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -2062,8 +2177,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2096,34 +2211,65 @@
     "receiving_names_from": "02/24/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Johns Church",
-      "street": "8 Story Rd",
-      "city": "Emigrant",
-      "state": "MT",
-      "zip": "59027",
-      "phone": "1 (406) 222-0222",
-      "email": "dgmontana@gmail.com",
-      "website": "http://",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Andrews Church",
+        "street": "310 W Lewis St",
+        "city": "Livingston",
+        "state": "MT",
+        "zip": "59047-3015",
+        "phone": "1 (406) 222-0222",
+        "email": "admin@saintandrewsepiscopalchurch.org",
+        "website": "http://",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Saint Johns Church",
+        "street": "8 Story Rd",
+        "city": "Emigrant",
+        "state": "MT",
+        "zip": "59027",
+        "phone": "1 (406) 222-0222",
+        "email": "dgmontana@gmail.com",
+        "website": "http://",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "high",
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 55,
     "quality_components": [
       "Recent date (15)",
@@ -2148,34 +2294,38 @@
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Grace Church",
-      "street": "4 E Main St",
-      "city": "New Market",
-      "state": "MD",
-      "zip": "21774-6281",
-      "phone": "1 (301) 8653270",
-      "email": "gracechurchoffice@comcast.net",
-      "website": "http://www.gracenewmarket.ang-md.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Grace Church",
+        "street": "4 E Main St",
+        "city": "New Market",
+        "state": "MD",
+        "zip": "21774-6281",
+        "phone": "1 (301) 8653270",
+        "email": "gracechurchoffice@comcast.net",
+        "website": "http://www.gracenewmarket.ang-md.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -2201,35 +2351,39 @@
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Andrews Church",
-      "street": "7859 Tick Neck Rd",
-      "city": "Pasadena",
-      "state": "MD",
-      "zip": "21122-2264",
-      "phone": "1 (410) 2551070",
-      "email": "secretarystandrewspasadena@verizon.net",
-      "website": "http://www.standrewspasadena.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Andrews Church",
+        "street": "7859 Tick Neck Rd",
+        "city": "Pasadena",
+        "state": "MD",
+        "zip": "21122-2264",
+        "phone": "1 (410) 2551070",
+        "email": "secretarystandrewspasadena@verizon.net",
+        "website": "http://www.standrewspasadena.com",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -2255,34 +2409,38 @@
     "receiving_names_from": "02/23/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint George Church",
-      "street": "2434 Cape Horn Rd",
-      "city": "Hampstead",
-      "state": "MD",
-      "zip": "21074-1123",
-      "phone": "1 (410) 3749748",
-      "email": "stgeorgesepiscopal@comcast.net",
-      "website": "http://saintgs.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint George Church",
+        "street": "2434 Cape Horn Rd",
+        "city": "Hampstead",
+        "state": "MD",
+        "zip": "21074-1123",
+        "phone": "1 (410) 3749748",
+        "email": "stgeorgesepiscopal@comcast.net",
+        "website": "http://saintgs.com",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -2308,35 +2466,39 @@
     "receiving_names_from": "02/19/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Matthew Church",
-      "street": "4401 Statesville Blvd",
-      "city": "Salisbury",
-      "state": "NC",
-      "zip": "28147-7463",
-      "phone": "1 (704) 636-0821",
-      "email": "lashonharris1978@gmail.com",
-      "website": "http://www.stmatthewsinsalisbury.org/",
-      "type": "Mission",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Matthew Church",
+        "street": "4401 Statesville Blvd",
+        "city": "Salisbury",
+        "state": "NC",
+        "zip": "28147-7463",
+        "phone": "1 (704) 636-0821",
+        "email": "lashonharris1978@gmail.com",
+        "website": "http://www.stmatthewsinsalisbury.org/",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 107501,
     "comp_breakdown": {
       "stipend": 87501,
@@ -2346,8 +2508,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Trinity Episcopal Church",
-        "city": "Marshall",
+        "name": "Saint James Episcopal Church",
+        "city": "Cheboygan",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2368,8 +2530,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2424,34 +2586,38 @@
     "receiving_names_from": "02/18/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Pauls Church",
-      "street": "209 W Main St",
-      "city": "Sharpsburg",
-      "state": "MD",
-      "zip": "21782-1743",
-      "phone": "1 (301) 4327098",
-      "email": "stpaulssharpsburg@gmail.com",
-      "website": "http://www.stpaulssharpsburg.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Pauls Church",
+        "street": "209 W Main St",
+        "city": "Sharpsburg",
+        "state": "MD",
+        "zip": "21782-1743",
+        "phone": "1 (301) 4327098",
+        "email": "stpaulssharpsburg@gmail.com",
+        "website": "http://www.stpaulssharpsburg.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -2505,34 +2671,92 @@
     "receiving_names_from": "02/17/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Pauls Church",
-      "street": "170 Main St",
-      "city": "Fort Fairfield",
-      "state": "ME",
-      "zip": "04742-1220",
-      "phone": "1 (207) 492-4211",
-      "email": "aroostookepiscopalcluster@hotmail.com",
-      "website": "http://www.aroostookcluster.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Church Of The Good Shepherd",
+        "street": "116 Main St",
+        "city": "Houlton",
+        "state": "ME",
+        "zip": "04730-2113",
+        "phone": "1 (207) 532-2927",
+        "email": "goodshepherdhoulton@gmail.com",
+        "website": "http://goodshepherdhoulton.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Saint Johns Church",
+        "street": "52 2nd St",
+        "city": "Presque Isle",
+        "state": "ME",
+        "zip": "04769-2636",
+        "phone": "1 (207) 764-4298",
+        "email": "aroostookepiscopalcluster@hotmail.com",
+        "website": "http://aroostookcluster.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Saint Pauls Church",
+        "street": "170 Main St",
+        "city": "Fort Fairfield",
+        "state": "ME",
+        "zip": "04742-1220",
+        "phone": "1 (207) 492-4211",
+        "email": "aroostookepiscopalcluster@hotmail.com",
+        "website": "http://www.aroostookcluster.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "high",
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -2558,34 +2782,38 @@
     "receiving_names_from": "04/06/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Marks Chapel",
-      "street": "Rowland Hall St Marks School, 970 E 800 S",
-      "city": "Salt Lake City",
-      "state": "UT",
-      "zip": "84102-3659",
-      "phone": "1 (801) 355-7494",
-      "email": "tracebrowning@rowlandhall.org",
-      "website": "http://www.rowlandhall.org",
-      "type": "Chapel",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Marks Chapel",
+        "street": "Rowland Hall St Marks School, 970 E 800 S",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "zip": "84102-3659",
+        "phone": "1 (801) 355-7494",
+        "email": "tracebrowning@rowlandhall.org",
+        "website": "http://www.rowlandhall.org",
+        "type": "Chapel",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -2694,35 +2922,39 @@
     "receiving_names_from": "02/16/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Trinity Church",
-      "street": "317 Franklin St",
-      "city": "Clarksville",
-      "state": "TN",
-      "zip": "37040-3421",
-      "phone": "1 (931) 6452458",
-      "email": "bethany@trinityparish.com",
-      "website": "http://www.trinityparish.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Trinity Church",
+        "street": "317 Franklin St",
+        "city": "Clarksville",
+        "state": "TN",
+        "zip": "37040-3421",
+        "phone": "1 (931) 6452458",
+        "email": "bethany@trinityparish.com",
+        "website": "http://www.trinityparish.com",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -2847,35 +3079,39 @@
     "receiving_names_from": "02/26/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Christ Episcopal Church",
-      "street": "180 S Main St",
-      "city": "Sheffield",
-      "state": "MA",
-      "zip": "01257-9670",
-      "phone": "1 (413) 229-8811",
-      "email": "xchurch1@verizon.net",
-      "website": "http://www.christtrinitysheffield.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Christ Episcopal Church",
+        "street": "180 S Main St",
+        "city": "Sheffield",
+        "state": "MA",
+        "zip": "01257-9670",
+        "phone": "1 (413) 229-8811",
+        "email": "xchurch1@verizon.net",
+        "website": "http://www.christtrinitysheffield.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -2928,8 +3164,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -2983,34 +3219,38 @@
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Pauls Church",
-      "street": "1006 3rd St",
-      "city": "Muskegon",
-      "state": "MI",
-      "zip": "49440-1206",
-      "phone": "1 (231) 7222112",
-      "email": "office@stpaulsmuskegon.org",
-      "website": "http://www.stpaulsmuskegon.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Pauls Church",
+        "street": "1006 3rd St",
+        "city": "Muskegon",
+        "state": "MI",
+        "zip": "49440-1206",
+        "phone": "1 (231) 7222112",
+        "email": "office@stpaulsmuskegon.org",
+        "website": "http://www.stpaulsmuskegon.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -3036,35 +3276,66 @@
     "receiving_names_from": "02/25/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Trinity Episcopal Church",
-      "street": "101 E Mansion St",
-      "city": "Marshall",
-      "state": "MI",
-      "zip": "49068-1117",
-      "phone": "1 (269) 7817881",
-      "email": "trinityepisbookkeeper@gmail.com",
-      "website": "http://www.trinityofmarshall.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint James Episcopal Church",
+        "street": "202 S Huron St",
+        "city": "Cheboygan",
+        "state": "MI",
+        "zip": "49721-1920",
+        "phone": "1 (989) 7526020",
+        "email": "mollyg@eastmich.org",
+        "website": "http://stjamescheboygan.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Trinity Episcopal Church",
+        "street": "101 E Mansion St",
+        "city": "Marshall",
+        "state": "MI",
+        "zip": "49068-1117",
+        "phone": "1 (269) 7817881",
+        "email": "trinityepisbookkeeper@gmail.com",
+        "website": "http://www.trinityofmarshall.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "low",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 107501,
     "comp_breakdown": {
       "stipend": 87501,
@@ -3096,8 +3367,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -3152,34 +3423,65 @@
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Peters By-The-Lake Church",
-      "street": "8435 Old Channel Trl",
-      "city": "Montague",
-      "state": "MI",
-      "zip": "49437-1360",
-      "phone": "1 (231) 8932425",
-      "email": "stpetersmontague@gmail.com",
-      "website": "http://www.stpetersbythelake.weebly.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Pauls Church",
+        "street": "1006 3rd St",
+        "city": "Muskegon",
+        "state": "MI",
+        "zip": "49440-1206",
+        "phone": "1 (231) 7222112",
+        "email": "office@stpaulsmuskegon.org",
+        "website": "http://www.stpaulsmuskegon.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Saint Peters Chapel",
+        "street": "203 Cedar St",
+        "city": "Leland",
+        "state": "MI",
+        "zip": "49654-5015",
+        "phone": "1 (231) 2713081",
+        "email": "grace341@juno.com",
+        "website": "http://",
+        "type": "Summer Chapel",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "high",
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -3226,35 +3528,39 @@
     "receiving_names_from": "04/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Holy Trinity Episcopal Church",
-      "street": "5101 Tanner Dr",
-      "city": "Gillette",
-      "state": "WY",
-      "zip": "82718-7849",
-      "phone": "1 (307) 6824296",
-      "email": "holytrinitygillette@gmail.com",
-      "website": "http://www.holytrinitygillettewy.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Holy Trinity Episcopal Church",
+        "street": "5101 Tanner Dr",
+        "city": "Gillette",
+        "state": "WY",
+        "zip": "82718-7849",
+        "phone": "1 (307) 6824296",
+        "email": "holytrinitygillette@gmail.com",
+        "website": "http://www.holytrinitygillettewy.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -3307,8 +3613,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -3423,35 +3729,39 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Mount Zion Episcopal Church",
-      "street": "PO Box 2246, 1 Zion Street",
-      "city": "Hedgesville",
-      "state": "WV",
-      "zip": "25427",
-      "phone": "1 (304) 702-7111",
-      "email": "frbshoda@gmail.com",
-      "website": "http://www.mtzionhedgesville.org",
-      "type": "Mission",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Mount Zion Episcopal Church",
+        "street": "PO Box 2246, 1 Zion Street",
+        "city": "Hedgesville",
+        "state": "WV",
+        "zip": "25427",
+        "phone": "1 (304) 702-7111",
+        "email": "frbshoda@gmail.com",
+        "website": "http://www.mtzionhedgesville.org",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 62501,
     "comp_breakdown": {
       "stipend": 62501
@@ -3631,34 +3941,38 @@
     "receiving_names_from": "01/20/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Marks Church",
-      "street": "6595 E Quaker St",
-      "city": "Orchard Park",
-      "state": "NY",
-      "zip": "14127-2501",
-      "phone": "1 (716) 662-4418",
-      "email": "rector@stmarksop.org",
-      "website": "http://www.stmarksop.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Marks Church",
+        "street": "6595 E Quaker St",
+        "city": "Orchard Park",
+        "state": "NY",
+        "zip": "14127-2501",
+        "phone": "1 (716) 662-4418",
+        "email": "rector@stmarksop.org",
+        "website": "http://www.stmarksop.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "exact",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 100953,
       "population": 30652
@@ -4193,34 +4507,38 @@
     "receiving_names_from": "03/10/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Trinity Episcopal Church",
-      "street": "11 Day St",
-      "city": "Fredonia",
-      "state": "NY",
-      "zip": "14063-1813",
-      "phone": "1 (716) 679-7901",
-      "email": "trinfred@netsync.net",
-      "website": "http://www.trinityfredonia.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Trinity Episcopal Church",
+        "street": "11 Day St",
+        "city": "Fredonia",
+        "state": "NY",
+        "zip": "14063-1813",
+        "phone": "1 (716) 679-7901",
+        "email": "trinfred@netsync.net",
+        "website": "http://www.trinityfredonia.com",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 70,
     "quality_components": [
       "In-progress status (15)",
@@ -4246,35 +4564,39 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Marys Cathedral",
-      "street": "692 Poplar Ave",
-      "city": "Memphis",
-      "state": "TN",
-      "zip": "38105-4512",
-      "phone": "1 (901) 5273361",
-      "email": "treasurer@stmarysmemphis.org",
-      "website": "http://www.stmarysmemphis.org/",
-      "type": "Cathedral",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Marys Cathedral",
+        "street": "692 Poplar Ave",
+        "city": "Memphis",
+        "state": "TN",
+        "zip": "38105-4512",
+        "phone": "1 (901) 5273361",
+        "email": "treasurer@stmarysmemphis.org",
+        "website": "http://www.stmarysmemphis.org/",
+        "type": "Cathedral",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 62501,
     "comp_breakdown": {
       "stipend": 62501
@@ -4361,34 +4683,65 @@
     "receiving_names_from": "01/01/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Pauls Episcopal Church",
-      "street": "400 Ridge St",
-      "city": "Lewiston",
-      "state": "NY",
-      "zip": "14092-1206",
-      "phone": "1 (716) 7544591",
-      "email": "office@splewiston.org",
-      "website": "http://www.splewiston.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Andrews Church",
+        "street": "3107 Main St",
+        "city": "Buffalo",
+        "state": "NY",
+        "zip": "14214-1305",
+        "phone": "1 (716) 834-9337",
+        "email": "standrewsbuffalo@gmail.com",
+        "website": "http://standrewsbuffalo.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Saint Pauls Episcopal Church",
+        "street": "400 Ridge St",
+        "city": "Lewiston",
+        "state": "NY",
+        "zip": "14092-1206",
+        "phone": "1 (716) 7544591",
+        "email": "office@splewiston.org",
+        "website": "http://www.splewiston.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "low",
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -4447,34 +4800,38 @@
     "receiving_names_from": "01/01/2024",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Holy Innocents Church",
-      "street": "30 Rich Street",
-      "city": "Buffalo",
-      "state": "NY",
-      "zip": "14211-3092",
-      "phone": "1 (716) 896-6386",
-      "email": null,
-      "website": "http://",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Holy Innocents Church",
+        "street": "30 Rich Street",
+        "city": "Buffalo",
+        "state": "NY",
+        "zip": "14211-3092",
+        "phone": "1 (716) 896-6386",
+        "email": null,
+        "website": "http://",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -4497,34 +4854,38 @@
     "receiving_names_from": "01/01/2024",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Grace Church",
-      "street": "100 Genesee St",
-      "city": "Lockport",
-      "state": "NY",
-      "zip": "14094-4318",
-      "phone": "1 (716) 433-2878",
-      "email": "gracechurchlkpt@wny.twcbc.com",
-      "website": "http://www.gracelkpt.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Grace Church",
+        "street": "100 Genesee St",
+        "city": "Lockport",
+        "state": "NY",
+        "zip": "14094-4318",
+        "phone": "1 (716) 433-2878",
+        "email": "gracechurchlkpt@wny.twcbc.com",
+        "website": "http://www.gracelkpt.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -4547,34 +4908,38 @@
     "receiving_names_from": "03/10/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Pauls Cathedral",
-      "street": "139 Pearl St",
-      "city": "Buffalo",
-      "state": "NY",
-      "zip": "14202",
-      "phone": "1 (716) 8550900",
-      "email": "office@spcbuffalo.org",
-      "website": "http://www.spcbuffalo.org",
-      "type": "Cathedral",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Pauls Cathedral",
+        "street": "139 Pearl St",
+        "city": "Buffalo",
+        "state": "NY",
+        "zip": "14202",
+        "phone": "1 (716) 8550900",
+        "email": "office@spcbuffalo.org",
+        "website": "http://www.spcbuffalo.org",
+        "type": "Cathedral",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 58669,
       "population": 3664
@@ -4601,34 +4966,38 @@
     "receiving_names_from": "06/30/2020",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Martin In The Fields",
-      "street": "2587 Baseline Rd",
-      "city": "Grand Island",
-      "state": "NY",
-      "zip": "14072-1656",
-      "phone": "1 (716) 7733335",
-      "email": "office@stmartinsgi.org",
-      "website": "http://www.stmartinsgi.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Martin In The Fields",
+        "street": "2587 Baseline Rd",
+        "city": "Grand Island",
+        "state": "NY",
+        "zip": "14072-1656",
+        "phone": "1 (716) 7733335",
+        "email": "office@stmartinsgi.org",
+        "website": "http://www.stmartinsgi.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -4867,35 +5236,39 @@
     "receiving_names_from": "03/03/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Peters Episcopal Church",
-      "street": "3825 E Henrietta Rd",
-      "city": "Henrietta",
-      "state": "NY",
-      "zip": "14467-9147",
-      "phone": "1 (585) 3341110",
-      "email": "office@henriettachurch.org",
-      "website": "http://www.stpetershenrietta.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Peters Episcopal Church",
+        "street": "3825 E Henrietta Rd",
+        "city": "Henrietta",
+        "state": "NY",
+        "zip": "14467-9147",
+        "phone": "1 (585) 3341110",
+        "email": "office@henriettachurch.org",
+        "website": "http://www.stpetershenrietta.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 112501,
     "comp_breakdown": {
       "stipend": 112501
@@ -4915,8 +5288,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Trinity Episcopal Church",
-        "city": "Marshall",
+        "name": "Saint James Episcopal Church",
+        "city": "Cheboygan",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -5000,35 +5373,39 @@
     "receiving_names_from": "03/08/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Church of the Resurrection",
-      "street": "1209 West Main Street",
-      "city": "Millville",
-      "state": "NJ",
-      "zip": "08332",
-      "phone": "1 (609) 3199234",
-      "email": "churchoftheresurrection@mail.com",
-      "website": "http://cumberlandnjepiscopal.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Church of the Resurrection",
+        "street": "1209 West Main Street",
+        "city": "Millville",
+        "state": "NJ",
+        "zip": "08332",
+        "phone": "1 (609) 3199234",
+        "email": "churchoftheresurrection@mail.com",
+        "website": "http://cumberlandnjepiscopal.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "exact",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 64973,
       "population": 35292
@@ -5097,34 +5474,38 @@
     "receiving_names_from": "01/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Christ Church",
-      "street": "5 Main St",
-      "city": "Bethel",
-      "state": "VT",
-      "zip": "05032-9002",
-      "phone": "1 (802) 234-5680",
-      "email": "christchurchbethel@gmail.com",
-      "website": "http://christchurchbethel.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Christ Church",
+        "street": "5 Main St",
+        "city": "Bethel",
+        "state": "VT",
+        "zip": "05032-9002",
+        "phone": "1 (802) 234-5680",
+        "email": "christchurchbethel@gmail.com",
+        "website": "http://christchurchbethel.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 65,
     "quality_components": [
       "In-progress status (15)",
@@ -5711,35 +6092,39 @@
     "receiving_names_from": "12/01/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Marks Church",
-      "street": "3395 Burns Rd",
-      "city": "Palm Beach Gardens",
-      "state": "FL",
-      "zip": "33410-4322",
-      "phone": "1 (561) 6220956",
-      "email": "churchoffice@stmarkspbg.org",
-      "website": "http://www.stmarkspbg.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Marks Church",
+        "street": "3395 Burns Rd",
+        "city": "Palm Beach Gardens",
+        "state": "FL",
+        "zip": "33410-4322",
+        "phone": "1 (561) 6220956",
+        "email": "churchoffice@stmarkspbg.org",
+        "website": "http://www.stmarkspbg.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Cash Stipend",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 200001,
     "comp_breakdown": {
       "stipend": 200001
@@ -6220,35 +6605,39 @@
     "receiving_names_from": "11/03/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Church Of The Good Shepherd",
-      "street": "809 Lee Jackson Hwy",
-      "city": "Staunton",
-      "state": "VA",
-      "zip": "24401-5510",
-      "phone": "1 (540) 377-9449",
-      "email": "goodsheperd@adelphia.net",
-      "website": "http://goodshepherd-staunton.com",
-      "type": "Mission",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Church Of The Good Shepherd",
+        "street": "809 Lee Jackson Hwy",
+        "city": "Staunton",
+        "state": "VA",
+        "zip": "24401-5510",
+        "phone": "1 (540) 377-9449",
+        "email": "goodsheperd@adelphia.net",
+        "website": "http://goodshepherd-staunton.com",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
@@ -8131,35 +8520,66 @@
     "receiving_names_from": "12/31/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Elizabeths Church",
-      "street": "11700 N 3900 E",
-      "city": "Whiterocks",
-      "state": "UT",
-      "zip": "84085",
-      "phone": "1 (435) 353-4279",
-      "email": "sedjed@ubtanet.com",
-      "website": "http://",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
-    "match_confidence": "medium",
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Church Of The Holy Spirit",
+        "street": "4250 South 10000 E",
+        "city": "Randlett",
+        "state": "UT",
+        "zip": "84063",
+        "phone": "1 (435) 545-2400",
+        "email": "hsec@ubtanet.com",
+        "website": "http://",
+        "type": "Mission",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "nid": null,
+        "name": "Saint Elizabeths Church",
+        "street": "11700 N 3900 E",
+        "city": "Whiterocks",
+        "state": "UT",
+        "zip": "84085",
+        "phone": "1 (435) 353-4279",
+        "email": "sedjed@ubtanet.com",
+        "website": "http://",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
+    "match_confidence": "high",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 75,
     "quality_components": [
       "Active status (25)",
@@ -12936,20 +13356,22 @@
     "receiving_names_from": "06/14/2021",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Johns Episcopal Church",
-      "street": "85 E 100 N",
-      "city": "Logan",
-      "state": "UT",
-      "zip": "84321-4624",
-      "phone": "1 (435) 7520331",
-      "email": "stjohnsreceptionist@gmail.com",
-      "website": "http://stjohnslogan.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Johns Episcopal Church",
+        "street": "85 E 100 N",
+        "city": "Logan",
+        "state": "UT",
+        "zip": "84321-4624",
+        "phone": "1 (435) 7520331",
+        "email": "stjohnsreceptionist@gmail.com",
+        "website": "http://stjohnslogan.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "high",
     "clergy": {
       "current_clergy": {
@@ -12963,19 +13385,21 @@
         "avg_tenure_years": 5
       }
     },
-    "parish_context": {
-      "clergy_count_10yr": 1,
-      "avg_tenure_years": 5,
-      "current_clergy_count": 1,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 5,
+        "current_clergy_count": 1,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -13142,34 +13566,38 @@
     "receiving_names_from": "01/01/0001",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Lukes Church",
-      "street": "119 N 33rd St",
-      "city": "Billings",
-      "state": "MT",
-      "zip": "59101-2018",
-      "phone": "1 (406) 252-7186",
-      "email": "rector@stlukesbillings.org",
-      "website": "http://www.stlukesbillings.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Lukes Church",
+        "street": "119 N 33rd St",
+        "city": "Billings",
+        "state": "MT",
+        "zip": "59101-2018",
+        "phone": "1 (406) 252-7186",
+        "email": "rector@stlukesbillings.org",
+        "website": "http://www.stlukesbillings.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -13178,8 +13606,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -13397,34 +13825,38 @@
     "receiving_names_from": "01/01/0001",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Marys Church",
-      "street": "16th Clay Sts",
-      "city": "West Columbia",
-      "state": "TX",
-      "zip": "77486",
-      "phone": "1 (979) 345-3456",
-      "email": "stmaryswc@centurylink.net",
-      "website": "http://stmaryswestcolumbia.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Marys Church",
+        "street": "16th Clay Sts",
+        "city": "West Columbia",
+        "state": "TX",
+        "zip": "77486",
+        "phone": "1 (979) 345-3456",
+        "email": "stmaryswc@centurylink.net",
+        "website": "http://stmaryswestcolumbia.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 35,
     "quality_components": [
       "Congregation identified (10)",
@@ -15502,34 +15934,38 @@
     "receiving_names_from": "02/28/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint James Church",
-      "street": "1335 Oak St",
-      "city": "Paso Robles",
-      "state": "CA",
-      "zip": "93446-2240",
-      "phone": "1 (805) 2380819",
-      "email": "office@stjamespasorobles.org",
-      "website": "http://www.stjamespasorobles.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint James Church",
+        "street": "1335 Oak St",
+        "city": "Paso Robles",
+        "state": "CA",
+        "zip": "93446-2240",
+        "phone": "1 (805) 2380819",
+        "email": "office@stjamespasorobles.org",
+        "website": "http://www.stjamespasorobles.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -15549,8 +15985,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -15658,35 +16094,39 @@
     "receiving_names_from": "03/31/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Anns Church",
-      "street": "1 Ocean Ave",
-      "city": "Kennebunkport",
-      "state": "ME",
-      "zip": "04046",
-      "phone": "1 (207) 967-8043",
-      "email": null,
-      "website": "http://www.episcopalmaine.org",
-      "type": "Summer Chapel",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Anns Church",
+        "street": "1 Ocean Ave",
+        "city": "Kennebunkport",
+        "state": "ME",
+        "zip": "04046",
+        "phone": "1 (207) 967-8043",
+        "email": null,
+        "website": "http://www.episcopalmaine.org",
+        "type": "Summer Chapel",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -16028,35 +16468,39 @@
     "receiving_names_from": "08/06/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Pauls Church",
-      "street": "6249 Canal Blvd",
-      "city": "New Orleans",
-      "state": "LA",
-      "zip": "70124-3047",
-      "phone": "1 (504) 488-3749",
-      "email": "spchurch@stpauls-lakeview.org",
-      "website": "http://www.stpaulsnola.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Pauls Church",
+        "street": "6249 Canal Blvd",
+        "city": "New Orleans",
+        "state": "LA",
+        "zip": "70124-3047",
+        "phone": "1 (504) 488-3749",
+        "email": "spchurch@stpauls-lakeview.org",
+        "website": "http://www.stpaulsnola.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 50,
     "quality_components": [
       "Recent date (15)",
@@ -16945,34 +17389,38 @@
     "receiving_names_from": "03/02/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Trinity Episcopal Church",
-      "street": "3552 Morning Glory Ave",
-      "city": "Baton Rouge",
-      "state": "LA",
-      "zip": "70808-2865",
-      "phone": "1 (225) 3870396",
-      "email": "janie@trinitybr.org",
-      "website": "http://www.trinitybr.org",
-      "type": "Historical Church",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Trinity Episcopal Church",
+        "street": "3552 Morning Glory Ave",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "zip": "70808-2865",
+        "phone": "1 (225) 3870396",
+        "email": "janie@trinitybr.org",
+        "website": "http://www.trinitybr.org",
+        "type": "Historical Church",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -19392,34 +19840,38 @@
     "receiving_names_from": "03/01/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "All Saints Church",
-      "street": "1559 Central Ave",
-      "city": "Indianapolis",
-      "state": "IN",
-      "zip": "46202-2606",
-      "phone": "1 (317) 635-2538",
-      "email": "rector@allsaintsindy.org",
-      "website": "http://www.allsaintsindy.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "All Saints Church",
+        "street": "1559 Central Ave",
+        "city": "Indianapolis",
+        "state": "IN",
+        "zip": "46202-2606",
+        "phone": "1 (317) 635-2538",
+        "email": "rector@allsaintsindy.org",
+        "website": "http://www.allsaintsindy.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -19844,35 +20296,39 @@
     "receiving_names_from": "02/13/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint James Church",
-      "street": "37051 Cabrillo Dr",
-      "city": "Fremont",
-      "state": "CA",
-      "zip": "94536-5721",
-      "phone": "1 (510) 7971492",
-      "email": "admin@saintj.com",
-      "website": "http://www.saintj.com",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint James Church",
+        "street": "37051 Cabrillo Dr",
+        "city": "Fremont",
+        "state": "CA",
+        "zip": "94536-5721",
+        "phone": "1 (510) 7971492",
+        "email": "admin@saintj.com",
+        "website": "http://www.saintj.com",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "Rectory",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 107501,
     "comp_breakdown": {
       "stipend": 87501,
@@ -19904,8 +20360,8 @@
       {
         "id": "10577",
         "vh_id": 10577,
-        "name": "Trinity Episcopal Church",
-        "city": "Marshall",
+        "name": "Saint James Episcopal Church",
+        "city": "Cheboygan",
         "state": "MI",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -19915,8 +20371,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
@@ -21534,35 +21990,39 @@
     "receiving_names_from": "12/01/2025",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Church Of The Mediator",
-      "street": "PO Box 716",
-      "city": "Washington",
-      "state": "GA",
-      "zip": "30673",
-      "phone": "1 (706) 678-7226",
-      "email": "mediator@nu-z.net",
-      "website": "http://mediator.episcopalatlanta.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Church Of The Mediator",
+        "street": "PO Box 716",
+        "city": "Washington",
+        "state": "GA",
+        "zip": "30673",
+        "phone": "1 (706) 678-7226",
+        "email": "mediator@nu-z.net",
+        "website": "http://mediator.episcopalatlanta.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 25000,
     "comp_breakdown": {
       "stipend": 25000
@@ -21652,34 +22112,38 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Church Of Our Saviour",
-      "street": "5147 Show Low Lake Rd",
-      "city": "Lakeside",
-      "state": "AZ",
-      "zip": "85929-5218",
-      "phone": "1 (928) 5377830",
-      "email": "churchofourrsaviour.office@gmail.com",
-      "website": "http://www.thechurchofoursaviour.org/",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Church Of Our Saviour",
+        "street": "5147 Show Low Lake Rd",
+        "city": "Lakeside",
+        "state": "AZ",
+        "zip": "85929-5218",
+        "phone": "1 (928) 5377830",
+        "email": "churchofourrsaviour.office@gmail.com",
+        "website": "http://www.thechurchofoursaviour.org/",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "medium",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "census": {
       "median_household_income": 55778,
       "population": 7719
@@ -21727,34 +22191,38 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Stephens Church",
-      "street": "2750 Cardinal Dr",
-      "city": "Sierra Vista",
-      "state": "AZ",
-      "zip": "85635-5447",
-      "phone": "1 (520) 4584432",
-      "email": "office@ststephensaz.org",
-      "website": "http://www.ststephensaz.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Stephens Church",
+        "street": "2750 Cardinal Dr",
+        "city": "Sierra Vista",
+        "state": "AZ",
+        "zip": "85635-5447",
+        "phone": "1 (520) 4584432",
+        "email": "office@ststephensaz.org",
+        "website": "http://www.ststephensaz.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -21799,34 +22267,38 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Saint Stephens Church",
-      "street": "2750 Cardinal Dr",
-      "city": "Sierra Vista",
-      "state": "AZ",
-      "zip": "85635-5447",
-      "phone": "1 (520) 4584432",
-      "email": "office@ststephensaz.org",
-      "website": "http://www.ststephensaz.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Saint Stephens Church",
+        "street": "2750 Cardinal Dr",
+        "city": "Sierra Vista",
+        "state": "AZ",
+        "zip": "85635-5447",
+        "phone": "1 (520) 4584432",
+        "email": "office@ststephensaz.org",
+        "website": "http://www.ststephensaz.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "quality_score": 80,
     "quality_components": [
       "Active status (25)",
@@ -21852,34 +22324,38 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "Grace Episcopal Church",
-      "street": "111 Bunker Dr",
-      "city": "Lake Havasu City",
-      "state": "AZ",
-      "zip": "86403-6856",
-      "phone": "1 (928) 8552525",
-      "email": "office@grace-episcopal.net",
-      "website": "http://www.grace-episcopal.net",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "Grace Episcopal Church",
+        "street": "111 Bunker Dr",
+        "city": "Lake Havasu City",
+        "state": "AZ",
+        "zip": "86403-6856",
+        "phone": "1 (928) 8552525",
+        "email": "office@grace-episcopal.net",
+        "website": "http://www.grace-episcopal.net",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
@@ -22396,35 +22872,39 @@
     "receiving_names_from": "03/12/2026",
     "receiving_names_to": "Open ended",
     "open_ended": true,
-    "church_info": {
-      "nid": null,
-      "name": "All Saints Of The Desert Episcopal Church",
-      "street": "9502 W Hutton Dr",
-      "city": "Sun City",
-      "state": "AZ",
-      "zip": "85351-1462",
-      "phone": "1 (623) 9748404",
-      "email": "parishadmin@desertsaints.org",
-      "website": "http://www.desertsaints.org",
-      "type": "Parish",
-      "lat": null,
-      "lng": null
-    },
+    "church_infos": [
+      {
+        "nid": null,
+        "name": "All Saints Of The Desert Episcopal Church",
+        "street": "9502 W Hutton Dr",
+        "city": "Sun City",
+        "state": "AZ",
+        "zip": "85351-1462",
+        "phone": "1 (623) 9748404",
+        "email": "parishadmin@desertsaints.org",
+        "website": "http://www.desertsaints.org",
+        "type": "Parish",
+        "lat": null,
+        "lng": null
+      }
+    ],
     "match_confidence": "low",
     "housing_type": "No Housing or Stipend Provided",
-    "parish_context": {
-      "clergy_count_10yr": 0,
-      "avg_tenure_years": null,
-      "current_clergy_count": 0,
-      "attendance_trend": null,
-      "attendance_change_pct": null,
-      "giving_trend": null,
-      "giving_change_pct": null,
-      "membership_trend": null,
-      "membership_change_pct": null,
-      "latest_operating_revenue": null,
-      "years_of_data": 0
-    },
+    "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      }
+    ],
     "estimated_total_comp": 87501,
     "comp_breakdown": {
       "stipend": 87501
@@ -22466,8 +22946,8 @@
       {
         "id": "10636",
         "vh_id": 10636,
-        "name": "Trinity Church",
-        "city": "Ennis",
+        "name": "Saint Pauls Church",
+        "city": "Virginia City",
         "state": "MT",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,

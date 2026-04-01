@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-03-31T22:36:21.072Z",
+  "generated_at": "2026-04-01T18:38:03.597Z",
   "summary": {
     "missing_vh_id": 0,
-    "missing_church_match": 79,
-    "total": 79
+    "missing_church_match": 107,
+    "total": 107
   },
   "gaps": [
     {
       "type": "missing_church_match",
-      "source": "public",
-      "vh_id": 10175,
-      "name": "Rosebud Episcopal Mission West, Diocese of South Dakota",
-      "diocese": "South Dakota",
-      "note": "Has VH ID but no church registry match."
+      "source": "extended",
+      "vh_id": 10690,
+      "name": "St James the Apostle Church",
+      "diocese": "California",
+      "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
@@ -25,25 +25,17 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10684,
-      "name": "Cathedral Church of St Luke",
-      "diocese": "Central Florida",
+      "vh_id": 10686,
+      "name": "St Julians Episcopal Church",
+      "diocese": "",
       "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10682,
-      "name": "St Andrews Episcopal Church",
-      "diocese": "Wisconsin",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10679,
-      "name": "St James Episcopal Church",
-      "diocese": "Central Gulf Coast",
+      "vh_id": 10678,
+      "name": "Position in Missouri",
+      "diocese": "Missouri",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -57,54 +49,6 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10616,
-      "name": "St Thomas Episcopal Church",
-      "diocese": "Georgia",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10606,
-      "name": "Grace Episcopal Church",
-      "diocese": "Maryland",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10605,
-      "name": "St Andrews Episcopal Church",
-      "diocese": "Maryland",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10604,
-      "name": "St Georges Episcopal Church",
-      "diocese": "Maryland",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10599,
-      "name": "St Matthews Parish Church",
-      "diocese": "North Carolina",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10596,
-      "name": "St Pauls Episcopal Church",
-      "diocese": "Maryland",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
       "vh_id": 10592,
       "name": "Christ (Budd Lake)\nSt James (Hackettstown)",
       "diocese": "Newark",
@@ -113,25 +57,25 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10580,
-      "name": "Christ Episcopal Church",
-      "diocese": "Western Massachusetts",
+      "vh_id": 10584,
+      "name": "Position in Northern Indiana",
+      "diocese": "Northern Indiana",
       "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10578,
-      "name": "St Pauls Church",
-      "diocese": "Great Lakes",
+      "vh_id": 10579,
+      "name": "Position in Wisconsin",
+      "diocese": "Wisconsin",
       "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10574,
-      "name": "Holy Trinity Episcopal Church",
-      "diocese": "Wyoming",
+      "vh_id": 10575,
+      "name": "Position in Washington",
+      "diocese": "Washington",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -145,6 +89,14 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 10569,
+      "name": "Position in Wisconsin",
+      "diocese": "Wisconsin",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 10566,
       "name": "Position in Western North Carolina",
       "diocese": "Western North Carolina",
@@ -153,9 +105,9 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10355,
-      "name": "St Peters Memorial",
-      "diocese": "Rochester",
+      "vh_id": 10561,
+      "name": "Position in South Carolina",
+      "diocese": "South Carolina",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -169,9 +121,33 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10344,
-      "name": "Christ Episcopal Church",
-      "diocese": "Vermont",
+      "vh_id": 10343,
+      "name": "Position in Michigan",
+      "diocese": "Michigan",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10340,
+      "name": "Position in Michigan",
+      "diocese": "Michigan",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10326,
+      "name": "Position in Oregon",
+      "diocese": "Oregon",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10325,
+      "name": "Position in Michigan",
+      "diocese": "Michigan",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -180,6 +156,14 @@
       "vh_id": 10324,
       "name": "Position in Mississippi",
       "diocese": "Mississippi",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10323,
+      "name": "Position in Oregon",
+      "diocese": "Oregon",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -201,6 +185,22 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 10315,
+      "name": "Position in Southeast Florida",
+      "diocese": "Southeast Florida",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10314,
+      "name": "Position in Montana",
+      "diocese": "Montana",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 10310,
       "name": "Position in Southern Ohio",
       "diocese": "Southern Ohio",
@@ -210,6 +210,14 @@
       "type": "missing_church_match",
       "source": "extended",
       "vh_id": 10309,
+      "name": "Position in Upper South Carolina",
+      "diocese": "Upper South Carolina",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10308,
       "name": "Position in Upper South Carolina",
       "diocese": "Upper South Carolina",
       "note": "Active extended position with no church registry match."
@@ -233,9 +241,49 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 10301,
+      "name": "Position in Mississippi",
+      "diocese": "Mississippi",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10300,
+      "name": "Position in Spokane",
+      "diocese": "Spokane",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10299,
+      "name": "Position in Spokane",
+      "diocese": "Spokane",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 10298,
       "name": "Position in Spokane",
       "diocese": "Spokane",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10297,
+      "name": "Position in Michigan",
+      "diocese": "Michigan",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10296,
+      "name": "Position in Upper South Carolina",
+      "diocese": "Upper South Carolina",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -249,9 +297,57 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10279,
-      "name": "Church of the Good Shepherd",
+      "vh_id": 10288,
+      "name": "Position in Southwest Florida",
+      "diocese": "Southwest Florida",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10282,
+      "name": "Position in Southwestern Virginia",
       "diocese": "Southwestern Virginia",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10281,
+      "name": "Position in San Diego",
+      "diocese": "San Diego",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10241,
+      "name": "Position in New York",
+      "diocese": "New York",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10240,
+      "name": "Position in New York",
+      "diocese": "New York",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10234,
+      "name": "Position in New York",
+      "diocese": "New York",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10232,
+      "name": "Position in San Diego",
+      "diocese": "San Diego",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -265,9 +361,25 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 10225,
+      "name": "Position in Upper South Carolina",
+      "diocese": "Upper South Carolina",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 10221,
       "name": "Position in New Jersey",
       "diocese": "New Jersey",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10219,
+      "name": "Position in Mississippi",
+      "diocese": "Mississippi",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -329,9 +441,49 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 10178,
+      "name": "Position in Southeast Florida",
+      "diocese": "Southeast Florida",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10175,
+      "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+      "diocese": "South Dakota",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 10174,
       "name": "Position in North Dakota",
       "diocese": "North Dakota",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10165,
+      "name": "Position in Massachusetts",
+      "diocese": "Massachusetts",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10164,
+      "name": "Position in San Diego",
+      "diocese": "San Diego",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 10163,
+      "name": "Position in San Diego",
+      "diocese": "San Diego",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -393,9 +545,9 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 9420,
-      "name": "St James Episcopal Church",
-      "diocese": "El Camino Real",
+      "vh_id": 9419,
+      "name": "Position in Florida",
+      "diocese": "Florida",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -425,6 +577,14 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 9403,
+      "name": "Position in Florida",
+      "diocese": "Florida",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 9400,
       "name": "Position in Kansas",
       "diocese": "Kansas",
@@ -436,6 +596,14 @@
       "vh_id": 9379,
       "name": "Position in Kansas",
       "diocese": "Kansas",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 9366,
+      "name": "Position in Florida",
+      "diocese": "Florida",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -473,15 +641,39 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 9341,
-      "name": "Position in East Tennessee",
-      "diocese": "East Tennessee",
+      "vh_id": 9347,
+      "name": "Position in Los Angeles",
+      "diocese": "Los Angeles",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 8963,
+      "name": "Position in Central Florida",
+      "diocese": "Central Florida",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 8962,
+      "name": "Position in Chicago",
+      "diocese": "Chicago",
       "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
       "source": "extended",
       "vh_id": 8961,
+      "name": "Position in Chicago",
+      "diocese": "Chicago",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 8960,
       "name": "Position in Chicago",
       "diocese": "Chicago",
       "note": "Active extended position with no church registry match."
@@ -497,6 +689,14 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 8958,
+      "name": "Position in Chicago",
+      "diocese": "Chicago",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 8951,
       "name": "Position in Chicago",
       "diocese": "Chicago",
@@ -505,9 +705,9 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 8945,
-      "name": "St James Episcopal Church",
-      "diocese": "California",
+      "vh_id": 8928,
+      "name": "Position in Central Pennsylvania",
+      "diocese": "Central Pennsylvania",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -545,6 +745,14 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 8889,
+      "name": "Position in Central Pennsylvania",
+      "diocese": "Central Pennsylvania",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 8607,
       "name": "The Episcopal Church of St Matthew",
       "diocese": "Kansas",
@@ -553,15 +761,15 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 8596,
-      "name": "St Stephens Church",
-      "diocese": "Arizona",
+      "vh_id": 8557,
+      "name": "Position in Albany",
+      "diocese": "Albany",
       "note": "Active extended position with no church registry match."
     },
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 8557,
+      "vh_id": 8556,
       "name": "Position in Albany",
       "diocese": "Albany",
       "note": "Active extended position with no church registry match."
@@ -601,6 +809,14 @@
     {
       "type": "missing_church_match",
       "source": "extended",
+      "vh_id": 8551,
+      "name": "Position in Albany",
+      "diocese": "Albany",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
       "vh_id": 8550,
       "name": "Position in Albany",
       "diocese": "Albany",
@@ -628,6 +844,14 @@
       "vh_id": 8538,
       "name": "Position in Alaska",
       "diocese": "Alaska",
+      "note": "Active extended position with no church registry match."
+    },
+    {
+      "type": "missing_church_match",
+      "source": "extended",
+      "vh_id": 8537,
+      "name": "Position in Alabama",
+      "diocese": "Alabama",
       "note": "Active extended position with no church registry match."
     },
     {
