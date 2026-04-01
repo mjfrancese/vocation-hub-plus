@@ -10,6 +10,8 @@ on:
       - 'web/package.json'
       - 'web/next.config.js'
       - 'web/tailwind.config.ts'
+  workflow_dispatch:
+  workflow_call:
 
 permissions:
   contents: read

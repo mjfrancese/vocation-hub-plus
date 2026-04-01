@@ -81,8 +81,16 @@ jobs:
           git add web/public/data/clergy-tokens.json web/public/data/clergy-search-index.json
           if git diff --staged --quiet; then
             echo "No data changes to commit"
+            echo "CHANGES=false" >> $GITHUB_ENV
           else
             git commit -m "Update church directory and parochial data"
             git pull --rebase
             git push
+            echo "CHANGES=true" >> $GITHUB_ENV
           fi
+
+      - name: Trigger deploy
+        if: env.CHANGES == 'true'
+        run: gh workflow run "Deploy Frontend"
+        env:
+          GH_TOKEN: ${{ github.token }}
