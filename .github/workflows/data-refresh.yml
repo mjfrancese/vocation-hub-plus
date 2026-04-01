@@ -78,7 +78,7 @@ jobs:
             echo "CHANGES=false" >> $GITHUB_ENV
           else
             git commit -m "chore: monthly data refresh $(date +%Y-%m-%d)"
-            git pull --rebase
+            git pull --rebase --autostash
             git push
             echo "CHANGES=true" >> $GITHUB_ENV
           fi

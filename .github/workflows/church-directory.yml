@@ -84,7 +84,7 @@ jobs:
             echo "CHANGES=false" >> $GITHUB_ENV
           else
             git commit -m "Update church directory and parochial data"
-            git pull --rebase
+            git pull --rebase --autostash
             git push
             echo "CHANGES=true" >> $GITHUB_ENV
           fi
