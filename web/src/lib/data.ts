@@ -93,7 +93,7 @@ export function getPositions(): Position[] {
       ...pos,
       vh_id: vhId ?? pos.vh_id,
       city: pos.city || extractCity(pos.name),
-      state: pos.state || (pos.church_info as Position['church_info'])?.state || getStateForDiocese(pos.diocese || ''),
+      state: pos.state || (pos.church_infos as Position['church_infos'])?.[0]?.state || getStateForDiocese(pos.diocese || ''),
       visibility: pos.visibility || 'public',
       quality_score: pos.quality_score,
       quality_components: pos.quality_components,
@@ -116,7 +116,7 @@ export function getPositions(): Position[] {
 
       const diocese = (e.diocese as string) || '';
       const profile = allProfiles.find(p => p.vh_id === vhId);
-      const state = (e.state as string) || (e.church_info as Position['church_info'])?.state || getStateForDiocese(diocese);
+      const state = (e.state as string) || (e.church_infos as Position['church_infos'])?.[0]?.state || getStateForDiocese(diocese);
 
       const receivingFrom = (e.receiving_names_from as string) || '';
       const receivingTo = (e.receiving_names_to as string) || '';
@@ -144,9 +144,9 @@ export function getPositions(): Position[] {
         vh_id: vhId,
         profile_url: (e.profile_url as string) || '',
         deep_scrape_fields: profile?.all_fields,
-        church_info: e.church_info as Position['church_info'],
+        church_infos: e.church_infos as Position['church_infos'],
         match_confidence: (e.match_confidence as Position['match_confidence']) || undefined,
-        parochial: e.parochial as Position['parochial'],
+        parochials: e.parochials as Position['parochials'],
         diocese_percentiles: e.diocese_percentiles as Position['diocese_percentiles'],
         estimated_total_comp: e.estimated_total_comp as number | undefined,
         comp_breakdown: e.comp_breakdown as Position['comp_breakdown'],
