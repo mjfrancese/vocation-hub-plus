@@ -99,6 +99,7 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "data: update positions from scrape $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git pull --rebase
             git push
           fi
 
