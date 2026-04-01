@@ -80,6 +80,7 @@ function normalizeDioceseName(name) {
     .replace(/^(the\s+)?episcopal\s+(church\s+in\s+|diocese\s+of\s+(the\s+)?)/i, '')
     .replace(/^(the\s+)?diocese\s+of\s+(the\s+)?/i, '')
     .replace(/^trustees and council of the episcopal diocese of\s*/i, '')
+    .replace(/\s+(inc|corp|llc|foundation)\.?$/i, '')
     .trim();
 }
 
@@ -203,6 +204,72 @@ function matchPositionToParish(position) {
       }
       // Last resort: return first match at lower confidence
       return { parish: matches[0], confidence: 'low', method: 'name_diocese_ambiguous' };
+    }
+  }
+
+  // Strategy 5: City-based fallback for multi-congregation positions
+  // Position names like "Wethersfield and Glastonbury" or "Trinity and Old Swedes (Wilmington)"
+  // contain city names or parenthesized city hints that can match parishes by location.
+  if (position.diocese) {
+    const cityHint = extractCityHint(position.name);
+    if (cityHint) {
+      const cityMatches = db.prepare(
+        "SELECT * FROM parishes WHERE LOWER(city) = LOWER(?)"
+      ).all(cityHint).filter(p => normalizeDioceseName(p.diocese) === posNormDiocese);
+      // Deduplicate
+      const seenCity = new Set();
+      const uniqueCity = cityMatches.filter(p => { if (seenCity.has(p.id)) return false; seenCity.add(p.id); return true; });
+      if (uniqueCity.length === 1) {
+        return { parish: uniqueCity[0], confidence: 'medium', method: 'city_diocese' };
+      }
+      if (uniqueCity.length > 1) {
+        // Try to narrow by any word in the position name
+        const posWords = position.name.toLowerCase().replace(/\(.*?\)/g, '').split(/[\s,]+/).filter(w => w.length >= 4);
+        const nameHit = uniqueCity.find(p => posWords.some(w => p.name.toLowerCase().includes(w)));
+        if (nameHit) {
+          return { parish: nameHit, confidence: 'medium', method: 'city_name_hint' };
+        }
+      }
+    }
+
+    // Try matching town/city names embedded in the position name (not in parens)
+    // e.g., "Wethersfield and Glastonbury, Diocese of Connecticut"
+    // or "Trinity Torrington and Trinity Lime Rock, Diocese of Connecticut"
+    const cleanedName = position.name.replace(/,\s*Diocese of.*/i, '');
+    const nameParts = cleanedName.split(/\s+and\s+/i);
+    for (const part of nameParts) {
+      const stripped = part.trim().replace(/\(.*?\)/, '').trim();
+      // Try the whole part as a city, then try individual words (for "Trinity Torrington" -> "Torrington")
+      const candidates = [stripped];
+      const words = stripped.split(/\s+/);
+      if (words.length > 1) {
+        // Add individual words as potential city names (skip very short ones)
+        candidates.push(...words.filter(w => w.length >= 4));
+      }
+      for (const candidate of candidates) {
+        const townMatches = db.prepare(
+          "SELECT * FROM parishes WHERE LOWER(city) = LOWER(?)"
+        ).all(candidate).filter(p => normalizeDioceseName(p.diocese) === posNormDiocese);
+        const seenTown = new Set();
+        const uniqueTown = townMatches.filter(p => { if (seenTown.has(p.id)) return false; seenTown.add(p.id); return true; });
+        if (uniqueTown.length >= 1) {
+          return { parish: uniqueTown[0], confidence: 'medium', method: 'town_in_name' };
+        }
+      }
+    }
+
+    // Strategy 6: Try each significant word in the position name as a city
+    // For names like "Rosebud Episcopal Mission West, Diocese of South Dakota"
+    const allWords = cleanedName.split(/[\s,]+/).filter(w => w.length >= 4 && !/^(episcopal|church|parish|mission|diocese|west|east|north|south|the|and)$/i.test(w));
+    for (const word of allWords) {
+      const wordMatches = db.prepare(
+        "SELECT * FROM parishes WHERE LOWER(city) = LOWER(?)"
+      ).all(word).filter(p => normalizeDioceseName(p.diocese) === posNormDiocese);
+      const seenW = new Set();
+      const uniqueW = wordMatches.filter(p => { if (seenW.has(p.id)) return false; seenW.add(p.id); return true; });
+      if (uniqueW.length >= 1) {
+        return { parish: uniqueW[0], confidence: 'low', method: 'word_as_city' };
+      }
     }
   }
 
@@ -1004,8 +1071,10 @@ function enrichPositions() {
 
     if (matchResult) {
       // For duplicate VH IDs, cross-validate the church name
+      // Skip this check for city-based matches (multi-congregation positions)
       let nameMatch = true;
-      if (vhIdCounts[vhId] > 1 && pos.name && matchResult.parish) {
+      const isCityMatch = matchResult.method && /city|town|word/.test(matchResult.method);
+      if (!isCityMatch && vhIdCounts[vhId] > 1 && pos.name && matchResult.parish) {
         const posNorm = normalizeChurchName(pos.name);
         const churchNorm = normalizeChurchName(matchResult.parish.name);
         if (posNorm && churchNorm) {
