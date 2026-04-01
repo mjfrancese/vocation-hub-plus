@@ -61,6 +61,12 @@ jobs:
       - name: Run enrichment
         run: cd web && node scripts/enrich-positions-v2.js
 
+      - name: Generate clergy tokens
+        working-directory: web
+        run: node scripts/generate-clergy-tokens.js
+        env:
+          CLERGY_TOKEN_SECRET: ${{ secrets.CLERGY_TOKEN_SECRET }}
+
       - name: Commit data changes
         run: |
           git config user.name "github-actions[bot]"
