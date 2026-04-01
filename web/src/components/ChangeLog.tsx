@@ -6,6 +6,7 @@ import { formatRelativeTime } from '@/lib/data';
 interface ChangeLogProps {
   changes: PositionChange[];
   limit?: number;
+  onItemClick?: (change: PositionChange) => void;
 }
 
 const typeStyles: Record<string, string> = {
@@ -22,7 +23,7 @@ const typeLabels: Record<string, string> = {
   updated: 'Updated',
 };
 
-export default function ChangeLog({ changes, limit = 20 }: ChangeLogProps) {
+export default function ChangeLog({ changes, limit = 20, onItemClick }: ChangeLogProps) {
   const displayed = changes.slice(0, limit);
 
   if (displayed.length === 0) {
@@ -38,7 +39,8 @@ export default function ChangeLog({ changes, limit = 20 }: ChangeLogProps) {
       {displayed.map((change) => (
         <div
           key={change.id}
-          className="flex items-start gap-3 p-3 bg-white border border-gray-200 rounded-lg"
+          className={`flex items-start gap-3 p-3 bg-white border border-gray-200 rounded-lg${onItemClick ? ' cursor-pointer hover:bg-gray-50 transition-colors' : ''}`}
+          onClick={onItemClick ? () => onItemClick(change) : undefined}
         >
           <span
             className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${typeStyles[change.change_type] || ''}`}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import { getPositions, getMeta, getUniqueValues, getChanges } from '@/lib/data';
 import { createSearchIndex, searchPositions } from '@/lib/search';
@@ -288,6 +288,20 @@ export default function HomePage() {
         </div>
       </details>
 
+      {/* Recent Changes */}
+      {changes.length > 0 && (
+        <details className="text-sm">
+          <summary className="cursor-pointer text-gray-600 hover:text-gray-900 font-medium">
+            Recent Changes ({changes.length})
+          </summary>
+          <div className="mt-2">
+            <ChangeLog changes={changes} limit={8} onItemClick={(change) => {
+              setQuery(change.name);
+            }} />
+          </div>
+        </details>
+      )}
+
       {/* Quick filter chips */}
       <div className="flex flex-wrap gap-2">
         <QuickChip
@@ -382,12 +396,6 @@ export default function HomePage() {
         <MapView positions={displayedPositions} />
       )}
 
-      {changes.length > 0 && (
-        <div className="mt-8">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">Recent Changes</h2>
-          <ChangeLog changes={changes} limit={10} />
-        </div>
-      )}
     </div>
   );
 }

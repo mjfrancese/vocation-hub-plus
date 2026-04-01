@@ -230,6 +230,50 @@ function matchPositionToParish(position) {
     }
   }
 
+  // Strategy 4c: Name-only match via aliases (when diocese is missing and no city hint)
+  // For positions like "St Julians Episcopal Church" where we have a clear name but no diocese/city.
+  if (posNormalized && !position.diocese && !cityHint) {
+    const allMatches = db.prepare(`
+      SELECT p.* FROM parishes p
+      JOIN parish_aliases pa ON pa.parish_id = p.id
+      WHERE pa.alias_normalized = ?
+    `).all(posNormalized);
+
+    const seen = new Set();
+    const matches = allMatches.filter(p => {
+      if (seen.has(p.id)) return false;
+      seen.add(p.id);
+      return true;
+    });
+
+    if (matches.length === 1) {
+      return { parish: matches[0], confidence: 'medium', method: 'name_only' };
+    }
+
+    if (matches.length > 1) {
+      // Try to narrow by website domain
+      if (position.website_url) {
+        const posDomain = normalizeDomain(position.website_url);
+        if (posDomain && !isGenericDomain(posDomain)) {
+          const domainMatch = matches.find(m => normalizeDomain(m.website) === posDomain);
+          if (domainMatch) {
+            return { parish: domainMatch, confidence: 'medium', method: 'name_website' };
+          }
+        }
+      }
+      // Try to narrow by phone
+      if (position.contact_phone) {
+        const posPhone = normalizePhone(position.contact_phone);
+        if (posPhone) {
+          const phoneMatch = matches.find(m => normalizePhone(m.phone) === posPhone);
+          if (phoneMatch) {
+            return { parish: phoneMatch, confidence: 'medium', method: 'name_phone' };
+          }
+        }
+      }
+    }
+  }
+
   // Strategy 5: City-based fallback for multi-congregation positions
   // Position names like "Wethersfield and Glastonbury" or "Trinity and Old Swedes (Wilmington)"
   // contain city names or parenthesized city hints that can match parishes by location.
@@ -1082,6 +1126,63 @@ function computeParishContext(parishId) {
 // ---------------------------------------------------------------------------
 
 function enrichPositions() {
+  // Backfill lat/lng from Asset Map parishes to ECDPlus parishes that lack coordinates.
+  // Asset Map parishes have coordinates; ECDPlus ones often don't.
+  // Match by normalized church name + normalized diocese name, then copy lat/lng.
+  const db = getDb();
+  const ecdNoCoords = db.prepare(
+    "SELECT p.id, p.diocese FROM parishes p WHERE p.source = 'ecdplus' AND (p.lat IS NULL OR p.lat = 0)"
+  ).all();
+  if (ecdNoCoords.length > 0) {
+    // Build index of Asset Map parishes with coords, keyed by normalized alias
+    const amWithCoords = db.prepare(`
+      SELECT p.id, p.diocese, p.lat, p.lng, pa.alias_normalized
+      FROM parishes p
+      JOIN parish_aliases pa ON pa.parish_id = p.id
+      WHERE p.source IN ('asset_map', 'both')
+        AND p.lat IS NOT NULL AND p.lat != 0
+    `).all();
+    const amIndex = {};
+    for (const row of amWithCoords) {
+      const key = row.alias_normalized;
+      if (!amIndex[key]) amIndex[key] = [];
+      amIndex[key].push(row);
+    }
+
+    // Build a map of ECDPlus parish aliases
+    const ecdAliases = db.prepare(`
+      SELECT parish_id, alias_normalized FROM parish_aliases
+      WHERE parish_id IN (SELECT id FROM parishes WHERE source = 'ecdplus' AND (lat IS NULL OR lat = 0))
+    `).all();
+    const ecdAliasMap = {};
+    for (const a of ecdAliases) {
+      if (!ecdAliasMap[a.parish_id]) ecdAliasMap[a.parish_id] = [];
+      ecdAliasMap[a.parish_id].push(a.alias_normalized);
+    }
+
+    const updateCoords = db.prepare('UPDATE parishes SET lat = ?, lng = ? WHERE id = ?');
+    let backfillCount = 0;
+    const runBackfill = db.transaction(() => {
+      for (const ecd of ecdNoCoords) {
+        const aliases = ecdAliasMap[ecd.id] || [];
+        const ecdDiocNorm = normalizeDioceseName(ecd.diocese);
+        for (const alias of aliases) {
+          const candidates = amIndex[alias] || [];
+          const match = candidates.find(c => normalizeDioceseName(c.diocese) === ecdDiocNorm);
+          if (match) {
+            updateCoords.run(match.lat, match.lng, ecd.id);
+            backfillCount++;
+            break;
+          }
+        }
+      }
+    });
+    runBackfill();
+    if (backfillCount > 0) {
+      console.log(`Coordinate backfill: ${backfillCount} ECDPlus parishes updated from Asset Map`);
+    }
+  }
+
   const positions = load('positions.json');
   const allProfiles = load('all-profiles.json');
   const profileFields = load('profile-fields.json');

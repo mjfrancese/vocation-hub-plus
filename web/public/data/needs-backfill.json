@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-01T19:45:48.303Z",
+  "generated_at": "2026-04-01T23:08:05.006Z",
   "summary": {
     "missing_vh_id": 0,
-    "missing_church_match": 105,
-    "total": 105
+    "missing_church_match": 102,
+    "total": 102
   },
   "gaps": [
     {
@@ -28,14 +28,6 @@
       "vh_id": 10664,
       "name": "Position in Northwestern Pennsylvania",
       "diocese": "Northwestern Pennsylvania",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10592,
-      "name": "Christ (Budd Lake)\nSt James (Hackettstown)",
-      "diocese": "Newark",
       "note": "Active extended position with no church registry match."
     },
     {
@@ -377,14 +369,6 @@
     {
       "type": "missing_church_match",
       "source": "extended",
-      "vh_id": 10197,
-      "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
-      "diocese": "Southern Ohio",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
       "vh_id": 10196,
       "name": "Position in Rochester",
       "diocese": "Rochester",
@@ -428,14 +412,6 @@
       "vh_id": 10178,
       "name": "Position in Southeast Florida",
       "diocese": "Southeast Florida",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10175,
-      "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-      "diocese": "South Dakota",
       "note": "Active extended position with no church registry match."
     },
     {
