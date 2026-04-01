@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-const ME_TOKEN_KEY = 'vh_me_token';
+import { ME_TOKEN_KEY } from '@/lib/constants';
 
 export default function IdentityLink({ className }: { className?: string }) {
   const [token, setToken] = useState<string | null>(null);

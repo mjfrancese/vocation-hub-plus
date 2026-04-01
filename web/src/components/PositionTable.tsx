@@ -10,6 +10,7 @@ import ComparisonModal from './ComparisonModal';
 import ParishContextSection from './ParishContextSection';
 import PersonalContext from './PersonalContext';
 import type { PersonalData } from '@/lib/types';
+import { ME_TOKEN_KEY } from '@/lib/constants';
 
 interface PositionTableProps {
   positions: Position[];
@@ -105,7 +106,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const token = params.get('me') || localStorage.getItem('vh_me_token');
+    const token = params.get('me') || localStorage.getItem(ME_TOKEN_KEY);
     if (!token) return;
 
     const base = process.env.NEXT_PUBLIC_BASE_PATH || '';

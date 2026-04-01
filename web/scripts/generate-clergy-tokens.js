@@ -239,7 +239,7 @@ function buildPersonalData(guid) {
       title: currentPos.title,
       parish: currentPos.parish,
       parish_id: currentPos.parish_id,
-      start_date: null,
+      start_date: posRows.find(r => r.is_current)?.start_date || null,
       diocese: currentPos.diocese,
       city: currentPos.city,
       state: currentPos.state,
@@ -310,6 +310,10 @@ function generateAllTokens() {
     const token = generateToken(guid);
     const data = buildPersonalData(guid);
     if (data) {
+      if (tokenMap[token]) {
+        console.error(`Token collision: ${token} for ${guid} and ${tokenMap[token].clergy_guid}`);
+        process.exit(1);
+      }
       tokenMap[token] = data;
       count++;
     }

@@ -136,7 +136,7 @@ export interface PersonalComparisons {
   asa_comparison: { yours: number; theirs: number } | null;
   plate_pledge_comparison: { yours: number; theirs: number } | null;
   membership_comparison: { yours: number; theirs: number } | null;
-  operating_revenue_comparison: null;
+  operating_revenue_comparison: { yours: number; theirs: number } | null;
   // Geographic
   distance_km: number | null;
   cost_of_living_ratio: number | null;

@@ -4,8 +4,7 @@ import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Fuse from 'fuse.js';
 import type { ClaimSearchEntry } from '@/lib/types';
-
-const ME_TOKEN_KEY = 'vh_me_token';
+import { ME_TOKEN_KEY } from '@/lib/constants';
 
 export default function ClaimPage() {
   const router = useRouter();

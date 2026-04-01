@@ -5,8 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import type { PersonalData, Position } from '@/lib/types';
 import CompensationRadar from '@/components/CompensationRadar';
 import CareerTimeline from '@/components/CareerTimeline';
-
-const ME_TOKEN_KEY = 'vh_me_token';
+import { ME_TOKEN_KEY } from '@/lib/constants';
 
 function DashboardContent() {
   const searchParams = useSearchParams();
