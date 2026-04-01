@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import './globals.css';
+import IdentityLink from '@/components/IdentityLink';
 
 export const metadata: Metadata = {
   title: 'Vocation Hub+',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <NavLink href="/">Positions</NavLink>
                   <NavLink href="/analytics/">Analytics</NavLink>
                   <NavLink href="/about/">About</NavLink>
+                  <IdentityLink />
                 </div>
               </div>
               <div className="flex items-center sm:hidden">
@@ -85,6 +87,7 @@ function MobileMenu() {
         <Link href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Positions</Link>
         <Link href="/analytics/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">Analytics</Link>
         <Link href="/about/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">About</Link>
+        <IdentityLink className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50" />
       </div>
     </details>
   );
