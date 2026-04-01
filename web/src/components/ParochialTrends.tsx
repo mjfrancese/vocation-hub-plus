@@ -11,13 +11,14 @@ interface ParochialTrendsProps {
     congregationCity: string;
     years: Record<string, YearData>;
   };
+  label?: string;
 }
 
 /**
  * Displays parochial report trend data (ASA, membership, plate & pledge)
  * as a compact display with trend indicators and expandable yearly breakdown.
  */
-export default function ParochialTrends({ data }: ParochialTrendsProps) {
+export default function ParochialTrends({ data, label }: ParochialTrendsProps) {
   const years = Object.keys(data.years)
     .map(Number)
     .sort((a, b) => a - b);
@@ -41,7 +42,7 @@ export default function ParochialTrends({ data }: ParochialTrendsProps) {
     <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
       <div className="flex items-center gap-2 mb-3">
         <h4 className="text-sm font-semibold text-gray-700">
-          Parochial Report Data
+          {label ? `Parochial Report: ${label}` : 'Parochial Report Data'}
         </h4>
         <span className="text-xs text-gray-400">
           {data.congregationCity} | {years[0]}-{years[years.length - 1]}
