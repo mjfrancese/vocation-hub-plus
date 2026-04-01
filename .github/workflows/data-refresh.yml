@@ -72,11 +72,20 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Pull remote changes BEFORE committing to avoid rebase conflicts.
-          # Stash our generated data, pull, then re-apply.
-          git stash --include-untracked
+          # Save generated files, pull remote, then restore our generated files.
+          # This avoids merge conflicts in fully-regenerated JSON files.
+          cp web/public/data/enriched-positions.json /tmp/enriched-positions.json
+          cp web/public/data/enriched-extended.json /tmp/enriched-extended.json
+          cp web/public/data/position-church-map.json /tmp/position-church-map.json
+          cp web/public/data/clergy-tokens.json /tmp/clergy-tokens.json 2>/dev/null || true
+          cp web/public/data/clergy-search-index.json /tmp/clergy-search-index.json 2>/dev/null || true
+          git checkout -- web/public/data/ 2>/dev/null || true
           git pull --rebase origin main || true
-          git stash pop || true
+          cp /tmp/enriched-positions.json web/public/data/enriched-positions.json
+          cp /tmp/enriched-extended.json web/public/data/enriched-extended.json
+          cp /tmp/position-church-map.json web/public/data/position-church-map.json
+          cp /tmp/clergy-tokens.json web/public/data/clergy-tokens.json 2>/dev/null || true
+          cp /tmp/clergy-search-index.json web/public/data/clergy-search-index.json 2>/dev/null || true
           git add web/public/data/enriched-positions.json web/public/data/enriched-extended.json web/public/data/position-church-map.json
           git add web/public/data/clergy-tokens.json web/public/data/clergy-search-index.json
           if git diff --staged --quiet; then

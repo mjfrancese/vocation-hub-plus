@@ -75,10 +75,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # Pull remote changes BEFORE committing to avoid rebase conflicts.
-          git stash --include-untracked
+          # Save generated files, pull remote, then restore our generated files.
+          # This avoids merge conflicts in fully-regenerated JSON files.
+          for f in churches.json parochial-data.json position-church-map.json enriched-positions.json enriched-extended.json clergy-tokens.json clergy-search-index.json; do
+            cp "web/public/data/$f" "/tmp/$f" 2>/dev/null || true
+          done
+          cp data/church-nids.json /tmp/church-nids.json 2>/dev/null || true
+          git checkout -- web/public/data/ data/ 2>/dev/null || true
           git pull --rebase origin main || true
-          git stash pop || true
+          for f in churches.json parochial-data.json position-church-map.json enriched-positions.json enriched-extended.json clergy-tokens.json clergy-search-index.json; do
+            cp "/tmp/$f" "web/public/data/$f" 2>/dev/null || true
+          done
+          cp /tmp/church-nids.json data/church-nids.json 2>/dev/null || true
           git add -f web/public/data/churches.json
           git add web/public/data/parochial-data.json data/church-nids.json
           git add web/public/data/position-church-map.json
