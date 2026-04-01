@@ -15,13 +15,49 @@
 const { getDb, closeDb, logFetch } = require('./db');
 
 const BASE_URL = 'https://ea-api.cpg.org/common-access-api/1.0/ecdPlus';
-const RATE_LIMIT_MS = 100;
+const RATE_LIMIT_MS = 200;
 const LOG_INTERVAL = 500;
 const BATCH_SIZE = 1000;
 const CONCURRENCY = 3;
+const MAX_RETRIES = 4;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+/**
+ * Fetch with retry and exponential backoff on 5xx / network errors.
+ * Retries up to MAX_RETRIES times with delays of 2s, 4s, 8s, 16s.
+ * @param {string} url
+ * @param {string} label - for logging
+ * @returns {Promise<Response|null>} response or null if all retries exhausted
+ */
+async function fetchWithRetry(url, label) {
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      const response = await fetch(url);
+      if (response.ok) return response;
+      if (response.status >= 500 && attempt < MAX_RETRIES) {
+        const delay = 2000 * Math.pow(2, attempt);
+        console.warn(`  ${label}: HTTP ${response.status}, retrying in ${delay / 1000}s (attempt ${attempt + 1}/${MAX_RETRIES})`);
+        await sleep(delay);
+        continue;
+      }
+      // 4xx or final 5xx attempt
+      console.warn(`  Skipping ${label}: HTTP ${response.status}`);
+      return null;
+    } catch (err) {
+      if (attempt < MAX_RETRIES) {
+        const delay = 2000 * Math.pow(2, attempt);
+        console.warn(`  ${label}: ${err.message}, retrying in ${delay / 1000}s (attempt ${attempt + 1}/${MAX_RETRIES})`);
+        await sleep(delay);
+        continue;
+      }
+      console.warn(`  Skipping ${label}: ${err.message} (exhausted retries)`);
+      return null;
+    }
+  }
+  return null;
 }
 
 // ---------------------------------------------------------------------------
@@ -356,24 +392,22 @@ async function fetchAllClergy() {
   let fetchedCount = 0;
 
   const allResults = await fetchConcurrent(clergyList, CONCURRENCY, async (c, i) => {
-    try {
-      const detailUrl = `${BASE_URL}/clergies/${c.guid}.json`;
-      const detailResponse = await fetch(detailUrl);
-      if (!detailResponse.ok) {
-        console.warn(`  Skipping ${c.first_name} ${c.last_name} (${c.guid}): HTTP ${detailResponse.status}`);
-        await sleep(RATE_LIMIT_MS);
-        fetchedCount++;
-        return null;
-      }
+    const label = `${c.first_name} ${c.last_name} (${c.guid})`;
+    const detailUrl = `${BASE_URL}/clergies/${c.guid}.json`;
+    const detailResponse = await fetchWithRetry(detailUrl, label);
 
+    await sleep(RATE_LIMIT_MS);
+    fetchedCount++;
+
+    if (fetchedCount % LOG_INTERVAL === 0) {
+      console.log(`  Progress: ${fetchedCount}/${clergyList.length}`);
+    }
+
+    if (!detailResponse) return null;
+
+    try {
       const detailData = await detailResponse.json();
       const parsed = parseClergyDetail(detailData.data || detailData);
-      await sleep(RATE_LIMIT_MS);
-
-      fetchedCount++;
-      if (fetchedCount % LOG_INTERVAL === 0) {
-        console.log(`  Progress: ${fetchedCount}/${clergyList.length}`);
-      }
 
       return {
         guid: c.guid,
@@ -383,9 +417,7 @@ async function fetchAllClergy() {
         ...parsed,
       };
     } catch (err) {
-      console.warn(`  Error fetching ${c.first_name} ${c.last_name} (${c.guid}): ${err.message}`);
-      await sleep(RATE_LIMIT_MS);
-      fetchedCount++;
+      console.warn(`  Error parsing ${label}: ${err.message}`);
       return null;
     }
   });
