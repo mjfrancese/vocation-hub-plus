@@ -207,11 +207,33 @@ function matchPositionToParish(position) {
     }
   }
 
+  // Strategy 4b: Name + city match WITHOUT diocese
+  // For positions with parenthesized city hints like "Christ (Budd Lake)" where diocese is unknown.
+  // Name + city together is a strong enough signal to match confidently.
+  const cityHint = extractCityHint(position.name);
+  if (posNormalized && cityHint && !position.diocese) {
+    const allMatches = db.prepare(`
+      SELECT p.* FROM parishes p
+      JOIN parish_aliases pa ON pa.parish_id = p.id
+      WHERE pa.alias_normalized = ? AND LOWER(p.city) = LOWER(?)
+    `).all(posNormalized, cityHint);
+
+    const seen = new Set();
+    const matches = allMatches.filter(p => {
+      if (seen.has(p.id)) return false;
+      seen.add(p.id);
+      return true;
+    });
+
+    if (matches.length >= 1) {
+      return { parish: matches[0], confidence: 'medium', method: 'name_city' };
+    }
+  }
+
   // Strategy 5: City-based fallback for multi-congregation positions
   // Position names like "Wethersfield and Glastonbury" or "Trinity and Old Swedes (Wilmington)"
   // contain city names or parenthesized city hints that can match parishes by location.
   if (position.diocese) {
-    const cityHint = extractCityHint(position.name);
     if (cityHint) {
       const cityMatches = db.prepare(
         "SELECT * FROM parishes WHERE LOWER(city) = LOWER(?)"
@@ -296,7 +318,7 @@ function matchPositionToParishes(position) {
   // Further split each part on " and " (but not if part looks like "Saints X and Y")
   const expandedParts = [];
   for (const part of parts) {
-    if (/^(saints?|ss\.?)\s/i.test(part)) {
+    if (/^(saints?|ss\.?|sts\.?)\s/i.test(part)) {
       expandedParts.push(part);
     } else {
       const subParts = part.split(/\s+and\s+/i).map(s => s.trim()).filter(Boolean);
@@ -846,6 +868,12 @@ function computeQualityScores(positions, isPublic) {
     if (toDate && toDate !== 'Open ended') {
       score += 5;
       components.push('End date set (5)');
+    }
+
+    // Entries with no congregation name should never be visible by default
+    if (name.startsWith('Position in') || name === 'Unknown Position') {
+      score = Math.min(score, 45);
+      components.push('No congregation name (capped at 45)');
     }
 
     pos.quality_score = Math.min(score, 100);

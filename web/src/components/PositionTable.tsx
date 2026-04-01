@@ -24,10 +24,19 @@ const COLUMNS: Array<{ key: SortField; label: string }> = [
 ];
 
 /** Get the display name for a position: prefer church_infos names, fall back to pos.name */
-function getChurchName(pos: Position): { text: string; isEnriched: boolean } {
+function getChurchName(pos: Position): { text: string; suffix?: string; isEnriched: boolean } {
   if (pos.church_infos && pos.church_infos.length > 0) {
     const names = pos.church_infos.map(c => c.name).filter(Boolean);
+    if (names.length > 2) {
+      return { text: names[0], suffix: `+${names.length - 1} more`, isEnriched: true };
+    }
     if (names.length > 0) return { text: names.join(' & '), isEnriched: true };
+  }
+  // For unmatched multi-congregation names, count parenthesized groups as congregations
+  const parenCount = (pos.name.match(/\([^)]+\)/g) || []).length;
+  if (parenCount > 2) {
+    const firstName = pos.name.split(/\n/)[0].trim();
+    return { text: firstName, suffix: `+${parenCount - 1} more`, isEnriched: false };
   }
   return { text: pos.name, isEnriched: false };
 }
@@ -247,6 +256,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   <div className="min-w-0 flex-1">
                     <p className={`font-medium text-sm leading-tight ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
                       {church.text}
+                      {church.suffix && <span className="ml-1.5 text-xs font-normal text-primary-600">{church.suffix}</span>}
                     </p>
                     <p className="text-xs text-gray-500 mt-0.5">
                       {locationParts.join(' \u00B7 ') || '\u00A0'}
@@ -358,6 +368,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                     <td className="px-3 py-2 text-sm max-w-xs">
                       <div className={`font-medium truncate ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
                         {church.text}
+                        {church.suffix && <span className="ml-1.5 text-xs font-normal text-primary-600">{church.suffix}</span>}
                       </div>
                       <div className="text-xs text-gray-400 truncate">{pos.position_type || '\u00A0'}</div>
                     </td>
