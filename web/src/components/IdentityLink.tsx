@@ -19,5 +19,5 @@ export default function IdentityLink({ className }: { className?: string }) {
   if (token) {
     return <Link href={`/me?me=${token}`} className={defaultClass}>My Dashboard</Link>;
   }
-  return <Link href="/claim" className={defaultClass}>This is me</Link>;
+  return <Link href="/claim/" className={defaultClass}>This is me</Link>;
 }
