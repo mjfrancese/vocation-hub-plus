@@ -367,6 +367,17 @@
         "asa": null,
         "estimated_total_comp": 187501,
         "score": 4
+      },
+      {
+        "id": "8950",
+        "vh_id": 8950,
+        "name": "St James (Glastonbury)\nTrinity (Wethersfield)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 162501,
+        "score": 3
       }
     ],
     "quality_score": 55,
@@ -480,15 +491,15 @@
         "score": 5
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
         "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
+        "estimated_total_comp": 62501,
+        "score": 3
       },
       {
         "id": "10565",
@@ -781,6 +792,17 @@
     },
     "similar_positions": [
       {
+        "id": "10352",
+        "vh_id": 10352,
+        "name": "Zion Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 107501,
+        "score": 5
+      },
+      {
         "id": "10599",
         "vh_id": 10599,
         "name": "St Matthews Parish Church",
@@ -800,17 +822,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 107501,
-        "score": 3
-      },
-      {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-        "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
         "score": 3
       },
       {
@@ -874,6 +885,17 @@
         "score": 4
       },
       {
+        "id": "8950",
+        "vh_id": 8950,
+        "name": "St James (Glastonbury)\nTrinity (Wethersfield)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 162501,
+        "score": 4
+      },
+      {
         "id": "10691",
         "vh_id": 10691,
         "name": "Saint Mary Annes Episcopal Church",
@@ -905,6 +927,69 @@
         "asa": null,
         "estimated_total_comp": 107501,
         "score": 3
+      }
+    ],
+    "quality_score": 65,
+    "quality_components": [
+      "Active status (25)",
+      "Recent date (15)",
+      "Very recent date (5)",
+      "Congregation identified (10)",
+      "Position named (5)",
+      "Position type (5)"
+    ],
+    "visibility": "extended"
+  },
+  {
+    "vh_id": 10643,
+    "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+    "diocese": "Connecticut",
+    "state": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10643",
+    "position_type": "Rector/Priest-in-Charge",
+    "congregation": "Trinity (Lakeville)\nTrinity (Torrington)",
+    "receiving_names_from": "03/06/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true,
+    "housing_type": "Cash Stipend",
+    "estimated_total_comp": 62501,
+    "comp_breakdown": {
+      "stipend": 62501
+    },
+    "similar_positions": [
+      {
+        "id": "10565",
+        "vh_id": 10565,
+        "name": "Mt Zion Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
+        "id": "10524",
+        "vh_id": 10524,
+        "name": "St Mary's Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
+        "id": "10584",
+        "vh_id": 10584,
+        "name": "Position in Northern Indiana",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 4
       },
       {
         "id": "10319",
@@ -915,6 +1000,17 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 57501,
+        "score": 4
+      },
+      {
+        "id": "10678",
+        "vh_id": 10678,
+        "name": "Position in Missouri",
+        "city": "",
+        "state": "MO",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
         "score": 3
       }
     ],
@@ -1803,6 +1899,17 @@
     },
     "similar_positions": [
       {
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 4
+      },
+      {
         "id": "10565",
         "vh_id": 10565,
         "name": "Mt Zion Episcopal Church",
@@ -1841,17 +1948,6 @@
         "name": "Saint Johns Church",
         "city": "Youngstown",
         "state": "OH",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10631",
-        "vh_id": 10631,
-        "name": "St Michaels Episcopal Church",
-        "city": "",
-        "state": "",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 87501,
@@ -2435,6 +2531,17 @@
     },
     "similar_positions": [
       {
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
         "id": "10524",
         "vh_id": 10524,
         "name": "St Mary's Episcopal Church",
@@ -2476,17 +2583,6 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 62501,
-        "score": 3
-      },
-      {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "St Thomas Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
         "score": 3
       }
     ],
@@ -3198,6 +3294,17 @@
     },
     "similar_positions": [
       {
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 5
+      },
+      {
         "id": "10565",
         "vh_id": 10565,
         "name": "Mt Zion Episcopal Church",
@@ -3239,17 +3346,6 @@
         "position_type": "Rector / Vicar / Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 62501,
-        "score": 3
-      },
-      {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "St Thomas Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
         "score": 3
       }
     ],
@@ -3668,20 +3764,20 @@
         "score": 4
       },
       {
-        "id": "10616",
-        "vh_id": 10616,
-        "name": "St Thomas Episcopal Church",
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
         "city": "",
         "state": "",
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
-        "estimated_total_comp": 87501,
+        "estimated_total_comp": 62501,
         "score": 3
       },
       {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Episcopal Church",
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St Thomas Episcopal Church",
         "city": "",
         "state": "",
         "position_type": "Rector/Priest-in-Charge",
@@ -3718,6 +3814,126 @@
       "Position type (5)"
     ],
     "visibility": "extended_hidden"
+  },
+  {
+    "vh_id": 10352,
+    "name": "Zion Episcopal Church",
+    "diocese": "Diocese Of Vermont",
+    "state": "VT",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10352",
+    "position_type": "Rector / Vicar / Priest-in-Charge",
+    "congregation": "Zion Episcopal Church",
+    "receiving_names_from": "01/01/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true,
+    "church_info": {
+      "nid": null,
+      "name": "Zion Church",
+      "street": "5167 Main St",
+      "city": "Manchester Center",
+      "state": "VT",
+      "zip": "05255-9772",
+      "phone": "1 (802) 3621987",
+      "email": "accounting@zionchurchmanchester.org",
+      "website": "http://www.zionchurchmanchester.org",
+      "type": "Parish",
+      "lat": null,
+      "lng": null
+    },
+    "match_confidence": "exact",
+    "housing_type": "Rectory",
+    "parish_context": {
+      "clergy_count_10yr": 0,
+      "avg_tenure_years": null,
+      "current_clergy_count": 0,
+      "attendance_trend": null,
+      "attendance_change_pct": null,
+      "giving_trend": null,
+      "giving_change_pct": null,
+      "membership_trend": null,
+      "membership_change_pct": null,
+      "latest_operating_revenue": null,
+      "years_of_data": 0
+    },
+    "estimated_total_comp": 107501,
+    "comp_breakdown": {
+      "stipend": 87501,
+      "housing": 20000
+    },
+    "similar_positions": [
+      {
+        "id": "10677",
+        "vh_id": 10677,
+        "name": "Trinity Church",
+        "city": "New Orleans",
+        "state": "LA",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 87501,
+        "score": 4
+      },
+      {
+        "id": "10650",
+        "vh_id": 10650,
+        "name": "The Parish Of Saint Mary And Saint Jude",
+        "city": "Northeast Harbor",
+        "state": "ME",
+        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 132501,
+        "score": 3
+      },
+      {
+        "id": "10599",
+        "vh_id": 10599,
+        "name": "St Matthews Parish Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 107501,
+        "score": 3
+      },
+      {
+        "id": "10577",
+        "vh_id": 10577,
+        "name": "St James (Albion)\nTrinity (Marshall)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 107501,
+        "score": 3
+      },
+      {
+        "id": "8945",
+        "vh_id": 8945,
+        "name": "St James Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 107501,
+        "score": 3
+      }
+    ],
+    "census": {
+      "median_household_income": 87091,
+      "population": 4100
+    },
+    "quality_score": 80,
+    "quality_components": [
+      "Active status (25)",
+      "Recent date (15)",
+      "Congregation identified (10)",
+      "Position named (5)",
+      "Church matched (10)",
+      "Position type (5)",
+      "State known (5)",
+      "Exact match (5)"
+    ],
+    "visibility": "extended"
   },
   {
     "vh_id": 10351,
@@ -4155,6 +4371,17 @@
     },
     "similar_positions": [
       {
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 4
+      },
+      {
         "id": "10584",
         "vh_id": 10584,
         "name": "Position in Northern Indiana",
@@ -4196,17 +4423,6 @@
         "position_type": "Rector/Priest-in-Charge",
         "asa": null,
         "estimated_total_comp": 82501,
-        "score": 3
-      },
-      {
-        "id": "10646",
-        "vh_id": 10646,
-        "name": "St Matthews Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 182501,
         "score": 3
       }
     ],
@@ -4419,6 +4635,17 @@
     },
     "similar_positions": [
       {
+        "id": "8950",
+        "vh_id": 8950,
+        "name": "St James (Glastonbury)\nTrinity (Wethersfield)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 162501,
+        "score": 5
+      },
+      {
         "id": "10646",
         "vh_id": 10646,
         "name": "St Matthews Episcopal Church",
@@ -4441,31 +4668,20 @@
         "score": 3
       },
       {
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 3
+      },
+      {
         "id": "10616",
         "vh_id": 10616,
         "name": "St Thomas Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10583",
-        "vh_id": 10583,
-        "name": "Trinity Episcopal Church",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 87501,
-        "score": 3
-      },
-      {
-        "id": "10580",
-        "vh_id": 10580,
-        "name": "Christ Episcopal Church",
         "city": "",
         "state": "",
         "position_type": "Rector/Priest-in-Charge",
@@ -6370,15 +6586,15 @@
         "score": 5
       },
       {
-        "id": "10175",
-        "vh_id": 10175,
-        "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
         "city": "",
-        "state": "SD",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
         "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 4
+        "estimated_total_comp": 62501,
+        "score": 3
       },
       {
         "id": "10565",
@@ -6645,81 +6861,6 @@
       "Position type (5)"
     ],
     "visibility": "extended_hidden"
-  },
-  {
-    "vh_id": 10175,
-    "name": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "diocese": "South Dakota",
-    "state": "SD",
-    "vh_status": "Receiving names",
-    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/10175",
-    "position_type": "Rector / Vicar / Priest-in-Charge",
-    "congregation": "Church of Jesus (Rosebud)\nFamily Worship (Norris)\nGrace (Soldier Creek)\nHoly Innocents (Parmelee)\nSt Thomas (Corn Creek)\nSts Philip and James (White River)\nTrinity (Mission)",
-    "receiving_names_from": "09/15/2025",
-    "receiving_names_to": "Open ended",
-    "open_ended": true,
-    "housing_type": "Rectory",
-    "estimated_total_comp": 57501,
-    "comp_breakdown": {
-      "stipend": 37501,
-      "housing": 20000
-    },
-    "similar_positions": [
-      {
-        "id": "10678",
-        "vh_id": 10678,
-        "name": "Position in Missouri",
-        "city": "",
-        "state": "MO",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 62501,
-        "score": 4
-      },
-      {
-        "id": "10197",
-        "vh_id": 10197,
-        "name": "Epiphany (Urbana)\nOur Saviour (Mechanicsburg)",
-        "city": "",
-        "state": "OH",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 62501,
-        "score": 4
-      },
-      {
-        "id": "10650",
-        "vh_id": 10650,
-        "name": "The Parish Of Saint Mary And Saint Jude",
-        "city": "Northeast Harbor",
-        "state": "ME",
-        "position_type": "Rector / Vicar / Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 132501,
-        "score": 3
-      },
-      {
-        "id": "10319",
-        "vh_id": 10319,
-        "name": "Position in San Joaquin",
-        "city": "",
-        "state": "",
-        "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
-        "estimated_total_comp": 57501,
-        "score": 3
-      }
-    ],
-    "quality_score": 65,
-    "quality_components": [
-      "Active status (25)",
-      "Recent date (15)",
-      "Congregation identified (10)",
-      "Position named (5)",
-      "Position type (5)",
-      "State known (5)"
-    ],
-    "visibility": "extended"
   },
   {
     "vh_id": 10174,
@@ -18133,6 +18274,91 @@
       "Active status (25)",
       "Recent date (15)",
       "Very recent date (5)",
+      "Position type (5)"
+    ],
+    "visibility": "extended"
+  },
+  {
+    "vh_id": 8950,
+    "name": "St James (Glastonbury)\nTrinity (Wethersfield)",
+    "diocese": "Connecticut",
+    "state": "",
+    "vh_status": "Receiving names",
+    "profile_url": "https://vocationhub.episcopalchurch.org/PositionView/8950",
+    "position_type": "Rector/Priest-in-Charge",
+    "congregation": "St James (Glastonbury)\nTrinity (Wethersfield)",
+    "receiving_names_from": "03/06/2026",
+    "receiving_names_to": "Open ended",
+    "open_ended": true,
+    "housing_type": "Cash Stipend",
+    "estimated_total_comp": 162501,
+    "comp_breakdown": {
+      "stipend": 162501
+    },
+    "similar_positions": [
+      {
+        "id": "10646",
+        "vh_id": 10646,
+        "name": "St Matthews Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 182501,
+        "score": 4
+      },
+      {
+        "id": "10684",
+        "vh_id": 10684,
+        "name": "Cathedral Church of St Luke",
+        "city": "",
+        "state": "",
+        "position_type": "Dean",
+        "asa": null,
+        "estimated_total_comp": 162501,
+        "score": 3
+      },
+      {
+        "id": "10643",
+        "vh_id": 10643,
+        "name": "Trinity (Lakeville)\nTrinity (Torrington)",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 62501,
+        "score": 3
+      },
+      {
+        "id": "10616",
+        "vh_id": 10616,
+        "name": "St Thomas Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 87501,
+        "score": 3
+      },
+      {
+        "id": "10583",
+        "vh_id": 10583,
+        "name": "Trinity Episcopal Church",
+        "city": "",
+        "state": "",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": null,
+        "estimated_total_comp": 87501,
+        "score": 3
+      }
+    ],
+    "quality_score": 65,
+    "quality_components": [
+      "Active status (25)",
+      "Recent date (15)",
+      "Very recent date (5)",
+      "Congregation identified (10)",
+      "Position named (5)",
       "Position type (5)"
     ],
     "visibility": "extended"
