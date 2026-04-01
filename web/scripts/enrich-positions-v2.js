@@ -794,11 +794,15 @@ function computeParishContext(parishId) {
 
   const currentCount = allClergy.filter(c => c.is_current).length;
 
-  // Count all known clergy at this parish for the context window.
-  // We use allClergy (not filtered) so the count reflects the full known
-  // leadership history. The field name "10yr" indicates the context window
-  // for the enrichment pipeline, not a strict date cutoff on the count.
-  const recentClergy = allClergy;
+  // Filter clergy to those who started or ended within the last 10 years, or are current.
+  const recentClergy = allClergy.filter(c => {
+    if (c.is_current) return true;
+    const startYear = c.start_date ? parseInt(c.start_date.split('/').pop(), 10) : null;
+    const endYear = c.end_date ? parseInt(c.end_date.split('/').pop(), 10) : null;
+    if (endYear && endYear >= tenYearsAgo) return true;
+    if (startYear && startYear >= tenYearsAgo) return true;
+    return false;
+  });
 
   // Compute average tenure
   let totalTenure = 0;

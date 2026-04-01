@@ -598,7 +598,7 @@ describe('enrich-positions-v2', () => {
     it('computes clergy count and avg tenure', () => {
       seedParishContextData();
       const ctx = computeParishContext(100);
-      expect(ctx.clergy_count_10yr).toBe(3);
+      expect(ctx.clergy_count_10yr).toBe(2);
       expect(ctx.current_clergy_count).toBe(1);
       expect(ctx.avg_tenure_years).toBeGreaterThan(0);
     });
