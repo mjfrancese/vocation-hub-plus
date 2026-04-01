@@ -15,10 +15,10 @@
 const { getDb, closeDb, logFetch } = require('./db');
 
 const BASE_URL = 'https://ea-api.cpg.org/common-access-api/1.0/ecdPlus';
-const RATE_LIMIT_MS = 50;
-const LOG_INTERVAL = 1000;
+const RATE_LIMIT_MS = 100;
+const LOG_INTERVAL = 500;
 const BATCH_SIZE = 1000;
-const CONCURRENCY = 10;
+const CONCURRENCY = 3;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
