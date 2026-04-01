@@ -11,7 +11,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 180  # Parishes ~50min + clergy ~90min + enrichment ~10min
+    timeout-minutes: 120  # Parallel fetch: parishes ~8min + clergy ~15min + enrichment ~10min (buffer for API slowness)
 
     steps:
       - uses: actions/checkout@v4
