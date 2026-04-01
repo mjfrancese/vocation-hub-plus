@@ -68,6 +68,21 @@ function extractCity(name) {
 // Alias used by matchPositionToParish
 const extractCityHint = extractCity;
 
+/**
+ * Normalize diocese name for comparison.
+ * Position data uses short form ("North Carolina"), DB uses long form
+ * ("Diocese Of North Carolina" or "Episcopal Diocese Of North Carolina").
+ * Strip common prefixes so both resolve to the same core name.
+ */
+function normalizeDioceseName(name) {
+  if (!name) return '';
+  return name.toLowerCase()
+    .replace(/^(the\s+)?episcopal\s+(church\s+in\s+|diocese\s+of\s+(the\s+)?)/i, '')
+    .replace(/^(the\s+)?diocese\s+of\s+(the\s+)?/i, '')
+    .replace(/^trustees and council of the episcopal diocese of\s*/i, '')
+    .trim();
+}
+
 // ---------------------------------------------------------------------------
 // Generic / diocesan domain detection
 // ---------------------------------------------------------------------------
@@ -134,29 +149,37 @@ function matchPositionToParish(position) {
   }
 
   // Strategy 3: Phone match (within same diocese)
+  const posNormDiocese = normalizeDioceseName(position.diocese);
   if (position.contact_phone) {
     const normalizedPhone = normalizePhone(position.contact_phone);
     if (normalizedPhone && normalizedPhone.length >= 10) {
       const parishes = db.prepare(
-        "SELECT * FROM parishes WHERE phone != '' AND phone IS NOT NULL AND LOWER(diocese) = LOWER(?)"
-      ).all(position.diocese || '');
+        "SELECT * FROM parishes WHERE phone != '' AND phone IS NOT NULL"
+      ).all();
       for (const p of parishes) {
-        if (normalizePhone(p.phone) === normalizedPhone) {
+        if (normalizeDioceseName(p.diocese) === posNormDiocese && normalizePhone(p.phone) === normalizedPhone) {
           return { parish: p, confidence: 'exact', method: 'phone' };
         }
       }
     }
   }
 
-  // Strategy 4: Name + diocese match via aliases
+  // Strategy 4: Name + diocese match via aliases (with normalized diocese comparison)
   const posNormalized = normalizeChurchName(position.name);
   if (posNormalized && position.diocese) {
-    const matches = db.prepare(`
+    const allMatches = db.prepare(`
       SELECT p.* FROM parishes p
       JOIN parish_aliases pa ON pa.parish_id = p.id
-      WHERE LOWER(p.diocese) = LOWER(?)
-        AND pa.alias_normalized = ?
-    `).all(position.diocese, posNormalized);
+      WHERE pa.alias_normalized = ?
+    `).all(posNormalized).filter(p => normalizeDioceseName(p.diocese) === posNormDiocese);
+
+    // Deduplicate by parish id (DB has duplicate entries)
+    const seen = new Set();
+    const matches = allMatches.filter(p => {
+      if (seen.has(p.id)) return false;
+      seen.add(p.id);
+      return true;
+    });
 
     if (matches.length === 1) {
       return { parish: matches[0], confidence: 'high', method: 'name_diocese' };
@@ -172,6 +195,14 @@ function matchPositionToParish(position) {
           return { parish: cityMatch, confidence: 'high', method: 'name_diocese_city' };
         }
       }
+      // If still ambiguous, pick best name match against original position name
+      const posLower = position.name.toLowerCase();
+      const exactName = matches.find(m => m.name && posLower.includes(m.name.toLowerCase()));
+      if (exactName) {
+        return { parish: exactName, confidence: 'medium', method: 'name_diocese_best' };
+      }
+      // Last resort: return first match at lower confidence
+      return { parish: matches[0], confidence: 'low', method: 'name_diocese_ambiguous' };
     }
   }
 
