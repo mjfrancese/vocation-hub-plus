@@ -138,6 +138,9 @@ export interface Position {
       membership: number | null;
     }>;
   };
+
+  /** Neutral parish context (clergy tenure, trends) for all users */
+  parish_context?: ParishContext;
 }
 
 export interface PositionChange {
@@ -165,6 +168,85 @@ export interface Meta {
     duration_ms: number;
     status: string;
   } | null;
+}
+
+/** Precomputed data for a claimed clergy member (from clergy-tokens.json) */
+export interface PersonalData {
+  name: string;
+  clergy_guid: string;
+  current_position: {
+    title: string;
+    parish: string;
+    parish_id: number | null;
+    start_date: string | null;
+    diocese: string;
+    city: string | null;
+    state: string | null;
+  } | null;
+  ordination_year: number | null;
+  experience_years: number | null;
+  positions: Array<{
+    title: string;
+    parish: string;
+    parish_id: number | null;
+    diocese: string;
+    city: string | null;
+    state: string | null;
+    start_year: number | null;
+    end_year: number | null;
+    is_current: boolean;
+  }>;
+  compensation_benchmarks: CompBenchmarks;
+  current_parish: {
+    asa: number | null;
+    plate_pledge: number | null;
+    membership: number | null;
+    operating_revenue: number | null;
+    lat: number | null;
+    lng: number | null;
+    census_median_income: number | null;
+    census_population: number | null;
+    clergy_count_10yr: number;
+    avg_tenure_years: number | null;
+  } | null;
+}
+
+/** Compensation benchmark medians across multiple dimensions */
+export interface CompBenchmarks {
+  diocese_median: number | null;
+  diocese_female_median: number | null;
+  diocese_male_median: number | null;
+  asa_bucket_median: number | null;
+  position_type_median: number | null;
+  experience_bracket_median: number | null;
+  year: number | null;
+}
+
+/** Entry in clergy-search-index.json for the claim page */
+export interface ClaimSearchEntry {
+  token: string;
+  name: string;
+  diocese: string | null;
+  current_position: string | null;
+  current_parish: string | null;
+  city: string | null;
+  state: string | null;
+  ordination_year: number | null;
+}
+
+/** Parish context data computed at build time, shown to all users */
+export interface ParishContext {
+  clergy_count_10yr: number;
+  avg_tenure_years: number | null;
+  current_clergy_count: number;
+  attendance_trend: 'growing' | 'declining' | 'stable' | null;
+  attendance_change_pct: number | null;
+  giving_trend: 'growing' | 'declining' | 'stable' | null;
+  giving_change_pct: number | null;
+  membership_trend: 'growing' | 'declining' | 'stable' | null;
+  membership_change_pct: number | null;
+  latest_operating_revenue: number | null;
+  years_of_data: number;
 }
 
 export type SortField =
