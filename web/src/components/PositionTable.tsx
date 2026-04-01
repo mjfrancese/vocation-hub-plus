@@ -7,6 +7,7 @@ import ParochialTrends from './ParochialTrends';
 import { isGibberish } from '@/lib/gibberish-detector';
 import ComparisonBar from './ComparisonBar';
 import ComparisonModal from './ComparisonModal';
+import ParishContextSection from './ParishContextSection';
 
 interface PositionTableProps {
   positions: Position[];
@@ -550,6 +551,9 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
     return (
       <div className="space-y-4">
         <DioceseContext pos={pos} />
+        {pos.parish_context && (
+          <ParishContextSection context={pos.parish_context} />
+        )}
         <CommunityContext pos={pos} />
         <QualityScoreDetail pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -578,6 +582,9 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
   return (
     <div className="space-y-5">
       <DioceseContext pos={pos} />
+      {pos.parish_context && (
+        <ParishContextSection context={pos.parish_context} />
+      )}
       <CommunityContext pos={pos} />
       <QualityScoreDetail pos={pos} />
 
