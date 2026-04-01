@@ -72,6 +72,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Pull remote changes BEFORE committing to avoid rebase conflicts.
+          # Stash our generated data, pull, then re-apply.
+          git stash --include-untracked
+          git pull --rebase origin main || true
+          git stash pop || true
           git add web/public/data/enriched-positions.json web/public/data/enriched-extended.json web/public/data/position-church-map.json
           git add web/public/data/clergy-tokens.json web/public/data/clergy-search-index.json
           if git diff --staged --quiet; then
@@ -79,7 +84,6 @@ jobs:
             echo "CHANGES=false" >> $GITHUB_ENV
           else
             git commit -m "chore: monthly data refresh $(date +%Y-%m-%d)"
-            git pull --rebase --autostash
             git push
             echo "CHANGES=true" >> $GITHUB_ENV
           fi

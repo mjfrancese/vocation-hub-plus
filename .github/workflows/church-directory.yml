@@ -75,6 +75,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Pull remote changes BEFORE committing to avoid rebase conflicts.
+          git stash --include-untracked
+          git pull --rebase origin main || true
+          git stash pop || true
           git add -f web/public/data/churches.json
           git add web/public/data/parochial-data.json data/church-nids.json
           git add web/public/data/position-church-map.json
@@ -85,7 +89,6 @@ jobs:
             echo "CHANGES=false" >> $GITHUB_ENV
           else
             git commit -m "Update church directory and parochial data"
-            git pull --rebase --autostash
             git push
             echo "CHANGES=true" >> $GITHUB_ENV
           fi
