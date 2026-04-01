@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState, useCallback } from 'react';
+import { Fragment, useState, useCallback, useEffect } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import QualityBadge, { QualityScoreDetail } from './QualityBadge';
 import ParochialTrends from './ParochialTrends';
@@ -8,6 +8,8 @@ import { isGibberish } from '@/lib/gibberish-detector';
 import ComparisonBar from './ComparisonBar';
 import ComparisonModal from './ComparisonModal';
 import ParishContextSection from './ParishContextSection';
+import PersonalContext from './PersonalContext';
+import type { PersonalData } from '@/lib/types';
 
 interface PositionTableProps {
   positions: Position[];
@@ -99,6 +101,21 @@ export default function PositionTable({ positions }: PositionTableProps) {
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [comparedIds, setComparedIds] = useState<Set<string>>(new Set());
   const [showComparison, setShowComparison] = useState(false);
+  const [meData, setMeData] = useState<PersonalData | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('me') || localStorage.getItem('vh_me_token');
+    if (!token) return;
+
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    fetch(`${base}/data/clergy-tokens.json`)
+      .then(r => r.json())
+      .then(tokenMap => {
+        if (tokenMap[token]) setMeData(tokenMap[token]);
+      })
+      .catch(() => {});
+  }, []);
 
   const MAX_COMPARE = 3;
 
@@ -256,7 +273,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
               </div>
               {expandedId === pos.id && (
                 <div className="border border-t-0 border-primary-200 rounded-b-lg p-3 bg-primary-50/40 border-l-4 border-l-primary-500">
-                  <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
+                  <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} meData={meData} />
                 </div>
               )}
             </div>
@@ -374,7 +391,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   {expandedId === pos.id && (
                     <tr key={`${pos.id}-detail`}>
                       <td colSpan={7} className="px-4 py-4 bg-primary-50/40 border-l-4 border-l-primary-500">
-                        <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} />
+                        <ExpandedDetail pos={pos} onNavigate={expandAndScrollTo} meData={meData} />
                       </td>
                     </tr>
                   )}
@@ -505,7 +522,7 @@ function SimilarPositions({ pos, onNavigate }: { pos: Position; onNavigate: (id:
   );
 }
 
-function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: string) => void }) {
+function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate: (id: string) => void; meData: PersonalData | null }) {
   const fields = pos.deep_scrape_fields || [];
   const hasDeepData = fields.length > 0;
 
@@ -554,6 +571,9 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
         {pos.parish_context && (
           <ParishContextSection context={pos.parish_context} />
         )}
+        {meData && (
+          <PersonalContext user={meData} position={pos} />
+        )}
         <CommunityContext pos={pos} />
         <QualityScoreDetail pos={pos} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
@@ -584,6 +604,9 @@ function ExpandedDetail({ pos, onNavigate }: { pos: Position; onNavigate: (id: s
       <DioceseContext pos={pos} />
       {pos.parish_context && (
         <ParishContextSection context={pos.parish_context} />
+      )}
+      {meData && (
+        <PersonalContext user={meData} position={pos} />
       )}
       <CommunityContext pos={pos} />
       <QualityScoreDetail pos={pos} />
