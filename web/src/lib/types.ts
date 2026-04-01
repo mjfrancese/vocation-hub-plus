@@ -59,19 +59,8 @@ export interface Position {
   deep_scrape_fields?: Array<{ label: string; value: string }>;
 
   // Enriched church data (from church directory cross-reference)
-  church_info?: {
-    name: string;
-    street: string;
-    city: string;
-    state: string;
-    zip: string;
-    phone: string;
-    email: string;
-    website: string;
-    type: string;
-    lat: number | null;
-    lng: number | null;
-  };
+  // Always an array: single-parish = [one], multi-parish = [one, two, ...]
+  church_infos?: ChurchInfo[];
 
   // Diocese-level percentile rankings (computed at build time)
   diocese_percentiles?: {
@@ -129,18 +118,35 @@ export interface Position {
     score: number;
   }>;
 
-  // Enriched parochial data (from Power BI cross-reference)
-  parochial?: {
-    congregationCity: string;
-    years: Record<string, {
-      averageAttendance: number | null;
-      plateAndPledge: number | null;
-      membership: number | null;
-    }>;
-  };
+  // Parochial report data (parallel with church_infos)
+  parochials?: ParochialData[];
 
-  /** Neutral parish context (clergy tenure, trends) for all users */
-  parish_context?: ParishContext;
+  // Neutral parish context (parallel with church_infos)
+  parish_contexts?: ParishContext[];
+}
+
+export interface ChurchInfo {
+  nid?: number;
+  name: string;
+  street: string;
+  city: string;
+  state: string;
+  zip: string;
+  phone: string;
+  email: string;
+  website: string;
+  type: string;
+  lat: number | null;
+  lng: number | null;
+}
+
+export interface ParochialData {
+  congregationCity: string;
+  years: Record<string, {
+    averageAttendance: number | null;
+    plateAndPledge: number | null;
+    membership: number | null;
+  }>;
 }
 
 export interface PositionChange {
