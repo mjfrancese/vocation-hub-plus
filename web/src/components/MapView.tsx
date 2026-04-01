@@ -30,7 +30,7 @@ export default function MapView({ positions }: MapViewProps) {
   const clusterRef = useRef<L.MarkerClusterGroup | null>(null);
 
   const mappable = positions.filter(
-    (p) => p.church_info?.lat != null && p.church_info?.lng != null
+    (p) => p.church_infos?.[0]?.lat != null && p.church_infos?.[0]?.lng != null
   );
 
   // Initialize map
@@ -71,10 +71,10 @@ export default function MapView({ positions }: MapViewProps) {
     const cluster = L.markerClusterGroup();
 
     for (const p of mappable) {
-      const lat = p.church_info!.lat!;
-      const lng = p.church_info!.lng!;
-      const churchName = p.church_info?.name || p.name;
-      const cityState = [p.church_info?.city, p.church_info?.state]
+      const lat = p.church_infos![0].lat!;
+      const lng = p.church_infos![0].lng!;
+      const churchName = p.church_infos?.[0]?.name || p.name;
+      const cityState = [p.church_infos?.[0]?.city, p.church_infos?.[0]?.state]
         .filter(Boolean)
         .join(', ');
 

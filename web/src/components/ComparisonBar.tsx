@@ -21,7 +21,7 @@ export default function ComparisonBar({ selected, onRemove, onClear, onCompare }
           </span>
           <div className="flex items-center gap-1.5 flex-wrap min-w-0">
             {selected.map((pos) => {
-              const name = pos.church_info?.name || pos.name;
+              const name = pos.church_infos?.[0]?.name || pos.name;
               return (
                 <span
                   key={pos.id}

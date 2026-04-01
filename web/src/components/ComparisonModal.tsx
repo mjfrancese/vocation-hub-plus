@@ -10,15 +10,15 @@ interface ComparisonModalProps {
 }
 
 function getChurchName(pos: Position): string {
-  return pos.church_info?.name || pos.name;
+  return pos.church_infos?.[0]?.name || pos.name;
 }
 
 function getCity(pos: Position): string {
-  return pos.church_info?.city || pos.city || '';
+  return pos.church_infos?.[0]?.city || pos.city || '';
 }
 
 function getState(pos: Position): string {
-  return pos.church_info?.state || pos.state || '';
+  return pos.church_infos?.[0]?.state || pos.state || '';
 }
 
 function timeOnMarket(pos: Position): string {
@@ -49,17 +49,17 @@ function timeOnMarket(pos: Position): string {
 }
 
 function getLatestParochialYear(pos: Position): string | null {
-  if (!pos.parochial) return null;
-  const years = Object.keys(pos.parochial.years).sort();
+  if (!pos.parochials?.[0]) return null;
+  const years = Object.keys(pos.parochials[0].years).sort();
   return years.length > 0 ? years[years.length - 1] : null;
 }
 
 function getAsaTrend(pos: Position): 'up' | 'down' | 'flat' | null {
-  if (!pos.parochial) return null;
-  const years = Object.keys(pos.parochial.years).sort();
+  if (!pos.parochials?.[0]) return null;
+  const years = Object.keys(pos.parochials[0].years).sort();
   const recent = years.slice(-5);
   const values = recent
-    .map(y => pos.parochial!.years[y].averageAttendance)
+    .map(y => pos.parochials![0].years[y].averageAttendance)
     .filter((v): v is number => v !== null && v > 0);
   if (values.length < 2) return null;
   const first = values[0];
@@ -78,12 +78,12 @@ function trendArrowText(trend: 'up' | 'down' | 'flat' | null): string {
 }
 
 function computeParishSnapshot(pos: Position): string {
-  if (!pos.parochial || Object.keys(pos.parochial.years).length === 0) return '';
+  if (!pos.parochials?.[0] || Object.keys(pos.parochials[0].years).length === 0) return '';
   const computeTrend = (metric: 'averageAttendance' | 'plateAndPledge' | 'membership') => {
-    const sorted = Object.keys(pos.parochial!.years).sort();
+    const sorted = Object.keys(pos.parochials![0].years).sort();
     const recent = sorted.slice(-5);
     const values = recent
-      .map(y => pos.parochial!.years[y][metric])
+      .map(y => pos.parochials![0].years[y][metric])
       .filter((v): v is number => v !== null && v > 0);
     if (values.length < 2) return null;
     const first = values[0];
@@ -161,20 +161,20 @@ export default function ComparisonModal({ positions, onClose }: ComparisonModalP
 
   const asaValues = positions.map((pos, i) => {
     const yr = latestYears[i];
-    if (!yr || !pos.parochial) return null;
-    return pos.parochial.years[yr]?.averageAttendance ?? null;
+    if (!yr || !pos.parochials?.[0]) return null;
+    return pos.parochials[0].years[yr]?.averageAttendance ?? null;
   });
 
   const platePledgeValues = positions.map((pos, i) => {
     const yr = latestYears[i];
-    if (!yr || !pos.parochial) return null;
-    return pos.parochial.years[yr]?.plateAndPledge ?? null;
+    if (!yr || !pos.parochials?.[0]) return null;
+    return pos.parochials[0].years[yr]?.plateAndPledge ?? null;
   });
 
   const membershipValues = positions.map((pos, i) => {
     const yr = latestYears[i];
-    if (!yr || !pos.parochial) return null;
-    return pos.parochial.years[yr]?.membership ?? null;
+    if (!yr || !pos.parochials?.[0]) return null;
+    return pos.parochials[0].years[yr]?.membership ?? null;
   });
 
   const compValues = positions.map(p => p.estimated_total_comp ?? null);

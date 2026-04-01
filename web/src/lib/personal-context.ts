@@ -156,7 +156,7 @@ export function computeAllComparisons(user: PersonalData, position: Position): P
   const cp = user.current_parish;
   const cb = user.compensation_benchmarks;
   const posComp = position.compensation;
-  const posChurch = position.church_info;
+  const posChurch = position.church_infos?.[0];
   const posCensus = position.census;
 
   // Parse avg_sunday_attendance (stored as a string on Position)
@@ -178,18 +178,18 @@ export function computeAllComparisons(user: PersonalData, position: Position): P
     asa_comparison: (cp?.asa != null && posAsa != null)
       ? { yours: cp.asa, theirs: posAsa }
       : null,
-    plate_pledge_comparison: (cp?.plate_pledge != null && position.parochial?.years)
+    plate_pledge_comparison: (cp?.plate_pledge != null && position.parochials?.[0]?.years)
       ? (() => {
-          const years = Object.values(position.parochial!.years);
+          const years = Object.values(position.parochials![0].years);
           const latest = years[years.length - 1];
           return latest?.plateAndPledge != null
             ? { yours: cp.plate_pledge!, theirs: latest.plateAndPledge }
             : null;
         })()
       : null,
-    membership_comparison: (cp?.membership != null && position.parochial?.years)
+    membership_comparison: (cp?.membership != null && position.parochials?.[0]?.years)
       ? (() => {
-          const years = Object.values(position.parochial!.years);
+          const years = Object.values(position.parochials![0].years);
           const latest = years[years.length - 1];
           return latest?.membership != null
             ? { yours: cp.membership!, theirs: latest.membership }
