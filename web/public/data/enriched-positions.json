@@ -44,8 +44,8 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Davids Church",
+        "nid": "5609",
+        "name": "Saint Davids Episcopal Day School",
         "street": "301 E 8th St",
         "city": "Austin",
         "state": "TX",
@@ -53,17 +53,29 @@
         "phone": "1 (512) 6103500",
         "email": "jim.l@stdave.org",
         "website": "http://www.stdave.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "School",
+        "lat": 30.26882,
+        "lng": -97.73914
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Hope Benko",
+        "position_title": "Associate Rector",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 4.5
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 4.5,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -129,21 +141,87 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Zion Church",
-        "street": "5167 Main St",
+        "nid": "8992",
+        "name": "Zion Episcopal Church",
+        "street": "5167 Main St. ",
         "city": "Manchester Center",
         "state": "VT",
-        "zip": "05255-9772",
-        "phone": "1 (802) 3621987",
-        "email": "accounting@zionchurchmanchester.org",
+        "zip": "05255",
+        "phone": "(802) 362-1987",
+        "email": "office@zionchurchmanchester.org",
         "website": "http://www.zionchurchmanchester.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "type": "church",
+        "lat": 43.17834,
+        "lng": -73.05161
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 109,
+            "plateAndPledge": 304708,
+            "membership": 646,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 124,
+            "plateAndPledge": 288157,
+            "membership": 650,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 120,
+            "plateAndPledge": 254734,
+            "membership": 642,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 115,
+            "plateAndPledge": 246656,
+            "membership": 670,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 110,
+            "plateAndPledge": 244465,
+            "membership": 680,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 76,
+            "plateAndPledge": 188200,
+            "membership": 675,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 39,
+            "plateAndPledge": 202255,
+            "membership": 310,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 50,
+            "plateAndPledge": 206419,
+            "membership": 249,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 60,
+            "plateAndPledge": 254868,
+            "membership": 157,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 61,
+            "plateAndPledge": 242601,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -159,6 +237,28 @@
         "years_of_data": 0
       }
     ],
+<<<<<<< Updated upstream
+=======
+    "diocese_percentiles": {
+      "asa": 88,
+      "asa_value": 61,
+      "plate_pledge": 90,
+      "plate_pledge_value": 242601
+    },
+    "similar_positions": [
+      {
+        "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
+        "vh_id": 8615,
+        "name": "Church of the Resurrection",
+        "city": "Sautee Nacoochee",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 76,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ],
+>>>>>>> Stashed changes
     "census": {
       "median_household_income": 87091,
       "population": 4100
@@ -294,7 +394,7 @@
         "city": "Roxbury",
         "state": "CT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 30,
         "estimated_total_comp": 37501,
         "score": 4
       }
@@ -403,7 +503,7 @@
         "city": "Roxbury",
         "state": "CT",
         "position_type": "Rector/Priest-in-Charge",
-        "asa": null,
+        "asa": 30,
         "estimated_total_comp": 37501,
         "score": 4
       }
@@ -475,10 +575,37 @@
         "type": "Parish",
         "lat": null,
         "lng": null
+      },
+      {
+        "nid": "8256",
+        "name": "Holy Trinity (Old Swedes) Episcopal Church",
+        "street": "606 N. Church Street",
+        "city": "Wilmington",
+        "state": "DE",
+        "zip": "19801",
+        "phone": "302.652.8605",
+        "email": "office@trinityparishde.org",
+        "website": "http://www.oldswedes.org",
+        "type": "church",
+        "lat": 39.73863,
+        "lng": -75.54129
       }
     ],
-    "match_confidence": "medium",
+    "match_confidence": "low",
     "parish_contexts": [
+      {
+        "clergy_count_10yr": 0,
+        "avg_tenure_years": null,
+        "current_clergy_count": 0,
+        "attendance_trend": null,
+        "attendance_change_pct": null,
+        "giving_trend": null,
+        "giving_change_pct": null,
+        "membership_trend": null,
+        "membership_change_pct": null,
+        "latest_operating_revenue": null,
+        "years_of_data": 0
+      },
       {
         "clergy_count_10yr": 0,
         "avg_tenure_years": null,
@@ -548,7 +675,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "1789",
         "name": "Trinity Church",
         "street": "9325 West St",
         "city": "Manassas",
@@ -558,16 +685,94 @@
         "email": "info@trinityepiscopalchurch.org",
         "website": "http://trinityepiscopalchurch.org/",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 38.75226,
+        "lng": -77.47315
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 272,
+            "plateAndPledge": 522845,
+            "membership": 1134,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 272,
+            "plateAndPledge": 522845,
+            "membership": 1134,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 272,
+            "plateAndPledge": 522845,
+            "membership": 1134,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 226,
+            "plateAndPledge": 464992,
+            "membership": 1159,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 219,
+            "plateAndPledge": 464992,
+            "membership": 1159,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 0,
+            "plateAndPledge": 0,
+            "membership": 1159,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 86,
+            "plateAndPledge": 425465,
+            "membership": 981,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 109,
+            "plateAndPledge": 390906,
+            "membership": 871,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 123,
+            "plateAndPledge": 403636,
+            "membership": 670,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 109,
+            "plateAndPledge": 386926,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "John Baker",
+        "position_title": "Supply Clergy",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 1.5
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 1.5,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -578,6 +783,28 @@
         "years_of_data": 0
       }
     ],
+<<<<<<< Updated upstream
+=======
+    "diocese_percentiles": {
+      "asa": 73,
+      "asa_value": 109,
+      "plate_pledge": 73,
+      "plate_pledge_value": 386926
+    },
+    "similar_positions": [
+      {
+        "id": "7cc134144c846094b4dfab81ebd0bd6db2567024fa2dd71e76081f78ca0a5a38",
+        "vh_id": 10571,
+        "name": "Christ Church",
+        "city": "Cody",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 92,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ],
+>>>>>>> Stashed changes
     "census": {
       "median_household_income": 113837,
       "population": 49620
@@ -633,7 +860,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "4128",
         "name": "Saint Thomas Episcopal Church",
         "street": "315 Lindsey St",
         "city": "Reidsville",
@@ -643,8 +870,8 @@
         "email": "office@stthomasreidsville.org",
         "website": "http://www.stthomasreidsville.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 36.359111,
+        "lng": -79.667012
       }
     ],
     "match_confidence": "high",
@@ -718,7 +945,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "6752",
         "name": "Saint Peters Church",
         "street": "22 N Union St",
         "city": "Smyrna",
@@ -728,8 +955,8 @@
         "email": "stpeters.smyrna@verizon.net",
         "website": "http://www.stpeters-smyrna.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 39.29911,
+        "lng": -75.60974
       }
     ],
     "match_confidence": "high",
@@ -803,18 +1030,18 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Peters Church",
+        "nid": "2224",
+        "name": "St. Peter's Episcopal Church",
         "street": "101 E 4th Ave",
         "city": "Rome",
         "state": "GA",
         "zip": "30161-3119",
-        "phone": "1 (706) 2919111",
-        "email": "elizabeth@stpetersrome.org",
-        "website": "http://www.stpetersrome.org",
-        "type": "Parish",
-        "lat": null,
-        "lng": null
+        "phone": "706-291-9111",
+        "email": null,
+        "website": "http://stpetersrome.org/ministries/canterbury/",
+        "type": "church",
+        "lat": 34.253966,
+        "lng": -85.170719
       }
     ],
     "match_confidence": "high",
@@ -888,7 +1115,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "5307",
         "name": "Saint Peters Episcopal Church",
         "street": "224 S Military Hwy",
         "city": "Norfolk",
@@ -898,8 +1125,8 @@
         "email": "laura@stpeters-norfolk.org",
         "website": "http://www.stpeters-norfolk.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 36.837408,
+        "lng": -76.209108
       }
     ],
     "match_confidence": "high",
@@ -973,26 +1200,86 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
-        "name": "Saint Pauls Episcopal Church",
-        "street": "1528 Oakdale Rd",
-        "city": "Modesto",
+        "nid": "5002",
+        "name": "St Pauls Episcopal Fellowship",
+        "street": "120 N Hall St",
+        "city": "Visalia",
         "state": "CA",
-        "zip": "95355-3306",
-        "phone": "1 (209) 5223267",
-        "email": "allison.st.paulschurch@gmail.com",
-        "website": "http://www.saintpaulsmodesto.org",
+        "zip": "93291-5833",
+        "phone": "1 (559) 6278265",
+        "email": "sward1978@sbcglobal.net",
+        "website": "http://www.stpaulsepiscopalvisalia.com/",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 36.330737,
+        "lng": -119.308399
       }
     ],
-    "match_confidence": "low",
+    "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 39,
+            "plateAndPledge": 65392,
+            "membership": 69,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 38,
+            "plateAndPledge": 65416,
+            "membership": 65,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 43,
+            "plateAndPledge": 80764,
+            "membership": 76,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 46,
+            "plateAndPledge": 80497,
+            "membership": 76,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 49,
+            "plateAndPledge": 86107,
+            "membership": 78,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 40,
+            "plateAndPledge": 91653,
+            "membership": 77,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 23,
+            "plateAndPledge": 99940,
+            "membership": 85,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "Suzanne Ward",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2013",
+        "years_tenure": 13
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 13
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 13,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1003,6 +1290,18 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 41,
+      "asa_value": 23,
+      "plate_pledge": 59,
+      "plate_pledge_value": 99940,
+      "membership": 0,
+      "membership_value": 85
+    },
+    "census": {
+      "median_household_income": 75679,
+      "population": 61439
+    },
     "quality_score": 100,
     "quality_components": [
       "Public listing (100)"
@@ -1054,7 +1353,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "2163",
         "name": "Saint Lukes Episcopal Church",
         "street": "435 Peachtree St NE",
         "city": "Atlanta",
@@ -1064,16 +1363,28 @@
         "email": "sladmin@stlukesatlanta.org",
         "website": "http://www.stlukesatlanta.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 33.7665,
+        "lng": -84.38442
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Michael White",
+        "position_title": "Interim Rector",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 1
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 1,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1224,7 +1535,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "1507",
         "name": "Saint Michaels Church",
         "street": "25 South St",
         "city": "Litchfield",
@@ -1234,8 +1545,8 @@
         "email": "office@stmichaels-litchfield.org",
         "website": "http://www.stmichaels-litchfield.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 41.74624,
+        "lng": -73.18875
       }
     ],
     "match_confidence": "high",
@@ -1309,7 +1620,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "1704",
         "name": "Saint Michaels Episcopal Church",
         "street": "1132 N Ivanhoe St",
         "city": "Arlington",
@@ -1319,16 +1630,28 @@
         "email": "parishoffice@stmichaelsarlington.org",
         "website": "http://www.stmichaelsarlington.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 38.882359,
+        "lng": -77.132383
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Mark Furlow",
+        "position_title": "Interim",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 1
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 1,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1394,7 +1717,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "5293",
         "name": "Saint Matthias Episcopal Church",
         "street": "11300 W Huguenot Rd",
         "city": "Midlothian",
@@ -1404,16 +1727,28 @@
         "email": "st.matthias@stmatmidlo.com",
         "website": "http://stmatmidlo.com",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 37.52558,
+        "lng": -77.60483
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Gregory Bezilla",
+        "position_title": "The Rev. Gregory Bezilla",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 6.5
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 6.5,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1479,7 +1814,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "4102",
         "name": "Saint Matthews Episcopal Church",
         "street": "210 St Marys Rd",
         "city": "Hillsborough",
@@ -1489,16 +1824,28 @@
         "email": "welcome@stmatthewshillsborough.org",
         "website": "http://www.stmatthewshillsborough.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 36.07613,
+        "lng": -79.09551
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Lisa Frost-Phillips",
+        "position_title": "Associate Rector",
+        "start_date": "01/01/2023",
+        "years_tenure": 3
+      },
+      "parish_clergy_history": {
+        "recent_count": 3,
+        "avg_tenure_years": 16.7
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 3,
+        "avg_tenure_years": 16.7,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1564,7 +1911,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "6840",
         "name": "Saint Pauls Episcopal Church",
         "street": "576 Roscoe Rd",
         "city": "Newnan",
@@ -1574,16 +1921,28 @@
         "email": "admin@stpaulsnewnan.org",
         "website": "http://www.stpaulsnewnan.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 33.40872,
+        "lng": -84.811282
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Richard Arthur",
+        "position_title": "Rector",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 1
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 1,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1819,18 +2178,18 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "5278",
         "name": "Saint Johns Episcopal Church",
-        "street": "197 Mountain Rd",
+        "street": "3120 Mountain Rd",
         "city": "Halifax",
         "state": "VA",
-        "zip": "24558-2010",
-        "phone": "1 (434) 4766696",
-        "email": "stjohnsepiscopalchurch@gmail.com",
-        "website": "https://stjohnshalifax.blogspot.com/",
+        "zip": "24558-2228",
+        "phone": "1 (434) 476-6696",
+        "email": "sallen@diosova.org",
+        "website": "http://www.gcronline.com/stjohn/",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 36.76706,
+        "lng": -78.9319
       }
     ],
     "match_confidence": "high",
@@ -1904,7 +2263,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "5504",
         "name": "Saint James",
         "street": "1410 NE Stadium Way",
         "city": "Pullman",
@@ -1914,16 +2273,28 @@
         "email": "office@stjamespullman.org",
         "website": "http://www.stjamespullman.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 46.736874,
+        "lng": -117.162606
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Rachel Endicott",
+        "position_title": "Priest-in-Charge",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 18
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 18,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -1989,7 +2360,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "1532",
         "name": "Saint James Church",
         "street": "76 Federal St",
         "city": "New London",
@@ -1999,16 +2370,28 @@
         "email": "st.james.parish@snet.net",
         "website": "http://www.stjamesnl.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 41.357099,
+        "lng": -72.099055
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Patty Hames",
+        "position_title": "Priest Associate",
+        "start_date": "01/01/2022",
+        "years_tenure": 4
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 4
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 4,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2159,7 +2542,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "2227",
         "name": "Church of the Resurrection",
         "street": "1755 Duncan Bridge Rd",
         "city": "Sautee Nacoochee",
@@ -2169,11 +2552,77 @@
         "email": "rechurch1755@gmail.com",
         "website": "http://www.resurrectionsautee.com",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 34.65025,
+        "lng": -83.69578
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 115,
+            "plateAndPledge": 243268,
+            "membership": 262,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 110,
+            "plateAndPledge": 221206,
+            "membership": 256,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 107,
+            "plateAndPledge": 270207,
+            "membership": 267,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 110,
+            "plateAndPledge": 259279,
+            "membership": 266,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 108,
+            "plateAndPledge": 247020,
+            "membership": 270,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 104,
+            "plateAndPledge": 222653,
+            "membership": 267,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 65,
+            "plateAndPledge": 232568,
+            "membership": 267,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 88,
+            "plateAndPledge": 243429,
+            "membership": 171,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 82,
+            "plateAndPledge": 241331,
+            "membership": 174,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 76,
+            "plateAndPledge": 308872,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -2189,6 +2638,39 @@
         "years_of_data": 0
       }
     ],
+<<<<<<< Updated upstream
+=======
+    "diocese_percentiles": {
+      "asa": 42,
+      "asa_value": 76,
+      "plate_pledge": 53,
+      "plate_pledge_value": 308872
+    },
+    "similar_positions": [
+      {
+        "id": "313327df4e7df4268a3da531764ac144479ae3a1e3493f8a6f7e6e9f001ce997",
+        "vh_id": 10352,
+        "name": "Zion Episcopal Church",
+        "city": "Manchester Center",
+        "state": "VT",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 61,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "7cc134144c846094b4dfab81ebd0bd6db2567024fa2dd71e76081f78ca0a5a38",
+        "vh_id": 10571,
+        "name": "Christ Church",
+        "city": "Cody",
+        "state": "WY",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 92,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ],
+>>>>>>> Stashed changes
     "census": {
       "median_household_income": 64185,
       "population": 3344
@@ -2329,7 +2811,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "4090",
         "name": "Holy Trinity Episcopal Church",
         "street": "607 N Greene St",
         "city": "Greensboro",
@@ -2339,16 +2821,94 @@
         "email": "tammy@holy-trinity.com",
         "website": "http://www.holy-trinity.com",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 36.07922,
+        "lng": -79.79128
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 570,
+            "plateAndPledge": 1721629,
+            "membership": 2446,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 570,
+            "plateAndPledge": 1881651,
+            "membership": 2491,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 572,
+            "plateAndPledge": 1774307,
+            "membership": 2517,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 585,
+            "plateAndPledge": 1802456,
+            "membership": 2545,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 485,
+            "plateAndPledge": 1695034,
+            "membership": 2553,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 413,
+            "plateAndPledge": 1673842,
+            "membership": 2548,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 140,
+            "plateAndPledge": 1646011,
+            "membership": 2690,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 228,
+            "plateAndPledge": 1562750,
+            "membership": 2675,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 265,
+            "plateAndPledge": 1865266,
+            "membership": 2343,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 269,
+            "plateAndPledge": 1883630,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "Eric Grubb",
+        "position_title": "Associate Rector for Pastoral Care",
+        "start_date": "01/01/2026",
+        "years_tenure": 0
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 3
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 3,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2359,6 +2919,15 @@
         "years_of_data": 0
       }
     ],
+<<<<<<< Updated upstream
+=======
+    "diocese_percentiles": {
+      "asa": 93,
+      "asa_value": 269,
+      "plate_pledge": 95,
+      "plate_pledge_value": 1883630
+    },
+>>>>>>> Stashed changes
     "census": {
       "median_household_income": 43092,
       "population": 21253
@@ -2414,7 +2983,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "2158",
         "name": "Holy Innocents Church",
         "street": "805 Mount Vernon Hwy",
         "city": "Atlanta",
@@ -2424,16 +2993,28 @@
         "email": "cfleming@holyinnocents.org",
         "website": "http://www.holyinnocents.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 33.90849,
+        "lng": -84.41382
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "T Lucas",
+        "position_title": "Vicar",
+        "start_date": "01/01/2022",
+        "years_tenure": 4
+      },
+      "parish_clergy_history": {
+        "recent_count": 3,
+        "avg_tenure_years": 6
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 3,
+        "avg_tenure_years": 6,
+        "current_clergy_count": 3,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2584,7 +3165,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "6847",
         "name": "Saint Anthonys Episcopal Church",
         "street": "174 Saint Anthony Dr",
         "city": "Winder",
@@ -2594,8 +3175,8 @@
         "email": "stanthonyswinder@windstream.net",
         "website": "http://www.stanthonyswinder.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 34.007332,
+        "lng": -83.724968
       }
     ],
     "match_confidence": "high",
@@ -2669,7 +3250,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "3590",
         "name": "Saint Andrews Church",
         "street": "1833 Regent St",
         "city": "Madison",
@@ -2679,16 +3260,28 @@
         "email": "general@standrews-madison.org",
         "website": "http://www.standrews-madison.org/",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 43.067855,
+        "lng": -89.418453
       }
     ],
     "match_confidence": "high",
+    "clergy": {
+      "current_clergy": {
+        "name": "Lynne Carver",
+        "position_title": "Rector",
+        "start_date": "01/01/2025",
+        "years_tenure": 1
+      },
+      "parish_clergy_history": {
+        "recent_count": 1,
+        "avg_tenure_years": 1
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 1,
+        "avg_tenure_years": 1,
+        "current_clergy_count": 1,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2754,18 +3347,18 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "1761",
         "name": "Cople Parish",
-        "street": "1233 Old Yeocomico Rd",
-        "city": "Kinsale",
+        "street": "PO Box 110",
+        "city": "Hague",
         "state": "VA",
-        "zip": "22488",
-        "phone": "1 (804) 4722593",
-        "email": "copleparish@gmail.com",
-        "website": "http://www.copleparish.com",
+        "zip": "22469-0110",
+        "phone": "1 (804) 472-2593",
+        "email": "copleparish@rivnet.net",
+        "website": "http://www.copleparish.org",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 38.068619,
+        "lng": -76.648197
       }
     ],
     "match_confidence": "high",
@@ -2854,6 +3447,72 @@
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 60,
+            "plateAndPledge": 106542,
+            "membership": 158,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 42,
+            "plateAndPledge": 91744,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 33,
+            "plateAndPledge": 72829,
+            "membership": 112,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 27,
+            "plateAndPledge": 86661,
+            "membership": 108,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 27,
+            "plateAndPledge": 58300,
+            "membership": 108,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 26,
+            "plateAndPledge": 38600,
+            "membership": 110,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 18,
+            "plateAndPledge": 58254,
+            "membership": 109,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 23,
+            "plateAndPledge": 91618,
+            "membership": 85,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 25,
+            "plateAndPledge": 128772,
+            "membership": 74,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 30,
+            "plateAndPledge": 96699,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
     "parish_contexts": [
       {
         "clergy_count_10yr": 0,
@@ -2869,11 +3528,28 @@
         "years_of_data": 0
       }
     ],
+    "diocese_percentiles": {
+      "asa": 35,
+      "asa_value": 30,
+      "plate_pledge": 38,
+      "plate_pledge_value": 96699
+    },
     "estimated_total_comp": 37501,
     "comp_breakdown": {
       "stipend": 37501
     },
     "similar_positions": [
+      {
+        "id": "8d1a23c2efeb57525b4396e2441a59f4a5d5c2c527c0a5741186d2ba79353675",
+        "vh_id": 10353,
+        "name": "St Pauls Episcopal Fellowship",
+        "city": "Visalia",
+        "state": "CA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 23,
+        "estimated_total_comp": null,
+        "score": 5
+      },
       {
         "id": "3f1eb53aedabfb78bb65721abae8b498c3054d9287b1021bbe4c65bf605663d0",
         "vh_id": 8950,
@@ -2952,7 +3628,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "6458",
         "name": "Christ Church",
         "street": "825 Simpson Ave",
         "city": "Cody",
@@ -2962,16 +3638,94 @@
         "email": "j.randlesun194@gmail.com",
         "website": "http://www.christchurchcody.org/",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 44.520945521301,
+        "lng": -109.07059591641
       }
     ],
     "match_confidence": "high",
+    "parochials": [
+      {
+        "years": {
+          "2015": {
+            "averageAttendance": 122,
+            "plateAndPledge": 258743,
+            "membership": 582,
+            "operatingRevenue": null
+          },
+          "2016": {
+            "averageAttendance": 125,
+            "plateAndPledge": 266843,
+            "membership": 569,
+            "operatingRevenue": null
+          },
+          "2017": {
+            "averageAttendance": 129,
+            "plateAndPledge": 286042,
+            "membership": 546,
+            "operatingRevenue": null
+          },
+          "2018": {
+            "averageAttendance": 113,
+            "plateAndPledge": 279769,
+            "membership": 545,
+            "operatingRevenue": null
+          },
+          "2019": {
+            "averageAttendance": 114,
+            "plateAndPledge": 288285,
+            "membership": 549,
+            "operatingRevenue": null
+          },
+          "2020": {
+            "averageAttendance": 105,
+            "plateAndPledge": 263721,
+            "membership": 558,
+            "operatingRevenue": null
+          },
+          "2021": {
+            "averageAttendance": 73,
+            "plateAndPledge": 279083,
+            "membership": 567,
+            "operatingRevenue": null
+          },
+          "2022": {
+            "averageAttendance": 105,
+            "plateAndPledge": 263338,
+            "membership": 530,
+            "operatingRevenue": null
+          },
+          "2023": {
+            "averageAttendance": 105,
+            "plateAndPledge": 301623,
+            "membership": 509,
+            "operatingRevenue": null
+          },
+          "2024": {
+            "averageAttendance": 92,
+            "plateAndPledge": 255274,
+            "membership": null,
+            "operatingRevenue": null
+          }
+        }
+      }
+    ],
+    "clergy": {
+      "current_clergy": {
+        "name": "David Fox",
+        "position_title": "Associate",
+        "start_date": "01/01/2005",
+        "years_tenure": 21
+      },
+      "parish_clergy_history": {
+        "recent_count": 2,
+        "avg_tenure_years": 22.5
+      }
+    },
     "parish_contexts": [
       {
-        "clergy_count_10yr": 0,
-        "avg_tenure_years": null,
-        "current_clergy_count": 0,
+        "clergy_count_10yr": 2,
+        "avg_tenure_years": 22.5,
+        "current_clergy_count": 2,
         "attendance_trend": null,
         "attendance_change_pct": null,
         "giving_trend": null,
@@ -2982,6 +3736,39 @@
         "years_of_data": 0
       }
     ],
+<<<<<<< Updated upstream
+=======
+    "diocese_percentiles": {
+      "asa": 89,
+      "asa_value": 92,
+      "plate_pledge": 89,
+      "plate_pledge_value": 255274
+    },
+    "similar_positions": [
+      {
+        "id": "5ebc3903341c6f9cf1cd1cbc5469820b562da15ebf8a31c4195a67bd5a7e59d0",
+        "vh_id": 10614,
+        "name": "Trinity Church",
+        "city": "Manassas",
+        "state": "VA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 109,
+        "estimated_total_comp": null,
+        "score": 5
+      },
+      {
+        "id": "eac8ec724e9dafb2a5edade1fe3e77bc271ca5876ecc3a3ec86d50fa99b0d599",
+        "vh_id": 8615,
+        "name": "Church of the Resurrection",
+        "city": "Sautee Nacoochee",
+        "state": "GA",
+        "position_type": "Rector/Priest-in-Charge",
+        "asa": 76,
+        "estimated_total_comp": null,
+        "score": 5
+      }
+    ],
+>>>>>>> Stashed changes
     "census": {
       "median_household_income": 71202,
       "population": 15932
@@ -3037,7 +3824,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "1584",
         "name": "Christ Church",
         "street": "2000 Main St",
         "city": "Stratford",
@@ -3047,8 +3834,8 @@
         "email": "ccstratford@att.net",
         "website": "http://www.christchurchstratford.org/",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 41.188404,
+        "lng": -73.13023
       }
     ],
     "match_confidence": "high",
@@ -3122,7 +3909,7 @@
     "raw_content": null,
     "church_infos": [
       {
-        "nid": null,
+        "nid": "2318",
         "name": "Church Of The Good Shepherd",
         "street": "331 Lake Ave",
         "city": "Maitland",
@@ -3132,8 +3919,8 @@
         "email": "church@goodshepherd-maitland.com",
         "website": "http://www.goodshepherdmaitland.com",
         "type": "Parish",
-        "lat": null,
-        "lng": null
+        "lat": 28.619667,
+        "lng": -81.368118
       }
     ],
     "match_confidence": "high",

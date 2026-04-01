@@ -1,33 +1,17 @@
 {
-  "generated_at": "2026-04-01T18:38:03.597Z",
+  "generated_at": "2026-04-01T19:45:48.303Z",
   "summary": {
     "missing_vh_id": 0,
-    "missing_church_match": 107,
-    "total": 107
+    "missing_church_match": 105,
+    "total": 105
   },
   "gaps": [
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10690,
-      "name": "St James the Apostle Church",
-      "diocese": "California",
-      "note": "Active extended position with no church registry match."
-    },
     {
       "type": "missing_church_match",
       "source": "extended",
       "vh_id": 10688,
       "name": "St Stephens Episcopal Church",
       "diocese": "Iowa",
-      "note": "Active extended position with no church registry match."
-    },
-    {
-      "type": "missing_church_match",
-      "source": "extended",
-      "vh_id": 10686,
-      "name": "St Julians Episcopal Church",
-      "diocese": "",
       "note": "Active extended position with no church registry match."
     },
     {
