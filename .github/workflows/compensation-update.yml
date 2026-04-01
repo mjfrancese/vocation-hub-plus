@@ -28,11 +28,11 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: web/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: |
-          cd web && npm ci
+          npm ci --workspace=web
           pip install -r scripts/requirements.txt
 
       - name: Download vocationhub.db from latest release
