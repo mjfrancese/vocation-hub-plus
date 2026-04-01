@@ -144,6 +144,10 @@ function importAssetMap(data) {
 // CLI entry point
 if (require.main === module) {
   const filePath = path.resolve(__dirname, '../public/data/churches.json');
+  if (!fs.existsSync(filePath)) {
+    console.log(`${filePath} not found -- skipping Asset Map import (run church-directory scraper first)`);
+    process.exit(0);
+  }
   console.log(`Reading ${filePath}...`);
   const raw = fs.readFileSync(filePath, 'utf-8');
   const data = JSON.parse(raw);

@@ -94,8 +94,8 @@ function importParochialData(data) {
 if (require.main === module) {
   const jsonPath = path.resolve(__dirname, '../public/data/parochial-data.json');
   if (!fs.existsSync(jsonPath)) {
-    console.error(`File not found: ${jsonPath}`);
-    process.exit(1);
+    console.log(`${jsonPath} not found -- skipping parochial import (run parochial scraper first)`);
+    process.exit(0);
   }
 
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
