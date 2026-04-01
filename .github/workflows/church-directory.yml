@@ -43,12 +43,10 @@ jobs:
         run: npx tsx src/scrape-parochial-reports.ts
         timeout-minutes: 10
 
-      - name: Download vocationhub.db
-        uses: actions/download-artifact@v4
-        with:
-          name: vocationhub-db
-          path: data/
-        continue-on-error: true
+      - name: Download vocationhub.db from latest release
+        run: gh release download db-latest --pattern 'vocationhub.db' --dir data/ 2>/dev/null || echo "No DB release yet"
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Run enrichment
         working-directory: web

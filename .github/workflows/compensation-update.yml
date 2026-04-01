@@ -10,6 +10,9 @@ on:
         description: 'Report year (e.g., 2024)'
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -32,11 +35,10 @@ jobs:
           cd web && npm ci
           pip install -r scripts/requirements.txt
 
-      - name: Download vocationhub.db
-        uses: actions/download-artifact@v4
-        with:
-          name: vocationhub-db
-          path: data/
+      - name: Download vocationhub.db from latest release
+        run: gh release download db-latest --pattern 'vocationhub.db' --dir data/
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Download PDF
         run: curl -L -o /tmp/cpg-compensation.pdf "${{ github.event.inputs.pdf_url }}"
@@ -44,12 +46,12 @@ jobs:
       - name: Parse compensation data
         run: python scripts/parse_cpg_compensation.py /tmp/cpg-compensation.pdf ${{ github.event.inputs.year }} --db-path data/vocationhub.db
 
-      - name: Upload vocationhub.db
-        uses: actions/upload-artifact@v4
-        with:
-          name: vocationhub-db
-          path: data/vocationhub.db
-          retention-days: 90
+      - name: Upload vocationhub.db to release
+        run: |
+          gh release delete db-latest --yes 2>/dev/null || true
+          gh release create db-latest data/vocationhub.db --title "Latest DB" --notes "Updated by compensation-update workflow" --latest=false
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Run enrichment
         run: cd web && node scripts/enrich-positions-v2.js
