@@ -16,8 +16,9 @@ const { getDb, closeDb, logFetch } = require('./db');
 const { normalizeChurchName } = require('./lib/normalization');
 
 const BASE_URL = 'https://ea-api.cpg.org/common-access-api/1.0/ecdPlus';
-const RATE_LIMIT_MS = 200;
+const RATE_LIMIT_MS = 50;
 const LOG_INTERVAL = 500;
+const CONCURRENCY = 10;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -221,6 +222,33 @@ function upsertParish(db, data) {
 }
 
 // ---------------------------------------------------------------------------
+// fetchConcurrent -- process items with controlled concurrency
+// ---------------------------------------------------------------------------
+
+/**
+ * Process items with controlled concurrency.
+ * @param {Array} items - Items to process
+ * @param {number} concurrency - Max concurrent operations
+ * @param {Function} fn - Async function to process each item, receives (item, index)
+ * @returns {Promise<Array>} Results (may contain undefined for skipped items)
+ */
+async function fetchConcurrent(items, concurrency, fn) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < items.length) {
+      const i = nextIndex++;
+      results[i] = await fn(items[i], i);
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(concurrency, items.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
+}
+
+// ---------------------------------------------------------------------------
 // fetchAllParishes -- CLI entry point (async, makes network calls)
 // ---------------------------------------------------------------------------
 
@@ -242,40 +270,46 @@ async function fetchAllParishes() {
   let newCount = 0;
   let updatedCount = 0;
 
-  for (let i = 0; i < parishes.length; i++) {
-    const p = parishes[i];
+  let fetchedCount = 0;
 
+  const allResults = await fetchConcurrent(parishes, CONCURRENCY, async (p, i) => {
     try {
       const detailUrl = `${BASE_URL}/parishes/${p.id}.json`;
       const detailResponse = await fetch(detailUrl);
       if (!detailResponse.ok) {
         console.warn(`  Skipping ${p.name} (${p.id}): HTTP ${detailResponse.status}`);
-        continue;
+        await sleep(RATE_LIMIT_MS);
+        fetchedCount++;
+        return null;
       }
 
       const detailData = await detailResponse.json();
       const parsed = parseParishDetail(detailData.data || detailData);
       parsed.ecdplus_id = p.id;
+      await sleep(RATE_LIMIT_MS);
 
-      const result = upsertParish(db, {
-        ecdplus_id: p.id,
-        ...parsed,
-      });
+      fetchedCount++;
+      if (fetchedCount % LOG_INTERVAL === 0) {
+        console.log(`  Progress: ${fetchedCount}/${parishes.length}`);
+      }
 
-      if (result === 'new') newCount++;
-      else updatedCount++;
+      return { ecdplus_id: p.id, ...parsed };
     } catch (err) {
       console.warn(`  Error fetching ${p.name} (${p.id}): ${err.message}`);
-    }
-
-    if ((i + 1) % LOG_INTERVAL === 0) {
-      console.log(`  Progress: ${i + 1}/${parishes.length} (${newCount} new, ${updatedCount} updated)`);
-    }
-
-    // Rate limit
-    if (i < parishes.length - 1) {
       await sleep(RATE_LIMIT_MS);
+      fetchedCount++;
+      return null;
     }
+  });
+
+  // Write to DB
+  const validResults = allResults.filter(Boolean);
+  console.log(`Fetched ${validResults.length}/${parishes.length} parish details. Writing to DB...`);
+
+  for (const parsed of validResults) {
+    const result = upsertParish(db, parsed);
+    if (result === 'new') newCount++;
+    else updatedCount++;
   }
 
   const duration_ms = Date.now() - start;

@@ -15,9 +15,10 @@
 const { getDb, closeDb, logFetch } = require('./db');
 
 const BASE_URL = 'https://ea-api.cpg.org/common-access-api/1.0/ecdPlus';
-const RATE_LIMIT_MS = 200;
+const RATE_LIMIT_MS = 50;
 const LOG_INTERVAL = 1000;
 const BATCH_SIZE = 1000;
+const CONCURRENCY = 10;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -293,6 +294,33 @@ function _insertPositions(db, clergyGuid, positions) {
 }
 
 // ---------------------------------------------------------------------------
+// fetchConcurrent -- process items with controlled concurrency
+// ---------------------------------------------------------------------------
+
+/**
+ * Process items with controlled concurrency.
+ * @param {Array} items - Items to process
+ * @param {number} concurrency - Max concurrent operations
+ * @param {Function} fn - Async function to process each item, receives (item, index)
+ * @returns {Promise<Array>} Results (may contain undefined for skipped items)
+ */
+async function fetchConcurrent(items, concurrency, fn) {
+  const results = new Array(items.length);
+  let nextIndex = 0;
+
+  async function worker() {
+    while (nextIndex < items.length) {
+      const i = nextIndex++;
+      results[i] = await fn(items[i], i);
+    }
+  }
+
+  const workers = Array.from({ length: Math.min(concurrency, items.length) }, () => worker());
+  await Promise.all(workers);
+  return results;
+}
+
+// ---------------------------------------------------------------------------
 // fetchAllClergy -- CLI entry point (async, makes network calls)
 // ---------------------------------------------------------------------------
 
@@ -313,7 +341,6 @@ async function fetchAllClergy() {
   const db = getDb();
   let newCount = 0;
   let updatedCount = 0;
-  let batch = [];
 
   const processBatch = (items) => {
     const txn = db.transaction((entries) => {
@@ -326,48 +353,49 @@ async function fetchAllClergy() {
     txn(items);
   };
 
-  for (let i = 0; i < clergyList.length; i++) {
-    const c = clergyList[i];
+  let fetchedCount = 0;
 
+  const allResults = await fetchConcurrent(clergyList, CONCURRENCY, async (c, i) => {
     try {
       const detailUrl = `${BASE_URL}/clergies/${c.guid}.json`;
       const detailResponse = await fetch(detailUrl);
       if (!detailResponse.ok) {
         console.warn(`  Skipping ${c.first_name} ${c.last_name} (${c.guid}): HTTP ${detailResponse.status}`);
-        continue;
+        await sleep(RATE_LIMIT_MS);
+        fetchedCount++;
+        return null;
       }
 
       const detailData = await detailResponse.json();
       const parsed = parseClergyDetail(detailData.data || detailData);
+      await sleep(RATE_LIMIT_MS);
 
-      batch.push({
+      fetchedCount++;
+      if (fetchedCount % LOG_INTERVAL === 0) {
+        console.log(`  Progress: ${fetchedCount}/${clergyList.length}`);
+      }
+
+      return {
         guid: c.guid,
         first_name: c.first_name,
         middle_name: c.middle_name,
         last_name: c.last_name,
         ...parsed,
-      });
-
-      if (batch.length >= BATCH_SIZE) {
-        processBatch(batch);
-        batch = [];
-      }
+      };
     } catch (err) {
       console.warn(`  Error fetching ${c.first_name} ${c.last_name} (${c.guid}): ${err.message}`);
-    }
-
-    if ((i + 1) % LOG_INTERVAL === 0) {
-      console.log(`  Progress: ${i + 1}/${clergyList.length} (${newCount} new, ${updatedCount} updated)`);
-    }
-
-    // Rate limit
-    if (i < clergyList.length - 1) {
       await sleep(RATE_LIMIT_MS);
+      fetchedCount++;
+      return null;
     }
-  }
+  });
 
-  // Flush remaining batch
-  if (batch.length > 0) {
+  // Write to DB in batches
+  const validResults = allResults.filter(Boolean);
+  console.log(`Fetched ${validResults.length}/${clergyList.length} clergy details. Writing to DB...`);
+
+  for (let i = 0; i < validResults.length; i += BATCH_SIZE) {
+    const batch = validResults.slice(i, i + BATCH_SIZE);
     processBatch(batch);
   }
 
