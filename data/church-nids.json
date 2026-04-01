@@ -11718,13 +11718,6 @@
     "state": "NY"
   },
   {
-    "nid": 894,
-    "name": "Church of the Resurrection",
-    "street": "113 Brown Ave",
-    "city": "Rainbow City",
-    "state": "AL"
-  },
-  {
     "nid": 3767,
     "name": "Church of the Resurrection",
     "street": "3004 Belvedere Blvd",
@@ -11786,6 +11779,13 @@
     "street": "1755 Duncan Bridge Rd",
     "city": "Sautee Nacoochee",
     "state": "GA"
+  },
+  {
+    "nid": 894,
+    "name": "Church of the Resurrection",
+    "street": "113 Brown Ave",
+    "city": "Rainbow City",
+    "state": "AL"
   },
   {
     "nid": 2488,
@@ -33502,13 +33502,6 @@
     "state": "TX"
   },
   {
-    "nid": 3156,
-    "name": "St. James Episcopal Church",
-    "street": "610 Perry St",
-    "city": "Vincennes",
-    "state": "IN"
-  },
-  {
     "nid": 7222,
     "name": "St. James' Episcopal Church",
     "street": "355 W Maple Rd",
@@ -33528,6 +33521,13 @@
     "street": "256 South Arnold Avenue",
     "city": "Prestonsburg",
     "state": "KY"
+  },
+  {
+    "nid": 3156,
+    "name": "St. James Episcopal Church",
+    "street": "610 Perry St",
+    "city": "Vincennes",
+    "state": "IN"
   },
   {
     "nid": 5196,
@@ -36687,6 +36687,13 @@
     "state": "IN"
   },
   {
+    "nid": 4944,
+    "name": "St. John's Episcopal Church",
+    "street": "760 1st Ave",
+    "city": "Chula Vista",
+    "state": "CA"
+  },
+  {
     "nid": 5000,
     "name": "St. John's Episcopal Church / Iglesia Episcopal San Juan",
     "street": "1701 E Prosperity Ave",
@@ -36698,13 +36705,6 @@
     "name": "St. John's Episcopal Church & Holy Child Philippine Independent Church",
     "street": "1537 N Neptune Ave",
     "city": "Wilmington",
-    "state": "CA"
-  },
-  {
-    "nid": 4944,
-    "name": "St. John's Episcopal Church & Parish Day School",
-    "street": "760 1st Ave",
-    "city": "Chula Vista",
     "state": "CA"
   },
   {
@@ -44009,13 +44009,6 @@
     "state": "MA"
   },
   {
-    "nid": 857,
-    "name": "St. Michael's Episcopal Church",
-    "street": "431 10th St NW",
-    "city": "Fayette",
-    "state": "AL"
-  },
-  {
     "nid": 6206,
     "name": "St. Michael's Episcopal Church",
     "street": "2900 Canal Blvd",
@@ -44119,6 +44112,13 @@
     "street": "1219 Ratzer Rd",
     "city": "Wayne",
     "state": "NJ"
+  },
+  {
+    "nid": 857,
+    "name": "St. Michael's Episcopal Church",
+    "street": "431 10th St NW",
+    "city": "Fayette",
+    "state": "AL"
   },
   {
     "nid": 8859,
@@ -48825,6 +48825,13 @@
     "state": "IL"
   },
   {
+    "nid": 11287,
+    "name": "St. Peter's Episcopal Church",
+    "street": "1393 Miles Drive",
+    "city": "Charleston",
+    "state": "SC"
+  },
+  {
     "nid": 2750,
     "name": "St. Peter's Episcopal Church and School",
     "street": "848 Ashland Ter",
@@ -50239,13 +50246,6 @@
     "state": "IA"
   },
   {
-    "nid": 3264,
-    "name": "St. Stephen's Episcopal Church",
-    "street": "7404 E Killarney Pl",
-    "city": "Wichita",
-    "state": "KS"
-  },
-  {
     "nid": 3532,
     "name": "St. Stephen's Episcopal Church",
     "street": "10585 Hamburg Rd",
@@ -50748,6 +50748,13 @@
     "street": "3 Bayview Ae",
     "city": "Belvedere",
     "state": "CA"
+  },
+  {
+    "nid": 3264,
+    "name": "St. Stephen's Episcopal Church",
+    "street": "7404 E Killarney Pl",
+    "city": "Wichita",
+    "state": "KS"
   },
   {
     "nid": 2698,
@@ -53860,7 +53867,7 @@
   {
     "nid": 6805,
     "name": "The Episcopal Church of the Messiah",
-    "street": "4221 North Kings Highway",
+    "street": "4221A North Kings Highway",
     "city": "Myrtle Beach",
     "state": "SC"
   },
@@ -58016,13 +58023,6 @@
     "state": "KHH"
   },
   {
-    "nid": 8240,
-    "name": "聖公會人文書苑 | Taiwan Episcopal Church in Hsinchu",
-    "street": "No. 12號, Guanxin N Rd, East District, Hsinchu City, Taiwan 30072",
-    "city": "East District",
-    "state": "HSZ"
-  },
-  {
     "nid": 7962,
     "name": "聖司提反堂 | St. Stephen’s Church, Keelung",
     "street": "203台灣基隆市中山區中和路168巷6弄29號",
@@ -58077,6 +58077,13 @@
     "street": "900台灣屏東縣屏東市忠孝路120-11號",
     "city": "Pingtung City",
     "state": "PIF"
+  },
+  {
+    "nid": 8240,
+    "name": "聖馬太堂 St. Matthew's Church, Hsinchu",
+    "street": "302新竹縣竹北市三民路152號1樓 No. 152, Sanmin Rd",
+    "city": "Zhubei City",
+    "state": "HSQ"
   },
   {
     "nid": 7958,
