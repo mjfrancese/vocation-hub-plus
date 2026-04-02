@@ -51,6 +51,53 @@ function lookupDioceseComp(db, diocese) {
   `).get(diocese) ?? null;
 }
 
+/**
+ * Map canonical position types to CPG compensation categories.
+ * CPG reports use: Senior Rector, Solo Rector, Assistant, Specialty Minister, Parish Deacon.
+ */
+const CPG_TYPE_MAP = {
+  'Rector': (asa) => asa >= 400 ? 'Senior Rector' : 'Solo Rector',
+  'Vicar': () => 'Solo Rector',
+  'Priest-in-Charge': () => 'Solo Rector',
+  'Assistant': () => 'Assistant',
+  'Associate': () => 'Assistant',
+  'Curate': () => 'Assistant',
+  'Senior Associate': () => 'Assistant',
+  'Deacon': () => 'Parish Deacon',
+};
+
+/**
+ * Look up position-type-specific compensation from CPG data.
+ */
+function lookupPositionTypeComp(db, diocese, cpgType) {
+  if (!diocese || !cpgType) return null;
+  try {
+    const row = db.prepare(`
+      SELECT median, count, year, position_type
+      FROM compensation_by_position
+      WHERE LOWER(diocese) = LOWER(?)
+        AND position_type = ?
+        AND gender = 'all'
+      ORDER BY year DESC LIMIT 1
+    `).get(diocese, cpgType);
+    return row ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Determine the CPG position type for a position based on its canonical types and ASA.
+ */
+function getCpgPositionType(positionTypes, asa) {
+  if (!Array.isArray(positionTypes)) return null;
+  for (const pt of positionTypes) {
+    const mapper = CPG_TYPE_MAP[pt];
+    if (mapper) return mapper(asa);
+  }
+  return null;
+}
+
 // ---------------------------------------------------------------------------
 // Stage entry point
 // ---------------------------------------------------------------------------
@@ -75,19 +122,43 @@ function lookupDioceseComp(db, diocese) {
  */
 function computeCompensation(positions, db, profileFields) {
   // ------------------------------------------------------------------
-  // Pass 1: diocese benchmark lookup
+  // Pass 1: diocese benchmark lookup + CPG position-type mapping
   // ------------------------------------------------------------------
   for (const pos of positions) {
     const comp = lookupDioceseComp(db, pos.diocese || '');
-    if (!comp) continue;
+    if (comp) {
+      pos.compensation = {
+        diocese_median: comp.all_median,
+        diocese_female_median: comp.female_median,
+        diocese_male_median: comp.male_median,
+        diocese_clergy_count: comp.all_count,
+        year: comp.year,
+      };
+    }
 
-    pos.compensation = {
-      diocese_median: comp.all_median,
-      diocese_female_median: comp.female_median,
-      diocese_male_median: comp.male_median,
-      diocese_clergy_count: comp.all_count,
-      year: comp.year,
-    };
+    // CPG position-type mapping
+    const positionTypes = pos.position_types || [];
+    let asa = null;
+    const firstParochial = pos.parochials && pos.parochials[0];
+    if (firstParochial && firstParochial.years) {
+      const yearKeys = Object.keys(firstParochial.years).sort();
+      if (yearKeys.length > 0) {
+        const latest = firstParochial.years[yearKeys[yearKeys.length - 1]];
+        if (latest && latest.averageAttendance != null) asa = latest.averageAttendance;
+      }
+    }
+
+    const cpgType = getCpgPositionType(positionTypes, asa);
+    if (cpgType) {
+      pos.cpg_position_type = cpgType;
+      const ptComp = lookupPositionTypeComp(db, pos.diocese || '', cpgType);
+      if (ptComp) {
+        pos.compensation = pos.compensation || {};
+        pos.compensation.position_type_median = ptComp.median;
+        pos.compensation.position_type_count = ptComp.count;
+        pos.compensation.position_type_label = cpgType;
+      }
+    }
   }
 
   // ------------------------------------------------------------------
@@ -210,7 +281,7 @@ function computeCompensation(positions, db, profileFields) {
 }
 
 module.exports = computeCompensation;
-
-// Also export internals for testing
 module.exports.parseStipend = parseStipend;
 module.exports.lookupDioceseComp = lookupDioceseComp;
+module.exports.getCpgPositionType = getCpgPositionType;
+module.exports.lookupPositionTypeComp = lookupPositionTypeComp;
