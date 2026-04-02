@@ -85,6 +85,9 @@ export interface Position {
     diocese_male_median: number;
     diocese_clergy_count: number;
     year: number;
+    position_type_median?: number;
+    position_type_count?: number;
+    position_type_label?: string;
   };
 
   current_clergy?: {
@@ -98,6 +101,9 @@ export interface Position {
     recent_count: number;
     avg_tenure_years: number;
   };
+
+  // CPG position type mapping (e.g., 'Solo Rector', 'Assistant')
+  cpg_position_type?: string;
 
   // Census/demographic data (attached at build time)
   census?: {
@@ -116,6 +122,13 @@ export interface Position {
     asa?: number;
     estimated_total_comp?: number;
     score: number;
+    match_reasons?: {
+      asa: boolean;
+      comp: boolean;
+      state: boolean;
+      type: boolean;
+      housing: boolean;
+    };
   }>;
 
   // Parochial report data (parallel with church_infos)
