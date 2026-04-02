@@ -18,13 +18,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: 20
           cache: npm
@@ -54,7 +54,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Run enrichment
-        run: cd web && node scripts/enrich-positions-v2.js
+        run: node web/scripts/run-enrichment.js web/public/data/
+        env:
+          VOCATIONHUB_DB_PATH: data/vocationhub.db
 
       - name: Commit data changes
         run: |
