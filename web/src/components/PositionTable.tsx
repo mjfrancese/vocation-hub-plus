@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useState, useCallback, useEffect } from 'react';
+import { Fragment, useState, useCallback, useEffect, useMemo } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import UnifiedStatusBadge from './UnifiedStatusBadge';
 import ScorePill from './ScorePill';
@@ -10,6 +10,10 @@ import ComparisonModal from './ComparisonModal';
 import DetailPanel from './detail-panel/DetailPanel';
 import type { PersonalData } from '@/lib/types';
 import { ME_TOKEN_KEY } from '@/lib/constants';
+import MatchBadge from './MatchBadge';
+import type { SearchPreferences } from '@/lib/types';
+import { scorePosition, type MatchResult } from '@/lib/match-helpers';
+import { hasActivePreferences } from '@/hooks/usePreferences';
 
 interface PositionTableProps {
   positions: Position[];
@@ -19,6 +23,7 @@ interface PositionTableProps {
   initialSortDir?: SortDirection;
   initialExpandedId?: string | null;
   onExpandedChange?: (id: string | null) => void;
+  preferences?: SearchPreferences;
 }
 
 const COLUMNS: Array<{ key: SortField; label: string }> = [
@@ -126,6 +131,7 @@ export default function PositionTable({
   initialSortDir,
   initialExpandedId,
   onExpandedChange,
+  preferences,
 }: PositionTableProps) {
   const [sortField, setSortField] = useState<SortField>(initialSortField ?? 'date');
   const [sortDir, setSortDir] = useState<SortDirection>(initialSortDir ?? 'desc');
@@ -149,6 +155,17 @@ export default function PositionTable({
       })
       .catch(() => {});
   }, [meDataProp]);
+
+  const showMatch = preferences ? hasActivePreferences(preferences) : false;
+
+  const matchScores = useMemo(() => {
+    if (!showMatch || !preferences) return new Map<string, MatchResult>();
+    const map = new Map<string, MatchResult>();
+    for (const pos of positions) {
+      map.set(pos.id, scorePosition(pos, preferences));
+    }
+    return map;
+  }, [positions, preferences, showMatch]);
 
   const MAX_COMPARE = 3;
 
@@ -197,6 +214,18 @@ export default function PositionTable({
     const cmp = aVal.localeCompare(bVal);
     return sortDir === 'asc' ? cmp : -cmp;
   });
+
+  // Apply match boost as a secondary sort (only breaks ties)
+  if (showMatch) {
+    sorted.sort((a, b) => {
+      const scoreA = matchScores.get(a.id)?.score ?? 0;
+      const scoreB = matchScores.get(b.id)?.score ?? 0;
+      const tierA = scoreA >= 50 ? 1 : 0;
+      const tierB = scoreB >= 50 ? 1 : 0;
+      if (tierA !== tierB) return tierB - tierA;
+      return scoreB - scoreA;
+    });
+  }
 
   function handleSort(field: SortField) {
     if (sortField === field) {
@@ -301,6 +330,13 @@ export default function PositionTable({
                   {pos.receiving_names_from && (
                     <span>&middot; {pos.receiving_names_from.split(' to ')[0].split(' - ')[0]}</span>
                   )}
+                  {showMatch && matchScores.get(pos.id)?.tier !== 'none' && (
+                    <MatchBadge
+                      tier={matchScores.get(pos.id)!.tier}
+                      reasons={[]}
+                      detailed={false}
+                    />
+                  )}
                 </div>
                 <div className="mt-2">
                   <button
@@ -337,6 +373,7 @@ export default function PositionTable({
               <th className="px-2 py-3 w-10">
                 <span className="sr-only">Compare</span>
               </th>
+              {showMatch && <th className="px-3 py-3 text-left text-xs font-semibold text-gray-500">MATCH</th>}
               {COLUMNS.map((col) => (
                 <th
                   key={col.key}
@@ -390,6 +427,17 @@ export default function PositionTable({
                         title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Select to compare'}
                       />
                     </td>
+                    {showMatch && (
+                      <td className="px-3 py-2">
+                        {matchScores.get(pos.id) && matchScores.get(pos.id)!.tier !== 'none' && (
+                          <MatchBadge
+                            tier={matchScores.get(pos.id)!.tier}
+                            reasons={matchScores.get(pos.id)!.reasons}
+                            detailed={preferences?.showDetailedMatch ?? true}
+                          />
+                        )}
+                      </td>
+                    )}
                     {/* Church */}
                     <td className="px-3 py-2 text-sm max-w-xs">
                       <div className={`font-medium truncate ${church.isEnriched ? 'text-gray-900' : 'text-gray-500 italic'}`}>
@@ -445,7 +493,7 @@ export default function PositionTable({
                   </tr>
                   {expandedId === pos.id && (
                     <tr key={`${pos.id}-detail`}>
-                      <td colSpan={7} className="px-4 py-4 bg-white border-l-4 border-l-primary-600">
+                      <td colSpan={showMatch ? 8 : 7} className="px-4 py-4 bg-white border-l-4 border-l-primary-600">
                         <DetailPanel pos={pos} onNavigate={expandAndScrollTo} meData={meData} />
                       </td>
                     </tr>
