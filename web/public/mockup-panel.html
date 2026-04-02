@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Redesign Mockup</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwindcss.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd',
+          400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8',
+          800: '#1e40af', 900: '#1e3a8a',
+        },
+      },
+    },
+  },
+}
+</script>
+<style>
+  body { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  .tab-active { border-bottom: 2px solid #2563eb; color: #1e40af; font-weight: 600; }
+  .tab-inactive { border-bottom: 2px solid transparent; color: #6b7280; }
+  .tab-inactive:hover { color: #374151; border-bottom-color: #d1d5db; }
+  .sticky-header { position: sticky; top: 0; z-index: 10; }
+  .narrative-stat { display: inline; font-weight: 600; color: #1e3a8a; }
+  .trend-up { color: #059669; }
+  .trend-down { color: #dc2626; }
+  .trend-flat { color: #6b7280; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<!-- Simulated table row above -->
+<div class="max-w-6xl mx-auto mt-8 px-4">
+  <div class="text-xs text-gray-400 mb-2 uppercase tracking-wide px-2">Simulated table context above</div>
+  <table class="w-full text-sm border-collapse">
+    <thead>
+      <tr class="border-b border-gray-200 text-left text-xs text-gray-500 uppercase tracking-wider">
+        <th class="py-2 px-3">Church</th>
+        <th class="py-2 px-3">Location</th>
+        <th class="py-2 px-3">Dates</th>
+        <th class="py-2 px-3">Status</th>
+        <th class="py-2 px-3">ASA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-l-4 border-l-primary-600 bg-primary-50/60">
+        <td class="py-2.5 px-3">
+          <div class="font-medium text-gray-900">All Saints Church</div>
+          <div class="text-xs text-gray-500">Rector &middot; Vicar &middot; Priest-in-Charge</div>
+        </td>
+        <td class="py-2.5 px-3">
+          <div class="text-gray-900">Indianapolis, IN</div>
+          <div class="text-xs text-gray-500">Indianapolis</div>
+        </td>
+        <td class="py-2.5 px-3">
+          <div class="text-gray-900">03/01/2026</div>
+        </td>
+        <td class="py-2.5 px-3">
+          <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">Active</span>
+        </td>
+        <td class="py-2.5 px-3 text-gray-900">79</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ============================================================ -->
+  <!-- EXPANDED DETAIL PANEL - THE MOCKUP -->
+  <!-- ============================================================ -->
+  <div class="border-l-4 border-l-primary-600 bg-white border border-gray-200 shadow-sm">
+
+    <!-- STICKY HEADER -->
+    <div class="sticky-header bg-white border-b border-gray-200">
+      <!-- Position header row -->
+      <div class="px-5 pt-4 pb-2 flex items-start justify-between">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <h2 class="text-lg font-semibold text-gray-900">All Saints Church</h2>
+            <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">Active</span>
+          </div>
+          <div class="flex items-center gap-3 mt-0.5 text-sm text-gray-500">
+            <span class="flex items-center gap-1.5">
+              <span class="inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-600">Rector</span>
+              <span class="inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-600">Vicar</span>
+              <span class="inline-flex items-center rounded bg-gray-100 px-1.5 py-0.5 text-xs font-medium text-gray-600">Priest-in-Charge</span>
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700">Interim</span>
+            <span class="text-gray-300">|</span>
+            <span>Indianapolis, IN</span>
+            <span class="text-gray-300">|</span>
+            <span>Diocese of Indianapolis</span>
+          </div>
+          <div class="flex items-center gap-3 mt-1 text-xs text-gray-400">
+            <span>Receiving names since Mar 1, 2026</span>
+            <span class="text-gray-300">|</span>
+            <span>Open ended</span>
+            <span class="text-gray-300">|</span>
+            <span>Posted 4 weeks ago</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+          <a href="#" class="text-xs text-primary-600 hover:text-primary-800 underline">View on VocationHub</a>
+          <span class="text-gray-300">|</span>
+          <a href="#" class="text-xs text-primary-600 hover:text-primary-800 underline">allsaintsindy.org</a>
+        </div>
+      </div>
+
+      <!-- Content tabs -->
+      <div class="px-5 flex gap-0">
+        <button onclick="switchTab('overview')" id="tab-overview" class="tab-active px-4 py-2.5 text-sm transition-colors">Overview</button>
+        <button onclick="switchTab('parish')" id="tab-parish" class="tab-inactive px-4 py-2.5 text-sm transition-colors">Parish Data</button>
+        <button onclick="switchTab('compensation')" id="tab-compensation" class="tab-inactive px-4 py-2.5 text-sm transition-colors">Compensation</button>
+        <button onclick="switchTab('profile')" id="tab-profile" class="tab-inactive px-4 py-2.5 text-sm transition-colors">Profile</button>
+      </div>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="px-5 py-4">
+
+      <!-- ==================== OVERVIEW TAB ==================== -->
+      <div id="content-overview">
+
+        <!-- At-a-glance metrics row -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+          <div class="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2.5">
+            <div class="text-xs text-amber-600 mb-0.5">Compensation</div>
+            <div class="text-base font-semibold text-amber-800">Interim Position</div>
+            <div class="text-xs text-amber-600">Part-time, rectory not specified</div>
+          </div>
+          <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+            <div class="text-xs text-gray-500 mb-0.5">Avg Sunday Attendance</div>
+            <div class="text-base font-semibold text-gray-900">79</div>
+            <div class="text-xs trend-down">-16% over past decade</div>
+          </div>
+          <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+            <div class="text-xs text-gray-500 mb-0.5">Annual Giving</div>
+            <div class="text-base font-semibold text-gray-900">$268,285</div>
+            <div class="text-xs trend-up">+13% over past decade</div>
+          </div>
+          <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+            <div class="text-xs text-gray-500 mb-0.5">Giving per Attendee</div>
+            <div class="text-base font-semibold text-gray-900">$3,396</div>
+            <div class="text-xs text-gray-400">Annual plate & pledge / ASA</div>
+          </div>
+        </div>
+
+        <!-- Integrated narrative insights -->
+        <div class="space-y-4 text-sm text-gray-700 leading-relaxed">
+
+          <!-- Parish Health -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Parish Health</div>
+            <p>
+              Attendance averages <span class="narrative-stat">79</span> on Sundays, <span class="trend-down font-medium">down 16%</span> over the past decade.
+              However, giving has moved in the opposite direction -- plate & pledge is <span class="narrative-stat">$268k</span>, <span class="trend-up font-medium">up 13%</span> over the same period.
+              At <span class="narrative-stat">$3,396 per attendee</span> annually, this is a financially committed congregation.
+              This parish is <span class="narrative-stat">larger than 67%</span> of parishes in the Diocese of Indianapolis by attendance, and at the <span class="narrative-stat">100th percentile</span> for annual giving.
+            </p>
+          </div>
+
+          <!-- Clergy Stability -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Clergy Stability</div>
+            <p>
+              This is an <span class="inline-flex items-center rounded bg-amber-100 px-1 py-0.5 text-xs font-semibold text-amber-700">intentional interim</span> position. The parish is seeking a part-time interim rector.
+              Orders required: <span class="narrative-stat">Priest</span>.
+            </p>
+          </div>
+
+          <!-- What They're Looking For -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">What They're Looking For</div>
+            <p>
+              All Saints is seeking a part-time interim rector. Applications should include a letter of interest, resume/CV, and OTM portfolio.
+            </p>
+            <p class="mt-1 text-xs text-gray-500">
+              Contact: Giulianna Cappelletti Gray, Canon the Ordinary for Congregational Development, Diocese of Indianapolis
+            </p>
+          </div>
+
+          <!-- Search Timeline -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Search Timeline</div>
+            <p>
+              Receiving names since <span class="narrative-stat">March 1, 2026</span>. The search is <span class="narrative-stat">open-ended</span> with no posted closing date. This position has been listed for <span class="narrative-stat">4 weeks</span>.
+            </p>
+          </div>
+
+          <!-- Church & Community -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Church & Community</div>
+            <p>
+              All Saints Episcopal Church is located at 1559 Central Ave, Indianapolis, IN 46202.
+            </p>
+            <div class="mt-2 flex gap-4 text-xs">
+              <a href="#" class="text-primary-600 hover:text-primary-800 underline">allsaintsindy.org</a>
+              <span class="text-gray-400">rector@allsaintsindy.org</span>
+              <span class="text-gray-400">(317) 635-2538</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Similar Positions -->
+        <div class="mt-5 pt-4 border-t border-gray-100">
+          <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Similar Positions</div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <button class="text-left border border-gray-200 rounded-lg p-2.5 bg-white hover:bg-gray-50 transition-colors">
+              <div class="font-medium text-sm text-gray-900 truncate">St. Paul's Church</div>
+              <div class="text-xs text-gray-500">New Albany, IN &middot; Rector</div>
+              <div class="text-xs text-gray-400 mt-0.5">ASA 65 &middot; $88k est. comp</div>
+            </button>
+            <button class="text-left border border-gray-200 rounded-lg p-2.5 bg-white hover:bg-gray-50 transition-colors">
+              <div class="font-medium text-sm text-gray-900 truncate">Christ Church Cathedral</div>
+              <div class="text-xs text-gray-500">Indianapolis, IN &middot; Canon</div>
+              <div class="text-xs text-gray-400 mt-0.5">ASA 210 &middot; $105k est. comp</div>
+            </button>
+            <button class="text-left border border-gray-200 rounded-lg p-2.5 bg-white hover:bg-gray-50 transition-colors">
+              <div class="font-medium text-sm text-gray-900 truncate">Trinity Church</div>
+              <div class="text-xs text-gray-500">Bloomington, IN &middot; Rector</div>
+              <div class="text-xs text-gray-400 mt-0.5">ASA 92 &middot; $91k est. comp</div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== PARISH DATA TAB ==================== -->
+      <div id="content-parish" class="hidden">
+
+        <div class="space-y-5">
+
+          <!-- Summary metrics -->
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-gray-500 mb-0.5">Avg Sunday Attendance</div>
+              <div class="text-xl font-semibold text-gray-900">79</div>
+              <div class="text-xs trend-down">-16% over period (2015-2024)</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-gray-500 mb-0.5">Membership</div>
+              <div class="text-xl font-semibold text-gray-900">194</div>
+              <div class="text-xs trend-up">+24% over period (2015-2023)</div>
+              <div class="text-xs text-gray-400">As of 2023</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-gray-500 mb-0.5">Plate & Pledge</div>
+              <div class="text-xl font-semibold text-gray-900">$268,285</div>
+              <div class="text-xs trend-up">+13% over period (2015-2024)</div>
+            </div>
+          </div>
+
+          <!-- Diocese Percentiles -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Diocese Ranking</div>
+            <div class="grid grid-cols-3 gap-4 text-sm">
+              <div class="flex items-center gap-2">
+                <div class="text-gray-700">Attendance:</div>
+                <div class="font-medium text-gray-900">67th percentile</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="text-gray-700">Giving:</div>
+                <div class="font-medium text-gray-900">100th percentile</div>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="text-gray-700">Membership:</div>
+                <div class="font-medium text-gray-900">--</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yearly Breakdown -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Yearly Breakdown (2015-2024)</div>
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-gray-200 text-xs text-gray-500 uppercase tracking-wider">
+                  <th class="text-left py-2 pr-4">Year</th>
+                  <th class="text-right py-2 px-4">ASA</th>
+                  <th class="text-right py-2 px-4">Members</th>
+                  <th class="text-right py-2 px-4">Plate & Pledge</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2024</td><td class="text-right px-4">79</td><td class="text-right px-4 text-gray-400">--</td><td class="text-right px-4">$268,285</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2023</td><td class="text-right px-4">82</td><td class="text-right px-4">194</td><td class="text-right px-4">$292,595</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2022</td><td class="text-right px-4">94</td><td class="text-right px-4">219</td><td class="text-right px-4">$272,205</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2021</td><td class="text-right px-4">61</td><td class="text-right px-4">215</td><td class="text-right px-4">$332,667</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2020</td><td class="text-right px-4">109</td><td class="text-right px-4">208</td><td class="text-right px-4">$281,567</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2019</td><td class="text-right px-4">111</td><td class="text-right px-4">206</td><td class="text-right px-4">$259,145</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2018</td><td class="text-right px-4">110</td><td class="text-right px-4">195</td><td class="text-right px-4">$233,381</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2017</td><td class="text-right px-4">103</td><td class="text-right px-4">170</td><td class="text-right px-4">$235,645</td></tr>
+                <tr class="border-b border-gray-100"><td class="py-1.5 pr-4 font-medium">2016</td><td class="text-right px-4">96</td><td class="text-right px-4">163</td><td class="text-right px-4">$228,735</td></tr>
+                <tr><td class="py-1.5 pr-4 font-medium">2015</td><td class="text-right px-4">94</td><td class="text-right px-4">156</td><td class="text-right px-4">$236,689</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== COMPENSATION TAB ==================== -->
+      <div id="content-compensation" class="hidden">
+
+        <div class="space-y-5">
+
+          <!-- Comp summary -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-amber-600 mb-0.5">Position Type</div>
+              <div class="text-sm font-semibold text-amber-800">Intentional Interim</div>
+              <div class="text-xs text-amber-600">Part-time</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-gray-500 mb-0.5">Housing</div>
+              <div class="text-sm font-semibold text-gray-900">Not specified</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-gray-500 mb-0.5">Annual Budget</div>
+              <div class="text-sm font-semibold text-gray-900">$0</div>
+              <div class="text-xs text-gray-400">As reported</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg px-3 py-2.5">
+              <div class="text-xs text-gray-500 mb-0.5">Orders Required</div>
+              <div class="text-sm font-semibold text-gray-900">Priest</div>
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Benefits</div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+              <div>
+                <div class="text-gray-500 text-xs">Pension</div>
+                <div class="text-gray-900">Not specified</div>
+              </div>
+              <div>
+                <div class="text-gray-500 text-xs">Healthcare</div>
+                <div class="text-gray-900">Dental: Yes</div>
+              </div>
+              <div>
+                <div class="text-gray-500 text-xs">Vacation</div>
+                <div class="text-gray-900">4 weeks</div>
+              </div>
+              <div>
+                <div class="text-gray-500 text-xs">Continuing Education</div>
+                <div class="text-gray-900">2 weeks (standard)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Travel -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Additional</div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+              <div>
+                <div class="text-gray-500 text-xs">Travel/Auto Reimbursement</div>
+                <div class="text-gray-900">Yes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diocese benchmarks -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Diocese Compensation Context</div>
+            <div class="bg-gray-50 rounded-lg px-4 py-3 text-sm">
+              <p class="text-gray-700">
+                The diocese-wide median clergy compensation in the Diocese of Indianapolis is <span class="font-semibold text-gray-900">$78,450</span>
+                <span class="text-xs text-gray-400 ml-1">(2023, n=64 clergy)</span>
+              </p>
+              <p class="text-gray-500 text-xs mt-1.5">
+                No position-specific benchmark available for interim roles. Diocese-wide median shown as reference.
+              </p>
+              <div class="mt-3 grid grid-cols-3 gap-3 pt-3 border-t border-gray-200">
+                <div>
+                  <div class="text-xs text-gray-500">Solo Rector median</div>
+                  <div class="font-medium text-gray-900">$82,100</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-500">Assistant median</div>
+                  <div class="font-medium text-gray-900">$63,200</div>
+                </div>
+                <div>
+                  <div class="text-xs text-gray-500">All clergy median</div>
+                  <div class="font-medium text-gray-900">$78,450</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================== PROFILE TAB ==================== -->
+      <div id="content-profile" class="hidden">
+
+        <div class="space-y-4">
+
+          <!-- Position Details -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Position Details</div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Type</span>
+                <span class="text-gray-900">Congregation</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Diocese</span>
+                <span class="text-gray-900">Indianapolis</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Congregation</span>
+                <span class="text-gray-900">All Saints Episcopal Church</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Position Title/Role</span>
+                <span class="text-gray-900">Rector / Vicar / Priest-in-Charge</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Type of Work</span>
+                <span class="text-gray-900">Intentional Interim</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Order(s) of Ministry</span>
+                <span class="text-gray-900">Priest</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Current Status</span>
+                <span class="text-gray-900">Receiving names</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Avg Sunday Attendance</span>
+                <span class="text-gray-900">82</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Annual Budget</span>
+                <span class="text-gray-900">$0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Description</div>
+            <p class="text-sm text-gray-700">All Saints is seeking a part-time interim rector.</p>
+          </div>
+
+          <!-- Application -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">How to Apply</div>
+            <p class="text-sm text-gray-700">Provide a letter of interest, resume/cv, and OTM/Vocations Hub Portfolio (preferable, but not presently required).</p>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Contact</div>
+            <div class="text-sm text-gray-700">
+              <p class="font-medium">Giulianna Cappelletti Gray</p>
+              <p class="text-gray-500">Canon the Ordinary for Congregational Development</p>
+              <p class="text-gray-500">The Episcopal Diocese of Indianapolis</p>
+              <p class="mt-1"><a href="#" class="text-primary-600 underline">gcgray@indydio.org</a> &middot; (463) 999-5102</p>
+            </div>
+          </div>
+
+          <!-- Benefits raw -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Benefits & Leave</div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Dental</span>
+                <span class="text-gray-900">Yes</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Vacation</span>
+                <span class="text-gray-900">4 weeks</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Continuing Education</span>
+                <span class="text-gray-900">2 weeks (standard)</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Travel/Auto</span>
+                <span class="text-gray-900">Yes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Church Directory -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Church Directory</div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Address</span>
+                <span class="text-gray-900">1559 Central Ave, Indianapolis, IN 46202</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Phone</span>
+                <span class="text-gray-900">(317) 635-2538</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Email</span>
+                <span class="text-gray-900"><a href="#" class="text-primary-600 underline">rector@allsaintsindy.org</a></span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Website</span>
+                <span class="text-gray-900"><a href="#" class="text-primary-600 underline">allsaintsindy.org</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dates -->
+          <div>
+            <div class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Dates</div>
+            <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Receiving names from</span>
+                <span class="text-gray-900">03/01/2026</span>
+              </div>
+              <div class="flex justify-between border-b border-gray-100 py-1.5">
+                <span class="text-gray-500">Receiving names to</span>
+                <span class="text-gray-900">Open ended</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Simulated next table row -->
+  <table class="w-full text-sm border-collapse mt-0">
+    <tbody>
+      <tr class="border-b border-gray-100 hover:bg-gray-50">
+        <td class="py-2.5 px-3">
+          <div class="font-medium text-gray-900">All Saints Of The Desert Episcopal Church</div>
+          <div class="text-xs text-gray-500">Rector &middot; Priest-in-Charge</div>
+        </td>
+        <td class="py-2.5 px-3">
+          <div class="text-gray-900">Sun City, AZ</div>
+          <div class="text-xs text-gray-500">Arizona</div>
+        </td>
+        <td class="py-2.5 px-3">03/12/2026</td>
+        <td class="py-2.5 px-3">
+          <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">Active</span>
+        </td>
+        <td class="py-2.5 px-3">108</td>
+      </tr>
+      <tr class="border-b border-gray-100 hover:bg-gray-50">
+        <td class="py-2.5 px-3">
+          <div class="font-medium text-gray-900">Calvary Church</div>
+          <div class="text-xs text-gray-500">Rector &middot; Priest-in-Charge</div>
+        </td>
+        <td class="py-2.5 px-3">
+          <div class="text-gray-900">Wadesboro, NC</div>
+          <div class="text-xs text-gray-500">North Carolina</div>
+        </td>
+        <td class="py-2.5 px-3">03/02/2026</td>
+        <td class="py-2.5 px-3">
+          <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">Active</span>
+        </td>
+        <td class="py-2.5 px-3">21</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="text-xs text-gray-400 mt-4 mb-8 px-2">End of simulated table context</div>
+</div>
+
+<script>
+function switchTab(tab) {
+  // Hide all content
+  document.querySelectorAll('[id^="content-"]').forEach(el => el.classList.add('hidden'));
+  // Deactivate all tabs
+  document.querySelectorAll('[id^="tab-"]').forEach(el => {
+    el.classList.remove('tab-active');
+    el.classList.add('tab-inactive');
+  });
+  // Show selected content and activate tab
+  document.getElementById('content-' + tab).classList.remove('hidden');
+  const tabEl = document.getElementById('tab-' + tab);
+  tabEl.classList.remove('tab-inactive');
+  tabEl.classList.add('tab-active');
+}
+</script>
+
+</body>
+</html>
