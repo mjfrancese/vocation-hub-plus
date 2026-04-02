@@ -287,6 +287,58 @@ function initSchema(database) {
     );
 
     CREATE INDEX IF NOT EXISTS idx_clergy_tokens_guid ON clergy_tokens(clergy_guid);
+
+    -- ============================================================
+    -- Scraped positions (raw data from VocationHub scraper)
+    -- ============================================================
+    CREATE TABLE IF NOT EXISTS scraped_positions (
+      vh_id TEXT PRIMARY KEY,
+      name TEXT,
+      diocese TEXT,
+      state TEXT,
+      organization TEXT,
+      position_type TEXT,
+      receiving_from TEXT,
+      receiving_to TEXT,
+      updated_on_hub TEXT,
+      status TEXT,
+      scraped_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- ============================================================
+    -- Scraper metadata (key/value store for scraper state)
+    -- ============================================================
+    CREATE TABLE IF NOT EXISTS scraper_meta (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL,
+      updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+
+    -- ============================================================
+    -- Parish identity (links nid to ecdplus_id)
+    -- ============================================================
+    CREATE TABLE IF NOT EXISTS parish_identity (
+      nid TEXT NOT NULL,
+      ecdplus_id TEXT NOT NULL,
+      confidence TEXT NOT NULL DEFAULT 'auto',
+      match_method TEXT NOT NULL,
+      confirmed_at TEXT,
+      created_at TEXT NOT NULL DEFAULT (datetime('now')),
+      PRIMARY KEY (nid, ecdplus_id)
+    );
+
+    CREATE INDEX IF NOT EXISTS idx_parish_identity_nid ON parish_identity(nid);
+    CREATE INDEX IF NOT EXISTS idx_parish_identity_ecdplus ON parish_identity(ecdplus_id);
+
+    -- ============================================================
+    -- Census data (ZIP-level demographic data)
+    -- ============================================================
+    CREATE TABLE IF NOT EXISTS census_data (
+      zip TEXT PRIMARY KEY,
+      median_income INTEGER,
+      population INTEGER,
+      fetched_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
   `);
 }
 

@@ -110,6 +110,8 @@ describe('db module', () => {
       'idx_comp_diocesan_diocese',
       'idx_parochial_parish',
       'idx_clergy_tokens_guid',
+      'idx_parish_identity_nid',
+      'idx_parish_identity_ecdplus',
     ];
 
     it.each(expectedIndexes)('creates index: %s', (indexName) => {
@@ -119,6 +121,64 @@ describe('db module', () => {
       ).get(indexName);
       expect(row).toBeDefined();
       expect(row.name).toBe(indexName);
+    });
+  });
+
+  describe('schema - new pipeline tables', () => {
+    it('should create scraped_positions table', () => {
+      const db = getDb();
+      const info = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='scraped_positions'").get();
+      expect(info).toBeTruthy();
+      const cols = db.prepare("PRAGMA table_info(scraped_positions)").all();
+      const colNames = cols.map(c => c.name);
+      expect(colNames).toContain('vh_id');
+      expect(colNames).toContain('name');
+      expect(colNames).toContain('diocese');
+      expect(colNames).toContain('state');
+      expect(colNames).toContain('organization');
+      expect(colNames).toContain('position_type');
+      expect(colNames).toContain('receiving_from');
+      expect(colNames).toContain('receiving_to');
+      expect(colNames).toContain('updated_on_hub');
+      expect(colNames).toContain('status');
+      expect(colNames).toContain('scraped_at');
+    });
+
+    it('should create scraper_meta table', () => {
+      const db = getDb();
+      const info = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='scraper_meta'").get();
+      expect(info).toBeTruthy();
+      const cols = db.prepare("PRAGMA table_info(scraper_meta)").all();
+      const colNames = cols.map(c => c.name);
+      expect(colNames).toContain('key');
+      expect(colNames).toContain('value');
+      expect(colNames).toContain('updated_at');
+    });
+
+    it('should create parish_identity table', () => {
+      const db = getDb();
+      const info = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='parish_identity'").get();
+      expect(info).toBeTruthy();
+      const cols = db.prepare("PRAGMA table_info(parish_identity)").all();
+      const colNames = cols.map(c => c.name);
+      expect(colNames).toContain('nid');
+      expect(colNames).toContain('ecdplus_id');
+      expect(colNames).toContain('confidence');
+      expect(colNames).toContain('match_method');
+      expect(colNames).toContain('confirmed_at');
+      expect(colNames).toContain('created_at');
+    });
+
+    it('should create census_data table', () => {
+      const db = getDb();
+      const info = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='census_data'").get();
+      expect(info).toBeTruthy();
+      const cols = db.prepare("PRAGMA table_info(census_data)").all();
+      const colNames = cols.map(c => c.name);
+      expect(colNames).toContain('zip');
+      expect(colNames).toContain('median_income');
+      expect(colNames).toContain('population');
+      expect(colNames).toContain('fetched_at');
     });
   });
 
