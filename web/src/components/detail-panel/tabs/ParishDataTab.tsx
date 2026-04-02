@@ -141,7 +141,7 @@ function MetricCard({
   label: string;
   value: string | null;
   year: string | null;
-  trend: { pct: number; direction: 'up' | 'down' | 'flat'; startYear: string; endYear: string } | null;
+  trend: { pct: number; direction: 'up' | 'down' | 'flat'; startYear: string; endYear: string; startValue: number; endValue: number } | null;
 }) {
   return (
     <div className="bg-gray-50 rounded-lg p-4">
