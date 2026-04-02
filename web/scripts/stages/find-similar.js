@@ -1,7 +1,7 @@
 /**
  * Enrichment Stage: Find Similar Positions
  *
- * For each position, finds up to 5 most similar other positions based on
+ * For each position, finds up to 15 most similar other positions based on
  * congregational size (ASA), compensation, state, position type, and housing type.
  *
  * Extracted from enrich-positions-v2.js: computeSimilarPositions() (~lines 721-799).
@@ -71,7 +71,8 @@ function findSimilar(positions) {
 
     if (asa == null && comp == null) continue;
 
-    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, housingType, name, city });
+    const positionTypes = pos.position_types || [];
+    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, positionTypes, housingType, name, city });
   }
 
   let count = 0;
@@ -96,7 +97,8 @@ function findSimilar(positions) {
       }
 
       if (a.state && b.state && a.state === b.state) score += 2;
-      if (a.positionType && b.positionType && a.positionType === b.positionType) score += 2;
+      if ((a.positionTypes.length > 0 && b.positionTypes.length > 0 && a.positionTypes.some(t => b.positionTypes.includes(t)))
+          || (a.positionType && b.positionType && a.positionType === b.positionType)) score += 2;
       if (a.housingType && b.housingType && a.housingType === b.housingType) score += 1;
 
       if (score >= 3) {

@@ -61,7 +61,7 @@ export default function CompensationTab({ pos }: CompensationTabProps) {
         />
         <SummaryCard
           label="Annual Budget"
-          value={budget ? `$${Number(budget).toLocaleString()}` : 'Not specified'}
+          value={budget ? (isNaN(Number(budget.replace(/[,$]/g, ''))) ? budget : `$${Number(budget.replace(/[,$]/g, '')).toLocaleString()}`) : 'Not specified'}
         />
         <SummaryCard
           label="Orders Required"
