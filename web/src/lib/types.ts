@@ -273,7 +273,9 @@ export interface ParishContext {
 export type SortField =
   | 'name'
   | 'diocese'
-  | 'receiving_names_from'
+  | 'date'        // receiving_names_from (renamed from 'receiving_names_from')
+  | 'updated'     // updated_on_hub
+  | 'firstseen'   // first_seen
   | 'quality_score';
 
 export type SortDirection = 'asc' | 'desc';
