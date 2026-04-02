@@ -56,16 +56,16 @@ export function isInterimStatus(status: string): boolean {
 }
 
 // Unified status model used for both filtering and display
-export type UnifiedStatus = 'Active' | 'Developing' | 'Interim' | 'Closed' | 'Directory Only';
+export type UnifiedStatus = 'Active' | 'Developing' | 'Interim' | 'Closed' | 'Unlisted';
 
-export const UNIFIED_STATUSES: UnifiedStatus[] = ['Active', 'Developing', 'Interim', 'Closed', 'Directory Only'];
+export const UNIFIED_STATUSES: UnifiedStatus[] = ['Active', 'Developing', 'Interim', 'Closed', 'Unlisted'];
 
 export const UNIFIED_STATUS_STYLES: Record<UnifiedStatus, string> = {
   'Active': 'bg-green-100 text-green-800 border-green-200',
   'Developing': 'bg-blue-100 text-blue-800 border-blue-200',
   'Interim': 'bg-yellow-100 text-yellow-800 border-yellow-200',
   'Closed': 'bg-gray-100 text-gray-600 border-gray-200',
-  'Directory Only': 'bg-gray-50 text-gray-400 border-gray-200',
+  'Unlisted': 'bg-gray-50 text-gray-400 border-gray-200',
 };
 
 export const UNIFIED_STATUS_CHIP_COLORS: Record<UnifiedStatus, { color: string; activeColor: string }> = {
@@ -73,7 +73,7 @@ export const UNIFIED_STATUS_CHIP_COLORS: Record<UnifiedStatus, { color: string; 
   'Developing': { color: 'bg-blue-50 text-blue-700 border-blue-200', activeColor: 'bg-blue-600 text-white border-blue-600' },
   'Interim': { color: 'bg-yellow-50 text-yellow-700 border-yellow-200', activeColor: 'bg-yellow-600 text-white border-yellow-600' },
   'Closed': { color: 'bg-gray-50 text-gray-600 border-gray-200', activeColor: 'bg-gray-600 text-white border-gray-600' },
-  'Directory Only': { color: 'bg-gray-50 text-gray-400 border-gray-200', activeColor: 'bg-gray-500 text-white border-gray-500' },
+  'Unlisted': { color: 'bg-gray-50 text-gray-400 border-gray-200', activeColor: 'bg-gray-500 text-white border-gray-500' },
 };
 
 /**
@@ -94,7 +94,7 @@ export function getUnifiedStatus(
     if (isDevelopingStatus(status)) return 'Developing';
     if (isInterimStatus(status)) return 'Interim';
     if (isClosedStatus(status)) return 'Closed';
-    return 'Directory Only';
+    return 'Unlisted';
   }
 
   // Public positions: derive from vh_status
@@ -105,4 +105,46 @@ export function getUnifiedStatus(
 
   // Public with no recognized vh_status -- default to Active
   return 'Active';
+}
+
+/**
+ * Determines if an Unlisted position qualifies for the default view.
+ * Must have: quality score >= 85, receiving_names_from within 12 months, parochial data.
+ */
+export function isQualifyingUnlisted(pos: {
+  visibility?: string;
+  quality_score?: number;
+  receiving_names_from?: string;
+  parochials?: Array<{ years: Record<string, unknown> }>;
+  vh_status?: string;
+  status?: string;
+}): boolean {
+  const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
+  if (unified !== 'Unlisted') return false;
+  if ((pos.quality_score ?? 0) < 85) return false;
+
+  // Must have a receiving_names_from date within 12 months
+  const dateStr = pos.receiving_names_from;
+  if (!dateStr) return false;
+  const parsed = parseDate(dateStr);
+  if (!parsed) return false;
+  const oneYearAgo = new Date();
+  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+  if (parsed < oneYearAgo) return false;
+
+  // Must have parochial data
+  const parochial = pos.parochials?.[0];
+  if (!parochial || Object.keys(parochial.years).length === 0) return false;
+
+  return true;
+}
+
+function parseDate(str: string): Date | null {
+  if (!str) return null;
+  // Handle MM/DD/YYYY
+  const mdy = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
+  // Handle YYYY-MM-DD or ISO
+  const d = new Date(str);
+  return isNaN(d.getTime()) ? null : d;
 }
