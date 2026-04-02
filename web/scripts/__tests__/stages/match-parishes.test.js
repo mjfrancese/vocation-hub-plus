@@ -308,6 +308,66 @@ describe('extractCity', () => {
   });
 });
 
+// ---------------------------------------------------------------------------
+// parish_identity integration
+// ---------------------------------------------------------------------------
+
+describe('parish_identity integration', () => {
+  it('should enrich ECDPlus match with coords from linked Asset Map parish', () => {
+    // Asset Map parish (has coords, but NO alias -- position won't match to it directly)
+    db.prepare(`INSERT INTO parishes (id, nid, name, diocese, city, state, lat, lng, source)
+      VALUES (10, '100', 'St. Paul''s Church', 'Massachusetts', 'Boston', 'MA', 42.35, -71.06, 'asset_map')`).run();
+
+    // ECDPlus parish (no coords, HAS an alias the position will match)
+    db.prepare(`INSERT INTO parishes (id, ecdplus_id, name, diocese, city, state, source)
+      VALUES (11, 'ECD-1', 'Saint Paul''s Episcopal', 'Massachusetts', 'Boston', 'MA', 'ecdplus')`).run();
+    db.prepare(`INSERT INTO parish_aliases (parish_id, alias, alias_normalized, source)
+      VALUES (11, 'Saint Paul''s Episcopal', 'st paul', 'ecdplus')`).run();
+
+    // Identity link: the ECDPlus parish is the same as the Asset Map parish
+    db.prepare(`INSERT INTO parish_identity (nid, ecdplus_id, confidence, match_method)
+      VALUES ('100', 'ECD-1', 'confirmed', 'phone')`).run();
+
+    const positions = [{
+      id: 'pos1',
+      name: "Saint Paul's Episcopal",
+      diocese: 'Massachusetts',
+    }];
+
+    const matchParishesStage = require('../../stages/match-parishes.js');
+    const result = matchParishesStage(positions, db);
+
+    // Should match to ECDPlus parish via alias, then enrich with Asset Map coords
+    expect(result[0].church_infos).toHaveLength(1);
+    expect(result[0].church_infos[0].lat).toBe(42.35);
+    expect(result[0].church_infos[0].lng).toBe(-71.06);
+  });
+
+  it('should not overwrite existing coords on matched parish', () => {
+    // Asset Map parish with coords AND alias
+    db.prepare(`INSERT INTO parishes (id, nid, name, diocese, city, state, lat, lng, source)
+      VALUES (10, '100', 'Holy Comforter', 'Massachusetts', 'Boston', 'MA', 42.35, -71.06, 'asset_map')`).run();
+    db.prepare(`INSERT INTO parish_aliases (parish_id, alias, alias_normalized, source)
+      VALUES (10, 'Holy Comforter', 'holy comforter', 'asset_map')`).run();
+
+    // Identity link exists but matched parish already has coords -- no enrichment needed
+    db.prepare(`INSERT INTO parish_identity (nid, ecdplus_id, confidence, match_method)
+      VALUES ('100', 'ECD-1', 'confirmed', 'phone')`).run();
+
+    const positions = [{
+      id: 'pos1',
+      name: 'Holy Comforter',
+      diocese: 'Massachusetts',
+    }];
+
+    const matchParishesStage = require('../../stages/match-parishes.js');
+    const result = matchParishesStage(positions, db);
+
+    expect(result[0].church_infos).toHaveLength(1);
+    expect(result[0].church_infos[0].lat).toBe(42.35);
+  });
+});
+
 describe('buildChurchInfo', () => {
   it('builds church info from parish row', () => {
     const info = buildChurchInfo({

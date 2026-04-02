@@ -85,6 +85,55 @@ function buildChurchInfo(parish) {
 }
 
 // ---------------------------------------------------------------------------
+// Identity enrichment
+// ---------------------------------------------------------------------------
+
+/**
+ * Enrich a match result with data from linked parishes via parish_identity.
+ *
+ * - If matched parish is ECDPlus (has ecdplus_id but no coords), pull coords
+ *   from the linked Asset Map parish.
+ * - If matched parish is Asset Map (has nid but no ecdplus_id), pull ecdplus_id
+ *   from the linked ECDPlus parish.
+ */
+function enrichMatchWithIdentity(match, db) {
+  if (!match || !match.parish) return match;
+  const parish = match.parish;
+
+  // If matched parish is ECDPlus (has ecdplus_id but no coords), look up linked Asset Map parish
+  if (parish.ecdplus_id && (!parish.lat || !parish.lng)) {
+    const linked = db.prepare(
+      `SELECT p.* FROM parish_identity pi
+       JOIN parishes p ON p.nid = pi.nid
+       WHERE pi.ecdplus_id = ? AND p.lat IS NOT NULL`
+    ).get(parish.ecdplus_id);
+    if (linked) {
+      return {
+        ...match,
+        parish: { ...parish, lat: linked.lat, lng: linked.lng },
+      };
+    }
+  }
+
+  // If matched parish is Asset Map (has nid but no ecdplus_id), get ecdplus_id from linked parish
+  if (parish.nid && (!parish.ecdplus_id)) {
+    const linked = db.prepare(
+      `SELECT p.* FROM parish_identity pi
+       JOIN parishes p ON p.ecdplus_id = pi.ecdplus_id
+       WHERE pi.nid = ?`
+    ).get(parish.nid);
+    if (linked) {
+      return {
+        ...match,
+        parish: { ...parish, ecdplus_id: linked.ecdplus_id },
+      };
+    }
+  }
+
+  return match;
+}
+
+// ---------------------------------------------------------------------------
 // Single-parish matching
 // ---------------------------------------------------------------------------
 
@@ -310,7 +359,7 @@ function matchPositionToParish(position, db) {
  */
 function matchPositionToParishes(position, db) {
   // Try unsplit match first
-  const unsplitMatch = matchPositionToParish(position, db);
+  const unsplitMatch = enrichMatchWithIdentity(matchPositionToParish(position, db), db);
   const unsplitResults = unsplitMatch ? [unsplitMatch] : [];
 
   // Split name into candidate parts
@@ -346,7 +395,7 @@ function matchPositionToParishes(position, db) {
       contact_phone: '',
     };
 
-    const match = matchPositionToParish(syntheticPosition, db);
+    const match = enrichMatchWithIdentity(matchPositionToParish(syntheticPosition, db), db);
     if (match && !seenParishIds.has(match.parish.id)) {
       seenParishIds.add(match.parish.id);
       splitResults.push(match);
@@ -407,3 +456,4 @@ module.exports.buildChurchInfo = buildChurchInfo;
 module.exports.normalizeDioceseName = normalizeDioceseName;
 module.exports.isGenericDomain = isGenericDomain;
 module.exports.extractCity = extractCity;
+module.exports.enrichMatchWithIdentity = enrichMatchWithIdentity;
