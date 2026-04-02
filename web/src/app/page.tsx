@@ -236,10 +236,10 @@ function PositionsPageContent() {
             and are confirmed to be accepting applications.
           </p>
           <p>
-            <strong>Directory Listings</strong> are positions found in the Vocation Hub&#39;s profile directory
+            <strong>Unlisted Positions</strong> are positions found in the Vocation Hub&#39;s profile directory
             that are not currently in active search results. They may be in development, recently closed, or
-            awaiting updates. We include them when they have enough information to be useful. Each directory
-            listing shows a quality score (0-100) based on how complete and current the listing data is.
+            awaiting updates. We include them when they have enough information to be useful. Each unlisted
+            position shows a quality score (0-100) based on how complete and current the listing data is.
           </p>
           <p>
             All listings are enriched with data from the Episcopal Asset Map (church directory) and General
