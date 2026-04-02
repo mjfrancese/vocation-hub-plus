@@ -106,11 +106,11 @@ export default function MapView({ positions, onNavigateToPosition }: MapViewProp
 
   // Register navigation callback on window
   useEffect(() => {
-    (window as Record<string, unknown>).__vhNavigate = (id: string) => {
+    (window as unknown as Record<string, unknown>).__vhNavigate = (id: string) => {
       onNavigateToPosition?.(id);
     };
     return () => {
-      delete (window as Record<string, unknown>).__vhNavigate;
+      delete (window as unknown as Record<string, unknown>).__vhNavigate;
     };
   }, [onNavigateToPosition]);
 
