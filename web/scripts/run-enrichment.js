@@ -442,25 +442,33 @@ function writeOutput(data, outputDir, db) {
     JSON.stringify(churchMap, null, 2)
   );
 
-  // Copy scraper_meta blobs to output
-  if (db) {
-    const metaKeys = ['changes', 'meta', 'all_profiles', 'profile_fields'];
-    const fileNames = {
-      changes: 'changes.json',
-      meta: 'meta.json',
-      all_profiles: 'all-profiles.json',
-      profile_fields: 'profile-fields.json',
-    };
+  // positions.json -- raw scraped positions (used as fallback by data.ts)
+  fs.writeFileSync(
+    path.join(outputDir, 'positions.json'),
+    JSON.stringify(cleanPositions, null, 2)
+  );
 
-    for (const key of metaKeys) {
-      const value = readMeta(db, key);
-      if (value !== null) {
-        fs.writeFileSync(
-          path.join(outputDir, fileNames[key]),
-          JSON.stringify(value, null, 2)
-        );
-      }
-    }
+  // Copy scraper_meta blobs to output (with empty defaults for build safety)
+  const metaKeys = ['changes', 'meta', 'all_profiles', 'profile_fields'];
+  const fileNames = {
+    changes: 'changes.json',
+    meta: 'meta.json',
+    all_profiles: 'all-profiles.json',
+    profile_fields: 'profile-fields.json',
+  };
+  const defaults = {
+    changes: [],
+    meta: { last_scrape: null, position_count: cleanPositions.length },
+    all_profiles: [],
+    profile_fields: {},
+  };
+
+  for (const key of metaKeys) {
+    const value = db ? readMeta(db, key) : null;
+    fs.writeFileSync(
+      path.join(outputDir, fileNames[key]),
+      JSON.stringify(value !== null ? value : defaults[key], null, 2)
+    );
   }
 
   console.log(`Output written to ${outputDir}`);
