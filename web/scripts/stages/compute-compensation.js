@@ -69,19 +69,19 @@ const CPG_TYPE_MAP = {
 /**
  * Look up position-type-specific compensation from CPG data.
  */
-function lookupPositionTypeComp(db, diocese, cpgType) {
-  if (!diocese || !cpgType) return null;
+function lookupPositionTypeComp(db, cpgType) {
+  if (!cpgType) return null;
   try {
     const row = db.prepare(`
       SELECT median, count, year, position_type
       FROM compensation_by_position
-      WHERE LOWER(diocese) = LOWER(?)
-        AND position_type = ?
+      WHERE position_type = ?
         AND gender = 'all'
       ORDER BY year DESC LIMIT 1
-    `).get(diocese, cpgType);
+    `).get(cpgType);
     return row ?? null;
-  } catch {
+  } catch (e) {
+    console.warn('lookupPositionTypeComp failed:', e.message);
     return null;
   }
 }
@@ -151,7 +151,7 @@ function computeCompensation(positions, db, profileFields) {
     const cpgType = getCpgPositionType(positionTypes, asa);
     if (cpgType) {
       pos.cpg_position_type = cpgType;
-      const ptComp = lookupPositionTypeComp(db, pos.diocese || '', cpgType);
+      const ptComp = lookupPositionTypeComp(db, cpgType);
       if (ptComp) {
         pos.compensation = pos.compensation || {};
         pos.compensation.position_type_median = ptComp.median;
