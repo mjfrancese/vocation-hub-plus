@@ -108,8 +108,11 @@ export function getUnifiedStatus(
 }
 
 /**
- * Determines if an Unlisted position qualifies for the default view.
+ * Determines if an extended/unlisted position qualifies for the default view.
  * Must have: quality score >= 85, receiving_names_from within 12 months, parochial data.
+ *
+ * When skipStatusCheck is true, skips the Unlisted-only check so this can gate
+ * ALL extended positions (including those with active VH statuses).
  */
 export function isQualifyingUnlisted(pos: {
   visibility?: string;
@@ -118,9 +121,11 @@ export function isQualifyingUnlisted(pos: {
   parochials?: Array<{ years: Record<string, unknown> }>;
   vh_status?: string;
   status?: string;
-}): boolean {
-  const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
-  if (unified !== 'Unlisted') return false;
+}, skipStatusCheck = false): boolean {
+  if (!skipStatusCheck) {
+    const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
+    if (unified !== 'Unlisted') return false;
+  }
   if ((pos.quality_score ?? 0) < 85) return false;
 
   // Must have a receiving_names_from date within 12 months

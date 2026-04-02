@@ -8,12 +8,24 @@ export const DEFAULT_ACTIVE_STATUSES: UnifiedStatus[] = ['Active', 'Developing',
 
 /**
  * Check if a position should appear in the default view.
- * Active/New/Developing/Interim always show; qualifying Unlisted positions also show.
+ *
+ * Public positions: Active/Developing/Interim always show.
+ * Extended positions: must also pass data-quality checks (quality >= 85,
+ * receiving_names_from within 12 months, parochial data present) regardless
+ * of their VH status.  Without this gate, extended positions with an active
+ * VH status but no location/parochial data would slip through.
  */
 export function passesDefaultFilter(pos: Position): boolean {
   const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
+  const isExtended = pos.visibility === 'extended' || pos.visibility === 'extended_hidden';
+
+  if (isExtended) {
+    // All extended positions must meet data-quality requirements
+    return isQualifyingUnlisted(pos, true);
+  }
+
+  // Public positions: show Active/Developing/Interim
   if (unified === 'Active' || unified === 'Developing' || unified === 'Interim') return true;
-  if (isQualifyingUnlisted(pos)) return true;
   return false;
 }
 
