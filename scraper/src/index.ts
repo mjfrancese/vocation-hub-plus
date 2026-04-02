@@ -167,7 +167,20 @@ async function main(): Promise<void> {
             newCount: allPositions.filter((p) => p.status === 'new').length,
             lastScrape: scrapeStats || null,
           };
-          exportToDb(mainDbPath, allPositions, allChanges, exportMeta, {}, []);
+
+          // Read profile data from disk that was saved by saveProfileFields in phases 2-3
+          const profileFieldsPath = path.join(path.resolve(__dirname, '../output'), 'profile-fields.json');
+          const profileFields: Record<number, Array<{ label: string; value: string }>> = fs.existsSync(profileFieldsPath)
+            ? JSON.parse(fs.readFileSync(profileFieldsPath, 'utf8'))
+            : {};
+
+          // Convert profileFields map to allProfiles array format
+          const allProfiles = Object.entries(profileFields).map(([id, fields]) => ({
+            id: parseInt(id, 10),
+            fields,
+          }));
+
+          exportToDb(mainDbPath, allPositions, allChanges, exportMeta, profileFields, allProfiles);
         } catch (dbExportErr) {
           logger.warn('DB export to vocationhub.db failed (non-fatal)', {
             error: dbExportErr instanceof Error ? dbExportErr.message : String(dbExportErr),

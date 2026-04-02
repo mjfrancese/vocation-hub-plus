@@ -45,7 +45,6 @@ export function exportToDb(
         scraped_at = excluded.scraped_at
     `);
 
-    const scrapedAt = new Date().toISOString();
     let exported = 0;
     let skipped = 0;
 
