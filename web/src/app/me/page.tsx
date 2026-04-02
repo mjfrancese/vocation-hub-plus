@@ -32,10 +32,9 @@ function DashboardContent() {
 
     const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
     Promise.all([
-      fetch(`${base}/data/clergy-tokens.json`).then(r => r.json()),
+      fetch(`${base}/data/clergy/${token}.json`).then(r => r.ok ? r.json() : null),
       fetch(`${base}/data/enriched-positions.json`).then(r => r.json()),
-    ]).then(([tokenMap, posData]) => {
-      const data = tokenMap[token];
+    ]).then(([data, posData]) => {
       if (!data) {
         localStorage.removeItem(ME_TOKEN_KEY);
         router.push('/claim');

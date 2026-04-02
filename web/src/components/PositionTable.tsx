@@ -127,10 +127,10 @@ export default function PositionTable({ positions }: PositionTableProps) {
     if (!token) return;
 
     const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-    fetch(`${base}/data/clergy-tokens.json`)
-      .then(r => r.json())
-      .then(tokenMap => {
-        if (tokenMap[token]) setMeData(tokenMap[token]);
+    fetch(`${base}/data/clergy/${token}.json`)
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data) setMeData(data);
       })
       .catch(() => {});
   }, []);
