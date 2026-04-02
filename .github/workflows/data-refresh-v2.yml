@@ -41,7 +41,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
 
       - name: Scrape Asset Map (Episcopal church directory)
-        run: npm run scrape:churches --workspace=scraper
+        run: npm run church-directory --workspace=scraper
         timeout-minutes: 60
         env:
           VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
@@ -80,7 +80,7 @@ jobs:
           VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
 
       - name: Scrape parochial reports
-        run: npm run scrape:parochial --workspace=scraper
+        run: npm run parochial-reports --workspace=scraper
         timeout-minutes: 30
         env:
           VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
