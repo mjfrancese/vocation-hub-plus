@@ -1,0 +1,90 @@
+name: Monthly Data Refresh v2
+
+on:
+  schedule:
+    - cron: '0 5 1 * *'
+  workflow_dispatch:
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        working-directory: scraper
+        run: npx playwright install chromium --with-deps
+
+      - name: Download vocationhub.db from latest release
+        run: |
+          mkdir -p data
+          gh release download db-latest --pattern 'vocationhub.db' --dir data/ --clobber 2>/dev/null || echo "No DB release yet"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Scrape Asset Map (Episcopal church directory)
+        run: npm run scrape:churches --workspace=scraper
+        timeout-minutes: 60
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Import Asset Map
+        run: node web/scripts/import-asset-map.js
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Fetch ECDPlus parishes
+        run: node web/scripts/fetch-ecdplus-parishes.js
+        timeout-minutes: 30
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Fetch ECDPlus clergy
+        run: node web/scripts/fetch-ecdplus-clergy.js
+        timeout-minutes: 30
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Merge parishes
+        run: node web/scripts/merge-parishes.js
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Scrape parochial reports
+        run: npm run scrape:parochial --workspace=scraper
+        timeout-minutes: 30
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Import parochial data
+        run: node web/scripts/import-parochial-data.js
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
+      - name: Upload vocationhub.db to release
+        run: gh release upload db-latest data/vocationhub.db --clobber
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Trigger build
+        run: gh api repos/${{ github.repository }}/dispatches -f event_type=build
+        env:
+          GH_TOKEN: ${{ github.token }}
