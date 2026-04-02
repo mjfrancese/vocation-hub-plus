@@ -207,7 +207,12 @@ function mergeParishes(database) {
     if (match) {
       mergeOne(ecdRow, match.parish);
       merged++;
-      // Record identity link after successful merge
+      // Record identity link after successful merge.
+      // Confidence is based on match method: phone/website are reliable enough to
+      // auto-confirm; name-based matches (name_diocese, name_diocese_city) get 'auto'
+      // and need human review via confirm-parish-matches.js.
+      // NOTE: If you add new findMatch strategies, add their method names here or
+      // they will default to 'auto'.
       if (match.parish.nid && ecdRow.ecdplus_id) {
         const confidence = (match.method === 'identity_table' || match.method === 'phone' || match.method === 'website')
           ? 'confirmed' : 'auto';
