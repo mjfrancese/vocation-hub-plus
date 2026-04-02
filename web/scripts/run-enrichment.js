@@ -50,6 +50,78 @@ function parseMMDDYYYY(str) {
 }
 
 /**
+ * Get a field value from a profile's fields array by label.
+ * Tries exact match first, then partial match as fallback.
+ */
+function getField(fields, ...labels) {
+  if (!Array.isArray(fields)) return '';
+  for (const label of labels) {
+    const match = fields.find(f => f.label && f.label.toLowerCase() === label.toLowerCase());
+    if (match && match.value) return match.value;
+  }
+  // Partial match fallback
+  for (const label of labels) {
+    const lower = label.toLowerCase();
+    const match = fields.find(f => f.label && f.label.toLowerCase().includes(lower));
+    if (match && match.value) return match.value;
+  }
+  return '';
+}
+
+/**
+ * Get a date field value, validating it looks like a date.
+ */
+function getDateField(fields, ...labels) {
+  const raw = getField(fields, ...labels);
+  if (!raw) return '';
+  if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(raw) || /^\d{4}-\d{2}-\d{2}/.test(raw)) {
+    return raw;
+  }
+  return '';
+}
+
+/**
+ * Transform raw profiles ({id, fields} format from the scraper) to the
+ * flattened format expected by buildExtendedPositions().
+ * Mirrors the transformation in scraper/src/merge-profiles.ts.
+ */
+function flattenRawProfiles(rawProfiles) {
+  return rawProfiles.map(p => {
+    const f = p.fields || [];
+    return {
+      vh_id: p.id,
+      profile_url: p.url || `https://vocationhub.episcopalchurch.org/PositionView/${p.id}`,
+      diocese: getField(f, 'Diocese'),
+      congregation: getField(f, 'Congregation', 'Community Name', 'Congregation Name'),
+      position_type: getField(f, 'Position Title/Role', 'Position Type'),
+      status: getField(f, 'Current status'),
+      order_of_ministry: getField(f, 'Order(s) of Ministry'),
+      geographic_location: getField(f, 'Geographic Location'),
+      work_environment: getField(f, 'Work Environment'),
+      ministry_setting: getField(f, 'Ministry Setting'),
+      avg_sunday_attendance: getField(f, 'Average Sunday Attendance'),
+      annual_budget: getField(f, 'Annual Budget'),
+      salary_range: getField(f, 'Range'),
+      housing_type: getField(f, 'Type of Housing Provided'),
+      pension: getField(f, 'Pension Plan'),
+      healthcare: getField(f, 'Healthcare Options'),
+      reimbursement: getField(f, 'Reimbursement Offered'),
+      vacation: getField(f, 'Vacation & Leave Details'),
+      leadership_skills: getField(f, 'Leadership skills'),
+      ministry_skills: getField(f, 'Ministry skills'),
+      languages: getField(f, 'Languages spoken'),
+      contact_email: getField(f, 'Email Address') || getField(f, 'email'),
+      website: getField(f, 'Parish website', 'Congregation website', 'Website'),
+      facebook: getField(f, 'Facebook page', 'Facebook'),
+      receiving_names_from: getDateField(f, 'Receiving names from'),
+      receiving_names_to: getField(f, 'To') || '',
+      open_ended: (getField(f, 'To') || '').toLowerCase() === 'open ended',
+      all_fields: f,
+    };
+  });
+}
+
+/**
  * Fix bogus 1900-01-01 dates. If the year part is 1900, replace it with the
  * current year (a VocationHub default-value artifact).
  */
@@ -85,8 +157,15 @@ function readMeta(db, key) {
  */
 function loadPositions(db) {
   const rows = db.prepare('SELECT * FROM scraped_positions').all();
-  const allProfiles = readMeta(db, 'all_profiles') || [];
+  let allProfiles = readMeta(db, 'all_profiles') || [];
   const profileFields = readMeta(db, 'profile_fields') || {};
+
+  // Detect raw {id, fields} format from scraper and flatten to the shape
+  // that buildExtendedPositions() expects (vh_id, diocese, congregation, etc.)
+  if (allProfiles.length > 0 && allProfiles[0].fields && !allProfiles[0].vh_id) {
+    console.log('  Transforming raw profiles to flattened format...');
+    allProfiles = flattenRawProfiles(allProfiles);
+  }
 
   // Map DB columns to the position shape expected by stages
   const positions = rows.map(r => ({
