@@ -1,23 +1,22 @@
 #!/usr/bin/env node
 /**
+ * fetch-census-data.js
+ *
  * Fetches census demographic data (median household income, population) from
  * the US Census Bureau ACS 5-year estimates for all zip codes found in the
- * enriched position data.
+ * parishes table, and writes results to the census_data table.
  *
  * Uses ZCTA (Zip Code Tabulation Area) geography.
  * No API key is required for basic access, but the Census Bureau asks callers
  * to be courteous with request volume. We batch 50 ZCTAs per request and add
  * a 250ms delay between batches to stay well within rate limits.
  *
- * Output: public/data/census-data.json  (keyed by 5-digit zip code)
- * On any error the script writes an empty JSON object so the build continues.
+ * CommonJS module -- run directly or import functions for testing.
  */
 
-const fs = require('fs');
-const path = require('path');
+'use strict';
 
-const DATA_DIR = path.resolve(__dirname, '../public/data');
-const OUT_FILE = path.join(DATA_DIR, 'census-data.json');
+const { getDb, closeDb, logFetch } = require('./db.js');
 
 // ACS 5-year estimates, 2022 vintage
 const BASE_URL = 'https://api.census.gov/data/2022/acs/acs5';
@@ -30,12 +29,6 @@ const BATCH_SIZE = 50;
 
 // Delay between batch requests (ms) to respect Census Bureau rate limits
 const BATCH_DELAY_MS = 250;
-
-function load(name) {
-  const file = path.join(DATA_DIR, name);
-  if (!fs.existsSync(file)) return null;
-  return JSON.parse(fs.readFileSync(file, 'utf-8'));
-}
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -52,27 +45,53 @@ function cleanZip(raw) {
 }
 
 /**
- * Collect unique 5-digit zip codes from enriched position files.
+ * Collect unique 5-digit zip codes from the parishes table.
+ * @param {import('better-sqlite3').Database} db
+ * @returns {string[]} sorted array of unique 5-digit zip codes
  */
-function collectZipCodes() {
+function collectZipCodesFromDb(db) {
+  const rows = db.prepare(
+    "SELECT DISTINCT zip FROM parishes WHERE zip IS NOT NULL AND zip != ''"
+  ).all();
+
   const zips = new Set();
-
-  const files = ['enriched-positions.json', 'enriched-extended.json', 'positions.json'];
-  for (const name of files) {
-    const data = load(name);
-    if (!Array.isArray(data)) continue;
-    for (const pos of data) {
-      const raw = (pos.church_info && pos.church_info.zip) || pos.postal_code || '';
-      const zip = cleanZip(raw);
-      if (zip) zips.add(zip);
-    }
+  for (const row of rows) {
+    const zip = cleanZip(row.zip);
+    if (zip) zips.add(zip);
   }
-
   return Array.from(zips).sort();
 }
 
 /**
- * Fetch census data for a batch of ZCTAs.
+ * Write census data to the census_data table (upsert).
+ * @param {import('better-sqlite3').Database} db
+ * @param {Object<string, {median_household_income?: number, population?: number}>} data
+ */
+function writeCensusToDb(db, data) {
+  const upsert = db.prepare(`
+    INSERT INTO census_data (zip, median_income, population, fetched_at)
+    VALUES (?, ?, ?, datetime('now'))
+    ON CONFLICT(zip) DO UPDATE SET
+      median_income = excluded.median_income,
+      population = excluded.population,
+      fetched_at = excluded.fetched_at
+  `);
+
+  const run = db.transaction(() => {
+    for (const [zip, entry] of Object.entries(data)) {
+      upsert.run(
+        zip,
+        entry.median_household_income ?? null,
+        entry.population ?? null
+      );
+    }
+  });
+
+  run();
+}
+
+/**
+ * Fetch census data for a batch of ZCTAs from the Census Bureau API.
  * Returns an array of [income, population, name, zcta] rows, or empty on error.
  */
 async function fetchBatch(zctas) {
@@ -92,12 +111,19 @@ async function fetchBatch(zctas) {
 }
 
 async function main() {
+  const db = getDb();
+  const start = Date.now();
+
   console.log('Fetching census demographic data...');
 
-  const zips = collectZipCodes();
+  const zips = collectZipCodesFromDb(db);
   if (zips.length === 0) {
-    console.log('  No zip codes found; writing empty census data.');
-    fs.writeFileSync(OUT_FILE, JSON.stringify({}, null, 2));
+    console.log('  No zip codes found in parishes table.');
+    logFetch('census_data', {
+      records_total: 0, records_new: 0, records_updated: 0,
+      duration_ms: Date.now() - start, status: 'success',
+    });
+    closeDb();
     return;
   }
 
@@ -144,14 +170,25 @@ async function main() {
     }
   }
 
-  console.log(`  Census data fetched for ${totalFetched} zip codes`);
-  fs.writeFileSync(OUT_FILE, JSON.stringify(censusData, null, 2));
-  console.log(`  Written to census-data.json`);
+  writeCensusToDb(db, censusData);
+
+  logFetch('census_data', {
+    records_total: zips.length,
+    records_new: totalFetched,
+    records_updated: 0,
+    duration_ms: Date.now() - start,
+    status: 'success',
+  });
+
+  console.log(`  Census data fetched for ${totalFetched} / ${zips.length} zip codes, written to DB`);
+  closeDb();
 }
 
-main().catch(err => {
-  console.error(`Census fetch failed: ${err.message}`);
-  console.log('  Writing empty census data so build can continue.');
-  fs.writeFileSync(OUT_FILE, JSON.stringify({}, null, 2));
-  process.exit(0);
-});
+module.exports = { collectZipCodesFromDb, writeCensusToDb, cleanZip, fetchBatch };
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error(`Census fetch failed: ${err.message}`);
+    process.exit(1);
+  });
+}
