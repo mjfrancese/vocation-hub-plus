@@ -51,11 +51,57 @@ export default function AboutPage() {
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-gray-900">How it works</h2>
         <div className="bg-white border border-gray-200 rounded-lg p-6">
+          <p className="text-gray-600 mb-4">
+            We collect position data from VocationHub daily, then enrich each listing with church directory
+            information, parochial report history, compensation benchmarks, and census demographics. The result
+            is a unified view that no single source provides on its own.
+          </p>
           <ol className="list-decimal list-inside space-y-2 text-gray-600">
             <li>An automated process collects position listings and detailed profile data from Vocation Hub</li>
             <li>Each position is enriched with church directory data, parochial reports, and location information</li>
             <li>The results are published here so you can search, filter, and compare positions freely</li>
           </ol>
+        </div>
+      </section>
+
+      {/* Data Sources */}
+      <section className="mb-12">
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">Where the Data Comes From</h2>
+        <p className="text-gray-600 mb-4">
+          Vocation Hub+ collects data from multiple Episcopal Church sources and combines them into a single enriched view
+          that no single source provides on its own.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <DataSourceCard
+            name="VocationHub"
+            url="https://vocationhub.episcopalchurch.org"
+            description="Position listings, profile fields, search status, contact information"
+          />
+          <DataSourceCard
+            name="Episcopal Asset Map"
+            url="https://www.episcopalassetmap.org"
+            description="Church directory: addresses, phone, email, geographic coordinates"
+          />
+          <DataSourceCard
+            name="ECDPlus"
+            url="https://www.ecdplus.org"
+            description="Extended church directory cross-reference"
+          />
+          <DataSourceCard
+            name="Parochial Reports"
+            url="https://www.episcopalchurch.org/research-and-statistics/"
+            description="Annual congregation data: attendance, giving, membership (2015-2024)"
+          />
+          <DataSourceCard
+            name="Church Pension Group"
+            url="https://www.cpg.org"
+            description="Clergy compensation benchmarks by diocese, position type, church size"
+          />
+          <DataSourceCard
+            name="US Census Bureau (ACS)"
+            url="https://www.census.gov/programs-surveys/acs"
+            description="Median household income and population by zip code"
+          />
         </div>
       </section>
 
@@ -82,7 +128,7 @@ export default function AboutPage() {
           <StatCard label="Receiving" value={receiving} />
           <StatCard label="Developing" value={developing} />
           <StatCard label="Interim" value={interim} />
-          <StatCard label="Closed" value={closed} />
+          <StatCard label="Unlisted" value={closed} />
         </div>
       </section>
 
@@ -113,6 +159,18 @@ function StatCard({ label, value }: { label: string; value: number }) {
     <div className="bg-white border border-gray-200 rounded-lg p-4 text-center">
       <p className="text-2xl font-bold text-gray-900">{value}</p>
       <p className="text-xs text-gray-500 mt-1">{label}</p>
+    </div>
+  );
+}
+
+function DataSourceCard({ name, url, description }: { name: string; url: string; description: string }) {
+  return (
+    <div className="border border-gray-200 rounded-lg p-4">
+      <a href={url} target="_blank" rel="noopener noreferrer"
+        className="text-primary-600 font-medium hover:underline">
+        {name}
+      </a>
+      <p className="text-sm text-gray-600 mt-1">{description}</p>
     </div>
   );
 }
