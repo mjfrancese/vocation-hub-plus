@@ -149,16 +149,14 @@ function enrichMatchWithIdentity(match, db) {
 // Single-parish matching
 // ---------------------------------------------------------------------------
 
-function matchPositionToParish(position, db) {
+function matchPositionToParish(position, db, lookups) {
   // Strategy 1: Website match
   if (position.website_url) {
     const domain = normalizeDomain(position.website_url);
     if (domain && !isGenericDomain(domain)) {
-      const parishes = db.prepare("SELECT * FROM parishes WHERE website != '' AND website IS NOT NULL").all();
-      for (const p of parishes) {
-        if (normalizeDomain(p.website) === domain) {
-          return { parish: p, confidence: 'exact', method: 'website' };
-        }
+      const matches = lookups.parishesByWebDomain.get(domain) || [];
+      for (const p of matches) {
+        return { parish: p, confidence: 'exact', method: 'website' };
       }
     }
   }
@@ -167,12 +165,9 @@ function matchPositionToParish(position, db) {
   if (position.contact_email) {
     const emailDomain = position.contact_email.split('@')[1];
     if (emailDomain && !isGenericDomain(emailDomain)) {
-      const parishes = db.prepare("SELECT * FROM parishes WHERE email != '' AND email IS NOT NULL").all();
-      for (const p of parishes) {
-        const pDomain = (p.email || '').split('@')[1];
-        if (pDomain && pDomain.toLowerCase() === emailDomain.toLowerCase()) {
-          return { parish: p, confidence: 'exact', method: 'email' };
-        }
+      const matches = lookups.parishesByEmailDomain.get(emailDomain.toLowerCase()) || [];
+      for (const p of matches) {
+        return { parish: p, confidence: 'exact', method: 'email' };
       }
     }
   }
@@ -182,11 +177,9 @@ function matchPositionToParish(position, db) {
   if (position.contact_phone) {
     const normalizedPhone = normalizePhone(position.contact_phone);
     if (normalizedPhone && normalizedPhone.length >= 10) {
-      const parishes = db.prepare(
-        "SELECT * FROM parishes WHERE phone != '' AND phone IS NOT NULL"
-      ).all();
-      for (const p of parishes) {
-        if (normalizeDioceseName(p.diocese) === posNormDiocese && normalizePhone(p.phone) === normalizedPhone) {
+      const matches = lookups.parishesByPhone.get(normalizedPhone) || [];
+      for (const p of matches) {
+        if (normalizeDioceseName(p.diocese) === posNormDiocese) {
           return { parish: p, confidence: 'exact', method: 'phone' };
         }
       }
@@ -369,9 +362,9 @@ function matchPositionToParish(position, db) {
  * Splits position names on \n and " and ", matches each part independently,
  * and returns the set that produces the most matches.
  */
-function matchPositionToParishes(position, db) {
+function matchPositionToParishes(position, db, lookups) {
   // Try unsplit match first
-  const unsplitMatch = enrichMatchWithIdentity(matchPositionToParish(position, db), db);
+  const unsplitMatch = enrichMatchWithIdentity(matchPositionToParish(position, db, lookups), db);
   const unsplitResults = unsplitMatch ? [unsplitMatch] : [];
 
   // Split name into candidate parts
@@ -407,7 +400,7 @@ function matchPositionToParishes(position, db) {
       contact_phone: '',
     };
 
-    const match = enrichMatchWithIdentity(matchPositionToParish(syntheticPosition, db), db);
+    const match = enrichMatchWithIdentity(matchPositionToParish(syntheticPosition, db, lookups), db);
     if (match && !seenParishIds.has(match.parish.id)) {
       seenParishIds.add(match.parish.id);
       splitResults.push(match);
@@ -440,6 +433,41 @@ function matchPositionToParishes(position, db) {
  * @returns {Array} positions with parish matching fields added
  */
 function matchParishes(positions, db) {
+  // Pre-load all parishes once to avoid repeated full table scans.
+  // Strategies 1-3 in matchPositionToParish were each doing SELECT * per position.
+  const allParishes = db.prepare('SELECT * FROM parishes').all();
+
+  const parishesByWebDomain = new Map();
+  const parishesByEmailDomain = new Map();
+  const parishesByPhone = new Map();
+
+  for (const p of allParishes) {
+    if (p.website) {
+      const d = normalizeDomain(p.website);
+      if (d) {
+        if (!parishesByWebDomain.has(d)) parishesByWebDomain.set(d, []);
+        parishesByWebDomain.get(d).push(p);
+      }
+    }
+    if (p.email) {
+      const ed = (p.email || '').split('@')[1];
+      if (ed) {
+        const key = ed.toLowerCase();
+        if (!parishesByEmailDomain.has(key)) parishesByEmailDomain.set(key, []);
+        parishesByEmailDomain.get(key).push(p);
+      }
+    }
+    if (p.phone) {
+      const np = normalizePhone(p.phone);
+      if (np && np.length >= 10) {
+        if (!parishesByPhone.has(np)) parishesByPhone.set(np, []);
+        parishesByPhone.get(np).push(p);
+      }
+    }
+  }
+
+  const lookups = { parishesByWebDomain, parishesByEmailDomain, parishesByPhone };
+
   for (const pos of positions) {
     // Check for manual NID override before running automatic matching
     const overrideNid = NID_OVERRIDES[pos.vh_id];
@@ -454,7 +482,7 @@ function matchParishes(positions, db) {
       }
     }
 
-    const matches = matchPositionToParishes(pos, db);
+    const matches = matchPositionToParishes(pos, db, lookups);
 
     if (matches.length > 0) {
       pos.church_infos = matches.map(m => buildChurchInfo(m.parish));
