@@ -110,8 +110,32 @@ export function exportToDb(
 
     upsertMeta.run('changes', JSON.stringify(changes));
     upsertMeta.run('meta', JSON.stringify(meta));
-    upsertMeta.run('profile_fields', JSON.stringify(profileFields));
-    upsertMeta.run('all_profiles', JSON.stringify(allProfiles));
+
+    // Only update profile data if the incoming set is at least as large as
+    // what already exists.  The regular scraper discovers ~42 profiles from
+    // the search page; the deep scraper finds 1055+.  Writing a smaller set
+    // would clobber deep-scrape data.
+    const existingProfiles = db.prepare(
+      "SELECT value FROM scraper_meta WHERE key = 'all_profiles'"
+    ).get() as { value: string } | undefined;
+
+    const existingCount = existingProfiles
+      ? JSON.parse(existingProfiles.value).length
+      : 0;
+
+    if (allProfiles.length >= existingCount) {
+      upsertMeta.run('profile_fields', JSON.stringify(profileFields));
+      upsertMeta.run('all_profiles', JSON.stringify(allProfiles));
+      logger.info('Profile data updated', {
+        incoming: allProfiles.length,
+        existing: existingCount,
+      });
+    } else {
+      logger.info('Skipping profile data update (incoming smaller than existing)', {
+        incoming: allProfiles.length,
+        existing: existingCount,
+      });
+    }
 
     logger.info('DB export complete', {
       exported,
