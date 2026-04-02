@@ -177,11 +177,45 @@ function mergeParishes(database) {
     }
   });
 
+  // Prepared statements for parish_identity integration
+  const identityCheckStmt = db.prepare(
+    `SELECT pi.nid, p.id as parish_id FROM parish_identity pi
+     JOIN parishes p ON p.nid = pi.nid
+     WHERE pi.ecdplus_id = ?`
+  );
+  const lookupParishById = db.prepare('SELECT * FROM parishes WHERE id = ?');
+  const insertIdentity = db.prepare(
+    `INSERT OR IGNORE INTO parish_identity (nid, ecdplus_id, confidence, match_method)
+     VALUES (?, ?, ?, ?)`
+  );
+
   for (const ecdRow of ecdParishes) {
-    const match = findMatch(db, ecdRow);
+    // Check identity table BEFORE heuristic matching
+    let match = null;
+    if (ecdRow.ecdplus_id) {
+      const identityMatch = identityCheckStmt.get(ecdRow.ecdplus_id);
+      if (identityMatch) {
+        const assetMapParish = lookupParishById.get(identityMatch.parish_id);
+        if (assetMapParish) {
+          match = { parish: assetMapParish, method: 'identity_table', confidence: 'confirmed' };
+        }
+      }
+    }
+    if (!match) {
+      match = findMatch(db, ecdRow);
+    }
     if (match) {
       mergeOne(ecdRow, match.parish);
       merged++;
+      // Record identity link after successful merge
+      if (match.parish.nid && ecdRow.ecdplus_id) {
+        const confidence = (match.method === 'identity_table' || match.method === 'phone' || match.method === 'website')
+          ? 'confirmed' : 'auto';
+        insertIdentity.run(match.parish.nid, ecdRow.ecdplus_id, confidence, match.method);
+        if (confidence === 'auto') {
+          console.log(`  Low-confidence match: ${ecdRow.name} (${ecdRow.ecdplus_id}) -> ${match.parish.name} (nid=${match.parish.nid}) via ${match.method}`);
+        }
+      }
     } else {
       unmatched++;
     }
