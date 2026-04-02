@@ -26,12 +26,13 @@
  *   +2  same position_type
  *   +1  same housing_type (case-insensitive)
  *
- * Only candidates with a combined score >= 3 are considered. The top 5 by
+ * Only candidates with a combined score >= 3 are considered. The top 15 by
  * score are attached as position.similar_positions.
  *
  * Attaches:
  *   position.similar_positions = [
- *     { id, vh_id, name, city, state, position_type, asa, estimated_total_comp, score },
+ *     { id, vh_id, name, city, state, position_type, asa, estimated_total_comp, score,
+ *       match_reasons: { asa, comp, state, type, housing } },
  *     ...
  *   ]
  *
@@ -109,13 +110,21 @@ function findSimilar(positions) {
           asa: b.asa,
           estimated_total_comp: b.comp,
           score,
+          match_reasons: {
+            asa: a.asa != null && b.asa != null && (b.asa / a.asa) >= 0.75 && (b.asa / a.asa) <= 1.25,
+            comp: a.comp != null && b.comp != null && (b.comp / a.comp) >= 0.8 && (b.comp / a.comp) <= 1.2,
+            state: !!(a.state && b.state && a.state === b.state),
+            type: (a.positionTypes != null && a.positionTypes.length > 0 && b.positionTypes != null && b.positionTypes.length > 0 && a.positionTypes.some(t => b.positionTypes.includes(t)))
+                  || !!(a.positionType && b.positionType && a.positionType === b.positionType),
+            housing: !!(a.housingType && b.housingType && a.housingType === b.housingType),
+          },
         });
       }
     }
 
     if (scored.length > 0) {
       scored.sort((x, y) => y.score - x.score);
-      a.pos.similar_positions = scored.slice(0, 5);
+      a.pos.similar_positions = scored.slice(0, 15);
       count++;
     }
   }
