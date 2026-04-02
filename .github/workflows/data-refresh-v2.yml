@@ -73,6 +73,12 @@ jobs:
         env:
           VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
 
+      - name: Fetch Census Bureau data
+        run: node web/scripts/fetch-census-data.js
+        timeout-minutes: 15
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
       - name: Scrape parochial reports
         run: npm run scrape:parochial --workspace=scraper
         timeout-minutes: 30
