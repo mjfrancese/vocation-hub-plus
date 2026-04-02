@@ -199,7 +199,7 @@ function loadPositions(db) {
 
 /**
  * Build the extended positions list from all_profiles that are not in the
- * public search results. Mirrors the logic in enrich-positions-v2.js.
+ * public search results.
  *
  * @param {Array} publicPositions - already-enriched public positions
  * @param {Array} allProfiles     - full profile list from scraper_meta
