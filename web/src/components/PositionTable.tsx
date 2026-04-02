@@ -2,7 +2,9 @@
 
 import { Fragment, useState, useCallback, useEffect } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
-import QualityBadge from './QualityBadge';
+import UnifiedStatusBadge from './UnifiedStatusBadge';
+import ScorePill from './ScorePill';
+import StatusPopover from './StatusPopover';
 import ComparisonBar from './ComparisonBar';
 import ComparisonModal from './ComparisonModal';
 import DetailPanel from './detail-panel/DetailPanel';
@@ -286,7 +288,12 @@ export default function PositionTable({
                   </div>
                   <div className="flex items-center gap-1.5 flex-shrink-0">
                     {asa && <span className="text-xs text-gray-400" title={asa.range}>ASA {asa.value}</span>}
-                    <QualityBadge pos={pos} />
+                    <StatusPopover pos={pos}>
+                      <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
+                      {(pos.visibility === 'extended' || pos.visibility === 'extended_hidden') && (
+                        <ScorePill score={pos.quality_score ?? 0} />
+                      )}
+                    </StatusPopover>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mt-1.5 text-xs text-gray-500">
@@ -418,9 +425,14 @@ export default function PositionTable({
                         );
                       })()}
                     </td>
-                    {/* Status (quality badge) */}
+                    {/* Status */}
                     <td className="px-3 py-2">
-                      <QualityBadge pos={pos} />
+                      <StatusPopover pos={pos}>
+                        <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
+                        {(pos.visibility === 'extended' || pos.visibility === 'extended_hidden') && (
+                          <ScorePill score={pos.quality_score ?? 0} />
+                        )}
+                      </StatusPopover>
                     </td>
                     {/* ASA */}
                     <td className="px-2 py-2 text-center w-12">
