@@ -458,7 +458,14 @@ function writeOutput(data, outputDir, db) {
   };
   const defaults = {
     changes: [],
-    meta: { last_scrape: null, position_count: cleanPositions.length },
+    meta: {
+      lastUpdated: null,
+      totalPositions: cleanPositions.length,
+      activeCount: cleanPositions.length,
+      expiredCount: 0,
+      newCount: 0,
+      lastScrape: null,
+    },
     all_profiles: [],
     profile_fields: {},
   };
