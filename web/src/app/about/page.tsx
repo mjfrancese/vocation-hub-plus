@@ -89,7 +89,7 @@ export default function AboutPage() {
           />
           <DataSourceCard
             name="Parochial Reports"
-            url="https://www.episcopalchurch.org/research-and-statistics/"
+            url="https://generalconvention.org/parochial-report-results/"
             description="Annual congregation data: attendance, giving, membership (2015-2024)"
           />
           <DataSourceCard
