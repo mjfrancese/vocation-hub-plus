@@ -11,12 +11,18 @@ import { ME_TOKEN_KEY } from '@/lib/constants';
 
 interface PositionTableProps {
   positions: Position[];
+  onNavigate?: (id: string) => void;
+  meData?: PersonalData | null;
+  initialSortField?: SortField;
+  initialSortDir?: SortDirection;
+  initialExpandedId?: string | null;
+  onExpandedChange?: (id: string | null) => void;
 }
 
 const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'name', label: 'Church' },
   { key: 'diocese', label: 'Location' },
-  { key: 'receiving_names_from', label: 'Dates' },
+  { key: 'date', label: 'Date Posted' },
   { key: 'quality_score', label: 'Status' },
 ];
 
@@ -53,10 +59,10 @@ function getState(pos: Position): string {
 }
 
 /** Parse a date string in various formats (ISO, MM/DD/YYYY, "Month DD, YYYY") */
-function parseAnyDate(s: string): Date | null {
-  if (!s) return null;
+function parseAnyDate(str: string | undefined | null): Date | null {
+  if (!str) return null;
   // Handle range like "02/18/2026 to 03/31/2026" or "03/12/2026 -" -- use first date
-  const first = s.split(/\s+(?:to|-)\s*/)[0].trim();
+  const first = str.split(/\s+(?:to|-)\s*/)[0].trim();
   // MM/DD/YYYY
   const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
   if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
@@ -110,15 +116,25 @@ function getLatestAsa(pos: Position): { value: number; range: string } | null {
   return { value: latest, range };
 }
 
-export default function PositionTable({ positions }: PositionTableProps) {
-  const [sortField, setSortField] = useState<SortField>('name');
-  const [sortDir, setSortDir] = useState<SortDirection>('asc');
-  const [expandedId, setExpandedId] = useState<string | null>(null);
+export default function PositionTable({
+  positions,
+  onNavigate: _onNavigate,
+  meData: meDataProp,
+  initialSortField,
+  initialSortDir,
+  initialExpandedId,
+  onExpandedChange,
+}: PositionTableProps) {
+  const [sortField, setSortField] = useState<SortField>(initialSortField ?? 'date');
+  const [sortDir, setSortDir] = useState<SortDirection>(initialSortDir ?? 'desc');
+  const [expandedId, setExpandedId] = useState<string | null>(initialExpandedId ?? null);
   const [comparedIds, setComparedIds] = useState<Set<string>>(new Set());
   const [showComparison, setShowComparison] = useState(false);
-  const [meData, setMeData] = useState<PersonalData | null>(null);
+  const [meDataLocal, setMeDataLocal] = useState<PersonalData | null>(null);
+  const meData = meDataProp ?? meDataLocal;
 
   useEffect(() => {
+    if (meDataProp) return; // parent already provided meData, skip local fetch
     const params = new URLSearchParams(window.location.search);
     const token = params.get('me') || localStorage.getItem(ME_TOKEN_KEY);
     if (!token) return;
@@ -127,10 +143,10 @@ export default function PositionTable({ positions }: PositionTableProps) {
     fetch(`${base}/data/clergy/${token}.json`)
       .then(r => r.ok ? r.json() : null)
       .then(data => {
-        if (data) setMeData(data);
+        if (data) setMeDataLocal(data);
       })
       .catch(() => {});
-  }, []);
+  }, [meDataProp]);
 
   const MAX_COMPARE = 3;
 
@@ -156,9 +172,13 @@ export default function PositionTable({ positions }: PositionTableProps) {
       const bNum = b.quality_score ?? 0;
       return sortDir === 'asc' ? aNum - bNum : bNum - aNum;
     }
-    if (sortField === 'receiving_names_from') {
-      const aTime = parseAnyDate(a.receiving_names_from)?.getTime() || 0;
-      const bTime = parseAnyDate(b.receiving_names_from)?.getTime() || 0;
+    // Date-based sorting
+    if (sortField === 'date' || sortField === 'updated' || sortField === 'firstseen') {
+      const dateField = sortField === 'date' ? 'receiving_names_from'
+        : sortField === 'updated' ? 'updated_on_hub'
+        : 'first_seen';
+      const aTime = parseAnyDate(a[dateField as keyof Position] as string)?.getTime() || 0;
+      const bTime = parseAnyDate(b[dateField as keyof Position] as string)?.getTime() || 0;
       return sortDir === 'asc' ? aTime - bTime : bTime - aTime;
     }
     let aVal: string, bVal: string;
@@ -186,7 +206,9 @@ export default function PositionTable({ positions }: PositionTableProps) {
   }
 
   function toggleExpand(id: string) {
-    setExpandedId(expandedId === id ? null : id);
+    const next = expandedId === id ? null : id;
+    setExpandedId(next);
+    onExpandedChange?.(next);
   }
 
   function expandAndScrollTo(posId: string) {
@@ -219,9 +241,12 @@ export default function PositionTable({ positions }: PositionTableProps) {
             onChange={(e) => { setSortField(e.target.value as SortField); setSortDir('asc'); }}
             className="border border-gray-300 rounded px-2 py-1 text-sm bg-white"
           >
-            {COLUMNS.map(col => (
-              <option key={col.key} value={col.key}>{col.label}</option>
-            ))}
+            <option value="name">Church Name</option>
+            <option value="diocese">Diocese</option>
+            <option value="date">Date Posted</option>
+            <option value="updated">Last Updated</option>
+            <option value="firstseen">First Seen</option>
+            <option value="quality_score">Quality Score</option>
           </select>
           <button
             onClick={() => setSortDir(sortDir === 'asc' ? 'desc' : 'asc')}
@@ -335,9 +360,6 @@ export default function PositionTable({ positions }: PositionTableProps) {
               const state = getState(pos);
               const locationPrimary = city && state ? `${city}, ${state}` : city || state || '';
               const asa = getLatestAsa(pos);
-              const receivingStart = pos.receiving_names_from
-                ? pos.receiving_names_from.split(' to ')[0].split(' - ')[0]
-                : '';
               return (
                 <Fragment key={pos.id}>
                   <tr
@@ -374,23 +396,27 @@ export default function PositionTable({ positions }: PositionTableProps) {
                       <div className="truncate">{locationPrimary || '\u00A0'}</div>
                       <div className="text-xs text-gray-400 truncate">{pos.diocese || '\u00A0'}</div>
                     </td>
-                    {/* Dates */}
+                    {/* Date (adaptive based on sortField) */}
                     <td className="px-3 py-2 text-sm text-gray-600">
-                      {receivingStart ? (
-                        <>
-                          <div>{receivingStart}</div>
-                          <div className="text-xs text-gray-400">
-                            {pos.updated_on_hub ? `Updated ${pos.updated_on_hub}` : '\u00A0'}
-                          </div>
-                        </>
-                      ) : (
-                        <>
-                          <div className="italic text-gray-400">{pos.vh_status || '\u00A0'}</div>
-                          <div className="text-xs text-gray-400">
-                            {pos.updated_on_hub ? `Updated ${pos.updated_on_hub}` : '\u00A0'}
-                          </div>
-                        </>
-                      )}
+                      {(() => {
+                        const primaryField = sortField === 'updated' ? pos.updated_on_hub
+                          : sortField === 'firstseen' ? pos.first_seen
+                          : pos.receiving_names_from;
+                        const secondaryField = sortField === 'updated' ? pos.receiving_names_from
+                          : sortField === 'firstseen' ? pos.receiving_names_from
+                          : pos.updated_on_hub;
+                        return (
+                          <>
+                            <div>{primaryField || <span className="text-gray-400">--</span>}</div>
+                            {secondaryField && sortField !== 'date' && (
+                              <div className="text-xs text-gray-400">Posted {secondaryField}</div>
+                            )}
+                            {secondaryField && sortField === 'date' && (
+                              <div className="text-xs text-gray-400">Updated {secondaryField}</div>
+                            )}
+                          </>
+                        );
+                      })()}
                     </td>
                     {/* Status (quality badge) */}
                     <td className="px-3 py-2">
