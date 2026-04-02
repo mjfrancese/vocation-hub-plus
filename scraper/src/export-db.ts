@@ -58,17 +58,17 @@ export function exportToDb(
 
         upsertPosition.run(
           String(vhId),
-          (pos.name as string) || '',
-          (pos.diocese as string) || '',
-          (pos.state as string) || '',
+          (pos.name as string) || null,
+          (pos.diocese as string) || null,
+          (pos.state as string) || null,
           // organization_type in scraper positions -> organization in scraped_positions
-          (pos.organization_type as string) || '',
-          (pos.position_type as string) || '',
+          (pos.organization_type as string) || null,
+          (pos.position_type as string) || null,
           // receiving_names_from -> receiving_from
-          (pos.receiving_names_from as string) || '',
+          (pos.receiving_names_from as string) || null,
           // receiving_names_to -> receiving_to
-          (pos.receiving_names_to as string) || '',
-          (pos.updated_on_hub as string) || '',
+          (pos.receiving_names_to as string) || null,
+          (pos.updated_on_hub as string) || null,
           (pos.status as string) || 'active'
         );
         exported++;
