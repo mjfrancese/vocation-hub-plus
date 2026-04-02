@@ -25,7 +25,7 @@ function badgeConfig(pos: Position) {
     };
   }
   return {
-    label: `Directory \u00B7 ${score}`,
+    label: `Unlisted \u00B7 ${score}`,
     className: 'bg-blue-100 text-blue-800 border-blue-200',
     tooltip: buildScoreTooltip(score, pos.quality_components),
   };
