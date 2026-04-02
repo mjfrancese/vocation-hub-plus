@@ -97,7 +97,7 @@ export function useFilterState(): [FilterState, FilterActions] {
     if (push) {
       router.push(url, { scroll });
     } else {
-      router.replace(url);
+      router.replace(url, { scroll: false });
     }
   }, [searchParams, router, pathname]);
 
@@ -119,7 +119,7 @@ export function useFilterState(): [FilterState, FilterActions] {
     },
     setQuery: (v) => updateParams({ q: v || null }),
     setView: (v) => updateParams({ view: v === 'table' ? null : v }, true),
-    setExpandedId: (v) => updateParams({ expanded: v }, true, false),
+    setExpandedId: (v) => updateParams({ expanded: v }),
     clearAll: () => {
       router.replace(pathname);
     },
