@@ -14,15 +14,15 @@ export interface FilterConfig {
 interface FiltersProps {
   filters: FilterConfig[];
   onClear: () => void;
-  hideClosed: boolean;
-  onHideClosedChange: (value: boolean) => void;
+  postedWithin: string | null;
+  onPostedWithinChange: (value: string | null) => void;
 }
 
 export default function Filters({
   filters,
   onClear,
-  hideClosed,
-  onHideClosedChange,
+  postedWithin,
+  onPostedWithinChange,
 }: FiltersProps) {
   const hasFilters = filters.some(f => f.selected.length > 0);
   const [filtersOpen, setFiltersOpen] = useState(false);
@@ -61,17 +61,21 @@ export default function Filters({
               onChange={f.onChange}
             />
           ))}
-          <div className="flex flex-col justify-end">
-            <label className="flex items-center gap-2 py-2 px-3 text-sm text-gray-600 cursor-pointer
-                              border border-gray-300 rounded-md hover:bg-gray-50 select-none">
-              <input
-                type="checkbox"
-                checked={hideClosed}
-                onChange={(e) => onHideClosedChange(e.target.checked)}
-                className="rounded border-gray-300 text-primary-600 focus:ring-primary-500"
-              />
-              Hide closed
-            </label>
+          {/* Posted Within filter */}
+          <div className="min-w-[140px]">
+            <label className="block text-xs text-gray-500 mb-1">Posted</label>
+            <select
+              value={postedWithin || ''}
+              onChange={(e) => onPostedWithinChange(e.target.value || null)}
+              className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-primary-500"
+            >
+              <option value="">All time</option>
+              <option value="7d">Last 7 days</option>
+              <option value="30d">Last 30 days</option>
+              <option value="90d">Last 90 days</option>
+              <option value="6m">Last 6 months</option>
+              <option value="1y">Last year</option>
+            </select>
           </div>
           {hasFilters && (
             <button
