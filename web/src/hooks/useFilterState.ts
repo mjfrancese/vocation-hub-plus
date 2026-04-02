@@ -83,7 +83,7 @@ export function useFilterState(): [FilterState, FilterActions] {
     expandedId: searchParams.get('expanded') || null,
   }), [searchParams]);
 
-  const updateParams = useCallback((updates: Record<string, string | null>, push = false) => {
+  const updateParams = useCallback((updates: Record<string, string | null>, push = false, scroll = true) => {
     const params = new URLSearchParams(searchParams.toString());
     for (const [key, value] of Object.entries(updates)) {
       if (value === null || value === '') {
@@ -95,7 +95,7 @@ export function useFilterState(): [FilterState, FilterActions] {
     const str = params.toString();
     const url = str ? `${pathname}?${str}` : pathname;
     if (push) {
-      router.push(url);
+      router.push(url, { scroll });
     } else {
       router.replace(url);
     }
@@ -119,7 +119,7 @@ export function useFilterState(): [FilterState, FilterActions] {
     },
     setQuery: (v) => updateParams({ q: v || null }),
     setView: (v) => updateParams({ view: v === 'table' ? null : v }, true),
-    setExpandedId: (v) => updateParams({ expanded: v }, true),
+    setExpandedId: (v) => updateParams({ expanded: v }, true, false),
     clearAll: () => {
       router.replace(pathname);
     },
