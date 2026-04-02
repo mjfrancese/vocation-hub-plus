@@ -68,6 +68,7 @@ function isGenericDomain(domain) {
 function buildChurchInfo(parish) {
   if (!parish) return null;
   return {
+    id: parish.id,
     nid: parish.nid,
     name: parish.name,
     street: parish.address,

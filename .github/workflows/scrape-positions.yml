@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: scrape-positions
-  cancel-in-progress: true
+  group: data-collection
+  cancel-in-progress: false
 
 permissions:
   contents: write

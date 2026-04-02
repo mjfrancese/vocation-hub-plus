@@ -181,13 +181,12 @@ function buildPersonalData(guid, db) {
       // Census data
       let censusIncome = null, censusPop = null;
       try {
-        const censusPath = path.resolve(path.dirname(require.main?.filename || __filename), '../public/data/census-data.json');
-        if (fs.existsSync(censusPath)) {
-          const census = JSON.parse(fs.readFileSync(censusPath, 'utf-8'));
-          const zip5 = p.zip ? p.zip.substring(0, 5) : null;
-          if (zip5 && census[zip5]) {
-            censusIncome = census[zip5].median_household_income || null;
-            censusPop = census[zip5].population || null;
+        const zip5 = p.zip ? p.zip.substring(0, 5) : null;
+        if (zip5) {
+          const census = db.prepare('SELECT median_income, population FROM census_data WHERE zip = ?').get(zip5);
+          if (census) {
+            censusIncome = census.median_income || null;
+            censusPop = census.population || null;
           }
         }
       } catch { /* ignore */ }
@@ -362,7 +361,7 @@ if (require.main === module) {
   }
   const { getDb, closeDb } = require('./db');
   const db = getDb();
-  const outputDir = path.resolve(__dirname, '../public/data');
+  const outputDir = process.argv[2] || path.resolve(__dirname, '../public/data');
   const result = generateClergyData({ db, outputDir });
   if (result.collisions.length > 0) {
     process.exit(1);
