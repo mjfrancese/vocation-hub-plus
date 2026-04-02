@@ -26,6 +26,28 @@ export function exportToDb(
   try {
     db.pragma('journal_mode = WAL');
 
+    // Ensure tables exist (the release DB may predate these tables)
+    db.exec(`
+      CREATE TABLE IF NOT EXISTS scraped_positions (
+        vh_id TEXT PRIMARY KEY,
+        name TEXT,
+        diocese TEXT,
+        state TEXT,
+        organization TEXT,
+        position_type TEXT,
+        receiving_from TEXT,
+        receiving_to TEXT,
+        updated_on_hub TEXT,
+        status TEXT DEFAULT 'active',
+        scraped_at TEXT NOT NULL DEFAULT (datetime('now'))
+      );
+      CREATE TABLE IF NOT EXISTS scraper_meta (
+        key TEXT PRIMARY KEY,
+        value TEXT NOT NULL,
+        updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+      );
+    `);
+
     // Upsert positions that have a vh_id into scraped_positions
     const upsertPosition = db.prepare(`
       INSERT INTO scraped_positions (
