@@ -3,8 +3,9 @@ import { navigateToSearch } from './navigate.js';
 import { searchAllPositions } from './select-states.js';
 import { clickSearchAndExtract, RawPosition } from './scrape-results.js';
 import { applyDiff } from './diff.js';
-import { logScrape, closeDb, getDb, recordDiscoveryAttempt, recordDiscoverySuccess, getDiscoveryStats, seedFirstSeenFromJson } from './db.js';
+import { logScrape, closeDb, getDb, recordDiscoveryAttempt, recordDiscoverySuccess, getDiscoveryStats, seedFirstSeenFromJson, getAllPositionsWithDetails, getRecentChanges, getScrapeStats } from './db.js';
 import { exportJson } from './export-json.js';
+import { exportToDb } from './export-db.js';
 import { CONFIG } from './config.js';
 import { logger } from './logger.js';
 import { sleep } from './navigate.js';
@@ -149,6 +150,32 @@ async function main(): Promise<void> {
       const durationMs = Date.now() - startTime;
       logScrape(positions.length, diff.newCount, diff.expiredCount, durationMs, 'success');
       exportJson();
+
+      // Also export to the main vocationhub.db if it exists (additive -- JSON export above is unchanged)
+      const mainDbPath = process.env.VOCATIONHUB_DB_PATH ||
+        path.resolve(__dirname, '../../data/vocationhub.db');
+      if (fs.existsSync(mainDbPath)) {
+        try {
+          const allPositions = getAllPositionsWithDetails();
+          const allChanges = getRecentChanges(500);
+          const scrapeStats = getScrapeStats();
+          const exportMeta = {
+            lastUpdated: new Date().toISOString(),
+            totalPositions: allPositions.length,
+            activeCount: allPositions.filter((p) => p.status === 'active' || p.status === 'new').length,
+            expiredCount: allPositions.filter((p) => p.status === 'expired').length,
+            newCount: allPositions.filter((p) => p.status === 'new').length,
+            lastScrape: scrapeStats || null,
+          };
+          exportToDb(mainDbPath, allPositions, allChanges, exportMeta, {}, []);
+        } catch (dbExportErr) {
+          logger.warn('DB export to vocationhub.db failed (non-fatal)', {
+            error: dbExportErr instanceof Error ? dbExportErr.message : String(dbExportErr),
+          });
+        }
+      } else {
+        logger.info('vocationhub.db not found, skipping DB export', { path: mainDbPath });
+      }
 
       const qualityReport = checkQuality({
         totalPositions: positions.length,
