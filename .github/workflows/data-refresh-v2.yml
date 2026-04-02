@@ -68,6 +68,11 @@ jobs:
         env:
           VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
 
+      - name: Populate parish identity table
+        run: node web/scripts/populate-parish-identity.js
+        env:
+          VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
+
       - name: Scrape parochial reports
         run: npm run scrape:parochial --workspace=scraper
         timeout-minutes: 30
