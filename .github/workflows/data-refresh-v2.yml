@@ -5,6 +5,9 @@ on:
     - cron: '0 5 1 * *'
   workflow_dispatch:
 
+env:
+  DB_RELEASE_TAG: db-latest
+
 concurrency:
   group: data-collection
   cancel-in-progress: false
@@ -33,10 +36,17 @@ jobs:
         working-directory: scraper
         run: npx playwright install chromium --with-deps
 
-      - name: Download vocationhub.db from latest release
+      - name: Download DB
+        id: download-db
         run: |
           mkdir -p data
-          gh release download db-latest --pattern 'vocationhub.db' --dir data/ --clobber 2>/dev/null || echo "No DB release yet"
+          if gh release view ${{ env.DB_RELEASE_TAG }} &>/dev/null; then
+            gh release download ${{ env.DB_RELEASE_TAG }} -p vocationhub.db -D data/
+            echo "db_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "::notice::No DB release found -- starting fresh"
+            echo "db_found=false" >> $GITHUB_OUTPUT
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
 
@@ -90,8 +100,24 @@ jobs:
         env:
           VOCATIONHUB_DB_PATH: ${{ github.workspace }}/data/vocationhub.db
 
+      - name: Validate DB before upload
+        run: |
+          node -e "
+            const Database = require('better-sqlite3');
+            const db = new Database('data/vocationhub.db');
+            const tables = db.prepare(\"SELECT name FROM sqlite_master WHERE type='table'\").all().map(r => r.name);
+            const required = ['scraped_positions', 'scraper_meta'];
+            for (const t of required) {
+              if (!tables.includes(t)) { console.error('Missing required table: ' + t); process.exit(1); }
+            }
+            const posCount = db.prepare('SELECT COUNT(*) as c FROM scraped_positions').get().c;
+            console.log('Positions in DB: ' + posCount);
+            if (posCount === 0) { console.error('DB has 0 positions -- refusing to upload'); process.exit(1); }
+            db.close();
+          "
+
       - name: Upload vocationhub.db to release
-        run: gh release upload db-latest data/vocationhub.db --clobber
+        run: gh release upload ${{ env.DB_RELEASE_TAG }} data/vocationhub.db --clobber
         env:
           GH_TOKEN: ${{ github.token }}
 

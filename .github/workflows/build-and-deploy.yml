@@ -16,6 +16,9 @@ on:
       - 'web/package.json'
   workflow_dispatch:
 
+env:
+  DB_RELEASE_TAG: db-latest
+
 concurrency:
   group: build-deploy
   cancel-in-progress: false
@@ -42,10 +45,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Download vocationhub.db from latest release
+      - name: Download DB
+        id: download-db
         run: |
           mkdir -p data
-          gh release download db-latest --pattern 'vocationhub.db' --dir data/ --clobber 2>/dev/null || echo "No DB release yet"
+          if gh release view ${{ env.DB_RELEASE_TAG }} &>/dev/null; then
+            gh release download ${{ env.DB_RELEASE_TAG }} -p vocationhub.db -D data/
+            echo "db_found=true" >> $GITHUB_OUTPUT
+          else
+            echo "::notice::No DB release found -- starting fresh"
+            echo "db_found=false" >> $GITHUB_OUTPUT
+          fi
         env:
           GH_TOKEN: ${{ github.token }}
 
