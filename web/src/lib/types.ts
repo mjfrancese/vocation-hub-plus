@@ -279,3 +279,17 @@ export type SortField =
   | 'quality_score';
 
 export type SortDirection = 'asc' | 'desc';
+
+/** User's search preferences, stored in localStorage */
+export interface SearchPreferences {
+  positionTypes: string[];
+  regions: string[];
+  states: string[];
+  asaMin: number | null;
+  asaMax: number | null;
+  compMin: number | null;
+  compMax: number | null;
+  housing: 'rectory' | 'allowance' | 'either' | null;
+  ministrySettings: string[];
+  showDetailedMatch: boolean;
+}

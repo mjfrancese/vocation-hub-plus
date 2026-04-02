@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useMemo, useState } from 'react';
+import { Suspense, useCallback, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { getPositions, getMeta, getUniqueValues, getChanges } from '@/lib/data';
 import { createSearchIndex, searchPositions } from '@/lib/search';
@@ -22,9 +22,11 @@ import {
   UNIFIED_STATUS_CHIP_COLORS,
 } from '@/lib/status-helpers';
 import { useFilterState } from '@/hooks/useFilterState';
+import { usePreferences } from '@/hooks/usePreferences';
 import { passesDefaultFilter, isPostedWithin } from '@/lib/filter-defaults';
 import SearchBar from '@/components/SearchBar';
 import Filters, { FilterConfig } from '@/components/Filters';
+import PreferencesPanel from '@/components/PreferencesPanel';
 import PositionTable from '@/components/PositionTable';
 import ExportButton from '@/components/ExportButton';
 import LastUpdated from '@/components/LastUpdated';
@@ -42,6 +44,11 @@ export default function PositionsPage() {
 
 function PositionsPageContent() {
   const [filters, filterActions] = useFilterState();
+  const [prefs, savePrefs] = usePreferences();
+
+  const handleToggleDetailed = useCallback((detailed: boolean) => {
+    savePrefs({ ...prefs, showDetailedMatch: detailed });
+  }, [prefs, savePrefs]);
 
   const allPositions = useMemo(() => getPositions(), []);
   const meta = useMemo(() => getMeta(), []);
@@ -305,6 +312,8 @@ function PositionsPageContent() {
         onPostedWithinChange={filterActions.setPostedWithin}
       />
 
+      <PreferencesPanel prefs={prefs} onToggleDetailed={handleToggleDetailed} />
+
       {filters.view === 'table' ? (
         <>
           <PositionTable
@@ -313,6 +322,7 @@ function PositionsPageContent() {
             initialSortDir={filters.sort.direction}
             initialExpandedId={filters.expandedId}
             onExpandedChange={filterActions.setExpandedId}
+            preferences={prefs}
           />
           {hiddenCount > 0 && (
             <div className="text-sm text-gray-500 mt-3 text-center">

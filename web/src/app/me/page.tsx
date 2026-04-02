@@ -6,6 +6,8 @@ import type { PersonalData, Position } from '@/lib/types';
 import CompensationRadar from '@/components/CompensationRadar';
 import CareerTimeline from '@/components/CareerTimeline';
 import { ME_TOKEN_KEY } from '@/lib/constants';
+import PreferencesForm from '@/components/PreferencesForm';
+import { usePreferences } from '@/hooks/usePreferences';
 
 function DashboardContent() {
   const searchParams = useSearchParams();
@@ -13,7 +15,8 @@ function DashboardContent() {
   const [userData, setUserData] = useState<PersonalData | null>(null);
   const [positions, setPositions] = useState<Position[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'compensation' | 'career' | 'positions'>('compensation');
+  const [activeTab, setActiveTab] = useState<'compensation' | 'career' | 'positions' | 'preferences'>('compensation');
+  const [prefs, savePrefs, clearPrefs] = usePreferences();
 
   useEffect(() => {
     const urlToken = searchParams.get('me');
@@ -21,6 +24,11 @@ function DashboardContent() {
     const token = urlToken || savedToken;
 
     if (!token) {
+      if (typeof window !== 'undefined' && window.location.hash === '#preferences') {
+        setActiveTab('preferences');
+        setLoading(false);
+        return;
+      }
       router.push('/claim');
       return;
     }
@@ -47,6 +55,12 @@ function DashboardContent() {
       setLoading(false);
     });
   }, [searchParams, router]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.location.hash === '#preferences') {
+      setActiveTab('preferences');
+    }
+  }, []);
 
   // Recommended positions: scored and sorted
   const recommended = useMemo(() => {
@@ -96,52 +110,64 @@ function DashboardContent() {
     );
   }
 
-  if (!userData) return null;
+  const cb = userData?.compensation_benchmarks;
 
-  const cb = userData.compensation_benchmarks;
+  const availableTabs = userData
+    ? (['compensation', 'career', 'positions', 'preferences'] as const)
+    : (['preferences'] as const);
 
   return (
     <div className="max-w-4xl mx-auto py-6">
-      {/* Summary Bar */}
-      <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
-        <h1 className="text-xl font-bold text-gray-900">{userData.name}</h1>
-        {userData.current_position && (
-          <p className="text-gray-600">
-            {userData.current_position.title}, {userData.current_position.parish}
-            {userData.current_position.diocese ? ` \u00b7 Diocese of ${userData.current_position.diocese}` : ''}
-          </p>
-        )}
-        <div className="flex flex-wrap gap-6 mt-3">
-          {cb?.diocese_median != null && (
-            <div className="text-center">
-              <div className="text-lg font-bold text-blue-600">${Math.round(cb.diocese_median / 1000)}K</div>
-              <div className="text-xs text-gray-500">Diocese Median</div>
-            </div>
+      {/* Summary Bar - only when userData exists */}
+      {userData && (
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
+          <h1 className="text-xl font-bold text-gray-900">{userData.name}</h1>
+          {userData.current_position && (
+            <p className="text-gray-600">
+              {userData.current_position.title}, {userData.current_position.parish}
+              {userData.current_position.diocese ? ` \u00b7 Diocese of ${userData.current_position.diocese}` : ''}
+            </p>
           )}
-          {userData.ordination_year && (
-            <div className="text-center">
-              <div className="text-lg font-bold text-amber-600">{userData.ordination_year}</div>
-              <div className="text-xs text-gray-500">Ordained</div>
-            </div>
-          )}
-          {userData.experience_years != null && (
-            <div className="text-center">
-              <div className="text-lg font-bold text-green-600">{userData.experience_years} yrs</div>
-              <div className="text-xs text-gray-500">Experience</div>
-            </div>
-          )}
-          {userData.current_parish?.asa != null && (
-            <div className="text-center">
-              <div className="text-lg font-bold text-purple-600">{userData.current_parish.asa}</div>
-              <div className="text-xs text-gray-500">Parish ASA</div>
-            </div>
-          )}
+          <div className="flex flex-wrap gap-6 mt-3">
+            {cb?.diocese_median != null && (
+              <div className="text-center">
+                <div className="text-lg font-bold text-blue-600">${Math.round(cb.diocese_median / 1000)}K</div>
+                <div className="text-xs text-gray-500">Diocese Median</div>
+              </div>
+            )}
+            {userData.ordination_year && (
+              <div className="text-center">
+                <div className="text-lg font-bold text-amber-600">{userData.ordination_year}</div>
+                <div className="text-xs text-gray-500">Ordained</div>
+              </div>
+            )}
+            {userData.experience_years != null && (
+              <div className="text-center">
+                <div className="text-lg font-bold text-green-600">{userData.experience_years} yrs</div>
+                <div className="text-xs text-gray-500">Experience</div>
+              </div>
+            )}
+            {userData.current_parish?.asa != null && (
+              <div className="text-center">
+                <div className="text-lg font-bold text-purple-600">{userData.current_parish.asa}</div>
+                <div className="text-xs text-gray-500">Parish ASA</div>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Preferences-only header */}
+      {!userData && (
+        <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
+          <h1 className="text-xl font-bold text-gray-900">Search Preferences</h1>
+          <p className="text-sm text-gray-500 mt-1">Set your criteria to see matching positions highlighted on the Positions page.</p>
+        </div>
+      )}
 
       {/* Tabs */}
       <div className="flex gap-1 border-b border-gray-200 mb-4">
-        {(['compensation', 'career', 'positions'] as const).map(tab => (
+        {availableTabs.map(tab => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -151,27 +177,27 @@ function DashboardContent() {
                 : 'border-transparent text-gray-500 hover:text-gray-700'
             }`}
           >
-            {tab === 'compensation' ? 'Compensation' : tab === 'career' ? 'Career' : 'Positions'}
+            {tab === 'compensation' ? 'Compensation' : tab === 'career' ? 'Career' : tab === 'positions' ? 'Positions' : 'Preferences'}
           </button>
         ))}
       </div>
 
       {/* Tab Content */}
-      {activeTab === 'compensation' && (
+      {activeTab === 'compensation' && userData && (
         <div className="bg-white border border-gray-200 rounded-lg p-4">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Compensation Benchmark</h2>
           <CompensationRadar benchmarks={userData.compensation_benchmarks} />
         </div>
       )}
 
-      {activeTab === 'career' && (
+      {activeTab === 'career' && userData && (
         <div className="bg-white border border-gray-200 rounded-lg p-4">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">Career Timeline</h2>
           <CareerTimeline positions={userData.positions} ordinationYear={userData.ordination_year} />
         </div>
       )}
 
-      {activeTab === 'positions' && (
+      {activeTab === 'positions' && userData && (
         <div className="bg-white border border-gray-200 rounded-lg p-4">
           <h2 className="text-lg font-semibold text-gray-900 mb-4">
             Recommended Positions ({recommended.length})
@@ -200,6 +226,12 @@ function DashboardContent() {
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {activeTab === 'preferences' && (
+        <div className="bg-white border border-gray-200 rounded-lg p-4">
+          <PreferencesForm prefs={prefs} onSave={savePrefs} onClear={clearPrefs} />
         </div>
       )}
     </div>
