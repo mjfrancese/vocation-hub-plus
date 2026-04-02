@@ -106,7 +106,44 @@ Each section has a small uppercase gray label header, followed by prose that wea
 
 ### Similar Positions
 
-Below the narrative, separated by a subtle border-top. Grid of 3 cards (1 col mobile, 3 cols desktop). Each card shows: church name, location, canonical position type, ASA, estimated comp. Clickable to navigate to that position.
+Below the narrative, separated by a subtle border-top.
+
+**Sort selector:** A small dropdown above the grid lets the priest choose what "similar" means:
+- **Best match** (default) -- composite score, highest first
+- **Similar size** -- prioritize ASA match
+- **Nearby** -- prioritize same-state positions
+- **Similar comp** -- prioritize compensation match
+- **Same type** -- prioritize position type match
+
+**Match reason tags:** Each card shows small tags explaining WHY it's similar: "Similar size", "Same state", "Same type", "Similar comp", "Same housing". Tags are derived from the individual scoring components stored in `match_reasons`.
+
+**Card contents:** Church name, location, canonical position type, ASA, estimated comp, match reason tags. Clickable to navigate to that position.
+
+**Layout:** Grid of 3 cards (1 col mobile, 3 cols desktop). When the sort changes, cards re-sort client-side from the stored candidates (no API call needed).
+
+**Enrichment change:** Store top 15 candidates (up from 5) with individual match components:
+```typescript
+interface SimilarPosition {
+  id: string;
+  vh_id?: number;
+  name: string;
+  city: string;
+  state: string;
+  position_type: string;
+  asa: number | null;
+  estimated_total_comp: number | null;
+  score: number;
+  match_reasons: {
+    asa: boolean;    // ASA within +/-25%
+    comp: boolean;   // Comp within +/-20%
+    state: boolean;  // Same state
+    type: boolean;   // Overlapping canonical position types
+    housing: boolean; // Same housing type
+  };
+}
+```
+
+The frontend shows 3 at a time, sorted by the selected criterion. "Best match" uses the composite score. Other options re-sort by giving +10 weight to the selected criterion's boolean, then by composite score as tiebreaker.
 
 ---
 
