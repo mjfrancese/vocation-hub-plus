@@ -167,19 +167,24 @@ function loadPositions(db) {
     allProfiles = flattenRawProfiles(allProfiles);
   }
 
-  // Map DB columns to the position shape expected by stages
-  const positions = rows.map(r => ({
-    vh_id: r.vh_id ? parseInt(r.vh_id, 10) || r.vh_id : undefined,
-    name: r.name || '',
-    diocese: r.diocese || '',
-    state: r.state || '',
-    organization: r.organization || '',
-    position_type: r.position_type || '',
-    receiving_names_from: r.receiving_from || '',
-    receiving_names_to: r.receiving_to || '',
-    updated_on_hub: r.updated_on_hub || '',
-    status: r.status || '',
-  }));
+  // Map DB columns to the position shape expected by stages.
+  // Every position needs a stable `id` for React keys in the frontend.
+  const positions = rows.map(r => {
+    const vhId = r.vh_id ? parseInt(r.vh_id, 10) || r.vh_id : undefined;
+    return {
+      id: vhId ? `vh_${vhId}` : `pos_${r.vh_id || r.name}`,
+      vh_id: vhId,
+      name: r.name || '',
+      diocese: r.diocese || '',
+      state: r.state || '',
+      organization: r.organization || '',
+      position_type: r.position_type || '',
+      receiving_names_from: r.receiving_from || '',
+      receiving_names_to: r.receiving_to || '',
+      updated_on_hub: r.updated_on_hub || '',
+      status: r.status || '',
+    };
+  });
 
   return { positions, allProfiles, profileFields };
 }
@@ -266,6 +271,7 @@ function buildExtendedPositions(publicPositions, allProfiles) {
     }
 
     extended.push({
+      id: `vh_${vhId}`,
       vh_id: vhId,
       name: displayName,
       diocese,
