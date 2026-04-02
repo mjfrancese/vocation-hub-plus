@@ -23,6 +23,18 @@ const {
 } = require('../lib/normalization');
 
 // ---------------------------------------------------------------------------
+// Manual NID overrides
+// ---------------------------------------------------------------------------
+// When the automatic matcher picks the wrong parish (e.g. a school instead of
+// the church at the same address), add an entry here keyed by vh_id mapping to
+// the correct nid.  The override is applied before any automatic strategy runs.
+
+const NID_OVERRIDES = {
+  // St. David's (Austin) -- matcher picked nid 8304 (school); correct is 5609 (church)
+  10668: 5609,
+};
+
+// ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
@@ -429,6 +441,19 @@ function matchPositionToParishes(position, db) {
  */
 function matchParishes(positions, db) {
   for (const pos of positions) {
+    // Check for manual NID override before running automatic matching
+    const overrideNid = NID_OVERRIDES[pos.vh_id];
+    if (overrideNid) {
+      const parish = db.prepare('SELECT * FROM parishes WHERE nid = ?').get(String(overrideNid));
+      if (parish) {
+        pos.church_infos = [buildChurchInfo(parish)];
+        pos.match_confidence = 'exact';
+        pos.match_method = 'manual_override';
+        pos._parish_ids = [parish.id];
+        continue;
+      }
+    }
+
     const matches = matchPositionToParishes(pos, db);
 
     if (matches.length > 0) {
@@ -457,3 +482,4 @@ module.exports.normalizeDioceseName = normalizeDioceseName;
 module.exports.isGenericDomain = isGenericDomain;
 module.exports.extractCity = extractCity;
 module.exports.enrichMatchWithIdentity = enrichMatchWithIdentity;
+module.exports.NID_OVERRIDES = NID_OVERRIDES;

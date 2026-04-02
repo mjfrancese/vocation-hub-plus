@@ -13,7 +13,16 @@ import {
   getUniqueHousingValues,
   COMPENSATION_RANGES,
 } from '@/lib/profile-helpers';
-import { getStatusStyle, getStatusShortLabel, isClosedStatus } from '@/lib/status-helpers';
+import {
+  POSITION_TYPE_DISPLAY_GROUPS,
+  buildCanonicalToGroupMap,
+} from '@/lib/position-type-helpers';
+import {
+  getUnifiedStatus,
+  UNIFIED_STATUSES,
+  UNIFIED_STATUS_CHIP_COLORS,
+  type UnifiedStatus,
+} from '@/lib/status-helpers';
 import SearchBar from '@/components/SearchBar';
 import Filters, { FilterConfig } from '@/components/Filters';
 import PositionTable from '@/components/PositionTable';
@@ -44,94 +53,26 @@ export default function HomePage() {
   // Build filter options from data
   const states = useMemo(() => getUniqueValues(allPositions, 'state'), [allPositions]);
   const dioceses = useMemo(() => getUniqueValues(allPositions, 'diocese'), [allPositions]);
-  // Group position types into simplified categories for the filter dropdown
-  const POSITION_TYPE_GROUPS: Record<string, string[]> = {
-    'Rector / Vicar / Priest-in-Charge': [
-      'Rector / Vicar / Priest-in-Charge',
-      'Rector/Priest-in-Charge',
-      'Vicar',
-    ],
-    'Rector / Vicar / PiC (Part-time)': [
-      'Rector / Vicar / Priest-in-Charge (Part-time)',
-      'Priest-in-Charge Shared Ministry',
-      'Bi-vocational Priest',
-    ],
-    'Assistant / Associate / Curate': [
-      'Assistant/Associate/Curate',
-      'Assistant / Associate / Curate (Part-time)',
-      'Associate Rector / Senior Associate Rector',
-    ],
-    'Dean / Cathedral': [
-      'Cathedral Dean',
-      'Dean',
-      'Cathedral Staff',
-    ],
-    'Interim': ['Interim', 'Supply'],
-    'Bishop': ['Bishop Diocesan'],
-    'Canon / Diocesan Staff': [
-      'Canon to the Ordinary',
-      'Canon for Congregational Development',
-      'Diocesan/Regional Staff',
-      'Missioner',
-    ],
-    'Chaplain': [
-      'Chaplain, School',
-      'Chaplain, Care Facility',
-      'Chaplain, Port',
-      'Chaplain, Other',
-    ],
-    'Other': [
-      'Director',
-      'Director of Development',
-      'Director of Peace & Justice',
-      'Christian Education Director/DRE',
-      'Camp/Conference Center Director',
-      'Head of School',
-      'Church Planter',
-      'Youth Minister',
-      'Academic Research',
-    ],
-  };
-  const positionTypeOptions = useMemo(() => Object.keys(POSITION_TYPE_GROUPS), []);
-  // Map from raw position_type to group label
-  const positionTypeGroupMap = useMemo(() => {
-    const map: Record<string, string> = {};
-    for (const [group, types] of Object.entries(POSITION_TYPE_GROUPS)) {
-      for (const t of types) map[t] = group;
-    }
-    return map;
-  }, []);
+  // Position type filter uses canonical types grouped into display labels
+  const positionTypeOptions = useMemo(() => Object.keys(POSITION_TYPE_DISPLAY_GROUPS), []);
+  // Map from canonical type to display group label
+  const canonicalToGroupMap = useMemo(() => buildCanonicalToGroupMap(), []);
   const regions = useMemo(() => getUniqueProfileValues(allPositions, 'Geographic Location'), [allPositions]);
   const settings = useMemo(() => getUniqueProfileValues(allPositions, 'Ministry Setting'), [allPositions]);
   const housingTypes = useMemo(() => getUniqueHousingValues(allPositions), [allPositions]);
   const healthcareOptions = useMemo(() => getUniqueProfileValues(allPositions, 'Healthcare Options'), [allPositions]);
-  // Group statuses into simplified categories for the filter dropdown
-  const STATUS_GROUPS: Record<string, string[]> = {
-    'Receiving': ['Receiving names', 'Reopened'],
-    'Developing': ['Beginning search', 'Developing profile', 'Profile complete', 'Developing self study'],
-    'Interim': ['Seeking interim', 'Interim in place'],
-    'Closed': ['Search complete', 'No longer receiving names'],
-    'Unknown': [],
-  };
-  const statusOptions = useMemo(() => Object.keys(STATUS_GROUPS), []);
-  const statusGroupMap = useMemo(() => {
-    const map: Record<string, string> = {};
-    for (const [group, statuses] of Object.entries(STATUS_GROUPS)) {
-      for (const s of statuses) map[s] = group;
-    }
-    return map;
-  }, []);
+  // Unified status options for filter dropdown
+  const statusOptions = useMemo(() => [...UNIFIED_STATUSES], []);
 
-  // Status counts for quick-filter chips (use grouped statuses)
+  // Status counts for quick-filter chips using unified model
   const statusCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const p of allPositions) {
-      const s = p.vh_status || p.status || '';
-      const group = statusGroupMap[s] || 'Unknown';
-      counts[group] = (counts[group] || 0) + 1;
+      const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
+      counts[unified] = (counts[unified] || 0) + 1;
     }
     return counts;
-  }, [allPositions, statusGroupMap]);
+  }, [allPositions]);
 
   const newCount = useMemo(() => allPositions.filter(p => p.is_new).length, [allPositions]);
 
@@ -144,8 +85,12 @@ export default function HomePage() {
       results = results.filter(p => selectedDioceses.includes(p.diocese));
     if (selectedTypes.length > 0)
       results = results.filter(p => {
-        const group = positionTypeGroupMap[p.position_type] || 'Other';
-        return selectedTypes.includes(group);
+        const types = p.position_types || [];
+        // A position matches if any of its canonical types maps to a selected group
+        return types.some(t => {
+          const group = canonicalToGroupMap[t] || 'Other';
+          return selectedTypes.includes(group);
+        });
       });
     if (selectedCompensation.length > 0)
       results = results.filter(p => selectedCompensation.includes(getCompensationRange(p)));
@@ -159,19 +104,19 @@ export default function HomePage() {
       results = results.filter(p => selectedHealthcare.includes(getProfileField(p, 'Healthcare Options')));
     if (selectedStatuses.length > 0)
       results = results.filter(p => {
-        const group = statusGroupMap[p.vh_status || p.status || ''] || 'Unknown';
-        return selectedStatuses.includes(group);
+        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
+        return selectedStatuses.includes(unified);
       });
     if (hideClosed)
       results = results.filter(p => {
-        const group = statusGroupMap[p.vh_status || ''] || 'Unknown';
-        return group !== 'Closed';
+        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
+        return unified !== 'Closed';
       });
 
     return results;
   }, [allPositions, searchIndex, query, selectedStates, selectedDioceses, selectedTypes,
       selectedCompensation, selectedRegion, selectedSetting, selectedHousing, selectedHealthcare,
-      selectedStatuses, hideClosed, positionTypeGroupMap, statusGroupMap]);
+      selectedStatuses, hideClosed, canonicalToGroupMap]);
 
   function clearFilters() {
     setSelectedStates([]);
@@ -311,43 +256,36 @@ export default function HomePage() {
           color="bg-emerald-50 text-emerald-700 border-emerald-200"
           activeColor="bg-emerald-600 text-white border-emerald-600"
         />
-        <QuickChip
-          label={`Receiving (${statusCounts['Receiving'] || 0})`}
-          active={selectedStatuses.includes('Receiving')}
-          onClick={() => { setShowNewOnly(false); toggleStatusChip('Receiving'); }}
-          color="bg-green-50 text-green-700 border-green-200"
-          activeColor="bg-green-600 text-white border-green-600"
-        />
-        <QuickChip
-          label={`Developing (${statusCounts['Developing'] || 0})`}
-          active={selectedStatuses.includes('Developing')}
-          onClick={() => { setShowNewOnly(false); toggleStatusChip('Developing'); }}
-          color="bg-blue-50 text-blue-700 border-blue-200"
-          activeColor="bg-blue-600 text-white border-blue-600"
-        />
-        <QuickChip
-          label={`Interim (${statusCounts['Interim'] || 0})`}
-          active={selectedStatuses.includes('Interim')}
-          onClick={() => { setShowNewOnly(false); toggleStatusChip('Interim'); }}
-          color="bg-yellow-50 text-yellow-700 border-yellow-200"
-          activeColor="bg-yellow-600 text-white border-yellow-600"
-        />
-        <QuickChip
-          label={`Closed (${statusCounts['Closed'] || 0})`}
-          active={selectedStatuses.includes('Closed') && !hideClosed}
-          onClick={() => {
-            setShowNewOnly(false);
-            if (selectedStatuses.includes('Closed') && !hideClosed) {
-              setSelectedStatuses(selectedStatuses.filter(s => s !== 'Closed'));
-              setHideClosed(true);
-            } else {
-              toggleStatusChip('Closed');
-              setHideClosed(false);
-            }
-          }}
-          color="bg-gray-50 text-gray-600 border-gray-200"
-          activeColor="bg-gray-600 text-white border-gray-600"
-        />
+        {UNIFIED_STATUSES.map((status) => {
+          const chipColors = UNIFIED_STATUS_CHIP_COLORS[status];
+          const isClosedChip = status === 'Closed';
+          const isActive = isClosedChip
+            ? selectedStatuses.includes(status) && !hideClosed
+            : selectedStatuses.includes(status);
+          return (
+            <QuickChip
+              key={status}
+              label={`${status} (${statusCounts[status] || 0})`}
+              active={isActive}
+              onClick={() => {
+                setShowNewOnly(false);
+                if (isClosedChip) {
+                  if (selectedStatuses.includes('Closed') && !hideClosed) {
+                    setSelectedStatuses(selectedStatuses.filter(s => s !== 'Closed'));
+                    setHideClosed(true);
+                  } else {
+                    toggleStatusChip('Closed');
+                    setHideClosed(false);
+                  }
+                } else {
+                  toggleStatusChip(status);
+                }
+              }}
+              color={chipColors.color}
+              activeColor={chipColors.activeColor}
+            />
+          );
+        })}
       </div>
 
       <SearchBar

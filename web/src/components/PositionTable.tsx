@@ -3,6 +3,7 @@
 import { Fragment, useState, useCallback, useEffect } from 'react';
 import { Position, SortField, SortDirection } from '@/lib/types';
 import QualityBadge, { QualityScoreDetail } from './QualityBadge';
+import UnifiedStatusBadge from './UnifiedStatusBadge';
 import ParochialTrends from './ParochialTrends';
 import { isGibberish } from '@/lib/gibberish-detector';
 import ComparisonBar from './ComparisonBar';
@@ -264,7 +265,7 @@ export default function PositionTable({ positions }: PositionTableProps) {
                   </div>
                   <div className="flex items-center gap-1.5 flex-shrink-0">
                     {asa && <span className="text-xs text-gray-400" title={asa.range}>ASA {asa.value}</span>}
-                    <QualityBadge pos={pos} />
+                    <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mt-1.5 text-xs text-gray-500">
@@ -395,9 +396,14 @@ export default function PositionTable({ positions }: PositionTableProps) {
                         </>
                       )}
                     </td>
-                    {/* Status (quality badge) */}
+                    {/* Status (unified) */}
                     <td className="px-3 py-2">
-                      <QualityBadge pos={pos} />
+                      <div className="flex items-center gap-1.5">
+                        <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
+                        {pos.visibility !== 'public' && (
+                          <QualityBadge pos={pos} />
+                        )}
+                      </div>
                     </td>
                     {/* ASA */}
                     <td className="px-2 py-2 text-center w-12">
@@ -780,6 +786,14 @@ function ExpandedDetail({ pos, onNavigate, meData }: { pos: Position; onNavigate
                   <div>
                     <span className="text-gray-500">Email</span>
                     <p className="text-gray-900">{church.email}</p>
+                  </div>
+                )}
+                {church.website && (
+                  <div>
+                    <span className="text-gray-500">Website</span>
+                    <a href={church.website} target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline text-sm truncate block">
+                      {church.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                    </a>
                   </div>
                 )}
               </div>

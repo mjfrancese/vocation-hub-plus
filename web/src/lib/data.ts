@@ -22,13 +22,17 @@ try {
 const profileFields = profileFieldsData as unknown as Record<string, Array<{ label: string; value: string }>>;
 
 interface RawProfile {
-  vh_id: number;
-  profile_url: string;
-  diocese: string;
-  congregation: string;
-  position_type: string;
-  status: string;
-  all_fields: Array<{ label: string; value: string }>;
+  // Raw scraper format uses `id` and `url`; flattened format uses `vh_id` and `profile_url`
+  id?: number;
+  vh_id?: number;
+  url?: string;
+  profile_url?: string;
+  diocese?: string;
+  congregation?: string;
+  position_type?: string;
+  status?: string;
+  fields?: Array<{ label: string; value: string }>;
+  all_fields?: Array<{ label: string; value: string }>;
   [key: string]: unknown;
 }
 
@@ -80,7 +84,7 @@ export function getPositions(): Position[] {
       if (m) vhId = parseInt(m[1], 10);
     }
     // Look up VH status from profile if not on position
-    const profile = vhId ? allProfiles.find(p => p.vh_id === vhId) : undefined;
+    const profile = vhId ? allProfiles.find(p => (p.vh_id ?? p.id) === vhId) : undefined;
 
     // Derive vh_status: use enriched value, then profile lookup, then map scraper status
     let vhStatus = pos.vh_status || profile?.status || '';
@@ -115,7 +119,7 @@ export function getPositions(): Position[] {
       if (publicVhIds.has(vhId)) continue;
 
       const diocese = (e.diocese as string) || '';
-      const profile = allProfiles.find(p => p.vh_id === vhId);
+      const profile = allProfiles.find(p => (p.vh_id ?? p.id) === vhId);
       const state = (e.state as string) || (e.church_infos as Position['church_infos'])?.[0]?.state || getStateForDiocese(diocese);
 
       const receivingFrom = (e.receiving_names_from as string) || '';
@@ -130,6 +134,7 @@ export function getPositions(): Position[] {
         state,
         organization_type: '',
         position_type: (e.position_type as string) || '',
+        position_types: (e.position_types as string[]) || [],
         receiving_names_from: receivingFrom,
         receiving_names_to: receivingTo,
         updated_on_hub: '',
@@ -143,7 +148,7 @@ export function getPositions(): Position[] {
         vh_status: vhStatus,
         vh_id: vhId,
         profile_url: (e.profile_url as string) || '',
-        deep_scrape_fields: profile?.all_fields,
+        deep_scrape_fields: profile?.all_fields ?? profile?.fields,
         church_infos: e.church_infos as Position['church_infos'],
         match_confidence: (e.match_confidence as Position['match_confidence']) || undefined,
         parochials: e.parochials as Position['parochials'],

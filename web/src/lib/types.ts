@@ -5,6 +5,8 @@ export interface Position {
   state: string;
   organization_type: string;
   position_type: string;
+  // Canonical normalized types derived from position_type (e.g. ['Rector', 'Vicar', 'Priest-in-Charge'])
+  position_types?: string[];
   receiving_names_from: string;
   receiving_names_to: string;
   updated_on_hub: string;

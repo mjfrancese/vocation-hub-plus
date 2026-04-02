@@ -64,13 +64,14 @@ function findSimilar(positions) {
     const comp = pos.estimated_total_comp || null;
     const state = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].state) || pos.state || '';
     const positionType = pos.position_type || '';
+    const positionTypes = pos.position_types || [];
     const housingType = (pos.housing_type || '').toLowerCase();
     const name = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].name) || pos.name || '';
     const city = (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].city) || pos.city || '';
 
     if (asa == null && comp == null) continue;
 
-    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, housingType, name, city });
+    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, positionTypes, housingType, name, city });
   }
 
   let count = 0;
@@ -95,7 +96,14 @@ function findSimilar(positions) {
       }
 
       if (a.state && b.state && a.state === b.state) score += 2;
-      if (a.positionType && b.positionType && a.positionType === b.positionType) score += 2;
+      // Compare canonical position_types sets: any overlap counts as a match
+      if (a.positionTypes.length > 0 && b.positionTypes.length > 0
+          && a.positionTypes.some(t => b.positionTypes.includes(t))) {
+        score += 2;
+      } else if (a.positionType && b.positionType && a.positionType === b.positionType) {
+        // Fallback: exact raw string match if position_types not populated
+        score += 2;
+      }
       if (a.housingType && b.housingType && a.housingType === b.housingType) score += 1;
 
       if (score >= 3) {

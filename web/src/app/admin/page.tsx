@@ -178,10 +178,23 @@ function AdminDashboard({ authed }: { authed: boolean }) {
       fetch(`${base}/data/position-church-map.json`).then(r => r.json()),
       fetch(`${base}/data/meta.json`).then(r => r.json()),
       fetch(`${base}/data/needs-backfill.json`).then(r => r.json()).catch(() => null),
-    ]).then(([profiles, registry, map, meta, gaps]) => {
+    ]).then(([profiles, registry, rawMap, meta, gaps]) => {
       setProfiles(profiles);
       setRegistry(registry);
-      setMapData(map);
+      // The JSON file is a flat object { [vhId]: Mapping } but the app
+      // expects { meta, mappings }.  Wrap it on load and compute meta.
+      const mappings: Record<string, Mapping> = rawMap.mappings ? rawMap.mappings : rawMap;
+      const entries = Object.values(mappings) as Mapping[];
+      const totalMapped = entries.filter(m => m.church_nid !== null).length;
+      const totalFlagged = entries.filter(m => m.flagged).length;
+      setMapData({
+        meta: rawMap.meta ?? {
+          totalMapped,
+          totalFlagged,
+          totalPositions: entries.length,
+        },
+        mappings,
+      });
       setMeta(meta);
       setGapReport(gaps);
       setDataLoading(false);

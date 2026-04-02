@@ -18,6 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const { getDb, closeDb } = require('./db');
+const { normalizePositionType } = require('./position-type-map');
 
 // ---------------------------------------------------------------------------
 // Stage registry (in execution order)
@@ -171,14 +172,17 @@ function loadPositions(db) {
   // Every position needs a stable `id` for React keys in the frontend.
   const positions = rows.map(r => {
     const vhId = r.vh_id ? parseInt(r.vh_id, 10) || r.vh_id : undefined;
+    const positionType = r.position_type || '';
     return {
       id: vhId ? `vh_${vhId}` : `pos_${r.vh_id || r.name}`,
       vh_id: vhId,
+      profile_url: vhId ? `https://vocationhub.episcopalchurch.org/PositionView/${vhId}` : '',
       name: r.name || '',
       diocese: r.diocese || '',
       state: r.state || '',
       organization: r.organization || '',
-      position_type: r.position_type || '',
+      position_type: positionType,
+      position_types: normalizePositionType(positionType),
       receiving_names_from: r.receiving_from || '',
       receiving_names_to: r.receiving_to || '',
       updated_on_hub: r.updated_on_hub || '',
@@ -279,6 +283,7 @@ function buildExtendedPositions(publicPositions, allProfiles) {
       vh_status: inferredStatus,
       profile_url: `https://vocationhub.episcopalchurch.org/PositionView/${vhId}`,
       position_type: positionType,
+      position_types: normalizePositionType(positionType),
       congregation: profile.congregation || '',
       receiving_names_from: receivingFrom,
       receiving_names_to: receivingTo,
