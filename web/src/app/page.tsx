@@ -1,10 +1,9 @@
 'use client';
 
-import { useMemo, useState, useCallback } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { getPositions, getMeta, getUniqueValues, getChanges } from '@/lib/data';
 import { createSearchIndex, searchPositions } from '@/lib/search';
-import { Position } from '@/lib/types';
 import {
   getProfileField,
   getCompensationRange,
@@ -21,8 +20,9 @@ import {
   getUnifiedStatus,
   UNIFIED_STATUSES,
   UNIFIED_STATUS_CHIP_COLORS,
-  type UnifiedStatus,
 } from '@/lib/status-helpers';
+import { useFilterState } from '@/hooks/useFilterState';
+import { passesDefaultFilter, isPostedWithin } from '@/lib/filter-defaults';
 import SearchBar from '@/components/SearchBar';
 import Filters, { FilterConfig } from '@/components/Filters';
 import PositionTable from '@/components/PositionTable';
@@ -32,36 +32,31 @@ import ChangeLog from '@/components/ChangeLog';
 
 const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
-export default function HomePage() {
+export default function PositionsPage() {
+  return (
+    <Suspense fallback={<div className="p-8 text-gray-400">Loading...</div>}>
+      <PositionsPageContent />
+    </Suspense>
+  );
+}
+
+function PositionsPageContent() {
+  const [filters, filterActions] = useFilterState();
+
   const allPositions = useMemo(() => getPositions(), []);
   const meta = useMemo(() => getMeta(), []);
   const changes = useMemo(() => getChanges(), []);
   const searchIndex = useMemo(() => createSearchIndex(allPositions), [allPositions]);
 
-  const [query, setQuery] = useState('');
-  const [selectedStates, setSelectedStates] = useState<string[]>([]);
-  const [selectedDioceses, setSelectedDioceses] = useState<string[]>([]);
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
-  const [selectedCompensation, setSelectedCompensation] = useState<string[]>([]);
-  const [selectedRegion, setSelectedRegion] = useState<string[]>([]);
-  const [selectedSetting, setSelectedSetting] = useState<string[]>([]);
-  const [selectedHousing, setSelectedHousing] = useState<string[]>([]);
-  const [selectedHealthcare, setSelectedHealthcare] = useState<string[]>([]);
-  const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
-  const [hideClosed, setHideClosed] = useState(true);
-
   // Build filter options from data
   const states = useMemo(() => getUniqueValues(allPositions, 'state'), [allPositions]);
   const dioceses = useMemo(() => getUniqueValues(allPositions, 'diocese'), [allPositions]);
-  // Position type filter uses canonical types grouped into display labels
   const positionTypeOptions = useMemo(() => Object.keys(POSITION_TYPE_DISPLAY_GROUPS), []);
-  // Map from canonical type to display group label
   const canonicalToGroupMap = useMemo(() => buildCanonicalToGroupMap(), []);
   const regions = useMemo(() => getUniqueProfileValues(allPositions, 'Geographic Location'), [allPositions]);
   const settings = useMemo(() => getUniqueProfileValues(allPositions, 'Ministry Setting'), [allPositions]);
   const housingTypes = useMemo(() => getUniqueHousingValues(allPositions), [allPositions]);
   const healthcareOptions = useMemo(() => getUniqueProfileValues(allPositions, 'Healthcare Options'), [allPositions]);
-  // Unified status options for filter dropdown
   const statusOptions = useMemo(() => [...UNIFIED_STATUSES], []);
 
   // Status counts for quick-filter chips using unified model
@@ -76,89 +71,111 @@ export default function HomePage() {
 
   const newCount = useMemo(() => allPositions.filter(p => p.is_new).length, [allPositions]);
 
-  const filtered = useMemo(() => {
-    let results = query ? searchPositions(searchIndex, query) : allPositions;
+  // Active status chips: when no URL param, visually highlight defaults
+  const activeChips = filters.statuses.length === 0
+    ? ['Active', 'Developing', 'Interim']
+    : filters.statuses;
 
-    if (selectedStates.length > 0)
-      results = results.filter(p => selectedStates.includes(p.state));
-    if (selectedDioceses.length > 0)
-      results = results.filter(p => selectedDioceses.includes(p.diocese));
-    if (selectedTypes.length > 0)
-      results = results.filter(p => {
-        const types = p.position_types || [];
-        // A position matches if any of its canonical types maps to a selected group
-        return types.some(t => {
-          const group = canonicalToGroupMap[t] || 'Other';
-          return selectedTypes.includes(group);
-        });
-      });
-    if (selectedCompensation.length > 0)
-      results = results.filter(p => selectedCompensation.includes(getCompensationRange(p)));
-    if (selectedRegion.length > 0)
-      results = results.filter(p => selectedRegion.includes(getProfileField(p, 'Geographic Location')));
-    if (selectedSetting.length > 0)
-      results = results.filter(p => selectedSetting.includes(getProfileField(p, 'Ministry Setting')));
-    if (selectedHousing.length > 0)
-      results = results.filter(p => selectedHousing.includes(categorizeHousing(getProfileField(p, 'Type of Housing Provided'))));
-    if (selectedHealthcare.length > 0)
-      results = results.filter(p => selectedHealthcare.includes(getProfileField(p, 'Healthcare Options')));
-    if (selectedStatuses.length > 0)
-      results = results.filter(p => {
-        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
-        return selectedStatuses.includes(unified);
-      });
-    if (hideClosed)
-      results = results.filter(p => {
-        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
-        return unified !== 'Closed';
-      });
+  function toggleStatusChip(status: string) {
+    const current = filters.statuses.length === 0
+      ? ['Active', 'Developing', 'Interim']
+      : [...filters.statuses];
 
-    return results;
-  }, [allPositions, searchIndex, query, selectedStates, selectedDioceses, selectedTypes,
-      selectedCompensation, selectedRegion, selectedSetting, selectedHousing, selectedHealthcare,
-      selectedStatuses, hideClosed, canonicalToGroupMap]);
-
-  function clearFilters() {
-    setSelectedStates([]);
-    setSelectedDioceses([]);
-    setSelectedTypes([]);
-    setSelectedCompensation([]);
-    setSelectedRegion([]);
-    setSelectedSetting([]);
-    setSelectedHousing([]);
-    setSelectedHealthcare([]);
-    setSelectedStatuses([]);
+    if (current.includes(status)) {
+      filterActions.setStatuses(current.filter(s => s !== status));
+    } else {
+      filterActions.setStatuses([...current, status]);
+    }
   }
 
+  const filtered = useMemo(() => {
+    let result = allPositions;
+
+    // Status filter: empty = smart defaults, specified = exact match
+    if (filters.statuses.length === 0) {
+      result = result.filter(passesDefaultFilter);
+    } else {
+      result = result.filter(p => {
+        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
+        return filters.statuses.includes(unified);
+      });
+    }
+
+    // Date range filter
+    if (filters.postedWithin) {
+      result = result.filter(p => isPostedWithin(p, filters.postedWithin!));
+    }
+
+    // Search query
+    if (filters.query) {
+      const searchResults = searchPositions(searchIndex, filters.query);
+      const resultIds = new Set(searchResults.map(p => p.id));
+      result = result.filter(p => resultIds.has(p.id));
+    }
+
+    // Multi-select filters
+    if (filters.states.length > 0) {
+      result = result.filter(p => filters.states.includes(p.state));
+    }
+    if (filters.dioceses.length > 0) {
+      result = result.filter(p => filters.dioceses.includes(p.diocese));
+    }
+    if (filters.types.length > 0) {
+      result = result.filter(p => {
+        const types = p.position_types || [];
+        return types.some(t => {
+          const group = canonicalToGroupMap[t] || 'Other';
+          return filters.types.includes(group);
+        });
+      });
+    }
+    if (filters.compensationRanges.length > 0) {
+      result = result.filter(p => filters.compensationRanges.includes(getCompensationRange(p)));
+    }
+    if (filters.regions.length > 0) {
+      result = result.filter(p => {
+        const region = getProfileField(p, 'Geographic Location');
+        return region ? filters.regions.includes(region) : false;
+      });
+    }
+    if (filters.settings.length > 0) {
+      result = result.filter(p => {
+        const setting = getProfileField(p, 'Ministry Setting');
+        return setting ? filters.settings.includes(setting) : false;
+      });
+    }
+    if (filters.housingTypes.length > 0) {
+      result = result.filter(p => {
+        const housing = categorizeHousing(getProfileField(p, 'Type of Housing Provided'));
+        return housing ? filters.housingTypes.includes(housing) : false;
+      });
+    }
+    if (filters.healthcareOptions.length > 0) {
+      result = result.filter(p => {
+        const hc = getProfileField(p, 'Healthcare Options');
+        return hc ? filters.healthcareOptions.includes(hc) : false;
+      });
+    }
+
+    return result;
+  }, [allPositions, filters, searchIndex, canonicalToGroupMap]);
+
   const filterConfigs: FilterConfig[] = [
-    { key: 'state', label: 'State', options: states, selected: selectedStates, onChange: setSelectedStates, width: 'w-36' },
-    { key: 'diocese', label: 'Diocese', options: dioceses, selected: selectedDioceses, onChange: setSelectedDioceses, width: 'w-48' },
-    { key: 'type', label: 'Position Type', options: positionTypeOptions, selected: selectedTypes, onChange: setSelectedTypes, width: 'w-52' },
-    { key: 'comp', label: 'Compensation', options: COMPENSATION_RANGES, selected: selectedCompensation, onChange: setSelectedCompensation, width: 'w-52' },
-    { key: 'region', label: 'Region', options: regions, selected: selectedRegion, onChange: setSelectedRegion, width: 'w-40' },
-    { key: 'setting', label: 'Setting', options: settings, selected: selectedSetting, onChange: setSelectedSetting, width: 'w-40' },
-    { key: 'housing', label: 'Housing', options: housingTypes, selected: selectedHousing, onChange: setSelectedHousing, width: 'w-48' },
-    { key: 'healthcare', label: 'Healthcare', options: healthcareOptions, selected: selectedHealthcare, onChange: setSelectedHealthcare, width: 'w-40' },
-    { key: 'status', label: 'Status', options: statusOptions, selected: selectedStatuses, onChange: setSelectedStatuses, width: 'w-44' },
+    { key: 'state', label: 'State', options: states, selected: filters.states, onChange: filterActions.setStates, width: 'w-36' },
+    { key: 'diocese', label: 'Diocese', options: dioceses, selected: filters.dioceses, onChange: filterActions.setDioceses, width: 'w-48' },
+    { key: 'type', label: 'Position Type', options: positionTypeOptions, selected: filters.types, onChange: filterActions.setTypes, width: 'w-52' },
+    { key: 'comp', label: 'Compensation', options: COMPENSATION_RANGES, selected: filters.compensationRanges, onChange: filterActions.setCompensationRanges, width: 'w-52' },
+    { key: 'region', label: 'Region', options: regions, selected: filters.regions, onChange: filterActions.setRegions, width: 'w-40' },
+    { key: 'setting', label: 'Setting', options: settings, selected: filters.settings, onChange: filterActions.setSettings, width: 'w-40' },
+    { key: 'housing', label: 'Housing', options: housingTypes, selected: filters.housingTypes, onChange: filterActions.setHousingTypes, width: 'w-48' },
+    { key: 'healthcare', label: 'Healthcare', options: healthcareOptions, selected: filters.healthcareOptions, onChange: filterActions.setHealthcareOptions, width: 'w-40' },
+    { key: 'status', label: 'Status', options: statusOptions, selected: filters.statuses, onChange: filterActions.setStatuses, width: 'w-44' },
   ];
 
   const hasActiveFilters = filterConfigs.some(f => f.selected.length > 0);
 
-  // Quick filter chip handler (uses group names now)
-  function toggleStatusChip(group: string) {
-    if (selectedStatuses.includes(group)) {
-      setSelectedStatuses(selectedStatuses.filter(s => s !== group));
-    } else {
-      setSelectedStatuses([group]);
-      if (group === 'Closed') {
-        setHideClosed(false);
-      }
-    }
-  }
-
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [showHiddenListings, setShowHiddenListings] = useState(false);
-  const [viewMode, setViewMode] = useState<'table' | 'map'>('table');
 
   const displayedPositions = useMemo(() => {
     let results = filtered;
@@ -183,21 +200,21 @@ export default function HomePage() {
         <div className="flex items-center gap-3">
           <span className="text-sm text-gray-600">
             {displayedPositions.length} of {allPositions.length} positions
-            {hasActiveFilters || query || hideClosed || showNewOnly ? ' (filtered)' : ''}
+            {hasActiveFilters || filters.query || showNewOnly ? ' (filtered)' : ''}
           </span>
           <div className="flex items-center bg-gray-100 rounded-lg p-0.5">
             <button
-              onClick={() => setViewMode('table')}
+              onClick={() => filterActions.setView('table')}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                viewMode === 'table' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                filters.view === 'table' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
               Table
             </button>
             <button
-              onClick={() => setViewMode('map')}
+              onClick={() => filterActions.setView('map')}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                viewMode === 'map' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                filters.view === 'map' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
               Map
@@ -241,7 +258,7 @@ export default function HomePage() {
           </summary>
           <div className="mt-2">
             <ChangeLog changes={changes} limit={8} onItemClick={(change) => {
-              setQuery(change.name);
+              filterActions.setQuery(change.name);
             }} />
           </div>
         </details>
@@ -258,10 +275,7 @@ export default function HomePage() {
         />
         {UNIFIED_STATUSES.map((status) => {
           const chipColors = UNIFIED_STATUS_CHIP_COLORS[status];
-          const isClosedChip = status === 'Closed';
-          const isActive = isClosedChip
-            ? selectedStatuses.includes(status) && !hideClosed
-            : selectedStatuses.includes(status);
+          const isActive = activeChips.includes(status);
           return (
             <QuickChip
               key={status}
@@ -269,17 +283,7 @@ export default function HomePage() {
               active={isActive}
               onClick={() => {
                 setShowNewOnly(false);
-                if (isClosedChip) {
-                  if (selectedStatuses.includes('Closed') && !hideClosed) {
-                    setSelectedStatuses(selectedStatuses.filter(s => s !== 'Closed'));
-                    setHideClosed(true);
-                  } else {
-                    toggleStatusChip('Closed');
-                    setHideClosed(false);
-                  }
-                } else {
-                  toggleStatusChip(status);
-                }
+                toggleStatusChip(status);
               }}
               color={chipColors.color}
               activeColor={chipColors.activeColor}
@@ -289,21 +293,27 @@ export default function HomePage() {
       </div>
 
       <SearchBar
-        value={query}
-        onChange={setQuery}
-        resultCount={query || hasActiveFilters ? displayedPositions.length : undefined}
+        value={filters.query}
+        onChange={filterActions.setQuery}
+        resultCount={filters.query || hasActiveFilters ? displayedPositions.length : undefined}
       />
 
       <Filters
         filters={filterConfigs}
-        onClear={clearFilters}
-        hideClosed={hideClosed}
-        onHideClosedChange={setHideClosed}
+        onClear={filterActions.clearAll}
+        postedWithin={filters.postedWithin}
+        onPostedWithinChange={filterActions.setPostedWithin}
       />
 
-      {viewMode === 'table' ? (
+      {filters.view === 'table' ? (
         <>
-          <PositionTable positions={displayedPositions} />
+          <PositionTable
+            positions={displayedPositions}
+            initialSortField={filters.sort.field}
+            initialSortDir={filters.sort.direction}
+            initialExpandedId={filters.expandedId}
+            onExpandedChange={filterActions.setExpandedId}
+          />
           {hiddenCount > 0 && (
             <div className="text-sm text-gray-500 mt-3 text-center">
               {showHiddenListings ? (
