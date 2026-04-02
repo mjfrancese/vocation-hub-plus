@@ -69,8 +69,23 @@ dist
 *.db-wal
 *.db-shm
 
-# Large intermediate data file (churches.json is only used during DB import)
+# Generated data files (produced by build workflow)
+web/public/data/enriched-positions.json
+web/public/data/enriched-extended.json
+web/public/data/clergy-tokens.json
+web/public/data/clergy-search-index.json
+web/public/data/position-church-map.json
 web/public/data/churches.json
+web/public/data/parochial-data.json
+web/public/data/church-registry.json
+web/public/data/all-profiles.json
+web/public/data/profile-fields.json
+web/public/data/positions.json
+web/public/data/changes.json
+web/public/data/meta.json
+web/public/data/detail-history.json
+web/public/data/needs-backfill.json
+web/public/data/clergy/
 
 # Screenshots (saved on scraper failure)
 screenshots/
