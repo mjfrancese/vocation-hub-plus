@@ -16,17 +16,17 @@
 /**
  * Normalize a church name for fuzzy matching against parochial_data keys.
  *
- * Parochial data uses canonical names like "St Thomas Episcopal Church (Reidsville)"
- * while enriched church_infos may say "Saint Thomas Episcopal Church" or just
- * "Trinity Church". This function normalizes both sides so they can meet in the
- * middle.
+ * Uses lighter normalization than lib/normalization.js's normalizeChurchName
+ * because parochial data retains structural words like "church", "parish", and
+ * "episcopal" that the heavier normalizer strips. Removing those words here
+ * would cause false positives between e.g. "Trinity Church" and "Trinity School".
  *
  *   - Lowercases
  *   - Strips punctuation (apostrophes, periods, commas, hyphens)
  *   - Normalizes "saint" / "st" to "st"
  *   - Collapses whitespace
  */
-function normalizeChurchName(name) {
+function normalizeParochialName(name) {
   if (!name) return '';
   return name
     .toLowerCase()
@@ -82,15 +82,15 @@ function getParochialIndex(db) {
   for (const nid of nids) {
     const m = nid.match(cityRe);
     if (m) {
-      const normName = normalizeChurchName(m[1]);
-      const normCity = normalizeChurchName(m[2]);
+      const normName = normalizeParochialName(m[1]);
+      const normCity = normalizeParochialName(m[2]);
       byNormCity.set(`${normName}|${normCity}`, nid);
 
       // Also index by name alone (first match wins for ambiguous names)
       if (!byNormName.has(normName)) byNormName.set(normName, []);
       byNormName.get(normName).push(nid);
     } else {
-      const normName = normalizeChurchName(nid);
+      const normName = normalizeParochialName(nid);
       if (!byNormName.has(normName)) byNormName.set(normName, []);
       byNormName.get(normName).push(nid);
     }
@@ -106,11 +106,11 @@ function getParochialIndex(db) {
  */
 function fuzzyLookupParochial(db, name, city) {
   const idx = getParochialIndex(db);
-  const normName = normalizeChurchName(name);
+  const normName = normalizeParochialName(name);
 
   // Strategy 1: normalized name + city (most precise)
   if (city) {
-    const normCity = normalizeChurchName(city);
+    const normCity = normalizeParochialName(city);
     const key = `${normName}|${normCity}`;
     const nid = idx.byNormCity.get(key);
     if (nid) return lookupParochial(db, nid);
@@ -140,7 +140,7 @@ function fuzzyLookupParochial(db, name, city) {
     }
     // Also try with city
     if (city) {
-      const normCity = normalizeChurchName(city);
+      const normCity = normalizeParochialName(city);
       const key2 = `${withEpiscopal}|${normCity}`;
       const nid2 = idx.byNormCity.get(key2);
       if (nid2) return lookupParochial(db, nid2);
@@ -155,7 +155,7 @@ function fuzzyLookupParochial(db, name, city) {
     ];
     for (const variant of variants) {
       if (city) {
-        const normCity = normalizeChurchName(city);
+        const normCity = normalizeParochialName(city);
         const nid = idx.byNormCity.get(`${variant}|${normCity}`);
         if (nid) return lookupParochial(db, nid);
       }
@@ -170,7 +170,7 @@ function fuzzyLookupParochial(db, name, city) {
   if (normName.includes('church') && !normName.includes('episcopal')) {
     const asParish = normName.replace(/\bchurch\b/, 'episcopal parish');
     if (city) {
-      const normCity = normalizeChurchName(city);
+      const normCity = normalizeParochialName(city);
       const nid = idx.byNormCity.get(`${asParish}|${normCity}`);
       if (nid) return lookupParochial(db, nid);
     }
@@ -183,7 +183,7 @@ function fuzzyLookupParochial(db, name, city) {
   // Strategy 7: try dropping/adding trailing 's' on saint names
   // e.g. "St Peters" -> "St Peter" or "St John" -> "St Johns"
   if (city) {
-    const normCity = normalizeChurchName(city);
+    const normCity = normalizeParochialName(city);
     const saintVariant = /\bst (\w+?)s\b/.test(normName)
       ? normName.replace(/\bst (\w+?)s\b/, 'st $1')   // drop trailing s
       : normName.replace(/\bst (\w+)\b/, 'st $1s');    // add trailing s
@@ -207,7 +207,7 @@ function fuzzyLookupParochial(db, name, city) {
   // Strategy 8: drop "episcopal" from the name and retry
   // e.g. "St Michaels Episcopal Church" -> "St Michaels Church"
   if (normName.includes('episcopal') && city) {
-    const normCity = normalizeChurchName(city);
+    const normCity = normalizeParochialName(city);
     const stripped = normName.replace(/\s*episcopal\s*/, ' ').replace(/\s+/g, ' ').trim();
     const nid = idx.byNormCity.get(`${stripped}|${normCity}`);
     if (nid) return lookupParochial(db, nid);
@@ -220,7 +220,7 @@ function fuzzyLookupParochial(db, name, city) {
   // Strategy 9: substring match within the same city (handles
   // "Trinity Parish" matching "Trinity Parish & Old Swedes Church")
   if (city && normName.length >= 8) {
-    const normCity = normalizeChurchName(city);
+    const normCity = normalizeParochialName(city);
     for (const [key, nid] of idx.byNormCity) {
       const [candidateName, candidateCity] = key.split('|');
       if (candidateCity === normCity && candidateName.includes(normName)) {
@@ -309,5 +309,5 @@ module.exports = attachParochial;
 
 // Also export internals for testing
 module.exports.lookupParochial = lookupParochial;
-module.exports.normalizeChurchName = normalizeChurchName;
+module.exports.normalizeParochialName = normalizeParochialName;
 module.exports.fuzzyLookupParochial = fuzzyLookupParochial;

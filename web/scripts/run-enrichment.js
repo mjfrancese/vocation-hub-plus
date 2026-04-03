@@ -19,6 +19,7 @@ const fs = require('fs');
 const path = require('path');
 const { getDb, closeDb } = require('./db');
 const { normalizePositionType } = require('./position-type-map');
+const { parseMMDDYYYY } = require('./lib/dates');
 
 // ---------------------------------------------------------------------------
 // Stage registry (in execution order)
@@ -39,16 +40,6 @@ const STAGES = [
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-
-/**
- * Parse a MM/DD/YYYY date string.
- */
-function parseMMDDYYYY(str) {
-  if (!str) return null;
-  const m = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-  if (!m) return null;
-  return new Date(parseInt(m[3]), parseInt(m[1]) - 1, parseInt(m[2]));
-}
 
 /**
  * Get a field value from a profile's fields array by label.

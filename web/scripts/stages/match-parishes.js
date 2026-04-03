@@ -18,6 +18,7 @@
 
 const {
   normalizeChurchName,
+  normalizeDiocese,
   normalizePhone,
   normalizeDomain,
 } = require('../lib/normalization');
@@ -46,21 +47,8 @@ function extractCity(name) {
 
 const extractCityHint = extractCity;
 
-/**
- * Normalize diocese name for comparison.
- * Position data uses short form ("North Carolina"), DB uses long form
- * ("Diocese Of North Carolina" or "Episcopal Diocese Of North Carolina").
- * Strip common prefixes so both resolve to the same core name.
- */
-function normalizeDioceseName(name) {
-  if (!name) return '';
-  return name.toLowerCase()
-    .replace(/^(the\s+)?episcopal\s+(church\s+in\s+|diocese\s+of\s+(the\s+)?)/i, '')
-    .replace(/^(the\s+)?diocese\s+of\s+(the\s+)?/i, '')
-    .replace(/^trustees and council of the episcopal diocese of\s*/i, '')
-    .replace(/\s+(inc|corp|llc|foundation)\.?$/i, '')
-    .trim();
-}
+// normalizeDioceseName is an alias for the shared normalizeDiocese from lib.
+const normalizeDioceseName = normalizeDiocese;
 
 function isGenericDomain(domain) {
   if (!domain) return true;

@@ -27,13 +27,16 @@ function normalizeChurchName(name) {
 }
 
 function normalizeDiocese(diocese) {
+  if (!diocese) return '';
   return diocese
     .toLowerCase()
     .replace(/^the\s+/i, '')
+    .replace(/^trustees and council of the episcopal diocese of\s*/i, '')
     .replace(/^episcopal\s+church\s+(in\s+)?/i, '')
-    .replace(/^episcopal\s+diocese\s+(of\s+)?/i, '')
-    .replace(/^diocese\s+of\s+/i, '')
+    .replace(/^episcopal\s+diocese\s+(of\s+(the\s+)?)?/i, '')
+    .replace(/^diocese\s+of\s+(the\s+)?/i, '')
     .replace(/^diocesis\s+de\s+/i, '')
+    .replace(/\s+(inc|corp|llc|foundation)\.?$/i, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
