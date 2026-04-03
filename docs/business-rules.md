@@ -346,3 +346,5 @@ The SQLite database (`vocationhub.db`) is stored as a GitHub release artifact un
 | Phone match: minimum digits | 10 | match-parishes.js |
 | Bogus date sentinel | 01/01/1900 | run-enrichment.js |
 | Senior Rector ASA threshold | >= 400 | compute-compensation.js |
+| Scrape: min positions (quality gate) | >= 30 | quality-check.ts |
+| Scrape: max expired % (quality gate) | <= 50% | quality-check.ts |

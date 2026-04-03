@@ -18,7 +18,7 @@ interface QualityInput {
 }
 
 const THRESHOLDS = {
-  minPositions: 50,
+  minPositions: 30,
   maxExpiredPct: 50,
 };
 
