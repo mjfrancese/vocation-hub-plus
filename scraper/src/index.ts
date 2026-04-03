@@ -148,6 +148,22 @@ async function main(): Promise<void> {
       }
 
       const durationMs = Date.now() - startTime;
+
+      const qualityReport = checkQuality({
+        totalPositions: positions.length,
+        newCount: diff.newCount,
+        expiredCount: diff.expiredCount,
+        phase2Success,
+        phase3Success,
+      });
+
+      if (!qualityReport.pass) {
+        logger.error('Data quality check failed -- skipping exports to prevent bad data', {
+          checks: qualityReport.checks.filter(c => !c.pass),
+        });
+        process.exit(1);
+      }
+
       logScrape(positions.length, diff.newCount, diff.expiredCount, durationMs, 'success');
       exportJson();
 
@@ -188,20 +204,6 @@ async function main(): Promise<void> {
         }
       } else {
         logger.info('vocationhub.db not found, skipping DB export', { path: mainDbPath });
-      }
-
-      const qualityReport = checkQuality({
-        totalPositions: positions.length,
-        newCount: diff.newCount,
-        expiredCount: diff.expiredCount,
-        phase2Success,
-        phase3Success,
-      });
-
-      if (!qualityReport.pass) {
-        logger.warn('Data quality check failed', {
-          checks: qualityReport.checks.filter(c => !c.pass),
-        });
       }
 
       logger.info('Scrape completed successfully', {
