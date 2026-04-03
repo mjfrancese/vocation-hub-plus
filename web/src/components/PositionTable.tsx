@@ -23,6 +23,7 @@ interface PositionTableProps {
   meData?: PersonalData | null;
   initialSortField?: SortField;
   initialSortDir?: SortDirection;
+  onSort?: (field: SortField, direction: SortDirection) => void;
   initialExpandedId?: string | null;
   onExpandedChange?: (id: string | null) => void;
   preferences?: SearchPreferences;
@@ -33,6 +34,7 @@ const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'diocese', label: 'Location' },
   { key: 'date', label: 'Date Posted' },
   { key: 'quality_score', label: 'Status' },
+  { key: 'asa', label: 'ASA' },
 ];
 
 /** Get latest ASA value and year range for hover context */
@@ -64,12 +66,13 @@ export default function PositionTable({
   meData: meDataProp,
   initialSortField,
   initialSortDir,
+  onSort,
   initialExpandedId,
   onExpandedChange,
   preferences,
 }: PositionTableProps) {
-  const [sortField, setSortField] = useState<SortField>(initialSortField ?? 'date');
-  const [sortDir, setSortDir] = useState<SortDirection>(initialSortDir ?? 'desc');
+  const sortField = initialSortField ?? 'date';
+  const sortDir = initialSortDir ?? 'desc';
   const [expandedId, setExpandedId] = useState<string | null>(initialExpandedId ?? null);
   const [comparedIds, setComparedIds] = useState<Set<string>>(new Set());
   const [showComparison, setShowComparison] = useState(false);
@@ -126,6 +129,11 @@ export default function PositionTable({
       const bNum = b.quality_score ?? 0;
       return sortDir === 'asc' ? aNum - bNum : bNum - aNum;
     }
+    if (sortField === 'asa') {
+      const aAsa = getLatestAsa(a)?.value ?? 0;
+      const bAsa = getLatestAsa(b)?.value ?? 0;
+      return sortDir === 'asc' ? aAsa - bAsa : bAsa - aAsa;
+    }
     // Date-based sorting
     if (sortField === 'date' || sortField === 'updated' || sortField === 'firstseen') {
       const dateField = sortField === 'date' ? 'receiving_names_from'
@@ -164,10 +172,10 @@ export default function PositionTable({
 
   function handleSort(field: SortField) {
     if (sortField === field) {
-      setSortDir(sortDir === 'asc' ? 'desc' : 'asc');
+      const newDir = sortDir === 'asc' ? 'desc' : 'asc';
+      onSort?.(field, newDir);
     } else {
-      setSortField(field);
-      setSortDir('asc');
+      onSort?.(field, 'asc');
     }
   }
 
@@ -204,7 +212,7 @@ export default function PositionTable({
           <span>Sort by</span>
           <select
             value={sortField}
-            onChange={(e) => { setSortField(e.target.value as SortField); setSortDir('asc'); }}
+            onChange={(e) => onSort?.(e.target.value as SortField, 'asc')}
             aria-label="Sort by"
             className="border border-gray-300 rounded px-2 py-1 text-sm bg-white"
           >
@@ -214,9 +222,10 @@ export default function PositionTable({
             <option value="updated">Last Updated</option>
             <option value="firstseen">First Seen</option>
             <option value="quality_score">Quality Score</option>
+            <option value="asa">ASA</option>
           </select>
           <button
-            onClick={() => setSortDir(sortDir === 'asc' ? 'desc' : 'asc')}
+            onClick={() => onSort?.(sortField, sortDir === 'asc' ? 'desc' : 'asc')}
             className="text-primary-600 font-medium"
           >
             {sortDir === 'asc' ? '\u2191' : '\u2193'}
@@ -307,11 +316,11 @@ export default function PositionTable({
           <colgroup>
             <col className="w-10" />
             {showMatch && <col className="w-20" />}
-            <col style={{ width: '35%' }} />
-            <col style={{ width: '25%' }} />
+            <col style={{ width: '34%' }} />
+            <col style={{ width: '24%' }} />
             <col style={{ width: '20%' }} />
-            <col style={{ width: '15%' }} />
-            <col className="w-12" />
+            <col style={{ width: '14%' }} />
+            <col style={{ width: '8%' }} />
           </colgroup>
           <thead className="bg-gray-50">
             <tr>
@@ -323,11 +332,11 @@ export default function PositionTable({
                 <th
                   key={col.key}
                   onClick={() => handleSort(col.key)}
-                  className="px-3 py-3 text-left text-xs font-medium text-gray-500
+                  className={`px-3 py-3 text-xs font-medium text-gray-500
                              uppercase tracking-wider cursor-pointer hover:bg-gray-100
-                             select-none"
+                             select-none ${col.key === 'asa' ? 'text-center' : 'text-left'}`}
                 >
-                  <span className="flex items-center gap-1">
+                  <span className={`flex items-center gap-1 ${col.key === 'asa' ? 'justify-center' : ''}`}>
                     {col.label}
                     {sortField === col.key && (
                       <span className="text-primary-600">
@@ -337,9 +346,6 @@ export default function PositionTable({
                   </span>
                 </th>
               ))}
-              <th className="px-2 py-3 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">
-                ASA
-              </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">

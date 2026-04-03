@@ -44,17 +44,17 @@ const SORT_DEFAULT_DIR: SortDirection = 'desc';
 
 function splitParam(val: string | null): string[] {
   if (!val) return [];
-  return val.split(',').filter(Boolean);
+  return val.split('|').filter(Boolean);
 }
 
 function joinParam(arr: string[]): string | null {
-  return arr.length > 0 ? arr.join(',') : null;
+  return arr.length > 0 ? arr.join('|') : null;
 }
 
 function parseSortParam(val: string | null): { field: SortField; direction: SortDirection } {
   if (!val) return { field: SORT_DEFAULT_FIELD, direction: SORT_DEFAULT_DIR };
   const [field, dir] = val.split(':');
-  const validFields: SortField[] = ['name', 'diocese', 'date', 'updated', 'firstseen', 'quality_score'];
+  const validFields: SortField[] = ['name', 'diocese', 'date', 'updated', 'firstseen', 'quality_score', 'asa'];
   const f = validFields.includes(field as SortField) ? (field as SortField) : SORT_DEFAULT_FIELD;
   const d: SortDirection = dir === 'asc' ? 'asc' : 'desc';
   return { field: f, direction: d };

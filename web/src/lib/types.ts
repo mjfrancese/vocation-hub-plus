@@ -276,7 +276,8 @@ export type SortField =
   | 'date'        // receiving_names_from (renamed from 'receiving_names_from')
   | 'updated'     // updated_on_hub
   | 'firstseen'   // first_seen
-  | 'quality_score';
+  | 'quality_score'
+  | 'asa';
 
 export type SortDirection = 'asc' | 'desc';
 

@@ -13,10 +13,6 @@ import {
   COMPENSATION_RANGES,
 } from '@/lib/profile-helpers';
 import {
-  POSITION_TYPE_DISPLAY_GROUPS,
-  buildCanonicalToGroupMap,
-} from '@/lib/position-type-helpers';
-import {
   getUnifiedStatus,
   UNIFIED_STATUSES,
   UNIFIED_STATUS_CHIP_COLORS,
@@ -34,6 +30,26 @@ import LastUpdated from '@/components/LastUpdated';
 import ChangeLog from '@/components/ChangeLog';
 
 const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
+
+const COMP_BUCKETS = [
+  'Under $50,000',
+  '$50,000 - $75,000',
+  '$75,000 - $100,000',
+  '$100,000 - $125,000',
+  '$125,000 - $150,000',
+  '$150,000 - $200,000',
+  'Over $200,000',
+];
+
+function getCompBucket(comp: number): string {
+  if (comp < 50000) return 'Under $50,000';
+  if (comp < 75000) return '$50,000 - $75,000';
+  if (comp < 100000) return '$75,000 - $100,000';
+  if (comp < 125000) return '$100,000 - $125,000';
+  if (comp < 150000) return '$125,000 - $150,000';
+  if (comp < 200000) return '$150,000 - $200,000';
+  return 'Over $200,000';
+}
 
 export default function PositionsPage() {
   return (
@@ -59,16 +75,43 @@ function PositionsPageContent() {
   // Build filter options from data
   const states = useMemo(() => getUniqueValues(allPositions, 'state'), [allPositions]);
   const dioceses = useMemo(() => getUniqueValues(allPositions, 'diocese'), [allPositions]);
-  const positionTypeOptions = useMemo(() => Object.keys(POSITION_TYPE_DISPLAY_GROUPS), []);
-  const canonicalToGroupMap = useMemo(() => buildCanonicalToGroupMap(), []);
+  const positionTypeOptions = useMemo(() => {
+    const types = new Set<string>();
+    for (const p of allPositions) {
+      for (const t of p.position_types || []) types.add(t);
+    }
+    return Array.from(types).sort();
+  }, [allPositions]);
+  const compensationOptions = useMemo(() => {
+    const found = new Set<string>();
+    for (const p of allPositions) {
+      // First try deep_scrape_fields (available in production)
+      const dsRange = getCompensationRange(p);
+      if (dsRange && COMPENSATION_RANGES.includes(dsRange)) {
+        found.add(dsRange);
+        continue;
+      }
+      // Fallback to estimated_total_comp buckets
+      const comp = p.estimated_total_comp;
+      if (comp && comp > 0) found.add(getCompBucket(comp));
+    }
+    // Return whichever set of options we found, in the correct order
+    const dsMatches = COMPENSATION_RANGES.filter(r => found.has(r));
+    const bucketMatches = COMP_BUCKETS.filter(b => found.has(b));
+    return dsMatches.length >= bucketMatches.length ? dsMatches : bucketMatches;
+  }, [allPositions]);
   const regions = useMemo(() => getUniqueProfileValues(allPositions, 'Geographic Location'), [allPositions]);
   const settings = useMemo(() => getUniqueProfileValues(allPositions, 'Ministry Setting'), [allPositions]);
   const housingTypes = useMemo(() => getUniqueHousingValues(allPositions), [allPositions]);
   const healthcareOptions = useMemo(() => getUniqueProfileValues(allPositions, 'Healthcare Options'), [allPositions]);
-  // Status counts for quick-filter chips using unified model
+  // Status counts: only count positions that would actually display
+  // (pass quality gate for extended, exclude extended_hidden)
   const statusCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const p of allPositions) {
+      if (p.visibility === 'extended_hidden') continue;
+      const isExt = p.visibility === 'extended';
+      if (isExt && !isQualifyingUnlisted(p, true)) continue;
       const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
       counts[unified] = (counts[unified] || 0) + 1;
     }
@@ -137,14 +180,19 @@ function PositionsPageContent() {
     if (filters.types.length > 0) {
       result = result.filter(p => {
         const types = p.position_types || [];
-        return types.some(t => {
-          const group = canonicalToGroupMap[t] || 'Other';
-          return filters.types.includes(group);
-        });
+        return types.some(t => filters.types.includes(t));
       });
     }
     if (filters.compensationRanges.length > 0) {
-      result = result.filter(p => filters.compensationRanges.includes(getCompensationRange(p)));
+      result = result.filter(p => {
+        // Try deep_scrape_fields first
+        const dsRange = getCompensationRange(p);
+        if (dsRange && filters.compensationRanges.includes(dsRange)) return true;
+        // Fallback to estimated_total_comp
+        const comp = p.estimated_total_comp;
+        if (comp && comp > 0) return filters.compensationRanges.includes(getCompBucket(comp));
+        return false;
+      });
     }
     if (filters.regions.length > 0) {
       result = result.filter(p => {
@@ -172,13 +220,13 @@ function PositionsPageContent() {
     }
 
     return result;
-  }, [allPositions, filters, effectiveStatuses, searchIndex, canonicalToGroupMap]);
+  }, [allPositions, filters, effectiveStatuses, searchIndex]);
 
   const filterConfigs: FilterConfig[] = [
     { key: 'state', label: 'State', options: states, selected: filters.states, onChange: filterActions.setStates, width: 'w-36' },
     { key: 'diocese', label: 'Diocese', options: dioceses, selected: filters.dioceses, onChange: filterActions.setDioceses, width: 'w-48' },
     { key: 'type', label: 'Position Type', options: positionTypeOptions, selected: filters.types, onChange: filterActions.setTypes, width: 'w-52' },
-    { key: 'comp', label: 'Compensation', options: COMPENSATION_RANGES, selected: filters.compensationRanges, onChange: filterActions.setCompensationRanges, width: 'w-52' },
+    { key: 'comp', label: 'Compensation', options: compensationOptions, selected: filters.compensationRanges, onChange: filterActions.setCompensationRanges, width: 'w-52' },
     { key: 'region', label: 'Region', options: regions, selected: filters.regions, onChange: filterActions.setRegions, width: 'w-40' },
     { key: 'setting', label: 'Setting', options: settings, selected: filters.settings, onChange: filterActions.setSettings, width: 'w-40' },
     { key: 'housing', label: 'Housing', options: housingTypes, selected: filters.housingTypes, onChange: filterActions.setHousingTypes, width: 'w-48' },
@@ -330,6 +378,7 @@ function PositionsPageContent() {
             positions={displayedPositions}
             initialSortField={filters.sort.field}
             initialSortDir={filters.sort.direction}
+            onSort={filterActions.setSort}
             initialExpandedId={filters.expandedId}
             onExpandedChange={filterActions.setExpandedId}
             preferences={prefs}
