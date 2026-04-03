@@ -1,6 +1,6 @@
 # Vocation Hub+
 
-Episcopal Church position search tool with enriched data. Deployed to GitHub Pages at https://michaelfrancese.com/vocation-hub-plus/.
+Episcopal Church position search tool with enriched data. Deployed to GitHub Pages at https://vocationhub.plus/.
 
 ## Essential Reading
 

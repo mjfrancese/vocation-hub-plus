@@ -8,11 +8,7 @@ interface LastUpdatedProps {
 
 export default function LastUpdated({ timestamp }: LastUpdatedProps) {
   if (!timestamp) {
-    return (
-      <span className="text-sm text-gray-500">
-        No data yet (run the scraper to populate)
-      </span>
-    );
+    return null;
   }
 
   return (

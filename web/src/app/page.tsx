@@ -280,7 +280,12 @@ function PositionsPageContent() {
           color="bg-emerald-50 text-emerald-700 border-emerald-200"
           activeColor="bg-emerald-600 text-white border-emerald-600"
         />
-        {UNIFIED_STATUSES.map((status) => {
+        {UNIFIED_STATUSES.filter((status) => {
+          // Hide chips with 0 positions (e.g., Unlisted when none qualify)
+          const count = statusCounts[status] || 0;
+          if (count === 0 && !activeChips.includes(status)) return false;
+          return true;
+        }).map((status) => {
           const chipColors = UNIFIED_STATUS_CHIP_COLORS[status];
           const isActive = activeChips.includes(status);
           return (
