@@ -89,7 +89,7 @@ describe('normalizeChurchName', () => {
   });
 
   it('strips stop word: in', () => {
-    expect(normalizeChurchName('Grace in the Hills')).toBe('grace hill');
+    expect(normalizeChurchName('Grace in the Hills')).toBe('grace hills');
   });
 
   it('strips stop word: at', () => {
@@ -125,28 +125,28 @@ describe('normalizeChurchName', () => {
   });
 
   it('strips straight apostrophes', () => {
-    expect(normalizeChurchName("St. Paul's Church")).toBe('st paul');
+    expect(normalizeChurchName("St. Paul's Church")).toBe('st pauls');
   });
 
   it('strips curly right apostrophe', () => {
-    expect(normalizeChurchName('St. Paul\u2019s Church')).toBe('st paul');
+    expect(normalizeChurchName('St. Paul\u2019s Church')).toBe('st pauls');
   });
 
   it('strips curly left apostrophe', () => {
-    expect(normalizeChurchName('St. Paul\u2018s Church')).toBe('st paul');
+    expect(normalizeChurchName('St. Paul\u2018s Church')).toBe('st pauls');
   });
 
   it('strips backtick', () => {
-    expect(normalizeChurchName('St. Paul`s Church')).toBe('st paul');
+    expect(normalizeChurchName('St. Paul`s Church')).toBe('st pauls');
   });
 
   it('strips non-alphanumeric punctuation', () => {
     expect(normalizeChurchName('Grace & Glory')).toBe('grace glory');
   });
 
-  it('applies basic plural reduction for 4+ char words ending in s', () => {
-    // "hills" -> "hill", "churches" -> "churche" (no, "church" is stripped)
-    expect(normalizeChurchName('Grace Hills')).toBe('grace hill');
+  it('does not strip trailing s from words (no plural reduction)', () => {
+    // plural stripping was removed to avoid corrupting proper names like James/Thomas
+    expect(normalizeChurchName('Grace Hills')).toBe('grace hills');
   });
 
   it('does not reduce short words (3 chars or fewer)', () => {
@@ -156,7 +156,7 @@ describe('normalizeChurchName', () => {
   });
 
   it('collapses multiple spaces', () => {
-    expect(normalizeChurchName('Grace   Hills')).toBe('grace hill');
+    expect(normalizeChurchName('Grace   Hills')).toBe('grace hills');
   });
 
   it('trims leading and trailing whitespace', () => {
@@ -164,7 +164,7 @@ describe('normalizeChurchName', () => {
   });
 
   it('handles a realistic full church name', () => {
-    expect(normalizeChurchName("St. Paul's Episcopal Church")).toBe('st paul');
+    expect(normalizeChurchName("St. Paul's Episcopal Church")).toBe('st pauls');
   });
 
   it('handles another realistic name with bilingual suffix', () => {
