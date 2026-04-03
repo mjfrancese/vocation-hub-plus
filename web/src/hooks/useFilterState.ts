@@ -3,7 +3,6 @@
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { useCallback, useMemo } from 'react';
 import type { SortField, SortDirection } from '@/lib/types';
-import { DEFAULT_ACTIVE_STATUSES } from '@/lib/filter-defaults';
 
 export interface FilterState {
   statuses: string[];

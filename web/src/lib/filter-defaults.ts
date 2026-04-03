@@ -5,7 +5,7 @@ import { parseDate } from './date-utils';
 /**
  * Default statuses shown on page load (chips pre-selected).
  */
-export const DEFAULT_ACTIVE_STATUSES: UnifiedStatus[] = ['Active', 'Developing', 'Interim'];
+export const DEFAULT_ACTIVE_STATUSES: UnifiedStatus[] = ['Active', 'Interim'];
 
 /**
  * Check if a position should appear in the default view.

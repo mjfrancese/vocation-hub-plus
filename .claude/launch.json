@@ -7,6 +7,12 @@
       "runtimeArgs": ["next", "dev"],
       "port": 3000,
       "cwd": "web"
+    },
+    {
+      "name": "web-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "web/out", "-l", "3456"],
+      "port": 3456
     }
   ]
 }

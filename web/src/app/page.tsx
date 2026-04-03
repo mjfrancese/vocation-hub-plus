@@ -20,10 +20,11 @@ import {
   getUnifiedStatus,
   UNIFIED_STATUSES,
   UNIFIED_STATUS_CHIP_COLORS,
+  isQualifyingUnlisted,
 } from '@/lib/status-helpers';
 import { useFilterState } from '@/hooks/useFilterState';
 import { usePreferences } from '@/hooks/usePreferences';
-import { passesDefaultFilter, isPostedWithin } from '@/lib/filter-defaults';
+import { DEFAULT_ACTIVE_STATUSES, isPostedWithin } from '@/lib/filter-defaults';
 import SearchBar from '@/components/SearchBar';
 import Filters, { FilterConfig } from '@/components/Filters';
 import PreferencesPanel from '@/components/PreferencesPanel';
@@ -64,8 +65,6 @@ function PositionsPageContent() {
   const settings = useMemo(() => getUniqueProfileValues(allPositions, 'Ministry Setting'), [allPositions]);
   const housingTypes = useMemo(() => getUniqueHousingValues(allPositions), [allPositions]);
   const healthcareOptions = useMemo(() => getUniqueProfileValues(allPositions, 'Healthcare Options'), [allPositions]);
-  const statusOptions = useMemo(() => [...UNIFIED_STATUSES], []);
-
   // Status counts for quick-filter chips using unified model
   const statusCounts = useMemo(() => {
     const counts: Record<string, number> = {};
@@ -78,16 +77,17 @@ function PositionsPageContent() {
 
   const newCount = useMemo(() => allPositions.filter(p => p.is_new).length, [allPositions]);
 
-  // Active status chips: when no URL param, visually highlight defaults
-  const activeChips = filters.statuses.length === 0
-    ? ['Active', 'Developing', 'Interim']
+  // Track whether user has interacted with status chips
+  const [statusUserSet, setStatusUserSet] = useState(false);
+
+  // Effective statuses: defaults on first load, user choice after interaction
+  const effectiveStatuses = (!statusUserSet && filters.statuses.length === 0)
+    ? DEFAULT_ACTIVE_STATUSES
     : filters.statuses;
 
   function toggleStatusChip(status: string) {
-    const current = filters.statuses.length === 0
-      ? ['Active', 'Developing', 'Interim']
-      : [...filters.statuses];
-
+    setStatusUserSet(true);
+    const current = [...effectiveStatuses];
     if (current.includes(status)) {
       filterActions.setStatuses(current.filter(s => s !== status));
     } else {
@@ -98,13 +98,20 @@ function PositionsPageContent() {
   const filtered = useMemo(() => {
     let result = allPositions;
 
-    // Status filter: empty = smart defaults, specified = exact match
-    if (filters.statuses.length === 0) {
-      result = result.filter(passesDefaultFilter);
+    // Status filter
+    const isExtended = (p: typeof result[0]) =>
+      p.visibility === 'extended' || p.visibility === 'extended_hidden';
+
+    if (effectiveStatuses.length === 0) {
+      // All chips off: show all statuses, but quality-gate extended positions
+      result = result.filter(p => !isExtended(p) || isQualifyingUnlisted(p, true));
     } else {
+      // Filter to selected statuses, quality-gate extended positions
       result = result.filter(p => {
         const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
-        return filters.statuses.includes(unified);
+        if (!effectiveStatuses.includes(unified)) return false;
+        if (isExtended(p)) return isQualifyingUnlisted(p, true);
+        return true;
       });
     }
 
@@ -165,7 +172,7 @@ function PositionsPageContent() {
     }
 
     return result;
-  }, [allPositions, filters, searchIndex, canonicalToGroupMap]);
+  }, [allPositions, filters, effectiveStatuses, searchIndex, canonicalToGroupMap]);
 
   const filterConfigs: FilterConfig[] = [
     { key: 'state', label: 'State', options: states, selected: filters.states, onChange: filterActions.setStates, width: 'w-36' },
@@ -176,7 +183,6 @@ function PositionsPageContent() {
     { key: 'setting', label: 'Setting', options: settings, selected: filters.settings, onChange: filterActions.setSettings, width: 'w-40' },
     { key: 'housing', label: 'Housing', options: housingTypes, selected: filters.housingTypes, onChange: filterActions.setHousingTypes, width: 'w-48' },
     { key: 'healthcare', label: 'Healthcare', options: healthcareOptions, selected: filters.healthcareOptions, onChange: filterActions.setHealthcareOptions, width: 'w-40' },
-    { key: 'status', label: 'Status', options: statusOptions, selected: filters.statuses, onChange: filterActions.setStatuses, width: 'w-44' },
   ];
 
   const hasActiveFilters = filterConfigs.some(f => f.selected.length > 0);
@@ -239,14 +245,18 @@ function PositionsPageContent() {
         </summary>
         <div className="mt-2 space-y-2 pl-5 border-l-2 border-gray-200 text-gray-600">
           <p>
-            <strong>Active Listings</strong> appear in the Episcopal Vocation Hub&#39;s current search results
-            and are confirmed to be accepting applications.
+            Positions are categorized by their status in the Episcopal Vocation Hub:
           </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Active</strong> - Currently receiving names and accepting applications.</li>
+            <li><strong>Developing</strong> - Building a profile or beginning the search process.</li>
+            <li><strong>Interim</strong> - Seeking or has placed an interim minister.</li>
+            <li><strong>Closed</strong> - Search is complete or no longer receiving names.</li>
+          </ul>
           <p>
-            <strong>Unlisted Positions</strong> are positions found in the Vocation Hub&#39;s profile directory
-            that are not currently in active search results. They may be in development, recently closed, or
-            awaiting updates. We include them when they have enough information to be useful. Each unlisted
-            position shows a quality score (0-100) based on how complete and current the listing data is.
+            Positions with a quality score (0-100) were found in the Vocation Hub&#39;s profile directory
+            but are not in the current public search results. The score reflects how complete and current
+            the listing data is.
           </p>
           <p>
             All listings are enriched with data from the Episcopal Asset Map (church directory) and General
@@ -280,14 +290,9 @@ function PositionsPageContent() {
           color="bg-emerald-50 text-emerald-700 border-emerald-200"
           activeColor="bg-emerald-600 text-white border-emerald-600"
         />
-        {UNIFIED_STATUSES.filter((status) => {
-          // Hide chips with 0 positions (e.g., Unlisted when none qualify)
-          const count = statusCounts[status] || 0;
-          if (count === 0 && !activeChips.includes(status)) return false;
-          return true;
-        }).map((status) => {
+        {UNIFIED_STATUSES.filter(s => s !== 'Unlisted').map((status) => {
           const chipColors = UNIFIED_STATUS_CHIP_COLORS[status];
-          const isActive = activeChips.includes(status);
+          const isActive = effectiveStatuses.includes(status);
           return (
             <QuickChip
               key={status}
