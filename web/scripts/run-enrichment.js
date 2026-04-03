@@ -115,8 +115,8 @@ function flattenRawProfiles(rawProfiles) {
       website: getField(f, 'Parish website', 'Congregation website', 'Website'),
       facebook: getField(f, 'Facebook page', 'Facebook'),
       receiving_names_from: getDateField(f, 'Receiving names from'),
-      receiving_names_to: getField(f, 'To') || '',
-      open_ended: (getField(f, 'To') || '').toLowerCase() === 'open ended',
+      receiving_names_to: getField(f, 'Receiving names to', 'To') || '',
+      open_ended: (getField(f, 'Receiving names to', 'To') || '').toLowerCase() === 'open ended',
       all_fields: f,
     };
   });
