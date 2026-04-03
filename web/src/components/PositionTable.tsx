@@ -205,6 +205,7 @@ export default function PositionTable({
           <select
             value={sortField}
             onChange={(e) => { setSortField(e.target.value as SortField); setSortDir('asc'); }}
+            aria-label="Sort by"
             className="border border-gray-300 rounded px-2 py-1 text-sm bg-white"
           >
             <option value="name">Church Name</option>
@@ -251,7 +252,7 @@ export default function PositionTable({
                     </p>
                   </div>
                   <div className="flex items-center gap-1.5 flex-shrink-0">
-                    {asa && <span className="text-xs text-gray-400" title={asa.range}>ASA {asa.value}</span>}
+                    {asa && <span className="text-xs text-gray-500" title={asa.range}>ASA {asa.value}</span>}
                     <StatusPopover pos={pos}>
                       <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
                       {(pos.visibility === 'extended' || pos.visibility === 'extended_hidden') && (
@@ -359,6 +360,7 @@ export default function PositionTable({
                         disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
                         onChange={() => toggleCompare(pos.id)}
                         className="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 disabled:opacity-40 disabled:cursor-not-allowed"
+                        aria-label={`Compare ${church.text}`}
                         title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Select to compare'}
                       />
                     </td>
@@ -379,12 +381,12 @@ export default function PositionTable({
                         {church.text}
                         {church.suffix && <span className="ml-1.5 text-xs font-normal text-primary-600">{church.suffix}</span>}
                       </div>
-                      <div className="text-xs text-gray-400 truncate">{pos.position_type || '\u00A0'}</div>
+                      <div className="text-xs text-gray-500 truncate">{pos.position_type || '\u00A0'}</div>
                     </td>
                     {/* Location */}
                     <td className="px-3 py-2 text-sm text-gray-600">
                       <div className="truncate">{locationPrimary || '\u00A0'}</div>
-                      <div className="text-xs text-gray-400 truncate">{pos.diocese || '\u00A0'}</div>
+                      <div className="text-xs text-gray-500 truncate">{pos.diocese || '\u00A0'}</div>
                     </td>
                     {/* Date (adaptive based on sortField) */}
                     <td className="px-3 py-2 text-sm text-gray-600">

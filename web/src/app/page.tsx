@@ -213,7 +213,7 @@ function PositionsPageContent() {
             <button
               onClick={() => filterActions.setView('table')}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                filters.view === 'table' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                filters.view === 'table' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-700'
               }`}
             >
               Table
@@ -221,7 +221,7 @@ function PositionsPageContent() {
             <button
               onClick={() => filterActions.setView('map')}
               className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                filters.view === 'map' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-500 hover:text-gray-700'
+                filters.view === 'map' ? 'bg-white text-gray-900 shadow-sm' : 'text-gray-600 hover:text-gray-700'
               }`}
             >
               Map
@@ -233,8 +233,8 @@ function PositionsPageContent() {
 
       {/* About this data */}
       <details className="text-sm text-gray-600">
-        <summary className="cursor-pointer text-gray-500 hover:text-gray-700 inline-flex items-center gap-1">
-          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-xs font-medium">i</span>
+        <summary className="cursor-pointer text-gray-500 hover:text-gray-700 inline-flex items-center gap-1" aria-label="About this data">
+          <span className="inline-flex items-center justify-center w-4 h-4 rounded-full border border-gray-400 text-xs font-medium" aria-hidden="true">i</span>
           About this data
         </summary>
         <div className="mt-2 space-y-2 pl-5 border-l-2 border-gray-200 text-gray-600">

@@ -30,7 +30,7 @@ export default function AboutPage() {
             href="https://vocationhub.episcopalchurch.org/PositionSearch"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-600 hover:underline"
+            className="text-primary-600 underline hover:no-underline"
           >
             Vocation Hub
           </a>{' '}
@@ -143,7 +143,7 @@ export default function AboutPage() {
             href="https://vocationhub.episcopalchurch.org/PositionSearch"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary-600 hover:underline"
+            className="text-primary-600 underline hover:no-underline"
           >
             Episcopal Church Vocation Hub
           </a>
@@ -167,7 +167,7 @@ function DataSourceCard({ name, url, description }: { name: string; url: string;
   return (
     <div className="border border-gray-200 rounded-lg p-4">
       <a href={url} target="_blank" rel="noopener noreferrer"
-        className="text-primary-600 font-medium hover:underline">
+        className="text-primary-600 font-medium underline hover:no-underline">
         {name}
       </a>
       <p className="text-sm text-gray-600 mt-1">{description}</p>

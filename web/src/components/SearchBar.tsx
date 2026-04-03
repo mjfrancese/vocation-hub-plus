@@ -29,6 +29,7 @@ export default function SearchBar({ value, onChange, resultCount }: SearchBarPro
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Search positions by name, diocese, state, or type..."
+        aria-label="Search positions"
         className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg
                    text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2
                    focus:ring-primary-500 focus:border-primary-500 text-base"

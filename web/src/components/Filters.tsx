@@ -67,6 +67,7 @@ export default function Filters({
             <select
               value={postedWithin || ''}
               onChange={(e) => onPostedWithinChange(e.target.value || null)}
+              aria-label="Posted within"
               className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-primary-500"
             >
               <option value="">All time</option>

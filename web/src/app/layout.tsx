@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen flex flex-col">
         <nav className="bg-white border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-14">
@@ -36,15 +36,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </div>
         </nav>
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">{children}</main>
-        <footer className="border-t border-gray-200 mt-12">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-1">{children}</main>
+        <footer className="border-t border-gray-200 mt-auto">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500">
             Vocation Hub+ is an unofficial tool. Data sourced from the{' '}
             <a
               href="https://vocationhub.episcopalchurch.org/PositionSearch"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary-600 hover:underline"
+              className="text-primary-600 underline hover:no-underline"
             >
               Episcopal Church Vocation Hub
             </a>
@@ -78,8 +78,8 @@ function CrossIcon({ className }: { className?: string }) {
 function MobileMenu() {
   return (
     <details className="relative">
-      <summary className="list-none cursor-pointer p-2">
-        <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <summary className="list-none cursor-pointer p-2" aria-label="Menu">
+        <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </summary>

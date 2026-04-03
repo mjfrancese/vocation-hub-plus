@@ -68,7 +68,7 @@ export const UNIFIED_STATUS_STYLES: Record<UnifiedStatus, string> = {
   'Developing': 'bg-blue-100 text-blue-800 border-blue-200',
   'Interim': 'bg-yellow-100 text-yellow-800 border-yellow-200',
   'Closed': 'bg-gray-100 text-gray-600 border-gray-200',
-  'Unlisted': 'bg-gray-50 text-gray-400 border-gray-200',
+  'Unlisted': 'bg-gray-50 text-gray-500 border-gray-200',
 };
 
 export const UNIFIED_STATUS_CHIP_COLORS: Record<UnifiedStatus, { color: string; activeColor: string }> = {
@@ -76,7 +76,7 @@ export const UNIFIED_STATUS_CHIP_COLORS: Record<UnifiedStatus, { color: string; 
   'Developing': { color: 'bg-blue-50 text-blue-700 border-blue-200', activeColor: 'bg-blue-600 text-white border-blue-600' },
   'Interim': { color: 'bg-yellow-50 text-yellow-700 border-yellow-200', activeColor: 'bg-yellow-600 text-white border-yellow-600' },
   'Closed': { color: 'bg-gray-50 text-gray-600 border-gray-200', activeColor: 'bg-gray-600 text-white border-gray-600' },
-  'Unlisted': { color: 'bg-gray-50 text-gray-400 border-gray-200', activeColor: 'bg-gray-500 text-white border-gray-500' },
+  'Unlisted': { color: 'bg-gray-50 text-gray-500 border-gray-200', activeColor: 'bg-gray-500 text-white border-gray-500' },
 };
 
 /**

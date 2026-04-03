@@ -91,6 +91,7 @@ export default function ClaimPage() {
         value={query}
         onChange={e => setQuery(e.target.value)}
         placeholder="Enter your name..."
+        aria-label="Search by name"
         className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
         autoFocus
       />
