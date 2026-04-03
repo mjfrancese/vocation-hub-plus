@@ -303,10 +303,19 @@ export default function PositionTable({
 
       {/* Desktop: table layout */}
       <div className={`hidden sm:block overflow-x-auto border border-gray-200 rounded-lg ${hasCompared ? 'pb-20' : ''}`}>
-        <table className="min-w-full divide-y divide-gray-200">
+        <table className="w-full table-fixed divide-y divide-gray-200">
+          <colgroup>
+            <col className="w-10" />
+            {showMatch && <col className="w-20" />}
+            <col style={{ width: '35%' }} />
+            <col style={{ width: '25%' }} />
+            <col style={{ width: '20%' }} />
+            <col style={{ width: '15%' }} />
+            <col className="w-12" />
+          </colgroup>
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-2 py-3 w-10">
+              <th className="px-2 py-3">
                 <span className="sr-only">Compare</span>
               </th>
               {showMatch && <th className="px-3 py-3 text-left text-xs font-semibold text-gray-500">MATCH</th>}
@@ -328,7 +337,7 @@ export default function PositionTable({
                   </span>
                 </th>
               ))}
-              <th className="px-2 py-3 text-center text-xs font-medium text-gray-400 uppercase tracking-wider w-12">
+              <th className="px-2 py-3 text-center text-xs font-medium text-gray-400 uppercase tracking-wider">
                 ASA
               </th>
             </tr>
@@ -430,7 +439,7 @@ export default function PositionTable({
                   </tr>
                   {expandedId === pos.id && (
                     <tr key={`${pos.id}-detail`}>
-                      <td colSpan={showMatch ? 7 : 6} className="px-4 py-4 bg-white border-l-4 border-l-primary-600">
+                      <td colSpan={showMatch ? 7 : 6} className="px-4 py-4 bg-white border-l-4 border-l-primary-600 overflow-hidden">
                         <DetailPanel pos={pos} onNavigate={expandAndScrollTo} meData={meData} />
                       </td>
                     </tr>
