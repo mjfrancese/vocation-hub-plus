@@ -3,6 +3,8 @@
  * Shows actual Vocation Hub status terms rather than abstract categories.
  */
 
+import { parseDate } from './date-utils';
+
 // Color mapping for VH status strings
 const STATUS_COLORS: Record<string, string> = {
   'Receiving names': 'bg-green-100 text-green-800 border-green-200',
@@ -142,14 +144,4 @@ export function isQualifyingUnlisted(pos: {
   if (!parochial || Object.keys(parochial.years).length === 0) return false;
 
   return true;
-}
-
-function parseDate(str: string): Date | null {
-  if (!str) return null;
-  // Handle MM/DD/YYYY
-  const mdy = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-  if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
-  // Handle YYYY-MM-DD or ISO
-  const d = new Date(str);
-  return isNaN(d.getTime()) ? null : d;
 }

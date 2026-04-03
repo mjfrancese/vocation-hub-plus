@@ -7,6 +7,7 @@
  */
 
 import { Position } from './types';
+import { parseAnyDate } from './date-utils';
 
 // ---------------------------------------------------------------------------
 // Parochial data extraction
@@ -214,18 +215,10 @@ export function findField(fields: Array<{ label: string; value: string }>, ...ke
  */
 export function timeOnMarket(pos: Position): string {
   const now = new Date();
-  const parseDate = (s: string): Date | null => {
-    if (!s) return null;
-    const first = s.split(/\s+(?:to|-)\s*/)[0].trim();
-    const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-    if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
-    const d = new Date(first);
-    return isNaN(d.getTime()) ? null : d;
-  };
 
-  const firstSeen = parseDate(pos.first_seen);
+  const firstSeen = parseAnyDate(pos.first_seen);
   const usable = firstSeen && (now.getTime() - firstSeen.getTime()) > 86400000 ? firstSeen : null;
-  const seen = usable || parseDate(pos.receiving_names_from);
+  const seen = usable || parseAnyDate(pos.receiving_names_from);
   if (!seen) return '';
 
   const days = Math.floor((now.getTime() - seen.getTime()) / (1000 * 60 * 60 * 24));

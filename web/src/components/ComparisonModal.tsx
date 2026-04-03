@@ -3,49 +3,13 @@
 import { useEffect, useRef } from 'react';
 import { Position } from '@/lib/types';
 import { isGibberish } from '@/lib/gibberish-detector';
+import { ordinalSuffix } from '@/lib/date-utils';
+import { getChurchName, getCity, getState } from '@/lib/position-helpers';
+import { timeOnMarket } from '@/lib/narrative-helpers';
 
 interface ComparisonModalProps {
   positions: Position[];
   onClose: () => void;
-}
-
-function getChurchName(pos: Position): string {
-  return pos.church_infos?.[0]?.name || pos.name;
-}
-
-function getCity(pos: Position): string {
-  return pos.church_infos?.[0]?.city || pos.city || '';
-}
-
-function getState(pos: Position): string {
-  return pos.church_infos?.[0]?.state || pos.state || '';
-}
-
-function timeOnMarket(pos: Position): string {
-  const now = new Date();
-  const parseAnyDate = (s: string): Date | null => {
-    if (!s) return null;
-    const first = s.split(/\s+(?:to|-)\s*/)[0].trim();
-    const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-    if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
-    const d = new Date(first);
-    return isNaN(d.getTime()) ? null : d;
-  };
-  const firstSeen = parseAnyDate(pos.first_seen);
-  const usableFirstSeen = firstSeen && (now.getTime() - firstSeen.getTime()) > 86400000 ? firstSeen : null;
-  const seen = usableFirstSeen || parseAnyDate(pos.receiving_names_from);
-  if (!seen) return '';
-  const diffMs = now.getTime() - seen.getTime();
-  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  if (days < 0) return '';
-  if (days < 1) return 'today';
-  if (days === 1) return '1 day';
-  if (days < 30) return `${days} days`;
-  const months = Math.floor(days / 30);
-  if (months === 1) return '1 month';
-  if (months < 12) return `${months} months`;
-  const years = Math.floor(months / 12);
-  return years === 1 ? '1 year' : `${years} years`;
 }
 
 function getLatestParochialYear(pos: Position): string | null {
@@ -112,16 +76,6 @@ function findDeepField(pos: Position, ...keywords: string[]): string {
     if (match?.value) return match.value;
   }
   return '';
-}
-
-function ordinalSuffix(n: number): string {
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 13) return 'th';
-  const mod10 = n % 10;
-  if (mod10 === 1) return 'st';
-  if (mod10 === 2) return 'nd';
-  if (mod10 === 3) return 'rd';
-  return 'th';
 }
 
 /** Identifies which column index has the "best" (highest) numeric value. Returns -1 if none. */
@@ -193,7 +147,7 @@ export default function ComparisonModal({ positions, onClose }: ComparisonModalP
   const rows: Row[] = [
     {
       label: 'Church',
-      values: positions.map(getChurchName),
+      values: positions.map(p => getChurchName(p).text),
     },
     {
       label: 'Location',
@@ -325,7 +279,7 @@ export default function ComparisonModal({ positions, onClose }: ComparisonModalP
                 </th>
                 {positions.map(pos => (
                   <th key={pos.id} className="text-left px-4 py-2 text-xs font-medium text-gray-700 min-w-[200px]">
-                    {getChurchName(pos)}
+                    {getChurchName(pos).text}
                   </th>
                 ))}
               </tr>

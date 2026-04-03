@@ -1,5 +1,6 @@
 import { Position } from './types';
 import { getUnifiedStatus, UnifiedStatus, isQualifyingUnlisted } from './status-helpers';
+import { parseDate } from './date-utils';
 
 /**
  * Default statuses shown on page load (chips pre-selected).
@@ -59,17 +60,9 @@ export function isPostedWithin(pos: Position, duration: string): boolean {
   const dateStr = pos.receiving_names_from || pos.first_seen;
   if (!dateStr) return false;
 
-  const parsed = parseAnyDate(dateStr);
+  const parsed = parseDate(dateStr);
   if (!parsed) return false;
 
   const cutoff = Date.now() - ms;
   return parsed.getTime() >= cutoff;
-}
-
-function parseAnyDate(str: string): Date | null {
-  if (!str) return null;
-  const mdy = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-  if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
-  const d = new Date(str);
-  return isNaN(d.getTime()) ? null : d;
 }

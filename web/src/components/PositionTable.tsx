@@ -14,6 +14,8 @@ import MatchBadge from './MatchBadge';
 import type { SearchPreferences } from '@/lib/types';
 import { scorePosition, type MatchResult } from '@/lib/match-helpers';
 import { hasActivePreferences } from '@/hooks/usePreferences';
+import { parseAnyDate } from '@/lib/date-utils';
+import { getChurchName, getCity, getState } from '@/lib/position-helpers';
 
 interface PositionTableProps {
   positions: Position[];
@@ -32,73 +34,6 @@ const COLUMNS: Array<{ key: SortField; label: string }> = [
   { key: 'date', label: 'Date Posted' },
   { key: 'quality_score', label: 'Status' },
 ];
-
-/** Get the display name for a position: prefer church_infos names, fall back to pos.name */
-function getChurchName(pos: Position): { text: string; suffix?: string; isEnriched: boolean } {
-  if (pos.church_infos && pos.church_infos.length > 0) {
-    const names = pos.church_infos.map(c => c.name).filter(Boolean);
-    if (names.length > 2) {
-      return { text: names[0], suffix: `+${names.length - 1} more`, isEnriched: true };
-    }
-    if (names.length > 0) return { text: names.join(' & '), isEnriched: true };
-  }
-  // For unmatched multi-congregation names, count parenthesized groups as congregations
-  const parenCount = (pos.name.match(/\([^)]+\)/g) || []).length;
-  if (parenCount > 2) {
-    const firstName = pos.name.split(/\n/)[0].trim();
-    return { text: firstName, suffix: `+${parenCount - 1} more`, isEnriched: false };
-  }
-  return { text: pos.name, isEnriched: false };
-}
-
-/** Get the city for a position: prefer church_infos cities, fall back to pos.city */
-function getCity(pos: Position): string {
-  if (pos.church_infos && pos.church_infos.length > 0) {
-    const cities = Array.from(new Set(pos.church_infos.map(c => c.city).filter(Boolean)));
-    if (cities.length > 0) return cities.join(' & ');
-  }
-  return pos.city || '';
-}
-
-/** Get the state for a position: prefer church_infos first entry, fall back to pos.state */
-function getState(pos: Position): string {
-  return pos.church_infos?.[0]?.state || pos.state || '';
-}
-
-/** Parse a date string in various formats (ISO, MM/DD/YYYY, "Month DD, YYYY") */
-function parseAnyDate(str: string | undefined | null): Date | null {
-  if (!str) return null;
-  // Handle range like "02/18/2026 to 03/31/2026" or "03/12/2026 -" -- use first date
-  const first = str.split(/\s+(?:to|-)\s*/)[0].trim();
-  // MM/DD/YYYY
-  const mdy = first.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-  if (mdy) return new Date(parseInt(mdy[3]), parseInt(mdy[1]) - 1, parseInt(mdy[2]));
-  // ISO or other parseable format
-  const d = new Date(first);
-  return isNaN(d.getTime()) ? null : d;
-}
-
-/** Compute human-readable time since listing was posted.
- *  Uses first_seen (if older than 1 day), falls back to receiving_names_from start date. */
-function timeOnMarket(pos: Position): string {
-  const now = new Date();
-  const firstSeen = parseAnyDate(pos.first_seen);
-  // Skip first_seen if it's less than 1 day old (likely a DB reset artifact)
-  const usableFirstSeen = firstSeen && (now.getTime() - firstSeen.getTime()) > 86400000 ? firstSeen : null;
-  const seen = usableFirstSeen || parseAnyDate(pos.receiving_names_from);
-  if (!seen) return '';
-  const diffMs = now.getTime() - seen.getTime();
-  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-  if (days < 0) return ''; // future date
-  if (days < 1) return 'today';
-  if (days === 1) return '1 day';
-  if (days < 30) return `${days} days`;
-  const months = Math.floor(days / 30);
-  if (months === 1) return '1 month';
-  if (months < 12) return `${months} months`;
-  const years = Math.floor(months / 12);
-  return years === 1 ? '1 year' : `${years} years`;
-}
 
 /** Get latest ASA value and year range for hover context */
 function getLatestAsa(pos: Position): { value: number; range: string } | null {
