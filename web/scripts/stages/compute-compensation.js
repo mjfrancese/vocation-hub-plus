@@ -12,6 +12,8 @@
 
 'use strict';
 
+const { HOUSING_VALUE, SENIOR_RECTOR_ASA_THRESHOLD } = require('../lib/constants');
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -56,7 +58,7 @@ function lookupDioceseComp(db, diocese) {
  * CPG reports use: Senior Rector, Solo Rector, Assistant, Specialty Minister, Parish Deacon.
  */
 const CPG_TYPE_MAP = {
-  'Rector': (asa) => asa >= 400 ? 'Senior Rector' : 'Solo Rector',
+  'Rector': (asa) => asa >= SENIOR_RECTOR_ASA_THRESHOLD ? 'Senior Rector' : 'Solo Rector',
   'Vicar': () => 'Solo Rector',
   'Priest-in-Charge': () => 'Solo Rector',
   'Assistant': () => 'Assistant',
@@ -266,7 +268,7 @@ function computeCompensation(positions, db, profileFields) {
       (/rectory|housing provided|bed|bath|required/.test(housingType));
 
     if (housingProvided) {
-      housingValue = 20000;
+      housingValue = HOUSING_VALUE;
       totalComp += housingValue;
     }
 

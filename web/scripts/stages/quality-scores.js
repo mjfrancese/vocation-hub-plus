@@ -13,6 +13,7 @@
 'use strict';
 
 const { parseMMDDYYYY } = require('../lib/dates');
+const { QUALITY_VISIBILITY_THRESHOLD } = require('../lib/constants');
 
 // ---------------------------------------------------------------------------
 // Stage entry point
@@ -133,14 +134,14 @@ function computeQualityScores(positions, isPublic) {
 
     pos.quality_score = Math.min(score, 100);
     pos.quality_components = components;
-    pos.visibility = score >= 50 ? 'extended' : 'extended_hidden';
+    pos.visibility = score >= QUALITY_VISIBILITY_THRESHOLD ? 'extended' : 'extended_hidden';
   }
 
   const avg = positions.length > 0
     ? Math.round(positions.reduce((s, p) => s + (p.quality_score || 0), 0) / positions.length)
     : 0;
   const hidden = positions.filter(p => p.visibility === 'extended_hidden').length;
-  console.log(`Quality scores: avg ${avg}, ${hidden} hidden (< 50)`);
+  console.log(`Quality scores: avg ${avg}, ${hidden} hidden (< ${QUALITY_VISIBILITY_THRESHOLD})`);
 
   return positions;
 }

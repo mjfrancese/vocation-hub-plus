@@ -261,21 +261,21 @@ describe('findSimilar -- minimum score threshold of 3', () => {
 });
 
 // ---------------------------------------------------------------------------
-// findSimilar -- capped at top 5
+// findSimilar -- capped at top SIMILAR_MAX_RESULTS (15)
 // ---------------------------------------------------------------------------
 
-describe('findSimilar -- top-5 cap', () => {
-  it('returns at most 5 similar positions', () => {
-    // One source position and 8 highly similar candidates
+describe('findSimilar -- top-15 cap', () => {
+  it('returns at most 15 similar positions', () => {
+    // One source position and 20 highly similar candidates
     const positions = [
       makePos({ id: '0', vh_id: 0, asa: 100, state: 'VA', position_type: null }),
     ];
-    for (let k = 1; k <= 8; k++) {
+    for (let k = 1; k <= 20; k++) {
       positions.push(makePos({ id: String(k), vh_id: k, asa: 100, state: 'VA', position_type: null }));
     }
     findSimilar(positions);
     expect(positions[0].similar_positions).toBeDefined();
-    expect(positions[0].similar_positions.length).toBeLessThanOrEqual(5);
+    expect(positions[0].similar_positions.length).toBeLessThanOrEqual(15);
   });
 
   it('sorts by score descending before slicing', () => {

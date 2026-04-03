@@ -1,5 +1,6 @@
 import type { Position, SearchPreferences } from './types';
 import { getRegion } from './analytics-helpers';
+import { MATCH_TIER_STRONG, MATCH_TIER_GOOD, MATCH_TIER_PARTIAL } from './constants';
 
 interface MatchResult {
   score: number;
@@ -123,9 +124,9 @@ export function scorePosition(pos: Position, prefs: SearchPreferences): MatchRes
   const score = possible > 0 ? Math.round((earned / possible) * 100) : 0;
 
   let tier: MatchResult['tier'] = 'none';
-  if (score >= 75) tier = 'strong';
-  else if (score >= 50) tier = 'good';
-  else if (score >= 25) tier = 'partial';
+  if (score >= MATCH_TIER_STRONG) tier = 'strong';
+  else if (score >= MATCH_TIER_GOOD) tier = 'good';
+  else if (score >= MATCH_TIER_PARTIAL) tier = 'partial';
 
   return { score, tier, reasons };
 }

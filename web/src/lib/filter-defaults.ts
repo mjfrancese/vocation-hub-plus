@@ -41,14 +41,6 @@ const DURATION_MS: Record<string, number> = {
   '1y': 365 * 24 * 60 * 60 * 1000,
 };
 
-export const POSTED_OPTIONS = [
-  { value: '7d', label: 'Last 7 days' },
-  { value: '30d', label: 'Last 30 days' },
-  { value: '90d', label: 'Last 90 days' },
-  { value: '6m', label: 'Last 6 months' },
-  { value: '1y', label: 'Last year' },
-] as const;
-
 /**
  * Check if a position was posted within the given duration.
  * Uses receiving_names_from, falls back to first_seen.

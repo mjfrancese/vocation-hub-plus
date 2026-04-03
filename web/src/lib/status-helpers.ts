@@ -4,6 +4,7 @@
  */
 
 import { parseDate } from './date-utils';
+import { QUALITY_GATE_THRESHOLD, RECENCY_MONTHS } from './constants';
 
 // Color mapping for VH status strings
 const STATUS_COLORS: Record<string, string> = {
@@ -128,15 +129,15 @@ export function isQualifyingUnlisted(pos: {
     const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
     if (unified !== 'Unlisted') return false;
   }
-  if ((pos.quality_score ?? 0) < 85) return false;
+  if ((pos.quality_score ?? 0) < QUALITY_GATE_THRESHOLD) return false;
 
-  // Must have a receiving_names_from date within 12 months
+  // Must have a receiving_names_from date within the recency window
   const dateStr = pos.receiving_names_from;
   if (!dateStr) return false;
   const parsed = parseDate(dateStr);
   if (!parsed) return false;
   const oneYearAgo = new Date();
-  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+  oneYearAgo.setMonth(oneYearAgo.getMonth() - RECENCY_MONTHS);
   if (parsed < oneYearAgo) return false;
 
   // Must have parochial data

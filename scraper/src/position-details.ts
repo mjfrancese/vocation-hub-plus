@@ -322,10 +322,3 @@ function parseProfileText(
   };
 }
 
-// Backwards compat stub
-export async function discoverIdsFromSearchResults(
-  page: Page,
-  expectedCount: number
-): Promise<number[]> {
-  return [];
-}

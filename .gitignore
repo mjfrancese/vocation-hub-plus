@@ -111,3 +111,14 @@ vite.config.ts.timestamp-*
 .parcel-cache
 .fusebox/
 .worktrees/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated deep-scrape chunks
+data/profiles/
+
+# Superpowers
+.superpowers/

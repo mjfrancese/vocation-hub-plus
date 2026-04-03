@@ -11,6 +11,13 @@
 
 'use strict';
 
+const {
+  SIMILAR_ASA_TOLERANCE,
+  SIMILAR_COMP_TOLERANCE,
+  SIMILAR_MIN_SCORE,
+  SIMILAR_MAX_RESULTS,
+} = require('../lib/constants');
+
 // ---------------------------------------------------------------------------
 // Stage entry point
 // ---------------------------------------------------------------------------
@@ -88,12 +95,12 @@ function findSimilar(positions) {
 
       if (a.asa != null && b.asa != null) {
         const ratio = b.asa / a.asa;
-        if (ratio >= 0.75 && ratio <= 1.25) score += 3;
+        if (ratio >= (1 - SIMILAR_ASA_TOLERANCE) && ratio <= (1 + SIMILAR_ASA_TOLERANCE)) score += 3;
       }
 
       if (a.comp != null && b.comp != null) {
         const ratio = b.comp / a.comp;
-        if (ratio >= 0.8 && ratio <= 1.2) score += 2;
+        if (ratio >= (1 - SIMILAR_COMP_TOLERANCE) && ratio <= (1 + SIMILAR_COMP_TOLERANCE)) score += 2;
       }
 
       if (a.state && b.state && a.state === b.state) score += 2;
@@ -101,7 +108,7 @@ function findSimilar(positions) {
           || (a.positionType && b.positionType && a.positionType === b.positionType)) score += 2;
       if (a.housingType && b.housingType && a.housingType === b.housingType) score += 1;
 
-      if (score >= 3) {
+      if (score >= SIMILAR_MIN_SCORE) {
         scored.push({
           id: b.id,
           vh_id: b.vh_id,
@@ -113,8 +120,8 @@ function findSimilar(positions) {
           estimated_total_comp: b.comp,
           score,
           match_reasons: {
-            asa: a.asa != null && b.asa != null && (b.asa / a.asa) >= 0.75 && (b.asa / a.asa) <= 1.25,
-            comp: a.comp != null && b.comp != null && (b.comp / a.comp) >= 0.8 && (b.comp / a.comp) <= 1.2,
+            asa: a.asa != null && b.asa != null && (b.asa / a.asa) >= (1 - SIMILAR_ASA_TOLERANCE) && (b.asa / a.asa) <= (1 + SIMILAR_ASA_TOLERANCE),
+            comp: a.comp != null && b.comp != null && (b.comp / a.comp) >= (1 - SIMILAR_COMP_TOLERANCE) && (b.comp / a.comp) <= (1 + SIMILAR_COMP_TOLERANCE),
             state: !!(a.state && b.state && a.state === b.state),
             type: (a.positionTypes != null && a.positionTypes.length > 0 && b.positionTypes != null && b.positionTypes.length > 0 && a.positionTypes.some(t => b.positionTypes.includes(t)))
                   || !!(a.positionType && b.positionType && a.positionType === b.positionType),
@@ -126,7 +133,7 @@ function findSimilar(positions) {
 
     if (scored.length > 0) {
       scored.sort((x, y) => y.score - x.score);
-      a.pos.similar_positions = scored.slice(0, 15);
+      a.pos.similar_positions = scored.slice(0, SIMILAR_MAX_RESULTS);
       count++;
     }
   }
