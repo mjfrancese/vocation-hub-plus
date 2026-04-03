@@ -1,0 +1,82 @@
+Create a user-invoked Claude Code skill at skills/user/ui-audit.md that I can run with /ui-audit on ANY project. This skill must be fully self-contained, project-agnostic, and require zero manual intervention.
+
+SKILL FILE: skills/user/ui-audit.md
+
+The skill definition should contain the complete instructions below so that Claude Code follows them every time /ui-audit is invoked, regardless of which project directory it's running in.
+
+TRIGGER
+
+User-invoked via /ui-audit. Optional argument: a URL to test (e.g. /ui-audit https://mysite.com). If no URL is given, the skill auto-detects and starts a local dev server.
+
+PHASE 1: ENVIRONMENT SETUP
+
+1. Determine the current working directory. This is the project to audit.
+2. Check if ui-audit/ exists in the project root. If not, create it with a package.json containing @playwright/test and @axe-core/playwright as devDependencies, and a .gitignore inside ui-audit/ containing * (so results never get committed).
+3. Run cd ui-audit && npm install if node_modules doesn't exist.
+4. Run npx playwright install chromium if browsers aren't installed.
+5. All test files, configs, and results live inside ui-audit/ to keep the project clean.
+
+PHASE 2: PROJECT DETECTION & SERVER STARTUP
+
+Skip this phase if a URL was provided as an argument -- use that URL directly.
+
+1. Read package.json in the project root to detect the framework. For Next.js (has next dep): check for out/ or .next/ directory, if static export exists serve it with npx serve out -l 3456, otherwise run npm run dev or npx next dev -p 3456. For Vite (has vite dep): npx vite --port 3456 or serve dist/ if it exists. For Create React App (has react-scripts): npx serve build -l 3456 or npm start. For Remix, Astro, SvelteKit: use their respective dev commands. For static HTML (no package.json, or has index.html): npx serve . -l 3456. If a build step is needed (npm run build), run it first.
+2. Start the server in the background. Wait for it to respond (poll with fetch/curl every 1s, up to 30s).
+3. Store the base URL (e.g. http://localhost:3456) for the audit phase.
+
+PHASE 3: ROUTE DISCOVERY
+
+1. Navigate to the base URL with Playwright.
+2. Extract all internal links from <a href>, <nav> elements, and any client-side router links.
+3. Deduplicate and sort. Filter out asset files (.png, .jpg, .css, .js, .json, .xml, .pdf, .svg).
+4. Output the discovered routes to the console before proceeding.
+5. Save to ui-audit/results/discovered-routes.json.
+
+PHASE 4: AUDIT
+
+Write and execute a Playwright test file (ui-audit/tests/audit.spec.ts) that runs ALL of the following checks on EVERY discovered route. Run checks at 3 viewports: mobile (375px wide), tablet (768px), desktop (1440px).
+
+4a. Page load health -- Verify HTTP 200. Flag any 4xx/5xx responses. Capture all console.error messages (filter out favicon.ico and common third-party noise).
+
+4b. Accessibility (WCAG 2.1 AA) -- Run axe-core with tags: wcag2a, wcag2aa, wcag21aa. For each violation: record the rule ID, impact (critical/serious/moderate/minor), description, CSS selector of affected element(s), and axe's recommended fix.
+
+4c. Visual screenshots + AI review -- Take a full-page screenshot at each viewport. Save as ui-audit/results/screenshots/{route-slug}--{viewport}.png. CRITICAL: After all screenshots are captured, use your multimodal vision to READ every screenshot image. Flag anything that looks wrong visually: overlapping elements, text cut off or clipped, broken layouts, content overflowing containers, invisible text (same color as background), missing/broken images, misaligned elements, excessive whitespace, elements that look obviously broken. This is the single most powerful check -- you can see what automated rules cannot.
+
+4d. Broken images -- Find <img> elements where naturalWidth === 0 or complete === false.
+
+4e. Broken internal links -- Follow every internal <a href> and verify it resolves (not 404/500).
+
+4f. Interactive element audit -- Buttons must have accessible names (text content, aria-label, or title). Inputs/selects/textareas must have associated labels. Clickable [role=button] or [onclick] elements should have cursor: pointer.
+
+4g. Horizontal overflow -- Check document.documentElement.scrollWidth > clientWidth + 5 at each viewport.
+
+4h. Form adversarial testing -- Find all <form> elements. For each: submit empty, then fill with XSS payloads (<script>alert(1)</script>), SQL injection (' OR 1=1 --), 10k-character strings, null bytes. Verify: no unhandled errors in the DOM, no unescaped script reflection, page doesn't crash.
+
+4i. Keyboard navigation -- Tab through interactive elements. Verify focus indicators exist (outline or box-shadow on focus). Flag focus traps (except intentional ones like modals).
+
+4j. Performance -- Measure DOMContentLoaded, LCP, CLS. Flag: DOMContentLoaded > 5s, LCP > 4s, CLS > 0.25.
+
+4k. Meta/SEO -- Check for <title>, <meta name="viewport">, lang attribute on <html>.
+
+4l. Dark mode (conditional) -- If the page has a theme toggle button or uses prefers-color-scheme, test both light and dark modes. Take screenshots of both.
+
+PHASE 5: RESULTS
+
+Write all results to ui-audit/results/. One JSON file per check category, plus a consolidated summary.json with this structure: timestamp, baseURL, routeCount, passed count, failed count, and an issues array. Each issue has: id (e.g. a11y-001), severity (critical/serious/moderate/minor), category (accessibility/visual/performance/security/seo/interactive), route, viewport, description, element (CSS selector or snippet), file_hint (source file path), and fix (what to change).
+
+For the file_hint field: use grep/glob to search the project source for the class name, ID, text content, or component name that corresponds to each failing element. This connects DOM issues back to source files.
+
+PHASE 6: AUTO-FIX
+
+1. Read summary.json.
+2. For EACH issue, in order of severity (critical first): read the file indicated by file_hint, apply the fix, be surgical -- change only what is needed. If no file_hint was found, use grep to locate the right file before editing. If the fix requires adding a dependency, install it.
+3. After all fixes are applied, STOP the old dev server if running, rebuild if needed, restart, and re-run the FULL audit to verify.
+4. Print a final report: issues fixed (with file paths and what changed), issues remaining (with explanation of why they couldn't be auto-fixed), before/after pass counts.
+
+PHASE 7: CLEANUP
+
+Stop any dev server that was started. Leave ui-audit/results/ intact for review. Do NOT commit any changes -- leave them staged so I can review the diff.
+
+IMPORTANT CONSTRAINTS FOR THE SKILL DEFINITION
+
+The skill instructions must be complete and self-contained in the .md file. Claude Code reads this file when /ui-audit is invoked -- it needs all the context right there. Do NOT hardcode any project paths, framework names, or URLs. Everything is detected at runtime. The skill should gracefully handle: missing package.json (static site), build failures (report and continue), unreachable routes (skip and flag), timeout on server startup (report and abort). Use port 3456 to avoid conflicts with common dev ports (3000, 5173, 8080). All Playwright artifacts go in ui-audit/ -- never pollute the project root.
