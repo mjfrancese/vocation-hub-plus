@@ -27,7 +27,6 @@ function normalizeName(name) {
     .replace(/\b(the|of|and|in|at|for|a|an|be)\b/g, '')
     .replace(/\b(episcopal|church|parish|community|chapel|cathedral|mission|memorial)\b/g, '')
     .replace(/[^a-z0-9\s]/g, '')
-    .replace(/([a-z]{4,})s\b/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
 }
