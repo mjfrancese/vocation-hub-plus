@@ -233,7 +233,8 @@ async function scrapeProfile(page: any, id: number): Promise<ProfileData | null>
     const data = await page.evaluate(EXTRACT_SCRIPT) as ExtractResult;
 
     if (data.tabCount < 6) {
-      return null; // Not a valid profile
+      console.warn(`Profile ${id} has only ${data.tabCount} tabs, skipping`);
+      return null;
     }
 
     return {
@@ -244,7 +245,8 @@ async function scrapeProfile(page: any, id: number): Promise<ProfileData | null>
       fullText: data.fullText,
       scrapedAt: new Date().toISOString(),
     };
-  } catch {
+  } catch (e) {
+    console.error(`Failed to scrape profile ${id}: ${(e as Error).message}`);
     return null;
   }
 }

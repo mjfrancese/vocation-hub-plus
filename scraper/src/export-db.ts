@@ -119,9 +119,17 @@ export function exportToDb(
       "SELECT value FROM scraper_meta WHERE key = 'all_profiles'"
     ).get() as { value: string } | undefined;
 
-    const existingCount = existingProfiles
-      ? JSON.parse(existingProfiles.value).length
-      : 0;
+    let existingCount = 0;
+    if (existingProfiles) {
+      try {
+        existingCount = JSON.parse(existingProfiles.value).length;
+      } catch (e) {
+        logger.warn('Failed to parse existing all_profiles JSON, preventing overwrite', {
+          error: (e as Error).message,
+        });
+        existingCount = Infinity;
+      }
+    }
 
     if (allProfiles.length >= existingCount) {
       upsertMeta.run('profile_fields', JSON.stringify(profileFields));
