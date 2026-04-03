@@ -155,8 +155,8 @@ function matchPositionToParish(position, db, lookups) {
     const domain = normalizeDomain(position.website_url);
     if (domain && !isGenericDomain(domain)) {
       const matches = lookups.parishesByWebDomain.get(domain) || [];
-      for (const p of matches) {
-        return { parish: p, confidence: 'exact', method: 'website' };
+      if (matches.length > 0) {
+        return { parish: matches[0], confidence: 'exact', method: 'website' };
       }
     }
   }
@@ -166,8 +166,8 @@ function matchPositionToParish(position, db, lookups) {
     const emailDomain = position.contact_email.split('@')[1];
     if (emailDomain && !isGenericDomain(emailDomain)) {
       const matches = lookups.parishesByEmailDomain.get(emailDomain.toLowerCase()) || [];
-      for (const p of matches) {
-        return { parish: p, confidence: 'exact', method: 'email' };
+      if (matches.length > 0) {
+        return { parish: matches[0], confidence: 'exact', method: 'email' };
       }
     }
   }
