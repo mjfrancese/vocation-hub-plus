@@ -493,7 +493,7 @@ export default function PositionTable({
                   </tr>
                   {expandedId === pos.id && (
                     <tr key={`${pos.id}-detail`}>
-                      <td colSpan={showMatch ? 8 : 7} className="px-4 py-4 bg-white border-l-4 border-l-primary-600">
+                      <td colSpan={showMatch ? 7 : 6} className="px-4 py-4 bg-white border-l-4 border-l-primary-600">
                         <DetailPanel pos={pos} onNavigate={expandAndScrollTo} meData={meData} />
                       </td>
                     </tr>

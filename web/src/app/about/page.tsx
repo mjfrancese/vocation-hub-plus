@@ -128,7 +128,7 @@ export default function AboutPage() {
           <StatCard label="Receiving" value={receiving} />
           <StatCard label="Developing" value={developing} />
           <StatCard label="Interim" value={interim} />
-          <StatCard label="Unlisted" value={closed} />
+          <StatCard label="Closed" value={closed} />
         </div>
       </section>
 
