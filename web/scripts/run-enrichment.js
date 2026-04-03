@@ -131,7 +131,8 @@ function readMeta(db, key) {
   if (!row) return null;
   try {
     return JSON.parse(row.value);
-  } catch {
+  } catch (e) {
+    console.warn('Failed to parse meta key:', key, e.message);
     return null;
   }
 }

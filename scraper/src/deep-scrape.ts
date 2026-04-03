@@ -134,46 +134,48 @@ async function main() {
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
-  const context = await browser.newContext({
-    viewport: { width: 1280, height: 900 },
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-  });
-
   const results: ProfileData[] = [];
   const startTime = Date.now();
 
-  // Use 5 parallel pages for detail scraping
-  const pageCount = 5;
-  const pages = await Promise.all(
-    Array.from({ length: pageCount }, () => context.newPage())
-  );
+  try {
+    const context = await browser.newContext({
+      viewport: { width: 1280, height: 900 },
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    });
 
-  for (let batchStart = 0; batchStart < chunkIds.length; batchStart += pageCount) {
-    const batch = chunkIds.slice(batchStart, batchStart + pageCount);
-
-    const batchResults = await Promise.allSettled(
-      batch.map((id, idx) => scrapeProfile(pages[idx], id))
+    // Use 5 parallel pages for detail scraping
+    const pageCount = 5;
+    const pages = await Promise.all(
+      Array.from({ length: pageCount }, () => context.newPage())
     );
 
-    for (let i = 0; i < batchResults.length; i++) {
-      const result = batchResults[i];
-      if (result.status === 'fulfilled' && result.value) {
-        results.push(result.value);
+    for (let batchStart = 0; batchStart < chunkIds.length; batchStart += pageCount) {
+      const batch = chunkIds.slice(batchStart, batchStart + pageCount);
+
+      const batchResults = await Promise.allSettled(
+        batch.map((id, idx) => scrapeProfile(pages[idx], id))
+      );
+
+      for (let i = 0; i < batchResults.length; i++) {
+        const result = batchResults[i];
+        if (result.status === 'fulfilled' && result.value) {
+          results.push(result.value);
+        }
+      }
+
+      const processed = batchStart + batch.length;
+      if (processed % 30 === 0 || processed === chunkIds.length) {
+        const elapsed = (Date.now() - startTime) / 1000;
+        const rate = processed / elapsed;
+        console.log(
+          `[PROGRESS] ${processed}/${chunkIds.length} scraped ` +
+          `(${results.length} successful, ${rate.toFixed(1)}/sec)`
+        );
       }
     }
-
-    const processed = batchStart + batch.length;
-    if (processed % 30 === 0 || processed === chunkIds.length) {
-      const elapsed = (Date.now() - startTime) / 1000;
-      const rate = processed / elapsed;
-      console.log(
-        `[PROGRESS] ${processed}/${chunkIds.length} scraped ` +
-        `(${results.length} successful, ${rate.toFixed(1)}/sec)`
-      );
-    }
+  } finally {
+    await browser.close();
   }
-
-  await browser.close();
 
   // Save results
   const outputDir = path.resolve(__dirname, '../../data/profiles');

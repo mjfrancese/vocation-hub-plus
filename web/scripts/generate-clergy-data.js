@@ -111,7 +111,7 @@ function buildPersonalData(guid, db) {
               }
             }
           }
-        } catch { /* ignore if table structure differs */ }
+        } catch (e) { console.warn('Failed to query compensation_by_asa:', e.message); }
       }
     }
   }
@@ -126,7 +126,7 @@ function buildPersonalData(guid, db) {
         ORDER BY year DESC LIMIT 1
       `).get(currentPos.title);
       positionTypeMedian = ptRow?.median || null;
-    } catch { /* ignore */ }
+    } catch (e) { console.warn('Failed to query compensation_by_position:', e.message); }
   }
 
   // Experience bracket median
@@ -146,7 +146,7 @@ function buildPersonalData(guid, db) {
           }
         }
       }
-    } catch { /* ignore */ }
+    } catch (e) { console.warn('Failed to query compensation_by_experience:', e.message); }
   }
 
   const compensationBenchmarks = {
@@ -189,7 +189,7 @@ function buildPersonalData(guid, db) {
             censusPop = census.population || null;
           }
         }
-      } catch { /* ignore */ }
+      } catch (e) { console.warn('Failed to query census_data:', e.message); }
 
       // Clergy tenure at this parish
       const tenYearsAgo = currentYear - 10;
@@ -362,11 +362,15 @@ if (require.main === module) {
   const { getDb, closeDb } = require('./db');
   const db = getDb();
   const outputDir = process.argv[2] || path.resolve(__dirname, '../public/data');
-  const result = generateClergyData({ db, outputDir });
+  let result;
+  try {
+    result = generateClergyData({ db, outputDir });
+  } finally {
+    closeDb();
+  }
   if (result.collisions.length > 0) {
     process.exit(1);
   }
-  closeDb();
 }
 
 module.exports = { generateToken, buildPersonalData, buildSearchIndex, generateClergyData };
