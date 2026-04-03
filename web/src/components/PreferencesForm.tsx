@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import type { SearchPreferences } from '@/lib/types';
+import { CANONICAL_POSITION_TYPES } from '@/lib/position-type-helpers';
 
 interface PreferencesFormProps {
   prefs: SearchPreferences;
@@ -9,10 +10,15 @@ interface PreferencesFormProps {
   onClear: () => void;
 }
 
-const POSITION_TYPES = [
-  'Rector', 'Vicar', 'Priest-in-Charge', 'Assistant', 'Associate',
-  'Curate', 'Dean', 'Interim', 'Canon', 'Other',
-];
+// Subset of CANONICAL_POSITION_TYPES shown in the preferences form.
+// Omits rare types (Supply, Cathedral Staff, Senior Associate, Missioner,
+// Diocesan Staff, Head of School, Church Planter, Youth Minister) to keep
+// the chip list manageable. Users can still filter by those in the main UI.
+const POSITION_TYPES = CANONICAL_POSITION_TYPES.filter(t =>
+  ['Rector', 'Vicar', 'Priest-in-Charge', 'Assistant', 'Associate',
+   'Curate', 'Dean', 'Interim', 'Canon', 'Bishop', 'Chaplain',
+   'Deacon', 'Director', 'Other'].includes(t)
+);
 
 const REGIONS = ['Northeast', 'Southeast', 'Midwest', 'West', 'Southwest'];
 

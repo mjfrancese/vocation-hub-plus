@@ -56,14 +56,19 @@ Playwright Scraper  -->  SQLite DB  -->  Enrichment Scripts  -->  Static JSON  -
 
 ### Enrichment Pipeline
 
-After each scrape, three scripts run to enrich the data:
+After each scrape, `web/scripts/run-enrichment.js` orchestrates 9 stages in
+order:
 
-1. `build-registry.js` -- merges Episcopal Asset Map + parochial data into a
-   canonical church registry
-2. `build-position-map.js` -- links positions to churches via website, email,
-   phone, name+diocese, and city matching
-3. `enrich-positions.js` -- enriches positions with church data, generates a
-   gap report for unmatched positions
+1. **match-parishes** -- links positions to churches via website, email, phone,
+   name+diocese, and city matching
+2. **backfill-coordinates** -- geocodes parishes missing lat/lng
+3. **attach-parochial** -- attaches General Convention parochial report data
+4. **attach-census** -- attaches ZIP-level census/demographic data
+5. **compute-compensation** -- estimates total compensation from CPG benchmarks
+6. **compute-percentiles** -- ranks positions within their diocese
+7. **find-similar** -- identifies similar positions for comparison
+8. **clergy-context** -- attaches clergy tenure and parish history
+9. **quality-scores** -- computes data-quality scores and sets visibility
 
 ## Quick Start
 
@@ -112,7 +117,7 @@ Copy `.env.example` to `.env` and adjust values as needed:
 | `VOCATIONHUB_URL` | Vocation Hub URL | Target scrape URL |
 | `SCRAPE_DELAY_MS` | 250 | Delay between interactions |
 | `POPUP_WAIT_MS` | 600 | Wait time for dropdown popups |
-| `DB_PATH` | `../data/positions.db` | SQLite database path |
+| `DB_PATH` | `../data/vocationhub.db` | SQLite database path |
 | `OUTPUT_PATH` | `./output` | JSON export directory |
 | `SCREENSHOT_ON_FAILURE` | true | Save screenshots on errors |
 | `MAX_RUNTIME_MS` | 840000 | 14-minute overall timeout |
@@ -121,11 +126,12 @@ Copy `.env.example` to `.env` and adjust values as needed:
 
 ```
 vocation-hub-plus/
-├── scraper/          Playwright scraper (TypeScript)
-├── web/              Next.js frontend and enrichment scripts
-├── data/             SQLite schema and seed files
-├── .github/workflows CI/CD pipelines
-└── docs/             Architecture and selector docs
+├── scraper/              Playwright scraper (TypeScript)
+├── web/                  Next.js frontend
+│   └── scripts/          Enrichment pipeline (run-enrichment.js + stages/)
+├── data/                 SQLite DB (vocationhub.db)
+├── .github/workflows/    CI/CD pipelines
+└── docs/                 Architecture docs and business rules
 ```
 
 ## License

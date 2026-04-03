@@ -20,7 +20,7 @@ Episcopal Church position search tool with enriched data. Deployed to GitHub Pag
 - **Extended positions must pass data-quality gate** (quality >= 85, parochial data, recent date) to appear in the default view. This applies regardless of VH status. See `docs/business-rules.md` for details.
 - **The regular scraper must not overwrite deep-scrape data.** `export-db.ts` guards profile writes by count.
 - **The enrichment entry point is `web/scripts/run-enrichment.js`**, not the deleted `enrich-positions-v2.js`. Never reference the old file.
-- **All GitHub Actions should use `actions/*@v6`** for checkout and setup-node.
+- **Use `actions/*@v6` where available** (checkout, setup-node, configure-pages). Third-party actions that lack v6 releases (upload-pages-artifact, deploy-pages, setup-python) should use the latest stable version.
 
 ## Pipeline
 

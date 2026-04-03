@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useCallback, useEffect } from 'react';
 import { getStatusStyle, getStatusShortLabel, isActiveStatus } from '@/lib/status-helpers';
+import type { Meta } from '@/lib/types';
 
 // --- Interfaces ---
 
@@ -63,19 +64,9 @@ interface GapReport {
   }>;
 }
 
-interface MetaData {
-  lastUpdated: string;
-  totalPositions: number;
-  activeCount: number;
-  expiredCount: number;
-  newCount: number;
+// Extends the shared Meta type with admin-specific fields
+interface MetaData extends Meta {
   discoveryStatus?: { pending: number; failed: number; resolved: number };
-  lastScrape: {
-    scraped_at: string;
-    total_found: number;
-    duration_ms: number;
-    status: string;
-  } | null;
 }
 
 

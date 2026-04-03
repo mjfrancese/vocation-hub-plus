@@ -8,9 +8,12 @@
  *   node run-enrichment.js [outputDir] [--skip stage1,stage2]
  *
  * Exports:
- *   - runPipeline({ db, skip })   -- run all stages, returns { positions }
- *   - writeOutput(positions, outputDir) -- write JSON output files
- *   - loadPositions(db)           -- read positions from DB
+ *   - runPipeline({ db, skip })          -- run all stages, returns { positions, extended, profileFields }
+ *   - writeOutput(data, outputDir, db)   -- write JSON output files
+ *   - loadPositions(db)                  -- read positions from DB
+ *   - buildExtendedPositions(positions, allProfiles) -- build extended list
+ *   - readMeta(db, key)                  -- read a scraper_meta blob
+ *   - STAGES                             -- stage registry array
  */
 
 'use strict';

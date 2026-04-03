@@ -71,44 +71,53 @@ Also non-fatal.
 - Dry-run mode for testing without DB writes
 - Non-fatal Phase 2 and Phase 3 to prevent partial failures from aborting data export
 
-### Database (`/data`)
+### Database (`/data/vocationhub.db`)
 
 **Stack**: SQLite via better-sqlite3
+
+The database is stored as a GitHub release artifact (`db-latest`) and
+downloaded at the start of each workflow run.
 
 Tables:
 
 | Table | Purpose |
 |-------|---------|
-| `positions` | Every position ever seen, with status tracking |
-| `position_details` | Detailed profile fields scraped from individual position pages |
-| `scrape_history` | Record of each scrape run |
-| `vh_discovery` | Tracks discovered Vocation Hub internal IDs |
-
-The database is persisted as a GitHub Actions artifact (90-day retention)
-and downloaded at the start of each scrape run.
+| `parishes` | Canonical parish directory (merged Asset Map + ECDPlus) |
+| `parish_aliases` | Alternate names for fuzzy matching across sources |
+| `parish_identity` | Links Asset Map nid to ECDPlus ID with confidence |
+| `clergy` | Clergy records from ECDPlus |
+| `clergy_positions` | Clergy position history (current and past) |
+| `clergy_tokens` | HMAC tokens for personal benchmarking |
+| `compensation_diocesan` | CPG diocesan compensation medians |
+| `compensation_by_asa` | CPG compensation by ASA category |
+| `compensation_by_position` | CPG compensation by position type |
+| `compensation_by_experience` | CPG compensation by years of service |
+| `compensation_by_revenue` | CPG compensation by parish revenue bracket |
+| `parochial_data` | General Convention parochial report data by year |
+| `census_data` | ZIP-level demographic data (median income, population) |
+| `scraped_positions` | Raw position data from VocationHub scraper |
+| `scraper_meta` | Key/value store for scraper state (profiles, changes, meta) |
+| `fetch_log` | Audit trail for data pipeline runs |
 
 ### Enrichment Pipeline (`/web/scripts`)
 
-After scraping, three enrichment scripts run in CI to produce richer data
-artifacts. These scripts run in the CI workflows, not in the scraper itself.
+After scraping, `run-enrichment.js` orchestrates 9 stages in order. These
+run in CI workflows, not in the scraper itself.
 
-**`build-registry.js`**
+| Stage | Module | Purpose |
+|-------|--------|---------|
+| match-parishes | `stages/match-parishes.js` | Links positions to parishes via website, email, phone, name+diocese, city |
+| backfill-coordinates | `stages/backfill-coordinates.js` | Geocodes parishes missing lat/lng |
+| attach-parochial | `stages/attach-parochial.js` | Attaches General Convention parochial report data |
+| attach-census | `stages/attach-census.js` | Attaches ZIP-level census/demographic data |
+| compute-compensation | `stages/compute-compensation.js` | Estimates total compensation from CPG benchmarks |
+| compute-percentiles | `stages/compute-percentiles.js` | Ranks positions within their diocese |
+| find-similar | `stages/find-similar.js` | Identifies similar positions for comparison |
+| clergy-context | `stages/clergy-context.js` | Attaches clergy tenure and parish history |
+| quality-scores | `stages/quality-scores.js` | Computes data-quality scores and sets visibility |
 
-Merges Episcopal Asset Map church data with General Convention parochial report
-data into a canonical `church-registry.json`.
-
-**`build-position-map.js`**
-
-Links scraped positions to church registry entries using a multi-strategy
-matching approach: website URL, email domain, phone number, name + diocese
-combination, and city hints. Outputs `position-church-map.json` with a
-confidence score for each match.
-
-**`enrich-positions.js`**
-
-Enriches positions with matched church and parochial data, then generates a
-gap report (`needs-backfill.json`) listing positions that could not be matched.
-Outputs `enriched-positions.json` and `enriched-extended.json`.
+Outputs: `enriched-positions.json`, `enriched-extended.json`,
+`position-church-map.json`, and supporting files.
 
 ### Frontend (`/web`)
 
@@ -128,41 +137,42 @@ A static site that reads from JSON files at build time. Features:
 
 ### CI/CD (`.github/workflows`)
 
-**`scrape.yml`**
+**`scrape-positions.yml`**
 
-Runs twice daily (6am and 6pm UTC). Downloads the previous DB, runs the
-scraper, runs all three enrichment scripts, and commits updated JSON data to
-main. Data-only -- does not trigger a deploy directly.
+Runs twice daily (6am and 6pm UTC). Downloads the DB, runs the scraper,
+runs the enrichment pipeline, and commits updated JSON data to main.
 
 **`deep-scrape.yml`**
 
-Runs weekly (Sunday at 3am UTC). Discovers new Vocation Hub IDs and deep
-scrapes all known position profiles to populate `all-profiles.json` and
-`profile-fields.json`.
+Runs weekly (Sunday at 3am UTC). Deep scrapes all known position profiles,
+runs the full enrichment pipeline, and deploys.
 
-**`church-directory.yml`**
+**`data-refresh-v2.yml`**
 
-Runs monthly (1st of each month). Scrapes the Episcopal Asset Map and parochial
-report data to refresh `churches.json` and `parochial-data.json`.
+Runs monthly (1st of each month at 5am UTC). Refreshes external data sources
+(Episcopal Asset Map, ECDPlus, Census, parochial reports).
 
-**`deploy.yml`**
+**`build-and-deploy.yml`**
 
-Triggers on any push to main that touches web source files or data files.
-Runs lint and tests, then builds the Next.js static export and deploys to
-GitHub Pages. All deploys go through this workflow.
+Triggers daily at 12pm UTC and on push to main. Builds the Next.js static
+export and deploys to GitHub Pages.
+
+**`compensation-update.yml`**
+
+Manual trigger. Imports new CPG compensation PDF data into the database.
 
 ## Data Flow
 
-1. GitHub Actions cron triggers `scrape.yml`
-2. Scraper downloads previous `positions.db` artifact
+1. GitHub Actions cron triggers `scrape-positions.yml`
+2. Scraper downloads `vocationhub.db` from `db-latest` release
 3. Phase 1: Playwright scrapes all positions from Vocation Hub search table
 4. Phase 2: Scraper discovers VH IDs and scrapes position detail profiles
 5. Phase 3: Scraper backfills any missed positions
 6. `diff.ts` compares against existing DB records
 7. `export-json.ts` writes `positions.json`, `changes.json`, `meta.json`
-8. Enrichment scripts produce `enriched-positions.json`, `position-church-map.json`, etc.
+8. Enrichment pipeline produces `enriched-positions.json`, `position-church-map.json`, etc.
 9. Bot commits JSON to `web/public/data/` and pushes to main
-10. Push triggers `deploy.yml` which rebuilds and deploys the frontend
+10. Push triggers `build-and-deploy.yml` which rebuilds and deploys the frontend
 
 ## Data Artifacts (`web/public/data/`)
 
