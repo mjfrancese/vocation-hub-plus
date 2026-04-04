@@ -383,7 +383,11 @@ export default function PositionTable({
                     }`}
                     title={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : undefined}
                   >
-                    {comparedIds.has(pos.id) ? '\u2713 Compare' : '+ Compare'}
+                    {comparedIds.has(pos.id) ? (
+                      <><svg className="w-3 h-3 inline -mt-0.5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>Compare</>
+                    ) : (
+                      <><svg className="w-3 h-3 inline -mt-0.5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>Compare</>
+                    )}
                   </button>
                 </div>
               </div>
@@ -401,18 +405,18 @@ export default function PositionTable({
       <div className={`hidden sm:block overflow-x-auto border border-gray-200 rounded-lg ${hasCompared ? 'pb-20' : ''}`}>
         <table className="w-full table-fixed divide-y divide-gray-200">
           <colgroup>
-            <col className="w-10" />
+            <col className="w-8" />
             {showMatch && <col className="w-20" />}
-            <col style={{ width: '34%' }} />
+            <col style={{ width: '35%' }} />
             <col style={{ width: '24%' }} />
             <col style={{ width: '20%' }} />
-            <col style={{ width: '14%' }} />
+            <col style={{ width: '13%' }} />
             <col style={{ width: '8%' }} />
           </colgroup>
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-2 py-3 text-center">
-                <span className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">Compare</span>
+              <th className="w-8 px-1 py-3">
+                <span className="sr-only">Compare</span>
               </th>
               {showMatch && <th className="px-3 py-3 text-left text-xs font-semibold text-gray-500">MATCH</th>}
               {COLUMNS.map((col) => {
@@ -468,29 +472,24 @@ export default function PositionTable({
                           : 'hover:bg-gray-50'
                     }`}
                   >
-                    <td className="px-1 py-2 w-10 text-center" onClick={(e) => e.stopPropagation()}>
+                    <td className="px-1 py-2 w-8 text-center" onClick={(e) => e.stopPropagation()}>
                       <button
                         onClick={() => toggleCompare(pos.id)}
                         disabled={!comparedIds.has(pos.id) && comparedIds.size >= MAX_COMPARE}
-                        className={`inline-flex items-center justify-center w-7 h-7 rounded-md border transition-colors ${
+                        className={`inline-flex items-center justify-center w-6 h-6 rounded-full border transition-colors ${
                           comparedIds.has(pos.id)
-                            ? 'bg-primary-100 border-primary-400 text-primary-700'
+                            ? 'bg-primary-600 border-primary-600 text-white'
                             : comparedIds.size >= MAX_COMPARE
-                              ? 'bg-gray-50 border-gray-200 text-gray-300 cursor-not-allowed'
-                              : 'bg-white border-gray-200 text-gray-400 hover:border-primary-300 hover:text-primary-600'
+                              ? 'border-gray-200 text-gray-300 cursor-not-allowed'
+                              : 'border-gray-300 text-gray-400 hover:border-primary-500 hover:text-primary-600 hover:bg-primary-50'
                         }`}
-                        aria-label={`Compare ${church.text}`}
-                        title={comparedIds.has(pos.id) ? 'Remove from comparison' : comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Add to comparison'}
+                        aria-label={comparedIds.has(pos.id) ? `Remove ${church.text} from comparison` : `Add ${church.text} to comparison`}
+                        title={comparedIds.has(pos.id) ? 'Remove from comparison' : comparedIds.size >= MAX_COMPARE ? `Max ${MAX_COMPARE} positions` : 'Add to compare'}
                       >
                         {comparedIds.has(pos.id) ? (
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                          </svg>
+                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                         ) : (
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 5l-7 7 7 7" />
-                          </svg>
+                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>
                         )}
                       </button>
                     </td>

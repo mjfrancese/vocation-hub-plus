@@ -14,7 +14,7 @@ export default function AboutPage() {
   const closed = positions.filter(p => isClosedStatus(p.vh_status || '')).length;
 
   return (
-    <div className="max-w-3xl mx-auto space-y-8">
+    <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold text-gray-900">About Vocation Hub+</h1>
         <p className="mt-2 text-gray-600">

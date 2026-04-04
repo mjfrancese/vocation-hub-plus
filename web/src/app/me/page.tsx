@@ -117,7 +117,7 @@ function DashboardContent() {
     : (['preferences'] as const);
 
   return (
-    <div className="max-w-4xl mx-auto py-6">
+    <div className="py-6">
       {/* Summary Bar - only when userData exists */}
       {userData && (
         <div className="bg-white border border-gray-200 rounded-lg p-4 mb-6">
