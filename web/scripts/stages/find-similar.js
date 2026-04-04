@@ -79,7 +79,15 @@ function findSimilar(positions) {
     if (asa == null && comp == null) continue;
 
     const positionTypes = pos.position_types || [];
-    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, positionTypes, housingType, name, city });
+    // Track parish NIDs for self-reference detection (same church, different position entries)
+    const parishNids = new Set();
+    if (pos.church_infos) {
+      for (const ci of pos.church_infos) {
+        if (ci.nid) parishNids.add(ci.nid);
+      }
+    }
+
+    posData.push({ pos, id, vh_id: pos.vh_id, asa, comp, state, positionType, positionTypes, housingType, name, city, parishNids });
   }
 
   let count = 0;
@@ -90,6 +98,14 @@ function findSimilar(positions) {
     for (let j = 0; j < posData.length; j++) {
       if (i === j) continue;
       const b = posData[j];
+
+      // Skip if same vh_id (duplicate entries) or same parish (same church, different position)
+      if (a.vh_id && b.vh_id && a.vh_id === b.vh_id) continue;
+      if (a.parishNids.size > 0 && b.parishNids.size > 0) {
+        let overlap = false;
+        for (const nid of a.parishNids) { if (b.parishNids.has(nid)) { overlap = true; break; } }
+        if (overlap) continue;
+      }
 
       let score = 0;
 

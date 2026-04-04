@@ -485,6 +485,23 @@ function matchParishes(positions, db) {
     }
   }
 
+  // Backfill state and diocese from matched parish data when the position
+  // doesn't already have them (common for extended/profile-only positions).
+  let backfilled = 0;
+  for (const pos of positions) {
+    const ci = pos.church_infos && pos.church_infos[0];
+    if (!ci) continue;
+    let changed = false;
+    if (!pos.state && ci.state) { pos.state = ci.state; changed = true; }
+    if (!pos.diocese && ci.nid) {
+      // Look up diocese from the parish DB row
+      const parish = db.prepare('SELECT diocese FROM parishes WHERE id = ?').get(ci.id || ci.nid);
+      if (parish && parish.diocese) { pos.diocese = parish.diocese; changed = true; }
+    }
+    if (changed) backfilled++;
+  }
+  if (backfilled > 0) console.log(`Backfilled state/diocese for ${backfilled} positions from parish matches`);
+
   return positions;
 }
 

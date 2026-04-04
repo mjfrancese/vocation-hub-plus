@@ -110,7 +110,7 @@ function computeQualityScores(positions, isPublic) {
       components.push('Position type (5)');
     }
 
-    if (pos.state) {
+    if (pos.state || (pos.church_infos && pos.church_infos[0] && pos.church_infos[0].state)) {
       score += 5;
       components.push('State known (5)');
     }

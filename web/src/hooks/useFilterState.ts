@@ -54,7 +54,7 @@ function joinParam(arr: string[]): string | null {
 function parseSortParam(val: string | null): { field: SortField; direction: SortDirection } {
   if (!val) return { field: SORT_DEFAULT_FIELD, direction: SORT_DEFAULT_DIR };
   const [field, dir] = val.split(':');
-  const validFields: SortField[] = ['name', 'diocese', 'date', 'updated', 'firstseen', 'quality_score', 'asa'];
+  const validFields: SortField[] = ['name', 'diocese', 'state', 'city', 'date', 'updated', 'firstseen', 'quality_score', 'asa'];
   const f = validFields.includes(field as SortField) ? (field as SortField) : SORT_DEFAULT_FIELD;
   const d: SortDirection = dir === 'asc' ? 'asc' : 'desc';
   return { field: f, direction: d };
