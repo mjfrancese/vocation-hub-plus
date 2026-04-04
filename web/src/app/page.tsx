@@ -118,7 +118,13 @@ function PositionsPageContent() {
     return counts;
   }, [allPositions]);
 
-  const newCount = useMemo(() => allPositions.filter(p => p.is_new).length, [allPositions]);
+  const newCount = useMemo(() => allPositions.filter(p => {
+    if (!p.is_new) return false;
+    if (p.visibility === 'extended_hidden') return false;
+    const isExt = p.visibility === 'extended';
+    if (isExt && !isQualifyingUnlisted(p, true)) return false;
+    return true;
+  }).length, [allPositions]);
 
   // Track whether user has interacted with status chips
   const [statusUserSet, setStatusUserSet] = useState(false);
@@ -334,7 +340,15 @@ function PositionsPageContent() {
         <QuickChip
           label={`New (${newCount})`}
           active={showNewOnly}
-          onClick={() => setShowNewOnly(!showNewOnly)}
+          onClick={() => {
+            const next = !showNewOnly;
+            if (next) {
+              // Show all statuses when filtering to New
+              setStatusUserSet(true);
+              filterActions.setStatuses([]);
+            }
+            setShowNewOnly(next);
+          }}
           color="bg-emerald-50 text-emerald-700 border-emerald-200"
           activeColor="bg-emerald-600 text-white border-emerald-600"
         />

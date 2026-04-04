@@ -76,7 +76,11 @@ export function getPositions(): Position[] {
     const profile = vhId ? allProfiles.find(p => (p.vh_id ?? p.id) === vhId) : undefined;
 
     // Derive vh_status: use enriched value, then profile lookup, then map scraper status
-    let vhStatus = pos.vh_status || profile?.status || '';
+    // Profile may be in raw {id, fields} format or flattened {vh_id, status} format
+    let vhStatus = pos.vh_status
+      || profile?.status
+      || (profile?.fields || []).find(f => f.label === 'Current status')?.value
+      || '';
     if (!vhStatus && pos.status === 'new') {
       // Scraper status "new" means it appeared in VH search results recently
       vhStatus = 'Receiving names';

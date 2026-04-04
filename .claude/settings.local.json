@@ -49,7 +49,9 @@
       "Bash(echo \"exit: $?\")",
       "Bash(powershell -Command \"Get-Process | Where-Object { $_.Path -like ''*serve*'' -or $_.Name -like ''*serve*'' } | Select-Object Id, Name, Path\")",
       "Bash(powershell -Command \"foreach \\($f in @\\(''out\\\\index.html'',''out\\\\index.txt'',''out\\\\claim\\\\index.txt''\\)\\) { $handles = & handle64.exe $f 2>$null; if \\($handles\\) { Write-Output $handles } else { Write-Output ''No handle tool or no locks found for $f'' } }\")",
-      "Bash(powershell -Command \"Get-Process node | Stop-Process -Force\")"
+      "Bash(powershell -Command \"Get-Process node | Stop-Process -Force\")",
+      "WebFetch(domain:vocationhub.plus)",
+      "Bash(status\" field in the raw {id, fields} format stored in all-profiles.json.:*)"
     ]
   }
 }
