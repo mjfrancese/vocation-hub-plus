@@ -58,52 +58,70 @@ export function isInterimStatus(status: string): boolean {
   return status === 'Seeking interim' || status === 'Interim in place';
 }
 
-// Unified status model used for both filtering and display
-export type UnifiedStatus = 'Active' | 'Developing' | 'Interim' | 'Closed' | 'Unlisted';
+// Unified status model: three exhaustive categories.
+// Interim maps to Active (still an active search). Unlisted maps to Closed.
+export type UnifiedStatus = 'Active' | 'Developing' | 'Closed';
 
-export const UNIFIED_STATUSES: UnifiedStatus[] = ['Active', 'Developing', 'Interim', 'Closed', 'Unlisted'];
+export const UNIFIED_STATUSES: UnifiedStatus[] = ['Active', 'Developing', 'Closed'];
 
 export const UNIFIED_STATUS_STYLES: Record<UnifiedStatus, string> = {
   'Active': 'bg-green-100 text-green-800 border-green-200',
   'Developing': 'bg-blue-100 text-blue-800 border-blue-200',
-  'Interim': 'bg-yellow-100 text-yellow-800 border-yellow-200',
   'Closed': 'bg-gray-100 text-gray-600 border-gray-200',
-  'Unlisted': 'bg-gray-50 text-gray-500 border-gray-200',
 };
 
 export const UNIFIED_STATUS_CHIP_COLORS: Record<UnifiedStatus, { color: string; activeColor: string }> = {
   'Active': { color: 'bg-green-50 text-green-700 border-green-200', activeColor: 'bg-green-600 text-white border-green-600' },
   'Developing': { color: 'bg-blue-50 text-blue-700 border-blue-200', activeColor: 'bg-blue-600 text-white border-blue-600' },
-  'Interim': { color: 'bg-yellow-50 text-yellow-700 border-yellow-200', activeColor: 'bg-yellow-600 text-white border-yellow-600' },
   'Closed': { color: 'bg-gray-50 text-gray-600 border-gray-200', activeColor: 'bg-gray-600 text-white border-gray-600' },
-  'Unlisted': { color: 'bg-gray-50 text-gray-500 border-gray-200', activeColor: 'bg-gray-500 text-white border-gray-500' },
 };
 
 /**
  * Derive a unified status for a position based on vh_status and visibility.
- * This provides a single categorization used for both filtering and display.
+ * Three exhaustive categories: Active, Developing, Closed.
+ * Interim maps to Active (still an active search).
+ *
+ * For extended positions with quality < 85, the status is downgraded:
+ *   - Recent date (within 12 months) -> Developing
+ *   - Old or no date -> Closed
+ * This prevents low-quality extended data from appearing as Active.
  */
 export function getUnifiedStatus(
   vhStatus: string | undefined,
   visibility: string | undefined,
+  qualityScore?: number,
+  receivingNamesFrom?: string,
 ): UnifiedStatus {
   const vis = visibility || 'public';
   const status = vhStatus || '';
 
-  // Extended (directory-only) positions with no active VH search status
+  // Extended (directory-only) positions
   if (vis === 'extended' || vis === 'extended_hidden') {
-    // Even directory positions can have a VH status if they were scraped from the hub
-    if (isActiveStatus(status)) return 'Active';
-    if (isDevelopingStatus(status)) return 'Developing';
-    if (isInterimStatus(status)) return 'Interim';
-    if (isClosedStatus(status)) return 'Closed';
-    return 'Unlisted';
+    // Determine raw status from VH status field
+    let raw: UnifiedStatus;
+    if (isActiveStatus(status) || isInterimStatus(status)) raw = 'Active';
+    else if (isDevelopingStatus(status)) raw = 'Developing';
+    else if (isClosedStatus(status)) raw = 'Closed';
+    else raw = 'Closed'; // No recognized status
+
+    // Low-quality extended positions cannot be Active
+    if (raw === 'Active' && (qualityScore ?? 0) < QUALITY_GATE_THRESHOLD) {
+      // Recent -> Developing; old/missing -> Closed
+      const parsed = receivingNamesFrom ? parseDate(receivingNamesFrom) : null;
+      if (parsed) {
+        const cutoff = new Date();
+        cutoff.setMonth(cutoff.getMonth() - RECENCY_MONTHS);
+        return parsed >= cutoff ? 'Developing' : 'Closed';
+      }
+      return 'Closed';
+    }
+
+    return raw;
   }
 
   // Public positions: derive from vh_status
-  if (isActiveStatus(status)) return 'Active';
+  if (isActiveStatus(status) || isInterimStatus(status)) return 'Active';
   if (isDevelopingStatus(status)) return 'Developing';
-  if (isInterimStatus(status)) return 'Interim';
   if (isClosedStatus(status)) return 'Closed';
 
   // Public with no recognized vh_status -- default to Active
@@ -111,24 +129,22 @@ export function getUnifiedStatus(
 }
 
 /**
- * Determines if an extended/unlisted position qualifies for the default view.
+ * Check if a position has an interim VH status (for display indicator).
+ */
+export function isInterim(vhStatus: string | undefined): boolean {
+  return isInterimStatus(vhStatus || '');
+}
+
+/**
+ * Determines if an extended position qualifies for the default view.
  * Must have: quality score >= 85, receiving_names_from within 12 months, parochial data.
- *
- * When skipStatusCheck is true, skips the Unlisted-only check so this can gate
- * ALL extended positions (including those with active VH statuses).
  */
 export function isQualifyingUnlisted(pos: {
   visibility?: string;
   quality_score?: number;
   receiving_names_from?: string;
   parochials?: Array<{ years: Record<string, unknown> }>;
-  vh_status?: string;
-  status?: string;
 }, skipStatusCheck = false): boolean {
-  if (!skipStatusCheck) {
-    const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
-    if (unified !== 'Unlisted') return false;
-  }
   if ((pos.quality_score ?? 0) < QUALITY_GATE_THRESHOLD) return false;
 
   // Must have a receiving_names_from date within the recency window

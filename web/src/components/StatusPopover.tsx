@@ -10,11 +10,9 @@ interface StatusPopoverProps {
 }
 
 const STATUS_DESCRIPTIONS: Record<UnifiedStatus, string> = {
-  Active: "This position appears in VocationHub's active search results and is confirmed to be accepting applications.",
+  Active: "This position appears in VocationHub's active search results and is accepting applications.",
   Developing: 'This position is being developed and may not yet be accepting applications.',
-  Interim: 'This is an interim position, typically filled on a temporary basis.',
   Closed: 'This position search has been completed or closed.',
-  Unlisted: "This position was found in VocationHub's profile directory but is not in active search results.",
 };
 
 const ALL_CRITERIA = [
@@ -51,7 +49,7 @@ export default function StatusPopover({ pos, children }: StatusPopoverProps) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [show]);
 
-  const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
+  const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility, pos.quality_score, pos.receiving_names_from);
   const hasScore = pos.visibility === 'extended' || pos.visibility === 'extended_hidden';
   const score = pos.quality_score ?? 0;
   const earned = pos.quality_components || [];

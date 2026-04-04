@@ -5,19 +5,19 @@ import { parseDate } from './date-utils';
 /**
  * Default statuses shown on page load (chips pre-selected).
  */
-export const DEFAULT_ACTIVE_STATUSES: UnifiedStatus[] = ['Active', 'Interim'];
+export const DEFAULT_ACTIVE_STATUSES: UnifiedStatus[] = ['Active'];
 
 /**
  * Check if a position should appear in the default view.
  *
- * Public positions: Active/Developing/Interim always show.
+ * Public positions: Active/Developing always show.
  * Extended positions: must also pass data-quality checks (quality >= 85,
  * receiving_names_from within 12 months, parochial data present) regardless
  * of their VH status.  Without this gate, extended positions with an active
  * VH status but no location/parochial data would slip through.
  */
 export function passesDefaultFilter(pos: Position): boolean {
-  const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility);
+  const unified = getUnifiedStatus(pos.vh_status || pos.status, pos.visibility, pos.quality_score, pos.receiving_names_from);
   const isExtended = pos.visibility === 'extended' || pos.visibility === 'extended_hidden';
 
   if (isExtended) {
@@ -25,8 +25,8 @@ export function passesDefaultFilter(pos: Position): boolean {
     return isQualifyingUnlisted(pos, true);
   }
 
-  // Public positions: show Active/Developing/Interim
-  if (unified === 'Active' || unified === 'Developing' || unified === 'Interim') return true;
+  // Public positions: show Active/Developing (Closed excluded from default view)
+  if (unified === 'Active' || unified === 'Developing') return true;
   return false;
 }
 

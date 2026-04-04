@@ -16,7 +16,6 @@ import {
   getUnifiedStatus,
   UNIFIED_STATUSES,
   UNIFIED_STATUS_CHIP_COLORS,
-  isQualifyingUnlisted,
 } from '@/lib/status-helpers';
 import { useFilterState } from '@/hooks/useFilterState';
 import { usePreferences } from '@/hooks/usePreferences';
@@ -104,27 +103,17 @@ function PositionsPageContent() {
   const settings = useMemo(() => getUniqueProfileValues(allPositions, 'Ministry Setting'), [allPositions]);
   const housingTypes = useMemo(() => getUniqueHousingValues(allPositions), [allPositions]);
   const healthcareOptions = useMemo(() => getUniqueProfileValues(allPositions, 'Healthcare Options'), [allPositions]);
-  // Status counts: only count positions that would actually display
-  // (pass quality gate for extended, exclude extended_hidden)
+  // Status counts: count ALL positions into their unified category
   const statusCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     for (const p of allPositions) {
-      if (p.visibility === 'extended_hidden') continue;
-      const isExt = p.visibility === 'extended';
-      if (isExt && !isQualifyingUnlisted(p, true)) continue;
-      const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
+      const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility, p.quality_score, p.receiving_names_from);
       counts[unified] = (counts[unified] || 0) + 1;
     }
     return counts;
   }, [allPositions]);
 
-  const newCount = useMemo(() => allPositions.filter(p => {
-    if (!p.is_new) return false;
-    if (p.visibility === 'extended_hidden') return false;
-    const isExt = p.visibility === 'extended';
-    if (isExt && !isQualifyingUnlisted(p, true)) return false;
-    return true;
-  }).length, [allPositions]);
+  const newCount = useMemo(() => allPositions.filter(p => p.is_new).length, [allPositions]);
 
   // Track whether user has interacted with status chips
   const [statusUserSet, setStatusUserSet] = useState(false);
@@ -148,19 +137,13 @@ function PositionsPageContent() {
     let result = allPositions;
 
     // Status filter
-    const isExtended = (p: typeof result[0]) =>
-      p.visibility === 'extended' || p.visibility === 'extended_hidden';
-
     if (effectiveStatuses.length === 0) {
-      // All chips off: show all statuses, but quality-gate extended positions
-      result = result.filter(p => !isExtended(p) || isQualifyingUnlisted(p, true));
+      // All chips off: show all positions (no status filter)
     } else {
-      // Filter to selected statuses, quality-gate extended positions
+      // Filter to selected statuses
       result = result.filter(p => {
-        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility);
-        if (!effectiveStatuses.includes(unified)) return false;
-        if (isExtended(p)) return isQualifyingUnlisted(p, true);
-        return true;
+        const unified = getUnifiedStatus(p.vh_status || p.status, p.visibility, p.quality_score, p.receiving_names_from);
+        return effectiveStatuses.includes(unified);
       });
     }
 
@@ -302,9 +285,8 @@ function PositionsPageContent() {
             Positions are categorized by their status in the Episcopal Vocation Hub:
           </p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Active</strong> - Currently receiving names and accepting applications.</li>
+            <li><strong>Active</strong> - Currently receiving names and accepting applications (includes interim searches).</li>
             <li><strong>Developing</strong> - Building a profile or beginning the search process.</li>
-            <li><strong>Interim</strong> - Seeking or has placed an interim minister.</li>
             <li><strong>Closed</strong> - Search is complete or no longer receiving names.</li>
           </ul>
           <p>
@@ -336,23 +318,8 @@ function PositionsPageContent() {
       )}
 
       {/* Quick filter chips */}
-      <div className="flex flex-wrap gap-2">
-        <QuickChip
-          label={`New (${newCount})`}
-          active={showNewOnly}
-          onClick={() => {
-            const next = !showNewOnly;
-            if (next) {
-              // Show all statuses when filtering to New
-              setStatusUserSet(true);
-              filterActions.setStatuses([]);
-            }
-            setShowNewOnly(next);
-          }}
-          color="bg-emerald-50 text-emerald-700 border-emerald-200"
-          activeColor="bg-emerald-600 text-white border-emerald-600"
-        />
-        {UNIFIED_STATUSES.filter(s => s !== 'Unlisted').map((status) => {
+      <div className="flex flex-wrap items-center gap-2">
+        {UNIFIED_STATUSES.map((status) => {
           const chipColors = UNIFIED_STATUS_CHIP_COLORS[status];
           const isActive = effectiveStatuses.includes(status);
           return (
@@ -369,6 +336,21 @@ function PositionsPageContent() {
             />
           );
         })}
+        <span className="mx-1 h-5 w-px bg-gray-300" aria-hidden="true" />
+        <QuickChip
+          label={`New (${newCount})`}
+          active={showNewOnly}
+          onClick={() => {
+            const next = !showNewOnly;
+            if (next) {
+              setStatusUserSet(true);
+              filterActions.setStatuses([]);
+            }
+            setShowNewOnly(next);
+          }}
+          color="bg-emerald-50 text-emerald-700 border-emerald-200"
+          activeColor="bg-emerald-600 text-white border-emerald-600"
+        />
       </div>
 
       <SearchBar

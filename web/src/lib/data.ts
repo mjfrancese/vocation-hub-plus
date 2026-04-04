@@ -153,7 +153,14 @@ export function getPositions(): Position[] {
     }
   }
 
-  return [...publicPositions, ...extendedPositions];
+  // Deduplicate by id (source data can contain duplicate vh_ids)
+  const seen = new Set<string>();
+  const all = [...publicPositions, ...extendedPositions];
+  return all.filter(p => {
+    if (seen.has(p.id)) return false;
+    seen.add(p.id);
+    return true;
+  });
 }
 
 export function getChanges(): PositionChange[] {

@@ -71,8 +71,13 @@ export default function PositionTable({
   onExpandedChange,
   preferences,
 }: PositionTableProps) {
-  const sortField = initialSortField ?? 'date';
-  const sortDir = initialSortDir ?? 'desc';
+  // Local sort state for immediate responsiveness. Initialized from URL props on mount.
+  // After mount, sort is managed locally; onSort callback syncs changes back to the URL
+  // for bookmarking. This avoids reliance on useSearchParams re-firing after router.replace,
+  // which can be unreliable in Next.js static exports.
+  const [sortField, setSortField] = useState<SortField>(initialSortField ?? 'date');
+  const [sortDir, setSortDir] = useState<SortDirection>(initialSortDir ?? 'desc');
+
   const [expandedId, setExpandedId] = useState<string | null>(initialExpandedId ?? null);
   const [comparedIds, setComparedIds] = useState<Set<string>>(new Set());
   const [showComparison, setShowComparison] = useState(false);
@@ -169,12 +174,25 @@ export default function PositionTable({
   });
 
   function handleSort(field: SortField) {
+    let newField: SortField;
+    let newDir: SortDirection;
     if (sortField === field) {
-      const newDir = sortDir === 'asc' ? 'desc' : 'asc';
-      onSort?.(field, newDir);
+      newField = field;
+      newDir = sortDir === 'asc' ? 'desc' : 'asc';
     } else {
-      onSort?.(field, 'asc');
+      newField = field;
+      newDir = 'asc';
     }
+    setSortField(newField);
+    setSortDir(newDir);
+    // Sync to URL for bookmarking without triggering a Next.js navigation cycle,
+    // which causes DOM duplication due to concurrent React rendering.
+    const params = new URLSearchParams(window.location.search);
+    const val = `${newField}:${newDir}`;
+    if (val === 'date:desc') params.delete('sort');
+    else params.set('sort', val);
+    const url = params.toString() ? `${window.location.pathname}?${params}` : window.location.pathname;
+    window.history.replaceState(null, '', url);
   }
 
   function toggleExpand(id: string) {
@@ -210,7 +228,7 @@ export default function PositionTable({
           <span>Sort by</span>
           <select
             value={sortField}
-            onChange={(e) => onSort?.(e.target.value as SortField, 'asc')}
+            onChange={(e) => handleSort(e.target.value as SortField)}
             aria-label="Sort by"
             className="border border-gray-300 rounded px-2 py-1 text-sm bg-white"
           >
@@ -223,21 +241,21 @@ export default function PositionTable({
             <option value="asa">ASA</option>
           </select>
           <button
-            onClick={() => onSort?.(sortField, sortDir === 'asc' ? 'desc' : 'asc')}
+            onClick={() => handleSort(sortField)}
             className="text-primary-600 font-medium"
           >
             {sortDir === 'asc' ? '\u2191' : '\u2193'}
           </button>
         </div>
 
-        {sorted.map((pos) => {
+        {sorted.map((pos, idx) => {
           const church = getChurchName(pos);
           const city = getCity(pos);
           const state = getState(pos);
           const locationParts = [city && state ? `${city}, ${state}` : city || state, pos.diocese].filter(Boolean);
           const asa = getLatestAsa(pos);
           return (
-            <div key={pos.id} id={`position-row-${pos.id}`}>
+            <div key={`${pos.id}-${idx}`} id={`position-row-${pos.id}`}>
               <div
                 onClick={() => toggleExpand(pos.id)}
                 className={`border rounded-lg p-3 cursor-pointer transition-colors ${
@@ -261,7 +279,7 @@ export default function PositionTable({
                   <div className="flex items-center gap-1.5 flex-shrink-0">
                     {asa && <span className="text-xs text-gray-500" title={asa.range}>ASA {asa.value}</span>}
                     <StatusPopover pos={pos}>
-                      <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
+                      <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} qualityScore={pos.quality_score} receivingNamesFrom={pos.receiving_names_from} />
                       {(pos.visibility === 'extended' || pos.visibility === 'extended_hidden') && (
                         <ScorePill score={pos.quality_score ?? 0} />
                       )}
@@ -347,14 +365,14 @@ export default function PositionTable({
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
-            {sorted.map((pos) => {
+            {sorted.map((pos, idx) => {
               const church = getChurchName(pos);
               const city = getCity(pos);
               const state = getState(pos);
               const locationPrimary = city && state ? `${city}, ${state}` : city || state || '';
               const asa = getLatestAsa(pos);
               return (
-                <Fragment key={pos.id}>
+                <Fragment key={`${pos.id}-${idx}`}>
                   <tr
                     id={`position-row-${pos.id}`}
                     onClick={() => toggleExpand(pos.id)}
@@ -426,7 +444,7 @@ export default function PositionTable({
                     {/* Status */}
                     <td className="px-3 py-2">
                       <StatusPopover pos={pos}>
-                        <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} />
+                        <UnifiedStatusBadge vhStatus={pos.vh_status || pos.status} visibility={pos.visibility} qualityScore={pos.quality_score} receivingNamesFrom={pos.receiving_names_from} />
                         {(pos.visibility === 'extended' || pos.visibility === 'extended_hidden') && (
                           <ScorePill score={pos.quality_score ?? 0} />
                         )}
