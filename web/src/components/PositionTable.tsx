@@ -124,6 +124,16 @@ export default function PositionTable({
   const comparedPositions = positions.filter(p => comparedIds.has(p.id));
 
   const sorted = [...positions].sort((a, b) => {
+    // Match boost: group matching positions first (tier 1) when preferences are active
+    if (showMatch) {
+      const scoreA = matchScores.get(a.id)?.score ?? 0;
+      const scoreB = matchScores.get(b.id)?.score ?? 0;
+      const tierA = scoreA >= 50 ? 1 : 0;
+      const tierB = scoreB >= 50 ? 1 : 0;
+      if (tierA !== tierB) return tierB - tierA;
+    }
+
+    // Primary sort by user-selected field
     if (sortField === 'quality_score') {
       const aNum = a.quality_score ?? 0;
       const bNum = b.quality_score ?? 0;
@@ -157,18 +167,6 @@ export default function PositionTable({
     const cmp = aVal.localeCompare(bVal);
     return sortDir === 'asc' ? cmp : -cmp;
   });
-
-  // Apply match boost as a secondary sort (only breaks ties)
-  if (showMatch) {
-    sorted.sort((a, b) => {
-      const scoreA = matchScores.get(a.id)?.score ?? 0;
-      const scoreB = matchScores.get(b.id)?.score ?? 0;
-      const tierA = scoreA >= 50 ? 1 : 0;
-      const tierB = scoreB >= 50 ? 1 : 0;
-      if (tierA !== tierB) return tierB - tierA;
-      return scoreB - scoreA;
-    });
-  }
 
   function handleSort(field: SortField) {
     if (sortField === field) {
