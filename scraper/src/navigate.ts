@@ -12,10 +12,23 @@ export async function navigateToSearch(page: Page): Promise<void> {
   // Wait for the Blazor app to render the search form
   await page.waitForSelector(SELECTORS.searchButton, { timeout: 30_000 });
 
-  // Wait for Blazor to finish initialization and attach event handlers.
-  // Blazor Server apps need SignalR to connect before clicks work.
+  // Wait for Blazor to fully initialize by checking for default filter chips.
+  // The page always loads with at least one Position Type chip pre-selected
+  // (e.g. "Rector/Priest-in-Charge"). The chip appearing confirms Blazor's
+  // SignalR connection is live and the form is interactive.
   logger.info('Waiting for Blazor initialization');
-  await page.waitForTimeout(5000);
+  try {
+    await page.waitForSelector(SELECTORS.chip, { timeout: 20_000 });
+    logger.info('Blazor ready (default chip detected)');
+  } catch {
+    // Chip never appeared -- Blazor may have changed defaults or is slow.
+    // Fall back to a fixed delay so we still attempt the scrape.
+    logger.warn('No default chip detected within 20s, falling back to fixed delay');
+    await page.waitForTimeout(5000);
+  }
+
+  // Brief extra settle time for SignalR event handlers to attach
+  await page.waitForTimeout(1000);
 
   // Log the current page state for debugging
   const title = await page.title();

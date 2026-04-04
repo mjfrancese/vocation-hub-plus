@@ -37,13 +37,38 @@ async function main(): Promise<void> {
 
   try {
     // Phase 1: Search table scrape (fast, ~30s)
-    await navigateToSearch(page);
-    await searchAllPositions(page);
-    const positions = await clickSearchAndExtract(page);
-    logger.info('Search scrape complete', { positionsFound: positions.length });
+    // Retry up to 2 times if the result count is suspiciously low,
+    // which indicates a Blazor timing issue rather than real data change.
+    const MIN_EXPECTED_POSITIONS = 8;
+    const MAX_PHASE1_ATTEMPTS = 3;
+    let positions: RawPosition[] = [];
+
+    for (let attempt = 1; attempt <= MAX_PHASE1_ATTEMPTS; attempt++) {
+      await navigateToSearch(page);
+      await searchAllPositions(page);
+      positions = await clickSearchAndExtract(page);
+      logger.info('Search scrape complete', {
+        positionsFound: positions.length,
+        attempt,
+      });
+
+      if (positions.length >= MIN_EXPECTED_POSITIONS) {
+        break; // Good result, proceed
+      }
+
+      if (attempt < MAX_PHASE1_ATTEMPTS) {
+        logger.warn('Suspiciously low result count, retrying', {
+          found: positions.length,
+          threshold: MIN_EXPECTED_POSITIONS,
+          attempt,
+          nextAttemptIn: '10s',
+        });
+        await sleep(10_000);
+      }
+    }
 
     if (positions.length === 0) {
-      throw new Error('Scrape returned 0 positions.');
+      throw new Error('Scrape returned 0 positions after all retry attempts.');
     }
 
     if (!CONFIG.dryRun) {
