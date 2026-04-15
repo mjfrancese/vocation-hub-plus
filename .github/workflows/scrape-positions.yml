@@ -81,3 +81,14 @@ jobs:
         run: gh api repos/${{ github.repository }}/dispatches -f event_type=build
         env:
           GH_TOKEN: ${{ github.token }}
+
+      - name: Upload diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-diagnostics-${{ github.run_id }}
+          path: |
+            screenshots/
+            scraper/output/
+          retention-days: 14
+          if-no-files-found: ignore

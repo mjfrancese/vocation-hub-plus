@@ -22,8 +22,14 @@ export const CONFIG = {
   /** Save screenshots on failure */
   screenshotOnFailure: process.env.SCREENSHOT_ON_FAILURE !== 'false',
 
-  /** Maximum runtime before aborting (ms) */
-  maxRuntime: parseInt(process.env.MAX_RUNTIME_MS || '840000', 10),
+  /**
+   * Maximum runtime before the cooperative abort signal fires (ms).
+   * The scraper checks the signal between rows/batches and finalises
+   * with partial results — it does NOT hard-kill the process.
+   * Workflow step timeout-minutes: 30 gives 5 min of headroom over
+   * this default for browser close + DB writes.
+   */
+  maxRuntime: parseInt(process.env.MAX_RUNTIME_MS || '1500000', 10),
 
   /** Screenshot directory */
   screenshotDir: path.resolve(__dirname, '../../screenshots'),

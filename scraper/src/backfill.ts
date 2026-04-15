@@ -24,67 +24,13 @@ import {
   getDiscoveryStats,
   type BackfillCandidate,
 } from './db.js';
-
-// Same extraction script as discover-ids-from-search.ts
-const EXTRACT_PROFILE = `(function() {
-  var inputs = document.querySelectorAll('.k-input-inner, .k-input, input, textarea');
-  var fields = [];
-  for (var i = 0; i < inputs.length; i++) {
-    var el = inputs[i];
-    var val = (el.value || '').trim();
-    if (!val || val === 'on') continue;
-    var label = '';
-    var container = el.closest('.k-form-field, .form-group, [class*="field"]');
-    if (container) {
-      var lbl = container.querySelector('label, .k-label, [class*="label"]');
-      if (lbl) label = lbl.textContent.trim();
-    }
-    if (!label) {
-      var prev = el.previousElementSibling;
-      while (prev && !label) {
-        if (prev.tagName === 'LABEL' || prev.tagName === 'SPAN' || prev.tagName === 'DIV') {
-          var t = prev.textContent.trim();
-          if (t.length > 0 && t.length < 100) label = t;
-        }
-        prev = prev.previousElementSibling;
-      }
-    }
-    fields.push({ label: label, value: val.substring(0, 5000) });
-  }
-  var smallLabels = document.querySelectorAll('label.small');
-  for (var sl = 0; sl < smallLabels.length; sl++) {
-    var lbl = smallLabels[sl];
-    var sib = lbl.nextElementSibling;
-    while (sib && sib.nodeType === 8) sib = sib.nextElementSibling;
-    if (sib && sib.classList && sib.classList.contains('form-control')) {
-      var hasInput = sib.querySelector('input, textarea, select');
-      var txtVal = (sib.textContent || '').trim();
-      if (!hasInput && txtVal) {
-        fields.push({ label: lbl.textContent.trim(), value: txtVal.substring(0, 5000) });
-      }
-    }
-  }
-  var gridRows = document.querySelectorAll('tr.k-table-row, tr[role="row"].k-master-row');
-  for (var gr = 0; gr < gridRows.length; gr++) {
-    var cells = gridRows[gr].querySelectorAll('td');
-    if (cells.length >= 2) {
-      var gridLabel = (cells[0].textContent || '').trim();
-      var gridVal = '';
-      var gridLink = cells[1].querySelector('a[href]');
-      if (gridLink) gridVal = gridLink.href;
-      else gridVal = (cells[1].textContent || '').trim();
-      if (gridLabel && gridVal) {
-        fields.push({ label: gridLabel, value: gridVal.substring(0, 5000) });
-      }
-    }
-  }
-  return fields;
-})()`;
+import { clickAllProfileTabs, extractProfileFromLoadedPage } from './extractors/profile.js';
 
 interface BackfillResult {
   attempted: number;
   succeeded: number;
   failed: number;
+  aborted: boolean;
   profiles: Array<{ id: number; fields: Array<{ label: string; value: string }> }>;
 }
 
@@ -115,13 +61,25 @@ function extractSearchName(name: string): string {
   return cleaned;
 }
 
+export interface BackfillOptions {
+  /** Check between candidates; abort returns partial results. */
+  signal?: AbortSignal;
+}
+
 export async function runBackfill(
   page: Page,
   searchUrl: string,
   maxPositions: number = 10,
+  options: BackfillOptions = {},
 ): Promise<BackfillResult> {
   const candidates = getBackfillCandidates(5);
-  const result: BackfillResult = { attempted: 0, succeeded: 0, failed: 0, profiles: [] };
+  const result: BackfillResult = {
+    attempted: 0,
+    succeeded: 0,
+    failed: 0,
+    aborted: false,
+    profiles: [],
+  };
 
   if (candidates.length === 0) {
     logger.info('Backfill: no candidates needing VH IDs');
@@ -135,6 +93,14 @@ export async function runBackfill(
   });
 
   for (const candidate of toProcess) {
+    if (options.signal?.aborted) {
+      result.aborted = true;
+      logger.warn('Backfill aborted between candidates', {
+        attempted: result.attempted,
+        remaining: toProcess.length - result.attempted,
+      });
+      break;
+    }
     result.attempted++;
     const searchName = extractSearchName(candidate.name);
 
@@ -236,31 +202,14 @@ export async function runBackfill(
       const vhId = parseInt(idMatch[1], 10);
       logger.info('Backfill: found VH ID', { name: candidate.name, vhId });
 
-      // Extract profile data while we're on the page
+      // Extract profile data while we're on the page (uses shared extractor).
       await page.waitForSelector('[role="tab"]', { timeout: 5_000 }).catch(() => {});
       await sleep(1500);
 
-      // Click through tabs
-      const tabNames = [
-        'Basic Information',
-        'Position Details',
-        'Stipend, Housing, and Benefits',
-        'Ministry Context and Desired Skills',
-        'Ministry Media and Links',
-        'Optional Narrative Reflections',
-      ];
+      await clickAllProfileTabs(page, { signal: options.signal });
 
-      for (const tabName of tabNames) {
-        try {
-          const tab = page.locator(`text="${tabName}"`).first();
-          if (await tab.isVisible({ timeout: 500 }).catch(() => false)) {
-            await tab.click();
-            await sleep(500);
-          }
-        } catch { /* tab may not exist */ }
-      }
-
-      const fields = await page.evaluate(EXTRACT_PROFILE) as Array<{ label: string; value: string }>;
+      const extracted = await extractProfileFromLoadedPage(page);
+      const fields = extracted.fields;
       result.profiles.push({ id: vhId, fields });
 
       // Record success
@@ -295,6 +244,7 @@ export async function runBackfill(
     attempted: result.attempted,
     succeeded: result.succeeded,
     failed: result.failed,
+    aborted: result.aborted,
     profiles: result.profiles.length,
     pendingTotal: stats.pending,
     failedTotal: stats.failed,
